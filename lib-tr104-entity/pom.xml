@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>keybridge.lib</groupId>
+    <artifactId>cwmp</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <groupId>keybridge.lib</groupId>
+  <artifactId>tr104-entity</artifactId>
+  <version>2.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>lib-tr104-entity</name>
+  <description>
+    The TR-104 document compiled into Java class files.
+
+Spec: urn:broadband-forum-org:wt-104-2-0-0
+Build: 2018-02-01T17:05:30.055
+
+
+  </description>
+
+  <organization>
+    <name>Key Bridge</name>
+    <url>http://keybridge.ch</url>
+  </organization>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+     <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>cwmp-common</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <version>1.1.0.Final</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <distributionManagement>
+    <repository>
+      <id>${repository.name}</id>
+      <url>${repository.url}</url>
+    </repository>
+  </distributionManagement>
+
+</project>

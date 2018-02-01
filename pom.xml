@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>keybridge.lib</groupId>
+  <artifactId>cwmp</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>package-cwmp</name>
+
+  <description>
+    The CPE WAN Management Protocol defines a mechanism that encompasses secure
+    auto-configuration of a CPE, and also incorporates other CPE management
+    functions into a common framework.
+
+    This project includes a set of data description libraries conformant with
+    the CPE management framework written in Java.
+  </description>
+
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <modules>
+        <module>lib-cwmp-common</module>
+    <module>lib-tr069-entity</module>
+    <module>lib-tr098-entity</module>
+    <module>lib-tr104-entity</module>
+    <module>lib-tr106-entity</module>
+    <module>lib-tr135-entity</module>
+    <module>lib-tr140-entity</module>
+    <module>lib-tr143-entity</module>
+    <module>lib-tr157-entity</module>
+    <module>lib-tr181-entity</module>
+    <module>lib-tr196-entity</module>
+    <module>lib-tr262-entity</module>
+
+  </modules>
+
+ <distributionManagement>
+    <repository>
+      <id>${repository.name}</id>
+      <url>${repository.url}</url>
+    </repository>
+  </distributionManagement>
+</project>
