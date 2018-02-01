@@ -74,14 +74,14 @@ Note that when TR-140 was originally published there was a typo in this object n
 	/**
 	 * This object provides information about each user group configured on this device, which allows the grouping of user accounts for easier maintenance of permissions.
 	 */
-	@XmlElementWrapper(name = "userGroups")
+	@XmlElementWrapper(name = "UserGroups")
 	@XmlElement(name = "UserGroup")
 	@CWMPParameter(access = "readWrite")
 	public Collection<UserGroup> userGroups;
 	/**
 	 * This object provides information about each user configured on this device, which provides a means for controlling access to the device.
 	 */
-	@XmlElementWrapper(name = "userAccounts")
+	@XmlElementWrapper(name = "UserAccounts")
 	@XmlElement(name = "UserAccount")
 	@CWMPParameter(access = "readWrite")
 	public Collection<UserAccount> userAccounts;
@@ -113,7 +113,7 @@ Note that when TR-140 was originally published there was a typo in this object n
 	/**
 	 * This object provides information about each physical medium connected to this device.
 	 */
-	@XmlElementWrapper(name = "physicalMediums")
+	@XmlElementWrapper(name = "PhysicalMediums")
 	@XmlElement(name = "PhysicalMedium")
 	public Collection<PhysicalMedium> physicalMediums;
 	/**
@@ -121,7 +121,7 @@ Note that when TR-140 was originally published there was a typo in this object n
 
 Creating an instance of this object generates a disabled {{object}} instance.  Before this new {{object}} instance can be enabled (via a SetParameterValues command), it MUST have the following parameters configured: {{param|Name}}, {{param|RaidType}}, and {{param|PhysicalMediumReference}}. Once an instance is enabled the following parameters become immutable for the life of the instance: {{param|Name}}, {{param|RaidType}}, and {{param|PhysicalMediumReference}}.
 	 */
-	@XmlElementWrapper(name = "storageArraies")
+	@XmlElementWrapper(name = "StorageArraies")
 	@XmlElement(name = "StorageArray")
 	@CWMPParameter(access = "readWrite")
 	public Collection<StorageArray> storageArraies;
@@ -130,7 +130,7 @@ Creating an instance of this object generates a disabled {{object}} instance.  B
 
 Creating an instance of this object generates a disabled {{object}} instance.  Before this new {{object}} instance can be enabled (via a SetParameterValues command), it MUST have the following parameters configured: {{param|Name}}, {{param|PhysicalReference}}, and {{param|Capacity}}.  Once an instance is enabled the following parameters become immutable for the life of the instance: {{param|Name}}, {{param|PhysicalReference}}, and {{param|Capacity}}.
 	 */
-	@XmlElementWrapper(name = "logicalVolumes")
+	@XmlElementWrapper(name = "LogicalVolumes")
 	@XmlElement(name = "LogicalVolume")
 	@CWMPParameter(access = "readWrite")
 	public Collection<LogicalVolume> logicalVolumes;

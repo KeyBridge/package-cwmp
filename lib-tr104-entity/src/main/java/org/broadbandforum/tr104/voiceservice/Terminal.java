@@ -81,7 +81,7 @@ public class Terminal {
 	/**
 	 * This object models the audio outputs of a telephony terminal.(ex. Handset, handsfree, ...)
 	 */
-	@XmlElementWrapper(name = "audios")
+	@XmlElementWrapper(name = "Audios")
 	@XmlElement(name = "Audio")
 	@CWMPParameter(minEntries = 1)
 	public Collection<Audio> audios;

@@ -151,14 +151,14 @@ The parameter MAY instead indicate a vendor-specific cause, which MUST use the f
 	/**
 	 * This table contains signaling performance statistics for each protocol involved in the call.
 	 */
-	@XmlElementWrapper(name = "signalingPerformances")
+	@XmlElementWrapper(name = "SignalingPerformances")
 	@XmlElement(name = "SignalingPerformance")
 	@CWMPParameter(minEntries = 1)
 	public Collection<SignalingPerformance> signalingPerformances;
 	/**
 	 * Session information within one call.
 	 */
-	@XmlElementWrapper(name = "sessions")
+	@XmlElementWrapper(name = "Sessions")
 	@XmlElement(name = "Session")
 	public Collection<Session> sessions;
 

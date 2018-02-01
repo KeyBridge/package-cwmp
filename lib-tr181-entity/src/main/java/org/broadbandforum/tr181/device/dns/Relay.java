@@ -53,7 +53,7 @@ public class Relay {
 
         Note: Management of re-directing queries to the device embedded DNS server is not defined in this version of the specification.
 	 */
-	@XmlElementWrapper(name = "forwardings")
+	@XmlElementWrapper(name = "Forwardings")
 	@XmlElement(name = "Forwarding")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Forwarding> forwardings;

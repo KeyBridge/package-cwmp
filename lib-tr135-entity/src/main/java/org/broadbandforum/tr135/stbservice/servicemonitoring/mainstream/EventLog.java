@@ -46,7 +46,7 @@ public class EventLog {
 	/**
 	 * This object represents an entry (e.g., start session, channel change) in the event log.
 	 */
-	@XmlElementWrapper(name = "entries")
+	@XmlElementWrapper(name = "Entries")
 	@XmlElement(name = "Entry")
 	public Collection<Entry> entries;
 

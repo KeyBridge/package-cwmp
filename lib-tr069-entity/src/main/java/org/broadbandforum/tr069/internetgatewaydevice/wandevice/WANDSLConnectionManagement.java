@@ -33,7 +33,7 @@ public class WANDSLConnectionManagement {
 	/**
 	 * This table contains an entry for each connection service.
 	 */
-	@XmlElementWrapper(name = "connectionServices")
+	@XmlElementWrapper(name = "ConnectionServices")
 	@XmlElement(name = "ConnectionService")
 	public Collection<ConnectionService> connectionServices;
 

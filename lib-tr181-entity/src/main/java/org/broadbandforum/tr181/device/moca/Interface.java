@@ -411,7 +411,7 @@ public class Interface {
 	/**
 	 * This table contains information about other MoCA devices currently associated with this MoCA interface.
 	 */
-	@XmlElementWrapper(name = "associatedDevices")
+	@XmlElementWrapper(name = "AssociatedDevices")
 	@XmlElement(name = "AssociatedDevice")
 	public Collection<AssociatedDevice> associatedDevices;
 

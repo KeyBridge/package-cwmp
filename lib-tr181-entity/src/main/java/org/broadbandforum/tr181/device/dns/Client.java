@@ -51,7 +51,7 @@ public class Client {
 	/**
 	 * This table contains the DNS Server IP address to be used by the DHCP Client (it does ''not'' model a DNS Server). Entries are either automatically created as result of DHCP (v4 or v6), IPCP, or RA received DNS server information, or are statically configured by the ACS.
 	 */
-	@XmlElementWrapper(name = "servers")
+	@XmlElementWrapper(name = "Servers")
 	@XmlElement(name = "Server")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Server> servers;

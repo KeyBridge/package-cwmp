@@ -40,7 +40,7 @@ public class DHCPv4 {
 
         Note: The {{object}} table includes a unique key parameter that is a strong reference. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 */
-	@XmlElementWrapper(name = "clients")
+	@XmlElementWrapper(name = "Clients")
 	@XmlElement(name = "Client")
 	@CWMPParameter(access = "readWrite", minEntries = 1)
 	public Collection<Client> clients;

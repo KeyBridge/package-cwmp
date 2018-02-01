@@ -37,7 +37,7 @@ public class LANInterfaces {
 
 The object definition is identical to that for {{object|InternetGatewayDevice.LANDevice.{i}.LANEthernetInterfaceConfig.{i}}}.
 	 */
-	@XmlElementWrapper(name = "lanEthernetInterfaceConfigs")
+	@XmlElementWrapper(name = "LANEthernetInterfaceConfigs")
 	@XmlElement(name = "LANEthernetInterfaceConfig")
 	public Collection<LANEthernetInterfaceConfig> lanEthernetInterfaceConfigs;
 	/**
@@ -45,7 +45,7 @@ The object definition is identical to that for {{object|InternetGatewayDevice.LA
 
 The object definition is identical to that for {{object|InternetGatewayDevice.LANDevice.{i}.LANUSBInterfaceConfig.{i}}}.
 	 */
-	@XmlElementWrapper(name = "lanUSBInterfaceConfigs")
+	@XmlElementWrapper(name = "LANUSBInterfaceConfigs")
 	@XmlElement(name = "LANUSBInterfaceConfig")
 	public Collection<LANUSBInterfaceConfig> lanUSBInterfaceConfigs;
 	/**
@@ -53,7 +53,7 @@ The object definition is identical to that for {{object|InternetGatewayDevice.LA
 
 The object definition is identical to that for {{object|InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}}}.
 	 */
-	@XmlElementWrapper(name = "wlaNConfigurations")
+	@XmlElementWrapper(name = "WLANConfigurations")
 	@XmlElement(name = "WLANConfiguration")
 	public Collection<WLANConfiguration> wlaNConfigurations;
 

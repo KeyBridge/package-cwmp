@@ -49,7 +49,7 @@ public class LocalIPAccess {
 	/**
 	 * Policy for selecting traffic for local IP access. Originated traffic will be NAT'ed. The rule is bi-directional, i.e. return traffic is allowed. Rules do NOT affect traffic to/from the FAP itself (such as TR-069 or control). The rules are applied to the mobile station data traffic (PS-domain) via deep packet inspection or similar method.
 	 */
-	@XmlElementWrapper(name = "rules")
+	@XmlElementWrapper(name = "Rules")
 	@XmlElement(name = "Rule")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Rule> rules;

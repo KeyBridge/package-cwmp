@@ -204,14 +204,14 @@ public class Bridge {
 
         Any attempt to delete an instance, which is currently in use ({{param|##.Bridge.{i}.ServerConnection}} refers to the instance to be deleted), has to be rejected.
 	 */
-	@XmlElementWrapper(name = "servers")
+	@XmlElementWrapper(name = "Servers")
 	@XmlElement(name = "Server")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Server> servers;
 	/**
 	 * List of MQTT subscriptions handled over the bridge.
 	 */
-	@XmlElementWrapper(name = "subscriptions")
+	@XmlElementWrapper(name = "Subscriptions")
 	@XmlElement(name = "Subscription")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Subscription> subscriptions;

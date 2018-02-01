@@ -279,7 +279,7 @@ Enumerated value must be one of [A, B, C, D]
 	/**
 	 * This table provides information about other HPNA devices that are directly accessible via this HPNA interface.
 	 */
-	@XmlElementWrapper(name = "associatedDevices")
+	@XmlElementWrapper(name = "AssociatedDevices")
 	@XmlElement(name = "AssociatedDevice")
 	public Collection<AssociatedDevice> associatedDevices;
 

@@ -35,7 +35,7 @@ public class ZigBee {
 	/**
 	 * ZigBee interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). This table models the ZigBee interface of a ZigBee end device, ZigBee router or ZigBee coordinator.
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	public Collection<Interface> interfaces;
 	/**
@@ -45,7 +45,7 @@ public class ZigBee {
 
         It is possible that instances of this object have the same key value when the value of {{param|IEEEAddress}} parameter is "FF:FF:FF:FF:FF:FF:FF:FF" and the ZigBee Coordinators on two or more separate area networks assign the same value for the {{param|NetworkAddress}}. This is because the ZigBee specification describes only intra-area network topologies {{bibref|ZigBee2007|Section 1.1.4 Network Topology}}. As such if two or more {{object}} instances have the same key value the implemenation is undefined
 	 */
-	@XmlElementWrapper(name = "zdos")
+	@XmlElementWrapper(name = "ZDOs")
 	@XmlElement(name = "ZDO")
 	public Collection<ZDO> zdos;
 	/**

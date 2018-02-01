@@ -441,7 +441,7 @@ Each valid value of {{param|MeasurementQuantity}} has a different valid range.
 	/**
 	 * Table containing parameters relating to a particular instance of intra-freq events.
 	 */
-	@XmlElementWrapper(name = "instances")
+	@XmlElementWrapper(name = "Instances")
 	@XmlElement(name = "Instance")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Instance> instances;

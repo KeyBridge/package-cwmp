@@ -160,7 +160,7 @@ public class Client {
 	/**
 	 * This is a transitory table that lists the discovered DHCPv6 servers (it does ''not'' model a local DHCP server). Table entries are automatically created to correspond with these servers. However, it is a local matter to the CPE when to delete old table entries.
 	 */
-	@XmlElementWrapper(name = "servers")
+	@XmlElementWrapper(name = "Servers")
 	@XmlElement(name = "Server")
 	public Collection<Server> servers;
 	/**
@@ -168,7 +168,7 @@ public class Client {
 
         This table is intended only for options that are not part of the basic operation of the protocol, and whose values are simple, do not often change and are not modeled elsewhere.  For example, it is appropriate for OPTION_USER_CLASS (whose value is a list of user classes) but is not appropriate for OPTION_RECONF_MSG (which is part of the protocol), OPTION_IA_NA (which is modeled via {{param|#.RequestAddresses}}) or OPTION_RAPID_COMMIT (which is modeled via {{param|#.RapidCommit}}).
 	 */
-	@XmlElementWrapper(name = "sentOptions")
+	@XmlElementWrapper(name = "SentOptions")
 	@XmlElement(name = "SentOption")
 	@CWMPParameter(access = "readWrite")
 	public Collection<SentOption> sentOptions;
@@ -177,7 +177,7 @@ public class Client {
 
         If the same option is received multiple times, whether from one or more servers, it is up to the CPE to decide which entries to include (i.e. whether the same option will be present multiple times). In order to allow for the same option to be present multiple times within the table, this table has no unique key defined.
 	 */
-	@XmlElementWrapper(name = "receivedOptions")
+	@XmlElementWrapper(name = "ReceivedOptions")
 	@XmlElement(name = "ReceivedOption")
 	public Collection<ReceivedOption> receivedOptions;
 

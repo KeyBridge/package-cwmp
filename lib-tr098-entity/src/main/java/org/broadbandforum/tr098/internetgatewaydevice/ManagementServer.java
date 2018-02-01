@@ -529,7 +529,7 @@ If {{param}} is not implemented and UDP Lightweight Notifications are supported,
 	/**
 	 * Each entry in this table corresponds to a distinct LAN Device that supports Device-Gateway Association according to {{bibref|TR-069a2|Annex F}} as indicated by the presence of the DHCP option specified in that Annex.
 	 */
-	@XmlElementWrapper(name = "manageableDevices")
+	@XmlElementWrapper(name = "ManageableDevices")
 	@XmlElement(name = "ManageableDevice")
 	public Collection<ManageableDevice> manageableDevices;
 	/**
@@ -549,13 +549,13 @@ The CPE policy determines the conditions under which the CPE notifies the ACS of
 	/**
 	 * Each entry in this table represents a distinct Proxied Device that utilizes the Embedded Object Mechanism {{bibref|TR-069a4|Annex J.1.2}} for proxying devices.
 	 */
-	@XmlElementWrapper(name = "embeddedDevices")
+	@XmlElementWrapper(name = "EmbeddedDevices")
 	@XmlElement(name = "EmbeddedDevice")
 	public Collection<EmbeddedDevice> embeddedDevices;
 	/**
 	 * Each entry in this table represents a distinct Proxied Device that utilizes the Virtual CWMP Device Mechanism {{bibref|TR-069a4|Annex J.1.1}} for proxying devices.
 	 */
-	@XmlElementWrapper(name = "virtualDevices")
+	@XmlElementWrapper(name = "VirtualDevices")
 	@XmlElement(name = "VirtualDevice")
 	public Collection<VirtualDevice> virtualDevices;
 	/**
@@ -572,7 +572,7 @@ Any Parameter (identified by {{param|ParameterName}}) contained in this table MU
 
 This table does not include Forced Inform Parameters, and Forced Inform Parameters are not allowed to be inserted into this table.  Any attempt by an ACS to configure this table to contain a Forced Inform Parameter MUST result in the failure of the SetParameterValues RPC with error code 9007.
 	 */
-	@XmlElementWrapper(name = "informParameters")
+	@XmlElementWrapper(name = "InformParameters")
 	@XmlElement(name = "InformParameter")
 	@CWMPParameter(access = "readWrite")
 	public Collection<InformParameter> informParameters;

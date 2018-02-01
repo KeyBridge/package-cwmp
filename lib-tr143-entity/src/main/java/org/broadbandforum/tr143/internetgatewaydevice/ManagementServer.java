@@ -300,7 +300,7 @@ When STUNEnable is {{false}}, this value MUST be {{false}}.
 	/**
 	 * Each entry in this table corresponds to a distinct LAN Device that supports Device-Gateway Association according to {{bibref|TR-069a1|Annex F}} as indicated by the presence of the DHCP option specified in that Annex.
 	 */
-	@XmlElementWrapper(name = "manageableDevices")
+	@XmlElementWrapper(name = "ManageableDevices")
 	@XmlElement(name = "ManageableDevice")
 	public Collection<ManageableDevice> manageableDevices;
 

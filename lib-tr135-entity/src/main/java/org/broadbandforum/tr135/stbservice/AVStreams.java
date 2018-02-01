@@ -40,7 +40,7 @@ public class AVStreams {
 	/**
 	 * Details of each AVStream. AV streams are created statically. Each AV stream corresponds to a valid ''{FrontEnd, AudioDecoder, VideoDecoder}'' instance combination (although if the PVR is active for this stream, only ''{FrontEnd}'' or ''{AudioDecoder, VideoDecoder}'' will be in use).
 	 */
-	@XmlElementWrapper(name = "avstreams")
+	@XmlElementWrapper(name = "AVStreams")
 	@XmlElement(name = "AVStream")
 	public Collection<AVStream> avstreams;
 

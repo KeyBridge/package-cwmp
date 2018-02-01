@@ -555,20 +555,20 @@ Note that this object does not include the total byte and packet statistics, whi
 	/**
 	 * A table of the devices currently associated with the access point.  The size of this table is given by {{param|InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}.TotalAssociations}}.  This object MUST be implemented for CPE that contain an 802.11 interface on the LAN side.
 	 */
-	@XmlElementWrapper(name = "associatedDevices")
+	@XmlElementWrapper(name = "AssociatedDevices")
 	@XmlElement(name = "AssociatedDevice")
 	public Collection<AssociatedDevice> associatedDevices;
 	/**
 	 * This is a table of WEP keys.  The size of this table is fixed with exactly 4 entries (with instance numbers 1 through 4).  This object MUST be implemented for CPE that contain an 802.11 interface on the LAN side.
 	 */
-	@XmlElementWrapper(name = "wepKeies")
+	@XmlElementWrapper(name = "WEPKeies")
 	@XmlElement(name = "WEPKey")
 	@CWMPParameter(minEntries = 4, maxEntries = 4)
 	public Collection<WEPKey> wepKeies;
 	/**
 	 * This is a table of preshared keys.  The size of this table is fixed with exactly 10 entries (with instance numbers 1 through 10).  This object MUST be implemented for CPE that contain an 802.11 interface on the LAN side.
 	 */
-	@XmlElementWrapper(name = "preSharedKeies")
+	@XmlElementWrapper(name = "PreSharedKeies")
 	@XmlElement(name = "PreSharedKey")
 	@CWMPParameter(minEntries = 10, maxEntries = 10)
 	public Collection<PreSharedKey> preSharedKeies;
@@ -583,7 +583,7 @@ Note that this object does not include the total byte and packet statistics, whi
 
 # VO AC (Voice)
 	 */
-	@XmlElementWrapper(name = "apwMMParameters")
+	@XmlElementWrapper(name = "APWMMParameters")
 	@XmlElement(name = "APWMMParameter")
 	@CWMPParameter(minEntries = 4, maxEntries = 4)
 	public Collection<APWMMParameter> apwMMParameters;
@@ -598,7 +598,7 @@ Note that this object does not include the total byte and packet statistics, whi
 
 # VO AC (Voice)
 	 */
-	@XmlElementWrapper(name = "staWMMParameters")
+	@XmlElementWrapper(name = "STAWMMParameters")
 	@XmlElement(name = "STAWMMParameter")
 	@CWMPParameter(minEntries = 4, maxEntries = 4)
 	public Collection<STAWMMParameter> staWMMParameters;

@@ -124,7 +124,7 @@ The following is a LAN interface example: ''InternetGatewayDevice.LANDevice.1.LA
 	/**
 	 * Contains the array of results returned.  If a route could not be determined, this array will be empty
 	 */
-	@XmlElementWrapper(name = "routeHopss")
+	@XmlElementWrapper(name = "RouteHopss")
 	@XmlElement(name = "RouteHops")
 	public Collection<RouteHops> routeHopss;
 

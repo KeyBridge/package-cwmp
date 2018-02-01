@@ -191,13 +191,13 @@ public class Host {
 	/**
 	 * The host's known IPv4 addresses.  This includes any addresses assigned via DHCP, which can also be accessed via the {{param|#.DHCPClient}} reference.
 	 */
-	@XmlElementWrapper(name = "ipv4Addresss")
+	@XmlElementWrapper(name = "IPv4Addresss")
 	@XmlElement(name = "IPv4Address")
 	public Collection<IPv4Address> ipv4Addresss;
 	/**
 	 * The host's known IPv6 addresses.  This includes any addresses assigned via DHCP, which can also be accessed via the {{param|#.DHCPClient}} reference.
 	 */
-	@XmlElementWrapper(name = "ipv6Addresss")
+	@XmlElementWrapper(name = "IPv6Addresss")
 	@XmlElement(name = "IPv6Address")
 	public Collection<IPv6Address> ipv6Addresss;
 

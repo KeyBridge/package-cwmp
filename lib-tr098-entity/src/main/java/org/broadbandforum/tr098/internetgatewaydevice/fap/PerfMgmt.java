@@ -34,7 +34,7 @@ public class PerfMgmt {
 	/**
 	 * This object contains parameters relating to File Management configuration for uploading of Performance Files to a designated File Server. Each table entry can be referenced by zero or more radio-specific objects contained in the FAPService instances. The periodic upload will upload data for all of the radio-specific objects that reference it.
 	 */
-	@XmlElementWrapper(name = "configs")
+	@XmlElementWrapper(name = "Configs")
 	@XmlElement(name = "Config")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Config> configs;

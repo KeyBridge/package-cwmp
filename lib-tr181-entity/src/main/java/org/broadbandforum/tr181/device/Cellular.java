@@ -50,13 +50,13 @@ public class Cellular {
 	/**
 	 * Cellular interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}).  Each instance of this object models a cellular modem with a single radio and a single {{object|USIM}}.
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	public Collection<Interface> interfaces;
 	/**
 	 * Cellular Access Point table. Each entry is identified by an {{param|APN}} (Access Point Name) that identifies a gateway between the mobile network and another computer network.
 	 */
-	@XmlElementWrapper(name = "accessPoints")
+	@XmlElementWrapper(name = "AccessPoints")
 	@XmlElement(name = "AccessPoint")
 	@CWMPParameter(access = "readWrite")
 	public Collection<AccessPoint> accessPoints;

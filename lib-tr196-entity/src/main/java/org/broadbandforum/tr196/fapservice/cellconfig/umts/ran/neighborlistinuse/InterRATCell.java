@@ -40,7 +40,7 @@ public class InterRATCell {
 	/**
 	 * Table containing the inter-RAT cell list for GSM.
 	 */
-	@XmlElementWrapper(name = "gsms")
+	@XmlElementWrapper(name = "GSMs")
 	@XmlElement(name = "GSM")
 	public Collection<GSM> gsms;
 

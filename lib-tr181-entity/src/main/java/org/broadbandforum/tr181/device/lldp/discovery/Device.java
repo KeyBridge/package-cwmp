@@ -92,7 +92,7 @@ public class Device {
 	/**
 	 * This table contains information about ports on discovered LLDP devices.
 	 */
-	@XmlElementWrapper(name = "ports")
+	@XmlElementWrapper(name = "Ports")
 	@XmlElement(name = "Port")
 	public Collection<Port> ports;
 	/**

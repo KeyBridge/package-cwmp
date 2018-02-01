@@ -160,7 +160,7 @@ Enumerated value must be one of [NAT44, StatelessNAT64, StatefulNAT64, A+PPortRa
 
         For non-{{enum|Static|Origin}} mappings (here ''Static'' refers to the mechanism that created the mapping, not to the {{param|Lifetime}}), the ACS MAY modify the {{param||Enable}} parameter but MUST NOT modify any other parameters in the mapping or its sub-objects.
 	 */
-	@XmlElementWrapper(name = "inboundMappings")
+	@XmlElementWrapper(name = "InboundMappings")
 	@XmlElement(name = "InboundMapping")
 	@CWMPParameter(access = "readWrite")
 	public Collection<InboundMapping> inboundMappings;
@@ -173,7 +173,7 @@ Enumerated value must be one of [NAT44, StatelessNAT64, StatefulNAT64, A+PPortRa
 
         For non-{{enum|Static|Origin}} mappings (here ''Static'' refers to the mechanism that created the mapping, not to the {{param|Lifetime}}), the ACS MAY modify the {{param||Enable}} parameter but MUST NOT modify any other parameters in the mapping or its sub-objects.
 	 */
-	@XmlElementWrapper(name = "outboundMappings")
+	@XmlElementWrapper(name = "OutboundMappings")
 	@XmlElement(name = "OutboundMapping")
 	@CWMPParameter(access = "readWrite")
 	public Collection<OutboundMapping> outboundMappings;

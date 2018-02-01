@@ -49,13 +49,13 @@ public class NeighborListInUse {
 	/**
 	 * Table containing the intra-frequency cell list.
 	 */
-	@XmlElementWrapper(name = "intraFreqCells")
+	@XmlElementWrapper(name = "IntraFreqCells")
 	@XmlElement(name = "IntraFreqCell")
 	public Collection<IntraFreqCell> intraFreqCells;
 	/**
 	 * Table containing the inter-frequency cell list.
 	 */
-	@XmlElementWrapper(name = "interFreqCells")
+	@XmlElementWrapper(name = "InterFreqCells")
 	@XmlElement(name = "InterFreqCell")
 	public Collection<InterFreqCell> interFreqCells;
 	/**

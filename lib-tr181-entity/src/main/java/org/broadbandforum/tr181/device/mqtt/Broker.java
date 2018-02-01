@@ -113,7 +113,7 @@ public class Broker {
 	/**
 	 * Configures MQTT bridges, which are used to communicate with other MQTT brokers.
 	 */
-	@XmlElementWrapper(name = "bridges")
+	@XmlElementWrapper(name = "Bridges")
 	@XmlElement(name = "Bridge")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Bridge> bridges;

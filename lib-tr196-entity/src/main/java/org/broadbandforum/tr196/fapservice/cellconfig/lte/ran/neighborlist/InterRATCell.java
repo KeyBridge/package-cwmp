@@ -57,21 +57,21 @@ public class InterRATCell {
 	/**
 	 * Table containing the inter-RAT cell list for UTRA (UMTS) provided by the ACS. The table contents MAY be added/deleted/modified during operation, in which case these changes shall be reflected in the broadcast information as soon as possible.
 	 */
-	@XmlElementWrapper(name = "umtSs")
+	@XmlElementWrapper(name = "UMTSs")
 	@XmlElement(name = "UMTS")
 	@CWMPParameter(access = "readWrite")
 	public Collection<UMTS> umtSs;
 	/**
 	 * Table containing the inter-RAT cell list for GERAN (GSM) provided by the ACS. The table contents MAY be added/deleted/modified during operation, in which case these changes shall be reflected in the broadcast information as soon as possible.
 	 */
-	@XmlElementWrapper(name = "gsms")
+	@XmlElementWrapper(name = "GSMs")
 	@XmlElement(name = "GSM")
 	@CWMPParameter(access = "readWrite")
 	public Collection<GSM> gsms;
 	/**
 	 * Table containing the inter-RAT cell list for CDMA2000 provided by the ACS. The table contents MAY be added/deleted/modified during operation, in which case these changes shall be reflected in the broadcast information as soon as possible.
 	 */
-	@XmlElementWrapper(name = "cdmA2000s")
+	@XmlElementWrapper(name = "CDMA2000s")
 	@XmlElement(name = "CDMA2000")
 	@CWMPParameter(access = "readWrite")
 	public Collection<CDMA2000> cdmA2000s;

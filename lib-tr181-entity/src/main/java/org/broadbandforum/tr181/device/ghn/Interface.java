@@ -338,7 +338,7 @@ public class Interface {
 
         Instances of this object are expected to exist only on G.hn interfaces that are currently the Domain Master, i.e. for which parameter {{param|#.IsDM}} is {{true}}.
 	 */
-	@XmlElementWrapper(name = "smmaskedBands")
+	@XmlElementWrapper(name = "SMMaskedBands")
 	@XmlElement(name = "SMMaskedBand")
 	@CWMPParameter(access = "readWrite", maxEntries = 32)
 	public Collection<SMMaskedBand> smmaskedBands;
@@ -352,7 +352,7 @@ public class Interface {
 	/**
 	 * This table contains information about other G.hn devices connected to this G.hn interface.
 	 */
-	@XmlElementWrapper(name = "associatedDevices")
+	@XmlElementWrapper(name = "AssociatedDevices")
 	@XmlElement(name = "AssociatedDevice")
 	public Collection<AssociatedDevice> associatedDevices;
 

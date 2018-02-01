@@ -286,14 +286,14 @@ public class Pool {
 
         Note that it is possible that an IP address in this table is present in one or more of the other conditional serving pools, in which case it is possible that such an address will be assigned to a different client.
 	 */
-	@XmlElementWrapper(name = "staticAddresss")
+	@XmlElementWrapper(name = "StaticAddresss")
 	@XmlElement(name = "StaticAddress")
 	@CWMPParameter(access = "readWrite")
 	public Collection<StaticAddress> staticAddresss;
 	/**
 	 * This object specifies the DHCP options that MUST, if enabled, be returned to clients whose DHCP requests are  associated with this pool.
 	 */
-	@XmlElementWrapper(name = "options")
+	@XmlElementWrapper(name = "Options")
 	@XmlElement(name = "Option")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Option> options;
@@ -302,7 +302,7 @@ public class Pool {
 
         This table lists details of DHCPv4 clients that matched the filter criteria of this {{object|#}} entry.
 	 */
-	@XmlElementWrapper(name = "clients")
+	@XmlElementWrapper(name = "Clients")
 	@XmlElement(name = "Client")
 	public Collection<Client> clients;
 

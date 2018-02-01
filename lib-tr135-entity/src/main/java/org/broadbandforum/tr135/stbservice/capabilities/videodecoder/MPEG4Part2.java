@@ -44,7 +44,7 @@ public class MPEG4Part2 {
 
 {{keys}}  The table MUST include a distinct entry for each supported combination of these parameters.
 	 */
-	@XmlElementWrapper(name = "profileLevels")
+	@XmlElementWrapper(name = "ProfileLevels")
 	@XmlElement(name = "ProfileLevel")
 	public Collection<ProfileLevel> profileLevels;
 

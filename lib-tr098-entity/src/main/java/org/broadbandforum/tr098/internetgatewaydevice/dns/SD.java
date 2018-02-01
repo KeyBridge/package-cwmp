@@ -66,7 +66,7 @@ For example, an SSH service might have:
 
 *{{param|Target}} = "ssh.example.com."
 	 */
-	@XmlElementWrapper(name = "services")
+	@XmlElementWrapper(name = "Services")
 	@XmlElement(name = "Service")
 	public Collection<Service> services;
 

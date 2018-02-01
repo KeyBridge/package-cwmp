@@ -89,7 +89,7 @@ public class Bridging {
 	/**
 	 * Bridge table.
 	 */
-	@XmlElementWrapper(name = "bridges")
+	@XmlElementWrapper(name = "Bridges")
 	@XmlElement(name = "Bridge")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Bridge> bridges;
@@ -102,7 +102,7 @@ public class Bridging {
 
         Several of this object's parameters specify DHCP option values. Some cases are version neutral (the parameter can apply to both DHCPv4 and DHCPv6), but in other cases the representation of the option is different for DHCPv4 and DHCPv6, so it is necessary to define separate DHCPv4-specific and DHCPv6-specific parameters. Therefore, an instance of this object that uses DHCP option values as filter criteria will be associated with either DHCPv4 or DHCPv6, as indicated by the {{param|DHCPType}} parameter.
 	 */
-	@XmlElementWrapper(name = "filters")
+	@XmlElementWrapper(name = "Filters")
 	@XmlElement(name = "Filter")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Filter> filters;
@@ -115,7 +115,7 @@ public class Bridging {
 
         When {{param|Type}} is configured with value of {{enum|S-VLAN|Type}} only VLAN tags from the S-VLAN component are utilized.
 	 */
-	@XmlElementWrapper(name = "providerBridges")
+	@XmlElementWrapper(name = "ProviderBridges")
 	@XmlElement(name = "ProviderBridge")
 	@CWMPParameter(access = "readWrite")
 	public Collection<ProviderBridge> providerBridges;

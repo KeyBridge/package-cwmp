@@ -79,7 +79,7 @@ Corresponds to parameter t-ReselectionUTRA-SF:sf-High specified in SIB6 in {{bib
 	/**
 	 * This object contains parameters relating to the channel frequncy related information of UTRA (UMTS) system (see {{bibref|3GPP-TS.32.592|Section 6.1.5.1.5, 6.1.5.1.6}}).
 	 */
-	@XmlElementWrapper(name = "utrANFDDFreqs")
+	@XmlElementWrapper(name = "UTRANFDDFreqs")
 	@XmlElement(name = "UTRANFDDFreq")
 	@CWMPParameter(access = "readWrite")
 	public Collection<UTRANFDDFreq> utrANFDDFreqs;

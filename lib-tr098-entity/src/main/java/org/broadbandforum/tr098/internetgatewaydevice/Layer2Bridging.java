@@ -92,7 +92,7 @@ There is no guarantee that this many 802.1Q Bridges can be configured.  For exam
 
 If the Bridge Port table is supported, it explicitly defines the Bridge's interfaces.  Otherwise, they are implicitly defined via the union of the FilterInterface / MarkingInterface parameters for all the Filter and Marking table entries that are associated with the Bridge.
 	 */
-	@XmlElementWrapper(name = "bridges")
+	@XmlElementWrapper(name = "Bridges")
 	@XmlElement(name = "Bridge")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Bridge> bridges;
@@ -117,7 +117,7 @@ This table also supports several concepts that are not covered by either 802.1D 
 
 # It supports Ethertype and source MAC address classification rules.
 	 */
-	@XmlElementWrapper(name = "filters")
+	@XmlElementWrapper(name = "Filters")
 	@XmlElement(name = "Filter")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Filter> filters;
@@ -136,14 +136,14 @@ This table also supports several concepts that are not covered by 802.1Q:
 
 # It allows the Ethernet Priority to be changed on egress.
 	 */
-	@XmlElementWrapper(name = "markings")
+	@XmlElementWrapper(name = "Markings")
 	@XmlElement(name = "Marking")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Marking> markings;
 	/**
 	 * Table containing all LAN and WAN interfaces that are available to be referenced by the Bridge table.  Only interfaces that can carry layer 2 bridged traffic are included.
 	 */
-	@XmlElementWrapper(name = "availableInterfaces")
+	@XmlElementWrapper(name = "AvailableInterfaces")
 	@XmlElement(name = "AvailableInterface")
 	public Collection<AvailableInterface> availableInterfaces;
 

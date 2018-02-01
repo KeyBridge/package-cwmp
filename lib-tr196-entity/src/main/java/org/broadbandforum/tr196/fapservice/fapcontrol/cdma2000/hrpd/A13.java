@@ -35,14 +35,14 @@ public class A13 {
 	/**
 	 * HRPD ColorCode to UATI Mapping Table number of entries.
 	 */
-	@XmlElementWrapper(name = "colorCodeToUATI104s")
+	@XmlElementWrapper(name = "ColorCodeToUATI104s")
 	@XmlElement(name = "ColorCodeToUATI104")
 	@CWMPParameter(access = "readWrite", minEntries = 1)
 	public Collection<ColorCodeToUATI104> colorCodeToUATI104s;
 	/**
 	 * This object contains attributes related to A13 Session Transfer
 	 */
-	@XmlElementWrapper(name = "hrpDSubnetToIPs")
+	@XmlElementWrapper(name = "HRPDSubnetToIPs")
 	@XmlElement(name = "HRPDSubnetToIP")
 	@CWMPParameter(access = "readWrite", minEntries = 1)
 	public Collection<HRPDSubnetToIP> hrpDSubnetToIPs;

@@ -64,19 +64,19 @@ public class Client {
 	/**
 	 * IPv6 addresses assigned to this client via IA_NA.
 	 */
-	@XmlElementWrapper(name = "ipv6Addresss")
+	@XmlElementWrapper(name = "IPv6Addresss")
 	@XmlElement(name = "IPv6Address")
 	public Collection<org.broadbandforum.tr181.device.dhcpv6.server.pool.client.IPv6Address> ipv6Addresss;
 	/**
 	 * IPv6 prefixes delegated to this client via IA_PD.
 	 */
-	@XmlElementWrapper(name = "ipv6Prefixs")
+	@XmlElementWrapper(name = "IPv6Prefixs")
 	@XmlElement(name = "IPv6Prefix")
 	public Collection<IPv6Prefix> ipv6Prefixs;
 	/**
 	 * DHCPv6 options supplied by this client, e.g. ''DUID'' (Option 1), ''UserClassID'' (Option 15) or ''VendorClassID'' (option 16).
 	 */
-	@XmlElementWrapper(name = "options")
+	@XmlElementWrapper(name = "Options")
 	@XmlElement(name = "Option")
 	public Collection<Option> options;
 

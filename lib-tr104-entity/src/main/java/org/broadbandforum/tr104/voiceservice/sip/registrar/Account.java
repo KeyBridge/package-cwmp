@@ -157,7 +157,7 @@ The CPE SHOULD use the first enabled item in the list among those supported by t
 	/**
 	 * Active registrations for this SIP account.
 	 */
-	@XmlElementWrapper(name = "contacts")
+	@XmlElementWrapper(name = "Contacts")
 	@XmlElement(name = "Contact")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Contact> contacts;

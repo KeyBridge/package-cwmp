@@ -64,14 +64,14 @@ public class ANPPolicy {
 
         A block period defines how long the device will wait before re-trying to establish connectivity via the access network after the previous attempt has failed.
 	 */
-	@XmlElementWrapper(name = "blockPeriods")
+	@XmlElementWrapper(name = "BlockPeriods")
 	@XmlElement(name = "BlockPeriod")
 	@CWMPParameter(access = "readWrite")
 	public Collection<BlockPeriod> blockPeriods;
 	/**
 	 * This table contains the Request Category (RCAT) policy items for defining when it is appropriate to use the access network for processing requests.
 	 */
-	@XmlElementWrapper(name = "requestCategories")
+	@XmlElementWrapper(name = "RequestCategories")
 	@XmlElement(name = "RequestCategory")
 	@CWMPParameter(access = "readWrite")
 	public Collection<RequestCategory> requestCategories;

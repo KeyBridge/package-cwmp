@@ -89,7 +89,7 @@ If  supports self-configuration capability for {{param}} and more than one item 
 	/**
 	 * This object contains parameters relating to the channel frequncy related information of CDMA2000 system (see {{bibref|3GPP-TS.32.592|Section 6.1.5.1.8}}).
 	 */
-	@XmlElementWrapper(name = "cdmA2000Bands")
+	@XmlElementWrapper(name = "CDMA2000Bands")
 	@XmlElement(name = "CDMA2000Band")
 	@CWMPParameter(access = "readWrite")
 	public Collection<CDMA2000Band> cdmA2000Bands;

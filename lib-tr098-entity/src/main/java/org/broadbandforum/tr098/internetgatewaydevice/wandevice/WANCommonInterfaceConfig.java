@@ -130,7 +130,7 @@ For example, if the physical interface is 100BaseT, this value would be 10000000
 	/**
 	 * Active connection table.
 	 */
-	@XmlElementWrapper(name = "connections")
+	@XmlElementWrapper(name = "Connections")
 	@XmlElement(name = "Connection")
 	public Collection<Connection> connections;
 

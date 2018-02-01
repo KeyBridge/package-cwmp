@@ -42,7 +42,7 @@ public class NeighborList {
 	/**
 	 * Table containing the E-UTRA (i.e. intra-RAT) cell list provided by the ACS. The table contents MAY be added/deleted/modified during operation, in which case these changes shall be reflected in the broadcast information as soon as possible.
 	 */
-	@XmlElementWrapper(name = "lteCells")
+	@XmlElementWrapper(name = "LTECells")
 	@XmlElement(name = "LTECell")
 	@CWMPParameter(access = "readWrite")
 	public Collection<LTECell> lteCells;

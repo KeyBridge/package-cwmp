@@ -146,7 +146,7 @@ CSG enforcement is performed by MSC/SGSN (with support from HSS), or by FGW.
 	/**
 	 * Details for CSG and Non-CSG members.
 	 */
-	@XmlElementWrapper(name = "memberDetails")
+	@XmlElementWrapper(name = "MemberDetails")
 	@XmlElement(name = "MemberDetail")
 	@CWMPParameter(access = "readWrite")
 	public Collection<MemberDetail> memberDetails;

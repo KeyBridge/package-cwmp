@@ -34,7 +34,7 @@ public class CallingFeatures {
 	/**
 	 * This object models a set of calling features that can be applied in {{object|.CallControl.Line.}} or {{object|.CallControl.Extension.}} objects.
 	 */
-	@XmlElementWrapper(name = "sets")
+	@XmlElementWrapper(name = "Sets")
 	@XmlElement(name = "Set")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Set> sets;

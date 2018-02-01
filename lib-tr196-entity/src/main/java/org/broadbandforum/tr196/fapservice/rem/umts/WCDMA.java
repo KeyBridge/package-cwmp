@@ -160,7 +160,7 @@ If {{empty}}, then no specific UARFCN is provided, meaning that the FAP is requi
 	/**
 	 * Table indicating the components of the discovered cells.
 	 */
-	@XmlElementWrapper(name = "cells")
+	@XmlElementWrapper(name = "Cells")
 	@XmlElement(name = "Cell")
 	public Collection<Cell> cells;
 

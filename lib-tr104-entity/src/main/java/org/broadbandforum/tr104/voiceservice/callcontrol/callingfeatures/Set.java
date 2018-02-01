@@ -296,28 +296,28 @@ If enabled, only the remote ''caller party'' can be identified (if not anonymous
 
 Note: a bad configuration (e.g. timeslots overlapping) could cause unexpected behavior.
 	 */
-	@XmlElementWrapper(name = "cfts")
+	@XmlElementWrapper(name = "CFTs")
 	@XmlElement(name = "CFT")
 	@CWMPParameter(access = "readWrite")
 	public Collection<CFT> cfts;
 	/**
 	 * This object defines a Selective Call Forwarding (SCF) that permit the user to forward calls to different destinations depending on the calling number.
 	 */
-	@XmlElementWrapper(name = "scfs")
+	@XmlElementWrapper(name = "SCFs")
 	@XmlElement(name = "SCF")
 	@CWMPParameter(access = "readWrite")
 	public Collection<SCF> scfs;
 	/**
 	 * This object defines a Selective Call Rejection (SCREJ) that permit the user to selectively reject calls depending on the calling number.
 	 */
-	@XmlElementWrapper(name = "scrEJs")
+	@XmlElementWrapper(name = "SCREJs")
 	@XmlElement(name = "SCREJ")
 	@CWMPParameter(access = "readWrite")
 	public Collection<SCREJ> scrEJs;
 	/**
 	 * This object defines the FollowMe destinations mapping definition, in the provided sequence order.
 	 */
-	@XmlElementWrapper(name = "followMes")
+	@XmlElementWrapper(name = "FollowMes")
 	@XmlElement(name = "FollowMe")
 	@CWMPParameter(access = "readWrite")
 	public Collection<FollowMe> followMes;

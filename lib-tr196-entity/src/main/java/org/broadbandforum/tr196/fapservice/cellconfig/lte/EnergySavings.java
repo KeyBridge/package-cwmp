@@ -65,7 +65,7 @@ This object can be used to prevent a cell entering energy saving state.
 
 This object is valid on the specified day(s) and time of every week.
 	 */
-	@XmlElementWrapper(name = "notAllowedTimePeriods")
+	@XmlElementWrapper(name = "NotAllowedTimePeriods")
 	@XmlElement(name = "NotAllowedTimePeriod")
 	@CWMPParameter(access = "readWrite")
 	public Collection<NotAllowedTimePeriod> notAllowedTimePeriods;

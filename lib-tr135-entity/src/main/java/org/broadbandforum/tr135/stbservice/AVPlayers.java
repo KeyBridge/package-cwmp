@@ -89,7 +89,7 @@ If non-empty, the string MUST be one of the .Components.VideoOutput.{i}. AspectR
 	/**
 	 * List of AV Player objects. Each item is one particular AV player being processed by the STB.
 	 */
-	@XmlElementWrapper(name = "avplayers")
+	@XmlElementWrapper(name = "AVPlayers")
 	@XmlElement(name = "AVPlayer")
 	public Collection<AVPlayer> avplayers;
 

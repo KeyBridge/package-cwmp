@@ -33,7 +33,7 @@ public class Optical {
 	/**
 	 * Optical interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}).  This table models physical optical interfaces.
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	public Collection<Interface> interfaces;
 

@@ -33,7 +33,7 @@ public class Hosts {
 	/**
 	 * Host table.
 	 */
-	@XmlElementWrapper(name = "hosts")
+	@XmlElementWrapper(name = "Hosts")
 	@XmlElement(name = "Host")
 	public Collection<Host> hosts;
 

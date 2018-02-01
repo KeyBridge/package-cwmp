@@ -601,21 +601,21 @@ A value of zero indicates no explicit limit on the number of sessions.
 	/**
 	 * Table of Fully Qualified Domain Names for this {{object|#}} instance in order to connect to the SIP server as described in {{bibref|RFC2782}}.
 	 */
-	@XmlElementWrapper(name = "fqdNServers")
+	@XmlElementWrapper(name = "FQDNServers")
 	@XmlElement(name = "FQDNServer")
 	@CWMPParameter(access = "readWrite")
 	public Collection<FQDNServer> fqdNServers;
 	/**
 	 * Table to specify the SIP events to which the CPE MUST subscribe.
 	 */
-	@XmlElementWrapper(name = "eventSubscribes")
+	@XmlElementWrapper(name = "EventSubscribes")
 	@XmlElement(name = "EventSubscribe")
 	@CWMPParameter(access = "readWrite")
 	public Collection<EventSubscribe> eventSubscribes;
 	/**
 	 * Each entry in this table specifies the tone and message to be provided to the user for a particular SIP response received (normally 4xx and 5xx).
 	 */
-	@XmlElementWrapper(name = "responseMaps")
+	@XmlElementWrapper(name = "ResponseMaps")
 	@XmlElement(name = "ResponseMap")
 	@CWMPParameter(access = "readWrite")
 	public Collection<ResponseMap> responseMaps;

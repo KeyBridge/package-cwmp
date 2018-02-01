@@ -105,7 +105,7 @@ public class SCL {
 
         There is exactly one {{object}} instance with a {{param|PolicyScope}} value of "default".
 	 */
-	@XmlElementWrapper(name = "safPolicySets")
+	@XmlElementWrapper(name = "SAFPolicySets")
 	@XmlElement(name = "SAFPolicySet")
 	@CWMPParameter(access = "readWrite")
 	public Collection<SAFPolicySet> safPolicySets;
@@ -118,7 +118,7 @@ public class SCL {
 
         Section 5.3.5 of the M2M Functional Architecture {{bibref|ETSIM2MFA}} describes the REM functionality expected of a SCL for an M2M Device.
 	 */
-	@XmlElementWrapper(name = "areaNwkInstances")
+	@XmlElementWrapper(name = "AreaNwkInstances")
 	@XmlElement(name = "AreaNwkInstance")
 	public Collection<AreaNwkInstance> areaNwkInstances;
 	/**
@@ -142,7 +142,7 @@ public class SCL {
 
         Instances of this table are created and deleted by the CPE. The ACS MAY modify the writeable parameters of this object instance but  it is possible that the value set by the ACS is not retained between reboots of the M2M Device.
 	 */
-	@XmlElementWrapper(name = "areaNwkDeviceInfoInstances")
+	@XmlElementWrapper(name = "AreaNwkDeviceInfoInstances")
 	@XmlElement(name = "AreaNwkDeviceInfoInstance")
 	public Collection<AreaNwkDeviceInfoInstance> areaNwkDeviceInfoInstances;
 

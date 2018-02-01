@@ -35,7 +35,7 @@ public class SoftwareModules {
 	/**
 	 * The Execution Environments that are available on the device, along with their properties and configurable settings.
 	 */
-	@XmlElementWrapper(name = "execEnvs")
+	@XmlElementWrapper(name = "ExecEnvs")
 	@XmlElement(name = "ExecEnv")
 	public Collection<ExecEnv> execEnvs;
 	/**
@@ -43,7 +43,7 @@ public class SoftwareModules {
 
         A new instance of this table gets created during the installation of a Software Module.
 	 */
-	@XmlElementWrapper(name = "deploymentUnits")
+	@XmlElementWrapper(name = "DeploymentUnits")
 	@XmlElement(name = "DeploymentUnit")
 	public Collection<DeploymentUnit> deploymentUnits;
 	/**
@@ -59,7 +59,7 @@ public class SoftwareModules {
 
         Each {{object}} MAY also contain a set of vendor specific parameters displaying status and maintaining configuration that reside under the {{object|Extensions}} object.
 	 */
-	@XmlElementWrapper(name = "executionUnits")
+	@XmlElementWrapper(name = "ExecutionUnits")
 	@XmlElement(name = "ExecutionUnit")
 	public Collection<ExecutionUnit> executionUnits;
 

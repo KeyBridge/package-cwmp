@@ -61,7 +61,7 @@ When the value of the parameter exceeds the maximium range, the lowest value of 
 	/**
 	 * This object represents an instance of a parameter that is associated with the Entry object Instance.
 	 */
-	@XmlElementWrapper(name = "parameters")
+	@XmlElementWrapper(name = "Parameters")
 	@XmlElement(name = "Parameter")
 	public Collection<Parameter> parameters;
 

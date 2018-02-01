@@ -207,7 +207,7 @@ Note: {{empty}} indicates that no specific LAN Host is designated, and results i
 
 Support for more than one interface instance is OPTIONAL.
 	 */
-	@XmlElementWrapper(name = "ipinterfaces")
+	@XmlElementWrapper(name = "IPInterfaces")
 	@XmlElement(name = "IPInterface")
 	@CWMPParameter(access = "readWrite")
 	public Collection<IPInterface> ipinterfaces;
@@ -220,14 +220,14 @@ Each instance of this object specifies a hardware address (MAC address) and an I
 
 Note that it is possible that an IP address in this table is present in one or more of the conditional serving pools, in which case it is possible that such an address will be assigned to a different client.
 	 */
-	@XmlElementWrapper(name = "dhcPStaticAddresss")
+	@XmlElementWrapper(name = "DHCPStaticAddresss")
 	@XmlElement(name = "DHCPStaticAddress")
 	@CWMPParameter(access = "readWrite")
 	public Collection<DHCPStaticAddress> dhcPStaticAddresss;
 	/**
 	 * This object specifies the DHCP options that MUST, if enabled, be returned to clients whose DHCP requests do not match any of the DHCP conditional serving pool entries.
 	 */
-	@XmlElementWrapper(name = "dhcPOptions")
+	@XmlElementWrapper(name = "DHCPOptions")
 	@XmlElement(name = "DHCPOption")
 	@CWMPParameter(access = "readWrite")
 	public Collection<DHCPOption> dhcPOptions;
@@ -240,7 +240,7 @@ If a DHCP request does not match any of the DHCP conditional serving pool entrie
 
 Overlapping pool ranges MUST be supported.
 	 */
-	@XmlElementWrapper(name = "dhcPConditionalServingPools")
+	@XmlElementWrapper(name = "DHCPConditionalServingPools")
 	@XmlElement(name = "DHCPConditionalServingPool")
 	@CWMPParameter(access = "readWrite")
 	public Collection<DHCPConditionalServingPool> dhcPConditionalServingPools;

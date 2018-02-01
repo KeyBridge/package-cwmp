@@ -134,7 +134,7 @@ public class AreaNwkDeviceInfoInstance {
 
         For example, if the {{param|##.AreaNwkInstance.{i}.AreaNwkType}} value is ZigBee, this {{object|##.AreaNwkDeviceInfoInstance}} contains ZigBee-specific parameters that are not formally modeled for this {{object|##.AreaNwkDeviceInfoInstance}} instance.
 	 */
-	@XmlElementWrapper(name = "properties")
+	@XmlElementWrapper(name = "Properties")
 	@XmlElement(name = "Property")
 	public Collection<Property> properties;
 

@@ -42,19 +42,19 @@ public class LANDevice {
 	/**
 	 * This object models an Ethernet LAN connection on a CPE device.  This object must be implemented for CPE that contain an Ethernet interface on the LAN side.
 	 */
-	@XmlElementWrapper(name = "lanEthernetInterfaceConfigs")
+	@XmlElementWrapper(name = "LANEthernetInterfaceConfigs")
 	@XmlElement(name = "LANEthernetInterfaceConfig")
 	public Collection<LANEthernetInterfaceConfig> lanEthernetInterfaceConfigs;
 	/**
 	 * This object models a USB LAN connection on a CPE device.  This object must be implemented for CPE that contain a USB interface on the LAN side.
 	 */
-	@XmlElementWrapper(name = "lanUSBInterfaceConfigs")
+	@XmlElementWrapper(name = "LANUSBInterfaceConfigs")
 	@XmlElement(name = "LANUSBInterfaceConfig")
 	public Collection<LANUSBInterfaceConfig> lanUSBInterfaceConfigs;
 	/**
 	 * This object models an 802.11 LAN connection on a CPE device.  This object must be implemented for CPE that contain an 802.11 interface on the LAN side.
 	 */
-	@XmlElementWrapper(name = "wlaNConfigurations")
+	@XmlElementWrapper(name = "WLANConfigurations")
 	@XmlElement(name = "WLANConfiguration")
 	public Collection<WLANConfiguration> wlaNConfigurations;
 	/**

@@ -73,7 +73,7 @@ public class Router {
 
         Note: The {{object}} table includes a unique key parameter that is a strong reference. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST disable the offending {{object}} row.
 	 */
-	@XmlElementWrapper(name = "ipv4Forwardings")
+	@XmlElementWrapper(name = "IPv4Forwardings")
 	@XmlElement(name = "IPv4Forwarding")
 	@CWMPParameter(access = "readWrite")
 	public Collection<IPv4Forwarding> ipv4Forwardings;
@@ -92,7 +92,7 @@ public class Router {
 
         This object is based on ''inetCidrRouteTable'' from {{bibref|RFC4292}}.
 	 */
-	@XmlElementWrapper(name = "ipv6Forwardings")
+	@XmlElementWrapper(name = "IPv6Forwardings")
 	@XmlElement(name = "IPv6Forwarding")
 	@CWMPParameter(access = "readWrite")
 	public Collection<IPv6Forwarding> ipv6Forwardings;

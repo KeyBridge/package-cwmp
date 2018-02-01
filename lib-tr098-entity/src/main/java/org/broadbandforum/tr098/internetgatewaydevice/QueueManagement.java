@@ -172,28 +172,28 @@ A value of -2 indicates automatic marking of EthernetPriority based upon the DSC
 	/**
 	 * Classification table.
 	 */
-	@XmlElementWrapper(name = "classifications")
+	@XmlElementWrapper(name = "Classifications")
 	@XmlElement(name = "Classification")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Classification> classifications;
 	/**
 	 * Application table.
 	 */
-	@XmlElementWrapper(name = "apps")
+	@XmlElementWrapper(name = "Apps")
 	@XmlElement(name = "App")
 	@CWMPParameter(access = "readWrite")
 	public Collection<App> apps;
 	/**
 	 * Flow table.
 	 */
-	@XmlElementWrapper(name = "flows")
+	@XmlElementWrapper(name = "Flows")
 	@XmlElement(name = "Flow")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Flow> flows;
 	/**
 	 * Policer table.
 	 */
-	@XmlElementWrapper(name = "policers")
+	@XmlElementWrapper(name = "Policers")
 	@XmlElement(name = "Policer")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Policer> policers;
@@ -202,14 +202,14 @@ A value of -2 indicates automatic marking of EthernetPriority based upon the DSC
 
 This table can contain hardware queues.  The CPE MAY refuse to allow hardware queues to be deleted.
 	 */
-	@XmlElementWrapper(name = "queues")
+	@XmlElementWrapper(name = "Queues")
 	@XmlElement(name = "Queue")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Queue> queues;
 	/**
 	 * Queue statistics table. This table is managed by the ACS, which will create entries only for those {Queue, Interface} combinations for which statistics are to be collected.
 	 */
-	@XmlElementWrapper(name = "queueStatss")
+	@XmlElementWrapper(name = "QueueStatss")
 	@XmlElement(name = "QueueStats")
 	@CWMPParameter(access = "readWrite")
 	public Collection<QueueStats> queueStatss;

@@ -36,7 +36,7 @@ public class Routing {
 	/**
 	 * This object allows the handling of the routing and forwarding configuration of the device.
 	 */
-	@XmlElementWrapper(name = "routers")
+	@XmlElementWrapper(name = "Routers")
 	@XmlElement(name = "Router")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Router> routers;

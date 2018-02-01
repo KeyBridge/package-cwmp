@@ -36,7 +36,7 @@ public class Applications {
 	/**
 	 * Service Provider instance table.
 	 */
-	@XmlElementWrapper(name = "serviceProviders")
+	@XmlElementWrapper(name = "ServiceProviders")
 	@XmlElement(name = "ServiceProvider")
 	public Collection<ServiceProvider> serviceProviders;
 	/**

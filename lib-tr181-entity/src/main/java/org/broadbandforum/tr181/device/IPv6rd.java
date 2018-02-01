@@ -52,7 +52,7 @@ public class IPv6rd {
 
         This object definition is derived from {{bibref|RFC5969}} with some minor nomenclature changes.
 	 */
-	@XmlElementWrapper(name = "interfaceSettings")
+	@XmlElementWrapper(name = "InterfaceSettings")
 	@XmlElement(name = "InterfaceSetting")
 	public Collection<InterfaceSetting> interfaceSettings;
 

@@ -165,14 +165,14 @@ This parameter can only be modified if {{param|Origin}} is {{enum|Static|Origin}
 	/**
 	 * Active registrations for this SIP account.
 	 */
-	@XmlElementWrapper(name = "contacts")
+	@XmlElementWrapper(name = "Contacts")
 	@XmlElement(name = "Contact")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Contact> contacts;
 	/**
 	 * Table of SIP events automatically populated by the CPE with each of the SIP event subscriptions in {{object|.SIP.Network.{i}.EventSubscribe.{i}.}}.  This table allows specification of the authentication credentials needed for each event subscription.
 	 */
-	@XmlElementWrapper(name = "eventSubscribes")
+	@XmlElementWrapper(name = "EventSubscribes")
 	@XmlElement(name = "EventSubscribe")
 	@CWMPParameter(access = "readWrite")
 	public Collection<EventSubscribe> eventSubscribes;

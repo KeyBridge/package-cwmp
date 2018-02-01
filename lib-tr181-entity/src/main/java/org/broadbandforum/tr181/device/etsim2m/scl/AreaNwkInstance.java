@@ -68,7 +68,7 @@ public class AreaNwkInstance {
 
         At a minimum, a property instance MUST exist that defines  an attribute that describes the IP layer address type (e.g., IPv4, IPv6, non-IP) of this M2M Area Network.
 	 */
-	@XmlElementWrapper(name = "properties")
+	@XmlElementWrapper(name = "Properties")
 	@XmlElement(name = "Property")
 	public Collection<Property> properties;
 

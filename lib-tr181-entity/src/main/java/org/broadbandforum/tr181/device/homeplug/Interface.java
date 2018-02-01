@@ -201,7 +201,7 @@ public class Interface {
 	/**
 	 * This table contains information about other HomePlug devices connected to this HomePlug interface.
 	 */
-	@XmlElementWrapper(name = "associatedDevices")
+	@XmlElementWrapper(name = "AssociatedDevices")
 	@XmlElement(name = "AssociatedDevice")
 	public Collection<AssociatedDevice> associatedDevices;
 

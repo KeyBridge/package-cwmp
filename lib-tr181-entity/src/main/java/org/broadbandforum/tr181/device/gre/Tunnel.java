@@ -126,7 +126,7 @@ public class Tunnel {
 	/**
 	 * GRE Interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). The {{object}} object models the GRE Header as defined in {{bibref|RFC2784}} and extensions to the GRE Header as defined in {{bibref|RFC2890}}. The {{object}} object provides a way to discriminate how sessions or flows are encapsulated within the GRE Tunnel. In addition the {{object}} object represents the entry point and exit point of the tunnel in relation to the LAN interface. Unless the Key Identifier of {{bibref|RFC2890}} is supported there is only one instance of this {{object}} object per tunnel.
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Interface> interfaces;

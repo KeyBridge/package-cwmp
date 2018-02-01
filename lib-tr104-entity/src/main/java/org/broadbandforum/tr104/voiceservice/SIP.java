@@ -45,28 +45,28 @@ For CPE use cases where {{object|.CallControl}} is used to map network-facing to
 
 : - In the case where the client does not register with the network ({{param|RegisterMode}} is {{enum|STATIC|RegisterMode}}), multiple lines can be associated with each SIP client.
 	 */
-	@XmlElementWrapper(name = "clients")
+	@XmlElementWrapper(name = "Clients")
 	@XmlElement(name = "Client")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Client> clients;
 	/**
 	 * This object models a SIP network (a network as described in {{bibref|TR-104i2|Section 4.2}}). SIP networks are used by SIP {{object|#.Client}} objects so that common parameters do not have to be provisioned multiple times.
 	 */
-	@XmlElementWrapper(name = "networks")
+	@XmlElementWrapper(name = "Networks")
 	@XmlElement(name = "Network")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Network> networks;
 	/**
 	 * Global SIP parameters used by the CPE when acting as proxy for SIP user agents.
 	 */
-	@XmlElementWrapper(name = "proxies")
+	@XmlElementWrapper(name = "Proxies")
 	@XmlElement(name = "Proxy")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Proxy> proxies;
 	/**
 	 * Global SIP parameters used by the CPE when acting as registrar server for externally connected SIP user agents. This object also contains the global SIP parameters used by the CPE when it acts as static identity-to-location binding database for externally connected SIP user agents that don't register (i.e. static-mode SIP-PBX).
 	 */
-	@XmlElementWrapper(name = "registrars")
+	@XmlElementWrapper(name = "Registrars")
 	@XmlElement(name = "Registrar")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Registrar> registrars;

@@ -90,14 +90,14 @@ Once this instance becomes enabled, this parameter will be immutable for the lif
 	/**
 	 * This object provides information about each user account configured for access permissions on this folder.
 	 */
-	@XmlElementWrapper(name = "userAccesss")
+	@XmlElementWrapper(name = "UserAccesss")
 	@XmlElement(name = "UserAccess")
 	@CWMPParameter(access = "readWrite")
 	public Collection<UserAccess> userAccesss;
 	/**
 	 * This object provides information about each user group configured for access permissions on this folder.
 	 */
-	@XmlElementWrapper(name = "groupAccesss")
+	@XmlElementWrapper(name = "GroupAccesss")
 	@XmlElement(name = "GroupAccess")
 	@CWMPParameter(access = "readWrite")
 	public Collection<GroupAccess> groupAccesss;

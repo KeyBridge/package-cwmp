@@ -33,7 +33,7 @@ public class TemperatureStatus {
 	/**
 	 * This object represents information that the device has obtained via sampling an internal temperature sensor.
 	 */
-	@XmlElementWrapper(name = "temperatureSensors")
+	@XmlElementWrapper(name = "TemperatureSensors")
 	@XmlElement(name = "TemperatureSensor")
 	public Collection<TemperatureSensor> temperatureSensors;
 

@@ -269,7 +269,7 @@ public class Profile {
 	/**
 	 * Each instance of this object represents an IKEv2 Configuration Payload (CP) {{bibref|RFC5996|Section 3.15}} Attribute that MUST, if enabled, be sent in IKEv2 CP CFG_REQUEST messages.  All such Attributes MUST be listed.
 	 */
-	@XmlElementWrapper(name = "sentCPAttrs")
+	@XmlElementWrapper(name = "SentCPAttrs")
 	@XmlElement(name = "SentCPAttr")
 	@CWMPParameter(access = "readWrite")
 	public Collection<SentCPAttr> sentCPAttrs;

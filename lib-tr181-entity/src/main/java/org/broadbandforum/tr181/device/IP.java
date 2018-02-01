@@ -109,14 +109,14 @@ public class IP {
 
         Note that {{enum|Tunnel|Type}} and {{enum|Tunneled|Type}} IP interfaces are part of a legacy mechanism that is only used for {{object|##.IPv6rd}}, {{object|##.DSLite}} and {{object|##.IPsec}} tunnels and MUST NOT be used in any other context.  For all other tunneling mechanisms {{enum|Normal|Type}} IP interfaces are stacked above technology-specific Tunnel Interfaces, e.g. above {{object|##.GRE.Tunnel.{i}.Interface}} or {{object|##.MAP.Domain.{i}.Interface}} objects.
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Interface> interfaces;
 	/**
 	 * This table lists the ports on which TCP connections are listening or established.
 	 */
-	@XmlElementWrapper(name = "activePorts")
+	@XmlElementWrapper(name = "ActivePorts")
 	@XmlElement(name = "ActivePort")
 	public Collection<ActivePort> activePorts;
 	/**

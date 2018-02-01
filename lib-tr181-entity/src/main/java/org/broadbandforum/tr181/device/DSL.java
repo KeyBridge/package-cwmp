@@ -38,7 +38,7 @@ public class DSL {
 
         This table models physical DSL lines.
 	 */
-	@XmlElementWrapper(name = "lines")
+	@XmlElementWrapper(name = "Lines")
 	@XmlElement(name = "Line")
 	public Collection<Line> lines;
 	/**
@@ -46,7 +46,7 @@ public class DSL {
 
         This table models DSL channel(s) on top of physical DSL lines.
 	 */
-	@XmlElementWrapper(name = "channels")
+	@XmlElementWrapper(name = "Channels")
 	@XmlElement(name = "Channel")
 	public Collection<Channel> channels;
 	/**
@@ -56,7 +56,7 @@ public class DSL {
 
         The DSL bonding data model is closely aligned with {{bibref|TR-159}}. Corresponds to {{bibref|TR-159}} ''oBondingGroup''.
 	 */
-	@XmlElementWrapper(name = "bondingGroups")
+	@XmlElementWrapper(name = "BondingGroups")
 	@XmlElement(name = "BondingGroup")
 	public Collection<BondingGroup> bondingGroups;
 	/**

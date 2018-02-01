@@ -190,7 +190,7 @@ This table of Vendor Configuration Files is for information only and does not al
 
 Whenever the CPE successfully downloads a configuration file as a result of the Download RPC with the FileType argument of ''3 Vendor Configuration File'', the CPE MUST update this table.  If the name of the file (determined as described in the definition of the {{param|Name}} parameter) differs from that of any existing instance, then the CPE MUST create a new instance to represent this file.  If instead, the name of the file is identical to that of an existing instance, then the CPE MUST update the content of the existing instance with the new version, date, and (optionally) description of the file.{{nokeys}}
 	 */
-	@XmlElementWrapper(name = "vendorConfigFiles")
+	@XmlElementWrapper(name = "VendorConfigFiles")
 	@XmlElement(name = "VendorConfigFile")
 	public Collection<VendorConfigFile> vendorConfigFiles;
 

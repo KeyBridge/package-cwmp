@@ -100,49 +100,49 @@ Enumerated value must be one of [802.11 2.4 GHz, 802.11 5 GHz, 802.11 60 GHz].
 	/**
 	 * This object represents represents all IPv4 addresses reported for a MAC address (AL or interface) in a Higher Layer response message for the IEEE1905Device as defined in {{bibref|IEEE1905.1a|Table 6-32: IPv4 type TLV}}.
 	 */
-	@XmlElementWrapper(name = "ipv4Addresss")
+	@XmlElementWrapper(name = "IPv4Addresss")
 	@XmlElement(name = "IPv4Address")
 	public Collection<IPv4Address> ipv4Addresss;
 	/**
 	 * This object represents represents all IPv6 addresses reported for a MAC address (AL or interface) in a Higher Layer response message for the IEEE1905Device as defined in {{bibref|IEEE1905.1a|Table 6-34: IPv6 type TLV}}.
 	 */
-	@XmlElementWrapper(name = "ipv6Addresss")
+	@XmlElementWrapper(name = "IPv6Addresss")
 	@XmlElement(name = "IPv6Address")
 	public Collection<IPv6Address> ipv6Addresss;
 	/**
 	 * This object represents vendor specific information received in a message with a Vendor specific TLV (as defined in in {{bibref|IEEE1905.1a|Table 6-7: Vendor specific TLV}}).
 	 */
-	@XmlElementWrapper(name = "vendorPropertiess")
+	@XmlElementWrapper(name = "VendorPropertiess")
 	@XmlElement(name = "VendorProperties")
 	public Collection<VendorProperties> vendorPropertiess;
 	/**
 	 * This object represents an instance of an interface for the {{object|##.IEEE1905Device}}.
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	public Collection<Interface> interfaces;
 	/**
 	 * This object represents an instance of a Non-IEEE1905 Neighbor for the {{object|##.IEEE1905Device}}. These fields come from a Topology response message as defined in {{bibref|IEEE1905.1a|Table 6-14: Non-1905 neighbor device TLV}}.
 	 */
-	@XmlElementWrapper(name = "nonIEEE1905Neighbors")
+	@XmlElementWrapper(name = "NonIEEE1905Neighbors")
 	@XmlElement(name = "NonIEEE1905Neighbor")
 	public Collection<NonIEEE1905Neighbor> nonIEEE1905Neighbors;
 	/**
 	 * This object represents an instance of an L2 Neighbor for the {{object|##.IEEE1905Device}}. These fields come from a Topology response message as defined in {{bibref|IEEE1905.1a|Table 6-41: L2 neighbor device TLV}}.
 	 */
-	@XmlElementWrapper(name = "l2neighbors")
+	@XmlElementWrapper(name = "L2Neighbors")
 	@XmlElement(name = "L2Neighbor")
 	public Collection<L2Neighbor> l2neighbors;
 	/**
 	 * This object represents an instance of an {{object}} for the {{object|##.IEEE1905Device}}. These values are from the Topology response message as defined in {{bibref|IEEE1905.1a|Table 6-15: 1905 neighbor device TLV}}.
 	 */
-	@XmlElementWrapper(name = "ieeE1905Neighbors")
+	@XmlElementWrapper(name = "IEEE1905Neighbors")
 	@XmlElement(name = "IEEE1905Neighbor")
 	public Collection<IEEE1905Neighbor> ieeE1905Neighbors;
 	/**
 	 * This object represents an instance of an {{object}} for the {{object|##.IEEE1905Device}}. These values come from the 1905 Device’s Topology response message as defined in {{bibref|IEEE1905.1a|Table 6-11: Device bridging capability TLV}}.
 	 */
-	@XmlElementWrapper(name = "bridgingTuples")
+	@XmlElementWrapper(name = "BridgingTuples")
 	@XmlElement(name = "BridgingTuple")
 	public Collection<BridgingTuple> bridgingTuples;
 

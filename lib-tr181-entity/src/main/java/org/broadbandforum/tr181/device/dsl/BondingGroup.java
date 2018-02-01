@@ -199,7 +199,7 @@ Enumerated value must be one of [ATM, Ethernet, TDIM]
 
         When a {{object|##.Channel}} is no longer bonded, then the CPE MUST delete the corresponding {{object}} instance. However, when a bonded {{object|##.Channel}} becomes disabled, the channel remains bonded and so the corresponding {{object}} instance MUST NOT be deleted.
 	 */
-	@XmlElementWrapper(name = "bondedChannels")
+	@XmlElementWrapper(name = "BondedChannels")
 	@XmlElement(name = "BondedChannel")
 	public Collection<BondedChannel> bondedChannels;
 	/**

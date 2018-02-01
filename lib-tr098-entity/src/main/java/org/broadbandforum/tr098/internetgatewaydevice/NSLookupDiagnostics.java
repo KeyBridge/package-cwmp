@@ -124,7 +124,7 @@ Each repetition will use a Result instance to hold the NSLookup result data.
 	/**
 	 * Results from the most recent invocation of the test, one instance per repetition.
 	 */
-	@XmlElementWrapper(name = "results")
+	@XmlElementWrapper(name = "Results")
 	@XmlElement(name = "Result")
 	public Collection<Result> results;
 

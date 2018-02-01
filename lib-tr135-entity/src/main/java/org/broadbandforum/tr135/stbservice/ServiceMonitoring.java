@@ -208,7 +208,7 @@ It is up to the STB to determine which AV stream should be regarded as the Main 
 
 Note that some parameters, e.g. {{param|.Components.FrontEnd.{i}.IP.ServiceConnect.URI}}, include requirements that restrict the STB's freedom to determine which AV stream should be regarded as the Main AV stream for a given service.
 	 */
-	@XmlElementWrapper(name = "mainStreams")
+	@XmlElementWrapper(name = "MainStreams")
 	@XmlElement(name = "MainStream")
 	public Collection<MainStream> mainStreams;
 

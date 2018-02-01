@@ -345,13 +345,13 @@ public class UploadDiagnostics {
 	/**
 	 * Results for individual connections.  This table is only populated when {{param|#.EnablePerConnectionResults}} is {{true}}.  A new object is created for each connection specified in {{param|#.NumberOfConnections}}.  Instance numbers MUST start at 1 and sequentially increment as new instances are created.  All instances are removed when {{param|#.DiagnosticsState}} is set to {{enum|Requested|#.DiagnosticsState}} or {{enum|None|#.DiagnosticsState}}.
 	 */
-	@XmlElementWrapper(name = "perConnectionResults")
+	@XmlElementWrapper(name = "PerConnectionResults")
 	@XmlElement(name = "PerConnectionResult")
 	public Collection<PerConnectionResult> perConnectionResults;
 	/**
 	 * Results for time segmented tests (tests where {{param|#.TimeBasedTestDuration}} > 0 and {{param|#.TimeBasedTestMeasurementInterval}} > 0).  This data is totaled across all connections in the test.  A new object is created every {{param|#.TimeBasedTestMeasurementInterval}} after that interval has completed.  Instance numbers MUST start at 1 and sequentially increment as new instances are created.  All instances are removed when {{param|#.DiagnosticsState}} is set to {{enum|Requested|#.DiagnosticsState}} or {{enum|None|#.DiagnosticsState}}.
 	 */
-	@XmlElementWrapper(name = "incrementalResults")
+	@XmlElementWrapper(name = "IncrementalResults")
 	@XmlElement(name = "IncrementalResult")
 	public Collection<IncrementalResult> incrementalResults;
 

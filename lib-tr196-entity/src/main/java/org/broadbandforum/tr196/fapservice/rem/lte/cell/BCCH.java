@@ -103,7 +103,7 @@ public class BCCH {
 	/**
 	 * Table containing the PLMN list in the system information broadcast in the BCCH logical channel. Correspnds to plmn-IdentityList as specified in SIB1 in {{bibref|3GPP-TS.36.331|Section 6.2.2}}. Each instance in this object is a PLMN-IdentityInfo which consists of plmn-Identity and cellReservedForOperatorUse IEs.
 	 */
-	@XmlElementWrapper(name = "plmNLists")
+	@XmlElementWrapper(name = "PLMNLists")
 	@XmlElement(name = "PLMNList")
 	public Collection<PLMNList> plmNLists;
 

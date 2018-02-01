@@ -113,7 +113,7 @@ Only the specified values are considered valid, any value other than those and t
 	/**
 	 * Table containing parameters relating to a particular instance of inter-freq events.
 	 */
-	@XmlElementWrapper(name = "instances")
+	@XmlElementWrapper(name = "Instances")
 	@XmlElement(name = "Instance")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Instance> instances;

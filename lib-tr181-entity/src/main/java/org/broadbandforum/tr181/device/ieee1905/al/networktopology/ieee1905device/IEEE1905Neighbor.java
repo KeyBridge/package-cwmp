@@ -50,7 +50,7 @@ public class IEEE1905Neighbor {
 	/**
 	 * This object represents the metrics included in a Link metric response from the IEEE1905Device where {{param|#.LocalInterface}} is the MAC address of an interface in the receiving 1905 AL as defined in {{bibref|IEEE1905.1a|Table 6-17: 1905 transmitter link metric TLV}}.
 	 */
-	@XmlElementWrapper(name = "metrics")
+	@XmlElementWrapper(name = "Metrics")
 	@XmlElement(name = "Metric")
 	public Collection<Metric> metrics;
 

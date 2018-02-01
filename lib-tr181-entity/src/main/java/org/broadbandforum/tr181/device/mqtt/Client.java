@@ -262,7 +262,7 @@ public class Client {
 
         The MQTT client MUST subscribe with the MQTT broker for all subscription instances, whose parameter {{param|Enable}} is set to {{true}}, when it establishes a new connection to the MQTT broker. Disabled subscription instances with {{param|Enable}} set to {{false}} will be ignored during connection establishment.
 	 */
-	@XmlElementWrapper(name = "subscriptions")
+	@XmlElementWrapper(name = "Subscriptions")
 	@XmlElement(name = "Subscription")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Subscription> subscriptions;

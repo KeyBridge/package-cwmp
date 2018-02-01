@@ -48,7 +48,7 @@ public class ETSIM2M {
 
         {{keys}}
 	 */
-	@XmlElementWrapper(name = "scls")
+	@XmlElementWrapper(name = "SCLs")
 	@XmlElement(name = "SCL")
 	@CWMPParameter(access = "readWrite")
 	public Collection<SCL> scls;

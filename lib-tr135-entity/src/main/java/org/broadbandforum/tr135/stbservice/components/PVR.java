@@ -33,7 +33,7 @@ public class PVR {
 	/**
 	 * PVR storage table. There MUST be an instance for each storage object that can be accessed by the PVR. Entries MAY be dynamically created and deleted as storage devices become available and unavailable.
 	 */
-	@XmlElementWrapper(name = "storages")
+	@XmlElementWrapper(name = "Storages")
 	@XmlElement(name = "Storage")
 	public Collection<Storage> storages;
 

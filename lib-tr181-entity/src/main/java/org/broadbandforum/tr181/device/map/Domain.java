@@ -181,7 +181,7 @@ public class Domain {
 	/**
 	 * The MAP domain's Mapping Rules {{bibref|RFC7597}}. The rule with the longest match between its {{param|IPv6Prefix}} and the end-user {{param|#.IPv6Prefix}} is the Basic Mapping Rule (BMR). Any of the rules (including the BMR) can be a Forwarding Mapping Rule.
 	 */
-	@XmlElementWrapper(name = "rules")
+	@XmlElementWrapper(name = "Rules")
 	@XmlElement(name = "Rule")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Rule> rules;

@@ -61,28 +61,28 @@ public class Layer2Bridging {
 	/**
 	 * Bridge table.
 	 */
-	@XmlElementWrapper(name = "bridges")
+	@XmlElementWrapper(name = "Bridges")
 	@XmlElement(name = "Bridge")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Bridge> bridges;
 	/**
 	 * Filter table containing filter entries each of which is associated with one Bridge as specified by a ''Bridge'' table entry.
 	 */
-	@XmlElementWrapper(name = "filters")
+	@XmlElementWrapper(name = "Filters")
 	@XmlElement(name = "Filter")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Filter> filters;
 	/**
 	 * Marking table identifying non-default layer-2 marking behavior for packets on egress from the specified interfaces.
 	 */
-	@XmlElementWrapper(name = "markings")
+	@XmlElementWrapper(name = "Markings")
 	@XmlElement(name = "Marking")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Marking> markings;
 	/**
 	 * Table containing all LAN and WAN interfaces that are available to be referenced by the ''Bridge'' table.  Only interfaces that can carry layer-2 bridged traffic are included.
 	 */
-	@XmlElementWrapper(name = "availableInterfaces")
+	@XmlElementWrapper(name = "AvailableInterfaces")
 	@XmlElement(name = "AvailableInterface")
 	public Collection<AvailableInterface> availableInterfaces;
 

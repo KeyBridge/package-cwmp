@@ -119,7 +119,7 @@ If this parameter is modifiable, the device MAY ignore any DNS servers beyond th
 	/**
 	 * This object is for configuration of DHCP options.  Each instance of this object represents a DHCP option to be included by the DHCP client in client requests.  The DHCP client MAY include any other options not specified in this table.
 	 */
-	@XmlElementWrapper(name = "dhcPOptions")
+	@XmlElementWrapper(name = "DHCPOptions")
 	@XmlElement(name = "DHCPOption")
 	@CWMPParameter(access = "readWrite")
 	public Collection<DHCPOption> dhcPOptions;

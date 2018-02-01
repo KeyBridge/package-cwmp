@@ -34,7 +34,7 @@ public class UPA {
 	/**
 	 * UPA interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). Each table entry models the PHY and MAC levels of a UPA interface {{bibref|UPA-PLC}}.
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	public Collection<Interface> interfaces;
 	/**

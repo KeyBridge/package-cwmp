@@ -107,21 +107,21 @@ public class ZDO {
 	/**
 	 * The {{object}} object describes the configuration capabilities related to maintaining a ZigBee Device's Binding Table as defined in {{bibref|ZigBee2007|section 2.2.8.2 Binding}}.
 	 */
-	@XmlElementWrapper(name = "bindings")
+	@XmlElementWrapper(name = "Bindings")
 	@XmlElement(name = "Binding")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Binding> bindings;
 	/**
 	 * The {{object}} object describes the configuration capabilities related to maintaining a ZigBee Device's Group Table as defined in {{bibref|ZigBee2007|section 2.5.2.7 Group Manager}}.
 	 */
-	@XmlElementWrapper(name = "groups")
+	@XmlElementWrapper(name = "Groups")
 	@XmlElement(name = "Group")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Group> groups;
 	/**
 	 * The {{object}} object describes the application endpoint as defined in {{bibref|ZigBee2007|section 2.1.2 Application Framework}}.
 	 */
-	@XmlElementWrapper(name = "applicationEndpoints")
+	@XmlElementWrapper(name = "ApplicationEndpoints")
 	@XmlElement(name = "ApplicationEndpoint")
 	@CWMPParameter(access = "readWrite")
 	public Collection<ApplicationEndpoint> applicationEndpoints;

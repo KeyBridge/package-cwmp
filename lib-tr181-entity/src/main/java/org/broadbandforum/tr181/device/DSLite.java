@@ -44,7 +44,7 @@ public class DSLite {
 	/**
 	 * DSLite {{bibref|DSLite}} settings.
 	 */
-	@XmlElementWrapper(name = "interfaceSettings")
+	@XmlElementWrapper(name = "InterfaceSettings")
 	@XmlElement(name = "InterfaceSetting")
 	public Collection<InterfaceSetting> interfaceSettings;
 

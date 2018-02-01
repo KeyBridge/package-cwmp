@@ -65,13 +65,13 @@ public class Client {
 	/**
 	 * IPv4 addresses assigned to this client.
 	 */
-	@XmlElementWrapper(name = "ipv4Addresss")
+	@XmlElementWrapper(name = "IPv4Addresss")
 	@XmlElement(name = "IPv4Address")
 	public Collection<IPv4Address> ipv4Addresss;
 	/**
 	 * DHCPv4 options supplied by this client, e.g. ''VendorClassID'' (Option 60), ''ClientID'' (option 61) or ''UserClassID'' (Option 77).
 	 */
-	@XmlElementWrapper(name = "options")
+	@XmlElementWrapper(name = "Options")
 	@XmlElement(name = "Option")
 	public Collection<Option> options;
 

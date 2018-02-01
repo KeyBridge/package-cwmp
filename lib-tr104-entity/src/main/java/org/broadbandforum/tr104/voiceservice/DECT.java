@@ -34,13 +34,13 @@ public class DECT {
 	/**
 	 * DECT base table (a voice physical interface as described in {{bibref|TR-104i2|Section 4.1}}).
 	 */
-	@XmlElementWrapper(name = "bases")
+	@XmlElementWrapper(name = "Bases")
 	@XmlElement(name = "Base")
 	public Collection<Base> bases;
 	/**
 	 * DECT portable table.
 	 */
-	@XmlElementWrapper(name = "portables")
+	@XmlElementWrapper(name = "Portables")
 	@XmlElement(name = "Portable")
 	public Collection<Portable> portables;
 

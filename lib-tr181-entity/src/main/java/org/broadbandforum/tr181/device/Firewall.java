@@ -101,7 +101,7 @@ public class Firewall {
 	/**
 	 * Firewall Level table. When an {{enum|Advanced|#.Config}} configuration is selected, {{param|#.AdvancedLevel}} selects the currently active entry in this table. Each {{object}} table entry references the {{object|#.Chain}} that contains the rules for this level.
 	 */
-	@XmlElementWrapper(name = "levels")
+	@XmlElementWrapper(name = "Levels")
 	@XmlElement(name = "Level")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Level> levels;
@@ -110,7 +110,7 @@ public class Firewall {
 
         A given Firewall Chain's rules are all created by the same entity, as indicated by the {{param|Creator}} parameter.
 	 */
-	@XmlElementWrapper(name = "chains")
+	@XmlElementWrapper(name = "Chains")
 	@XmlElement(name = "Chain")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Chain> chains;

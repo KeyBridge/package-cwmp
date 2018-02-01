@@ -36,7 +36,7 @@ public class PTM {
 
         When a ''PTM Link'' interface is used, a lower-layer {{object|.DSL.Channel}} interface MUST be configured with PTM encapsulation (see {{param|.DSL.Channel.{i}.LinkEncapsulationUsed}}).
 	 */
-	@XmlElementWrapper(name = "links")
+	@XmlElementWrapper(name = "Links")
 	@XmlElement(name = "Link")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Link> links;

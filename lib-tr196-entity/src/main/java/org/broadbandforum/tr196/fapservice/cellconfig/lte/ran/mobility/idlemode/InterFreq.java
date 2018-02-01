@@ -41,7 +41,7 @@ public class InterFreq {
 	/**
 	 * This object contains parameters relating to the carrier information for inter-freq re-selection scenario (see {{bibref|3GPP-TS.32.592|Section 6.1.5.1.3}}).
 	 */
-	@XmlElementWrapper(name = "carriers")
+	@XmlElementWrapper(name = "Carriers")
 	@XmlElement(name = "Carrier")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Carrier> carriers;

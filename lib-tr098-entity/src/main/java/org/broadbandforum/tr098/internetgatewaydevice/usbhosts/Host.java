@@ -95,7 +95,7 @@ When set to {{false}} {{param}} immediately disables the Host controller Power M
 	/**
 	 * Table of connected USB devices.
 	 */
-	@XmlElementWrapper(name = "devices")
+	@XmlElementWrapper(name = "Devices")
 	@XmlElement(name = "Device")
 	public Collection<Device> devices;
 

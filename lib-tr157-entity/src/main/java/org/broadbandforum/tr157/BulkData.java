@@ -115,7 +115,7 @@ public class BulkData {
 
         Each profile represents a bulk data report, including its own timing configuration, communications configuration, and set of parameters.  This allows the ACS to configure multiple reports to be generated at different times for different sets of data.
 	 */
-	@XmlElementWrapper(name = "profiles")
+	@XmlElementWrapper(name = "Profiles")
 	@XmlElement(name = "Profile")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Profile> profiles;

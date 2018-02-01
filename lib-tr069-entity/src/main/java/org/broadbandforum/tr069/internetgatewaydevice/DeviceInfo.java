@@ -179,7 +179,7 @@ If not {{empty}}, this argument SHOULD be in the form of a hierarchical descript
 	/**
 	 * Every instance of this object is a Vendor Configuration File, and contains parameters associated with the Vendor Configuration File.
 	 */
-	@XmlElementWrapper(name = "vendorConfigFiles")
+	@XmlElementWrapper(name = "VendorConfigFiles")
 	@XmlElement(name = "VendorConfigFile")
 	public Collection<VendorConfigFile> vendorConfigFiles;
 

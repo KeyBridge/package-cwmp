@@ -37,7 +37,7 @@ public class LTE {
 	/**
 	 * This object contains a table of all tunnel instances configured for the LTE FAP.
 	 */
-	@XmlElementWrapper(name = "tunnels")
+	@XmlElementWrapper(name = "Tunnels")
 	@XmlElement(name = "Tunnel")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Tunnel> tunnels;

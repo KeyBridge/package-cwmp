@@ -56,7 +56,7 @@ For each incoming packet, the layer-3 forwarding decision is conceptually made a
 
 * The first of the remaining table entries is applied to the packet.
 	 */
-	@XmlElementWrapper(name = "forwardings")
+	@XmlElementWrapper(name = "Forwardings")
 	@XmlElement(name = "Forwarding")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Forwarding> forwardings;

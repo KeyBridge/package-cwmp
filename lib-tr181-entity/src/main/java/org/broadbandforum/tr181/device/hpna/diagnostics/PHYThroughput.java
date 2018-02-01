@@ -119,7 +119,7 @@ public class PHYThroughput {
 
         Each result object corresponds to unidirectional traffic between two PHY diagnostics-enabled nodes (so there are two such objects for  each such pair).
 	 */
-	@XmlElementWrapper(name = "results")
+	@XmlElementWrapper(name = "Results")
 	@XmlElement(name = "Result")
 	public Collection<Result> results;
 

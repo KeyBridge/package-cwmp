@@ -218,7 +218,7 @@ If this XMPP Connection is either not established or established but not secured
 
 This table is only relevant when {{param|##.Connection.{i}.ServerConnectAlgorithm}} is set to {{enum|ServerTable|##.Connection.{i}.ServerConnectAlgorithm}}.  If {{param|##.Connection.{i}.ServerConnectAlgorithm}} is set to {{enum|DNS-SRV|##.Connection.{i}.ServerConnectAlgorithm}} then any instances of this table are ignored by this {{object|##.Connection}}.
 	 */
-	@XmlElementWrapper(name = "servers")
+	@XmlElementWrapper(name = "Servers")
 	@XmlElement(name = "Server")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Server> servers;

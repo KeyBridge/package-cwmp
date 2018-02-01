@@ -150,14 +150,14 @@ public class IKEv2SA {
 
         If the same Attribute is received multiple times, it is up to the CPE to decide which entries to include (i.e. whether the same Attribute will be present multiple times). In order to allow for the same Attribute to be present multiple times within the table, this table has no unique key defined.
 	 */
-	@XmlElementWrapper(name = "receivedCPAttrs")
+	@XmlElementWrapper(name = "ReceivedCPAttrs")
 	@XmlElement(name = "ReceivedCPAttr")
 	@CWMPParameter(access = "readWrite")
 	public Collection<ReceivedCPAttr> receivedCPAttrs;
 	/**
 	 * Represents a child Security Association (SA) pair, i.e. an inbound child SA and an outbound child SA.
 	 */
-	@XmlElementWrapper(name = "childSAs")
+	@XmlElementWrapper(name = "ChildSAs")
 	@XmlElement(name = "ChildSA")
 	public Collection<ChildSA> childSAs;
 

@@ -70,7 +70,7 @@ public class CDMA2000 {
 	/**
 	 * At most one enabled entry in this table can exist with a given value for IMSI and HRPDIdentifierValue. The IMSI field may be empty.
 	 */
-	@XmlElementWrapper(name = "memberDetails")
+	@XmlElementWrapper(name = "MemberDetails")
 	@XmlElement(name = "MemberDetail")
 	@CWMPParameter(access = "readWrite", minEntries = 1)
 	public Collection<MemberDetail> memberDetails;

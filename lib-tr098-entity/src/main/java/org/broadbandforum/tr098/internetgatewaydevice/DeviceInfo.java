@@ -233,7 +233,7 @@ This table of Vendor Configuration Files is for information only and does not al
 
 Whenever the CPE successfully downloads a configuration file as a result of the Download RPC with the FileType argument of ''3 Vendor Configuration File'', the CPE MUST update this table.  If the name of the file (determined as described in the definition of the {{param|Name}} parameter) differs from that of any existing instance, then the CPE MUST create a new instance to represent this file.  If instead, the name of the file is identical to that of an existing instance, then the CPE MUST update the content of the existing instance with the new version, date, and (optionally) description of the file.{{nokeys}}
 	 */
-	@XmlElementWrapper(name = "vendorConfigFiles")
+	@XmlElementWrapper(name = "VendorConfigFiles")
 	@XmlElement(name = "VendorConfigFile")
 	public Collection<VendorConfigFile> vendorConfigFiles;
 	/**
@@ -265,13 +265,13 @@ Each table entry MUST refer to only a single Root Object or Service Object.  The
 
 Considering that every device has some form of a data model, this table MUST NOT be empty.
 	 */
-	@XmlElementWrapper(name = "supportedDataModels")
+	@XmlElementWrapper(name = "SupportedDataModels")
 	@XmlElement(name = "SupportedDataModel")
 	public Collection<SupportedDataModel> supportedDataModels;
 	/**
 	 * Each table entry represents a hardware or virtual processor that resides on this device.
 	 */
-	@XmlElementWrapper(name = "processors")
+	@XmlElementWrapper(name = "Processors")
 	@XmlElement(name = "Processor")
 	public Collection<Processor> processors;
 	/**
@@ -279,7 +279,7 @@ Considering that every device has some form of a data model, this table MUST NOT
 
 This table of log files is informational only and does not allow the ACS to operate on these files in any way.
 	 */
-	@XmlElementWrapper(name = "vendorLogFiles")
+	@XmlElementWrapper(name = "VendorLogFiles")
 	@XmlElement(name = "VendorLogFile")
 	public Collection<VendorLogFile> vendorLogFiles;
 	/**
@@ -290,7 +290,7 @@ This table of log files is informational only and does not allow the ACS to oper
 	/**
 	 * This object contains Location information.
 	 */
-	@XmlElementWrapper(name = "locations")
+	@XmlElementWrapper(name = "Locations")
 	@XmlElement(name = "Location")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Location> locations;

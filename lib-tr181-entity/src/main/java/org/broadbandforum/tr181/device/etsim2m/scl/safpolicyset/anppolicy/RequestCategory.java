@@ -67,7 +67,7 @@ public class RequestCategory {
 
         Processing behavior for the use of RCAT Schedules is defined in section 10.3.1.2.2 of the M2M mIa, dIa and mId Interfaces {{bibref|ETSIM2MInterfaces}} document.
 	 */
-	@XmlElementWrapper(name = "schedules")
+	@XmlElementWrapper(name = "Schedules")
 	@XmlElement(name = "Schedule")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Schedule> schedules;

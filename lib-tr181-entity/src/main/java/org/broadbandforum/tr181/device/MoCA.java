@@ -33,7 +33,7 @@ public class MoCA {
 	/**
 	 * MoCA interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). Each table entry models the PHY and MAC levels of a MoCA interface {{bibref|MoCAv1.0}} {{bibref|MoCAv1.1}}.
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	public Collection<Interface> interfaces;
 

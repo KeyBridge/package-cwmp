@@ -62,7 +62,7 @@ Resetting statistics MUST reset all {{param|Channel.{i}.Duration}} parameters.
 
 Each entry corresponds to a given TV channel and is indexed by channel name (the instance number is chosen by the STB and is not related to the channel number).
 	 */
-	@XmlElementWrapper(name = "channels")
+	@XmlElementWrapper(name = "Channels")
 	@XmlElement(name = "Channel")
 	public Collection<Channel> channels;
 

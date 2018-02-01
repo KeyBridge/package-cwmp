@@ -50,14 +50,14 @@ public class NeighborList {
 	/**
 	 * Table containing the intra-frequency cell list provided by the ACS. The table contents MAY be added/deleted/modified during operation, in which case these changes shall be reflected in the broadcast information as soon as possible.
 	 */
-	@XmlElementWrapper(name = "intraFreqCells")
+	@XmlElementWrapper(name = "IntraFreqCells")
 	@XmlElement(name = "IntraFreqCell")
 	@CWMPParameter(access = "readWrite")
 	public Collection<IntraFreqCell> intraFreqCells;
 	/**
 	 * Table containing the inter-frequency cell list provided by the ACS. The table contents MAY be added/deleted/modified during operation, in which case these changes shall be reflected in the broadcast information as soon as possible.
 	 */
-	@XmlElementWrapper(name = "interFreqCells")
+	@XmlElementWrapper(name = "InterFreqCells")
 	@XmlElement(name = "InterFreqCell")
 	@CWMPParameter(access = "readWrite")
 	public Collection<InterFreqCell> interFreqCells;

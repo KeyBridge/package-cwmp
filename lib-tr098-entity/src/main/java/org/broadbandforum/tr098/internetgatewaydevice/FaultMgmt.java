@@ -46,7 +46,7 @@ public class FaultMgmt {
 
 The instance numbers for this table SHOULD be maintained across firmware upgrades of the device.
 	 */
-	@XmlElementWrapper(name = "supportedAlarms")
+	@XmlElementWrapper(name = "SupportedAlarms")
 	@XmlElement(name = "SupportedAlarm")
 	public Collection<SupportedAlarm> supportedAlarms;
 	/**
@@ -58,7 +58,7 @@ If maximum entries as indicated by {{param|.FaultMgmt.MaxCurrentAlarmEntries}} i
 
 When a new alarm replaces an existing alarm, then all parameter values for that instance are considered as changed for the purposes of value change notifications to the ACS (even if their new values are identical to those of the prior alarm).
 	 */
-	@XmlElementWrapper(name = "currentAlarms")
+	@XmlElementWrapper(name = "CurrentAlarms")
 	@XmlElement(name = "CurrentAlarm")
 	public Collection<CurrentAlarm> currentAlarms;
 	/**
@@ -70,7 +70,7 @@ This object has a fixed number of entries with instance numbers from 1 to {{para
 
 If maximum instance number {{param|.FaultMgmt.HistoryEventNumberOfEntries}} is reached, the next event overrides the object with instance number 1.  Subsequent entries override objects at sequentially increasing instance numbers.  This logic provides for automatic "rolling" of records.
 	 */
-	@XmlElementWrapper(name = "historyEvents")
+	@XmlElementWrapper(name = "HistoryEvents")
 	@XmlElement(name = "HistoryEvent")
 	public Collection<HistoryEvent> historyEvents;
 	/**
@@ -84,7 +84,7 @@ If maximum instance number {{param|.FaultMgmt.ExpeditedEventNumberOfEntries}} is
 
 When a new alarm replaces an existing alarm, then all parameter values for that instance are considered as changed for the purposes of value change notifications to the ACS (even if their new values are identical to those of the prior alarm).
 	 */
-	@XmlElementWrapper(name = "expeditedEvents")
+	@XmlElementWrapper(name = "ExpeditedEvents")
 	@XmlElement(name = "ExpeditedEvent")
 	public Collection<ExpeditedEvent> expeditedEvents;
 	/**
@@ -98,7 +98,7 @@ If maximum instance number {{param|.FaultMgmt.QueuedEventNumberOfEntries}} is re
 
 When a new alarm replaces an existing alarm, then all parameter values for that instance are considered as changed for the purposes of value change notifications to the ACS (even if their new values are identical to those of the prior alarm).
 	 */
-	@XmlElementWrapper(name = "queuedEvents")
+	@XmlElementWrapper(name = "QueuedEvents")
 	@XmlElement(name = "QueuedEvent")
 	public Collection<QueuedEvent> queuedEvents;
 

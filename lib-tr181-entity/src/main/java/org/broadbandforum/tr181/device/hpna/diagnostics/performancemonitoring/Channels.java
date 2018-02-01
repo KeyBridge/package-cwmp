@@ -43,7 +43,7 @@ public class Channels {
 	/**
 	 * Per-channel HPNA performance monitoring results.
 	 */
-	@XmlElementWrapper(name = "channels")
+	@XmlElementWrapper(name = "Channels")
 	@XmlElement(name = "Channel")
 	public Collection<Channel> channels;
 

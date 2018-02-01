@@ -237,14 +237,14 @@ List of available Networks for routing calls.
 	/**
 	 * Each table entry references a row in the {{object|.SIP.Registrar}} table to identify the User IP address and listening port for the Device and the Network to route calls to.
 	 */
-	@XmlElementWrapper(name = "userInterfaces")
+	@XmlElementWrapper(name = "UserInterfaces")
 	@XmlElement(name = "UserInterface")
 	@CWMPParameter(access = "readWrite")
 	public Collection<UserInterface> userInterfaces;
 	/**
 	 * For interworking use cases such as SIP-ISDN PBX plug and ESBC : mapping instance between a Network interface and a User extension.
 	 */
-	@XmlElementWrapper(name = "maps")
+	@XmlElementWrapper(name = "Maps")
 	@XmlElement(name = "Map")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Map> maps;

@@ -185,7 +185,7 @@ public class AccessPoint {
 	/**
 	 * A table of the devices currently associated with the access point.
 	 */
-	@XmlElementWrapper(name = "associatedDevices")
+	@XmlElementWrapper(name = "AssociatedDevices")
 	@XmlElement(name = "AssociatedDevice")
 	public Collection<AssociatedDevice> associatedDevices;
 	/**
@@ -199,7 +199,7 @@ public class AccessPoint {
 
         * VO (Voice)
 	 */
-	@XmlElementWrapper(name = "acs")
+	@XmlElementWrapper(name = "ACs")
 	@XmlElement(name = "AC")
 	@CWMPParameter(minEntries = 4, maxEntries = 4)
 	public Collection<AC> acs;

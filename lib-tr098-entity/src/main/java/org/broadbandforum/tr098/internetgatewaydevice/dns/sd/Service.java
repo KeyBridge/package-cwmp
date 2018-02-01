@@ -158,7 +158,7 @@ The time an inactive {{object}} remains listed in this table is a local matter t
 
 When multiple instances of the {{object}} table have the same value for the {{param|Key}} parameter, the implementation is CPE specific.
 	 */
-	@XmlElementWrapper(name = "textRecords")
+	@XmlElementWrapper(name = "TextRecords")
 	@XmlElement(name = "TextRecord")
 	public Collection<TextRecord> textRecords;
 

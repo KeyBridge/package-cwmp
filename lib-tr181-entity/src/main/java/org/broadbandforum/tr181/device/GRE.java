@@ -35,7 +35,7 @@ public class GRE {
 	/**
 	 * GRE Tunnel table, models the GRE Tunnel instance and represents the entry point and exit point of the tunnel in relation to the WAN interface. A {{object}} object has one or more {{object|Interface}} objects that further define the sessions or flows within the tunnel.
 	 */
-	@XmlElementWrapper(name = "tunnels")
+	@XmlElementWrapper(name = "Tunnels")
 	@XmlElement(name = "Tunnel")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Tunnel> tunnels;
@@ -52,7 +52,7 @@ public class GRE {
 
         For enabled table entries, if {{param|Interface}} is not a valid reference and {{param|AllInterfaces}} is {{false}}, then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 */
-	@XmlElementWrapper(name = "filters")
+	@XmlElementWrapper(name = "Filters")
 	@XmlElement(name = "Filter")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Filter> filters;

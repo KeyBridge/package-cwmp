@@ -204,7 +204,7 @@ public class Interface {
 	/**
 	 * IPv4 address table. Entries are auto-created and auto-deleted as IP addresses are added and deleted via DHCP, auto-IP, or IPCP. Static entries are created and configured by the ACS.
 	 */
-	@XmlElementWrapper(name = "ipv4Addresss")
+	@XmlElementWrapper(name = "IPv4Addresss")
 	@XmlElement(name = "IPv4Address")
 	@CWMPParameter(access = "readWrite")
 	public Collection<IPv4Address> ipv4Addresss;
@@ -229,7 +229,7 @@ public class Interface {
 
         This object is based on ''ipAddressTable'' from {{bibref|RFC4293}}.
 	 */
-	@XmlElementWrapper(name = "ipv6Addresss")
+	@XmlElementWrapper(name = "IPv6Addresss")
 	@XmlElement(name = "IPv6Address")
 	@CWMPParameter(access = "readWrite")
 	public Collection<IPv6Address> ipv6Addresss;
@@ -254,7 +254,7 @@ public class Interface {
 
         This object is based on ''ipAddressPrefixTable'' from {{bibref|RFC4293}}.
 	 */
-	@XmlElementWrapper(name = "ipv6Prefixs")
+	@XmlElementWrapper(name = "IPv6Prefixs")
 	@XmlElement(name = "IPv6Prefix")
 	@CWMPParameter(access = "readWrite")
 	public Collection<IPv6Prefix> ipv6Prefixs;

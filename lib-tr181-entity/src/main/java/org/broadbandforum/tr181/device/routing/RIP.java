@@ -55,7 +55,7 @@ public class RIP {
 
         Note: This object only applies to RIP2; i.e. version 2 of the RIP protocol is used to accept or send over the specified {{param|Interface}}.
 	 */
-	@XmlElementWrapper(name = "interfaceSettings")
+	@XmlElementWrapper(name = "InterfaceSettings")
 	@XmlElement(name = "InterfaceSetting")
 	@CWMPParameter(access = "readWrite")
 	public Collection<InterfaceSetting> interfaceSettings;

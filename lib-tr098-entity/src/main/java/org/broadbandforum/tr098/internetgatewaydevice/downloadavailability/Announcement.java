@@ -49,7 +49,7 @@ public class Announcement {
 	/**
 	 * Multicast groups to which the CPE SHOULD listen for announcements.
 	 */
-	@XmlElementWrapper(name = "groups")
+	@XmlElementWrapper(name = "Groups")
 	@XmlElement(name = "Group")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Group> groups;

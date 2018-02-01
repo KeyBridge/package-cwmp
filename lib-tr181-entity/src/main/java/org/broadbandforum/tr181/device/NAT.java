@@ -41,7 +41,7 @@ public class NAT {
 
         Note: The {{object}} table includes a unique key parameter that is a strong reference. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 */
-	@XmlElementWrapper(name = "interfaceSettings")
+	@XmlElementWrapper(name = "InterfaceSettings")
 	@XmlElement(name = "InterfaceSetting")
 	@CWMPParameter(access = "readWrite")
 	public Collection<InterfaceSetting> interfaceSettings;
@@ -56,7 +56,7 @@ public class NAT {
 
         For enabled table entries, if {{param|InternalClient}} is {{empty}}, or if {{param|Interface}} is not a valid reference and {{param|AllInterfaces}} is {{false}}, then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 */
-	@XmlElementWrapper(name = "portMappings")
+	@XmlElementWrapper(name = "PortMappings")
 	@XmlElement(name = "PortMapping")
 	@CWMPParameter(access = "readWrite")
 	public Collection<PortMapping> portMappings;

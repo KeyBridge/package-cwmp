@@ -130,13 +130,13 @@ public class Interface {
 	/**
 	 * This object defines the vendor specific properties (vendorSpecificInfo field) of this {{object|##.Interface}} as defined in {{bibref|IEEE1905.1a|Table 5-2: intfDescriptor elements}}.
 	 */
-	@XmlElementWrapper(name = "vendorPropertiess")
+	@XmlElementWrapper(name = "VendorPropertiess")
 	@XmlElement(name = "VendorProperties")
 	public Collection<VendorProperties> vendorPropertiess;
 	/**
 	 * This object defines the 1905 neighbors and link properties.
 	 */
-	@XmlElementWrapper(name = "links")
+	@XmlElementWrapper(name = "Links")
 	@XmlElement(name = "Link")
 	public Collection<Link> links;
 

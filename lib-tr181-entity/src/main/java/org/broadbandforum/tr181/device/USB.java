@@ -35,13 +35,13 @@ public class USB {
 	/**
 	 * USB interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). This table models master and slave USB physical interfaces that support carrying Ethernet frames, e.g. via the USB Communication Device Class.
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	public Collection<Interface> interfaces;
 	/**
 	 * USB Port table. This table models master and slave USB physical ports on the device.
 	 */
-	@XmlElementWrapper(name = "ports")
+	@XmlElementWrapper(name = "Ports")
 	@XmlElement(name = "Port")
 	public Collection<Port> ports;
 	/**

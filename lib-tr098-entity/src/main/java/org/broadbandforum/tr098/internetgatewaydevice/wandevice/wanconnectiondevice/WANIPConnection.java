@@ -306,7 +306,7 @@ This table MUST NOT contain dynamic NAT binding entries associated with the norm
 
 At most one entry in an instance of this table can exist with all of the same values for {{param|RemoteHost}}, {{param|ExternalPort}}, and {{param|PortMappingProtocol}}.  If the ACS attempts to set the parameters of an existing entry such that this requirement would be violated, the CPE MUST reject the request.  In this case, the SetParameterValues response MUST include a SetParameterValuesFault element for each parameter in the corresponding request whose modification would have resulted in such a violation.  On creation of a new table entry, the CPE MUST choose default values for {{param|ExternalPort}} and {{param|PortMappingProtocol}} such that the new entry does not conflict with any existing entry.
 	 */
-	@XmlElementWrapper(name = "portMappings")
+	@XmlElementWrapper(name = "PortMappings")
 	@XmlElement(name = "PortMapping")
 	@CWMPParameter(access = "readWrite")
 	public Collection<PortMapping> portMappings;

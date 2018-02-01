@@ -62,7 +62,7 @@ public class ClockSynchronization {
 	/**
 	 * List of eligible external clock sources. The number of entries in this table depends on the maximum number of external clock sources supported by the CPE.
 	 */
-	@XmlElementWrapper(name = "clockSources")
+	@XmlElementWrapper(name = "ClockSources")
 	@XmlElement(name = "ClockSource")
 	public Collection<ClockSource> clockSources;
 

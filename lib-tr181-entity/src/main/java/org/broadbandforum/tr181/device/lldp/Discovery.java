@@ -35,7 +35,7 @@ public class Discovery {
 	/**
 	 * This table contains information about discovered LLDP devices.
 	 */
-	@XmlElementWrapper(name = "devices")
+	@XmlElementWrapper(name = "Devices")
 	@XmlElement(name = "Device")
 	public Collection<Device> devices;
 

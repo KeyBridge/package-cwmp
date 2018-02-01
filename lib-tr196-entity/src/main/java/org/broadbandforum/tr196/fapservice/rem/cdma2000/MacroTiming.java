@@ -85,7 +85,7 @@ The other read-only parameters in this object only have valid values when timing
 	/**
 	 * Object used to configure list of channels to be used for Macto Timing.
 	 */
-	@XmlElementWrapper(name = "channels")
+	@XmlElementWrapper(name = "Channels")
 	@XmlElement(name = "Channel")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Channel> channels;

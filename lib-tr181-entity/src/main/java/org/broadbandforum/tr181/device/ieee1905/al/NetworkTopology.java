@@ -70,13 +70,13 @@ public class NetworkTopology {
 	/**
 	 * This object represents log entries for changes in the 1905 Network Topology. The Change Log is a First In First Out queue where the oldest entries (defined by values of the {{param|TimeStamp}} parameter) are deleted once the log is full.
 	 */
-	@XmlElementWrapper(name = "changeLogs")
+	@XmlElementWrapper(name = "ChangeLogs")
 	@XmlElement(name = "ChangeLog")
 	public Collection<ChangeLog> changeLogs;
 	/**
 	 * This object represents an instance of discovered 1905 Devices in the network (received Topology discovery message as defined in {{bibref|IEEE1905.1a|Clause 6.3.1}}).
 	 */
-	@XmlElementWrapper(name = "ieeE1905Devices")
+	@XmlElementWrapper(name = "IEEE1905Devices")
 	@XmlElement(name = "IEEE1905Device")
 	public Collection<IEEE1905Device> ieeE1905Devices;
 

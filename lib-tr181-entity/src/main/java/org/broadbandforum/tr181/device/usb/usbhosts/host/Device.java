@@ -180,7 +180,7 @@ public class Device {
 	/**
 	 * Table of device configurations.
 	 */
-	@XmlElementWrapper(name = "configurations")
+	@XmlElementWrapper(name = "Configurations")
 	@XmlElement(name = "Configuration")
 	public Collection<Configuration> configurations;
 

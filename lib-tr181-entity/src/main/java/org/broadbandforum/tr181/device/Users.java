@@ -34,7 +34,7 @@ public class Users {
 	/**
 	 * This object contains parameters relating to the user characteristics.
 	 */
-	@XmlElementWrapper(name = "users")
+	@XmlElementWrapper(name = "Users")
 	@XmlElement(name = "User")
 	@CWMPParameter(access = "readWrite")
 	public Collection<User> users;

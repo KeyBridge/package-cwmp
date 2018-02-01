@@ -39,7 +39,7 @@ public class WANDSLConnectionManagement {
 
 This object is OBSOLETED because it is within an OBSOLETED object.
 	 */
-	@XmlElementWrapper(name = "connectionServices")
+	@XmlElementWrapper(name = "ConnectionServices")
 	@XmlElement(name = "ConnectionService")
 	public Collection<ConnectionService> connectionServices;
 

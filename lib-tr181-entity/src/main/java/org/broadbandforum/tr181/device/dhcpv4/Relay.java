@@ -53,7 +53,7 @@ public class Relay {
 
         For enabled table entries, if {{param|Interface}} is not a valid reference then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 */
-	@XmlElementWrapper(name = "forwardings")
+	@XmlElementWrapper(name = "Forwardings")
 	@XmlElement(name = "Forwarding")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Forwarding> forwardings;

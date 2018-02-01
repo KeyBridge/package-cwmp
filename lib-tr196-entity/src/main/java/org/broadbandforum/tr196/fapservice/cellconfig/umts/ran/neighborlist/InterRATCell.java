@@ -41,7 +41,7 @@ public class InterRATCell {
 	/**
 	 * Table containing the inter-RAT cell list for GSM provided by the ACS. The table contents MAY be added/deleted/modified during operation, in which case these changes shall be reflected in the broadcast information as soon as possible.
 	 */
-	@XmlElementWrapper(name = "gsms")
+	@XmlElementWrapper(name = "GSMs")
 	@XmlElement(name = "GSM")
 	@CWMPParameter(access = "readWrite")
 	public Collection<GSM> gsms;

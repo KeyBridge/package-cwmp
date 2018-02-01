@@ -224,7 +224,7 @@ public class Profile {
 
         Each entry in this table represents a parameter (or set of parameters if a partial path is provided) to be collected and reported.
 	 */
-	@XmlElementWrapper(name = "parameters")
+	@XmlElementWrapper(name = "Parameters")
 	@XmlElement(name = "Parameter")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Parameter> parameters;

@@ -297,7 +297,7 @@ public class WANPPPConnection {
 	/**
 	 * Port mapping table.
 	 */
-	@XmlElementWrapper(name = "portMappings")
+	@XmlElementWrapper(name = "PortMappings")
 	@XmlElement(name = "PortMapping")
 	@CWMPParameter(access = "readWrite")
 	public Collection<PortMapping> portMappings;

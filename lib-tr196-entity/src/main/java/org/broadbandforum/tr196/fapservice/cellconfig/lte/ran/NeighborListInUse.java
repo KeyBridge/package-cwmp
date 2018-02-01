@@ -41,7 +41,7 @@ public class NeighborListInUse {
 	/**
 	 * Table containing the LTE EUTRA (i.e. intra-RAT) cell list.
 	 */
-	@XmlElementWrapper(name = "lteCells")
+	@XmlElementWrapper(name = "LTECells")
 	@XmlElement(name = "LTECell")
 	public Collection<LTECell> lteCells;
 	/**

@@ -173,7 +173,7 @@ If a list is provided, the FAP is expected to limit the REM measurement to the A
 	/**
 	 * Table indicating the components of the discovered cells.
 	 */
-	@XmlElementWrapper(name = "cells")
+	@XmlElementWrapper(name = "Cells")
 	@XmlElement(name = "Cell")
 	public Collection<Cell> cells;
 

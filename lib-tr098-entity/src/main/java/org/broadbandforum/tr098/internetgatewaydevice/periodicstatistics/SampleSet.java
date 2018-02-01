@@ -193,7 +193,7 @@ Individual {{param}} values can be less than {{param|SampleInterval}}, for sever
 
 Note that the comma-separated lists in this object (SampleSeconds, SuspectData and Values) only ever change (a) when first enabled, (b) when ForceSample is set to true (a "sneak preview" of the current sample), or (c) at the end of the sample interval.
 	 */
-	@XmlElementWrapper(name = "parameters")
+	@XmlElementWrapper(name = "Parameters")
 	@XmlElement(name = "Parameter")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Parameter> parameters;

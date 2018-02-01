@@ -65,7 +65,7 @@ This value cannot be greater than {{param|.Capabilities.MaxExtensionCount}}.
 
 Support for adding and removing lines is conditional on whether the CPE supports more than one line in total as indicated by {{param|.Capabilities.MaxLineCount}}.
 	 */
-	@XmlElementWrapper(name = "lines")
+	@XmlElementWrapper(name = "Lines")
 	@XmlElement(name = "Line")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Line> lines;
@@ -74,21 +74,21 @@ Support for adding and removing lines is conditional on whether the CPE supports
 
 Support for adding and removing extensions is conditional on whether the CPE supports more than one line in total as indicated by {{param|.Capabilities.MaxExtensionCount}}.
 	 */
-	@XmlElementWrapper(name = "extensions")
+	@XmlElementWrapper(name = "Extensions")
 	@XmlElement(name = "Extension")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Extension> extensions;
 	/**
 	 * This object models an extension as a group of extensions.
 	 */
-	@XmlElementWrapper(name = "groups")
+	@XmlElementWrapper(name = "Groups")
 	@XmlElement(name = "Group")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Group> groups;
 	/**
 	 * Voice mail configuration related to a particular extension.
 	 */
-	@XmlElementWrapper(name = "mailboxs")
+	@XmlElementWrapper(name = "Mailboxs")
 	@XmlElement(name = "Mailbox")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Mailbox> mailboxs;
@@ -97,14 +97,14 @@ Support for adding and removing extensions is conditional on whether the CPE sup
 
 The map approach separates the call routing aspects from the configuration of the lines and extensions. It support PBX concepts such as DDI (one extension per line) and groups (parallel dialing if extensions have same priority and hunting when extensions have different priority).
 	 */
-	@XmlElementWrapper(name = "incomingMaps")
+	@XmlElementWrapper(name = "IncomingMaps")
 	@XmlElement(name = "IncomingMap")
 	@CWMPParameter(access = "readWrite")
 	public Collection<IncomingMap> incomingMaps;
 	/**
 	 * The {{object}} is a table that is used to control which line is used when an extension makes a call.
 	 */
-	@XmlElementWrapper(name = "outgoingMaps")
+	@XmlElementWrapper(name = "OutgoingMaps")
 	@XmlElement(name = "OutgoingMap")
 	@CWMPParameter(access = "readWrite")
 	public Collection<OutgoingMap> outgoingMaps;
@@ -113,7 +113,7 @@ The map approach separates the call routing aspects from the configuration of th
 
 {{object}} is applicable only if the device supports a dialing mechanism for which a number plan is needed (for example, some devices with an explicit Dial button do not need to be aware of the dialing plan) and if the device does not already support a numbering plan mechanism for this call control (e.g., in-band via MGCP).
 	 */
-	@XmlElementWrapper(name = "numberingPlans")
+	@XmlElementWrapper(name = "NumberingPlans")
 	@XmlElement(name = "NumberingPlan")
 	@CWMPParameter(access = "readWrite")
 	public Collection<NumberingPlan> numberingPlans;

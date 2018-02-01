@@ -44,7 +44,7 @@ public class ProcessStatus {
 	/**
 	 * List of all processes running on the device.
 	 */
-	@XmlElementWrapper(name = "processs")
+	@XmlElementWrapper(name = "Processs")
 	@XmlElement(name = "Process")
 	public Collection<Process> processs;
 

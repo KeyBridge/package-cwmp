@@ -35,14 +35,14 @@ public class DHCPClient {
 	/**
 	 * Each instance of this object represents a DHCP option that MUST, if enabled, be sent in DHCP client requests.  All sent DHCP options MUST be listed.
 	 */
-	@XmlElementWrapper(name = "sentDHCPOptions")
+	@XmlElementWrapper(name = "SentDHCPOptions")
 	@XmlElement(name = "SentDHCPOption")
 	@CWMPParameter(access = "readWrite")
 	public Collection<SentDHCPOption> sentDHCPOptions;
 	/**
 	 * Each instance of this object represents a DHCP option that MUST, if enabled, be requested in DHCP client requests. All requested DHCP options MUST be listed.
 	 */
-	@XmlElementWrapper(name = "reqDHCPOptions")
+	@XmlElementWrapper(name = "ReqDHCPOptions")
 	@XmlElement(name = "ReqDHCPOption")
 	@CWMPParameter(access = "readWrite")
 	public Collection<ReqDHCPOption> reqDHCPOptions;

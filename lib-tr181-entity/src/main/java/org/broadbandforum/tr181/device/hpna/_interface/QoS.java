@@ -38,7 +38,7 @@ public class QoS {
 
         For enabled table entries, if {{param|TrafficClasses}} is {{empty}} then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 */
-	@XmlElementWrapper(name = "flowSpecs")
+	@XmlElementWrapper(name = "FlowSpecs")
 	@XmlElement(name = "FlowSpec")
 	@CWMPParameter(access = "readWrite")
 	public Collection<FlowSpec> flowSpecs;

@@ -65,7 +65,7 @@ public class Nodes {
 
         Note: Packet counters indicate the number of packets received between {{param|#.CurrentStart}} and {{param|#.CurrentEnd}}.
 	 */
-	@XmlElementWrapper(name = "nodes")
+	@XmlElementWrapper(name = "Nodes")
 	@XmlElement(name = "Node")
 	@CWMPParameter(minEntries = 1)
 	public Collection<Node> nodes;

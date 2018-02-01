@@ -52,7 +52,7 @@ public class HRPD {
 	/**
 	 * HRPD LIPA Egress Filter Table entries.
 	 */
-	@XmlElementWrapper(name = "egressFilters")
+	@XmlElementWrapper(name = "EgressFilters")
 	@XmlElement(name = "EgressFilter")
 	@CWMPParameter(access = "readWrite", minEntries = 1)
 	public Collection<EgressFilter> egressFilters;

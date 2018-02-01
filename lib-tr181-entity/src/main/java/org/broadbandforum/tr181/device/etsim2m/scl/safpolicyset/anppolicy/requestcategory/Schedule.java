@@ -89,7 +89,7 @@ public class Schedule {
 
         All instances of the {{object}} within this {{object|##.Schedule}} MUST utilize the same time zone.
 	 */
-	@XmlElementWrapper(name = "absTimeSpans")
+	@XmlElementWrapper(name = "AbsTimeSpans")
 	@XmlElement(name = "AbsTimeSpan")
 	@CWMPParameter(access = "readWrite")
 	public Collection<AbsTimeSpan> absTimeSpans;

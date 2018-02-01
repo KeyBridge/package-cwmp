@@ -178,28 +178,28 @@ public class QoS {
 
         Several of this object's parameters specify DHCP option values. Some cases are version neutral (the parameter can apply to both DHCPv4 and DHCPv6), but in other cases the representation of the option is different for DHCPv4 and DHCPv6, so it is necessary to define separate DHCPv4-specific and DHCPv6-specific parameters. Therefore, an instance of this object that uses DHCP option values as classification criteria will be associated with either DHCPv4 or DHCPv6, as indicated by the {{param|DHCPType}} parameter.
 	 */
-	@XmlElementWrapper(name = "classifications")
+	@XmlElementWrapper(name = "Classifications")
 	@XmlElement(name = "Classification")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Classification> classifications;
 	/**
 	 * Application table.
 	 */
-	@XmlElementWrapper(name = "apps")
+	@XmlElementWrapper(name = "Apps")
 	@XmlElement(name = "App")
 	@CWMPParameter(access = "readWrite")
 	public Collection<App> apps;
 	/**
 	 * Flow table.
 	 */
-	@XmlElementWrapper(name = "flows")
+	@XmlElementWrapper(name = "Flows")
 	@XmlElement(name = "Flow")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Flow> flows;
 	/**
 	 * Policer table.
 	 */
-	@XmlElementWrapper(name = "policers")
+	@XmlElementWrapper(name = "Policers")
 	@XmlElement(name = "Policer")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Policer> policers;
@@ -208,7 +208,7 @@ public class QoS {
 
         For enabled table entries, if {{param|Interface}} is not a valid reference and {{param|AllInterfaces}} is {{false}}, then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 */
-	@XmlElementWrapper(name = "queues")
+	@XmlElementWrapper(name = "Queues")
 	@XmlElement(name = "Queue")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Queue> queues;
@@ -217,7 +217,7 @@ public class QoS {
 
         Note: The {{object}} table includes unique key parameters that are strong references. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST disable the offending {{object}} row.
 	 */
-	@XmlElementWrapper(name = "queueStatss")
+	@XmlElementWrapper(name = "QueueStatss")
 	@XmlElement(name = "QueueStats")
 	@CWMPParameter(access = "readWrite")
 	public Collection<QueueStats> queueStatss;
@@ -228,7 +228,7 @@ public class QoS {
 
         Note: The {{object}} table includes a unique key parameter that is a strong reference. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 */
-	@XmlElementWrapper(name = "shapers")
+	@XmlElementWrapper(name = "Shapers")
 	@XmlElement(name = "Shaper")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Shaper> shapers;

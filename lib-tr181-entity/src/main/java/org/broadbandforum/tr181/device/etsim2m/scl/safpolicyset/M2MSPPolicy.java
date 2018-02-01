@@ -44,7 +44,7 @@ public class M2MSPPolicy {
 
         Processing behavior for the use of M2M Service Provider policies is defined in section 10.3.1.2.2.1 of the M2M mIa, dIa and mId Interfaces {{bibref|ETSIM2MInterfaces}} document.
 	 */
-	@XmlElementWrapper(name = "requestCategories")
+	@XmlElementWrapper(name = "RequestCategories")
 	@XmlElement(name = "RequestCategory")
 	@CWMPParameter(access = "readWrite")
 	public Collection<RequestCategory> requestCategories;

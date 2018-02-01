@@ -55,27 +55,27 @@ public class Ethernet {
 
         Note: The {{object}} table includes unique key parameters that are strong references. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 */
-	@XmlElementWrapper(name = "rmoNStatss")
+	@XmlElementWrapper(name = "RMONStatss")
 	@XmlElement(name = "RMONStats")
 	@CWMPParameter(access = "readWrite")
 	public Collection<RMONStats> rmoNStatss;
 	/**
 	 * Ethernet interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). This table models physical Ethernet ports, but in terms of the interface stack it also models the PHY and MAC level Ethernet interface.
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	public Collection<Interface> interfaces;
 	/**
 	 * Ethernet link layer table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). Table entries model the Logical Link Control (LLC) layer. It is expected that an ''Ethernet Link'' interface can be stacked above any lower-layer interface object capable of carrying Ethernet frames.
 	 */
-	@XmlElementWrapper(name = "links")
+	@XmlElementWrapper(name = "Links")
 	@XmlElement(name = "Link")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Link> links;
 	/**
 	 * VLAN Termination table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). A VLAN Termination entry is typically stacked on top of a {{object|#.Link}} object to receive and send frames with the configured {{param|VLANID}}.
 	 */
-	@XmlElementWrapper(name = "vlaNTerminations")
+	@XmlElementWrapper(name = "VLANTerminations")
 	@XmlElement(name = "VLANTermination")
 	@CWMPParameter(access = "readWrite")
 	public Collection<VLANTermination> vlaNTerminations;

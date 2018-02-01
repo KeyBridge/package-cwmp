@@ -134,7 +134,7 @@ Once this instance becomes enabled, this parameter will be immutable for the lif
 
 Creating an instance of this object generates a disabled {{object}} instance.  Before this new {{object}} instance can be enabled (via a SetParameterValues command), it MUST have the {{param|Name}} configured.  Folder instances are unique per {{object|.LogicalVolume.{i}.}} and the unique key for this object is {{param|Name}} which also means that once an instance is enabled {{param|Name}} becomes immutable for the life of the instance.
 	 */
-	@XmlElementWrapper(name = "folders")
+	@XmlElementWrapper(name = "Folders")
 	@XmlElement(name = "Folder")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Folder> folders;

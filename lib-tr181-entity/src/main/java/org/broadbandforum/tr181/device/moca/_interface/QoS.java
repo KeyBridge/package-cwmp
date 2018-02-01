@@ -51,7 +51,7 @@ public class QoS {
 	/**
 	 * The flow statistics table provides information on the MoCA parameterized QoS flows this interface has allocated onto the MoCA network.
 	 */
-	@XmlElementWrapper(name = "flowStatss")
+	@XmlElementWrapper(name = "FlowStatss")
 	@XmlElement(name = "FlowStats")
 	public Collection<FlowStats> flowStatss;
 

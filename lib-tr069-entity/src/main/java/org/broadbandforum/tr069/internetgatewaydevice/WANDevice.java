@@ -64,7 +64,7 @@ public class WANDevice {
 	/**
 	 * Each instance contains objects associated with a given WAN link.  In this case of DSL, each instance corresponds to a single ATM VC.  On creation of a ''WANConnectionDevice'' instance, there are initially no connection objects contained within.
 	 */
-	@XmlElementWrapper(name = "wanConnectionDevices")
+	@XmlElementWrapper(name = "WANConnectionDevices")
 	@XmlElement(name = "WANConnectionDevice")
 	@CWMPParameter(access = "readWrite")
 	public Collection<WANConnectionDevice> wanConnectionDevices;

@@ -49,7 +49,7 @@ public class ServiceListDatabase {
 	/**
 	 * DVB-T logical channel information.
 	 */
-	@XmlElementWrapper(name = "logicalChannels")
+	@XmlElementWrapper(name = "LogicalChannels")
 	@XmlElement(name = "LogicalChannel")
 	public Collection<LogicalChannel> logicalChannels;
 

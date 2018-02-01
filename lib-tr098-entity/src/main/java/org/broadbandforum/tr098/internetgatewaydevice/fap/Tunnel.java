@@ -72,26 +72,26 @@ If {{true}} then the CWMP traffic will be sent across the IPsec tunnel(s).
 
 For Cdma2000 devices, see also {{bibref|3GPP2-S.S0132}}.
 	 */
-	@XmlElementWrapper(name = "cryptoProfiles")
+	@XmlElementWrapper(name = "CryptoProfiles")
 	@XmlElement(name = "CryptoProfile")
 	@CWMPParameter(access = "readWrite")
 	public Collection<CryptoProfile> cryptoProfiles;
 	/**
 	 * IKE IPsec Security Association Table. This Table is a member of the IPsec Security Association Database (SAD). {{bibref|RFC4301}}.
 	 */
-	@XmlElementWrapper(name = "ikeSAs")
+	@XmlElementWrapper(name = "IKESAs")
 	@XmlElement(name = "IKESA")
 	public Collection<IKESA> ikeSAs;
 	/**
 	 * Child IPsec Security Association Table.  This Table is a member of the IPsec Security Association Database (SAD). {{bibref|RFC4301}}.
 	 */
-	@XmlElementWrapper(name = "childSAs")
+	@XmlElementWrapper(name = "ChildSAs")
 	@XmlElement(name = "ChildSA")
 	public Collection<ChildSA> childSAs;
 	/**
 	 * Virtual Interfaces used for associating the tunnel (ephemeral) childSA pairs with QoS Classification and Queue tables as defined in {{bibref|TR-098a2}} (InternetGatewayDevice.QueueManagement.Classification.{i}. and InternetGatewayDevice.QueueManagement.Queue.{i}.) or {{bibref|TR-181i2}} (Device.QoS.Classification.{i}. and Device.QoS.Queue.{i}.).
 	 */
-	@XmlElementWrapper(name = "virtualInterfaces")
+	@XmlElementWrapper(name = "VirtualInterfaces")
 	@XmlElement(name = "VirtualInterface")
 	@CWMPParameter(access = "readWrite")
 	public Collection<VirtualInterface> virtualInterfaces;

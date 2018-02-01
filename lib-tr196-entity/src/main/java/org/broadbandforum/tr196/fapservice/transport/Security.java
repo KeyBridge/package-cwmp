@@ -34,7 +34,7 @@ public class Security {
 	/**
 	 * Shared Secret Table. This table gathers information about all types of shared secret-based credentials (UICC).
 	 */
-	@XmlElementWrapper(name = "secrets")
+	@XmlElementWrapper(name = "Secrets")
 	@XmlElement(name = "Secret")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Secret> secrets;

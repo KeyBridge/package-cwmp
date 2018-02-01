@@ -44,7 +44,7 @@ public class MPEG4Part10 {
 
 {{marktemplate|diffs-0:4}}{{+++k+++e---num---+++ys+++}}--- --- The table MUST include a distinct entry for each supported combination of these parameters.
 	 */
-	@XmlElementWrapper(name = "profileLevels")
+	@XmlElementWrapper(name = "ProfileLevels")
 	@XmlElement(name = "ProfileLevel")
 	public Collection<ProfileLevel> profileLevels;
 

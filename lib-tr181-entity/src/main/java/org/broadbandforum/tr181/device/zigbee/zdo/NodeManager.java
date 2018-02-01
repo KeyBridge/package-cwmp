@@ -33,7 +33,7 @@ public class NodeManager {
 	/**
 	 * The {{object}} object describes the route table as defined in {{bibref|ZigBee2007|table 3.51 Routing Table Entry}}.
 	 */
-	@XmlElementWrapper(name = "routingTables")
+	@XmlElementWrapper(name = "RoutingTables")
 	@XmlElement(name = "RoutingTable")
 	public Collection<RoutingTable> routingTables;
 

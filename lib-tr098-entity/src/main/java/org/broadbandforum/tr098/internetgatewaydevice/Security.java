@@ -33,7 +33,7 @@ public class Security {
 	/**
 	 * This table provides information about all types of public key-based credentials, such as X.509 certificates, see {{bibref|RFC5280}}.
 	 */
-	@XmlElementWrapper(name = "certificates")
+	@XmlElementWrapper(name = "Certificates")
 	@XmlElement(name = "Certificate")
 	public Collection<Certificate> certificates;
 

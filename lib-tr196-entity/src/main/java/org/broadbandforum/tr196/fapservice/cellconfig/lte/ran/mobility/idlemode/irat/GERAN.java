@@ -79,7 +79,7 @@ Corresponds to parameter t-ReselectionGERAN-SF:sf-High specified in SIB7 in {{bi
 	/**
 	 * This object contains parameters relating to the channel frequncy related information of GERAN (GSM) system (see {{bibref|3GPP-TS.32.592|Section 6.1.5.1.7}}).
 	 */
-	@XmlElementWrapper(name = "gerANFreqGroups")
+	@XmlElementWrapper(name = "GERANFreqGroups")
 	@XmlElement(name = "GERANFreqGroup")
 	@CWMPParameter(access = "readWrite")
 	public Collection<GERANFreqGroup> gerANFreqGroups;

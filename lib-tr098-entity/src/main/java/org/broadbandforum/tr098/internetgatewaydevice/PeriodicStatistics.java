@@ -56,7 +56,7 @@ A value of 0 indicates no specific maximum number of samples.
 	/**
 	 * Periodic statistics sample set table.  Each sample set has its own sample interval etc.
 	 */
-	@XmlElementWrapper(name = "sampleSets")
+	@XmlElementWrapper(name = "SampleSets")
 	@XmlElement(name = "SampleSet")
 	@CWMPParameter(access = "readWrite")
 	public Collection<SampleSet> sampleSets;

@@ -77,7 +77,7 @@ This object is OBSOLETED because it serves no purpose.
 	/**
 	 * Each instance contains objects associated with a given WAN link.  In the case of DSL, each instance corresponds to either a single ATM VC or a PTM Ethernet link.  On creation of a ''WANConnectionDevice'' instance, there are initially no connection objects contained within.  In the case of Ethernet (interface or link), only one ''WANConnectionDevice'' instance is supported.
 	 */
-	@XmlElementWrapper(name = "wanConnectionDevices")
+	@XmlElementWrapper(name = "WANConnectionDevices")
 	@XmlElement(name = "WANConnectionDevice")
 	@CWMPParameter(access = "readWrite")
 	public Collection<WANConnectionDevice> wanConnectionDevices;

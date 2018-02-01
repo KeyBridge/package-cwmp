@@ -50,14 +50,14 @@ public class DynamicDNS {
 
         For enabled table entries, if {{param|Server}} is not a valid reference then the table entry is inoperable and the CPE MUST set the {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 */
-	@XmlElementWrapper(name = "clients")
+	@XmlElementWrapper(name = "Clients")
 	@XmlElement(name = "Client")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Client> clients;
 	/**
 	 * Table of Dynamic DNS servers available for this CPE.
 	 */
-	@XmlElementWrapper(name = "servers")
+	@XmlElementWrapper(name = "Servers")
 	@XmlElement(name = "Server")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Server> servers;

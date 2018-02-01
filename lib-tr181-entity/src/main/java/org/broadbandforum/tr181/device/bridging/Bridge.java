@@ -72,7 +72,7 @@ public class Bridge {
 
         There are two types of bridge ports: management (upward facing) and non-management (downward facing). This is determined by configuring the Boolean {{param|ManagementPort}} parameter. The CPE will automatically configure each management bridge port to appear in the interface stack above all non-management bridge ports that share the same {{object|##.Bridge}} instance.
 	 */
-	@XmlElementWrapper(name = "ports")
+	@XmlElementWrapper(name = "Ports")
 	@XmlElement(name = "Port")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Port> ports;
@@ -81,7 +81,7 @@ public class Bridge {
 
         This table only applies to an 802.1Q {{bibref|802.1Q-2011}} Bridge.
 	 */
-	@XmlElementWrapper(name = "vlaNs")
+	@XmlElementWrapper(name = "VLANs")
 	@XmlElement(name = "VLAN")
 	@CWMPParameter(access = "readWrite")
 	public Collection<VLAN> vlaNs;
@@ -92,7 +92,7 @@ public class Bridge {
 
         Note: The {{object}} table includes unique key parameters that are strong references. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST disable the offending {{object}} row.
 	 */
-	@XmlElementWrapper(name = "vlaNPorts")
+	@XmlElementWrapper(name = "VLANPorts")
 	@XmlElement(name = "VLANPort")
 	@CWMPParameter(access = "readWrite")
 	public Collection<VLANPort> vlaNPorts;

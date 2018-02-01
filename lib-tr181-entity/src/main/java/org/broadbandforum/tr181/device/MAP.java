@@ -54,7 +54,7 @@ public class MAP {
 
         Note: The {{object}} table includes unique key parameters that are strong references. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 */
-	@XmlElementWrapper(name = "domains")
+	@XmlElementWrapper(name = "Domains")
 	@XmlElement(name = "Domain")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Domain> domains;

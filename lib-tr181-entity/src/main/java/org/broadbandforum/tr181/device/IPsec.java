@@ -196,14 +196,14 @@ Enumerated value must be one of [NONE, MODP-768, MODP-1024, MODP-1536, MODP-2048
 
         For enabled table entries, if {{param|Interface}} is not a valid reference and {{param|AllInterfaces}} is {{false}}, then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 */
-	@XmlElementWrapper(name = "filters")
+	@XmlElementWrapper(name = "Filters")
 	@XmlElement(name = "Filter")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Filter> filters;
 	/**
 	 * Profile table that represents the IPsec Security Policy Database (SPD) {{bibref|RFC4301|Section 4.4.1}} processing info.  Each entry defines the IPsec treatment for packets that match the {{object|#.Filter}} entries that reference the entry.
 	 */
-	@XmlElementWrapper(name = "profiles")
+	@XmlElementWrapper(name = "Profiles")
 	@XmlElement(name = "Profile")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Profile> profiles;
@@ -214,13 +214,13 @@ Enumerated value must be one of [NONE, MODP-768, MODP-1024, MODP-1536, MODP-2048
 
         Each instance's {{param|Filters}} parameter references the {{object|#.Filter}} instances that require the {{object}} instance to exist.  If this list ever becomes {{empty}}, e.g. because all the referenced {{object|#.Filter}} instances have been disabled or deleted, the CPE MAY choose not to delete the {{object}} instance (and its associated ({{enum|Tunnel|.IP.Interface.{i}.Type}},{{enum|Tunneled|.IP.Interface.{i}.Type}}) {{object|.IP.Interface}} pair).  This can be desirable, because {{object|.QoS.Classification}}, {{object|.Routing.Router.{i}.IPv4Forwarding}}, {{object|.Routing.Router.{i}.IPv6Forwarding}} etc instances might be referencing the {{object|.IP.Interface}} instances.
 	 */
-	@XmlElementWrapper(name = "tunnels")
+	@XmlElementWrapper(name = "Tunnels")
 	@XmlElement(name = "Tunnel")
 	public Collection<Tunnel> tunnels;
 	/**
 	 * Represents an IKEv2 Security Association (SA), corresponding to an IKEv2 session.  Instances are automatically created and deleted as IKEv2 SAs are created and deleted.
 	 */
-	@XmlElementWrapper(name = "ikev2SAs")
+	@XmlElementWrapper(name = "IKEv2SAs")
 	@XmlElement(name = "IKEv2SA")
 	public Collection<IKEv2SA> ikev2SAs;
 

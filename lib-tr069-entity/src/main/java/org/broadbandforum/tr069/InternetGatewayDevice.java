@@ -82,13 +82,13 @@ public class InternetGatewayDevice {
 	/**
 	 * Each instance contains all LAN-related objects for a given bridged subnet.
 	 */
-	@XmlElementWrapper(name = "lanDevices")
+	@XmlElementWrapper(name = "LANDevices")
 	@XmlElement(name = "LANDevice")
 	public Collection<LANDevice> lanDevices;
 	/**
 	 * Each instance contains all objects associated with a particular physical WAN interface.
 	 */
-	@XmlElementWrapper(name = "wanDevices")
+	@XmlElementWrapper(name = "WANDevices")
 	@XmlElement(name = "WANDevice")
 	public Collection<WANDevice> wanDevices;
 

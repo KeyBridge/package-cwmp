@@ -66,7 +66,7 @@ public class PCP {
 	/**
 	 * Client properties for Port Control Protocol (PCP). The PCP Client interacts with a PCP Server as defined in {{bibref|RFC6887}} for internal device applications or LAN device applications via Interworking functions.
 	 */
-	@XmlElementWrapper(name = "clients")
+	@XmlElementWrapper(name = "Clients")
 	@XmlElement(name = "Client")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Client> clients;

@@ -33,7 +33,7 @@ public class Network {
 	/**
 	 * The {{object}} object provides the configuration capabilities needed to by a ZigBee Device to operate within a ZigBee Area Network as defined in {{bibref|ZigBee2007|section 2.5.2.4 Network Manager}}.
 	 */
-	@XmlElementWrapper(name = "neighbors")
+	@XmlElementWrapper(name = "Neighbors")
 	@XmlElement(name = "Neighbor")
 	public Collection<Neighbor> neighbors;
 

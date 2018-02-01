@@ -50,7 +50,7 @@ public class LogicalChannel {
 	/**
 	 * DVB-T service information.
 	 */
-	@XmlElementWrapper(name = "services")
+	@XmlElementWrapper(name = "Services")
 	@XmlElement(name = "Service")
 	public Collection<Service> services;
 

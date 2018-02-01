@@ -95,7 +95,7 @@ public class Host {
 	/**
 	 * Table of connected USB devices.
 	 */
-	@XmlElementWrapper(name = "devices")
+	@XmlElementWrapper(name = "Devices")
 	@XmlElement(name = "Device")
 	public Collection<Device> devices;
 

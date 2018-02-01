@@ -56,19 +56,19 @@ public class InterRATCell {
 	/**
 	 * Table containing the inter-RAT cell list for UTRA (UMTS) cell.
 	 */
-	@XmlElementWrapper(name = "umtSs")
+	@XmlElementWrapper(name = "UMTSs")
 	@XmlElement(name = "UMTS")
 	public Collection<UMTS> umtSs;
 	/**
 	 * Table containing the inter-RAT cell list for GERAN (GSM) cell.
 	 */
-	@XmlElementWrapper(name = "gsms")
+	@XmlElementWrapper(name = "GSMs")
 	@XmlElement(name = "GSM")
 	public Collection<GSM> gsms;
 	/**
 	 * Table containing the inter-RAT cell list for CDMA2000 cell.
 	 */
-	@XmlElementWrapper(name = "cdmA2000s")
+	@XmlElementWrapper(name = "CDMA2000s")
 	@XmlElement(name = "CDMA2000")
 	public Collection<CDMA2000> cdmA2000s;
 

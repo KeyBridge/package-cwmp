@@ -33,7 +33,7 @@ public class SmartCardReaders {
 	/**
 	 * This object describes the characteristics of the smart card reader.
 	 */
-	@XmlElementWrapper(name = "smartCardReaders")
+	@XmlElementWrapper(name = "SmartCardReaders")
 	@XmlElement(name = "SmartCardReader")
 	public Collection<SmartCardReader> smartCardReaders;
 

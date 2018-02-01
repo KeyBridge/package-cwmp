@@ -87,7 +87,7 @@ Enumerated value must be one of [802.11 2.4 GHz, 802.11 5 GHz, 802.11 60 GHz]
 	/**
 	 * The 1905 interface table (described in {{bibref|IEEE1905.1a|sub-clause 5 Abstraction Layer Management}}).
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	public Collection<Interface> interfaces;
 	/**

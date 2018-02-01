@@ -49,14 +49,14 @@ public class HRPD {
 	/**
 	 * REM specific configuration and reporting.
 	 */
-	@XmlElementWrapper(name = "channels")
+	@XmlElementWrapper(name = "Channels")
 	@XmlElement(name = "Channel")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Channel> channels;
 	/**
 	 * Table indicating the components of the discovered cells.
 	 */
-	@XmlElementWrapper(name = "cells")
+	@XmlElementWrapper(name = "Cells")
 	@XmlElement(name = "Cell")
 	public Collection<Cell> cells;
 

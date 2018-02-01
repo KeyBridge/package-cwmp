@@ -44,7 +44,7 @@ public class Layer3Forwarding {
 	/**
 	 * Layer-3 forwarding table.
 	 */
-	@XmlElementWrapper(name = "forwardings")
+	@XmlElementWrapper(name = "Forwardings")
 	@XmlElement(name = "Forwarding")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Forwarding> forwardings;

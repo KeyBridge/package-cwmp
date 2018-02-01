@@ -39,19 +39,19 @@ public class Description {
 
         In case the SSDP advertisement expires and the CPE deletes the related instances from the tables in UPnP.Discovery., the reference to such instances MUST be set to the empty string.
 	 */
-	@XmlElementWrapper(name = "deviceDescriptions")
+	@XmlElementWrapper(name = "DeviceDescriptions")
 	@XmlElement(name = "DeviceDescription")
 	public Collection<DeviceDescription> deviceDescriptions;
 	/**
 	 * This table contains the information from Device Description Document retrieved for a discovered UPnP root or embedded device.
 	 */
-	@XmlElementWrapper(name = "deviceInstances")
+	@XmlElementWrapper(name = "DeviceInstances")
 	@XmlElement(name = "DeviceInstance")
 	public Collection<DeviceInstance> deviceInstances;
 	/**
 	 * This table contains the information from Device Description Document retrieved for a discovered UPnP service.
 	 */
-	@XmlElementWrapper(name = "serviceInstances")
+	@XmlElementWrapper(name = "ServiceInstances")
 	@XmlElement(name = "ServiceInstance")
 	public Collection<ServiceInstance> serviceInstances;
 

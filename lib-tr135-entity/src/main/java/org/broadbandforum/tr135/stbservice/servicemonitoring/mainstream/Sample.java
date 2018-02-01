@@ -116,7 +116,7 @@ If no EC is applied the ''BeforeEC'' statistics provide the same values as the c
 	/**
 	 * High-level metric Sample statistics for this ''ServiceMonitoring'' main stream instance.  One or more different high-level metrics can be supported; this is specified by  {{param|.ServiceMonitoring.MainStream.{i}.Sample.HighLevelMetricStatsNumberOfEntries}}.
 	 */
-	@XmlElementWrapper(name = "highLevelMetricStatss")
+	@XmlElementWrapper(name = "HighLevelMetricStatss")
 	@XmlElement(name = "HighLevelMetricStats")
 	public Collection<HighLevelMetricStats> highLevelMetricStatss;
 

@@ -177,7 +177,7 @@ Note: A temporary private IP address with short lease (for example, 1 min) might
 	/**
 	 * IP interface table.
 	 */
-	@XmlElementWrapper(name = "ipinterfaces")
+	@XmlElementWrapper(name = "IPInterfaces")
 	@XmlElement(name = "IPInterface")
 	@CWMPParameter(access = "readWrite")
 	public Collection<IPInterface> ipinterfaces;

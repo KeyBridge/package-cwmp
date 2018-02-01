@@ -213,7 +213,7 @@ public class Interface {
 	/**
 	 * This table contains information about PLC connections running between this UPA interface and other UPA devices.
 	 */
-	@XmlElementWrapper(name = "associatedDevices")
+	@XmlElementWrapper(name = "AssociatedDevices")
 	@XmlElement(name = "AssociatedDevice")
 	public Collection<AssociatedDevice> associatedDevices;
 	/**
@@ -223,7 +223,7 @@ public class Interface {
 
         Note: All {{object}} entries can be enabled/disabled as a group using the {{param|#.ActiveNotchEnable}} parameter.
 	 */
-	@XmlElementWrapper(name = "activeNotchs")
+	@XmlElementWrapper(name = "ActiveNotchs")
 	@XmlElement(name = "ActiveNotch")
 	@CWMPParameter(access = "readWrite")
 	public Collection<ActiveNotch> activeNotchs;
@@ -232,7 +232,7 @@ public class Interface {
 
         It shows the MAC addresses of the remote UPA devices with their associated port number, and the MAC addresses of the end-devices (PCs, STBs, routers, etc) connected to Ethernet port of the powerline adapters with their associated logical port. In this way the system identifies to which UPA device an external device is connected to.
 	 */
-	@XmlElementWrapper(name = "bridgeFors")
+	@XmlElementWrapper(name = "BridgeFors")
 	@XmlElement(name = "BridgeFor")
 	public Collection<BridgeFor> bridgeFors;
 

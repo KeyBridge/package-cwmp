@@ -43,7 +43,7 @@ public class NeighboringWiFiDiagnostic {
 	/**
 	 * Neighboring SSID table. This table models the other WiFi SSIDs that this device is able to receive.
 	 */
-	@XmlElementWrapper(name = "results")
+	@XmlElementWrapper(name = "Results")
 	@XmlElement(name = "Result")
 	public Collection<Result> results;
 

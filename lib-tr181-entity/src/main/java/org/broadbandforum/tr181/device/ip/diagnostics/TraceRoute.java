@@ -135,7 +135,7 @@ public class TraceRoute {
 	/**
 	 * Contains the array of hop results returned. If a route could not be determined, this array will be empty
 	 */
-	@XmlElementWrapper(name = "routeHopss")
+	@XmlElementWrapper(name = "RouteHopss")
 	@XmlElement(name = "RouteHops")
 	public Collection<RouteHops> routeHopss;
 

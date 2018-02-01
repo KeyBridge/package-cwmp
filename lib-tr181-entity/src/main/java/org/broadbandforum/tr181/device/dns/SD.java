@@ -66,7 +66,7 @@ public class SD {
 
         *{{param|Target}} = "ssh.example.com."
 	 */
-	@XmlElementWrapper(name = "services")
+	@XmlElementWrapper(name = "Services")
 	@XmlElement(name = "Service")
 	public Collection<Service> services;
 

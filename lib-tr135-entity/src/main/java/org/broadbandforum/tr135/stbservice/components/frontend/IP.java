@@ -80,13 +80,13 @@ public class IP {
 	/**
 	 * Inbound IP streams currently entering the STB via this front-end.
 	 */
-	@XmlElementWrapper(name = "inbounds")
+	@XmlElementWrapper(name = "Inbounds")
 	@XmlElement(name = "Inbound")
 	public Collection<Inbound> inbounds;
 	/**
 	 * Parameters related to an outbound IP stream.
 	 */
-	@XmlElementWrapper(name = "outbounds")
+	@XmlElementWrapper(name = "Outbounds")
 	@XmlElement(name = "Outbound")
 	public Collection<Outbound> outbounds;
 	/**

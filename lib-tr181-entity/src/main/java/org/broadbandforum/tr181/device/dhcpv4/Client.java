@@ -164,14 +164,14 @@ public class Client {
 	/**
 	 * Each instance of this object represents a DHCP option that MUST, if enabled, be sent in DHCP client requests.  All  sent DHCP options MUST be listed.
 	 */
-	@XmlElementWrapper(name = "sentOptions")
+	@XmlElementWrapper(name = "SentOptions")
 	@XmlElement(name = "SentOption")
 	@CWMPParameter(access = "readWrite")
 	public Collection<SentOption> sentOptions;
 	/**
 	 * Each instance of this object represents a DHCP option that MUST, if enabled, be requested in DHCP client requests.  All requested DHCP options MUST be listed.
 	 */
-	@XmlElementWrapper(name = "reqOptions")
+	@XmlElementWrapper(name = "ReqOptions")
 	@XmlElement(name = "ReqOption")
 	@CWMPParameter(access = "readWrite")
 	public Collection<ReqOption> reqOptions;

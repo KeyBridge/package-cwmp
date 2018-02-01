@@ -157,14 +157,14 @@ Actual values of the maximum transmission power are -40.0 dBm to 20.0  in units 
 	/**
 	 * This object models an individual beacon intervals. It may be used to model both 1x and HRPD beacons with offset from start of beacon frame measured in 80ms slots.
 	 */
-	@XmlElementWrapper(name = "beaconLists")
+	@XmlElementWrapper(name = "BeaconLists")
 	@XmlElement(name = "BeaconList")
 	@CWMPParameter(access = "readWrite")
 	public Collection<BeaconList> beaconLists;
 	/**
 	 * This object models individual HRPD beacon intervals where the beacon start is expressed as a number of HRPD control channel slots from the start of the beacon frame.
 	 */
-	@XmlElementWrapper(name = "hrpDBeaconLists")
+	@XmlElementWrapper(name = "HRPDBeaconLists")
 	@XmlElement(name = "HRPDBeaconList")
 	@CWMPParameter(access = "readWrite")
 	public Collection<HRPDBeaconList> hrpDBeaconLists;

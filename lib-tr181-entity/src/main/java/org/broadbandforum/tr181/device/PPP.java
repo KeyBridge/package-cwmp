@@ -47,7 +47,7 @@ Enumerated value must be one of [ATCP, IPCP, IPXCP, NBFCP, IPv6CP]
 	/**
 	 * PPP interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}).
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Interface> interfaces;

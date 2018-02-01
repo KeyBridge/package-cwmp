@@ -230,7 +230,7 @@ public class InterfaceSetting {
 
         This table is intended only for options that are not modeled elsewhere. For example, it is not appropriate for the MTU option (which is modeled via {{param|#.AdvLinkMTU}}).
 	 */
-	@XmlElementWrapper(name = "options")
+	@XmlElementWrapper(name = "Options")
 	@XmlElement(name = "Option")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Option> options;

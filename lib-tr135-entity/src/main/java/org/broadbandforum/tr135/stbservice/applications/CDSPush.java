@@ -42,7 +42,7 @@ public class CDSPush {
 	/**
 	 * Content Item instance table.
 	 */
-	@XmlElementWrapper(name = "contentItems")
+	@XmlElementWrapper(name = "ContentItems")
 	@XmlElement(name = "ContentItem")
 	public Collection<ContentItem> contentItems;
 

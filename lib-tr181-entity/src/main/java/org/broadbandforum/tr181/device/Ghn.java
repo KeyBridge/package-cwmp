@@ -34,7 +34,7 @@ public class Ghn {
 	/**
 	 * G.hn interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). Each table entry models the PHY {{bibref|G.9960}} and MAC {{bibref|G.9961}} layers of a G.hn interface.
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	public Collection<Interface> interfaces;
 	/**

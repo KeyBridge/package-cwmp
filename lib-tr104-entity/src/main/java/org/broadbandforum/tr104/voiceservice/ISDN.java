@@ -34,13 +34,13 @@ public class ISDN {
 	/**
 	 * ISDN BRI physical interfaces table (a voice physical interface as described in {{bibref|TR-104i2|Section 4.1}}).
 	 */
-	@XmlElementWrapper(name = "bris")
+	@XmlElementWrapper(name = "BRIs")
 	@XmlElement(name = "BRI")
 	public Collection<BRI> bris;
 	/**
 	 * ISDN PRI physical interfaces table (a voice physical interface as described in {{bibref|TR-104i2|Section 4.1}}).
 	 */
-	@XmlElementWrapper(name = "pris")
+	@XmlElementWrapper(name = "PRIs")
 	@XmlElement(name = "PRI")
 	public Collection<PRI> pris;
 

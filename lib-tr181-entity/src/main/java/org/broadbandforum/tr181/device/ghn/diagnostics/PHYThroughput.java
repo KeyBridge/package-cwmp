@@ -64,7 +64,7 @@ public class PHYThroughput {
 	/**
 	 * PHY throughput diagnostics results.
 	 */
-	@XmlElementWrapper(name = "results")
+	@XmlElementWrapper(name = "Results")
 	@XmlElement(name = "Result")
 	public Collection<Result> results;
 

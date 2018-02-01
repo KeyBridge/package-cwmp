@@ -35,14 +35,14 @@ public class H323 {
 	/**
 	 * H.323 client table (a client as described in {{bibref|TR-104i2|Section 4.2}}). Each H.323 client maintains a registration for the H.323 identities of the associated line with the {{object|#.Network}}.
 	 */
-	@XmlElementWrapper(name = "clients")
+	@XmlElementWrapper(name = "Clients")
 	@XmlElement(name = "Client")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Client> clients;
 	/**
 	 * This object models a H.323 network (a network as described in {{bibref|TR-104i2|Section 4.2}}).
 	 */
-	@XmlElementWrapper(name = "networks")
+	@XmlElementWrapper(name = "Networks")
 	@XmlElement(name = "Network")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Network> networks;

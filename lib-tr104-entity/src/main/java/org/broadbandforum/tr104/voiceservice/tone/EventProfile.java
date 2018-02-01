@@ -43,7 +43,7 @@ public class EventProfile {
 	/**
 	 * Table of events for which a tone is defined. The table is pre-populated with the list of events for which the CPE supports definition of tones.
 	 */
-	@XmlElementWrapper(name = "events")
+	@XmlElementWrapper(name = "Events")
 	@XmlElement(name = "Event")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Event> events;

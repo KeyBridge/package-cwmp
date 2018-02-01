@@ -121,7 +121,7 @@ If supported, {{param|.CallControl.NumberingPlan.{i}.PrefixInfoMaxEntries}} and 
 
 The defaults given for this object apply only to explicit creation of an instance of this object and not to automatic creation of instances of this object due to creation of a parent object.
 	 */
-	@XmlElementWrapper(name = "prefixInfos")
+	@XmlElementWrapper(name = "PrefixInfos")
 	@XmlElement(name = "PrefixInfo")
 	@CWMPParameter(access = "readWrite")
 	public Collection<PrefixInfo> prefixInfos;

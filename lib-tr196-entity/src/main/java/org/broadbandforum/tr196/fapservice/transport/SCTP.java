@@ -216,7 +216,7 @@ The value of this parameter MUST be lower than or equal to {{param|RTOMax}}.
 	/**
 	 * SCTP Association Table
 	 */
-	@XmlElementWrapper(name = "assocs")
+	@XmlElementWrapper(name = "Assocs")
 	@XmlElement(name = "Assoc")
 	public Collection<Assoc> assocs;
 

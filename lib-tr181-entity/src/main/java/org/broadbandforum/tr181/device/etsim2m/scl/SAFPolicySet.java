@@ -86,7 +86,7 @@ public class SAFPolicySet {
 
         {{keys}}
 	 */
-	@XmlElementWrapper(name = "anpPolicies")
+	@XmlElementWrapper(name = "ANPPolicies")
 	@XmlElement(name = "ANPPolicy")
 	@CWMPParameter(access = "readWrite")
 	public Collection<ANPPolicy> anpPolicies;

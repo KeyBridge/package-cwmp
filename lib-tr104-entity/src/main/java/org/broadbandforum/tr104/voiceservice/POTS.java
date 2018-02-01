@@ -50,7 +50,7 @@ If {{empty}}, indicates that the region is unspecified and the CPE SHOULD use de
 
 Each entry in the table models an analogue physical interface as defined by {{bibref|ETSI_ES_203_021}}
 	 */
-	@XmlElementWrapper(name = "fxos")
+	@XmlElementWrapper(name = "FXOs")
 	@XmlElement(name = "FXO")
 	public Collection<FXO> fxos;
 	/**
@@ -58,7 +58,7 @@ Each entry in the table models an analogue physical interface as defined by {{bi
 
 Each entry in the table models an analogue physical interface as defined by {{bibref|ETSI_ES_201_970}}
 	 */
-	@XmlElementWrapper(name = "fxss")
+	@XmlElementWrapper(name = "FXSs")
 	@XmlElement(name = "FXS")
 	public Collection<FXS> fxss;
 	/**

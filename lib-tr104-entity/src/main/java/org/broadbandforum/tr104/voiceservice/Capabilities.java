@@ -208,7 +208,7 @@ Facility Actions are referenced in the VoiceService data model in the objects {{
 	/**
 	 * Table to describe the set of supported codecs.
 	 */
-	@XmlElementWrapper(name = "codecs")
+	@XmlElementWrapper(name = "Codecs")
 	@XmlElement(name = "Codec")
 	public Collection<Codec> codecs;
 	/**

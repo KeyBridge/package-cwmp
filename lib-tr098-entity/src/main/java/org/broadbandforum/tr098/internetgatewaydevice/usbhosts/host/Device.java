@@ -173,7 +173,7 @@ When {{false}} the associated device draws all the current it needs from the USB
 	/**
 	 * Table of device configurations.
 	 */
-	@XmlElementWrapper(name = "configurations")
+	@XmlElementWrapper(name = "Configurations")
 	@XmlElement(name = "Configuration")
 	public Collection<Configuration> configurations;
 

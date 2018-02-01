@@ -283,13 +283,13 @@ public class Pool {
 
         This table lists details of DHCPv6 clients that matched the filter criteria of this {{object|#}} entry.
 	 */
-	@XmlElementWrapper(name = "clients")
+	@XmlElementWrapper(name = "Clients")
 	@XmlElement(name = "Client")
 	public Collection<Client> clients;
 	/**
 	 * This object specifies the DHCPv6 options that MUST, if enabled, be offered to clients whose DHCPv6 requests are associated with this pool. If {{param|PassthroughClient}} is specified, and the referenced client has a value for a given option then the {{param|PassthroughClient}} option value will be sent instead of {{param|Value}}. Otherwise, {{param|Value}} will be sent.
 	 */
-	@XmlElementWrapper(name = "options")
+	@XmlElementWrapper(name = "Options")
 	@XmlElement(name = "Option")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Option> options;

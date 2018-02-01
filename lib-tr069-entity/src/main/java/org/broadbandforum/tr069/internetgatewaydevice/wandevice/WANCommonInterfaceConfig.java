@@ -121,7 +121,7 @@ public class WANCommonInterfaceConfig {
 	/**
 	 * Active connection table.
 	 */
-	@XmlElementWrapper(name = "connections")
+	@XmlElementWrapper(name = "Connections")
 	@XmlElement(name = "Connection")
 	public Collection<Connection> connections;
 

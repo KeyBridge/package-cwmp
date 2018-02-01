@@ -139,7 +139,7 @@ public class Device {
 
         Each table row represents a "link" between two interface objects, a higher-layer interface object (referenced by {{param|HigherLayer}}) and a lower-layer interface object (referenced by {{param|LowerLayer}}). Consequently, if a referenced interface object is deleted, the CPE MUST delete the corresponding {{object}} row(s) that had referenced it.
 	 */
-	@XmlElementWrapper(name = "interfaceStacks")
+	@XmlElementWrapper(name = "InterfaceStacks")
 	@XmlElement(name = "InterfaceStack")
 	public Collection<InterfaceStack> interfaceStacks;
 	/**

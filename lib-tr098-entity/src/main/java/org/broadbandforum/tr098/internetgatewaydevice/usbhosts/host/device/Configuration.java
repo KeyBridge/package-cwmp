@@ -40,7 +40,7 @@ public class Configuration {
 	/**
 	 * Table of device interface descriptors.
 	 */
-	@XmlElementWrapper(name = "interfaces")
+	@XmlElementWrapper(name = "Interfaces")
 	@XmlElement(name = "Interface")
 	public Collection<Interface> interfaces;
 

@@ -122,7 +122,7 @@ While the test is in progress, setting this parameter to {{enum|Requested}} (and
 	/**
 	 * Result parameter indicating the components of the discovered route.  If a route could not be determined, there will be no instances of this object.
 	 */
-	@XmlElementWrapper(name = "routeHopss")
+	@XmlElementWrapper(name = "RouteHopss")
 	@XmlElement(name = "RouteHops")
 	public Collection<RouteHops> routeHopss;
 

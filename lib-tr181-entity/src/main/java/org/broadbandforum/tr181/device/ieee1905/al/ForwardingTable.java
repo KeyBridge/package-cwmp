@@ -42,7 +42,7 @@ public class ForwardingTable {
 	/**
 	 * The 1905 fowarding rule for the ALME-SET-FWD-RULE.request and ALME-GET-FWD-RULES.response with classification criteria as defined in {{bibref|IEEE1905.1a|Table 5-9: ClassificationSet elements}}.
 	 */
-	@XmlElementWrapper(name = "forwardingRules")
+	@XmlElementWrapper(name = "ForwardingRules")
 	@XmlElement(name = "ForwardingRule")
 	@CWMPParameter(access = "readWrite")
 	public Collection<ForwardingRule> forwardingRules;

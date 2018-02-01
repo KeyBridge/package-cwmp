@@ -78,7 +78,7 @@ public class Chain {
 
         For enabled table entries, if {{param|SourceInterface}} is not a valid reference and {{param|SourceAllInterfaces}} is {{false}}, or if {{param|DestInterface}} is not a valid reference and {{param|DestAllInterfaces}} is {{false}}, then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 */
-	@XmlElementWrapper(name = "rules")
+	@XmlElementWrapper(name = "Rules")
 	@XmlElement(name = "Rule")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Rule> rules;

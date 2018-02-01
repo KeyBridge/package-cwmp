@@ -160,7 +160,7 @@ This table MUST persist across CPE reboots.  The registrar UUID is the unique ke
 
 This object corresponds directly to the "Registrar List" attribute of the WPS specification {{bibref|WPSv1.0}}.
 	 */
-	@XmlElementWrapper(name = "registrars")
+	@XmlElementWrapper(name = "Registrars")
 	@XmlElement(name = "Registrar")
 	public Collection<Registrar> registrars;
 

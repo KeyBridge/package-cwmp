@@ -101,7 +101,7 @@ public class VoiceService {
 
 The {{object}} holds all parameters a CPE needs to set up a trunk connection with an NGN, as defined in {{bibref|ETSI_TS_181_019}}.
 	 */
-	@XmlElementWrapper(name = "trunks")
+	@XmlElementWrapper(name = "Trunks")
 	@XmlElement(name = "Trunk")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Trunk> trunks;
@@ -117,7 +117,7 @@ It is mutually exclusive with the {{object|.Interwork}} table which is used in c
 
 It is mutually exclusive with the {{object|.CallControl}} object which is used in case of PBX or Endpoint capabilities.
 	 */
-	@XmlElementWrapper(name = "interworks")
+	@XmlElementWrapper(name = "Interworks")
 	@XmlElement(name = "Interwork")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Interwork> interworks;
@@ -126,7 +126,7 @@ It is mutually exclusive with the {{object|.CallControl}} object which is used i
 
 An entry is created each time a call is terminated. If the number of {{object|.CallLog}} exceeds {{param|.Capabilities.MaxCallLogCount}}, the CPE SHOULD remove the oldest {{object|.CallLog}} object on basis of {{param|Start}} parameter.
 	 */
-	@XmlElementWrapper(name = "callLogs")
+	@XmlElementWrapper(name = "CallLogs")
 	@XmlElement(name = "CallLog")
 	public Collection<CallLog> callLogs;
 	/**
@@ -136,14 +136,14 @@ A VoIP Profile contains media transport configuration parameters that are common
 
 VoIP Profiles could be used by {{object|.SIP.Network.}}, {{object|.SIP.Proxy.}}, {{object|.SIP.Network.}}, {{object|.H323.Network.}} and {{object|.MGCP.Network.}}.
 	 */
-	@XmlElementWrapper(name = "voiPProfiles")
+	@XmlElementWrapper(name = "VoIPProfiles")
 	@XmlElement(name = "VoIPProfile")
 	@CWMPParameter(access = "readWrite")
 	public Collection<VoIPProfile> voiPProfiles;
 	/**
 	 * Table of codec profiles. This table MUST be populated with the set of supported codecs matching {{object|.Capabilities.Codec.}}. Additional entries can be added to use different configurations of codec or to use the same codec configuration in different CodecList parameters.
 	 */
-	@XmlElementWrapper(name = "codecProfiles")
+	@XmlElementWrapper(name = "CodecProfiles")
 	@XmlElement(name = "CodecProfile")
 	@CWMPParameter(access = "readWrite")
 	public Collection<CodecProfile> codecProfiles;
@@ -157,7 +157,7 @@ VoIP Profiles could be used by {{object|.SIP.Network.}}, {{object|.SIP.Proxy.}},
 
 This object has to be used when the CPE is a voice endpoint itself.
 	 */
-	@XmlElementWrapper(name = "terminals")
+	@XmlElementWrapper(name = "Terminals")
 	@XmlElement(name = "Terminal")
 	@CWMPParameter(minEntries = 1)
 	public Collection<Terminal> terminals;

@@ -132,7 +132,7 @@ public class Client {
 
         Each OPTION_V4_PCP_SERVER or OPTION_V6_PCP_SERVER option corresponds to a {{object}} instance.  If an option returns multiple addresses then that {{object}} instance has multiple addresses.
 	 */
-	@XmlElementWrapper(name = "servers")
+	@XmlElementWrapper(name = "Servers")
 	@XmlElement(name = "Server")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Server> servers;

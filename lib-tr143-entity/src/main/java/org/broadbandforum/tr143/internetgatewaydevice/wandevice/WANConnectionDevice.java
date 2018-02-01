@@ -59,14 +59,14 @@ public class WANConnectionDevice {
 	/**
 	 * This object enables configuration of IP connections on the WAN interface of a CPE.
 	 */
-	@XmlElementWrapper(name = "wanIPConnections")
+	@XmlElementWrapper(name = "WANIPConnections")
 	@XmlElement(name = "WANIPConnection")
 	@CWMPParameter(access = "readWrite")
 	public Collection<WANIPConnection> wanIPConnections;
 	/**
 	 * This object enables configuration of PPP connections on the WAN interface of a CPE.
 	 */
-	@XmlElementWrapper(name = "wanPPPConnections")
+	@XmlElementWrapper(name = "WANPPPConnections")
 	@XmlElement(name = "WANPPPConnection")
 	@CWMPParameter(access = "readWrite")
 	public Collection<WANPPPConnection> wanPPPConnections;

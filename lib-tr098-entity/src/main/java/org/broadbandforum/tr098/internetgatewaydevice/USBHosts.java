@@ -35,7 +35,7 @@ public class USBHosts {
 	/**
 	 * Table of CPE USB Host controllers.
 	 */
-	@XmlElementWrapper(name = "hosts")
+	@XmlElementWrapper(name = "Hosts")
 	@XmlElement(name = "Host")
 	public Collection<Host> hosts;
 

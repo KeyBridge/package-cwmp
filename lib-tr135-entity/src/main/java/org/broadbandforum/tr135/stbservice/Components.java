@@ -43,7 +43,7 @@ public class Components {
 	/**
 	 * FrontEnd instance table. Each front-end instance, including vendor-specific front-end types, will normally have a sub-object that corresponds to the front-end type (e.g. DVB-T or IP).
 	 */
-	@XmlElementWrapper(name = "frontEnds")
+	@XmlElementWrapper(name = "FrontEnds")
 	@XmlElement(name = "FrontEnd")
 	public Collection<FrontEnd> frontEnds;
 	/**
@@ -54,55 +54,55 @@ public class Components {
 	/**
 	 * Audio decoder instance table. It contains data representing the current status of the Audio decoder.
 	 */
-	@XmlElementWrapper(name = "audioDecoders")
+	@XmlElementWrapper(name = "AudioDecoders")
 	@XmlElement(name = "AudioDecoder")
 	public Collection<AudioDecoder> audioDecoders;
 	/**
 	 * Video decoder instance table. It contains data representing the current status of the video decoder.
 	 */
-	@XmlElementWrapper(name = "videoDecoders")
+	@XmlElementWrapper(name = "VideoDecoders")
 	@XmlElement(name = "VideoDecoder")
 	public Collection<VideoDecoder> videoDecoders;
 	/**
 	 * Audio output instance table.
 	 */
-	@XmlElementWrapper(name = "audioOutputs")
+	@XmlElementWrapper(name = "AudioOutputs")
 	@XmlElement(name = "AudioOutput")
 	public Collection<AudioOutput> audioOutputs;
 	/**
 	 * S/PDIF output instance table configuration. This object, if present, is connected to the audio ouput instance currently delivering S/PDIF audio format as described in {{bibref|SPDIF}}.
 	 */
-	@XmlElementWrapper(name = "spdIFs")
+	@XmlElementWrapper(name = "SPDIFs")
 	@XmlElement(name = "SPDIF")
 	public Collection<SPDIF> spdIFs;
 	/**
 	 * Video output instance table.
 	 */
-	@XmlElementWrapper(name = "videoOutputs")
+	@XmlElementWrapper(name = "VideoOutputs")
 	@XmlElement(name = "VideoOutput")
 	public Collection<VideoOutput> videoOutputs;
 	/**
 	 * SCART configuration. This object allows configuration of the STB's AV switching.
 	 */
-	@XmlElementWrapper(name = "scaRTs")
+	@XmlElementWrapper(name = "SCARTs")
 	@XmlElement(name = "SCART")
 	public Collection<SCART> scaRTs;
 	/**
 	 * HDMI instance table. This object allows configuration of the STB’s HDMI output.
 	 */
-	@XmlElementWrapper(name = "hdmIs")
+	@XmlElementWrapper(name = "HDMIs")
 	@XmlElement(name = "HDMI")
 	public Collection<HDMI> hdmIs;
 	/**
 	 * This object describes the characteristics of the Conditional Access, if any.
 	 */
-	@XmlElementWrapper(name = "cas")
+	@XmlElementWrapper(name = "CAs")
 	@XmlElement(name = "CA")
 	public Collection<CA> cas;
 	/**
 	 * This object describes the characteristics of the Digital Rights Management, if any.
 	 */
-	@XmlElementWrapper(name = "drms")
+	@XmlElementWrapper(name = "DRMs")
 	@XmlElement(name = "DRM")
 	public Collection<DRM> drms;
 

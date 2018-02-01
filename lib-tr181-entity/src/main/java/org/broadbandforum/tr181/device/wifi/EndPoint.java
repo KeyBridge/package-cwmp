@@ -98,7 +98,7 @@ public class EndPoint {
 	/**
 	 * EndPoint Profile table.
 	 */
-	@XmlElementWrapper(name = "profiles")
+	@XmlElementWrapper(name = "Profiles")
 	@XmlElement(name = "Profile")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Profile> profiles;
@@ -118,7 +118,7 @@ public class EndPoint {
 
         * VO (Voice)
 	 */
-	@XmlElementWrapper(name = "acs")
+	@XmlElementWrapper(name = "ACs")
 	@XmlElement(name = "AC")
 	@CWMPParameter(minEntries = 4, maxEntries = 4)
 	public Collection<AC> acs;

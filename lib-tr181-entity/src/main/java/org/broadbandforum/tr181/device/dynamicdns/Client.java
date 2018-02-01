@@ -114,7 +114,7 @@ public class Client {
 	/**
 	 * Each table entry represents a fully qualified domain name updated by this Dynamic DNS Client.
 	 */
-	@XmlElementWrapper(name = "hostnames")
+	@XmlElementWrapper(name = "Hostnames")
 	@XmlElement(name = "Hostname")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Hostname> hostnames;

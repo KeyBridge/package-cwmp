@@ -53,7 +53,7 @@ public class APPIM {
 	/**
 	 * This object can be configured only if {{param|.Capabilities.CDMA2000.OneX.FemtoOverheadMessagesCapable}} is set to {{true}}.
 	 */
-	@XmlElementWrapper(name = "appIRECs")
+	@XmlElementWrapper(name = "APPIRECs")
 	@XmlElement(name = "APPIREC")
 	@CWMPParameter(access = "readWrite")
 	public Collection<APPIREC> appIRECs;

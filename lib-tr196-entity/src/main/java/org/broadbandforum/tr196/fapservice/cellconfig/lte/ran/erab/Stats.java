@@ -123,7 +123,7 @@ public class Stats {
 	/**
 	 * This object provides statistics for the Direct User Plane Path between HeNB and Local Gateway as defined in {{bibref|3GPP-TS.32.453}}.
 	 */
-	@XmlElementWrapper(name = "lgws")
+	@XmlElementWrapper(name = "LGWs")
 	@XmlElement(name = "LGW")
 	public Collection<LGW> lgws;
 

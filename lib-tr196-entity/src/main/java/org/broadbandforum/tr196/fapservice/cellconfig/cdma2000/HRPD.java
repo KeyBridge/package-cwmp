@@ -60,14 +60,14 @@ public class HRPD {
 	/**
 	 * The Batch configuration Object used to configure PDSN table using a start and end IP address. The order of the address is used as part of PDSN selection algorithm, e.g., the first element is considered PDSN number 0 (refer to {{bibref|3GPP2-A.S0008}} and {{bibref|3GPP2-A.S0009}}). To get individual PDSN entries use the {{object|.CellConfig.CDMA2000.HRPD.PCFPDSN.{i}.}}.
 	 */
-	@XmlElementWrapper(name = "batchPCFPDSNs")
+	@XmlElementWrapper(name = "BatchPCFPDSNs")
 	@XmlElement(name = "BatchPCFPDSN")
 	@CWMPParameter(access = "readWrite")
 	public Collection<BatchPCFPDSN> batchPCFPDSNs;
 	/**
 	 * PCFPDSN Object configured for HRPD. {{object|.CellConfig.CDMA2000.HRPD.BatchPCFPDSN.{i}.}} table should be used to configure PDSN details.
 	 */
-	@XmlElementWrapper(name = "pcfPDSNs")
+	@XmlElementWrapper(name = "PCFPDSNs")
 	@XmlElement(name = "PCFPDSN")
 	@CWMPParameter(access = "readWrite")
 	public Collection<PCFPDSN> pcfPDSNs;

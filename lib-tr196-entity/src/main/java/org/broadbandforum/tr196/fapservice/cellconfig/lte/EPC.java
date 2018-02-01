@@ -94,14 +94,14 @@ Enumerated value must be one of [128-EIA1, 128-EIA2]
 	/**
 	 * This object contains parameters relating to list of PLMN identity specific to LTE EPC definition, called PLMN-IdentityList, as specified in SystemInformationBlockType1 message in {{bibref|3GPP-TS.36.331|Section 6.2.2}}. Each instance in this object is a PLMN-IdentityInfo which consists of plmn-Identity and cellReservedForOperatorUse IEs.  At minimum 1 item MUST be present in this list, and maximum of 6 items.
 	 */
-	@XmlElementWrapper(name = "plmNLists")
+	@XmlElementWrapper(name = "PLMNLists")
 	@XmlElement(name = "PLMNList")
 	@CWMPParameter(access = "readWrite", minEntries = 1, maxEntries = 6)
 	public Collection<PLMNList> plmNLists;
 	/**
 	 * This object contains parameters relating to configuring QoS in LTE EPC.
 	 */
-	@XmlElementWrapper(name = "qoss")
+	@XmlElementWrapper(name = "QoSs")
 	@XmlElement(name = "QoS")
 	@CWMPParameter(access = "readWrite")
 	public Collection<QoS> qoss;

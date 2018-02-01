@@ -43,7 +43,7 @@ public class Channels {
 	/**
 	 * Per-channel G.hn performance monitoring results during the current sample interval. Each table entry contains the results collected from the channel between a G.hn interface (as indicated by {{param|##.DiagnoseMACAddress}}) and a G.hn interface indicated by {{param|DestinationMACAddress}})
 	 */
-	@XmlElementWrapper(name = "channels")
+	@XmlElementWrapper(name = "Channels")
 	@XmlElement(name = "Channel")
 	public Collection<Channel> channels;
 

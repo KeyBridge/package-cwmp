@@ -99,7 +99,7 @@ For an 802.1Q {{bibref|802.1Q-2005}} Bridge, this is the Bridge's default VLAN I
 	/**
 	 * Bridge Port table.  If this table is supported, it MUST contain an entry for each Bridge Port.
 	 */
-	@XmlElementWrapper(name = "ports")
+	@XmlElementWrapper(name = "Ports")
 	@XmlElement(name = "Port")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Port> ports;
@@ -108,7 +108,7 @@ For an 802.1Q {{bibref|802.1Q-2005}} Bridge, this is the Bridge's default VLAN I
 
 This table only applies to an 802.1Q {{bibref|802.1Q-2005}} Bridge.
 	 */
-	@XmlElementWrapper(name = "vlaNs")
+	@XmlElementWrapper(name = "VLANs")
 	@XmlElement(name = "VLAN")
 	@CWMPParameter(access = "readWrite")
 	public Collection<VLAN> vlaNs;

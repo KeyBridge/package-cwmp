@@ -42,7 +42,7 @@ public class RouteInformation {
 	/**
 	 * IP Interface RA route information table. Contains received RA route information {{bibref|RFC4191}}. As such, the data in this table cannot be modified.
 	 */
-	@XmlElementWrapper(name = "interfaceSettings")
+	@XmlElementWrapper(name = "InterfaceSettings")
 	@XmlElement(name = "InterfaceSetting")
 	public Collection<InterfaceSetting> interfaceSettings;
 

@@ -34,7 +34,7 @@ public class XMPP {
 	/**
 	 * The {{object}} represents a XMPP connection between the device and a server. The {{param|Username}}, {{param|Domain}} and {{param|Resource}} comprise the full identity (JabberID) of this {{object}} for this device.
 	 */
-	@XmlElementWrapper(name = "connections")
+	@XmlElementWrapper(name = "Connections")
 	@XmlElement(name = "Connection")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Connection> connections;

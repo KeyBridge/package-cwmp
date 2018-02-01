@@ -48,7 +48,7 @@ public class Server {
 
         For enabled table entries, if {{param|Interface}} is not a valid reference to an IPv6-capable interface (that is attached to the IPv6 stack) then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 */
-	@XmlElementWrapper(name = "pools")
+	@XmlElementWrapper(name = "Pools")
 	@XmlElement(name = "Pool")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Pool> pools;

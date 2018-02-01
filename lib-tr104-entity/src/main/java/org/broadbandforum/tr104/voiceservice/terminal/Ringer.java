@@ -37,7 +37,7 @@ public class Ringer {
 
 The defaults given for this object apply only to explicit creation of an instance of this object and not to automatic creation of instances of this object due to creation of a parent object.
 	 */
-	@XmlElementWrapper(name = "descriptions")
+	@XmlElementWrapper(name = "Descriptions")
 	@XmlElement(name = "Description")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Description> descriptions;
@@ -48,7 +48,7 @@ Each entry in the table refers to the entry that corresponds to the next phase o
 
 The defaults given for this object apply only to explicit creation of an instance of this object and not to automatic creation of instances of this object due to creation of a parent object.
 	 */
-	@XmlElementWrapper(name = "patterns")
+	@XmlElementWrapper(name = "Patterns")
 	@XmlElement(name = "Pattern")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Pattern> patterns;

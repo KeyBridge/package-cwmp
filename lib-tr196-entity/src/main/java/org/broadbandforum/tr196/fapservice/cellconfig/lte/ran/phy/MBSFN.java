@@ -59,7 +59,7 @@ Value 3: Different UL/DL allocation in neighbouring cells for TDD compared to th
 	/**
 	 * This object contains parameters relating to the sub-frame that are reserved for MBSFN (Multimedia Broadcast multicast service Single Frequency Network) in downlink direction.  For FDD mode, only one entry can exist in this table. For TDD mode, at most one entry can exist with a given value of stratumID (see {{bibref|3GPP-TS.32.592|Section 6.1.1.8}}).
 	 */
-	@XmlElementWrapper(name = "sfconfigLists")
+	@XmlElementWrapper(name = "SFConfigLists")
 	@XmlElement(name = "SFConfigList")
 	@CWMPParameter(access = "readWrite")
 	public Collection<SFConfigList> sfconfigLists;

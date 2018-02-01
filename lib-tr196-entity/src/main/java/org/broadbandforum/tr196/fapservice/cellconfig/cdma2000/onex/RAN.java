@@ -127,7 +127,7 @@ public class RAN {
 	/**
 	 * This object contains information common to all neighbors of a sector. This object has only one instance.
 	 */
-	@XmlElementWrapper(name = "neighborLists")
+	@XmlElementWrapper(name = "NeighborLists")
 	@XmlElement(name = "NeighborList")
 	@CWMPParameter(access = "readWrite")
 	public Collection<NeighborList> neighborLists;

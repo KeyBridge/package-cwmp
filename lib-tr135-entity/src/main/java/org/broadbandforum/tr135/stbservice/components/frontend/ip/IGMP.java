@@ -142,7 +142,7 @@ RFC 3376 specifies a default of 1s.
 
 The CPE MUST support at least ''MaximumNumberOfConcurrentGroups'' table entries.
 	 */
-	@XmlElementWrapper(name = "clientGroups")
+	@XmlElementWrapper(name = "ClientGroups")
 	@XmlElement(name = "ClientGroup")
 	public Collection<ClientGroup> clientGroups;
 	/**
@@ -150,7 +150,7 @@ The CPE MUST support at least ''MaximumNumberOfConcurrentGroups'' table entries.
 
 The CPE MUST support at least ''MaximumNumberOfTrackedGroups'' table entries.  The CPE MAY reclaim entries based on the oldest membership reports.
 	 */
-	@XmlElementWrapper(name = "clientGroupStatss")
+	@XmlElementWrapper(name = "ClientGroupStatss")
 	@XmlElement(name = "ClientGroupStats")
 	public Collection<ClientGroupStats> clientGroupStatss;
 

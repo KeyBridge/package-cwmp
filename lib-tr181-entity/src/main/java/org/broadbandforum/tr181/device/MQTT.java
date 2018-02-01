@@ -41,14 +41,14 @@ public class MQTT {
 	/**
 	 * MQTT client table. Contains a list of configured MQTT clients.
 	 */
-	@XmlElementWrapper(name = "clients")
+	@XmlElementWrapper(name = "Clients")
 	@XmlElement(name = "Client")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Client> clients;
 	/**
 	 * MQTT broker table. Contains a list of configured MQTT brokers.
 	 */
-	@XmlElementWrapper(name = "brokers")
+	@XmlElementWrapper(name = "Brokers")
 	@XmlElement(name = "Broker")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Broker> brokers;

@@ -187,7 +187,7 @@ Each instance has children that correspond to the layer 2 interfaces that are co
 
 If the ''Layer2Bridging'' object is implemented, the view that it provides of the CPE's underlying bridging configuration MUST be consistent with the view provided by any ''LANDevice'' and ''WAN**Connection'' objects.  The implications of this are explained in {{bibref|TR-098a2|Annex A.6}}.
 	 */
-	@XmlElementWrapper(name = "lanDevices")
+	@XmlElementWrapper(name = "LANDevices")
 	@XmlElement(name = "LANDevice")
 	@CWMPParameter(access = "readWrite")
 	public Collection<LANDevice> lanDevices;
@@ -199,13 +199,13 @@ If the ''Layer2Bridging'' object is implemented, the view that it provides of th
 	/**
 	 * Each instance contains all objects associated with a particular physical WAN interface.
 	 */
-	@XmlElementWrapper(name = "wanDevices")
+	@XmlElementWrapper(name = "WANDevices")
 	@XmlElement(name = "WANDevice")
 	public Collection<WANDevice> wanDevices;
 	/**
 	 * This object contains parameters relating to the user characteristics.
 	 */
-	@XmlElementWrapper(name = "users")
+	@XmlElementWrapper(name = "Users")
 	@XmlElement(name = "User")
 	@CWMPParameter(access = "readWrite")
 	public Collection<User> users;
@@ -222,7 +222,7 @@ If the ''Layer2Bridging'' object is implemented, the view that it provides of th
 	/**
 	 * This object describes the characteristics of the smart card reader.
 	 */
-	@XmlElementWrapper(name = "smartCardReaders")
+	@XmlElementWrapper(name = "SmartCardReaders")
 	@XmlElement(name = "SmartCardReader")
 	public Collection<SmartCardReader> smartCardReaders;
 	/**

@@ -42,7 +42,7 @@ public class WiFi {
 
         Note: A dual-band single-radio device (e.g. an 802.11a/b/g radio) can be configured to operate at 2.4 or 5 GHz frequency bands, but only a single frequency band is used to transmit/receive at a given time. Therefore, a single {{object}} instance is used even for a dual-band radio.
 	 */
-	@XmlElementWrapper(name = "radios")
+	@XmlElementWrapper(name = "Radios")
 	@XmlElement(name = "Radio")
 	public Collection<Radio> radios;
 	/**
@@ -55,7 +55,7 @@ public class WiFi {
 
         WiFi SSID is also a multiplexing layer, i.e. more than one {{object}} can be stacked above a single {{object|#.Radio}}.
 	 */
-	@XmlElementWrapper(name = "ssiDs")
+	@XmlElementWrapper(name = "SSIDs")
 	@XmlElement(name = "SSID")
 	@CWMPParameter(access = "readWrite")
 	public Collection<SSID> ssiDs;
@@ -66,7 +66,7 @@ public class WiFi {
 
         Note: The {{object}} table includes a unique key parameter that is a strong reference. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 */
-	@XmlElementWrapper(name = "accessPoints")
+	@XmlElementWrapper(name = "AccessPoints")
 	@XmlElement(name = "AccessPoint")
 	@CWMPParameter(access = "readWrite")
 	public Collection<AccessPoint> accessPoints;
@@ -77,7 +77,7 @@ public class WiFi {
 
         Note: The {{object}} table includes a unique key parameter that is a strong reference. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 */
-	@XmlElementWrapper(name = "endPoints")
+	@XmlElementWrapper(name = "EndPoints")
 	@XmlElement(name = "EndPoint")
 	@CWMPParameter(access = "readWrite")
 	public Collection<EndPoint> endPoints;

@@ -48,7 +48,7 @@ public class Server {
 
         For enabled table entries, if {{param|Interface}} is not a valid reference, or {{param|MinAddress}}, {{param|MaxAddress}}, or {{param|SubnetMask}} is not a valid value, then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 */
-	@XmlElementWrapper(name = "pools")
+	@XmlElementWrapper(name = "Pools")
 	@XmlElement(name = "Pool")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Pool> pools;

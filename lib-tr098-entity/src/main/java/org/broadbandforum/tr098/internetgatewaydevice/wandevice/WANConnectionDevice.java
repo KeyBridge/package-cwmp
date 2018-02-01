@@ -84,7 +84,7 @@ The PTM Link Layer object exists when the ''WANDSLInterfaceConfig'' ''LinkEncaps
 
 If the ''Layer2Bridging'' object is implemented, the view that it provides of the CPE's underlying bridging configuration MUST be consistent with the view provided by any ''LANDevice'' and ''WAN**Connection'' objects.  The implications of this are explained in {{bibref|TR-098a2|Annex A.6}}.
 	 */
-	@XmlElementWrapper(name = "wanIPConnections")
+	@XmlElementWrapper(name = "WANIPConnections")
 	@XmlElement(name = "WANIPConnection")
 	@CWMPParameter(access = "readWrite")
 	public Collection<WANIPConnection> wanIPConnections;
@@ -93,7 +93,7 @@ If the ''Layer2Bridging'' object is implemented, the view that it provides of th
 
 If the ''Layer2Bridging'' object is implemented, the view that it provides of the CPE's underlying bridging configuration MUST be consistent with the view provided by any ''LANDevice'' and ''WAN**Connection'' objects.  The implications of this are explained in {{bibref|TR-098a2|Annex A.6}}.
 	 */
-	@XmlElementWrapper(name = "wanPPPConnections")
+	@XmlElementWrapper(name = "WANPPPConnections")
 	@XmlElement(name = "WANPPPConnection")
 	@CWMPParameter(access = "readWrite")
 	public Collection<WANPPPConnection> wanPPPConnections;

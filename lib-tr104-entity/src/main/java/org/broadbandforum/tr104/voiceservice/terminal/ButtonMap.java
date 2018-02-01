@@ -36,7 +36,7 @@ public class ButtonMap {
 	/**
 	 * Each entry in this table specifies the purpose of each programmable CPE button / function key and whether the user has permission to reprogram the button.
 	 */
-	@XmlElementWrapper(name = "buttons")
+	@XmlElementWrapper(name = "Buttons")
 	@XmlElement(name = "Button")
 	@CWMPParameter(minEntries = 1)
 	public Collection<Button> buttons;

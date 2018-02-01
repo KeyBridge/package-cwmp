@@ -325,14 +325,14 @@ Each instance of this object specifies a hardware address (MAC address) and an I
 
 Note that it is possible that an IP address in this table is present in the main pool and/or one or more of the other conditional serving pools, in which case it is possible that such an address will be assigned to a different client.
 	 */
-	@XmlElementWrapper(name = "dhcPStaticAddresss")
+	@XmlElementWrapper(name = "DHCPStaticAddresss")
 	@XmlElement(name = "DHCPStaticAddress")
 	@CWMPParameter(access = "readWrite")
 	public Collection<DHCPStaticAddress> dhcPStaticAddresss;
 	/**
 	 * This object specifies the DHCP options that MUST, if enabled, be returned to clients whose DHCP requests are associated with this pool.
 	 */
-	@XmlElementWrapper(name = "dhcPOptions")
+	@XmlElementWrapper(name = "DHCPOptions")
 	@XmlElement(name = "DHCPOption")
 	@CWMPParameter(access = "readWrite")
 	public Collection<DHCPOption> dhcPOptions;

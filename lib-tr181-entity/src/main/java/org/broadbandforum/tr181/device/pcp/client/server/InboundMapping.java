@@ -203,7 +203,7 @@ public class InboundMapping {
 
         This table contains all Filters restricting this Inbound Mapping, as defined in {{bibref|RFC6887|}}.
 	 */
-	@XmlElementWrapper(name = "filters")
+	@XmlElementWrapper(name = "Filters")
 	@XmlElement(name = "Filter")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Filter> filters;

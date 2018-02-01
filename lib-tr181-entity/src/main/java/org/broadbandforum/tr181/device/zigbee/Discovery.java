@@ -36,7 +36,7 @@ public class Discovery {
 
         As the ZigBee specification does not provide a discovery protocol between the CWMP proxy and the ZigBee coordinator, the {{object}} object is provisioned and not discovered.
 	 */
-	@XmlElementWrapper(name = "areaNetworks")
+	@XmlElementWrapper(name = "AreaNetworks")
 	@XmlElement(name = "AreaNetwork")
 	@CWMPParameter(access = "readWrite")
 	public Collection<AreaNetwork> areaNetworks;

@@ -33,7 +33,7 @@ public class Ringer {
 	/**
 	 * Table of events for which a ring pattern is defined.  The table is pre-populated with the complete list of events for which the CPE supports definition of ring patterns.
 	 */
-	@XmlElementWrapper(name = "events")
+	@XmlElementWrapper(name = "Events")
 	@XmlElement(name = "Event")
 	public Collection<Event> events;
 

@@ -37,19 +37,19 @@ public class Discovery {
 	/**
 	 * UPnP root device table. This table contains an entry for each UPnP root device that has been discovered via SSDP.
 	 */
-	@XmlElementWrapper(name = "rootDevices")
+	@XmlElementWrapper(name = "RootDevices")
 	@XmlElement(name = "RootDevice")
 	public Collection<RootDevice> rootDevices;
 	/**
 	 * UPnP embedded device table. This table contains an entry for each UPnP embedded device that has been discovered via SSDP.
 	 */
-	@XmlElementWrapper(name = "devices")
+	@XmlElementWrapper(name = "Devices")
 	@XmlElement(name = "Device")
 	public Collection<Device> devices;
 	/**
 	 * UPnP embedded service table. This table contains an entry for each UPnP embedded service that has been discovered via SSDP.
 	 */
-	@XmlElementWrapper(name = "services")
+	@XmlElementWrapper(name = "Services")
 	@XmlElement(name = "Service")
 	public Collection<Service> services;
 

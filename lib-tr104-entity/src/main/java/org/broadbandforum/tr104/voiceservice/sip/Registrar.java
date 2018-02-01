@@ -147,7 +147,7 @@ This parameter can only be modified if {{param|Origin}} is {{enum|Static|Origin}
 	/**
 	 * SIP account table.
 	 */
-	@XmlElementWrapper(name = "accounts")
+	@XmlElementWrapper(name = "Accounts")
 	@XmlElement(name = "Account")
 	@CWMPParameter(access = "readWrite")
 	public Collection<Account> accounts;
