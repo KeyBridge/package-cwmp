@@ -38,7 +38,7 @@ There is no guarantee that the STB has the resources to enable all of its AV pla
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.AVPlayers.")
-@XmlRootElement(name = "AVPlayers")
+@XmlRootElement(name = "STBService.AVPlayers")
 @XmlType(name = "STBService.AVPlayers")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AVPlayers {

@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.device.xmpp.connection.Stats;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.XMPP.Connection.{i}.")
-@XmlRootElement(name = "Connection")
+@XmlRootElement(name = "Device.XMPP.Connection")
 @XmlType(name = "Device.XMPP.Connection")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Connection {

@@ -39,7 +39,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.NAT.PortMapping.{i}.")
-@XmlRootElement(name = "PortMapping")
+@XmlRootElement(name = "Device.NAT.PortMapping")
 @XmlType(name = "Device.NAT.PortMapping")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PortMapping {

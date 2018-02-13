@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.fapcontrol.lte.Gateway;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.LTE.")
-@XmlRootElement(name = "LTE")
+@XmlRootElement(name = "FAPService.FAPControl.LTE")
 @XmlType(name = "FAPService.FAPControl.LTE")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LTE {

@@ -32,7 +32,7 @@ import org.broadbandforum.tr135.stbservice.components.hdmi.DisplayDevice;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Components.HDMI.{i}.")
-@XmlRootElement(name = "HDMI")
+@XmlRootElement(name = "STBService.Components.HDMI")
 @XmlType(name = "STBService.Components.HDMI")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HDMI {

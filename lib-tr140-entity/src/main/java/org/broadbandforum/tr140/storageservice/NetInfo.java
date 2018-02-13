@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.NetInfo.")
-@XmlRootElement(name = "NetInfo")
+@XmlRootElement(name = "StorageService.NetInfo")
 @XmlType(name = "StorageService.NetInfo")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NetInfo {

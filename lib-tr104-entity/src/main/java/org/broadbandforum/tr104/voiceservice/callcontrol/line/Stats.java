@@ -34,7 +34,7 @@ The CPE MUST reset the line's Stats parameters (unless otherwise stated in indiv
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Line.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "VoiceService.CallControl.Line.Stats")
 @XmlType(name = "VoiceService.CallControl.Line.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

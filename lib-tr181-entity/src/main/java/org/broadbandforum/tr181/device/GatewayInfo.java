@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.GatewayInfo.")
-@XmlRootElement(name = "GatewayInfo")
+@XmlRootElement(name = "Device.GatewayInfo")
 @XmlType(name = "Device.GatewayInfo")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GatewayInfo {

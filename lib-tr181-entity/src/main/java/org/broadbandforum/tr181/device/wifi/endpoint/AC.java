@@ -43,7 +43,7 @@ import org.broadbandforum.tr181.device.wifi.endpoint.ac.Stats;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.WiFi.EndPoint.{i}.AC.{i}.")
-@XmlRootElement(name = "AC")
+@XmlRootElement(name = "Device.WiFi.EndPoint.AC")
 @XmlType(name = "Device.WiFi.EndPoint.AC")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AC {

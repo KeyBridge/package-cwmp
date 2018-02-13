@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.datatypes.ZigBeeNetworkAddress;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.Interface.{i}.AssociatedDevice.{i}.")
-@XmlRootElement(name = "AssociatedDevice")
+@XmlRootElement(name = "Device.ZigBee.Interface.AssociatedDevice")
 @XmlType(name = "Device.ZigBee.Interface.AssociatedDevice")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AssociatedDevice {

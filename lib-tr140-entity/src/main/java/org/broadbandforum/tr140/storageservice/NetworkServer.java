@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.NetworkServer.")
-@XmlRootElement(name = "NetworkServer")
+@XmlRootElement(name = "StorageService.NetworkServer")
 @XmlType(name = "StorageService.NetworkServer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NetworkServer {

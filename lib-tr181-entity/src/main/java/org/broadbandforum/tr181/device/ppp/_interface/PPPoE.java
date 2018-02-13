@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.PPP.Interface.{i}.PPPoE.")
-@XmlRootElement(name = "PPPoE")
+@XmlRootElement(name = "Device.PPP.Interface.PPPoE")
 @XmlType(name = "Device.PPP.Interface.PPPoE")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PPPoE {

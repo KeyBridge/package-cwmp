@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.datatypes.StatsCounter64;
 	 * @since 2.10
 	 */
 @CWMPObject(name = "Device.MQTT.Client.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "Device.MQTT.Client.Stats")
 @XmlType(name = "Device.MQTT.Client.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

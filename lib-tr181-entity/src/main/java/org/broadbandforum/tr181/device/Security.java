@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.security.Certificate;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.Security.")
-@XmlRootElement(name = "Security")
+@XmlRootElement(name = "Device.Security")
 @XmlType(name = "Device.Security")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Security {

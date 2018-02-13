@@ -40,7 +40,7 @@ VoIP Profiles could be used by {{object|.SIP.Network.}}, {{object|.SIP.Proxy.}},
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.")
-@XmlRootElement(name = "VoIPProfile")
+@XmlRootElement(name = "VoiceService.VoIPProfile")
 @XmlType(name = "VoiceService.VoIPProfile")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VoIPProfile {

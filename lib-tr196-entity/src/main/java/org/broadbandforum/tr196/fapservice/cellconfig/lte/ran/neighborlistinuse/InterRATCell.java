@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.neighborlistinuse.
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell.")
-@XmlRootElement(name = "InterRATCell")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class InterRATCell {

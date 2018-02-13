@@ -42,7 +42,7 @@ It is mutually exclusive with the {{object|.Interwork}} table which is used in c
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.")
-@XmlRootElement(name = "CallControl")
+@XmlRootElement(name = "VoiceService.CallControl")
 @XmlType(name = "VoiceService.CallControl")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CallControl {

@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DLNA.Capabilities.")
-@XmlRootElement(name = "Capabilities")
+@XmlRootElement(name = "Device.DLNA.Capabilities")
 @XmlType(name = "Device.DLNA.Capabilities")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Capabilities {

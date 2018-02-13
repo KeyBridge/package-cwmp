@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.UDPEchoDiagnostics.IndividualPacketResult.{i}.")
-@XmlRootElement(name = "IndividualPacketResult")
+@XmlRootElement(name = "Device.IP.Diagnostics.UDPEchoDiagnostics.IndividualPacketResult")
 @XmlType(name = "Device.IP.Diagnostics.UDPEchoDiagnostics.IndividualPacketResult")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IndividualPacketResult {

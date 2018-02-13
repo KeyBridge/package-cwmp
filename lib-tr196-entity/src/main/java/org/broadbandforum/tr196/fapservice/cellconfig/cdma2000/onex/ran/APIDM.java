@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.APIDM.")
-@XmlRootElement(name = "APIDM")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.APIDM")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.APIDM")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class APIDM {

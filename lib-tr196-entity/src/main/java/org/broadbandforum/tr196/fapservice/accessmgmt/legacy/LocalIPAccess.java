@@ -33,7 +33,7 @@ import org.broadbandforum.tr196.fapservice.accessmgmt.legacy.localipaccess.Rule;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.Legacy.LocalIPAccess.")
-@XmlRootElement(name = "LocalIPAccess")
+@XmlRootElement(name = "FAPService.AccessMgmt.Legacy.LocalIPAccess")
 @XmlType(name = "FAPService.AccessMgmt.Legacy.LocalIPAccess")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LocalIPAccess {

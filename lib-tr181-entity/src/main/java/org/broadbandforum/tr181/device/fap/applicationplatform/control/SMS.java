@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.ApplicationPlatform.Control.SMS.")
-@XmlRootElement(name = "SMS")
+@XmlRootElement(name = "Device.FAP.ApplicationPlatform.Control.SMS")
 @XmlType(name = "Device.FAP.ApplicationPlatform.Control.SMS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SMS {

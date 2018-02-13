@@ -38,7 +38,7 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.PCP.Client.{i}.Server.{i}.OutboundMapping.{i}.")
-@XmlRootElement(name = "OutboundMapping")
+@XmlRootElement(name = "Device.PCP.Client.Server.OutboundMapping")
 @XmlType(name = "Device.PCP.Client.Server.OutboundMapping")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class OutboundMapping {

@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.SIP.Client.")
-@XmlRootElement(name = "Client")
+@XmlRootElement(name = "VoiceService.Capabilities.SIP.Client")
 @XmlType(name = "VoiceService.Capabilities.SIP.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Client {

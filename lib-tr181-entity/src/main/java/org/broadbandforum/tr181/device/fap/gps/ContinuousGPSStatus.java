@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.GPS.ContinuousGPSStatus.")
-@XmlRootElement(name = "ContinuousGPSStatus")
+@XmlRootElement(name = "Device.FAP.GPS.ContinuousGPSStatus")
 @XmlType(name = "Device.FAP.GPS.ContinuousGPSStatus")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ContinuousGPSStatus {

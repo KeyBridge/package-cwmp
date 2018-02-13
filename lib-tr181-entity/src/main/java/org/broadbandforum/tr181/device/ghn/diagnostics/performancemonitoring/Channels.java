@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.ghn.diagnostics.performancemonitoring.cha
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Channels.")
-@XmlRootElement(name = "Channels")
+@XmlRootElement(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Channels")
 @XmlType(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Channels")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Channels {

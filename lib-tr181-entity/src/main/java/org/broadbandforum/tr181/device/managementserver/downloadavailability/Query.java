@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.ManagementServer.DownloadAvailability.Query.")
-@XmlRootElement(name = "Query")
+@XmlRootElement(name = "Device.ManagementServer.DownloadAvailability.Query")
 @XmlType(name = "Device.ManagementServer.DownloadAvailability.Query")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Query {

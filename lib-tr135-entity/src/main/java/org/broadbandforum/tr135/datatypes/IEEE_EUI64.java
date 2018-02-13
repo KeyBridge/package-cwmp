@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
 
 * The extension identifier (40 bits for OUI-24 or 28 bits for OUI-36) assigned by the organization with that company_id assignment.
 	 */
-@XmlRootElement(name = "IEEE_EUI64")
+@XmlRootElement(name = "org.broadbandforum.tr135.datatypes.IEEE_EUI64")
 @XmlType(name = "org.broadbandforum.tr135.datatypes.IEEE_EUI64")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IEEE_EUI64 {

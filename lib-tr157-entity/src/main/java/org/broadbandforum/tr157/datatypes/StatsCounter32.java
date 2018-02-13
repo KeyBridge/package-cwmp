@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlType;
 
       The term ''packet'' is to be interpreted as the transmission unit appropriate to the protocol layer in question, e.g. an IP packet or an Ethernet frame.
 	 */
-@XmlRootElement(name = "StatsCounter32")
+@XmlRootElement(name = "org.broadbandforum.tr157.datatypes.StatsCounter32")
 @XmlType(name = "org.broadbandforum.tr157.datatypes.StatsCounter32")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class StatsCounter32 {

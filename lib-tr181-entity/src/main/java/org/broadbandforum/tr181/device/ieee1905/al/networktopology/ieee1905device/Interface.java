@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.Interface")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

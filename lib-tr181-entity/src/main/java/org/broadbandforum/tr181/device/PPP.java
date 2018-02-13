@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.device.ppp.Interface;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.PPP.")
-@XmlRootElement(name = "PPP")
+@XmlRootElement(name = "Device.PPP")
 @XmlType(name = "Device.PPP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PPP {

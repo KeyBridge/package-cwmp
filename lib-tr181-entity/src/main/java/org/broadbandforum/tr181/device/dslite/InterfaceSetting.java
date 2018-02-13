@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.datatypes.IPv6Address;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.DSLite.InterfaceSetting.{i}.")
-@XmlRootElement(name = "InterfaceSetting")
+@XmlRootElement(name = "Device.DSLite.InterfaceSetting")
 @XmlType(name = "Device.DSLite.InterfaceSetting")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class InterfaceSetting {

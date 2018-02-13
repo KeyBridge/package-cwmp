@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.SmartCardReaders.SmartCardReader.{i}.SmartCard.")
-@XmlRootElement(name = "SmartCard")
+@XmlRootElement(name = "Device.SmartCardReaders.SmartCardReader.SmartCard")
 @XmlType(name = "Device.SmartCardReaders.SmartCardReader.SmartCard")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SmartCard {

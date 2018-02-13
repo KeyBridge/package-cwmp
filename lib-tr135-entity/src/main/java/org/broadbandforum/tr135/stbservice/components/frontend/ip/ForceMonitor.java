@@ -36,7 +36,7 @@ The force monitor mode allows to maintain an active stream coming from the netwo
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.ForceMonitor.")
-@XmlRootElement(name = "ForceMonitor")
+@XmlRootElement(name = "STBService.Components.FrontEnd.IP.ForceMonitor")
 @XmlType(name = "STBService.Components.FrontEnd.IP.ForceMonitor")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ForceMonitor {

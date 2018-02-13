@@ -34,7 +34,7 @@ This information is used to refer to a point on the Earth's surface, or close to
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.UMTS.WCDMA.Cell.{i}.BCCH.ReferencePosition.")
-@XmlRootElement(name = "ReferencePosition")
+@XmlRootElement(name = "FAPService.REM.UMTS.WCDMA.Cell.BCCH.ReferencePosition")
 @XmlType(name = "FAPService.REM.UMTS.WCDMA.Cell.BCCH.ReferencePosition")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ReferencePosition {

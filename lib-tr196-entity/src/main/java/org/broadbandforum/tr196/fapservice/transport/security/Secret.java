@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.Security.Secret.{i}.")
-@XmlRootElement(name = "Secret")
+@XmlRootElement(name = "FAPService.Transport.Security.Secret")
 @XmlType(name = "FAPService.Transport.Security.Secret")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Secret {

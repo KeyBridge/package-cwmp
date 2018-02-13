@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.10
 	 */
 @CWMPObject(name = "BulkData.Profile.{i}.CSVEncoding.")
-@XmlRootElement(name = "CSVEncoding")
+@XmlRootElement(name = "BulkData.Profile.CSVEncoding")
 @XmlType(name = "BulkData.Profile.CSVEncoding")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CSVEncoding {

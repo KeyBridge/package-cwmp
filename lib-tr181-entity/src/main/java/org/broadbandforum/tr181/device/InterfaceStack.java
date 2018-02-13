@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.InterfaceStack.{i}.")
-@XmlRootElement(name = "InterfaceStack")
+@XmlRootElement(name = "Device.InterfaceStack")
 @XmlType(name = "Device.InterfaceStack")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class InterfaceStack {

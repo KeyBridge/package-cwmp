@@ -35,7 +35,7 @@ Support of this object is appropriate only for a device that has programmable bu
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Terminal.{i}.ButtonMap.")
-@XmlRootElement(name = "ButtonMap")
+@XmlRootElement(name = "VoiceService.Terminal.ButtonMap")
 @XmlType(name = "VoiceService.Terminal.ButtonMap")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ButtonMap {

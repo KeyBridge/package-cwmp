@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.IPPingDiagnostics.")
-@XmlRootElement(name = "IPPingDiagnostics")
+@XmlRootElement(name = "InternetGatewayDevice.IPPingDiagnostics")
 @XmlType(name = "InternetGatewayDevice.IPPingDiagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPPingDiagnostics {

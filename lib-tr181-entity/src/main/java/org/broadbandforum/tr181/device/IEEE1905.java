@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.ieee1905.AL;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.")
-@XmlRootElement(name = "IEEE1905")
+@XmlRootElement(name = "Device.IEEE1905")
 @XmlType(name = "Device.IEEE1905")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IEEE1905 {

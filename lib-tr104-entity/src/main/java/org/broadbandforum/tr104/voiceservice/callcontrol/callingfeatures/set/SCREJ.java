@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.Set.{i}.SCREJ.{i}.")
-@XmlRootElement(name = "SCREJ")
+@XmlRootElement(name = "VoiceService.CallControl.CallingFeatures.Set.SCREJ")
 @XmlType(name = "VoiceService.CallControl.CallingFeatures.Set.SCREJ")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SCREJ {

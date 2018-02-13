@@ -45,7 +45,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.S1U;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.")
-@XmlRootElement(name = "RAN")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RAN {

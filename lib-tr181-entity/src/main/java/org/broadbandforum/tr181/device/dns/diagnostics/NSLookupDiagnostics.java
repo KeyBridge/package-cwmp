@@ -40,7 +40,7 @@ import org.broadbandforum.tr181.device.dns.diagnostics.nslookupdiagnostics.Resul
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DNS.Diagnostics.NSLookupDiagnostics.")
-@XmlRootElement(name = "NSLookupDiagnostics")
+@XmlRootElement(name = "Device.DNS.Diagnostics.NSLookupDiagnostics")
 @XmlType(name = "Device.DNS.Diagnostics.NSLookupDiagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NSLookupDiagnostics {

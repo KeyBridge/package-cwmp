@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.device.usb.USBHosts;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.USB.")
-@XmlRootElement(name = "USB")
+@XmlRootElement(name = "Device.USB")
 @XmlType(name = "Device.USB")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class USB {

@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlType;
 
       If the entire IP prefix is unspecified or inapplicable, it MUST be {{empty}} unless otherwise specified by the parameter definition.
 	 */
-@XmlRootElement(name = "IPPrefix")
+@XmlRootElement(name = "org.broadbandforum.tr181.datatypes.IPPrefix")
 @XmlType(name = "org.broadbandforum.tr181.datatypes.IPPrefix")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPPrefix {

@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.ieee1905.al.forwardingtable.ForwardingRul
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.ForwardingTable.")
-@XmlRootElement(name = "ForwardingTable")
+@XmlRootElement(name = "Device.IEEE1905.AL.ForwardingTable")
 @XmlType(name = "Device.IEEE1905.AL.ForwardingTable")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ForwardingTable {

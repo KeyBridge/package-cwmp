@@ -36,7 +36,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FaultMgmt.HistoryEvent.{i}.")
-@XmlRootElement(name = "HistoryEvent")
+@XmlRootElement(name = "Device.FaultMgmt.HistoryEvent")
 @XmlType(name = "Device.FaultMgmt.HistoryEvent")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HistoryEvent {

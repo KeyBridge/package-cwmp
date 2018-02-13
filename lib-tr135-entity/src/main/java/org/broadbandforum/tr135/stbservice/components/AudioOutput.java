@@ -34,7 +34,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.AudioOutput.{i}.")
-@XmlRootElement(name = "AudioOutput")
+@XmlRootElement(name = "STBService.Components.AudioOutput")
 @XmlType(name = "STBService.Components.AudioOutput")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AudioOutput {

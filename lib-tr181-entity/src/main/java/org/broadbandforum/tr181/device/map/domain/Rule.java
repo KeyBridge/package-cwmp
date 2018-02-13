@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.datatypes.IPv6Prefix;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.MAP.Domain.{i}.Rule.{i}.")
-@XmlRootElement(name = "Rule")
+@XmlRootElement(name = "Device.MAP.Domain.Rule")
 @XmlType(name = "Device.MAP.Domain.Rule")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Rule {

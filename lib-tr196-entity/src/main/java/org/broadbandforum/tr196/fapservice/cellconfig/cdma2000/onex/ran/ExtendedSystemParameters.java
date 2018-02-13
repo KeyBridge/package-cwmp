@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.ExtendedSystemParameters.")
-@XmlRootElement(name = "ExtendedSystemParameters")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.ExtendedSystemParameters")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.ExtendedSystemParameters")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ExtendedSystemParameters {

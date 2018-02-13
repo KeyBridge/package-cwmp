@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.Source.DSP.TransmitCodec.")
-@XmlRootElement(name = "TransmitCodec")
+@XmlRootElement(name = "VoiceService.CallLog.Session.Source.DSP.TransmitCodec")
 @XmlType(name = "VoiceService.CallLog.Session.Source.DSP.TransmitCodec")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TransmitCodec {

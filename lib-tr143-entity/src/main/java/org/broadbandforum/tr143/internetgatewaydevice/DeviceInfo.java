@@ -36,7 +36,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.deviceinfo.VendorConfigFil
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.DeviceInfo.")
-@XmlRootElement(name = "DeviceInfo")
+@XmlRootElement(name = "InternetGatewayDevice.DeviceInfo")
 @XmlType(name = "InternetGatewayDevice.DeviceInfo")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DeviceInfo {

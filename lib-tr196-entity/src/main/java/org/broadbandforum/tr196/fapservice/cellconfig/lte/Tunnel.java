@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.Tunnel.{i}.")
-@XmlRootElement(name = "Tunnel")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.Tunnel")
 @XmlType(name = "FAPService.CellConfig.LTE.Tunnel")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Tunnel {

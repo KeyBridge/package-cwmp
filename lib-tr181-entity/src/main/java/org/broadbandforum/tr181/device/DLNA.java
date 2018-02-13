@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.dlna.Capabilities;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DLNA.")
-@XmlRootElement(name = "DLNA")
+@XmlRootElement(name = "Device.DLNA")
 @XmlType(name = "Device.DLNA")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DLNA {

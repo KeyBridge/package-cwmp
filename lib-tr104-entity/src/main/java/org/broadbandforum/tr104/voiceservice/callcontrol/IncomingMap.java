@@ -33,7 +33,7 @@ The map approach separates the call routing aspects from the configuration of th
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.IncomingMap.{i}.")
-@XmlRootElement(name = "IncomingMap")
+@XmlRootElement(name = "VoiceService.CallControl.IncomingMap")
 @XmlType(name = "VoiceService.CallControl.IncomingMap")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IncomingMap {

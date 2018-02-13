@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.AreaNwkInstance.{i}.Property.{i}.")
-@XmlRootElement(name = "Property")
+@XmlRootElement(name = "Device.ETSIM2M.SCL.AreaNwkInstance.Property")
 @XmlType(name = "Device.ETSIM2M.SCL.AreaNwkInstance.Property")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Property {

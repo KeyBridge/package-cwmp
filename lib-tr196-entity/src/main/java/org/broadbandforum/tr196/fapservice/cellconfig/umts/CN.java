@@ -36,7 +36,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.cn.PSDomain;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.CN.")
-@XmlRootElement(name = "CN")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.CN")
 @XmlType(name = "FAPService.CellConfig.UMTS.CN")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CN {

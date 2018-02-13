@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.lldp.Discovery;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.LLDP.")
-@XmlRootElement(name = "LLDP")
+@XmlRootElement(name = "Device.LLDP")
 @XmlType(name = "Device.LLDP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LLDP {

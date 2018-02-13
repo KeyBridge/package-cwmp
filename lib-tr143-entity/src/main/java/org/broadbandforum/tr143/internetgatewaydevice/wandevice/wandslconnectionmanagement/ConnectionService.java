@@ -31,7 +31,7 @@ This object is OBSOLETED because it is within an OBSOLETED object.
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLConnectionManagement.ConnectionService.{i}.")
-@XmlRootElement(name = "ConnectionService")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANDSLConnectionManagement.ConnectionService")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANDSLConnectionManagement.ConnectionService")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ConnectionService {

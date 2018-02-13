@@ -26,7 +26,7 @@ import org.broadbandforum.common.IPPrefix;
 
 Can be any IPv6 prefix that is permitted by the ''IPPrefix'' data type.
 	 */
-@XmlRootElement(name = "IPv6Prefix")
+@XmlRootElement(name = "org.broadbandforum.common.IPv6Prefix")
 @XmlType(name = "org.broadbandforum.common.IPv6Prefix")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPv6Prefix extends IPPrefix {

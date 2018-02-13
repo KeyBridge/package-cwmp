@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.dsl.bondinggroup.ethernet.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.BondingGroup.{i}.Ethernet.")
-@XmlRootElement(name = "Ethernet")
+@XmlRootElement(name = "Device.DSL.BondingGroup.Ethernet")
 @XmlType(name = "Device.DSL.BondingGroup.Ethernet")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Ethernet {

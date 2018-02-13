@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.dns.client.Server;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DNS.Client.")
-@XmlRootElement(name = "Client")
+@XmlRootElement(name = "Device.DNS.Client")
 @XmlType(name = "Device.DNS.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Client {

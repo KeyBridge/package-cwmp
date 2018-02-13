@@ -32,7 +32,7 @@ import org.broadbandforum.tr104.voiceservice.dect.base.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.DECT.Base.{i}.")
-@XmlRootElement(name = "Base")
+@XmlRootElement(name = "VoiceService.DECT.Base")
 @XmlType(name = "VoiceService.DECT.Base")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Base {

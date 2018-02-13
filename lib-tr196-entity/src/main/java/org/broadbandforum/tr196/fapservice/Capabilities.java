@@ -35,7 +35,7 @@ import org.broadbandforum.tr196.fapservice.capabilities.UMTS;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Capabilities.")
-@XmlRootElement(name = "Capabilities")
+@XmlRootElement(name = "FAPService.Capabilities")
 @XmlType(name = "FAPService.Capabilities")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Capabilities {

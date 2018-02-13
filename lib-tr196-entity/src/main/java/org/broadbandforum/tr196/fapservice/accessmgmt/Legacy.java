@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.accessmgmt.legacy.LocalIPAccess;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.Legacy.")
-@XmlRootElement(name = "Legacy")
+@XmlRootElement(name = "FAPService.AccessMgmt.Legacy")
 @XmlType(name = "FAPService.AccessMgmt.Legacy")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Legacy {

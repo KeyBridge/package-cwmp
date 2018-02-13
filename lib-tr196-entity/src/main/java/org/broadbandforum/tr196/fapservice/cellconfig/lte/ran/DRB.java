@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.drb.Stats;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.DRB.")
-@XmlRootElement(name = "DRB")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.DRB")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.DRB")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DRB {

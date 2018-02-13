@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.BridgingTuple.{i}.")
-@XmlRootElement(name = "BridgingTuple")
+@XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.BridgingTuple")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.BridgingTuple")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BridgingTuple {

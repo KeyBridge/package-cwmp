@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.dsl.diagnostics.ADSLLineTest;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.Diagnostics.")
-@XmlRootElement(name = "Diagnostics")
+@XmlRootElement(name = "Device.DSL.Diagnostics")
 @XmlType(name = "Device.DSL.Diagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Diagnostics {

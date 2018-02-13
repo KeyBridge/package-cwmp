@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Interwork.{i}.UserInterface.{i}.")
-@XmlRootElement(name = "UserInterface")
+@XmlRootElement(name = "VoiceService.Interwork.UserInterface")
 @XmlType(name = "VoiceService.Interwork.UserInterface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UserInterface {

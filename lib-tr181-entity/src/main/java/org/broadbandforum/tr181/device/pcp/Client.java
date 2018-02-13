@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.pcp.client.UPnPIWF;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.PCP.Client.{i}.")
-@XmlRootElement(name = "Client")
+@XmlRootElement(name = "Device.PCP.Client")
 @XmlType(name = "Device.PCP.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Client {

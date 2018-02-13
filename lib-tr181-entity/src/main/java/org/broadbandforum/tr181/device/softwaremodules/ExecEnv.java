@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "Device.SoftwareModules.ExecEnv.{i}.")
-@XmlRootElement(name = "ExecEnv")
+@XmlRootElement(name = "Device.SoftwareModules.ExecEnv")
 @XmlType(name = "Device.SoftwareModules.ExecEnv")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ExecEnv {

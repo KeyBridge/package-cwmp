@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.RealTime.Perf.")
-@XmlRootElement(name = "Perf")
+@XmlRootElement(name = "FAPService.Transport.RealTime.Perf")
 @XmlType(name = "FAPService.Transport.RealTime.Perf")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Perf {

@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.10
 	 */
 @CWMPObject(name = "Device.DynamicDNS.Client.{i}.Hostname.{i}.")
-@XmlRootElement(name = "Hostname")
+@XmlRootElement(name = "Device.DynamicDNS.Client.Hostname")
 @XmlType(name = "Device.DynamicDNS.Client.Hostname")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Hostname {

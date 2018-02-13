@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.QoS.Flow.{i}.")
-@XmlRootElement(name = "Flow")
+@XmlRootElement(name = "Device.QoS.Flow")
 @XmlType(name = "Device.QoS.Flow")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Flow {

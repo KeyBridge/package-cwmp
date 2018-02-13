@@ -44,7 +44,7 @@ import org.broadbandforum.tr181.device.dhcpv6.server.pool.Option;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.")
-@XmlRootElement(name = "Pool")
+@XmlRootElement(name = "Device.DHCPv6.Server.Pool")
 @XmlType(name = "Device.DHCPv6.Server.Pool")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Pool {

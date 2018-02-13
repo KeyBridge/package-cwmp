@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Tone.EventProfile.{i}.Event.{i}.")
-@XmlRootElement(name = "Event")
+@XmlRootElement(name = "VoiceService.Tone.EventProfile.Event")
 @XmlType(name = "VoiceService.Tone.EventProfile.Event")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Event {

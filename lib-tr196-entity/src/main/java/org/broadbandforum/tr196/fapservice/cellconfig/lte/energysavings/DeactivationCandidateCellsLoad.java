@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EnergySavings.DeactivationCandidateCellsLoad.")
-@XmlRootElement(name = "DeactivationCandidateCellsLoad")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.EnergySavings.DeactivationCandidateCellsLoad")
 @XmlType(name = "FAPService.CellConfig.LTE.EnergySavings.DeactivationCandidateCellsLoad")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DeactivationCandidateCellsLoad {

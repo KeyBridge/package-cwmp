@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Users.User.{i}.")
-@XmlRootElement(name = "User")
+@XmlRootElement(name = "Device.Users.User")
 @XmlType(name = "Device.Users.User")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class User {

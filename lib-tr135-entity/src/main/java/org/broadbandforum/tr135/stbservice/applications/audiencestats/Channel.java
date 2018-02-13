@@ -33,7 +33,7 @@ Each entry corresponds to a given TV channel and is indexed by channel name (the
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Applications.AudienceStats.Channel.{i}.")
-@XmlRootElement(name = "Channel")
+@XmlRootElement(name = "STBService.Applications.AudienceStats.Channel")
 @XmlType(name = "STBService.Applications.AudienceStats.Channel")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Channel {

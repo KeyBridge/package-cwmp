@@ -34,7 +34,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.Security.Certificate.{i}.")
-@XmlRootElement(name = "Certificate")
+@XmlRootElement(name = "Device.Security.Certificate")
 @XmlType(name = "Device.Security.Certificate")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Certificate {

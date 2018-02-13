@@ -44,7 +44,7 @@ For CPE use cases where {{object|.CallControl}} is used to map network-facing to
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.SIP.Client.{i}.")
-@XmlRootElement(name = "Client")
+@XmlRootElement(name = "VoiceService.SIP.Client")
 @XmlType(name = "VoiceService.SIP.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Client {

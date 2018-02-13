@@ -41,7 +41,7 @@ import org.broadbandforum.tr181.device.ghn._interface.Stats;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.Ghn.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.Ghn.Interface")
 @XmlType(name = "Device.Ghn.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

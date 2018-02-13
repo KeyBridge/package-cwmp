@@ -45,7 +45,7 @@ import org.broadbandforum.tr181.device.softwaremodules.executionunit.Extensions;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "Device.SoftwareModules.ExecutionUnit.{i}.")
-@XmlRootElement(name = "ExecutionUnit")
+@XmlRootElement(name = "Device.SoftwareModules.ExecutionUnit")
 @XmlType(name = "Device.SoftwareModules.ExecutionUnit")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ExecutionUnit {

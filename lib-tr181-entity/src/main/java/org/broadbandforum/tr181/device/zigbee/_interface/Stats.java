@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.datatypes.StatsCounter64;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.Interface.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "Device.ZigBee.Interface.Stats")
 @XmlType(name = "Device.ZigBee.Interface.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

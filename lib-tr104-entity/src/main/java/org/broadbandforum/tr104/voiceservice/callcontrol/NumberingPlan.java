@@ -37,7 +37,7 @@ import org.broadbandforum.tr104.voiceservice.callcontrol.numberingplan.PrefixInf
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.NumberingPlan.{i}.")
-@XmlRootElement(name = "NumberingPlan")
+@XmlRootElement(name = "VoiceService.CallControl.NumberingPlan")
 @XmlType(name = "VoiceService.CallControl.NumberingPlan")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NumberingPlan {

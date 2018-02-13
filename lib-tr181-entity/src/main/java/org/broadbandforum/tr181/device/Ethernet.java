@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.ethernet.VLANTermination;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Ethernet.")
-@XmlRootElement(name = "Ethernet")
+@XmlRootElement(name = "Device.Ethernet")
 @XmlType(name = "Device.Ethernet")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Ethernet {

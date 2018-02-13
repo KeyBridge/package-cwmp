@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.ManagementServer.DownloadAvailability.Announcement.Group.{i}.")
-@XmlRootElement(name = "Group")
+@XmlRootElement(name = "Device.ManagementServer.DownloadAvailability.Announcement.Group")
 @XmlType(name = "Device.ManagementServer.DownloadAvailability.Announcement.Group")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Group {

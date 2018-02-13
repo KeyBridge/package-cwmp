@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLInterfaceConfig.Stats.CurrentDay.")
-@XmlRootElement(name = "CurrentDay")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig.Stats.CurrentDay")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig.Stats.CurrentDay")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CurrentDay {

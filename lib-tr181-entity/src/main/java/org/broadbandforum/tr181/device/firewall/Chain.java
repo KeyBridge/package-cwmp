@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.device.firewall.chain.Rule;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.Firewall.Chain.{i}.")
-@XmlRootElement(name = "Chain")
+@XmlRootElement(name = "Device.Firewall.Chain")
 @XmlType(name = "Device.Firewall.Chain")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Chain {

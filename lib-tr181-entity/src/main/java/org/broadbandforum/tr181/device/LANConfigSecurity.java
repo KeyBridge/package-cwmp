@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.LANConfigSecurity.")
-@XmlRootElement(name = "LANConfigSecurity")
+@XmlRootElement(name = "Device.LANConfigSecurity")
 @XmlType(name = "Device.LANConfigSecurity")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LANConfigSecurity {

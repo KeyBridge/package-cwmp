@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.datatypes.IPv6Address;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.PPP.Interface.{i}.IPv6CP.")
-@XmlRootElement(name = "IPv6CP")
+@XmlRootElement(name = "Device.PPP.Interface.IPv6CP")
 @XmlType(name = "Device.PPP.Interface.IPv6CP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPv6CP {

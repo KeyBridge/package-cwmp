@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Line.{i}.Stats.RTP.")
-@XmlRootElement(name = "RTP")
+@XmlRootElement(name = "VoiceService.CallControl.Line.Stats.RTP")
 @XmlType(name = "VoiceService.CallControl.Line.Stats.RTP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RTP {

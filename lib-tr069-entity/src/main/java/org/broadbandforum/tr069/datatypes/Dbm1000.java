@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlType;
 	/**
 	 * The value is measured in ''dBm/1000'', i.e. the value divided by 1000 is dB relative to 1 mW.  For example, -12345 means -12.345 dBm, 0 means 0 dBm (1 mW) and 12345 means 12.345 dBm.
 	 */
-@XmlRootElement(name = "Dbm1000")
+@XmlRootElement(name = "org.broadbandforum.tr069.datatypes.Dbm1000")
 @XmlType(name = "org.broadbandforum.tr069.datatypes.Dbm1000")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Dbm1000 {

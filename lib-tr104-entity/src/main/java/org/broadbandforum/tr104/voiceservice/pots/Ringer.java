@@ -32,7 +32,7 @@ import org.broadbandforum.tr104.voiceservice.pots.ringer.Event;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.POTS.Ringer.")
-@XmlRootElement(name = "Ringer")
+@XmlRootElement(name = "VoiceService.POTS.Ringer")
 @XmlType(name = "VoiceService.POTS.Ringer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Ringer {

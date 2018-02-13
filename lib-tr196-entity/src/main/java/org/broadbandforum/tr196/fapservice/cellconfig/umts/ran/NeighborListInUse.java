@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.neighborlistinuse
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborListInUse.")
-@XmlRootElement(name = "NeighborListInUse")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.NeighborListInUse")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.NeighborListInUse")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NeighborListInUse {

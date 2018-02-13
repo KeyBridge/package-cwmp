@@ -46,7 +46,7 @@ import org.broadbandforum.tr181.datatypes.IPv6Prefix;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.Routing.Router.{i}.IPv6Forwarding.{i}.")
-@XmlRootElement(name = "IPv6Forwarding")
+@XmlRootElement(name = "Device.Routing.Router.IPv6Forwarding")
 @XmlType(name = "Device.Routing.Router.IPv6Forwarding")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPv6Forwarding {

@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.Firewall.Level.{i}.")
-@XmlRootElement(name = "Level")
+@XmlRootElement(name = "Device.Firewall.Level")
 @XmlType(name = "Device.Firewall.Level")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Level {

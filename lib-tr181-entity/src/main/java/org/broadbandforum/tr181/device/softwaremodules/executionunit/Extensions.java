@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "Device.SoftwareModules.ExecutionUnit.{i}.Extensions.")
-@XmlRootElement(name = "Extensions")
+@XmlRootElement(name = "Device.SoftwareModules.ExecutionUnit.Extensions")
 @XmlType(name = "Device.SoftwareModules.ExecutionUnit.Extensions")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Extensions {

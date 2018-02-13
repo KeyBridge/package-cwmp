@@ -26,7 +26,7 @@ import org.broadbandforum.tr143.datatypes.IPPrefix;
 
 Can be any IPv4 prefix that is permitted by the ''IPPrefix'' data type.
 	 */
-@XmlRootElement(name = "IPv4Prefix")
+@XmlRootElement(name = "org.broadbandforum.tr143.datatypes.IPv4Prefix")
 @XmlType(name = "org.broadbandforum.tr143.datatypes.IPv4Prefix")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPv4Prefix extends IPPrefix {

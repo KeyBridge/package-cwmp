@@ -34,7 +34,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UPnP.Discovery.Device.{i}.")
-@XmlRootElement(name = "Device")
+@XmlRootElement(name = "Device.UPnP.Discovery.Device")
 @XmlType(name = "Device.UPnP.Discovery.Device")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Device {

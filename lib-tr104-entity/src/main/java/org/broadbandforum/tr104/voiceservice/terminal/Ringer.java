@@ -34,7 +34,7 @@ import org.broadbandforum.tr104.voiceservice.terminal.ringer.Pattern;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Terminal.{i}.Ringer.")
-@XmlRootElement(name = "Ringer")
+@XmlRootElement(name = "VoiceService.Terminal.Ringer")
 @XmlType(name = "VoiceService.Terminal.Ringer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Ringer {

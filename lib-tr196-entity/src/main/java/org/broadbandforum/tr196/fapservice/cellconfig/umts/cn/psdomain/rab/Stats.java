@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.cn.psdomain.rab.stats
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.CN.PSDomain.RAB.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.CN.PSDomain.RAB.Stats")
 @XmlType(name = "FAPService.CellConfig.UMTS.CN.PSDomain.RAB.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

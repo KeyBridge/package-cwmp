@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.ANPPolicy.{i}.BlockPeriod.{i}.")
-@XmlRootElement(name = "BlockPeriod")
+@XmlRootElement(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.BlockPeriod")
 @XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.BlockPeriod")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BlockPeriod {

@@ -40,7 +40,7 @@ Note: Cell barring and 3GPP access class parameters are contained in {{object|.C
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.UMTS.")
-@XmlRootElement(name = "UMTS")
+@XmlRootElement(name = "FAPService.AccessMgmt.UMTS")
 @XmlType(name = "FAPService.AccessMgmt.UMTS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UMTS {

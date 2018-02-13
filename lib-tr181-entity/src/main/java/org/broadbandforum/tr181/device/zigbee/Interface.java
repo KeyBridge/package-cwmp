@@ -39,7 +39,7 @@ import org.broadbandforum.tr181.device.zigbee._interface.Stats;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.ZigBee.Interface")
 @XmlType(name = "Device.ZigBee.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

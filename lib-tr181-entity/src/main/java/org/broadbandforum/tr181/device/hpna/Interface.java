@@ -39,7 +39,7 @@ import org.broadbandforum.tr181.device.hpna._interface.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.HPNA.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.HPNA.Interface")
 @XmlType(name = "Device.HPNA.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

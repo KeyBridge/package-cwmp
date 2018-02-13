@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IP.Interface.{i}.IPv4Address.{i}.")
-@XmlRootElement(name = "IPv4Address")
+@XmlRootElement(name = "Device.IP.Interface.IPv4Address")
 @XmlType(name = "Device.IP.Interface.IPv4Address")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPv4Address {

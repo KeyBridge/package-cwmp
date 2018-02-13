@@ -33,7 +33,7 @@ Note: a bad configuration (e.g. timeslots overlapping) could cause unexpected be
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.Set.{i}.CFT.{i}.")
-@XmlRootElement(name = "CFT")
+@XmlRootElement(name = "VoiceService.CallControl.CallingFeatures.Set.CFT")
 @XmlType(name = "VoiceService.CallControl.CallingFeatures.Set.CFT")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CFT {

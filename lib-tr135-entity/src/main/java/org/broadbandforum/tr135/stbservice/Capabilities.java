@@ -41,7 +41,7 @@ import org.broadbandforum.tr135.stbservice.capabilities.VideoOutput;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.")
-@XmlRootElement(name = "Capabilities")
+@XmlRootElement(name = "STBService.Capabilities")
 @XmlType(name = "STBService.Capabilities")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Capabilities {

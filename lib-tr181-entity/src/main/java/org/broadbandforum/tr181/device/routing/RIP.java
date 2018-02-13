@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.routing.rip.InterfaceSetting;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Routing.RIP.")
-@XmlRootElement(name = "RIP")
+@XmlRootElement(name = "Device.Routing.RIP")
 @XmlType(name = "Device.Routing.RIP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RIP {

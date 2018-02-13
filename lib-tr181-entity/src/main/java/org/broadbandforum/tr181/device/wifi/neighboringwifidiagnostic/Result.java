@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.WiFi.NeighboringWiFiDiagnostic.Result.{i}.")
-@XmlRootElement(name = "Result")
+@XmlRootElement(name = "Device.WiFi.NeighboringWiFiDiagnostic.Result")
 @XmlType(name = "Device.WiFi.NeighboringWiFiDiagnostic.Result")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Result {

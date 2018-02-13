@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.Time.")
-@XmlRootElement(name = "Time")
+@XmlRootElement(name = "FAPService.FAPControl.CDMA2000.Time")
 @XmlType(name = "FAPService.FAPControl.CDMA2000.Time")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Time {

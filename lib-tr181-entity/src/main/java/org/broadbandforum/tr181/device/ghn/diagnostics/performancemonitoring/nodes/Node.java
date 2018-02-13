@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.datatypes.StatsCounter64;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Nodes.Node.{i}.")
-@XmlRootElement(name = "Node")
+@XmlRootElement(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Nodes.Node")
 @XmlType(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Nodes.Node")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Node {

@@ -33,7 +33,7 @@ import org.broadbandforum.tr262.fap.applicationplatform.monitoring.TerminalLocat
 	 * @since 1.0
 	 */
 @CWMPObject(name = "FAP.ApplicationPlatform.Monitoring.")
-@XmlRootElement(name = "Monitoring")
+@XmlRootElement(name = "FAP.ApplicationPlatform.Monitoring")
 @XmlType(name = "FAP.ApplicationPlatform.Monitoring")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Monitoring {

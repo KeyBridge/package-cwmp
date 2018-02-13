@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.ISDN.")
-@XmlRootElement(name = "ISDN")
+@XmlRootElement(name = "VoiceService.Capabilities.ISDN")
 @XmlType(name = "VoiceService.Capabilities.ISDN")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ISDN {

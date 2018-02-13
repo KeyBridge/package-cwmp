@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.datatypes.ZigBeeNetworkAddress;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.Group.{i}.")
-@XmlRootElement(name = "Group")
+@XmlRootElement(name = "Device.ZigBee.ZDO.Group")
 @XmlType(name = "Device.ZigBee.ZDO.Group")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Group {

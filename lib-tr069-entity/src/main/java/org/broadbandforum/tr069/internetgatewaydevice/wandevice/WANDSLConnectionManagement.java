@@ -32,7 +32,7 @@ import org.broadbandforum.tr069.internetgatewaydevice.wandevice.wandslconnection
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLConnectionManagement.")
-@XmlRootElement(name = "WANDSLConnectionManagement")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANDSLConnectionManagement")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANDSLConnectionManagement")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class WANDSLConnectionManagement {

@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.datatypes.ZigBeeNetworkAddress;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.Binding.{i}.")
-@XmlRootElement(name = "Binding")
+@XmlRootElement(name = "Device.ZigBee.ZDO.Binding")
 @XmlType(name = "Device.ZigBee.ZDO.Binding")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Binding {

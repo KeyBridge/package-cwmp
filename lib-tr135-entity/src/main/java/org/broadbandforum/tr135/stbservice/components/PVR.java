@@ -32,7 +32,7 @@ import org.broadbandforum.tr135.stbservice.components.pvr.Storage;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.PVR.")
-@XmlRootElement(name = "PVR")
+@XmlRootElement(name = "STBService.Components.PVR")
 @XmlType(name = "STBService.Components.PVR")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PVR {

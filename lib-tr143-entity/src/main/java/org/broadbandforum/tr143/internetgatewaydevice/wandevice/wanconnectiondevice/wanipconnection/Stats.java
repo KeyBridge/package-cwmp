@@ -31,7 +31,7 @@ This object is intended only for ''WANConnectionDevice''s that can support an Et
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANIPConnection.Stats")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANIPConnection.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

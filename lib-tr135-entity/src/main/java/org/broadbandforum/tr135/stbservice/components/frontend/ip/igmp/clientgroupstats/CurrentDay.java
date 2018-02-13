@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.IGMP.ClientGroupStats.{i}.CurrentDay.")
-@XmlRootElement(name = "CurrentDay")
+@XmlRootElement(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroupStats.CurrentDay")
 @XmlType(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroupStats.CurrentDay")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CurrentDay {

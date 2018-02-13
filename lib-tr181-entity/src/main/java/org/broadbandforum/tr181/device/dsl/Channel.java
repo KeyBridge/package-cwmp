@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.device.dsl.channel.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.Channel.{i}.")
-@XmlRootElement(name = "Channel")
+@XmlRootElement(name = "Device.DSL.Channel")
 @XmlType(name = "Device.DSL.Channel")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Channel {

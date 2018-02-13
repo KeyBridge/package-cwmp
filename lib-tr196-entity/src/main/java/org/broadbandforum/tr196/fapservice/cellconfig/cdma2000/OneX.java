@@ -38,7 +38,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.onex.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.")
-@XmlRootElement(name = "OneX")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class OneX {

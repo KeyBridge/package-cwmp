@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "Device.Services.")
-@XmlRootElement(name = "Services")
+@XmlRootElement(name = "Device.Services")
 @XmlType(name = "Device.Services")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Services {

@@ -31,7 +31,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.DRM.{i}.")
-@XmlRootElement(name = "DRM")
+@XmlRootElement(name = "STBService.Components.DRM")
 @XmlType(name = "STBService.Components.DRM")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DRM {

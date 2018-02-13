@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.LTE.CarrierMeas.{i}.")
-@XmlRootElement(name = "CarrierMeas")
+@XmlRootElement(name = "FAPService.REM.LTE.CarrierMeas")
 @XmlType(name = "FAPService.REM.LTE.CarrierMeas")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CarrierMeas {

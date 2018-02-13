@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "Device.SoftwareModules.DeploymentUnit.{i}.")
-@XmlRootElement(name = "DeploymentUnit")
+@XmlRootElement(name = "Device.SoftwareModules.DeploymentUnit")
 @XmlType(name = "Device.SoftwareModules.DeploymentUnit")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DeploymentUnit {

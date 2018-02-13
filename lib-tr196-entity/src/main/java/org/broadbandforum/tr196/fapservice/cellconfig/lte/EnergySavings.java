@@ -35,7 +35,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.energysavings.NotAllow
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EnergySavings.")
-@XmlRootElement(name = "EnergySavings")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.EnergySavings")
 @XmlType(name = "FAPService.CellConfig.LTE.EnergySavings")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EnergySavings {

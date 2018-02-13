@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.zigbee.discovery.AreaNetwork;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.Discovery.")
-@XmlRootElement(name = "Discovery")
+@XmlRootElement(name = "Device.ZigBee.Discovery")
 @XmlType(name = "Device.ZigBee.Discovery")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Discovery {

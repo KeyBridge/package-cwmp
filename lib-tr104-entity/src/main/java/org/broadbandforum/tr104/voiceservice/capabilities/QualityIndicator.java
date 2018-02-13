@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.QualityIndicator.")
-@XmlRootElement(name = "QualityIndicator")
+@XmlRootElement(name = "VoiceService.Capabilities.QualityIndicator")
 @XmlType(name = "VoiceService.Capabilities.QualityIndicator")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class QualityIndicator {

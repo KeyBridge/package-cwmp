@@ -34,7 +34,7 @@ Support for adding and removing extensions is conditional on whether the CPE sup
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Extension.{i}.")
-@XmlRootElement(name = "Extension")
+@XmlRootElement(name = "VoiceService.CallControl.Extension")
 @XmlType(name = "VoiceService.CallControl.Extension")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Extension {

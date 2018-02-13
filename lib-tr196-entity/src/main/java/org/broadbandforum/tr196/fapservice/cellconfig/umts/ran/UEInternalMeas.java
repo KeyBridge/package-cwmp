@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.UEInternalMeas.")
-@XmlRootElement(name = "UEInternalMeas")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.UEInternalMeas")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.UEInternalMeas")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UEInternalMeas {

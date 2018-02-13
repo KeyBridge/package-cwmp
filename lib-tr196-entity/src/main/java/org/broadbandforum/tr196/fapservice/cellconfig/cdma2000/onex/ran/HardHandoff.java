@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.onex.ran.hardhand
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.HardHandoff.")
-@XmlRootElement(name = "HardHandoff")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.HardHandoff")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.HardHandoff")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HardHandoff {

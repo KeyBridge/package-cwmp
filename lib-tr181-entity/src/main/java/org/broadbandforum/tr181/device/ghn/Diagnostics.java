@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.ghn.diagnostics.PerformanceMonitoring;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Diagnostics.")
-@XmlRootElement(name = "Diagnostics")
+@XmlRootElement(name = "Device.Ghn.Diagnostics")
 @XmlType(name = "Device.Ghn.Diagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Diagnostics {

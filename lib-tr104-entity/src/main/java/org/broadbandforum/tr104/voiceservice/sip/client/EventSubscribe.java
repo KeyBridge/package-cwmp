@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.SIP.Client.{i}.EventSubscribe.{i}.")
-@XmlRootElement(name = "EventSubscribe")
+@XmlRootElement(name = "VoiceService.SIP.Client.EventSubscribe")
 @XmlType(name = "VoiceService.SIP.Client.EventSubscribe")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EventSubscribe {

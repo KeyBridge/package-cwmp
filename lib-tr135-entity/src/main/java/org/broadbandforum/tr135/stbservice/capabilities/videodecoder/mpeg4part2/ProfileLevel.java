@@ -32,7 +32,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.VideoDecoder.MPEG4Part2.ProfileLevel.{i}.")
-@XmlRootElement(name = "ProfileLevel")
+@XmlRootElement(name = "STBService.Capabilities.VideoDecoder.MPEG4Part2.ProfileLevel")
 @XmlType(name = "STBService.Capabilities.VideoDecoder.MPEG4Part2.ProfileLevel")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ProfileLevel {

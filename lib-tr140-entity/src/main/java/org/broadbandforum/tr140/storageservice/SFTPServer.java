@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.SFTPServer.")
-@XmlRootElement(name = "SFTPServer")
+@XmlRootElement(name = "StorageService.SFTPServer")
 @XmlType(name = "StorageService.SFTPServer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SFTPServer {

@@ -39,7 +39,7 @@ import org.broadbandforum.tr181.device.dynamicdns.client.Hostname;
 	 * @since 2.10
 	 */
 @CWMPObject(name = "Device.DynamicDNS.Client.{i}.")
-@XmlRootElement(name = "Client")
+@XmlRootElement(name = "Device.DynamicDNS.Client")
 @XmlType(name = "Device.DynamicDNS.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Client {

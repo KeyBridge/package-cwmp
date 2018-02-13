@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EPC.QoS.{i}.")
-@XmlRootElement(name = "QoS")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.EPC.QoS")
 @XmlType(name = "FAPService.CellConfig.LTE.EPC.QoS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class QoS {

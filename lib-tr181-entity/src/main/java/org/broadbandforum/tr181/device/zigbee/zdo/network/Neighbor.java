@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.Network.Neighbor.{i}.")
-@XmlRootElement(name = "Neighbor")
+@XmlRootElement(name = "Device.ZigBee.ZDO.Network.Neighbor")
 @XmlType(name = "Device.ZigBee.ZDO.Network.Neighbor")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Neighbor {

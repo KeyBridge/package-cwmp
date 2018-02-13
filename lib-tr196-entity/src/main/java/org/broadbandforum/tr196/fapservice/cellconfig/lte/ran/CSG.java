@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.csg.Stats;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.CSG.")
-@XmlRootElement(name = "CSG")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.CSG")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.CSG")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CSG {

@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.users.User;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Users.")
-@XmlRootElement(name = "Users")
+@XmlRootElement(name = "Device.Users")
 @XmlType(name = "Device.Users")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Users {

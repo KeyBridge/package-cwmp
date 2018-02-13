@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FaultMgmt.SupportedAlarm.{i}.")
-@XmlRootElement(name = "SupportedAlarm")
+@XmlRootElement(name = "Device.FaultMgmt.SupportedAlarm")
 @XmlType(name = "Device.FaultMgmt.SupportedAlarm")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SupportedAlarm {

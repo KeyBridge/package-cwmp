@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.USB.USBHosts.Host.{i}.Device.{i}.Configuration.{i}.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.USB.USBHosts.Host.Device.Configuration.Interface")
 @XmlType(name = "Device.USB.USBHosts.Host.Device.Configuration.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

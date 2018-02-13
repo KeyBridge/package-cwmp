@@ -31,7 +31,7 @@ import org.broadbandforum.tr069.datatypes.MACAddress;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}.PreSharedKey.{i}.")
-@XmlRootElement(name = "PreSharedKey")
+@XmlRootElement(name = "InternetGatewayDevice.LANDevice.WLANConfiguration.PreSharedKey")
 @XmlType(name = "InternetGatewayDevice.LANDevice.WLANConfiguration.PreSharedKey")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PreSharedKey {

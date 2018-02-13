@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.Set.{i}.Voice2Mail.")
-@XmlRootElement(name = "Voice2Mail")
+@XmlRootElement(name = "VoiceService.CallControl.CallingFeatures.Set.Voice2Mail")
 @XmlType(name = "VoiceService.CallControl.CallingFeatures.Set.Voice2Mail")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Voice2Mail {

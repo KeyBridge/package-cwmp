@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.Set.{i}.SCF.{i}.")
-@XmlRootElement(name = "SCF")
+@XmlRootElement(name = "VoiceService.CallControl.CallingFeatures.Set.SCF")
 @XmlType(name = "VoiceService.CallControl.CallingFeatures.Set.SCF")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SCF {

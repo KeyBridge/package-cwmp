@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.Beacon.HRPDBeaconList.{i}.")
-@XmlRootElement(name = "HRPDBeaconList")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.Beacon.HRPDBeaconList")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.Beacon.HRPDBeaconList")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HRPDBeaconList {

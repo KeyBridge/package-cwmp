@@ -35,7 +35,7 @@ The defaults given for this object apply only to explicit creation of an instanc
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Tone.Pattern.{i}.")
-@XmlRootElement(name = "Pattern")
+@XmlRootElement(name = "VoiceService.Tone.Pattern")
 @XmlType(name = "VoiceService.Tone.Pattern")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Pattern {

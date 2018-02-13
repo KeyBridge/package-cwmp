@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.Set.{i}.FollowMe.{i}.")
-@XmlRootElement(name = "FollowMe")
+@XmlRootElement(name = "VoiceService.CallControl.CallingFeatures.Set.FollowMe")
 @XmlType(name = "VoiceService.CallControl.CallingFeatures.Set.FollowMe")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FollowMe {

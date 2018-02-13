@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.dynamicdns.Server;
 	 * @since 2.10
 	 */
 @CWMPObject(name = "Device.DynamicDNS.")
-@XmlRootElement(name = "DynamicDNS")
+@XmlRootElement(name = "Device.DynamicDNS")
 @XmlType(name = "Device.DynamicDNS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DynamicDNS {

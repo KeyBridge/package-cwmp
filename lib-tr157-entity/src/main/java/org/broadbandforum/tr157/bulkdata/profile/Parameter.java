@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.10
 	 */
 @CWMPObject(name = "BulkData.Profile.{i}.Parameter.{i}.")
-@XmlRootElement(name = "Parameter")
+@XmlRootElement(name = "BulkData.Profile.Parameter")
 @XmlType(name = "BulkData.Profile.Parameter")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Parameter {

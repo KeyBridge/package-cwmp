@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.dns.sd.Service;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.DNS.SD.")
-@XmlRootElement(name = "SD")
+@XmlRootElement(name = "Device.DNS.SD")
 @XmlType(name = "Device.DNS.SD")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SD {

@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.NAT.InterfaceSetting.{i}.")
-@XmlRootElement(name = "InterfaceSetting")
+@XmlRootElement(name = "Device.NAT.InterfaceSetting")
 @XmlType(name = "Device.NAT.InterfaceSetting")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class InterfaceSetting {

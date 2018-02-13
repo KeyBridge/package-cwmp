@@ -39,7 +39,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.CaptivePortal.")
-@XmlRootElement(name = "CaptivePortal")
+@XmlRootElement(name = "Device.CaptivePortal")
 @XmlType(name = "Device.CaptivePortal")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CaptivePortal {

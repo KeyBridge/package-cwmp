@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.rem.cdma2000.hrpd.cell.RF;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.CDMA2000.HRPD.Cell.{i}.")
-@XmlRootElement(name = "Cell")
+@XmlRootElement(name = "FAPService.REM.CDMA2000.HRPD.Cell")
 @XmlType(name = "FAPService.REM.CDMA2000.HRPD.Cell")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Cell {

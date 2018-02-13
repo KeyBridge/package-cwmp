@@ -41,7 +41,7 @@ import org.broadbandforum.tr181.device.dhcpv4.client.SentOption;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DHCPv4.Client.{i}.")
-@XmlRootElement(name = "Client")
+@XmlRootElement(name = "Device.DHCPv4.Client")
 @XmlType(name = "Device.DHCPv4.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Client {

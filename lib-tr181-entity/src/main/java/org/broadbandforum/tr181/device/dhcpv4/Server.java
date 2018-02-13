@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.dhcpv4.server.Pool;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DHCPv4.Server.")
-@XmlRootElement(name = "Server")
+@XmlRootElement(name = "Device.DHCPv4.Server")
 @XmlType(name = "Device.DHCPv4.Server")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Server {

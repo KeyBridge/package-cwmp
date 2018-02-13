@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.BondingGroup.{i}.Stats.Total.")
-@XmlRootElement(name = "Total")
+@XmlRootElement(name = "Device.DSL.BondingGroup.Stats.Total")
 @XmlType(name = "Device.DSL.BondingGroup.Stats.Total")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Total {

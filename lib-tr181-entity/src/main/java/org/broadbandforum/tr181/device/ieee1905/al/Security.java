@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.Security.")
-@XmlRootElement(name = "Security")
+@XmlRootElement(name = "Device.IEEE1905.AL.Security")
 @XmlType(name = "Device.IEEE1905.AL.Security")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Security {

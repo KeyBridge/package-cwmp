@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.ConnMode.EUTRA.")
-@XmlRootElement(name = "EUTRA")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.ConnMode.EUTRA")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility.ConnMode.EUTRA")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EUTRA {

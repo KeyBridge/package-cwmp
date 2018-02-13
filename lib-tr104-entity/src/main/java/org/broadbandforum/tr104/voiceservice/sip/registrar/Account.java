@@ -36,7 +36,7 @@ import org.broadbandforum.tr104.voiceservice.sip.registrar.account.Contact;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.SIP.Registrar.{i}.Account.{i}.")
-@XmlRootElement(name = "Account")
+@XmlRootElement(name = "VoiceService.SIP.Registrar.Account")
 @XmlType(name = "VoiceService.SIP.Registrar.Account")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Account {

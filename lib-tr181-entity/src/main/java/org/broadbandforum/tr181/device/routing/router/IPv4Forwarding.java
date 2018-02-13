@@ -44,7 +44,7 @@ import org.broadbandforum.tr181.datatypes.IPv4Address;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Routing.Router.{i}.IPv4Forwarding.{i}.")
-@XmlRootElement(name = "IPv4Forwarding")
+@XmlRootElement(name = "Device.Routing.Router.IPv4Forwarding")
 @XmlType(name = "Device.Routing.Router.IPv4Forwarding")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPv4Forwarding {

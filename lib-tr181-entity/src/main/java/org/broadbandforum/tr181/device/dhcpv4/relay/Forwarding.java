@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DHCPv4.Relay.Forwarding.{i}.")
-@XmlRootElement(name = "Forwarding")
+@XmlRootElement(name = "Device.DHCPv4.Relay.Forwarding")
 @XmlType(name = "Device.DHCPv4.Relay.Forwarding")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Forwarding {

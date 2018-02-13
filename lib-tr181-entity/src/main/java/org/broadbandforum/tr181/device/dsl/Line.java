@@ -39,7 +39,7 @@ import org.broadbandforum.tr181.device.dsl.line.TestParams;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.Line.{i}.")
-@XmlRootElement(name = "Line")
+@XmlRootElement(name = "Device.DSL.Line")
 @XmlType(name = "Device.DSL.Line")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Line {

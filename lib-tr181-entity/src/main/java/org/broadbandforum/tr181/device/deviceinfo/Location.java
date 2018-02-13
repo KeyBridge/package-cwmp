@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.DeviceInfo.Location.{i}.")
-@XmlRootElement(name = "Location")
+@XmlRootElement(name = "Device.DeviceInfo.Location")
 @XmlType(name = "Device.DeviceInfo.Location")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Location {

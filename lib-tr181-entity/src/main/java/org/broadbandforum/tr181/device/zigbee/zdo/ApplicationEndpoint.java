@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.zigbee.zdo.applicationendpoint.SimpleDesc
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.ApplicationEndpoint.{i}.")
-@XmlRootElement(name = "ApplicationEndpoint")
+@XmlRootElement(name = "Device.ZigBee.ZDO.ApplicationEndpoint")
 @XmlType(name = "Device.ZigBee.ZDO.ApplicationEndpoint")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ApplicationEndpoint {

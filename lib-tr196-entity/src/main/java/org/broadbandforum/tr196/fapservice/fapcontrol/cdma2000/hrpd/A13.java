@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.fapservice.fapcontrol.cdma2000.hrpd.a13.HRPDSubn
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.HRPD.A13.")
-@XmlRootElement(name = "A13")
+@XmlRootElement(name = "FAPService.FAPControl.CDMA2000.HRPD.A13")
 @XmlType(name = "FAPService.FAPControl.CDMA2000.HRPD.A13")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class A13 {

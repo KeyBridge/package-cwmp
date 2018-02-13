@@ -34,7 +34,7 @@ The CPE MUST reset the extension's Stats parameters (unless otherwise stated in 
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Extension.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "VoiceService.CallControl.Extension.Stats")
 @XmlType(name = "VoiceService.CallControl.Extension.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

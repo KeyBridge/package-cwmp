@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.moca.Interface;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.MoCA.")
-@XmlRootElement(name = "MoCA")
+@XmlRootElement(name = "Device.MoCA")
 @XmlType(name = "Device.MoCA")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MoCA {

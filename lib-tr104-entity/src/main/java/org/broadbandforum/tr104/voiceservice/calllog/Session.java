@@ -32,7 +32,7 @@ import org.broadbandforum.tr104.voiceservice.calllog.session.Source;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.")
-@XmlRootElement(name = "Session")
+@XmlRootElement(name = "VoiceService.CallLog.Session")
 @XmlType(name = "VoiceService.CallLog.Session")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Session {

@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.ULPowerControl.")
-@XmlRootElement(name = "ULPowerControl")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY.ULPowerControl")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.PHY.ULPowerControl")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ULPowerControl {

@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.RTPAVPF.")
-@XmlRootElement(name = "RTPAVPF")
+@XmlRootElement(name = "STBService.Components.FrontEnd.IP.RTPAVPF")
 @XmlType(name = "STBService.Components.FrontEnd.IP.RTPAVPF")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RTPAVPF {

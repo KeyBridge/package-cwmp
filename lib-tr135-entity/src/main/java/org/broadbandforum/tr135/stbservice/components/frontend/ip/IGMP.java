@@ -35,7 +35,7 @@ import org.broadbandforum.tr135.stbservice.components.frontend.ip.igmp.ClientGro
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.IGMP.")
-@XmlRootElement(name = "IGMP")
+@XmlRootElement(name = "STBService.Components.FrontEnd.IP.IGMP")
 @XmlType(name = "STBService.Components.FrontEnd.IP.IGMP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IGMP {

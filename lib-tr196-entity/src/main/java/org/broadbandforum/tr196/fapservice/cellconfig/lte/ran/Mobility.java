@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.IdleMode;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.")
-@XmlRootElement(name = "Mobility")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Mobility {

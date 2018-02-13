@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DNS.Client.Server.{i}.")
-@XmlRootElement(name = "Server")
+@XmlRootElement(name = "Device.DNS.Client.Server")
 @XmlType(name = "Device.DNS.Client.Server")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Server {

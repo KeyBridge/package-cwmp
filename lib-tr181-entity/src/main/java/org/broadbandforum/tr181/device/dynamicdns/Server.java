@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.10
 	 */
 @CWMPObject(name = "Device.DynamicDNS.Server.{i}.")
-@XmlRootElement(name = "Server")
+@XmlRootElement(name = "Device.DynamicDNS.Server")
 @XmlType(name = "Device.DynamicDNS.Server")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Server {

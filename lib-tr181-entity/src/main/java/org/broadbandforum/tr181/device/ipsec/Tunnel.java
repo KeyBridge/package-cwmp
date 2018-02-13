@@ -38,7 +38,7 @@ import org.broadbandforum.tr181.device.ipsec.tunnel.Stats;
 	 * @since 2.5
 	 */
 @CWMPObject(name = "Device.IPsec.Tunnel.{i}.")
-@XmlRootElement(name = "Tunnel")
+@XmlRootElement(name = "Device.IPsec.Tunnel")
 @XmlType(name = "Device.IPsec.Tunnel")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Tunnel {

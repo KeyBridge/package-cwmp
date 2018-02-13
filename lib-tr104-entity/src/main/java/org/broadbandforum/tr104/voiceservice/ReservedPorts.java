@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.ReservedPorts.")
-@XmlRootElement(name = "ReservedPorts")
+@XmlRootElement(name = "VoiceService.ReservedPorts")
 @XmlType(name = "VoiceService.ReservedPorts")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ReservedPorts {

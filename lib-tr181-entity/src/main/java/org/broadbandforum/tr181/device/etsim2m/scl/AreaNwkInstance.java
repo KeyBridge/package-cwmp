@@ -39,7 +39,7 @@ import org.broadbandforum.tr181.device.etsim2m.scl.areanwkinstance.Property;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.AreaNwkInstance.{i}.")
-@XmlRootElement(name = "AreaNwkInstance")
+@XmlRootElement(name = "Device.ETSIM2M.SCL.AreaNwkInstance")
 @XmlType(name = "Device.ETSIM2M.SCL.AreaNwkInstance")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AreaNwkInstance {

@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.ip.diagnostics.udpechodiagnostics.Individ
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.UDPEchoDiagnostics.")
-@XmlRootElement(name = "UDPEchoDiagnostics")
+@XmlRootElement(name = "Device.IP.Diagnostics.UDPEchoDiagnostics")
 @XmlType(name = "Device.IP.Diagnostics.UDPEchoDiagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UDPEchoDiagnostics {

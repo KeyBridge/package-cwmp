@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.dslite.InterfaceSetting;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.DSLite.")
-@XmlRootElement(name = "DSLite")
+@XmlRootElement(name = "Device.DSLite")
 @XmlType(name = "Device.DSLite")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DSLite {

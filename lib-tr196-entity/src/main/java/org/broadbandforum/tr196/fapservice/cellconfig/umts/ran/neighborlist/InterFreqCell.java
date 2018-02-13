@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborList.InterFreqCell.{i}.")
-@XmlRootElement(name = "InterFreqCell")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.NeighborList.InterFreqCell")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.NeighborList.InterFreqCell")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class InterFreqCell {

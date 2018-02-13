@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.hrpd.ran.RF;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.RAN.")
-@XmlRootElement(name = "RAN")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD.RAN")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.HRPD.RAN")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RAN {

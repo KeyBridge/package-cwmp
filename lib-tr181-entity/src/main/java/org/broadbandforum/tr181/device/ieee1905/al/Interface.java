@@ -38,7 +38,7 @@ import org.broadbandforum.tr181.device.ieee1905.al._interface.VendorProperties;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.IEEE1905.AL.Interface")
 @XmlType(name = "Device.IEEE1905.AL.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

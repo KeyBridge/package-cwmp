@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.ip.diagnostics.UploadDiagnostics;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.")
-@XmlRootElement(name = "Diagnostics")
+@XmlRootElement(name = "Device.IP.Diagnostics")
 @XmlType(name = "Device.IP.Diagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Diagnostics {

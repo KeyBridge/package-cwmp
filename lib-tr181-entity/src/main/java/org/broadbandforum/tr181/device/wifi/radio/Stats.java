@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.WiFi.Radio.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "Device.WiFi.Radio.Stats")
 @XmlType(name = "Device.WiFi.Radio.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

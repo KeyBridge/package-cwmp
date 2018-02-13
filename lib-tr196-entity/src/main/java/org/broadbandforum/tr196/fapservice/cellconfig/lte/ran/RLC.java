@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.rlc.SRB2;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.RLC.")
-@XmlRootElement(name = "RLC")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.RLC")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.RLC")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RLC {

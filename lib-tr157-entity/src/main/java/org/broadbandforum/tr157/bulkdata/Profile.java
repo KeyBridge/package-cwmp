@@ -41,7 +41,7 @@ import org.broadbandforum.tr157.datatypes.Alias;
 	 * @since 1.10
 	 */
 @CWMPObject(name = "BulkData.Profile.{i}.")
-@XmlRootElement(name = "Profile")
+@XmlRootElement(name = "BulkData.Profile")
 @XmlType(name = "BulkData.Profile")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Profile {

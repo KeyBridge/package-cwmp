@@ -29,7 +29,7 @@ import org.broadbandforum.tr106.device.capabilities.PerformanceDiagnostic;
 	 * @since 1.2
 	 */
 @CWMPObject(name = "Device.Capabilities.")
-@XmlRootElement(name = "Capabilities")
+@XmlRootElement(name = "Device.Capabilities")
 @XmlType(name = "Device.Capabilities")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Capabilities {

@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Interface.{i}.SMMaskedBand.{i}.")
-@XmlRootElement(name = "SMMaskedBand")
+@XmlRootElement(name = "Device.Ghn.Interface.SMMaskedBand")
 @XmlType(name = "Device.Ghn.Interface.SMMaskedBand")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SMMaskedBand {

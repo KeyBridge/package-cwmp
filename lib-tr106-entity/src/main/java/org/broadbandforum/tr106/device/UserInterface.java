@@ -34,7 +34,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "Device.UserInterface.")
-@XmlRootElement(name = "UserInterface")
+@XmlRootElement(name = "Device.UserInterface")
 @XmlType(name = "Device.UserInterface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UserInterface {

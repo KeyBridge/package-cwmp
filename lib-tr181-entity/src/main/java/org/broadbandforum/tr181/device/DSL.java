@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.dsl.Line;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.")
-@XmlRootElement(name = "DSL")
+@XmlRootElement(name = "Device.DSL")
 @XmlType(name = "Device.DSL")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DSL {

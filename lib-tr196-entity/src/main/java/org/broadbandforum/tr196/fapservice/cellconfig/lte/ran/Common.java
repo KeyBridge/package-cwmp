@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Common.")
-@XmlRootElement(name = "Common")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Common")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.Common")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Common {

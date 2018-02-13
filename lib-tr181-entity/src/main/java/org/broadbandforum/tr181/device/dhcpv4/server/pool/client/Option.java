@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.DHCPv4.Server.Pool.{i}.Client.{i}.Option.{i}.")
-@XmlRootElement(name = "Option")
+@XmlRootElement(name = "Device.DHCPv4.Server.Pool.Client.Option")
 @XmlType(name = "Device.DHCPv4.Server.Pool.Client.Option")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Option {

@@ -33,7 +33,7 @@ This object is valid on the specified day(s) and time of every week.
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EnergySavings.NotAllowedTimePeriod.{i}.")
-@XmlRootElement(name = "NotAllowedTimePeriod")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.EnergySavings.NotAllowedTimePeriod")
 @XmlType(name = "FAPService.CellConfig.LTE.EnergySavings.NotAllowedTimePeriod")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NotAllowedTimePeriod {

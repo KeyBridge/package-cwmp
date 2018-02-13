@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.PeriodicStatistics.SampleSet.{i}.Parameter.{i}.")
-@XmlRootElement(name = "Parameter")
+@XmlRootElement(name = "Device.PeriodicStatistics.SampleSet.Parameter")
 @XmlType(name = "Device.PeriodicStatistics.SampleSet.Parameter")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Parameter {

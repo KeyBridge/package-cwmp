@@ -43,7 +43,7 @@ For each incoming packet, the layer-3 forwarding decision is conceptually made a
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding.{i}.")
-@XmlRootElement(name = "Forwarding")
+@XmlRootElement(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding")
 @XmlType(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Forwarding {

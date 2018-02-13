@@ -39,7 +39,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.Bridging.ProviderBridge.{i}.")
-@XmlRootElement(name = "ProviderBridge")
+@XmlRootElement(name = "Device.Bridging.ProviderBridge")
 @XmlType(name = "Device.Bridging.ProviderBridge")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ProviderBridge {

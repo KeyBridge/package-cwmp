@@ -41,7 +41,7 @@ import org.broadbandforum.tr181.device.dhcpv6.client.Server;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.DHCPv6.Client.{i}.")
-@XmlRootElement(name = "Client")
+@XmlRootElement(name = "Device.DHCPv6.Client")
 @XmlType(name = "Device.DHCPv6.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Client {

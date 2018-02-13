@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.M2MSPPolicy.RequestCategory.{i}.")
-@XmlRootElement(name = "RequestCategory")
+@XmlRootElement(name = "Device.ETSIM2M.SCL.SAFPolicySet.M2MSPPolicy.RequestCategory")
 @XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet.M2MSPPolicy.RequestCategory")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RequestCategory {

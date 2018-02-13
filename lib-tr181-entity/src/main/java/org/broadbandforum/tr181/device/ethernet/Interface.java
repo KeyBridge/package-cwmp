@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.ethernet._interface.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Ethernet.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.Ethernet.Interface")
 @XmlType(name = "Device.Ethernet.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

@@ -53,7 +53,7 @@ import org.broadbandforum.tr181.device.etsim2m.scl.SAFPolicySet;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.")
-@XmlRootElement(name = "SCL")
+@XmlRootElement(name = "Device.ETSIM2M.SCL")
 @XmlType(name = "Device.ETSIM2M.SCL")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SCL {

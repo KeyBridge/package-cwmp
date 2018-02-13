@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.datatypes.StatsCounter64;
 	 * @since 2.5
 	 */
 @CWMPObject(name = "Device.IPsec.IKEv2SA.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "Device.IPsec.IKEv2SA.Stats")
 @XmlType(name = "Device.IPsec.IKEv2SA.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

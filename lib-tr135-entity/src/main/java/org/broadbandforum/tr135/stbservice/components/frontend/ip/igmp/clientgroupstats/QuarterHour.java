@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.IGMP.ClientGroupStats.{i}.QuarterHour.")
-@XmlRootElement(name = "QuarterHour")
+@XmlRootElement(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroupStats.QuarterHour")
 @XmlType(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroupStats.QuarterHour")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class QuarterHour {

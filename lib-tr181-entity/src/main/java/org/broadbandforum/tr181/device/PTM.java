@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.ptm.Link;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.PTM.")
-@XmlRootElement(name = "PTM")
+@XmlRootElement(name = "Device.PTM")
 @XmlType(name = "Device.PTM")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PTM {

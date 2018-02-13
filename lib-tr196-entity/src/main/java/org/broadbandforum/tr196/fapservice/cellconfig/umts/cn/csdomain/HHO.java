@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.cn.csdomain.hho.Stats
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.CN.CSDomain.HHO.")
-@XmlRootElement(name = "HHO")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.CN.CSDomain.HHO")
 @XmlType(name = "FAPService.CellConfig.UMTS.CN.CSDomain.HHO")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HHO {

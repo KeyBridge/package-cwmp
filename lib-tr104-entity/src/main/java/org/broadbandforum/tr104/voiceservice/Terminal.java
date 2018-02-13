@@ -40,7 +40,7 @@ This object has to be used when the CPE is a voice endpoint itself.
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Terminal.{i}.")
-@XmlRootElement(name = "Terminal")
+@XmlRootElement(name = "VoiceService.Terminal")
 @XmlType(name = "VoiceService.Terminal")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Terminal {

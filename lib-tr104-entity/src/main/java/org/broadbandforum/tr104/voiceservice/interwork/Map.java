@@ -32,7 +32,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Interwork.{i}.Map.{i}.")
-@XmlRootElement(name = "Map")
+@XmlRootElement(name = "VoiceService.Interwork.Map")
 @XmlType(name = "VoiceService.Interwork.Map")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Map {

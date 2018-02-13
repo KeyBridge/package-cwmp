@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.RTCP.")
-@XmlRootElement(name = "RTCP")
+@XmlRootElement(name = "STBService.Components.FrontEnd.IP.RTCP")
 @XmlType(name = "STBService.Components.FrontEnd.IP.RTCP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RTCP {

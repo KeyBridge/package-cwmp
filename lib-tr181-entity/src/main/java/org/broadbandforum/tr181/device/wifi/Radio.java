@@ -40,7 +40,7 @@ import org.broadbandforum.tr181.device.wifi.radio.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.WiFi.Radio.{i}.")
-@XmlRootElement(name = "Radio")
+@XmlRootElement(name = "Device.WiFi.Radio")
 @XmlType(name = "Device.WiFi.Radio")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Radio {

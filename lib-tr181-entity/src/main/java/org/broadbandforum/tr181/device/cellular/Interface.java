@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.device.cellular._interface.USIM;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Cellular.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.Cellular.Interface")
 @XmlType(name = "Device.Cellular.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

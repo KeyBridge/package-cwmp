@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.ghn.Interface;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.Ghn.")
-@XmlRootElement(name = "Ghn")
+@XmlRootElement(name = "Device.Ghn")
 @XmlType(name = "Device.Ghn")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Ghn {

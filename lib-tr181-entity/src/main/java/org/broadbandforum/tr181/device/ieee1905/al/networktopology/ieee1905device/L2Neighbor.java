@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.L2Neighbor.{i}.")
-@XmlRootElement(name = "L2Neighbor")
+@XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.L2Neighbor")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.L2Neighbor")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class L2Neighbor {

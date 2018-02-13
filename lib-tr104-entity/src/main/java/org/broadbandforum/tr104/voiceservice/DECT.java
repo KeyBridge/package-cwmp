@@ -33,7 +33,7 @@ import org.broadbandforum.tr104.voiceservice.dect.Portable;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.DECT.")
-@XmlRootElement(name = "DECT")
+@XmlRootElement(name = "VoiceService.DECT")
 @XmlType(name = "VoiceService.DECT")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DECT {

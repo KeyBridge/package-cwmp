@@ -31,7 +31,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Applications.CDSPull.ContentItem.{i}.")
-@XmlRootElement(name = "ContentItem")
+@XmlRootElement(name = "STBService.Applications.CDSPull.ContentItem")
 @XmlType(name = "STBService.Applications.CDSPull.ContentItem")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ContentItem {

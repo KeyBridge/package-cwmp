@@ -41,7 +41,7 @@ import org.broadbandforum.tr181.device.ieee8021x.supplicant.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IEEE8021x.Supplicant.{i}.")
-@XmlRootElement(name = "Supplicant")
+@XmlRootElement(name = "Device.IEEE8021x.Supplicant")
 @XmlType(name = "Device.IEEE8021x.Supplicant")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Supplicant {

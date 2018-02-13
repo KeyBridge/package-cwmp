@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.PCP.Client.{i}.Server.{i}.InboundMapping.{i}.Filter.{i}.")
-@XmlRootElement(name = "Filter")
+@XmlRootElement(name = "Device.PCP.Client.Server.InboundMapping.Filter")
 @XmlType(name = "Device.PCP.Client.Server.InboundMapping.Filter")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Filter {

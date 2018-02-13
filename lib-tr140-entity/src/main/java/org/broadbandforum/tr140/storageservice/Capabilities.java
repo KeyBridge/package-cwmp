@@ -33,7 +33,7 @@ Note that when TR-140 was originally published there was a typo in this object n
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.Capabilities.")
-@XmlRootElement(name = "Capabilities")
+@XmlRootElement(name = "StorageService.Capabilities")
 @XmlType(name = "StorageService.Capabilities")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Capabilities {

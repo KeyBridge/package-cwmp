@@ -35,7 +35,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.managementserver.Manageabl
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.ManagementServer.")
-@XmlRootElement(name = "ManagementServer")
+@XmlRootElement(name = "InternetGatewayDevice.ManagementServer")
 @XmlType(name = "InternetGatewayDevice.ManagementServer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ManagementServer {

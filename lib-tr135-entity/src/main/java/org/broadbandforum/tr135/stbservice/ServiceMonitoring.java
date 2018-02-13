@@ -52,7 +52,7 @@ Refer to {{bibref|TR-135|I.3}} for non-normative explanation of the operation of
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.")
-@XmlRootElement(name = "ServiceMonitoring")
+@XmlRootElement(name = "STBService.ServiceMonitoring")
 @XmlType(name = "STBService.ServiceMonitoring")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ServiceMonitoring {

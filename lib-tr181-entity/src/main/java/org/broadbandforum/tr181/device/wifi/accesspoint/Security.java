@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.WiFi.AccessPoint.{i}.Security.")
-@XmlRootElement(name = "Security")
+@XmlRootElement(name = "Device.WiFi.AccessPoint.Security")
 @XmlType(name = "Device.WiFi.AccessPoint.Security")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Security {

@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.QueueManagement.Flow.{i}.")
-@XmlRootElement(name = "Flow")
+@XmlRootElement(name = "InternetGatewayDevice.QueueManagement.Flow")
 @XmlType(name = "InternetGatewayDevice.QueueManagement.Flow")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Flow {

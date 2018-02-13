@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.VendorConfigFile.{i}.")
-@XmlRootElement(name = "VendorConfigFile")
+@XmlRootElement(name = "Device.DeviceInfo.VendorConfigFile")
 @XmlType(name = "Device.DeviceInfo.VendorConfigFile")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VendorConfigFile {

@@ -40,7 +40,7 @@ import org.broadbandforum.tr181.device.routeradvertisement.interfacesetting.Opti
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.RouterAdvertisement.InterfaceSetting.{i}.")
-@XmlRootElement(name = "InterfaceSetting")
+@XmlRootElement(name = "Device.RouterAdvertisement.InterfaceSetting")
 @XmlType(name = "Device.RouterAdvertisement.InterfaceSetting")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class InterfaceSetting {

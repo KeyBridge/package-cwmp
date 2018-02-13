@@ -33,7 +33,7 @@ import org.broadbandforum.tr104.datatypes.StatsCounter64;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.Destination.RTP.")
-@XmlRootElement(name = "RTP")
+@XmlRootElement(name = "VoiceService.CallLog.Session.Destination.RTP")
 @XmlType(name = "VoiceService.CallLog.Session.Destination.RTP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RTP {

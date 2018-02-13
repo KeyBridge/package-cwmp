@@ -32,7 +32,7 @@ import org.broadbandforum.tr069.internetgatewaydevice.landevice.lanusbinterfacec
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANUSBInterfaceConfig.{i}.")
-@XmlRootElement(name = "LANUSBInterfaceConfig")
+@XmlRootElement(name = "InternetGatewayDevice.LANDevice.LANUSBInterfaceConfig")
 @XmlType(name = "InternetGatewayDevice.LANDevice.LANUSBInterfaceConfig")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LANUSBInterfaceConfig {

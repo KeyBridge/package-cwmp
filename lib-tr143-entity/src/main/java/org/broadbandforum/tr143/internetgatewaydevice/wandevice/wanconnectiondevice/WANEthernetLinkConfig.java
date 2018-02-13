@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANEthernetLinkConfig.")
-@XmlRootElement(name = "WANEthernetLinkConfig")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANEthernetLinkConfig")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANEthernetLinkConfig")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class WANEthernetLinkConfig {

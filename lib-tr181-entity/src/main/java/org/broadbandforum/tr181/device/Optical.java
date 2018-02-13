@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.optical.Interface;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.Optical.")
-@XmlRootElement(name = "Optical")
+@XmlRootElement(name = "Device.Optical")
 @XmlType(name = "Device.Optical")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Optical {

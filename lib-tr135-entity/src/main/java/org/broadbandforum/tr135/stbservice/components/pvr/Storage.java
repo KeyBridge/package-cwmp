@@ -31,7 +31,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.PVR.Storage.{i}.")
-@XmlRootElement(name = "Storage")
+@XmlRootElement(name = "STBService.Components.PVR.Storage")
 @XmlType(name = "STBService.Components.PVR.Storage")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Storage {

@@ -34,7 +34,7 @@ import org.broadbandforum.tr104.voiceservice.clocksynchronization.ClockSource;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.ClockSynchronization.")
-@XmlRootElement(name = "ClockSynchronization")
+@XmlRootElement(name = "VoiceService.ClockSynchronization")
 @XmlType(name = "VoiceService.ClockSynchronization")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ClockSynchronization {

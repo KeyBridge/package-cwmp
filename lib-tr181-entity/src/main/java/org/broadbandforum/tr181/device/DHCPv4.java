@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.dhcpv4.Server;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DHCPv4.")
-@XmlRootElement(name = "DHCPv4")
+@XmlRootElement(name = "Device.DHCPv4")
 @XmlType(name = "Device.DHCPv4")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DHCPv4 {

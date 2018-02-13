@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.Reregistration.ActionStatus.")
-@XmlRootElement(name = "ActionStatus")
+@XmlRootElement(name = "Device.ETSIM2M.SCL.Reregistration.ActionStatus")
 @XmlType(name = "Device.ETSIM2M.SCL.Reregistration.ActionStatus")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ActionStatus {

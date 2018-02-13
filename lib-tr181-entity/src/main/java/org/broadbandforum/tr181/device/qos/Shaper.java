@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.QoS.Shaper.{i}.")
-@XmlRootElement(name = "Shaper")
+@XmlRootElement(name = "Device.QoS.Shaper")
 @XmlType(name = "Device.QoS.Shaper")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Shaper {

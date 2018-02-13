@@ -33,7 +33,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Group.{i}.")
-@XmlRootElement(name = "Group")
+@XmlRootElement(name = "VoiceService.CallControl.Group")
 @XmlType(name = "VoiceService.CallControl.Group")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Group {

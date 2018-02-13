@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.BatchPCFPDSN.{i}.")
-@XmlRootElement(name = "BatchPCFPDSN")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.BatchPCFPDSN")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.BatchPCFPDSN")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BatchPCFPDSN {

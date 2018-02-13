@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.idlemode.
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.IRAT.")
-@XmlRootElement(name = "IRAT")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.IRAT")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.IRAT")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IRAT {

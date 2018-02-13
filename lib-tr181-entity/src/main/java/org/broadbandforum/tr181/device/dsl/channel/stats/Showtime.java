@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.Channel.{i}.Stats.Showtime.")
-@XmlRootElement(name = "Showtime")
+@XmlRootElement(name = "Device.DSL.Channel.Stats.Showtime")
 @XmlType(name = "Device.DSL.Channel.Stats.Showtime")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Showtime {

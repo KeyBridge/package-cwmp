@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.RRC.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.RRC.Stats")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.RRC.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

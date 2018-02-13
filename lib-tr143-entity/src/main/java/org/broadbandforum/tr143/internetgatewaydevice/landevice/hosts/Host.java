@@ -32,7 +32,7 @@ import org.broadbandforum.tr143.datatypes.MACAddress;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.Hosts.Host.{i}.")
-@XmlRootElement(name = "Host")
+@XmlRootElement(name = "InternetGatewayDevice.LANDevice.Hosts.Host")
 @XmlType(name = "InternetGatewayDevice.LANDevice.Hosts.Host")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Host {

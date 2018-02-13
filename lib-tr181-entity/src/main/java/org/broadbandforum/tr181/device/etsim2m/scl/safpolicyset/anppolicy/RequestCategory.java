@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.anppolicy.reques
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.ANPPolicy.{i}.RequestCategory.{i}.")
-@XmlRootElement(name = "RequestCategory")
+@XmlRootElement(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.RequestCategory")
 @XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.RequestCategory")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RequestCategory {

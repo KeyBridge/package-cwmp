@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.UserDescriptor.")
-@XmlRootElement(name = "UserDescriptor")
+@XmlRootElement(name = "Device.ZigBee.ZDO.UserDescriptor")
 @XmlType(name = "Device.ZigBee.ZDO.UserDescriptor")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UserDescriptor {

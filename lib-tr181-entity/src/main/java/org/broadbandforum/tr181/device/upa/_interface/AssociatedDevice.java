@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UPA.Interface.{i}.AssociatedDevice.{i}.")
-@XmlRootElement(name = "AssociatedDevice")
+@XmlRootElement(name = "Device.UPA.Interface.AssociatedDevice")
 @XmlType(name = "Device.UPA.Interface.AssociatedDevice")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AssociatedDevice {

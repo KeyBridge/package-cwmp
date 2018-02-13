@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.QueueManagement.Policer.{i}.")
-@XmlRootElement(name = "Policer")
+@XmlRootElement(name = "InternetGatewayDevice.QueueManagement.Policer")
 @XmlType(name = "InternetGatewayDevice.QueueManagement.Policer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Policer {

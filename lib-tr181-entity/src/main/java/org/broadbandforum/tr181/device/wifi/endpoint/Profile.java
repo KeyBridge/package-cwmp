@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.wifi.endpoint.profile.Security;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.WiFi.EndPoint.{i}.Profile.{i}.")
-@XmlRootElement(name = "Profile")
+@XmlRootElement(name = "Device.WiFi.EndPoint.Profile")
 @XmlType(name = "Device.WiFi.EndPoint.Profile")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Profile {

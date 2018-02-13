@@ -42,7 +42,7 @@ import org.broadbandforum.tr181.datatypes.IPPrefix;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Bridging.Filter.{i}.")
-@XmlRootElement(name = "Filter")
+@XmlRootElement(name = "Device.Bridging.Filter")
 @XmlType(name = "Device.Bridging.Filter")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Filter {

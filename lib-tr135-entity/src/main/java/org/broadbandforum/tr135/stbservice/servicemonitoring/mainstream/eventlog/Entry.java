@@ -34,7 +34,7 @@ import org.broadbandforum.tr135.stbservice.servicemonitoring.mainstream.eventlog
 	 * @since 1.4
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.EventLog.Entry.{i}.")
-@XmlRootElement(name = "Entry")
+@XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.EventLog.Entry")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.EventLog.Entry")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Entry {

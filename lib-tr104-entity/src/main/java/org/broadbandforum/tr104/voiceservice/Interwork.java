@@ -41,7 +41,7 @@ It is mutually exclusive with the {{object|.CallControl}} object which is used i
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Interwork.{i}.")
-@XmlRootElement(name = "Interwork")
+@XmlRootElement(name = "VoiceService.Interwork")
 @XmlType(name = "VoiceService.Interwork")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interwork {

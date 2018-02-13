@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.hpna.diagnostics.PerformanceMonitoring;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.HPNA.Diagnostics.")
-@XmlRootElement(name = "Diagnostics")
+@XmlRootElement(name = "Device.HPNA.Diagnostics")
 @XmlType(name = "Device.HPNA.Diagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Diagnostics {

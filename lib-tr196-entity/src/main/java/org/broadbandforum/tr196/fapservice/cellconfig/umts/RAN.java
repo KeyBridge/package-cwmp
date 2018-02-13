@@ -44,7 +44,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.UEInternalMeas;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.")
-@XmlRootElement(name = "RAN")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RAN {

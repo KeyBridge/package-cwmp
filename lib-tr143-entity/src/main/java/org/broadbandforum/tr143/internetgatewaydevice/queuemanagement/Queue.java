@@ -32,7 +32,7 @@ This table can contain hardware queues.  The CPE MAY refuse to allow hardware qu
 	 * @since 1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.QueueManagement.Queue.{i}.")
-@XmlRootElement(name = "Queue")
+@XmlRootElement(name = "InternetGatewayDevice.QueueManagement.Queue")
 @XmlType(name = "InternetGatewayDevice.QueueManagement.Queue")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Queue {

@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.ServiceConnect.")
-@XmlRootElement(name = "ServiceConnect")
+@XmlRootElement(name = "STBService.Components.FrontEnd.DVBT.ServiceConnect")
 @XmlType(name = "STBService.Components.FrontEnd.DVBT.ServiceConnect")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ServiceConnect {

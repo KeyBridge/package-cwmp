@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.UMTS.WCDMA.Cell.{i}.BCCH.CSGPSCSplitInfo.")
-@XmlRootElement(name = "CSGPSCSplitInfo")
+@XmlRootElement(name = "FAPService.REM.UMTS.WCDMA.Cell.BCCH.CSGPSCSplitInfo")
 @XmlType(name = "FAPService.REM.UMTS.WCDMA.Cell.BCCH.CSGPSCSplitInfo")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CSGPSCSplitInfo {

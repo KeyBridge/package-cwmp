@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.routeradvertisement.InterfaceSetting;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.RouterAdvertisement.")
-@XmlRootElement(name = "RouterAdvertisement")
+@XmlRootElement(name = "Device.RouterAdvertisement")
 @XmlType(name = "Device.RouterAdvertisement")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RouterAdvertisement {

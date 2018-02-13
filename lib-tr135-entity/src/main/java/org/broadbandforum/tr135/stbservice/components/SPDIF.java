@@ -31,7 +31,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Components.SPDIF.{i}.")
-@XmlRootElement(name = "SPDIF")
+@XmlRootElement(name = "STBService.Components.SPDIF")
 @XmlType(name = "STBService.Components.SPDIF")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SPDIF {

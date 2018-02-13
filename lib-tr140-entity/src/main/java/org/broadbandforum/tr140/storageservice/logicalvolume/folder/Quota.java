@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.LogicalVolume.{i}.Folder.{i}.Quota.")
-@XmlRootElement(name = "Quota")
+@XmlRootElement(name = "StorageService.LogicalVolume.Folder.Quota")
 @XmlType(name = "StorageService.LogicalVolume.Folder.Quota")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Quota {

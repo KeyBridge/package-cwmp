@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.TDDFrame.")
-@XmlRootElement(name = "TDDFrame")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY.TDDFrame")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.PHY.TDDFrame")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TDDFrame {

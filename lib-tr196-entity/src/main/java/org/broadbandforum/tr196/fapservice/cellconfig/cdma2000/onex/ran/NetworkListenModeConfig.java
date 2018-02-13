@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.NetworkListenModeConfig.")
-@XmlRootElement(name = "NetworkListenModeConfig")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.NetworkListenModeConfig")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.NetworkListenModeConfig")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NetworkListenModeConfig {

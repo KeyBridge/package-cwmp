@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.UMTS.WCDMA.Cell.{i}.RF.")
-@XmlRootElement(name = "RF")
+@XmlRootElement(name = "FAPService.REM.UMTS.WCDMA.Cell.RF")
 @XmlType(name = "FAPService.REM.UMTS.WCDMA.Cell.RF")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RF {

@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.fapservice.accessmgmt.cdma2000.localipaccess.hrp
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.CDMA2000.LocalIPAccess.HRPD.")
-@XmlRootElement(name = "HRPD")
+@XmlRootElement(name = "FAPService.AccessMgmt.CDMA2000.LocalIPAccess.HRPD")
 @XmlType(name = "FAPService.AccessMgmt.CDMA2000.LocalIPAccess.HRPD")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HRPD {

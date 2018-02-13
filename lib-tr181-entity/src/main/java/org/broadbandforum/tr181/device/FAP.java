@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.fap.PerfMgmt;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.")
-@XmlRootElement(name = "FAP")
+@XmlRootElement(name = "Device.FAP")
 @XmlType(name = "Device.FAP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FAP {

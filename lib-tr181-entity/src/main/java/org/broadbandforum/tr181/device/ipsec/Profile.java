@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.ipsec.profile.SentCPAttr;
 	 * @since 2.5
 	 */
 @CWMPObject(name = "Device.IPsec.Profile.{i}.")
-@XmlRootElement(name = "Profile")
+@XmlRootElement(name = "Device.IPsec.Profile")
 @XmlType(name = "Device.IPsec.Profile")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Profile {

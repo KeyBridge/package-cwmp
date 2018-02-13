@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.device.cellular.Interface;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Cellular.")
-@XmlRootElement(name = "Cellular")
+@XmlRootElement(name = "Device.Cellular")
 @XmlType(name = "Device.Cellular")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Cellular {

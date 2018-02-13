@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.device.wifi.neighboringwifidiagnostic.Result;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.WiFi.NeighboringWiFiDiagnostic.")
-@XmlRootElement(name = "NeighboringWiFiDiagnostic")
+@XmlRootElement(name = "Device.WiFi.NeighboringWiFiDiagnostic")
 @XmlType(name = "Device.WiFi.NeighboringWiFiDiagnostic")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NeighboringWiFiDiagnostic {

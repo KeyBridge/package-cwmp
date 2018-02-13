@@ -30,7 +30,7 @@ import org.broadbandforum.tr135.stbservice.capabilities.frontend.IP;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.FrontEnd.")
-@XmlRootElement(name = "FrontEnd")
+@XmlRootElement(name = "STBService.Capabilities.FrontEnd")
 @XmlType(name = "STBService.Capabilities.FrontEnd")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FrontEnd {

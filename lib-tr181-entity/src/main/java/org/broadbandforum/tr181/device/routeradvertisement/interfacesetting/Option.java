@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.RouterAdvertisement.InterfaceSetting.{i}.Option.{i}.")
-@XmlRootElement(name = "Option")
+@XmlRootElement(name = "Device.RouterAdvertisement.InterfaceSetting.Option")
 @XmlType(name = "Device.RouterAdvertisement.InterfaceSetting.Option")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Option {

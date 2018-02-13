@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.IRAT.UTRA.UTRANFDDFreq.{i}.")
-@XmlRootElement(name = "UTRANFDDFreq")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.IRAT.UTRA.UTRANFDDFreq")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.IRAT.UTRA.UTRANFDDFreq")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UTRANFDDFreq {

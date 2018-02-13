@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.homeplug.Interface;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.HomePlug.")
-@XmlRootElement(name = "HomePlug")
+@XmlRootElement(name = "Device.HomePlug")
 @XmlType(name = "Device.HomePlug")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HomePlug {

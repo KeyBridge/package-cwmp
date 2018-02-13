@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.mqtt.broker.Stats;
 	 * @since 2.10
 	 */
 @CWMPObject(name = "Device.MQTT.Broker.{i}.")
-@XmlRootElement(name = "Broker")
+@XmlRootElement(name = "Device.MQTT.Broker")
 @XmlType(name = "Device.MQTT.Broker")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Broker {

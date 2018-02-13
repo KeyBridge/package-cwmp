@@ -41,7 +41,7 @@ import org.broadbandforum.tr181.device.bulkdata.profile.Parameter;
 	 * @since 2.5
 	 */
 @CWMPObject(name = "Device.BulkData.Profile.{i}.")
-@XmlRootElement(name = "Profile")
+@XmlRootElement(name = "Device.BulkData.Profile")
 @XmlType(name = "Device.BulkData.Profile")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Profile {

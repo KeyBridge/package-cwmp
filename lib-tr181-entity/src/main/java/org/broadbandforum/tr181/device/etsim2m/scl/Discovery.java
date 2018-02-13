@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.Discovery.")
-@XmlRootElement(name = "Discovery")
+@XmlRootElement(name = "Device.ETSIM2M.SCL.Discovery")
 @XmlType(name = "Device.ETSIM2M.SCL.Discovery")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Discovery {

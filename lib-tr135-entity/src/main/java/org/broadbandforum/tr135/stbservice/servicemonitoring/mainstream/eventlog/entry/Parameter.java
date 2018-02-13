@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.4
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.EventLog.Entry.{i}.Parameter.{i}.")
-@XmlRootElement(name = "Parameter")
+@XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.EventLog.Entry.Parameter")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.EventLog.Entry.Parameter")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Parameter {

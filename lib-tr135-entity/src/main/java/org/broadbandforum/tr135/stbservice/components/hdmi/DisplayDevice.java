@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Components.HDMI.{i}.DisplayDevice.")
-@XmlRootElement(name = "DisplayDevice")
+@XmlRootElement(name = "STBService.Components.HDMI.DisplayDevice")
 @XmlType(name = "STBService.Components.HDMI.DisplayDevice")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DisplayDevice {

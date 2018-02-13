@@ -32,7 +32,7 @@ import org.broadbandforum.tr104.voiceservice.terminal.audio.VoiceProcessing;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Terminal.{i}.Audio.{i}.")
-@XmlRootElement(name = "Audio")
+@XmlRootElement(name = "VoiceService.Terminal.Audio")
 @XmlType(name = "VoiceService.Terminal.Audio")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Audio {

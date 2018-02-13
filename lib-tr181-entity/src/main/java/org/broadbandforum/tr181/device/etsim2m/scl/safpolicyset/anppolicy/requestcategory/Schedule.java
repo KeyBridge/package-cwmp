@@ -43,7 +43,7 @@ import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.anppolicy.reques
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.ANPPolicy.{i}.RequestCategory.{i}.Schedule.{i}.")
-@XmlRootElement(name = "Schedule")
+@XmlRootElement(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.RequestCategory.Schedule")
 @XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.RequestCategory.Schedule")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Schedule {

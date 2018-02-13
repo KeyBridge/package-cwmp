@@ -38,7 +38,7 @@ import org.broadbandforum.tr181.device.bridging.bridge.port.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Bridging.Bridge.{i}.Port.{i}.")
-@XmlRootElement(name = "Port")
+@XmlRootElement(name = "Device.Bridging.Bridge.Port")
 @XmlType(name = "Device.Bridging.Bridge.Port")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Port {

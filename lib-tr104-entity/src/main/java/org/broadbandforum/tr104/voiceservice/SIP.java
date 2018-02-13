@@ -36,7 +36,7 @@ import org.broadbandforum.tr104.voiceservice.sip.Registrar;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.SIP.")
-@XmlRootElement(name = "SIP")
+@XmlRootElement(name = "VoiceService.SIP")
 @XmlType(name = "VoiceService.SIP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SIP {

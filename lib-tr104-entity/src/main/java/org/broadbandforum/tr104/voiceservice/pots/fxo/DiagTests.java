@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.POTS.FXO.{i}.DiagTests.")
-@XmlRootElement(name = "DiagTests")
+@XmlRootElement(name = "VoiceService.POTS.FXO.DiagTests")
 @XmlType(name = "VoiceService.POTS.FXO.DiagTests")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DiagTests {

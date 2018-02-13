@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.ipv6rd.InterfaceSetting;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.IPv6rd.")
-@XmlRootElement(name = "IPv6rd")
+@XmlRootElement(name = "Device.IPv6rd")
 @XmlType(name = "Device.IPv6rd")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPv6rd {

@@ -31,7 +31,7 @@ import org.broadbandforum.tr069.internetgatewaydevice.landevice.lanethernetinter
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANEthernetInterfaceConfig.{i}.")
-@XmlRootElement(name = "LANEthernetInterfaceConfig")
+@XmlRootElement(name = "InternetGatewayDevice.LANDevice.LANEthernetInterfaceConfig")
 @XmlType(name = "InternetGatewayDevice.LANDevice.LANEthernetInterfaceConfig")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LANEthernetInterfaceConfig {

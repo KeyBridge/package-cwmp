@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.neighbordiscovery.InterfaceSetting;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.NeighborDiscovery.")
-@XmlRootElement(name = "NeighborDiscovery")
+@XmlRootElement(name = "Device.NeighborDiscovery")
 @XmlType(name = "Device.NeighborDiscovery")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NeighborDiscovery {

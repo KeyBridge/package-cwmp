@@ -31,7 +31,7 @@ The CPE MUST reset the DECT base's Stats parameters (unless otherwise stated in 
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.DECT.Base.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "VoiceService.DECT.Base.Stats")
 @XmlType(name = "VoiceService.DECT.Base.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

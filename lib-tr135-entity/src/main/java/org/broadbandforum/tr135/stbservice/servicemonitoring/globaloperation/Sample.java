@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.GlobalOperation.Sample.")
-@XmlRootElement(name = "Sample")
+@XmlRootElement(name = "STBService.ServiceMonitoring.GlobalOperation.Sample")
 @XmlType(name = "STBService.ServiceMonitoring.GlobalOperation.Sample")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Sample {

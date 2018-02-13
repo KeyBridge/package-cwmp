@@ -34,7 +34,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "Device.ManagementServer.DUStateChangeComplPolicy.")
-@XmlRootElement(name = "DUStateChangeComplPolicy")
+@XmlRootElement(name = "Device.ManagementServer.DUStateChangeComplPolicy")
 @XmlType(name = "Device.ManagementServer.DUStateChangeComplPolicy")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DUStateChangeComplPolicy {

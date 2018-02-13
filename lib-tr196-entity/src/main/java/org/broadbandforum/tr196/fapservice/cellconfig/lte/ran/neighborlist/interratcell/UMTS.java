@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborList.InterRATCell.UMTS.{i}.")
-@XmlRootElement(name = "UMTS")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborList.InterRATCell.UMTS")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.NeighborList.InterRATCell.UMTS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UMTS {

@@ -34,7 +34,7 @@ import org.broadbandforum.tr262.fap.applicationplatform.control.TerminalLocation
 	 * @since 1.0
 	 */
 @CWMPObject(name = "FAP.ApplicationPlatform.Control.")
-@XmlRootElement(name = "Control")
+@XmlRootElement(name = "FAP.ApplicationPlatform.Control")
 @XmlType(name = "FAP.ApplicationPlatform.Control")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Control {

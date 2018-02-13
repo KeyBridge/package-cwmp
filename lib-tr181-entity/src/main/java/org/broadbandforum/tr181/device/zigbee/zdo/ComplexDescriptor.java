@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.ComplexDescriptor.")
-@XmlRootElement(name = "ComplexDescriptor")
+@XmlRootElement(name = "Device.ZigBee.ZDO.ComplexDescriptor")
 @XmlType(name = "Device.ZigBee.ZDO.ComplexDescriptor")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ComplexDescriptor {

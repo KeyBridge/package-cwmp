@@ -30,7 +30,7 @@ IPv6 example: 2001:edff:fe6a:f76::/64
 
 Unspecified or inapplicable IP prefixes MUST be represented as empty strings unless otherwise specified by the parameter definition.
 	 */
-@XmlRootElement(name = "IPPrefix")
+@XmlRootElement(name = "org.broadbandforum.tr262.datatypes.IPPrefix")
 @XmlType(name = "org.broadbandforum.tr262.datatypes.IPPrefix")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPPrefix {

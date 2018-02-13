@@ -42,7 +42,7 @@ import org.broadbandforum.tr181.device.firewall.Level;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Firewall.")
-@XmlRootElement(name = "Firewall")
+@XmlRootElement(name = "Device.Firewall")
 @XmlType(name = "Device.Firewall")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Firewall {

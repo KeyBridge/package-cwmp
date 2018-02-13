@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.POTS.")
-@XmlRootElement(name = "POTS")
+@XmlRootElement(name = "VoiceService.Capabilities.POTS")
 @XmlType(name = "VoiceService.Capabilities.POTS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class POTS {

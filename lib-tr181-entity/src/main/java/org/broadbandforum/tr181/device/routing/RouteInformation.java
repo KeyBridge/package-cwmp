@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.routing.routeinformation.InterfaceSetting
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.Routing.RouteInformation.")
-@XmlRootElement(name = "RouteInformation")
+@XmlRootElement(name = "Device.Routing.RouteInformation")
 @XmlType(name = "Device.Routing.RouteInformation")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RouteInformation {

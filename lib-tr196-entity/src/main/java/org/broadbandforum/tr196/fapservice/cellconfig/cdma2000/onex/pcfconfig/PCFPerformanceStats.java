@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.PCFConfig.PCFPerformanceStats.")
-@XmlRootElement(name = "PCFPerformanceStats")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.PCFConfig.PCFPerformanceStats")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.PCFConfig.PCFPerformanceStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PCFPerformanceStats {

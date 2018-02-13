@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.AccessAuthConfig.")
-@XmlRootElement(name = "AccessAuthConfig")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD.AccessAuthConfig")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.HRPD.AccessAuthConfig")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AccessAuthConfig {

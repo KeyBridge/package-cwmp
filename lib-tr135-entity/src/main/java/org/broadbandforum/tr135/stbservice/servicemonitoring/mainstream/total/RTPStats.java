@@ -31,7 +31,7 @@ If no EC is applied the ''BeforeEC'' statistics provide the same values as the c
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Total.RTPStats.")
-@XmlRootElement(name = "RTPStats")
+@XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Total.RTPStats")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.Total.RTPStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RTPStats {

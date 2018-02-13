@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.dns.relay.Forwarding;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DNS.Relay.")
-@XmlRootElement(name = "Relay")
+@XmlRootElement(name = "Device.DNS.Relay")
 @XmlType(name = "Device.DNS.Relay")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Relay {

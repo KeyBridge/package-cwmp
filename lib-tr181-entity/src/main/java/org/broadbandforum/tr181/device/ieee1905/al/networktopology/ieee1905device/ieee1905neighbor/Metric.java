@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.StatsCounter32;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.IEEE1905Neighbor.{i}.Metric.{i}.")
-@XmlRootElement(name = "Metric")
+@XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IEEE1905Neighbor.Metric")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IEEE1905Neighbor.Metric")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Metric {

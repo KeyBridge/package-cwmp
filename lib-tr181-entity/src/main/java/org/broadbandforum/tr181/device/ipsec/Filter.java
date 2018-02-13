@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 	 * @since 2.5
 	 */
 @CWMPObject(name = "Device.IPsec.Filter.{i}.")
-@XmlRootElement(name = "Filter")
+@XmlRootElement(name = "Device.IPsec.Filter")
 @XmlType(name = "Device.IPsec.Filter")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Filter {

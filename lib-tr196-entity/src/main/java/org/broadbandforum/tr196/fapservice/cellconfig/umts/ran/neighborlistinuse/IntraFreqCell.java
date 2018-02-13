@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborListInUse.IntraFreqCell.{i}.")
-@XmlRootElement(name = "IntraFreqCell")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.NeighborListInUse.IntraFreqCell")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.NeighborListInUse.IntraFreqCell")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IntraFreqCell {

@@ -38,7 +38,7 @@ import org.broadbandforum.tr181.device.homeplug._interface.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.HomePlug.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.HomePlug.Interface")
 @XmlType(name = "Device.HomePlug.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

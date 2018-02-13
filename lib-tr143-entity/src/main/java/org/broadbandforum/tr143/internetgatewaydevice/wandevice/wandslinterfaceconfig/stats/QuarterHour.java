@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLInterfaceConfig.Stats.QuarterHour.")
-@XmlRootElement(name = "QuarterHour")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig.Stats.QuarterHour")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig.Stats.QuarterHour")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class QuarterHour {

@@ -31,7 +31,7 @@ import org.broadbandforum.tr140.storageservice.ftpserver.AnonymousUser;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.FTPServer.")
-@XmlRootElement(name = "FTPServer")
+@XmlRootElement(name = "StorageService.FTPServer")
 @XmlType(name = "StorageService.FTPServer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FTPServer {

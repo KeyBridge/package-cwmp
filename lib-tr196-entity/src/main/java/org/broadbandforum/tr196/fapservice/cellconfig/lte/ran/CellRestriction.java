@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.CellRestriction.")
-@XmlRootElement(name = "CellRestriction")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.CellRestriction")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.CellRestriction")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CellRestriction {

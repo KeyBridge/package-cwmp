@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.PPP.Interface.{i}.PPPoA.")
-@XmlRootElement(name = "PPPoA")
+@XmlRootElement(name = "Device.PPP.Interface.PPPoA")
 @XmlType(name = "Device.PPP.Interface.PPPoA")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PPPoA {

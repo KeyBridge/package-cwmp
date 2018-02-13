@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "Device.DeviceInfo.VendorLogFile.{i}.")
-@XmlRootElement(name = "VendorLogFile")
+@XmlRootElement(name = "Device.DeviceInfo.VendorLogFile")
 @XmlType(name = "Device.DeviceInfo.VendorLogFile")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VendorLogFile {

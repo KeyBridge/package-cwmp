@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.Option.{i}.")
-@XmlRootElement(name = "Option")
+@XmlRootElement(name = "Device.DHCPv6.Server.Pool.Option")
 @XmlType(name = "Device.DHCPv6.Server.Pool.Option")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Option {

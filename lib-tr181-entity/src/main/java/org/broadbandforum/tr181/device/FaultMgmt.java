@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.faultmgmt.SupportedAlarm;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FaultMgmt.")
-@XmlRootElement(name = "FaultMgmt")
+@XmlRootElement(name = "Device.FaultMgmt")
 @XmlType(name = "Device.FaultMgmt")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FaultMgmt {

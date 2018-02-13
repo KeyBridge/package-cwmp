@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.UMTS.SelfConfig.")
-@XmlRootElement(name = "SelfConfig")
+@XmlRootElement(name = "FAPService.FAPControl.UMTS.SelfConfig")
 @XmlType(name = "FAPService.FAPControl.UMTS.SelfConfig")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SelfConfig {

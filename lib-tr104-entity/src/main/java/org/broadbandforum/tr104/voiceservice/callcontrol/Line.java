@@ -34,7 +34,7 @@ Support for adding and removing lines is conditional on whether the CPE supports
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Line.{i}.")
-@XmlRootElement(name = "Line")
+@XmlRootElement(name = "VoiceService.CallControl.Line")
 @XmlType(name = "VoiceService.CallControl.Line")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Line {

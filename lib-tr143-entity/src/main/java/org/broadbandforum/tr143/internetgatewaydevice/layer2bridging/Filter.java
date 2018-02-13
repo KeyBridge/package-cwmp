@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.Filter.{i}.")
-@XmlRootElement(name = "Filter")
+@XmlRootElement(name = "InternetGatewayDevice.Layer2Bridging.Filter")
 @XmlType(name = "InternetGatewayDevice.Layer2Bridging.Filter")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Filter {

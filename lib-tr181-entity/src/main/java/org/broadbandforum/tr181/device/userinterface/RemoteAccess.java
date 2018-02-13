@@ -37,7 +37,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UserInterface.RemoteAccess.")
-@XmlRootElement(name = "RemoteAccess")
+@XmlRootElement(name = "Device.UserInterface.RemoteAccess")
 @XmlType(name = "Device.UserInterface.RemoteAccess")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RemoteAccess {

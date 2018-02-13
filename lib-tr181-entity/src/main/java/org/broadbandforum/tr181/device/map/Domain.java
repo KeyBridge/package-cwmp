@@ -47,7 +47,7 @@ import org.broadbandforum.tr181.device.map.domain.Rule;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.MAP.Domain.{i}.")
-@XmlRootElement(name = "Domain")
+@XmlRootElement(name = "Device.MAP.Domain")
 @XmlType(name = "Device.MAP.Domain")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Domain {

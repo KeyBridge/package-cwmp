@@ -34,7 +34,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.AVPlayers.AVPlayer.{i}.")
-@XmlRootElement(name = "AVPlayer")
+@XmlRootElement(name = "STBService.AVPlayers.AVPlayer")
 @XmlType(name = "STBService.AVPlayers.AVPlayer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AVPlayer {

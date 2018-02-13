@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Interface.{i}.SCInfo.")
-@XmlRootElement(name = "SCInfo")
+@XmlRootElement(name = "Device.Ghn.Interface.SCInfo")
 @XmlType(name = "Device.Ghn.Interface.SCInfo")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SCInfo {

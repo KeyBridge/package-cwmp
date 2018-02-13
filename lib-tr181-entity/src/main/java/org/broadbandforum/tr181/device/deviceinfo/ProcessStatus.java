@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.device.deviceinfo.processstatus.Process;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.ProcessStatus.")
-@XmlRootElement(name = "ProcessStatus")
+@XmlRootElement(name = "Device.DeviceInfo.ProcessStatus")
 @XmlType(name = "Device.DeviceInfo.ProcessStatus")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ProcessStatus {

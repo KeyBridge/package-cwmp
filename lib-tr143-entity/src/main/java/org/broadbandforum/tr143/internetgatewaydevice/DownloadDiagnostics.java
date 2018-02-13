@@ -33,7 +33,7 @@ Files received in the DownloadDiagnostics do not require file storage on the CPE
 	 * @since 1.3
 	 */
 @CWMPObject(name = "InternetGatewayDevice.DownloadDiagnostics.")
-@XmlRootElement(name = "DownloadDiagnostics")
+@XmlRootElement(name = "InternetGatewayDevice.DownloadDiagnostics")
 @XmlType(name = "InternetGatewayDevice.DownloadDiagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DownloadDiagnostics {

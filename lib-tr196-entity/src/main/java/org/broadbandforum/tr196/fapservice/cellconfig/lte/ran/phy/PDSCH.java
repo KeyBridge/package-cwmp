@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.PDSCH.")
-@XmlRootElement(name = "PDSCH")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY.PDSCH")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.PHY.PDSCH")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PDSCH {

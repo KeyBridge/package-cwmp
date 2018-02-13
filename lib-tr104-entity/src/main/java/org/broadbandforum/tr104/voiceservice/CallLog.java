@@ -40,7 +40,7 @@ An entry is created each time a call is terminated. If the number of {{object|.C
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.")
-@XmlRootElement(name = "CallLog")
+@XmlRootElement(name = "VoiceService.CallLog")
 @XmlType(name = "VoiceService.CallLog")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CallLog {

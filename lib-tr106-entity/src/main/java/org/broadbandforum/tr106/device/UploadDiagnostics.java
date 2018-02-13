@@ -33,7 +33,7 @@ Files sent by the UploadDiagnostics do not require file storage on the CPE devic
 	 * @since 1.2
 	 */
 @CWMPObject(name = "Device.UploadDiagnostics.")
-@XmlRootElement(name = "UploadDiagnostics")
+@XmlRootElement(name = "Device.UploadDiagnostics")
 @XmlType(name = "Device.UploadDiagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UploadDiagnostics {

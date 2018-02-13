@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IEEE8021x.Supplicant.{i}.EAPTLS.")
-@XmlRootElement(name = "EAPTLS")
+@XmlRootElement(name = "Device.IEEE8021x.Supplicant.EAPTLS")
 @XmlType(name = "Device.IEEE8021x.Supplicant.EAPTLS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EAPTLS {

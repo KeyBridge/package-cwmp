@@ -34,7 +34,7 @@ Whenever the CPE successfully downloads a configuration file as a result of the 
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile.{i}.")
-@XmlRootElement(name = "VendorConfigFile")
+@XmlRootElement(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile")
 @XmlType(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VendorConfigFile {

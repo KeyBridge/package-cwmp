@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.xmpp.Connection;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.XMPP.")
-@XmlRootElement(name = "XMPP")
+@XmlRootElement(name = "Device.XMPP")
 @XmlType(name = "Device.XMPP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class XMPP {

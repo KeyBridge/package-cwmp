@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.IPv6Address;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.DHCPv6.Client.{i}.Server.{i}.")
-@XmlRootElement(name = "Server")
+@XmlRootElement(name = "Device.DHCPv6.Client.Server")
 @XmlType(name = "Device.DHCPv6.Client.Server")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Server {

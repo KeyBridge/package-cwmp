@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.ethernet.link.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Ethernet.Link.{i}.")
-@XmlRootElement(name = "Link")
+@XmlRootElement(name = "Device.Ethernet.Link")
 @XmlType(name = "Device.Ethernet.Link")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Link {

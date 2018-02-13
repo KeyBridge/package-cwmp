@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.CDMA2000.MemberDetail.{i}.")
-@XmlRootElement(name = "MemberDetail")
+@XmlRootElement(name = "FAPService.AccessMgmt.CDMA2000.MemberDetail")
 @XmlType(name = "FAPService.AccessMgmt.CDMA2000.MemberDetail")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MemberDetail {

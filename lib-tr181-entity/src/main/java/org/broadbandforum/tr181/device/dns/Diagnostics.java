@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.dns.diagnostics.NSLookupDiagnostics;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DNS.Diagnostics.")
-@XmlRootElement(name = "Diagnostics")
+@XmlRootElement(name = "Device.DNS.Diagnostics")
 @XmlType(name = "Device.DNS.Diagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Diagnostics {

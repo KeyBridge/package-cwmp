@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "FAP.ApplicationPlatform.Control.TerminalLocation.")
-@XmlRootElement(name = "TerminalLocation")
+@XmlRootElement(name = "FAP.ApplicationPlatform.Control.TerminalLocation")
 @XmlType(name = "FAP.ApplicationPlatform.Control.TerminalLocation")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TerminalLocation {

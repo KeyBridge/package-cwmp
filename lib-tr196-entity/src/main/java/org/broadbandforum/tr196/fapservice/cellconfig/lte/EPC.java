@@ -37,7 +37,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.epc.QoS;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EPC.")
-@XmlRootElement(name = "EPC")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.EPC")
 @XmlType(name = "FAPService.CellConfig.LTE.EPC")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EPC {

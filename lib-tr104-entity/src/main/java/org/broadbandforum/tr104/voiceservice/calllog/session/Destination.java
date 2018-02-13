@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.voiceservice.calllog.session.destination.VoiceQu
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.Destination.")
-@XmlRootElement(name = "Destination")
+@XmlRootElement(name = "VoiceService.CallLog.Session.Destination")
 @XmlType(name = "VoiceService.CallLog.Session.Destination")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Destination {

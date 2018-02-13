@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.BondingGroup.{i}.Stats.CurrentDay.")
-@XmlRootElement(name = "CurrentDay")
+@XmlRootElement(name = "Device.DSL.BondingGroup.Stats.CurrentDay")
 @XmlType(name = "Device.DSL.BondingGroup.Stats.CurrentDay")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CurrentDay {

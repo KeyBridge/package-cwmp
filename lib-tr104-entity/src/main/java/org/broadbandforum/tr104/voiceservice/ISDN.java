@@ -33,7 +33,7 @@ import org.broadbandforum.tr104.voiceservice.isdn.PRI;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.ISDN.")
-@XmlRootElement(name = "ISDN")
+@XmlRootElement(name = "VoiceService.ISDN")
 @XmlType(name = "VoiceService.ISDN")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ISDN {

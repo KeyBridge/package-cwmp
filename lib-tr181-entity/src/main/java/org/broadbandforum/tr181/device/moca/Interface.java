@@ -40,7 +40,7 @@ import org.broadbandforum.tr181.device.moca._interface.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.MoCA.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.MoCA.Interface")
 @XmlType(name = "Device.MoCA.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

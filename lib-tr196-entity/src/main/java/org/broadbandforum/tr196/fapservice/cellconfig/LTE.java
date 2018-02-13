@@ -36,7 +36,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.Tunnel;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.")
-@XmlRootElement(name = "LTE")
+@XmlRootElement(name = "FAPService.CellConfig.LTE")
 @XmlType(name = "FAPService.CellConfig.LTE")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LTE {

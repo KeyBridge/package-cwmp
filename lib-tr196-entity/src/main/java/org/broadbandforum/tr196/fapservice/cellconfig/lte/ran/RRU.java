@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.rru.Stats;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.RRU.")
-@XmlRootElement(name = "RRU")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.RRU")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.RRU")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RRU {

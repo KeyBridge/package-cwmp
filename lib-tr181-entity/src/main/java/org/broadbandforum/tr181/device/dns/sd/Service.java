@@ -57,7 +57,7 @@ import org.broadbandforum.tr181.device.dns.sd.service.TextRecord;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.DNS.SD.Service.{i}.")
-@XmlRootElement(name = "Service")
+@XmlRootElement(name = "Device.DNS.SD.Service")
 @XmlType(name = "Device.DNS.SD.Service")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Service {

@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.device.zigbee.ZDO;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.")
-@XmlRootElement(name = "ZigBee")
+@XmlRootElement(name = "Device.ZigBee")
 @XmlType(name = "Device.ZigBee")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ZigBee {

@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IP.ActivePort.{i}.")
-@XmlRootElement(name = "ActivePort")
+@XmlRootElement(name = "Device.IP.ActivePort")
 @XmlType(name = "Device.IP.ActivePort")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ActivePort {

@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.WiFi.EndPoint.{i}.Profile.{i}.Security.")
-@XmlRootElement(name = "Security")
+@XmlRootElement(name = "Device.WiFi.EndPoint.Profile.Security")
 @XmlType(name = "Device.WiFi.EndPoint.Profile.Security")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Security {

@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.GPS.AGPSServerConfig.")
-@XmlRootElement(name = "AGPSServerConfig")
+@XmlRootElement(name = "Device.FAP.GPS.AGPSServerConfig")
 @XmlType(name = "Device.FAP.GPS.AGPSServerConfig")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AGPSServerConfig {

@@ -49,7 +49,7 @@ import org.broadbandforum.tr181.device.ip._interface.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IP.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.IP.Interface")
 @XmlType(name = "Device.IP.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.OneX.ActiveHandinMeasurement.")
-@XmlRootElement(name = "ActiveHandinMeasurement")
+@XmlRootElement(name = "FAPService.FAPControl.CDMA2000.OneX.ActiveHandinMeasurement")
 @XmlType(name = "FAPService.FAPControl.CDMA2000.OneX.ActiveHandinMeasurement")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ActiveHandinMeasurement {

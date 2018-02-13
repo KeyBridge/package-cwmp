@@ -35,7 +35,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.ManagementServer.AutonomousTransferCompletePolicy.")
-@XmlRootElement(name = "AutonomousTransferCompletePolicy")
+@XmlRootElement(name = "Device.ManagementServer.AutonomousTransferCompletePolicy")
 @XmlType(name = "Device.ManagementServer.AutonomousTransferCompletePolicy")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AutonomousTransferCompletePolicy {

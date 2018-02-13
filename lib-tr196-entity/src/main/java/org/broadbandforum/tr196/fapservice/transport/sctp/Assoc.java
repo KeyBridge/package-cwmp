@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.SCTP.Assoc.{i}.")
-@XmlRootElement(name = "Assoc")
+@XmlRootElement(name = "FAPService.Transport.SCTP.Assoc")
 @XmlType(name = "FAPService.Transport.SCTP.Assoc")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Assoc {

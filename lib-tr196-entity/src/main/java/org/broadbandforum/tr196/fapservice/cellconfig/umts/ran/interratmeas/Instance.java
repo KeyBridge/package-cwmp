@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.InterRATMeas.Instance.{i}.")
-@XmlRootElement(name = "Instance")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.InterRATMeas.Instance")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.InterRATMeas.Instance")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Instance {

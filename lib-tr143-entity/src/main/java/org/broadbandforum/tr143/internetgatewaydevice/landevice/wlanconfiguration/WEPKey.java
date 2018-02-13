@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}.WEPKey.{i}.")
-@XmlRootElement(name = "WEPKey")
+@XmlRootElement(name = "InternetGatewayDevice.LANDevice.WLANConfiguration.WEPKey")
 @XmlType(name = "InternetGatewayDevice.LANDevice.WLANConfiguration.WEPKey")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class WEPKey {

@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell.GSM.{i}.")
-@XmlRootElement(name = "GSM")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell.GSM")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell.GSM")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GSM {

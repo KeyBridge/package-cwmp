@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.smartcardreaders.SmartCardReader;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.SmartCardReaders.")
-@XmlRootElement(name = "SmartCardReaders")
+@XmlRootElement(name = "Device.SmartCardReaders")
 @XmlType(name = "Device.SmartCardReaders")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SmartCardReaders {

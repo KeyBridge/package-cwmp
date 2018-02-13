@@ -36,7 +36,7 @@ Parameters are taken from the DGTVi D-Book {{bibref|D-Book}}.
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.")
-@XmlRootElement(name = "DVBT")
+@XmlRootElement(name = "STBService.Components.FrontEnd.DVBT")
 @XmlType(name = "STBService.Components.FrontEnd.DVBT")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DVBT {

@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.device.periodicstatistics.SampleSet;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.PeriodicStatistics.")
-@XmlRootElement(name = "PeriodicStatistics")
+@XmlRootElement(name = "Device.PeriodicStatistics")
 @XmlType(name = "Device.PeriodicStatistics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PeriodicStatistics {

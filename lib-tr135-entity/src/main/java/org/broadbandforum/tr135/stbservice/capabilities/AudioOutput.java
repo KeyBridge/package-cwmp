@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.AudioOutput.")
-@XmlRootElement(name = "AudioOutput")
+@XmlRootElement(name = "STBService.Capabilities.AudioOutput")
 @XmlType(name = "STBService.Capabilities.AudioOutput")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AudioOutput {

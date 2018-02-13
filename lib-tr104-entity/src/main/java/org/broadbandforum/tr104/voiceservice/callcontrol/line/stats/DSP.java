@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Line.{i}.Stats.DSP.")
-@XmlRootElement(name = "DSP")
+@XmlRootElement(name = "VoiceService.CallControl.Line.Stats.DSP")
 @XmlType(name = "VoiceService.CallControl.Line.Stats.DSP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DSP {

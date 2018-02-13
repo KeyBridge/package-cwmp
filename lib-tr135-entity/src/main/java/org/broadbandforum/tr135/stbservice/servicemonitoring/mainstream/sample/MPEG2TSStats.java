@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Sample.MPEG2TSStats.")
-@XmlRootElement(name = "MPEG2TSStats")
+@XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Sample.MPEG2TSStats")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.Sample.MPEG2TSStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MPEG2TSStats {

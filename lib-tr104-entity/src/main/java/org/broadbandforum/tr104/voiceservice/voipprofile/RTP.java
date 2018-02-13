@@ -33,7 +33,7 @@ import org.broadbandforum.tr104.voiceservice.voipprofile.rtp.SRTP;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.RTP.")
-@XmlRootElement(name = "RTP")
+@XmlRootElement(name = "VoiceService.VoIPProfile.RTP")
 @XmlType(name = "VoiceService.VoIPProfile.RTP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RTP {

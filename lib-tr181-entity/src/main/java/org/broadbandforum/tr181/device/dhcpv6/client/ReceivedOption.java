@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.DHCPv6.Client.{i}.ReceivedOption.{i}.")
-@XmlRootElement(name = "ReceivedOption")
+@XmlRootElement(name = "Device.DHCPv6.Client.ReceivedOption")
 @XmlType(name = "Device.DHCPv6.Client.ReceivedOption")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ReceivedOption {

@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.managementserver.downloadavailability.Que
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.ManagementServer.DownloadAvailability.")
-@XmlRootElement(name = "DownloadAvailability")
+@XmlRootElement(name = "Device.ManagementServer.DownloadAvailability")
 @XmlType(name = "Device.ManagementServer.DownloadAvailability")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DownloadAvailability {

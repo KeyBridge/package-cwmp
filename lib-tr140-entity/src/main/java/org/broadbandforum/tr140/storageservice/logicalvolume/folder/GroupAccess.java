@@ -31,7 +31,7 @@ import org.broadbandforum.tr140.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.LogicalVolume.{i}.Folder.{i}.GroupAccess.{i}.")
-@XmlRootElement(name = "GroupAccess")
+@XmlRootElement(name = "StorageService.LogicalVolume.Folder.GroupAccess")
 @XmlType(name = "StorageService.LogicalVolume.Folder.GroupAccess")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GroupAccess {

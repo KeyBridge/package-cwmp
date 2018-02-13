@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.ApplicationPlatform.Capabilities.")
-@XmlRootElement(name = "Capabilities")
+@XmlRootElement(name = "Device.FAP.ApplicationPlatform.Capabilities")
 @XmlType(name = "Device.FAP.ApplicationPlatform.Capabilities")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Capabilities {

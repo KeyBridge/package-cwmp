@@ -33,7 +33,7 @@ import org.broadbandforum.tr196.fapservice.rem.lte.cell.bcch.PLMNList;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.LTE.Cell.{i}.BCCH.")
-@XmlRootElement(name = "BCCH")
+@XmlRootElement(name = "FAPService.REM.LTE.Cell.BCCH")
 @XmlType(name = "FAPService.REM.LTE.Cell.BCCH")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BCCH {

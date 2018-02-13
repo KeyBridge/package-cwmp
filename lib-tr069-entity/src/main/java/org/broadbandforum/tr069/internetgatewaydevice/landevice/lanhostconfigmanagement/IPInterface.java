@@ -30,7 +30,7 @@ import org.broadbandforum.tr069.datatypes.IPAddress;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANHostConfigManagement.IPInterface.{i}.")
-@XmlRootElement(name = "IPInterface")
+@XmlRootElement(name = "InternetGatewayDevice.LANDevice.LANHostConfigManagement.IPInterface")
 @XmlType(name = "InternetGatewayDevice.LANDevice.LANHostConfigManagement.IPInterface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPInterface {

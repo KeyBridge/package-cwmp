@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell.CDMA2000.{i}.")
-@XmlRootElement(name = "CDMA2000")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell.CDMA2000")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell.CDMA2000")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CDMA2000 {

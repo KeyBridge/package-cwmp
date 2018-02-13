@@ -31,7 +31,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.VideoDecoder.{i}.")
-@XmlRootElement(name = "VideoDecoder")
+@XmlRootElement(name = "STBService.Components.VideoDecoder")
 @XmlType(name = "STBService.Components.VideoDecoder")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VideoDecoder {

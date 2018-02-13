@@ -38,7 +38,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FaultMgmt.ExpeditedEvent.{i}.")
-@XmlRootElement(name = "ExpeditedEvent")
+@XmlRootElement(name = "Device.FaultMgmt.ExpeditedEvent")
 @XmlType(name = "Device.FaultMgmt.ExpeditedEvent")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ExpeditedEvent {

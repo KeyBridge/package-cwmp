@@ -40,7 +40,7 @@ import org.broadbandforum.tr135.stbservice.components.frontend.ip.ServiceConnect
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.")
-@XmlRootElement(name = "IP")
+@XmlRootElement(name = "STBService.Components.FrontEnd.IP")
 @XmlType(name = "STBService.Components.FrontEnd.IP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IP {

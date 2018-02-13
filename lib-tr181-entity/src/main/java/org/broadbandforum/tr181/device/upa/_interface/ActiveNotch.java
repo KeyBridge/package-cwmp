@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UPA.Interface.{i}.ActiveNotch.{i}.")
-@XmlRootElement(name = "ActiveNotch")
+@XmlRootElement(name = "Device.UPA.Interface.ActiveNotch")
 @XmlType(name = "Device.UPA.Interface.ActiveNotch")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ActiveNotch {

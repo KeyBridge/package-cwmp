@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.bridging.bridge.VLANPort;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Bridging.Bridge.{i}.")
-@XmlRootElement(name = "Bridge")
+@XmlRootElement(name = "Device.Bridging.Bridge")
 @XmlType(name = "Device.Bridging.Bridge")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Bridge {

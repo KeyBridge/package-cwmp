@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.FrontEnd.IP.")
-@XmlRootElement(name = "IP")
+@XmlRootElement(name = "STBService.Capabilities.FrontEnd.IP")
 @XmlType(name = "STBService.Capabilities.FrontEnd.IP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IP {

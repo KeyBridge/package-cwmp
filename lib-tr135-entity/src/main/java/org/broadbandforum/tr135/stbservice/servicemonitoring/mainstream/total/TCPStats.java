@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Total.TCPStats.")
-@XmlRootElement(name = "TCPStats")
+@XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Total.TCPStats")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.Total.TCPStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TCPStats {

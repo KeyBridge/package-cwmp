@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborList.LTECell.{i}.")
-@XmlRootElement(name = "LTECell")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborList.LTECell")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.NeighborList.LTECell")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LTECell {

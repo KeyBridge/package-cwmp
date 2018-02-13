@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.3
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Capabilities.PerformanceDiagnostic.")
-@XmlRootElement(name = "PerformanceDiagnostic")
+@XmlRootElement(name = "InternetGatewayDevice.Capabilities.PerformanceDiagnostic")
 @XmlType(name = "InternetGatewayDevice.Capabilities.PerformanceDiagnostic")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PerformanceDiagnostic {

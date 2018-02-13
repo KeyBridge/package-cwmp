@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EPC.PLMNList.{i}.")
-@XmlRootElement(name = "PLMNList")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.EPC.PLMNList")
 @XmlType(name = "FAPService.CellConfig.LTE.EPC.PLMNList")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PLMNList {

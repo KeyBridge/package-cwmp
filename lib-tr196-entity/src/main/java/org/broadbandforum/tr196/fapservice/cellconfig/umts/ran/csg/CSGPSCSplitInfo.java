@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.CSG.CSGPSCSplitInfo.")
-@XmlRootElement(name = "CSGPSCSplitInfo")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.CSG.CSGPSCSplitInfo")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.CSG.CSGPSCSplitInfo")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CSGPSCSplitInfo {

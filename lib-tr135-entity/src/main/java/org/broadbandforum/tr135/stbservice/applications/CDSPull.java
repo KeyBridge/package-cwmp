@@ -33,7 +33,7 @@ import org.broadbandforum.tr135.stbservice.applications.cdspull.ContentItem;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Applications.CDSPull.")
-@XmlRootElement(name = "CDSPull")
+@XmlRootElement(name = "STBService.Applications.CDSPull")
 @XmlType(name = "STBService.Applications.CDSPull")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CDSPull {

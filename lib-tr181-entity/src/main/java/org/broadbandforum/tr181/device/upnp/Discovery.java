@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.upnp.discovery.Service;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UPnP.Discovery.")
-@XmlRootElement(name = "Discovery")
+@XmlRootElement(name = "Device.UPnP.Discovery")
 @XmlType(name = "Device.UPnP.Discovery")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Discovery {

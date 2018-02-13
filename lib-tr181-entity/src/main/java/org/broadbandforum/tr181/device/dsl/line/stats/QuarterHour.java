@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.Line.{i}.Stats.QuarterHour.")
-@XmlRootElement(name = "QuarterHour")
+@XmlRootElement(name = "Device.DSL.Line.Stats.QuarterHour")
 @XmlType(name = "Device.DSL.Line.Stats.QuarterHour")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class QuarterHour {

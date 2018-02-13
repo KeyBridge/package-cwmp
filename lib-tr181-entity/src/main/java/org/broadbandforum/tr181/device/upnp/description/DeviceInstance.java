@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.datatypes.UUID;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.UPnP.Description.DeviceInstance.{i}.")
-@XmlRootElement(name = "DeviceInstance")
+@XmlRootElement(name = "Device.UPnP.Description.DeviceInstance")
 @XmlType(name = "Device.UPnP.Description.DeviceInstance")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DeviceInstance {

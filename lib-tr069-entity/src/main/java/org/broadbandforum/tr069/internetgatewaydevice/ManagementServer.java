@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.ManagementServer.")
-@XmlRootElement(name = "ManagementServer")
+@XmlRootElement(name = "InternetGatewayDevice.ManagementServer")
 @XmlType(name = "InternetGatewayDevice.ManagementServer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ManagementServer {

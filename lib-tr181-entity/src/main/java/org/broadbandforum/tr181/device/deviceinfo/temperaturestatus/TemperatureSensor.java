@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.TemperatureStatus.TemperatureSensor.{i}.")
-@XmlRootElement(name = "TemperatureSensor")
+@XmlRootElement(name = "Device.DeviceInfo.TemperatureStatus.TemperatureSensor")
 @XmlType(name = "Device.DeviceInfo.TemperatureStatus.TemperatureSensor")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TemperatureSensor {

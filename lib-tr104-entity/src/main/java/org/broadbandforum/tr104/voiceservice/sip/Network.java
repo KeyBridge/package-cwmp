@@ -39,7 +39,7 @@ import org.broadbandforum.tr104.voiceservice.sip.network.ResponseMap;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.SIP.Network.{i}.")
-@XmlRootElement(name = "Network")
+@XmlRootElement(name = "VoiceService.SIP.Network")
 @XmlType(name = "VoiceService.SIP.Network")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Network {

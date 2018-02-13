@@ -35,7 +35,7 @@ import org.broadbandforum.tr135.stbservice.capabilities.videodecoder.SMPTEVC1;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.VideoDecoder.")
-@XmlRootElement(name = "VideoDecoder")
+@XmlRootElement(name = "STBService.Capabilities.VideoDecoder")
 @XmlType(name = "STBService.Capabilities.VideoDecoder")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VideoDecoder {

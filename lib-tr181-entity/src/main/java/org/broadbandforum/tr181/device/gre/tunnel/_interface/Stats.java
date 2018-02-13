@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.datatypes.StatsCounter64;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.GRE.Tunnel.{i}.Interface.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "Device.GRE.Tunnel.Interface.Stats")
 @XmlType(name = "Device.GRE.Tunnel.Interface.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

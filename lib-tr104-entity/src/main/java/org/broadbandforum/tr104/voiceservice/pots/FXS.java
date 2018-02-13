@@ -35,7 +35,7 @@ Each entry in the table models an analogue physical interface as defined by {{bi
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.POTS.FXS.{i}.")
-@XmlRootElement(name = "FXS")
+@XmlRootElement(name = "VoiceService.POTS.FXS")
 @XmlType(name = "VoiceService.POTS.FXS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FXS {

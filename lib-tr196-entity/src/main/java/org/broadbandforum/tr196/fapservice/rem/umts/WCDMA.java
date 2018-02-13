@@ -36,7 +36,7 @@ import org.broadbandforum.tr196.fapservice.rem.umts.wcdma.Cell;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.UMTS.WCDMA.")
-@XmlRootElement(name = "WCDMA")
+@XmlRootElement(name = "FAPService.REM.UMTS.WCDMA")
 @XmlType(name = "FAPService.REM.UMTS.WCDMA")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class WCDMA {

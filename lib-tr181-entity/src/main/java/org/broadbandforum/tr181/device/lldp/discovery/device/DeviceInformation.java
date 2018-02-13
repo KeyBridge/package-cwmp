@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.device.lldp.discovery.device.deviceinformation.V
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.DeviceInformation.")
-@XmlRootElement(name = "DeviceInformation")
+@XmlRootElement(name = "Device.LLDP.Discovery.Device.DeviceInformation")
 @XmlType(name = "Device.LLDP.Discovery.Device.DeviceInformation")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DeviceInformation {

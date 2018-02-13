@@ -33,7 +33,7 @@ import org.broadbandforum.tr135.stbservice.capabilities.videodecoder.mpeg2part2.
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.VideoDecoder.MPEG2Part2.")
-@XmlRootElement(name = "MPEG2Part2")
+@XmlRootElement(name = "STBService.Capabilities.VideoDecoder.MPEG2Part2")
 @XmlType(name = "STBService.Capabilities.VideoDecoder.MPEG2Part2")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MPEG2Part2 {

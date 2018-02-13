@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.PowerControl.")
-@XmlRootElement(name = "PowerControl")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.PowerControl")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.PowerControl")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PowerControl {

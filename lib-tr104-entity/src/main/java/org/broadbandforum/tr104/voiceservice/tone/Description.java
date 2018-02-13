@@ -33,7 +33,7 @@ The defaults given for this object apply only to explicit creation of an instanc
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Tone.Description.{i}.")
-@XmlRootElement(name = "Description")
+@XmlRootElement(name = "VoiceService.Tone.Description")
 @XmlType(name = "VoiceService.Tone.Description")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Description {

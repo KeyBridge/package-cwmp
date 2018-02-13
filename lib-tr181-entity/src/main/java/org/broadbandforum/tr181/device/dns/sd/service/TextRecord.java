@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.DNS.SD.Service.{i}.TextRecord.{i}.")
-@XmlRootElement(name = "TextRecord")
+@XmlRootElement(name = "Device.DNS.SD.Service.TextRecord")
 @XmlType(name = "Device.DNS.SD.Service.TextRecord")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TextRecord {

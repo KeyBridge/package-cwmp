@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.neighborlist.LTECe
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborList.")
-@XmlRootElement(name = "NeighborList")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborList")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.NeighborList")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NeighborList {

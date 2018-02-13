@@ -33,7 +33,7 @@ import org.broadbandforum.tr135.stbservice.components.frontend.dvbt.servicelistd
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.ServiceListDatabase.")
-@XmlRootElement(name = "ServiceListDatabase")
+@XmlRootElement(name = "STBService.Components.FrontEnd.DVBT.ServiceListDatabase")
 @XmlType(name = "STBService.Components.FrontEnd.DVBT.ServiceListDatabase")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ServiceListDatabase {

@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Terminal.{i}.ButtonMap.Button.{i}.")
-@XmlRootElement(name = "Button")
+@XmlRootElement(name = "VoiceService.Terminal.ButtonMap.Button")
 @XmlType(name = "VoiceService.Terminal.ButtonMap.Button")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Button {

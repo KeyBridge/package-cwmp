@@ -41,7 +41,7 @@ import org.broadbandforum.tr181.device.bridging.ProviderBridge;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Bridging.")
-@XmlRootElement(name = "Bridging")
+@XmlRootElement(name = "Device.Bridging")
 @XmlType(name = "Device.Bridging")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Bridging {

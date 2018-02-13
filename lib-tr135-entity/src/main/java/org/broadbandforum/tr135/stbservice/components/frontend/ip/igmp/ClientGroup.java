@@ -33,7 +33,7 @@ The CPE MUST support at least ''MaximumNumberOfConcurrentGroups'' table entries.
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.IGMP.ClientGroup.{i}.")
-@XmlRootElement(name = "ClientGroup")
+@XmlRootElement(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroup")
 @XmlType(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroup")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ClientGroup {

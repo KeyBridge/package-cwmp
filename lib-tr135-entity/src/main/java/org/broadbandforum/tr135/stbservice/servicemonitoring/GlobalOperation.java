@@ -30,7 +30,7 @@ import org.broadbandforum.tr135.stbservice.servicemonitoring.globaloperation.Tot
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.GlobalOperation.")
-@XmlRootElement(name = "GlobalOperation")
+@XmlRootElement(name = "STBService.ServiceMonitoring.GlobalOperation")
 @XmlType(name = "STBService.ServiceMonitoring.GlobalOperation")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GlobalOperation {

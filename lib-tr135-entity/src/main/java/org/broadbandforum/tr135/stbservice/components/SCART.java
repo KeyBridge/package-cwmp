@@ -31,7 +31,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.SCART.{i}.")
-@XmlRootElement(name = "SCART")
+@XmlRootElement(name = "STBService.Components.SCART")
 @XmlType(name = "STBService.Components.SCART")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SCART {

@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.LTE.Cell.{i}.BCCH.PLMNList.{i}.")
-@XmlRootElement(name = "PLMNList")
+@XmlRootElement(name = "FAPService.REM.LTE.Cell.BCCH.PLMNList")
 @XmlType(name = "FAPService.REM.LTE.Cell.BCCH.PLMNList")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PLMNList {

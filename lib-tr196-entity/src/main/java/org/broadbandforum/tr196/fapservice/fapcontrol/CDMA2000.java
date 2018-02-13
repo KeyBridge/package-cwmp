@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.fapservice.fapcontrol.cdma2000.Time;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.")
-@XmlRootElement(name = "CDMA2000")
+@XmlRootElement(name = "FAPService.FAPControl.CDMA2000")
 @XmlType(name = "FAPService.FAPControl.CDMA2000")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CDMA2000 {

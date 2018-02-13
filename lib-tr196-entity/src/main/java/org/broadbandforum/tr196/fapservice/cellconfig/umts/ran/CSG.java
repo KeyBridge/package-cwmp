@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.csg.CSGPSCSplitIn
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.CSG.")
-@XmlRootElement(name = "CSG")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.CSG")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.CSG")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CSG {

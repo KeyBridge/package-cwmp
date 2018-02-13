@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.MGCP.")
-@XmlRootElement(name = "MGCP")
+@XmlRootElement(name = "VoiceService.Capabilities.MGCP")
 @XmlType(name = "VoiceService.Capabilities.MGCP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MGCP {

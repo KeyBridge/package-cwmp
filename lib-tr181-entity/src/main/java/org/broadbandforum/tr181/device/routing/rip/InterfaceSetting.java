@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Routing.RIP.InterfaceSetting.{i}.")
-@XmlRootElement(name = "InterfaceSetting")
+@XmlRootElement(name = "Device.Routing.RIP.InterfaceSetting")
 @XmlType(name = "Device.Routing.RIP.InterfaceSetting")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class InterfaceSetting {

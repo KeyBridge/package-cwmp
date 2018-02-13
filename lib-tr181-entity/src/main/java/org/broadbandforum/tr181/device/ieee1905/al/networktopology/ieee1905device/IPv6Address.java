@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.IPv6Address.{i}.")
-@XmlRootElement(name = "IPv6Address")
+@XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IPv6Address")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IPv6Address")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPv6Address {

@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.DSL.Line.{i}.DataGathering.")
-@XmlRootElement(name = "DataGathering")
+@XmlRootElement(name = "Device.DSL.Line.DataGathering")
 @XmlType(name = "Device.DSL.Line.DataGathering")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DataGathering {

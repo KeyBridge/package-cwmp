@@ -49,7 +49,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.IP.Interface.{i}.IPv6Address.{i}.")
-@XmlRootElement(name = "IPv6Address")
+@XmlRootElement(name = "Device.IP.Interface.IPv6Address")
 @XmlType(name = "Device.IP.Interface.IPv6Address")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPv6Address {

@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLInterfaceConfig.Stats.LastShowtime.")
-@XmlRootElement(name = "LastShowtime")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig.Stats.LastShowtime")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig.Stats.LastShowtime")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LastShowtime {

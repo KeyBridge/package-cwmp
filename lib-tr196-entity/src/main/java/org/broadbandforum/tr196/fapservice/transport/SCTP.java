@@ -37,7 +37,7 @@ SCTP is defined in {{bibref|RFC4960}} and {{bibref|RFC3873}}.
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.SCTP.")
-@XmlRootElement(name = "SCTP")
+@XmlRootElement(name = "FAPService.Transport.SCTP")
 @XmlType(name = "FAPService.Transport.SCTP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SCTP {

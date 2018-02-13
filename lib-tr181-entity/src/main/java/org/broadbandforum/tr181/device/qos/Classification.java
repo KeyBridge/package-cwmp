@@ -38,7 +38,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.QoS.Classification.{i}.")
-@XmlRootElement(name = "Classification")
+@XmlRootElement(name = "Device.QoS.Classification")
 @XmlType(name = "Device.QoS.Classification")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Classification {

@@ -35,7 +35,7 @@ import org.broadbandforum.tr135.stbservice.applications.ServiceProvider;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Applications.")
-@XmlRootElement(name = "Applications")
+@XmlRootElement(name = "STBService.Applications")
 @XmlType(name = "STBService.Applications")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Applications {

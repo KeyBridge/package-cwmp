@@ -42,7 +42,7 @@ IPv6 addresses MUST NOT include zone identifiers. Zone identifiers are discussed
 
 Unspecified or inapplicable addresses (or IPv4 subnet masks) MUST be represented as empty strings unless otherwise specified by the parameter definition.
 	 */
-@XmlRootElement(name = "IPAddress")
+@XmlRootElement(name = "org.broadbandforum.tr106.datatypes.IPAddress")
 @XmlType(name = "org.broadbandforum.tr106.datatypes.IPAddress")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPAddress {

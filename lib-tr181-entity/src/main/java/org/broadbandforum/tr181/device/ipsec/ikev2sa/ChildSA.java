@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.ipsec.ikev2sa.childsa.Stats;
 	 * @since 2.5
 	 */
 @CWMPObject(name = "Device.IPsec.IKEv2SA.{i}.ChildSA.{i}.")
-@XmlRootElement(name = "ChildSA")
+@XmlRootElement(name = "Device.IPsec.IKEv2SA.ChildSA")
 @XmlType(name = "Device.IPsec.IKEv2SA.ChildSA")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ChildSA {

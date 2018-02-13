@@ -32,7 +32,7 @@ If the IP address part is unspecified or inapplicable, it MUST be {{empty}} unle
 
 If the entire IP prefix is unspecified or inapplicable, it MUST be {{empty}} unless otherwise specified by the parameter definition.
 	 */
-@XmlRootElement(name = "IPPrefix")
+@XmlRootElement(name = "org.broadbandforum.tr140.datatypes.IPPrefix")
 @XmlType(name = "org.broadbandforum.tr140.datatypes.IPPrefix")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPPrefix {

@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLDiagnostics.")
-@XmlRootElement(name = "WANDSLDiagnostics")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANDSLDiagnostics")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANDSLDiagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class WANDSLDiagnostics {

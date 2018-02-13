@@ -35,7 +35,7 @@ Note: Cell barring and 3GPP access class parameters are contained in SIB1 in {{b
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.LTE.")
-@XmlRootElement(name = "LTE")
+@XmlRootElement(name = "FAPService.AccessMgmt.LTE")
 @XmlType(name = "FAPService.AccessMgmt.LTE")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LTE {

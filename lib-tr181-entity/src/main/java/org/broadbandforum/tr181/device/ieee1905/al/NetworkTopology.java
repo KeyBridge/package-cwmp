@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.ieee1905.al.networktopology.IEEE1905Devic
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.")
-@XmlRootElement(name = "NetworkTopology")
+@XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NetworkTopology {

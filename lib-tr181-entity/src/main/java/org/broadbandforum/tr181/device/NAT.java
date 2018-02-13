@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.nat.PortMapping;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.NAT.")
-@XmlRootElement(name = "NAT")
+@XmlRootElement(name = "Device.NAT")
 @XmlType(name = "Device.NAT")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NAT {

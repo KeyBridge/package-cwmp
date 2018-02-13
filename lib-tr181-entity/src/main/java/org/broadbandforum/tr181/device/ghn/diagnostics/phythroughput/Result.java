@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Diagnostics.PHYThroughput.Result.{i}.")
-@XmlRootElement(name = "Result")
+@XmlRootElement(name = "Device.Ghn.Diagnostics.PHYThroughput.Result")
 @XmlType(name = "Device.Ghn.Diagnostics.PHYThroughput.Result")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Result {

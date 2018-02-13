@@ -32,7 +32,7 @@ import org.broadbandforum.tr135.stbservice.avstreams.AVStream;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.AVStreams.")
-@XmlRootElement(name = "AVStreams")
+@XmlRootElement(name = "STBService.AVStreams")
 @XmlType(name = "STBService.AVStreams")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AVStreams {

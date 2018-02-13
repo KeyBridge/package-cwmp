@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile.{i}.")
-@XmlRootElement(name = "VendorConfigFile")
+@XmlRootElement(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile")
 @XmlType(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VendorConfigFile {

@@ -49,7 +49,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.Ethernet.RMONStats.{i}.")
-@XmlRootElement(name = "RMONStats")
+@XmlRootElement(name = "Device.Ethernet.RMONStats")
 @XmlType(name = "Device.Ethernet.RMONStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RMONStats {

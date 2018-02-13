@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.10
 	 */
 @CWMPObject(name = "Device.MQTT.Broker.{i}.Bridge.{i}.Server.{i}.")
-@XmlRootElement(name = "Server")
+@XmlRootElement(name = "Device.MQTT.Broker.Bridge.Server")
 @XmlType(name = "Device.MQTT.Broker.Bridge.Server")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Server {

@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.fap.applicationplatform.monitoring.Termin
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.ApplicationPlatform.Monitoring.")
-@XmlRootElement(name = "Monitoring")
+@XmlRootElement(name = "Device.FAP.ApplicationPlatform.Monitoring")
 @XmlType(name = "Device.FAP.ApplicationPlatform.Monitoring")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Monitoring {

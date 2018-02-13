@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.fapservice.accessmgmt.UMTS;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.")
-@XmlRootElement(name = "AccessMgmt")
+@XmlRootElement(name = "FAPService.AccessMgmt")
 @XmlType(name = "FAPService.AccessMgmt")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AccessMgmt {

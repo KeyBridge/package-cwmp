@@ -34,7 +34,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.VideoOutput.{i}.")
-@XmlRootElement(name = "VideoOutput")
+@XmlRootElement(name = "STBService.Components.VideoOutput")
 @XmlType(name = "STBService.Components.VideoOutput")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VideoOutput {

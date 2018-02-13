@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.3
 	 */
 @CWMPObject(name = "Device.DeviceInfo.ProxierInfo.")
-@XmlRootElement(name = "ProxierInfo")
+@XmlRootElement(name = "Device.DeviceInfo.ProxierInfo")
 @XmlType(name = "Device.DeviceInfo.ProxierInfo")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ProxierInfo {

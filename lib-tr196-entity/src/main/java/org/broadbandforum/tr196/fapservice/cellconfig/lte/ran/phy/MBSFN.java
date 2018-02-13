@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.phy.mbsfn.SFConfig
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.MBSFN.")
-@XmlRootElement(name = "MBSFN")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY.MBSFN")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.PHY.MBSFN")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MBSFN {

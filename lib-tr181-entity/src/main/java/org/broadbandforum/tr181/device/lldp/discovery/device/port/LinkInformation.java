@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.Port.{i}.LinkInformation.")
-@XmlRootElement(name = "LinkInformation")
+@XmlRootElement(name = "Device.LLDP.Discovery.Device.Port.LinkInformation")
 @XmlType(name = "Device.LLDP.Discovery.Device.Port.LinkInformation")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LinkInformation {

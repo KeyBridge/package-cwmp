@@ -35,7 +35,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.Bridging.Bridge.{i}.Port.{i}.PriorityCodePoint.")
-@XmlRootElement(name = "PriorityCodePoint")
+@XmlRootElement(name = "Device.Bridging.Bridge.Port.PriorityCodePoint")
 @XmlType(name = "Device.Bridging.Bridge.Port.PriorityCodePoint")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PriorityCodePoint {

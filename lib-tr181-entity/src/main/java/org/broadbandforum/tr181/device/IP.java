@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.ip.Interface;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IP.")
-@XmlRootElement(name = "IP")
+@XmlRootElement(name = "Device.IP")
 @XmlType(name = "Device.IP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IP {

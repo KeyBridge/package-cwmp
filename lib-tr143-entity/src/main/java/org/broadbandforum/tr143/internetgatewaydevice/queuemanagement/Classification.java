@@ -32,7 +32,7 @@ import org.broadbandforum.tr143.datatypes.MACAddress;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.QueueManagement.Classification.{i}.")
-@XmlRootElement(name = "Classification")
+@XmlRootElement(name = "InternetGatewayDevice.QueueManagement.Classification")
 @XmlType(name = "InternetGatewayDevice.QueueManagement.Classification")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Classification {

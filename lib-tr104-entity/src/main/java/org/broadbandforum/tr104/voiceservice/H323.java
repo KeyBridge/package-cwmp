@@ -34,7 +34,7 @@ import org.broadbandforum.tr104.voiceservice.h323.Network;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.H323.")
-@XmlRootElement(name = "H323")
+@XmlRootElement(name = "VoiceService.H323")
 @XmlType(name = "VoiceService.H323")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class H323 {

@@ -33,7 +33,7 @@ import org.broadbandforum.tr262.fap.gps.ContinuousGPSStatus;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "FAP.GPS.")
-@XmlRootElement(name = "GPS")
+@XmlRootElement(name = "FAP.GPS")
 @XmlType(name = "FAP.GPS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GPS {

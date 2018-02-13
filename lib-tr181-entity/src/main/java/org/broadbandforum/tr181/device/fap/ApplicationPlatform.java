@@ -45,7 +45,7 @@ import org.broadbandforum.tr181.device.fap.applicationplatform.Monitoring;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.ApplicationPlatform.")
-@XmlRootElement(name = "ApplicationPlatform")
+@XmlRootElement(name = "Device.FAP.ApplicationPlatform")
 @XmlType(name = "Device.FAP.ApplicationPlatform")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ApplicationPlatform {

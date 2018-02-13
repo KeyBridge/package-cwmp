@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.SelfTestDiagnostics.")
-@XmlRootElement(name = "SelfTestDiagnostics")
+@XmlRootElement(name = "Device.SelfTestDiagnostics")
 @XmlType(name = "Device.SelfTestDiagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SelfTestDiagnostics {

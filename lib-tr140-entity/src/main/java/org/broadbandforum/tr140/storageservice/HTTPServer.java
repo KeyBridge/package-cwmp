@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.HTTPServer.")
-@XmlRootElement(name = "HTTPServer")
+@XmlRootElement(name = "StorageService.HTTPServer")
 @XmlType(name = "StorageService.HTTPServer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HTTPServer {

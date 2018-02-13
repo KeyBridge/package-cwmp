@@ -40,7 +40,7 @@ import org.broadbandforum.tr181.device.upa._interface.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UPA.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.UPA.Interface")
 @XmlType(name = "Device.UPA.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

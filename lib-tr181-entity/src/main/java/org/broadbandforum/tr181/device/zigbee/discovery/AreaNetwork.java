@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.Discovery.AreaNetwork.{i}.")
-@XmlRootElement(name = "AreaNetwork")
+@XmlRootElement(name = "Device.ZigBee.Discovery.AreaNetwork")
 @XmlType(name = "Device.ZigBee.Discovery.AreaNetwork")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AreaNetwork {

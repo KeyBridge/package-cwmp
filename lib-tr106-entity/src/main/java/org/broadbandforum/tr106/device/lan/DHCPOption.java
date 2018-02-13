@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "Device.LAN.DHCPOption.{i}.")
-@XmlRootElement(name = "DHCPOption")
+@XmlRootElement(name = "Device.LAN.DHCPOption")
 @XmlType(name = "Device.LAN.DHCPOption")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DHCPOption {

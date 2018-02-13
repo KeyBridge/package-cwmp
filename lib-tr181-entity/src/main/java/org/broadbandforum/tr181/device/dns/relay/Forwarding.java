@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DNS.Relay.Forwarding.{i}.")
-@XmlRootElement(name = "Forwarding")
+@XmlRootElement(name = "Device.DNS.Relay.Forwarding")
 @XmlType(name = "Device.DNS.Relay.Forwarding")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Forwarding {

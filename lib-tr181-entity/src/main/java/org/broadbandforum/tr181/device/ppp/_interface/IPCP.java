@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.IPv4Address;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.PPP.Interface.{i}.IPCP.")
-@XmlRootElement(name = "IPCP")
+@XmlRootElement(name = "Device.PPP.Interface.IPCP")
 @XmlType(name = "Device.PPP.Interface.IPCP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPCP {

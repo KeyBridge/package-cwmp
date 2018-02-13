@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.XMPP.Connection.{i}.Server.{i}.")
-@XmlRootElement(name = "Server")
+@XmlRootElement(name = "Device.XMPP.Connection.Server")
 @XmlType(name = "Device.XMPP.Connection.Server")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Server {

@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.Common.")
-@XmlRootElement(name = "Common")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.Common")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.Common")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Common {

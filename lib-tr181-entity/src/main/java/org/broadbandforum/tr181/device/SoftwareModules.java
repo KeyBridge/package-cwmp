@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.device.softwaremodules.ExecutionUnit;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "Device.SoftwareModules.")
-@XmlRootElement(name = "SoftwareModules")
+@XmlRootElement(name = "Device.SoftwareModules")
 @XmlType(name = "Device.SoftwareModules")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SoftwareModules {

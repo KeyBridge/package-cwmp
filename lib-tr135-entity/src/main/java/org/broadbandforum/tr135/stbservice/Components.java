@@ -42,7 +42,7 @@ import org.broadbandforum.tr135.stbservice.components.VideoOutput;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.")
-@XmlRootElement(name = "Components")
+@XmlRootElement(name = "STBService.Components")
 @XmlType(name = "STBService.Components")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Components {

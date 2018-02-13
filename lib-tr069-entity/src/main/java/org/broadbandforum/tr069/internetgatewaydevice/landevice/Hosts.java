@@ -32,7 +32,7 @@ import org.broadbandforum.tr069.internetgatewaydevice.landevice.hosts.Host;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.Hosts.")
-@XmlRootElement(name = "Hosts")
+@XmlRootElement(name = "InternetGatewayDevice.LANDevice.Hosts")
 @XmlType(name = "InternetGatewayDevice.LANDevice.Hosts")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Hosts {

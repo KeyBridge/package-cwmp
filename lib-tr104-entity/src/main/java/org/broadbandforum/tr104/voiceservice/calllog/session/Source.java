@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.voiceservice.calllog.session.source.VoiceQuality
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.Source.")
-@XmlRootElement(name = "Source")
+@XmlRootElement(name = "VoiceService.CallLog.Session.Source")
 @XmlType(name = "VoiceService.CallLog.Session.Source")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Source {

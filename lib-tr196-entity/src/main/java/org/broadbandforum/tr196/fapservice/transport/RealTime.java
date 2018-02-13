@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.transport.realtime.Perf;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.RealTime.")
-@XmlRootElement(name = "RealTime")
+@XmlRootElement(name = "FAPService.Transport.RealTime")
 @XmlType(name = "FAPService.Transport.RealTime")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RealTime {

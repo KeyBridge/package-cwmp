@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Line.{i}.Stats.OutgoingCalls.")
-@XmlRootElement(name = "OutgoingCalls")
+@XmlRootElement(name = "VoiceService.CallControl.Line.Stats.OutgoingCalls")
 @XmlType(name = "VoiceService.CallControl.Line.Stats.OutgoingCalls")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class OutgoingCalls {

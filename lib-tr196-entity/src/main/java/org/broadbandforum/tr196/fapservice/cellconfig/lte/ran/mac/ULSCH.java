@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.MAC.ULSCH.")
-@XmlRootElement(name = "ULSCH")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.MAC.ULSCH")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.MAC.ULSCH")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ULSCH {

@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "Device.LAN.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "Device.LAN.Stats")
 @XmlType(name = "Device.LAN.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

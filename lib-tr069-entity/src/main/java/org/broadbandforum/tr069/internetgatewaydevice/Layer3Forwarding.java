@@ -34,7 +34,7 @@ import org.broadbandforum.tr069.internetgatewaydevice.layer3forwarding.Forwardin
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Layer3Forwarding.")
-@XmlRootElement(name = "Layer3Forwarding")
+@XmlRootElement(name = "InternetGatewayDevice.Layer3Forwarding")
 @XmlType(name = "InternetGatewayDevice.Layer3Forwarding")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Layer3Forwarding {

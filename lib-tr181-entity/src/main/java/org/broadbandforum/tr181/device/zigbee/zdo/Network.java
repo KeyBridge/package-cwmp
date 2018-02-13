@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.zigbee.zdo.network.Neighbor;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.Network.")
-@XmlRootElement(name = "Network")
+@XmlRootElement(name = "Device.ZigBee.ZDO.Network")
 @XmlType(name = "Device.ZigBee.ZDO.Network")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Network {

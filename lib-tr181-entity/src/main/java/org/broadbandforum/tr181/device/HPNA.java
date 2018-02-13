@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.hpna.Interface;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.HPNA.")
-@XmlRootElement(name = "HPNA")
+@XmlRootElement(name = "Device.HPNA")
 @XmlType(name = "Device.HPNA")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HPNA {

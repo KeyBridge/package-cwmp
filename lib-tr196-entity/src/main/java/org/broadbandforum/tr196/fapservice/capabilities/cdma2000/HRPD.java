@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.capabilities.cdma2000.hrpd.SelfConfig
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Capabilities.CDMA2000.HRPD.")
-@XmlRootElement(name = "HRPD")
+@XmlRootElement(name = "FAPService.Capabilities.CDMA2000.HRPD")
 @XmlType(name = "FAPService.Capabilities.CDMA2000.HRPD")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HRPD {

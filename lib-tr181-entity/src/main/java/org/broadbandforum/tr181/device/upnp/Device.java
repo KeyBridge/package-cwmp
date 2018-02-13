@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.upnp.device.Capabilities;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UPnP.Device.")
-@XmlRootElement(name = "Device")
+@XmlRootElement(name = "Device.UPnP.Device")
 @XmlType(name = "Device.UPnP.Device")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Device {

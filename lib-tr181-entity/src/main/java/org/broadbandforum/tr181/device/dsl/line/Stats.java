@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.dsl.line.stats.Total;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.Line.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "Device.DSL.Line.Stats")
 @XmlType(name = "Device.DSL.Line.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

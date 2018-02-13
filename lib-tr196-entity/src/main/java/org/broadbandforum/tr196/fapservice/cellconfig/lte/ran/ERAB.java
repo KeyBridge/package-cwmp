@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.erab.Stats;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.ERAB.")
-@XmlRootElement(name = "ERAB")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.ERAB")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.ERAB")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ERAB {

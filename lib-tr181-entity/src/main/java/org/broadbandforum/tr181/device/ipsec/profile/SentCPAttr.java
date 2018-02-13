@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.5
 	 */
 @CWMPObject(name = "Device.IPsec.Profile.{i}.SentCPAttr.{i}.")
-@XmlRootElement(name = "SentCPAttr")
+@XmlRootElement(name = "Device.IPsec.Profile.SentCPAttr")
 @XmlType(name = "Device.IPsec.Profile.SentCPAttr")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SentCPAttr {

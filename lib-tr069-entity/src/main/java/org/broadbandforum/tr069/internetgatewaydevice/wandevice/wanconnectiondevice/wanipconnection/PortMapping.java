@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.PortMapping.{i}.")
-@XmlRootElement(name = "PortMapping")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANIPConnection.PortMapping")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANIPConnection.PortMapping")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PortMapping {

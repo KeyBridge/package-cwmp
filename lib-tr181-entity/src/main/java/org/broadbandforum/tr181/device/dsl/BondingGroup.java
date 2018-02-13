@@ -42,7 +42,7 @@ import org.broadbandforum.tr181.device.dsl.bondinggroup.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.BondingGroup.{i}.")
-@XmlRootElement(name = "BondingGroup")
+@XmlRootElement(name = "Device.DSL.BondingGroup")
 @XmlType(name = "Device.DSL.BondingGroup")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BondingGroup {

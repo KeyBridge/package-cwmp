@@ -31,7 +31,7 @@ import org.broadbandforum.tr262.datatypes.IPAddress;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "FAP.Tunnel.IKESA.{i}.")
-@XmlRootElement(name = "IKESA")
+@XmlRootElement(name = "FAP.Tunnel.IKESA")
 @XmlType(name = "FAP.Tunnel.IKESA")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IKESA {

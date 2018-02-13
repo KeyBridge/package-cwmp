@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.mqtt.broker.bridge.Subscription;
 	 * @since 2.10
 	 */
 @CWMPObject(name = "Device.MQTT.Broker.{i}.Bridge.{i}.")
-@XmlRootElement(name = "Bridge")
+@XmlRootElement(name = "Device.MQTT.Broker.Bridge")
 @XmlType(name = "Device.MQTT.Broker.Bridge")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Bridge {

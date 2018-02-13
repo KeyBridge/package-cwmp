@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.datatypes.ZigBeeNetworkAddress;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.NodeManager.RoutingTable.{i}.")
-@XmlRootElement(name = "RoutingTable")
+@XmlRootElement(name = "Device.ZigBee.ZDO.NodeManager.RoutingTable")
 @XmlType(name = "Device.ZigBee.ZDO.NodeManager.RoutingTable")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RoutingTable {

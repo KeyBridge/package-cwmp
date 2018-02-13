@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
 	/**
 	 * All MAC addresses are represented as strings of 12 hexadecimal digits (digits 0-9, letters A-F or a-f) displayed as six pairs of digits separated by colons.  Unspecified or inapplicable MAC addresses MUST be represented as empty strings unless otherwise specified by the parameter definition.
 	 */
-@XmlRootElement(name = "MACAddress")
+@XmlRootElement(name = "org.broadbandforum.tr143.datatypes.MACAddress")
 @XmlType(name = "org.broadbandforum.tr143.datatypes.MACAddress")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MACAddress {

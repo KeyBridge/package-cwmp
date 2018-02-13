@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.IPv4Address.{i}.")
-@XmlRootElement(name = "IPv4Address")
+@XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IPv4Address")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IPv4Address")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPv4Address {

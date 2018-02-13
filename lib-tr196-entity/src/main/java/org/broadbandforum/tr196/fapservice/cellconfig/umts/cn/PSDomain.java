@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.cn.psdomain.RAB;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.CN.PSDomain.")
-@XmlRootElement(name = "PSDomain")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.CN.PSDomain")
 @XmlType(name = "FAPService.CellConfig.UMTS.CN.PSDomain")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PSDomain {

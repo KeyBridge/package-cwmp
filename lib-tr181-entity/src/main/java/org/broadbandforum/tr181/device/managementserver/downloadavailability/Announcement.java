@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.managementserver.downloadavailability.ann
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.ManagementServer.DownloadAvailability.Announcement.")
-@XmlRootElement(name = "Announcement")
+@XmlRootElement(name = "Device.ManagementServer.DownloadAvailability.Announcement")
 @XmlType(name = "Device.ManagementServer.DownloadAvailability.Announcement")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Announcement {

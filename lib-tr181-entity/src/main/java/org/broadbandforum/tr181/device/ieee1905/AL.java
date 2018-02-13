@@ -40,7 +40,7 @@ import org.broadbandforum.tr181.device.ieee1905.al.Security;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.")
-@XmlRootElement(name = "AL")
+@XmlRootElement(name = "Device.IEEE1905.AL")
 @XmlType(name = "Device.IEEE1905.AL")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AL {

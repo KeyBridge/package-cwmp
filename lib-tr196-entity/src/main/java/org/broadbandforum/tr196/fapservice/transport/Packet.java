@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.Packet.")
-@XmlRootElement(name = "Packet")
+@XmlRootElement(name = "FAPService.Transport.Packet")
 @XmlType(name = "FAPService.Transport.Packet")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Packet {

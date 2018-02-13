@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.RTP.Redundancy.")
-@XmlRootElement(name = "Redundancy")
+@XmlRootElement(name = "VoiceService.VoIPProfile.RTP.Redundancy")
 @XmlType(name = "VoiceService.VoIPProfile.RTP.Redundancy")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Redundancy {

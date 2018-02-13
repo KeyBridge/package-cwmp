@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.ChangeLog.{i}.")
-@XmlRootElement(name = "ChangeLog")
+@XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.ChangeLog")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.ChangeLog")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ChangeLog {

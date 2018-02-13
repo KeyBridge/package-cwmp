@@ -38,7 +38,7 @@ import org.broadbandforum.tr181.device.ptm.link.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.PTM.Link.{i}.")
-@XmlRootElement(name = "Link")
+@XmlRootElement(name = "Device.PTM.Link")
 @XmlType(name = "Device.PTM.Link")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Link {

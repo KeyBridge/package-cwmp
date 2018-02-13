@@ -35,7 +35,7 @@ import org.broadbandforum.tr157.bulkdata.profile.http.RequestURIParameter;
 	 * @since 1.10
 	 */
 @CWMPObject(name = "BulkData.Profile.{i}.HTTP.")
-@XmlRootElement(name = "HTTP")
+@XmlRootElement(name = "BulkData.Profile.HTTP")
 @XmlType(name = "BulkData.Profile.HTTP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HTTP {

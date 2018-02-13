@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.SIP.Network.{i}.ResponseMap.{i}.")
-@XmlRootElement(name = "ResponseMap")
+@XmlRootElement(name = "VoiceService.SIP.Network.ResponseMap")
 @XmlType(name = "VoiceService.SIP.Network.ResponseMap")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ResponseMap {

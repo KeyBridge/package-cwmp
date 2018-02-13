@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.OneX.SelfConfig.")
-@XmlRootElement(name = "SelfConfig")
+@XmlRootElement(name = "FAPService.FAPControl.CDMA2000.OneX.SelfConfig")
 @XmlType(name = "FAPService.FAPControl.CDMA2000.OneX.SelfConfig")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SelfConfig {

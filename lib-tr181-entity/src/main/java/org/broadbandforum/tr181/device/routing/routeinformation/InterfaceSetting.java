@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.datatypes.IPv6Prefix;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.Routing.RouteInformation.InterfaceSetting.{i}.")
-@XmlRootElement(name = "InterfaceSetting")
+@XmlRootElement(name = "Device.Routing.RouteInformation.InterfaceSetting")
 @XmlType(name = "Device.Routing.RouteInformation.InterfaceSetting")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class InterfaceSetting {

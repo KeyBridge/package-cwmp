@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.CDMA2000.OneX.Cell.{i}.ControlChannel.")
-@XmlRootElement(name = "ControlChannel")
+@XmlRootElement(name = "FAPService.REM.CDMA2000.OneX.Cell.ControlChannel")
 @XmlType(name = "FAPService.REM.CDMA2000.OneX.Cell.ControlChannel")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ControlChannel {

@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.hpna._interface.qos.FlowSpec;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.HPNA.Interface.{i}.QoS.")
-@XmlRootElement(name = "QoS")
+@XmlRootElement(name = "Device.HPNA.Interface.QoS")
 @XmlType(name = "Device.HPNA.Interface.QoS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class QoS {

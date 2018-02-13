@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.Hosts.Host.{i}.IPv4Address.{i}.")
-@XmlRootElement(name = "IPv4Address")
+@XmlRootElement(name = "Device.Hosts.Host.IPv4Address")
 @XmlType(name = "Device.Hosts.Host.IPv4Address")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPv4Address {

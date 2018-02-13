@@ -44,7 +44,7 @@ import org.broadbandforum.tr181.device.wifi.accesspoint.WPS;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.WiFi.AccessPoint.{i}.")
-@XmlRootElement(name = "AccessPoint")
+@XmlRootElement(name = "Device.WiFi.AccessPoint")
 @XmlType(name = "Device.WiFi.AccessPoint")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AccessPoint {

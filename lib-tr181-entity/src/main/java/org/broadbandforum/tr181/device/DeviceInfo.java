@@ -46,7 +46,7 @@ import org.broadbandforum.tr181.device.deviceinfo.VendorLogFile;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.")
-@XmlRootElement(name = "DeviceInfo")
+@XmlRootElement(name = "Device.DeviceInfo")
 @XmlType(name = "Device.DeviceInfo")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DeviceInfo {

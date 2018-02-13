@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.RRCTimers.")
-@XmlRootElement(name = "RRCTimers")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.RRCTimers")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.RRCTimers")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RRCTimers {

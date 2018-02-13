@@ -31,7 +31,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Sample.HighLevelMetricStats.{i}.")
-@XmlRootElement(name = "HighLevelMetricStats")
+@XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Sample.HighLevelMetricStats")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.Sample.HighLevelMetricStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HighLevelMetricStats {

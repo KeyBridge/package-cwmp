@@ -38,7 +38,7 @@ import org.broadbandforum.tr181.device.wifi.ssid.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.WiFi.SSID.{i}.")
-@XmlRootElement(name = "SSID")
+@XmlRootElement(name = "Device.WiFi.SSID")
 @XmlType(name = "Device.WiFi.SSID")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SSID {

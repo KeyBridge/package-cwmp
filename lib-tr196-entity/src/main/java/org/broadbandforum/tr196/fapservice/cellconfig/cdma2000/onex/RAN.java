@@ -45,7 +45,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.onex.ran.SystemPa
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.")
-@XmlRootElement(name = "RAN")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.RAN")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RAN {

@@ -43,7 +43,7 @@ import org.broadbandforum.tr181.device.managementserver.VirtualDevice;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.ManagementServer.")
-@XmlRootElement(name = "ManagementServer")
+@XmlRootElement(name = "Device.ManagementServer")
 @XmlType(name = "Device.ManagementServer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ManagementServer {

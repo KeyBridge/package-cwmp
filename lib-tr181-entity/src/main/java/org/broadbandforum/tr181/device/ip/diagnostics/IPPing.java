@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.IPPing.")
-@XmlRootElement(name = "IPPing")
+@XmlRootElement(name = "Device.IP.Diagnostics.IPPing")
 @XmlType(name = "Device.IP.Diagnostics.IPPing")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPPing {

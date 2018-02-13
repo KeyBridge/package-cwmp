@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.ATM.Link.{i}.QoS.")
-@XmlRootElement(name = "QoS")
+@XmlRootElement(name = "Device.ATM.Link.QoS")
 @XmlType(name = "Device.ATM.Link.QoS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class QoS {

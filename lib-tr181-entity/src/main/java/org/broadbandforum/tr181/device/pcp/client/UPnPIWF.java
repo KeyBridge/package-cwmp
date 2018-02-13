@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.PCP.Client.{i}.UPnPIWF.")
-@XmlRootElement(name = "UPnPIWF")
+@XmlRootElement(name = "Device.PCP.Client.UPnPIWF")
 @XmlType(name = "Device.PCP.Client.UPnPIWF")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UPnPIWF {

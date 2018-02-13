@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.10
 	 */
 @CWMPObject(name = "Device.MQTT.Capabilities.")
-@XmlRootElement(name = "Capabilities")
+@XmlRootElement(name = "Device.MQTT.Capabilities")
 @XmlType(name = "Device.MQTT.Capabilities")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Capabilities {

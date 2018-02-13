@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.BondingGroup.{i}.BondedChannel.{i}.Ethernet.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "Device.DSL.BondingGroup.BondedChannel.Ethernet.Stats")
 @XmlType(name = "Device.DSL.BondingGroup.BondedChannel.Ethernet.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

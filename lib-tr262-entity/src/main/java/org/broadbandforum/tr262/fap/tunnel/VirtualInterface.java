@@ -31,7 +31,7 @@ import org.broadbandforum.tr262.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "FAP.Tunnel.VirtualInterface.{i}.")
-@XmlRootElement(name = "VirtualInterface")
+@XmlRootElement(name = "FAP.Tunnel.VirtualInterface")
 @XmlType(name = "FAP.Tunnel.VirtualInterface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VirtualInterface {

@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.deviceinfo.temperaturestatus.TemperatureS
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.TemperatureStatus.")
-@XmlRootElement(name = "TemperatureStatus")
+@XmlRootElement(name = "Device.DeviceInfo.TemperatureStatus")
 @XmlType(name = "Device.DeviceInfo.TemperatureStatus")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TemperatureStatus {

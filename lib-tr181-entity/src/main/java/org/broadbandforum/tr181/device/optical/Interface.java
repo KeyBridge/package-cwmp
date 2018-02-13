@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.optical._interface.Stats;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.Optical.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.Optical.Interface")
 @XmlType(name = "Device.Optical.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

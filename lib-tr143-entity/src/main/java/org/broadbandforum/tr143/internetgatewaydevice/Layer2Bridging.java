@@ -36,7 +36,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.layer2bridging.Marking;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.")
-@XmlRootElement(name = "Layer2Bridging")
+@XmlRootElement(name = "InternetGatewayDevice.Layer2Bridging")
 @XmlType(name = "InternetGatewayDevice.Layer2Bridging")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Layer2Bridging {

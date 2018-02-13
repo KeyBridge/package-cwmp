@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborListInUse.LTECell.{i}.")
-@XmlRootElement(name = "LTECell")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse.LTECell")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse.LTECell")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LTECell {

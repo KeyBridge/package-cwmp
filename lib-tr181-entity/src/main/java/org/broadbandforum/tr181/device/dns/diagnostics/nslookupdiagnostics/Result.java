@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DNS.Diagnostics.NSLookupDiagnostics.Result.{i}.")
-@XmlRootElement(name = "Result")
+@XmlRootElement(name = "Device.DNS.Diagnostics.NSLookupDiagnostics.Result")
 @XmlType(name = "Device.DNS.Diagnostics.NSLookupDiagnostics.Result")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Result {

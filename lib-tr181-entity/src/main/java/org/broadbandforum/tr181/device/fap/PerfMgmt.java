@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.fap.perfmgmt.Config;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.PerfMgmt.")
-@XmlRootElement(name = "PerfMgmt")
+@XmlRootElement(name = "Device.FAP.PerfMgmt")
 @XmlType(name = "Device.FAP.PerfMgmt")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PerfMgmt {

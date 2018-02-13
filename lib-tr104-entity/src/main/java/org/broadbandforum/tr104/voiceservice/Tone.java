@@ -36,7 +36,7 @@ import org.broadbandforum.tr104.voiceservice.tone.Pattern;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Tone.")
-@XmlRootElement(name = "Tone")
+@XmlRootElement(name = "VoiceService.Tone")
 @XmlType(name = "VoiceService.Tone")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Tone {

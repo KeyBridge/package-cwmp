@@ -39,7 +39,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.queuemanagement.Queue;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.QueueManagement.")
-@XmlRootElement(name = "QueueManagement")
+@XmlRootElement(name = "InternetGatewayDevice.QueueManagement")
 @XmlType(name = "InternetGatewayDevice.QueueManagement")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class QueueManagement {

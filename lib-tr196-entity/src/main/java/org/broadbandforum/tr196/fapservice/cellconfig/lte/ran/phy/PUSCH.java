@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.phy.pusch.ULRS;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.PUSCH.")
-@XmlRootElement(name = "PUSCH")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY.PUSCH")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.PHY.PUSCH")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PUSCH {

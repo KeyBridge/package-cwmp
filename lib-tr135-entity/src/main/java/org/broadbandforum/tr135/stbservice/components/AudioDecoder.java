@@ -31,7 +31,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.AudioDecoder.{i}.")
-@XmlRootElement(name = "AudioDecoder")
+@XmlRootElement(name = "STBService.Components.AudioDecoder")
 @XmlType(name = "STBService.Components.AudioDecoder")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AudioDecoder {

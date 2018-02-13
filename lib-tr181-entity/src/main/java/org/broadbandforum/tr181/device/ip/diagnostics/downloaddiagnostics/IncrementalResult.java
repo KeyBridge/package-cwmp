@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.DownloadDiagnostics.IncrementalResult.{i}.")
-@XmlRootElement(name = "IncrementalResult")
+@XmlRootElement(name = "Device.IP.Diagnostics.DownloadDiagnostics.IncrementalResult")
 @XmlType(name = "Device.IP.Diagnostics.DownloadDiagnostics.IncrementalResult")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IncrementalResult {

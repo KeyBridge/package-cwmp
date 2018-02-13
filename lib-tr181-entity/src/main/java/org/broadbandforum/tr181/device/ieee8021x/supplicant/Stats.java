@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IEEE8021x.Supplicant.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "Device.IEEE8021x.Supplicant.Stats")
 @XmlType(name = "Device.IEEE8021x.Supplicant.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

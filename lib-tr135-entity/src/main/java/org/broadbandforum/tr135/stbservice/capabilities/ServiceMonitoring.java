@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.ServiceMonitoring.")
-@XmlRootElement(name = "ServiceMonitoring")
+@XmlRootElement(name = "STBService.Capabilities.ServiceMonitoring")
 @XmlType(name = "STBService.Capabilities.ServiceMonitoring")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ServiceMonitoring {

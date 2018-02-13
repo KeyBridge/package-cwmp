@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.NonIEEE1905Neighbor.{i}.")
-@XmlRootElement(name = "NonIEEE1905Neighbor")
+@XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.NonIEEE1905Neighbor")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.NonIEEE1905Neighbor")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NonIEEE1905Neighbor {

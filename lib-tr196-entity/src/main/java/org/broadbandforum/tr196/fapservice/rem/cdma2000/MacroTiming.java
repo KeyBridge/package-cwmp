@@ -35,7 +35,7 @@ import org.broadbandforum.tr196.fapservice.rem.cdma2000.macrotiming.Channel;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.CDMA2000.MacroTiming.")
-@XmlRootElement(name = "MacroTiming")
+@XmlRootElement(name = "FAPService.REM.CDMA2000.MacroTiming")
 @XmlType(name = "FAPService.REM.CDMA2000.MacroTiming")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MacroTiming {

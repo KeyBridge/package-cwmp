@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.epc.ho.Stats;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EPC.HO.")
-@XmlRootElement(name = "HO")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.EPC.HO")
 @XmlType(name = "FAPService.CellConfig.LTE.EPC.HO")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HO {

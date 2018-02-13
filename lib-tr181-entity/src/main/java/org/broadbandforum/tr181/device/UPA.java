@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.upa.Interface;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UPA.")
-@XmlRootElement(name = "UPA")
+@XmlRootElement(name = "Device.UPA")
 @XmlType(name = "Device.UPA")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UPA {

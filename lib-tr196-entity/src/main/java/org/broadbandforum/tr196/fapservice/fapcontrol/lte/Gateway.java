@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.LTE.Gateway.")
-@XmlRootElement(name = "Gateway")
+@XmlRootElement(name = "FAPService.FAPControl.LTE.Gateway")
 @XmlType(name = "FAPService.FAPControl.LTE.Gateway")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Gateway {

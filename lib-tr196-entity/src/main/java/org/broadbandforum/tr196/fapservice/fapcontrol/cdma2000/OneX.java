@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.fapservice.fapcontrol.cdma2000.onex.SelfConfig;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.OneX.")
-@XmlRootElement(name = "OneX")
+@XmlRootElement(name = "FAPService.FAPControl.CDMA2000.OneX")
 @XmlType(name = "FAPService.FAPControl.CDMA2000.OneX")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class OneX {

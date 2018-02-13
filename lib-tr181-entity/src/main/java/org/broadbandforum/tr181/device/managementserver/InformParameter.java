@@ -38,7 +38,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.ManagementServer.InformParameter.{i}.")
-@XmlRootElement(name = "InformParameter")
+@XmlRootElement(name = "Device.ManagementServer.InformParameter")
 @XmlType(name = "Device.ManagementServer.InformParameter")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class InformParameter {

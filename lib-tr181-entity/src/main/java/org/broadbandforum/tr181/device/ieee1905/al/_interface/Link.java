@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.ieee1905.al._interface.link.Metric;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.Interface.{i}.Link.{i}.")
-@XmlRootElement(name = "Link")
+@XmlRootElement(name = "Device.IEEE1905.AL.Interface.Link")
 @XmlType(name = "Device.IEEE1905.AL.Interface.Link")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Link {

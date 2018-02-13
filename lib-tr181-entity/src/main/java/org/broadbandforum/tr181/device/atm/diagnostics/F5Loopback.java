@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.DiagnosticsState;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.ATM.Diagnostics.F5Loopback.")
-@XmlRootElement(name = "F5Loopback")
+@XmlRootElement(name = "Device.ATM.Diagnostics.F5Loopback")
 @XmlType(name = "Device.ATM.Diagnostics.F5Loopback")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class F5Loopback {

@@ -39,7 +39,7 @@ import org.broadbandforum.tr181.datatypes.StatsCounter64;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.WiFi.EndPoint.{i}.AC.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "Device.WiFi.EndPoint.AC.Stats")
 @XmlType(name = "Device.WiFi.EndPoint.AC.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

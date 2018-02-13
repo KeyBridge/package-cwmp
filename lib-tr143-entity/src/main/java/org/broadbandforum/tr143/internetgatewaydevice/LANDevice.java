@@ -36,7 +36,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.landevice.WLANConfiguratio
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.")
-@XmlRootElement(name = "LANDevice")
+@XmlRootElement(name = "InternetGatewayDevice.LANDevice")
 @XmlType(name = "InternetGatewayDevice.LANDevice")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LANDevice {

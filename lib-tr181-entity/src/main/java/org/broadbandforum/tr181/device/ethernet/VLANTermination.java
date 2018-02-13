@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.ethernet.vlantermination.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Ethernet.VLANTermination.{i}.")
-@XmlRootElement(name = "VLANTermination")
+@XmlRootElement(name = "Device.Ethernet.VLANTermination")
 @XmlType(name = "Device.Ethernet.VLANTermination")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VLANTermination {

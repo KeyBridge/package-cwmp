@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.SignalingPerformance.{i}.")
-@XmlRootElement(name = "SignalingPerformance")
+@XmlRootElement(name = "VoiceService.CallLog.SignalingPerformance")
 @XmlType(name = "VoiceService.CallLog.SignalingPerformance")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SignalingPerformance {

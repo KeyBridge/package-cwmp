@@ -36,7 +36,7 @@ import org.broadbandforum.tr135.stbservice.servicemonitoring.mainstream.total.Vi
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Total.")
-@XmlRootElement(name = "Total")
+@XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Total")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.Total")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Total {

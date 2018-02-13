@@ -41,7 +41,7 @@ import org.broadbandforum.tr181.datatypes.UUID;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.SupportedDataModel.{i}.")
-@XmlRootElement(name = "SupportedDataModel")
+@XmlRootElement(name = "Device.DeviceInfo.SupportedDataModel")
 @XmlType(name = "Device.DeviceInfo.SupportedDataModel")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SupportedDataModel {

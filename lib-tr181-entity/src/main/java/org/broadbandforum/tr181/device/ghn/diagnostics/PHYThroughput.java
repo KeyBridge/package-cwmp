@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.device.ghn.diagnostics.phythroughput.Result;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Diagnostics.PHYThroughput.")
-@XmlRootElement(name = "PHYThroughput")
+@XmlRootElement(name = "Device.Ghn.Diagnostics.PHYThroughput")
 @XmlType(name = "Device.Ghn.Diagnostics.PHYThroughput")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PHYThroughput {

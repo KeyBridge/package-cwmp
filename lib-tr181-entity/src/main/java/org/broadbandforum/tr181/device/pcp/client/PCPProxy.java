@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.PCP.Client.{i}.PCPProxy.")
-@XmlRootElement(name = "PCPProxy")
+@XmlRootElement(name = "Device.PCP.Client.PCPProxy")
 @XmlType(name = "Device.PCP.Client.PCPProxy")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PCPProxy {

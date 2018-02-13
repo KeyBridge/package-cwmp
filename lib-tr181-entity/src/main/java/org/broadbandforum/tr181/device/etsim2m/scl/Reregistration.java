@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.etsim2m.scl.reregistration.ActionStatus;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.Reregistration.")
-@XmlRootElement(name = "Reregistration")
+@XmlRootElement(name = "Device.ETSIM2M.SCL.Reregistration")
 @XmlType(name = "Device.ETSIM2M.SCL.Reregistration")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Reregistration {

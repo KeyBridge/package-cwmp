@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.AntennaInfo.")
-@XmlRootElement(name = "AntennaInfo")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY.AntennaInfo")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.PHY.AntennaInfo")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AntennaInfo {

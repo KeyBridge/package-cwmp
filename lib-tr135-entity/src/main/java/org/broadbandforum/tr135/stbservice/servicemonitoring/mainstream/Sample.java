@@ -49,7 +49,7 @@ If no data was collected for a statistic during a sample interval then the value
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Sample.")
-@XmlRootElement(name = "Sample")
+@XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Sample")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.Sample")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Sample {

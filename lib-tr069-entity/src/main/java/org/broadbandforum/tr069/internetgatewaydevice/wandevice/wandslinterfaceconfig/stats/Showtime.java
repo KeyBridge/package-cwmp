@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLInterfaceConfig.Stats.Showtime.")
-@XmlRootElement(name = "Showtime")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig.Stats.Showtime")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig.Stats.Showtime")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Showtime {

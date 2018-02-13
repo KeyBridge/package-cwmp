@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.onex.ran.appim.AP
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.APPIM.")
-@XmlRootElement(name = "APPIM")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.APPIM")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.APPIM")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class APPIM {

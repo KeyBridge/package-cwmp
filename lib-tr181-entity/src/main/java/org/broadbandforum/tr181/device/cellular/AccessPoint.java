@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Cellular.AccessPoint.{i}.")
-@XmlRootElement(name = "AccessPoint")
+@XmlRootElement(name = "Device.Cellular.AccessPoint")
 @XmlType(name = "Device.Cellular.AccessPoint")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AccessPoint {

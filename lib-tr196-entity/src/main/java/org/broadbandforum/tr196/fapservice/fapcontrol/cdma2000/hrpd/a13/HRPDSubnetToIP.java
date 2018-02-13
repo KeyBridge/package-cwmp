@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.HRPD.A13.HRPDSubnetToIP.{i}.")
-@XmlRootElement(name = "HRPDSubnetToIP")
+@XmlRootElement(name = "FAPService.FAPControl.CDMA2000.HRPD.A13.HRPDSubnetToIP")
 @XmlType(name = "FAPService.FAPControl.CDMA2000.HRPD.A13.HRPDSubnetToIP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HRPDSubnetToIP {

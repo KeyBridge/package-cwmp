@@ -38,7 +38,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.phy.ULPowerControl
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.")
-@XmlRootElement(name = "PHY")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.PHY")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PHY {

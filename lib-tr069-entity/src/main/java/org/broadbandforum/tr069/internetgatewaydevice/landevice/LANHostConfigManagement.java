@@ -36,7 +36,7 @@ import org.broadbandforum.tr069.internetgatewaydevice.landevice.lanhostconfigman
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANHostConfigManagement.")
-@XmlRootElement(name = "LANHostConfigManagement")
+@XmlRootElement(name = "InternetGatewayDevice.LANDevice.LANHostConfigManagement")
 @XmlType(name = "InternetGatewayDevice.LANDevice.LANHostConfigManagement")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LANHostConfigManagement {

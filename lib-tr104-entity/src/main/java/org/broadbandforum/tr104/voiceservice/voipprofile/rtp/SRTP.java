@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.RTP.SRTP.")
-@XmlRootElement(name = "SRTP")
+@XmlRootElement(name = "VoiceService.VoIPProfile.RTP.SRTP")
 @XmlType(name = "VoiceService.VoIPProfile.RTP.SRTP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SRTP {

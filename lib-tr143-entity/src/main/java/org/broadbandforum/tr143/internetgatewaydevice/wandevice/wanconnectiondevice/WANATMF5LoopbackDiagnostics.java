@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANATMF5LoopbackDiagnostics.")
-@XmlRootElement(name = "WANATMF5LoopbackDiagnostics")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANATMF5LoopbackDiagnostics")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANATMF5LoopbackDiagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class WANATMF5LoopbackDiagnostics {

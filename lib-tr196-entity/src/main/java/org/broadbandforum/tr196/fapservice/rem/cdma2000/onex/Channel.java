@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.CDMA2000.OneX.Channel.{i}.")
-@XmlRootElement(name = "Channel")
+@XmlRootElement(name = "FAPService.REM.CDMA2000.OneX.Channel")
 @XmlType(name = "FAPService.REM.CDMA2000.OneX.Channel")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Channel {

@@ -36,7 +36,7 @@ import org.broadbandforum.tr262.fap.tunnel.VirtualInterface;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "FAP.Tunnel.")
-@XmlRootElement(name = "Tunnel")
+@XmlRootElement(name = "FAP.Tunnel")
 @XmlType(name = "FAP.Tunnel")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Tunnel {

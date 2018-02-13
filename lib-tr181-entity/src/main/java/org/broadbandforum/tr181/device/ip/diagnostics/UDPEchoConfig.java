@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.UDPEchoConfig.")
-@XmlRootElement(name = "UDPEchoConfig")
+@XmlRootElement(name = "Device.IP.Diagnostics.UDPEchoConfig")
 @XmlType(name = "Device.IP.Diagnostics.UDPEchoConfig")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UDPEchoConfig {

@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.ISDN.PRI.{i}.")
-@XmlRootElement(name = "PRI")
+@XmlRootElement(name = "VoiceService.ISDN.PRI")
 @XmlType(name = "VoiceService.ISDN.PRI")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PRI {

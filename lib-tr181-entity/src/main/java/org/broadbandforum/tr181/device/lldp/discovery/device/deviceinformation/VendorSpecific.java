@@ -34,7 +34,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.DeviceInformation.VendorSpecific.{i}.")
-@XmlRootElement(name = "VendorSpecific")
+@XmlRootElement(name = "Device.LLDP.Discovery.Device.DeviceInformation.VendorSpecific")
 @XmlType(name = "Device.LLDP.Discovery.Device.DeviceInformation.VendorSpecific")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VendorSpecific {

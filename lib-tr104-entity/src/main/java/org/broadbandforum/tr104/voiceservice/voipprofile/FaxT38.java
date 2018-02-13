@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.FaxT38.")
-@XmlRootElement(name = "FaxT38")
+@XmlRootElement(name = "VoiceService.VoIPProfile.FaxT38")
 @XmlType(name = "VoiceService.VoIPProfile.FaxT38")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FaxT38 {

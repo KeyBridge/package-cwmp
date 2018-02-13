@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.CallControlStats.")
-@XmlRootElement(name = "CallControlStats")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD.CallControlStats")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.HRPD.CallControlStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CallControlStats {

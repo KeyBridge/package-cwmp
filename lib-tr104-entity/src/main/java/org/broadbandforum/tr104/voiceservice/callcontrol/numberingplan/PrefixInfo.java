@@ -37,7 +37,7 @@ The defaults given for this object apply only to explicit creation of an instanc
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.NumberingPlan.{i}.PrefixInfo.{i}.")
-@XmlRootElement(name = "PrefixInfo")
+@XmlRootElement(name = "VoiceService.CallControl.NumberingPlan.PrefixInfo")
 @XmlType(name = "VoiceService.CallControl.NumberingPlan.PrefixInfo")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PrefixInfo {

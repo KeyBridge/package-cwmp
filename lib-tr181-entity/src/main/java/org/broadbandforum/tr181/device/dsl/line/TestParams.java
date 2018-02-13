@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.Line.{i}.TestParams.")
-@XmlRootElement(name = "TestParams")
+@XmlRootElement(name = "Device.DSL.Line.TestParams")
 @XmlType(name = "Device.DSL.Line.TestParams")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TestParams {

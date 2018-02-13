@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.ieee8021x.Supplicant;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IEEE8021x.")
-@XmlRootElement(name = "IEEE8021x")
+@XmlRootElement(name = "Device.IEEE8021x")
 @XmlType(name = "Device.IEEE8021x")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IEEE8021x {

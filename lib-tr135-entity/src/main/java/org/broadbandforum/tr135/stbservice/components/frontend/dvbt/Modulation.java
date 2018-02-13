@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.Modulation.")
-@XmlRootElement(name = "Modulation")
+@XmlRootElement(name = "STBService.Components.FrontEnd.DVBT.Modulation")
 @XmlType(name = "STBService.Components.FrontEnd.DVBT.Modulation")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Modulation {

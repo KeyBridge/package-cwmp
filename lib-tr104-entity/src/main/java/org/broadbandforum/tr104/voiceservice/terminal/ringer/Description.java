@@ -33,7 +33,7 @@ The defaults given for this object apply only to explicit creation of an instanc
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Terminal.{i}.Ringer.Description.{i}.")
-@XmlRootElement(name = "Description")
+@XmlRootElement(name = "VoiceService.Terminal.Ringer.Description")
 @XmlType(name = "VoiceService.Terminal.Ringer.Description")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Description {

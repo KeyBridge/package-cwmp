@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.rem.umts.wcdma.cell.bcch.ReferencePos
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.UMTS.WCDMA.Cell.{i}.BCCH.")
-@XmlRootElement(name = "BCCH")
+@XmlRootElement(name = "FAPService.REM.UMTS.WCDMA.Cell.BCCH")
 @XmlType(name = "FAPService.REM.UMTS.WCDMA.Cell.BCCH")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BCCH {

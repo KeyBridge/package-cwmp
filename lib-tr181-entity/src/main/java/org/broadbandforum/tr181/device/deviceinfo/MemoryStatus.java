@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.MemoryStatus.")
-@XmlRootElement(name = "MemoryStatus")
+@XmlRootElement(name = "Device.DeviceInfo.MemoryStatus")
 @XmlType(name = "Device.DeviceInfo.MemoryStatus")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MemoryStatus {

@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.map.Domain;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.MAP.")
-@XmlRootElement(name = "MAP")
+@XmlRootElement(name = "Device.MAP")
 @XmlType(name = "Device.MAP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MAP {

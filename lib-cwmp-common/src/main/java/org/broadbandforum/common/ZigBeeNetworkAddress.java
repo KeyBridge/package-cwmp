@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
 	/**
 	 * The ZigBee 16-bit network address (NWK) as defined in {{bibref|ZigBee2007}}. The address is assigned to a device by the network layer and used by the network layer for routing messages between devices.
 	 */
-@XmlRootElement(name = "ZigBeeNetworkAddress")
+@XmlRootElement(name = "org.broadbandforum.common.ZigBeeNetworkAddress")
 @XmlType(name = "org.broadbandforum.common.ZigBeeNetworkAddress")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ZigBeeNetworkAddress {

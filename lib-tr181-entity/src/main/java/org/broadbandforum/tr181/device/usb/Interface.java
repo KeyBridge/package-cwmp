@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.usb._interface.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.USB.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.USB.Interface")
 @XmlType(name = "Device.USB.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

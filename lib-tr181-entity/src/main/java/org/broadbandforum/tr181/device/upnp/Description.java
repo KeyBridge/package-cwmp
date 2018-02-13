@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.device.upnp.description.ServiceInstance;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.UPnP.Description.")
-@XmlRootElement(name = "Description")
+@XmlRootElement(name = "Device.UPnP.Description")
 @XmlType(name = "Device.UPnP.Description")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Description {

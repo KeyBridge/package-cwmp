@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.NeighborList.{i}.")
-@XmlRootElement(name = "NeighborList")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.NeighborList")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.NeighborList")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NeighborList {

@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.FEC.")
-@XmlRootElement(name = "FEC")
+@XmlRootElement(name = "STBService.Components.FrontEnd.IP.FEC")
 @XmlType(name = "STBService.Components.FrontEnd.IP.FEC")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FEC {

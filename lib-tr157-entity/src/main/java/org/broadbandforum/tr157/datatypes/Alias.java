@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.XmlType;
 
       *The CPE MUST NOT change the parameter value.
 	 */
-@XmlRootElement(name = "Alias")
+@XmlRootElement(name = "org.broadbandforum.tr157.datatypes.Alias")
 @XmlType(name = "org.broadbandforum.tr157.datatypes.Alias")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Alias {

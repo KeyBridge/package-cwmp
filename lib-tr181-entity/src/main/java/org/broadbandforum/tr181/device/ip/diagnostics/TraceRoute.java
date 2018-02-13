@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.ip.diagnostics.traceroute.RouteHops;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.TraceRoute.")
-@XmlRootElement(name = "TraceRoute")
+@XmlRootElement(name = "Device.IP.Diagnostics.TraceRoute")
 @XmlType(name = "Device.IP.Diagnostics.TraceRoute")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TraceRoute {

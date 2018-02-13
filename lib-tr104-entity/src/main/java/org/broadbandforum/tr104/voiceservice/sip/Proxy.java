@@ -32,7 +32,7 @@ import org.broadbandforum.tr104.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.SIP.Proxy.{i}.")
-@XmlRootElement(name = "Proxy")
+@XmlRootElement(name = "VoiceService.SIP.Proxy")
 @XmlType(name = "VoiceService.SIP.Proxy")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Proxy {

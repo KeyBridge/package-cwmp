@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.POTS.FXS.{i}.VoiceProcessing.")
-@XmlRootElement(name = "VoiceProcessing")
+@XmlRootElement(name = "VoiceService.POTS.FXS.VoiceProcessing")
 @XmlType(name = "VoiceService.POTS.FXS.VoiceProcessing")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VoiceProcessing {

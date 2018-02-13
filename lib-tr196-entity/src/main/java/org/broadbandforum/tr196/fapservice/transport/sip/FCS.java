@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.SIP.FCS.")
-@XmlRootElement(name = "FCS")
+@XmlRootElement(name = "FAPService.Transport.SIP.FCS")
 @XmlType(name = "FAPService.Transport.SIP.FCS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FCS {

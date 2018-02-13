@@ -30,7 +30,7 @@ import org.broadbandforum.tr104.voiceservice.calllog.session.destination.dsp.Tra
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.Destination.DSP.")
-@XmlRootElement(name = "DSP")
+@XmlRootElement(name = "VoiceService.CallLog.Session.Destination.DSP")
 @XmlType(name = "VoiceService.CallLog.Session.Destination.DSP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DSP {

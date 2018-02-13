@@ -39,7 +39,7 @@ import org.broadbandforum.tr104.voiceservice.callcontrol.callingfeatures.set.Voi
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.Set.{i}.")
-@XmlRootElement(name = "Set")
+@XmlRootElement(name = "VoiceService.CallControl.CallingFeatures.Set")
 @XmlType(name = "VoiceService.CallControl.CallingFeatures.Set")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Set {

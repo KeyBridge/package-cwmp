@@ -33,7 +33,7 @@ When {{param|#.ContinuousGPS}} is {{false}}, the parameters in this object are n
 	 * @since 1.0
 	 */
 @CWMPObject(name = "FAP.GPS.ContinuousGPSStatus.")
-@XmlRootElement(name = "ContinuousGPSStatus")
+@XmlRootElement(name = "FAP.GPS.ContinuousGPSStatus")
 @XmlType(name = "FAP.GPS.ContinuousGPSStatus")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ContinuousGPSStatus {

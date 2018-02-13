@@ -33,7 +33,7 @@ import org.broadbandforum.tr196.fapservice.transport.Security;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.")
-@XmlRootElement(name = "Transport")
+@XmlRootElement(name = "FAPService.Transport")
 @XmlType(name = "FAPService.Transport")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Transport {

@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.5
 	 */
 @CWMPObject(name = "Device.IPsec.IKEv2SA.{i}.ReceivedCPAttr.{i}.")
-@XmlRootElement(name = "ReceivedCPAttr")
+@XmlRootElement(name = "Device.IPsec.IKEv2SA.ReceivedCPAttr")
 @XmlType(name = "Device.IPsec.IKEv2SA.ReceivedCPAttr")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ReceivedCPAttr {

@@ -33,7 +33,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.wandevice.wandslinterfacec
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLInterfaceConfig.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig.Stats")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

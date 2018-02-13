@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.ProcessStatus.Process.{i}.")
-@XmlRootElement(name = "Process")
+@XmlRootElement(name = "Device.DeviceInfo.ProcessStatus.Process")
 @XmlType(name = "Device.DeviceInfo.ProcessStatus.Process")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Process {

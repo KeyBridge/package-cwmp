@@ -36,7 +36,7 @@ import org.broadbandforum.tr104.voiceservice.pots.Ringer;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.POTS.")
-@XmlRootElement(name = "POTS")
+@XmlRootElement(name = "VoiceService.POTS")
 @XmlType(name = "VoiceService.POTS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class POTS {

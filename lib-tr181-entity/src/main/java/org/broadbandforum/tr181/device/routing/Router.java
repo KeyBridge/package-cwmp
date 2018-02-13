@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.routing.router.IPv6Forwarding;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Routing.Router.{i}.")
-@XmlRootElement(name = "Router")
+@XmlRootElement(name = "Device.Routing.Router")
 @XmlType(name = "Device.Routing.Router")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Router {

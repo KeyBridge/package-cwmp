@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 	 * @since 2.5
 	 */
 @CWMPObject(name = "Device.WiFi.AccessPoint.{i}.Accounting.")
-@XmlRootElement(name = "Accounting")
+@XmlRootElement(name = "Device.WiFi.AccessPoint.Accounting")
 @XmlType(name = "Device.WiFi.AccessPoint.Accounting")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Accounting {

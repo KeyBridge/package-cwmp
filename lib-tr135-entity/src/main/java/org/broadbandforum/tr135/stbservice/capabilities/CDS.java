@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.CDS.")
-@XmlRootElement(name = "CDS")
+@XmlRootElement(name = "STBService.Capabilities.CDS")
 @XmlType(name = "STBService.Capabilities.CDS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CDS {

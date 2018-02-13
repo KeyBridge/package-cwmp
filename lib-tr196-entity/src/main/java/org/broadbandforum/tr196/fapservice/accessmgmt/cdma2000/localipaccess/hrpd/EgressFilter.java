@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.datatypes.IPv4Address;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.CDMA2000.LocalIPAccess.HRPD.EgressFilter.{i}.")
-@XmlRootElement(name = "EgressFilter")
+@XmlRootElement(name = "FAPService.AccessMgmt.CDMA2000.LocalIPAccess.HRPD.EgressFilter")
 @XmlType(name = "FAPService.AccessMgmt.CDMA2000.LocalIPAccess.HRPD.EgressFilter")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EgressFilter {

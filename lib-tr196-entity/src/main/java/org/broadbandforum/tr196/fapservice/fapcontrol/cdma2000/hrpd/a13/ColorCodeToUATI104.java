@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.HRPD.A13.ColorCodeToUATI104.{i}.")
-@XmlRootElement(name = "ColorCodeToUATI104")
+@XmlRootElement(name = "FAPService.FAPControl.CDMA2000.HRPD.A13.ColorCodeToUATI104")
 @XmlType(name = "FAPService.FAPControl.CDMA2000.HRPD.A13.ColorCodeToUATI104")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ColorCodeToUATI104 {

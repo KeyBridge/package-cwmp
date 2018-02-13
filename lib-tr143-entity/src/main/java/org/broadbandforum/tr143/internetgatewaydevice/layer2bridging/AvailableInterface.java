@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.AvailableInterface.{i}.")
-@XmlRootElement(name = "AvailableInterface")
+@XmlRootElement(name = "InternetGatewayDevice.Layer2Bridging.AvailableInterface")
 @XmlType(name = "InternetGatewayDevice.Layer2Bridging.AvailableInterface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AvailableInterface {

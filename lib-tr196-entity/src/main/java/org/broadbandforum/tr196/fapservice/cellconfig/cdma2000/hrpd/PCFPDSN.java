@@ -36,7 +36,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.hrpd.pcfpdsn.PCFP
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.PCFPDSN.{i}.")
-@XmlRootElement(name = "PCFPDSN")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD.PCFPDSN")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.HRPD.PCFPDSN")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PCFPDSN {

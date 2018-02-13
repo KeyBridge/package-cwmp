@@ -42,7 +42,7 @@ import org.broadbandforum.tr181.device.pcp.client.server.inboundmapping.Filter;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.PCP.Client.{i}.Server.{i}.InboundMapping.{i}.")
-@XmlRootElement(name = "InboundMapping")
+@XmlRootElement(name = "Device.PCP.Client.Server.InboundMapping")
 @XmlType(name = "Device.PCP.Client.Server.InboundMapping")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class InboundMapping {

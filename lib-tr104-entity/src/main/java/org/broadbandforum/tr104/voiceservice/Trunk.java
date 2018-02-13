@@ -36,7 +36,7 @@ The {{object}} holds all parameters a CPE needs to set up a trunk connection wit
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Trunk.{i}.")
-@XmlRootElement(name = "Trunk")
+@XmlRootElement(name = "VoiceService.Trunk")
 @XmlType(name = "VoiceService.Trunk")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Trunk {

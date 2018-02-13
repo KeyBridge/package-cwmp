@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkingRegistrar.")
-@XmlRootElement(name = "NetworkingRegistrar")
+@XmlRootElement(name = "Device.IEEE1905.AL.NetworkingRegistrar")
 @XmlType(name = "Device.IEEE1905.AL.NetworkingRegistrar")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NetworkingRegistrar {

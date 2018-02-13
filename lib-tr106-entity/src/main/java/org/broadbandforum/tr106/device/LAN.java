@@ -44,7 +44,7 @@ For a device that contains multiple IP interfaces, the scope of this object is l
 	 * @since 1.0
 	 */
 @CWMPObject(name = "Device.LAN.")
-@XmlRootElement(name = "LAN")
+@XmlRootElement(name = "Device.LAN")
 @XmlType(name = "Device.LAN")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LAN {

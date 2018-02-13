@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANCommonInterfaceConfig.Connection.{i}.")
-@XmlRootElement(name = "Connection")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANCommonInterfaceConfig.Connection")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANCommonInterfaceConfig.Connection")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Connection {

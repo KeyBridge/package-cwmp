@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.QoS.QueueStats.{i}.")
-@XmlRootElement(name = "QueueStats")
+@XmlRootElement(name = "Device.QoS.QueueStats")
 @XmlType(name = "Device.QoS.QueueStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class QueueStats {

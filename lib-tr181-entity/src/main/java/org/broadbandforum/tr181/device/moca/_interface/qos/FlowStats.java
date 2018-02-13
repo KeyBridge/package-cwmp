@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.")
-@XmlRootElement(name = "FlowStats")
+@XmlRootElement(name = "Device.MoCA.Interface.QoS.FlowStats")
 @XmlType(name = "Device.MoCA.Interface.QoS.FlowStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FlowStats {

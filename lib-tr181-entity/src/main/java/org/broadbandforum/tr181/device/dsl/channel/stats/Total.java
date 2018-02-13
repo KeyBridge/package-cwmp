@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.Channel.{i}.Stats.Total.")
-@XmlRootElement(name = "Total")
+@XmlRootElement(name = "Device.DSL.Channel.Stats.Total")
 @XmlType(name = "Device.DSL.Channel.Stats.Total")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Total {

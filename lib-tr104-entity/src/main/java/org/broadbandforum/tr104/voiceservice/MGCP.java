@@ -34,7 +34,7 @@ import org.broadbandforum.tr104.voiceservice.mgcp.Network;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.MGCP.")
-@XmlRootElement(name = "MGCP")
+@XmlRootElement(name = "VoiceService.MGCP")
 @XmlType(name = "VoiceService.MGCP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MGCP {

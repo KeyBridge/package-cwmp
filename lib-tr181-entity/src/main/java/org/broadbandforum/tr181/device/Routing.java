@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.routing.Router;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Routing.")
-@XmlRootElement(name = "Routing")
+@XmlRootElement(name = "Device.Routing")
 @XmlType(name = "Device.Routing")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Routing {

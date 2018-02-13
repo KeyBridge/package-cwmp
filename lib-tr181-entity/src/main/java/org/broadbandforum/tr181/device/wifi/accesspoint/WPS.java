@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.WiFi.AccessPoint.{i}.WPS.")
-@XmlRootElement(name = "WPS")
+@XmlRootElement(name = "Device.WiFi.AccessPoint.WPS")
 @XmlType(name = "Device.WiFi.AccessPoint.WPS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class WPS {

@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.PCFPDSN.{i}.PCFPDSNStats.")
-@XmlRootElement(name = "PCFPDSNStats")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.PCFPDSN.PCFPDSNStats")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.PCFPDSN.PCFPDSNStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PCFPDSNStats {

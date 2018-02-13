@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
 	/**
 	 * Universally Unique Identifier.  See {{bibref|RFC4122}}.
 	 */
-@XmlRootElement(name = "UUID")
+@XmlRootElement(name = "org.broadbandforum.tr069.datatypes.UUID")
 @XmlType(name = "org.broadbandforum.tr069.datatypes.UUID")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UUID {

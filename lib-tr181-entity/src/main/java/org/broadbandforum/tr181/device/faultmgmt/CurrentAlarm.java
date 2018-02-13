@@ -36,7 +36,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FaultMgmt.CurrentAlarm.{i}.")
-@XmlRootElement(name = "CurrentAlarm")
+@XmlRootElement(name = "Device.FaultMgmt.CurrentAlarm")
 @XmlType(name = "Device.FaultMgmt.CurrentAlarm")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CurrentAlarm {

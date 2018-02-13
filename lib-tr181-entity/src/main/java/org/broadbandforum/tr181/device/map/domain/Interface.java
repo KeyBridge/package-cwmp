@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.map.domain._interface.Stats;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.MAP.Domain.{i}.Interface.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.MAP.Domain.Interface")
 @XmlType(name = "Device.MAP.Domain.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

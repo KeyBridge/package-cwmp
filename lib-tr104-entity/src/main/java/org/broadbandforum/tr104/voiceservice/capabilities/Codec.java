@@ -33,7 +33,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.Codec.{i}.")
-@XmlRootElement(name = "Codec")
+@XmlRootElement(name = "VoiceService.Capabilities.Codec")
 @XmlType(name = "VoiceService.Capabilities.Codec")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Codec {

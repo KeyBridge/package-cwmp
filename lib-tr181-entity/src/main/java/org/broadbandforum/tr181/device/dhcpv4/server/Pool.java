@@ -45,7 +45,7 @@ import org.broadbandforum.tr181.device.dhcpv4.server.pool.StaticAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DHCPv4.Server.Pool.{i}.")
-@XmlRootElement(name = "Pool")
+@XmlRootElement(name = "Device.DHCPv4.Server.Pool")
 @XmlType(name = "Device.DHCPv4.Server.Pool")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Pool {

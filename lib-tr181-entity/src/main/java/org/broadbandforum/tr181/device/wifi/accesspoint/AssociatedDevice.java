@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.wifi.accesspoint.associateddevice.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.WiFi.AccessPoint.{i}.AssociatedDevice.{i}.")
-@XmlRootElement(name = "AssociatedDevice")
+@XmlRootElement(name = "Device.WiFi.AccessPoint.AssociatedDevice")
 @XmlType(name = "Device.WiFi.AccessPoint.AssociatedDevice")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AssociatedDevice {

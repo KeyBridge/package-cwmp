@@ -42,7 +42,7 @@ import org.broadbandforum.tr181.device.ipsec.Tunnel;
 	 * @since 2.5
 	 */
 @CWMPObject(name = "Device.IPsec.")
-@XmlRootElement(name = "IPsec")
+@XmlRootElement(name = "Device.IPsec")
 @XmlType(name = "Device.IPsec")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPsec {

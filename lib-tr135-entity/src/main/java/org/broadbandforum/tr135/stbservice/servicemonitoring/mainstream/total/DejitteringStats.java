@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Total.DejitteringStats.")
-@XmlRootElement(name = "DejitteringStats")
+@XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Total.DejitteringStats")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.Total.DejitteringStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DejitteringStats {

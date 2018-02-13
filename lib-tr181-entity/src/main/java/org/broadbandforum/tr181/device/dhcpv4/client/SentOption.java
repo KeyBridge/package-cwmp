@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DHCPv4.Client.{i}.SentOption.{i}.")
-@XmlRootElement(name = "SentOption")
+@XmlRootElement(name = "Device.DHCPv4.Client.SentOption")
 @XmlType(name = "Device.DHCPv4.Client.SentOption")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SentOption {

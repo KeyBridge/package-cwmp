@@ -39,7 +39,7 @@ import org.broadbandforum.tr181.device.atm.link.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.ATM.Link.{i}.")
-@XmlRootElement(name = "Link")
+@XmlRootElement(name = "Device.ATM.Link")
 @XmlType(name = "Device.ATM.Link")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Link {

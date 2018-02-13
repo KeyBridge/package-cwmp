@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.10
 	 */
 @CWMPObject(name = "BulkData.Profile.{i}.JSONEncoding.")
-@XmlRootElement(name = "JSONEncoding")
+@XmlRootElement(name = "BulkData.Profile.JSONEncoding")
 @XmlType(name = "BulkData.Profile.JSONEncoding")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class JSONEncoding {

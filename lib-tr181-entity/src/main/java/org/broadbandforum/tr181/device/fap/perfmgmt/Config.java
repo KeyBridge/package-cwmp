@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.PerfMgmt.Config.{i}.")
-@XmlRootElement(name = "Config")
+@XmlRootElement(name = "Device.FAP.PerfMgmt.Config")
 @XmlType(name = "Device.FAP.PerfMgmt.Config")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Config {

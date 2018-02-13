@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.etsim2m.SCL;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.")
-@XmlRootElement(name = "ETSIM2M")
+@XmlRootElement(name = "Device.ETSIM2M")
 @XmlType(name = "Device.ETSIM2M")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ETSIM2M {

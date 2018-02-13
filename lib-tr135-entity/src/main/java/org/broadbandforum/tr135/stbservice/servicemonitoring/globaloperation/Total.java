@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.GlobalOperation.Total.")
-@XmlRootElement(name = "Total")
+@XmlRootElement(name = "STBService.ServiceMonitoring.GlobalOperation.Total")
 @XmlType(name = "STBService.ServiceMonitoring.GlobalOperation.Total")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Total {

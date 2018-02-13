@@ -32,7 +32,7 @@ The service list database is in {{object|.Components.FrontEnd.{i}.DVBT.ServiceLi
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.Install.")
-@XmlRootElement(name = "Install")
+@XmlRootElement(name = "STBService.Components.FrontEnd.DVBT.Install")
 @XmlType(name = "STBService.Components.FrontEnd.DVBT.Install")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Install {

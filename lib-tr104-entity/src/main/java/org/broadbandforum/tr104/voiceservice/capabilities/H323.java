@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.H323.")
-@XmlRootElement(name = "H323")
+@XmlRootElement(name = "VoiceService.Capabilities.H323")
 @XmlType(name = "VoiceService.Capabilities.H323")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class H323 {

@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.IEEE_EUI64;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.Security.")
-@XmlRootElement(name = "Security")
+@XmlRootElement(name = "Device.ZigBee.ZDO.Security")
 @XmlType(name = "Device.ZigBee.ZDO.Security")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Security {

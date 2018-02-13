@@ -32,7 +32,7 @@ import org.broadbandforum.tr104.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.SIP.Network.{i}.FQDNServer.{i}.")
-@XmlRootElement(name = "FQDNServer")
+@XmlRootElement(name = "VoiceService.SIP.Network.FQDNServer")
 @XmlType(name = "VoiceService.SIP.Network.FQDNServer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FQDNServer {

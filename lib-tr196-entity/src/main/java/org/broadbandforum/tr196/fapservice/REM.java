@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.rem.UMTS;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.")
-@XmlRootElement(name = "REM")
+@XmlRootElement(name = "FAPService.REM")
 @XmlType(name = "FAPService.REM")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class REM {

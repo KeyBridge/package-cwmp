@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.gre.tunnel._interface.Stats;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.GRE.Tunnel.{i}.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.GRE.Tunnel.Interface")
 @XmlType(name = "Device.GRE.Tunnel.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

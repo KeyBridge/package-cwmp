@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.ApplicationPlatform.Control.FemtoAwareness.")
-@XmlRootElement(name = "FemtoAwareness")
+@XmlRootElement(name = "Device.FAP.ApplicationPlatform.Control.FemtoAwareness")
 @XmlType(name = "Device.FAP.ApplicationPlatform.Control.FemtoAwareness")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class FemtoAwareness {

@@ -29,7 +29,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.capabilities.PerformanceDi
 	 * @since 1.3
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Capabilities.")
-@XmlRootElement(name = "Capabilities")
+@XmlRootElement(name = "InternetGatewayDevice.Capabilities")
 @XmlType(name = "InternetGatewayDevice.Capabilities")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Capabilities {

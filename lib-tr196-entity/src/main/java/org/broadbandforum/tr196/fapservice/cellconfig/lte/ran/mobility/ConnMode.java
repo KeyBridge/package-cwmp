@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.connmode.
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.ConnMode.")
-@XmlRootElement(name = "ConnMode")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.ConnMode")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility.ConnMode")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ConnMode {

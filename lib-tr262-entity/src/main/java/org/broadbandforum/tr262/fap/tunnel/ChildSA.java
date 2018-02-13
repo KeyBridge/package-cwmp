@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "FAP.Tunnel.ChildSA.{i}.")
-@XmlRootElement(name = "ChildSA")
+@XmlRootElement(name = "FAP.Tunnel.ChildSA")
 @XmlType(name = "FAP.Tunnel.ChildSA")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ChildSA {

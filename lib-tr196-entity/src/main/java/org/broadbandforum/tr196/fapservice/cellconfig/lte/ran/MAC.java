@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mac.ULSCH;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.MAC.")
-@XmlRootElement(name = "MAC")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.MAC")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.MAC")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MAC {

@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.ApplicationEndpoint.{i}.SimpleDescriptor.")
-@XmlRootElement(name = "SimpleDescriptor")
+@XmlRootElement(name = "Device.ZigBee.ZDO.ApplicationEndpoint.SimpleDescriptor")
 @XmlType(name = "Device.ZigBee.ZDO.ApplicationEndpoint.SimpleDescriptor")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SimpleDescriptor {

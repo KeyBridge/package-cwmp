@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.FrontEnd.DVBT.")
-@XmlRootElement(name = "DVBT")
+@XmlRootElement(name = "STBService.Capabilities.FrontEnd.DVBT")
 @XmlType(name = "STBService.Capabilities.FrontEnd.DVBT")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DVBT {

@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.ForwardingTable.ForwardingRule.{i}.")
-@XmlRootElement(name = "ForwardingRule")
+@XmlRootElement(name = "Device.IEEE1905.AL.ForwardingTable.ForwardingRule")
 @XmlType(name = "Device.IEEE1905.AL.ForwardingTable.ForwardingRule")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ForwardingRule {

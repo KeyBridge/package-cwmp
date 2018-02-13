@@ -35,7 +35,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.idlemode.
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.IRAT.UTRA.")
-@XmlRootElement(name = "UTRA")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.IRAT.UTRA")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.IRAT.UTRA")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class UTRA {

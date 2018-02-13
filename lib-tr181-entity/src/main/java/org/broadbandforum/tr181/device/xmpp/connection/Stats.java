@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.XMPP.Connection.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "Device.XMPP.Connection.Stats")
 @XmlType(name = "Device.XMPP.Connection.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

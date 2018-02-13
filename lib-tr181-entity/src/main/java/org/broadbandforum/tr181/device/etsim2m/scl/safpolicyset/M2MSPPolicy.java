@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.m2msppolicy.Requ
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.M2MSPPolicy.")
-@XmlRootElement(name = "M2MSPPolicy")
+@XmlRootElement(name = "Device.ETSIM2M.SCL.SAFPolicySet.M2MSPPolicy")
 @XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet.M2MSPPolicy")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class M2MSPPolicy {

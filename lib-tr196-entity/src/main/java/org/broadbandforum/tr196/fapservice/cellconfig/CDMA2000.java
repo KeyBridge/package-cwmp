@@ -33,7 +33,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.OneX;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.")
-@XmlRootElement(name = "CDMA2000")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000")
 @XmlType(name = "FAPService.CellConfig.CDMA2000")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CDMA2000 {

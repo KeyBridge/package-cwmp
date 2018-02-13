@@ -40,7 +40,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.GRE.Filter.{i}.")
-@XmlRootElement(name = "Filter")
+@XmlRootElement(name = "Device.GRE.Filter")
 @XmlType(name = "Device.GRE.Filter")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Filter {

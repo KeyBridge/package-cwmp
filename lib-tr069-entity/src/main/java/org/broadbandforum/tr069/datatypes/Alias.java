@@ -34,7 +34,7 @@ If the CPE supports the Alias-based Addressing feature as defined in {{bibref|TR
 
 *The CPE MUST NOT change the parameter value.
 	 */
-@XmlRootElement(name = "Alias")
+@XmlRootElement(name = "org.broadbandforum.tr069.datatypes.Alias")
 @XmlType(name = "org.broadbandforum.tr069.datatypes.Alias")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Alias {

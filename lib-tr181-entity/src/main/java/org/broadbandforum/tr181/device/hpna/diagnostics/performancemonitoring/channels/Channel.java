@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Channels.Channel.{i}.")
-@XmlRootElement(name = "Channel")
+@XmlRootElement(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Channels.Channel")
 @XmlType(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Channels.Channel")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Channel {

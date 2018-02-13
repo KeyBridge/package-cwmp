@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.ClockSynchronization.ClockSource.{i}.")
-@XmlRootElement(name = "ClockSource")
+@XmlRootElement(name = "VoiceService.ClockSynchronization.ClockSource")
 @XmlType(name = "VoiceService.ClockSynchronization.ClockSource")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ClockSource {

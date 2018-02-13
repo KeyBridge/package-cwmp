@@ -31,7 +31,7 @@ import org.broadbandforum.tr069.datatypes.IPAddress;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding.{i}.")
-@XmlRootElement(name = "Forwarding")
+@XmlRootElement(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding")
 @XmlType(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Forwarding {

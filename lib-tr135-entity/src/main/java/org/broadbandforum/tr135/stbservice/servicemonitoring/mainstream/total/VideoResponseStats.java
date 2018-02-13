@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Total.VideoResponseStats.")
-@XmlRootElement(name = "VideoResponseStats")
+@XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Total.VideoResponseStats")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.Total.VideoResponseStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VideoResponseStats {

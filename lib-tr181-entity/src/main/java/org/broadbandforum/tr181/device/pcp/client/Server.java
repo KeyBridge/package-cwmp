@@ -40,7 +40,7 @@ import org.broadbandforum.tr181.device.pcp.client.server.OutboundMapping;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.PCP.Client.{i}.Server.{i}.")
-@XmlRootElement(name = "Server")
+@XmlRootElement(name = "Device.PCP.Client.Server")
 @XmlType(name = "Device.PCP.Client.Server")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Server {

@@ -41,7 +41,7 @@ Note that some parameters, e.g. {{param|.Components.FrontEnd.{i}.IP.ServiceConne
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.")
-@XmlRootElement(name = "MainStream")
+@XmlRootElement(name = "STBService.ServiceMonitoring.MainStream")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MainStream {

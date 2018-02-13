@@ -26,7 +26,7 @@ import org.broadbandforum.common.IPAddress;
 
 Can be any IPv4 address that is permitted by the ''IPAddress'' data type.
 	 */
-@XmlRootElement(name = "IPv4Address")
+@XmlRootElement(name = "org.broadbandforum.common.IPv4Address")
 @XmlType(name = "org.broadbandforum.common.IPv4Address")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPv4Address extends IPAddress {

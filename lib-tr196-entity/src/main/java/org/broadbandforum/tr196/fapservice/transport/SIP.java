@@ -32,7 +32,7 @@ SIP is defined in {{bibref|RFC3261}}.
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.SIP.")
-@XmlRootElement(name = "SIP")
+@XmlRootElement(name = "FAPService.Transport.SIP")
 @XmlType(name = "FAPService.Transport.SIP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SIP {

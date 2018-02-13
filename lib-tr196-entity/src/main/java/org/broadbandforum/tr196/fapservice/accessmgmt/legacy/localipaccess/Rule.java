@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.Legacy.LocalIPAccess.Rule.{i}.")
-@XmlRootElement(name = "Rule")
+@XmlRootElement(name = "FAPService.AccessMgmt.Legacy.LocalIPAccess.Rule")
 @XmlType(name = "FAPService.AccessMgmt.Legacy.LocalIPAccess.Rule")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Rule {

@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.UMTS.LocalIPAccess.")
-@XmlRootElement(name = "LocalIPAccess")
+@XmlRootElement(name = "FAPService.AccessMgmt.UMTS.LocalIPAccess")
 @XmlType(name = "FAPService.AccessMgmt.UMTS.LocalIPAccess")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LocalIPAccess {

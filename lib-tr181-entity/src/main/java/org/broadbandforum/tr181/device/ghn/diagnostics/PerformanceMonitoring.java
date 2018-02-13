@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.ghn.diagnostics.performancemonitoring.Nod
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.")
-@XmlRootElement(name = "PerformanceMonitoring")
+@XmlRootElement(name = "Device.Ghn.Diagnostics.PerformanceMonitoring")
 @XmlType(name = "Device.Ghn.Diagnostics.PerformanceMonitoring")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PerformanceMonitoring {

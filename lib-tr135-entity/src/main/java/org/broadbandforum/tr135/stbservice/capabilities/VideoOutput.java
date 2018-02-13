@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.VideoOutput.")
-@XmlRootElement(name = "VideoOutput")
+@XmlRootElement(name = "STBService.Capabilities.VideoOutput")
 @XmlType(name = "STBService.Capabilities.VideoOutput")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VideoOutput {

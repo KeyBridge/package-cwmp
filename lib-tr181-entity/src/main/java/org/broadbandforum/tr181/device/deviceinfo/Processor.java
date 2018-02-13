@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "Device.DeviceInfo.Processor.{i}.")
-@XmlRootElement(name = "Processor")
+@XmlRootElement(name = "Device.DeviceInfo.Processor")
 @XmlType(name = "Device.DeviceInfo.Processor")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Processor {

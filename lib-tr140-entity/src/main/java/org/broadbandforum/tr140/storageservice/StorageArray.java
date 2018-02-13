@@ -36,7 +36,7 @@ Creating an instance of this object generates a disabled {{object}} instance.  B
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.StorageArray.{i}.")
-@XmlRootElement(name = "StorageArray")
+@XmlRootElement(name = "StorageService.StorageArray")
 @XmlType(name = "StorageService.StorageArray")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class StorageArray {

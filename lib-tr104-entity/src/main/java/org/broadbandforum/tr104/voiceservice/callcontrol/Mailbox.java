@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Mailbox.{i}.")
-@XmlRootElement(name = "Mailbox")
+@XmlRootElement(name = "VoiceService.CallControl.Mailbox")
 @XmlType(name = "VoiceService.CallControl.Mailbox")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Mailbox {

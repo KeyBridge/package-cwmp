@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.APPIM.APPIREC.{i}.")
-@XmlRootElement(name = "APPIREC")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.APPIM.APPIREC")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.APPIM.APPIREC")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class APPIREC {

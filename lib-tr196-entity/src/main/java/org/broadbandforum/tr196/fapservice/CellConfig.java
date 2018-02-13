@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.UMTS;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.")
-@XmlRootElement(name = "CellConfig")
+@XmlRootElement(name = "FAPService.CellConfig")
 @XmlType(name = "FAPService.CellConfig")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CellConfig {

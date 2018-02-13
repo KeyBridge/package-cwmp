@@ -35,7 +35,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.intrafreqmeas.Ins
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.IntraFreqMeas.")
-@XmlRootElement(name = "IntraFreqMeas")
+@XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.IntraFreqMeas")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.IntraFreqMeas")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IntraFreqMeas {

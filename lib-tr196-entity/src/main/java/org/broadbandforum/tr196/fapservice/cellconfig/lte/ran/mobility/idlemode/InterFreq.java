@@ -33,7 +33,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.idlemode.
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq.")
-@XmlRootElement(name = "InterFreq")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class InterFreq {

@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.MoCA.Interface.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "Device.MoCA.Interface.Stats")
 @XmlType(name = "Device.MoCA.Interface.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

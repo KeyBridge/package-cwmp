@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Time.")
-@XmlRootElement(name = "Time")
+@XmlRootElement(name = "InternetGatewayDevice.Time")
 @XmlType(name = "InternetGatewayDevice.Time")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Time {

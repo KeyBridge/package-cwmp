@@ -37,7 +37,7 @@ Creating an instance of this object generates a disabled {{object}} instance.  B
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.LogicalVolume.{i}.")
-@XmlRootElement(name = "LogicalVolume")
+@XmlRootElement(name = "StorageService.LogicalVolume")
 @XmlType(name = "StorageService.LogicalVolume")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LogicalVolume {

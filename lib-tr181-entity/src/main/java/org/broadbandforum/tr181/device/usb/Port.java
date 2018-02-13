@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.USB.Port.{i}.")
-@XmlRootElement(name = "Port")
+@XmlRootElement(name = "Device.USB.Port")
 @XmlType(name = "Device.USB.Port")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Port {

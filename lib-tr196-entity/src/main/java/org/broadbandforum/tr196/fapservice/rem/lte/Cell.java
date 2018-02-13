@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.rem.lte.cell.RF;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.LTE.Cell.{i}.")
-@XmlRootElement(name = "Cell")
+@XmlRootElement(name = "FAPService.REM.LTE.Cell")
 @XmlType(name = "FAPService.REM.LTE.Cell")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Cell {

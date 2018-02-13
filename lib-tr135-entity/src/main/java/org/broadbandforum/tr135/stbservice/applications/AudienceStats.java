@@ -33,7 +33,7 @@ import org.broadbandforum.tr135.stbservice.applications.audiencestats.Channel;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Applications.AudienceStats.")
-@XmlRootElement(name = "AudienceStats")
+@XmlRootElement(name = "STBService.Applications.AudienceStats")
 @XmlType(name = "STBService.Applications.AudienceStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AudienceStats {

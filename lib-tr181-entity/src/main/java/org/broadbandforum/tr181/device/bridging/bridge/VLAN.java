@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Bridging.Bridge.{i}.VLAN.{i}.")
-@XmlRootElement(name = "VLAN")
+@XmlRootElement(name = "Device.Bridging.Bridge.VLAN")
 @XmlType(name = "Device.Bridging.Bridge.VLAN")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VLAN {

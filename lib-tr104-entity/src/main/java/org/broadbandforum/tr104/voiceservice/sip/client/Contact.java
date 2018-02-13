@@ -33,7 +33,7 @@ import org.broadbandforum.tr104.datatypes.IPAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.SIP.Client.{i}.Contact.{i}.")
-@XmlRootElement(name = "Contact")
+@XmlRootElement(name = "VoiceService.SIP.Client.Contact")
 @XmlType(name = "VoiceService.SIP.Client.Contact")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Contact {

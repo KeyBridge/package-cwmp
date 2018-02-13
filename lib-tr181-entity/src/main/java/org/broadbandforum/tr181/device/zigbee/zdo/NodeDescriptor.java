@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.NodeDescriptor.")
-@XmlRootElement(name = "NodeDescriptor")
+@XmlRootElement(name = "Device.ZigBee.ZDO.NodeDescriptor")
 @XmlType(name = "Device.ZigBee.ZDO.NodeDescriptor")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class NodeDescriptor {

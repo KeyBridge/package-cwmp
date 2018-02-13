@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UPA.Interface.{i}.BridgeFor.{i}.")
-@XmlRootElement(name = "BridgeFor")
+@XmlRootElement(name = "Device.UPA.Interface.BridgeFor")
 @XmlType(name = "Device.UPA.Interface.BridgeFor")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BridgeFor {

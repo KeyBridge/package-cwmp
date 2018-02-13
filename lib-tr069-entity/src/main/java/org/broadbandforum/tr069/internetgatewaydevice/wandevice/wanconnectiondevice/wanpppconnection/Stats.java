@@ -30,7 +30,7 @@ This object is required for all ''WANConnectionDevice''s that can support an Eth
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPPPConnection.Stats")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPPPConnection.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

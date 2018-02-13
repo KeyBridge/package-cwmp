@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UserInterface.LocalDisplay.")
-@XmlRootElement(name = "LocalDisplay")
+@XmlRootElement(name = "Device.UserInterface.LocalDisplay")
 @XmlType(name = "Device.UserInterface.LocalDisplay")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LocalDisplay {

@@ -31,7 +31,7 @@ import org.broadbandforum.tr140.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.PhysicalMedium.{i}.")
-@XmlRootElement(name = "PhysicalMedium")
+@XmlRootElement(name = "StorageService.PhysicalMedium")
 @XmlType(name = "StorageService.PhysicalMedium")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PhysicalMedium {

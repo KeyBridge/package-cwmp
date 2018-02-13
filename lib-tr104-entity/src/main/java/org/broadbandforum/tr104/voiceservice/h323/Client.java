@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.H323.Client.{i}.")
-@XmlRootElement(name = "Client")
+@XmlRootElement(name = "VoiceService.H323.Client")
 @XmlType(name = "VoiceService.H323.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Client {

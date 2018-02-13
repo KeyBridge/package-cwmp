@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.dhcpv4.relay.Forwarding;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DHCPv4.Relay.")
-@XmlRootElement(name = "Relay")
+@XmlRootElement(name = "Device.DHCPv4.Relay")
 @XmlType(name = "Device.DHCPv4.Relay")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Relay {

@@ -31,7 +31,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.CA.{i}.")
-@XmlRootElement(name = "CA")
+@XmlRootElement(name = "STBService.Components.CA")
 @XmlType(name = "STBService.Components.CA")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CA {

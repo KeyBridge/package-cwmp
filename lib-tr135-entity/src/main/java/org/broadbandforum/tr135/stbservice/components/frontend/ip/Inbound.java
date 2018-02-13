@@ -32,7 +32,7 @@ import org.broadbandforum.tr135.datatypes.IPAddress;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.Inbound.{i}.")
-@XmlRootElement(name = "Inbound")
+@XmlRootElement(name = "STBService.Components.FrontEnd.IP.Inbound")
 @XmlType(name = "STBService.Components.FrontEnd.IP.Inbound")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Inbound {

@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6Address.{i}.")
-@XmlRootElement(name = "IPv6Address")
+@XmlRootElement(name = "Device.DHCPv6.Server.Pool.Client.IPv6Address")
 @XmlType(name = "Device.DHCPv6.Server.Pool.Client.IPv6Address")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class IPv6Address {

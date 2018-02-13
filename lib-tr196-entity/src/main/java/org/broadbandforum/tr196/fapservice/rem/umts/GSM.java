@@ -36,7 +36,7 @@ import org.broadbandforum.tr196.fapservice.rem.umts.gsm.Cell;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.UMTS.GSM.")
-@XmlRootElement(name = "GSM")
+@XmlRootElement(name = "FAPService.REM.UMTS.GSM")
 @XmlType(name = "FAPService.REM.UMTS.GSM")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class GSM {

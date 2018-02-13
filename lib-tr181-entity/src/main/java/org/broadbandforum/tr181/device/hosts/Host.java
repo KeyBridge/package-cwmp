@@ -38,7 +38,7 @@ import org.broadbandforum.tr181.device.hosts.host.IPv6Address;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Hosts.Host.{i}.")
-@XmlRootElement(name = "Host")
+@XmlRootElement(name = "Device.Hosts.Host")
 @XmlType(name = "Device.Hosts.Host")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Host {

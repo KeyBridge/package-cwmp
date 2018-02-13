@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.10
 	 */
 @CWMPObject(name = "Device.MQTT.Client.{i}.Subscription.{i}.")
-@XmlRootElement(name = "Subscription")
+@XmlRootElement(name = "Device.MQTT.Client.Subscription")
 @XmlType(name = "Device.MQTT.Client.Subscription")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Subscription {

@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.datatypes.DiagnosticsState;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UPA.Diagnostics.InterfaceMeasurement.")
-@XmlRootElement(name = "InterfaceMeasurement")
+@XmlRootElement(name = "Device.UPA.Diagnostics.InterfaceMeasurement")
 @XmlType(name = "Device.UPA.Diagnostics.InterfaceMeasurement")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class InterfaceMeasurement {

@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Sample.AudioDecoderStats.")
-@XmlRootElement(name = "AudioDecoderStats")
+@XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Sample.AudioDecoderStats")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.Sample.AudioDecoderStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AudioDecoderStats {

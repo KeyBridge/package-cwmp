@@ -34,7 +34,7 @@ import org.broadbandforum.tr106.device.lan.traceroutediagnostics.RouteHops;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "Device.LAN.TraceRouteDiagnostics.")
-@XmlRootElement(name = "TraceRouteDiagnostics")
+@XmlRootElement(name = "Device.LAN.TraceRouteDiagnostics")
 @XmlType(name = "Device.LAN.TraceRouteDiagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TraceRouteDiagnostics {

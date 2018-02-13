@@ -34,7 +34,7 @@ import org.broadbandforum.tr104.voiceservice.tone.eventprofile.Event;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Tone.EventProfile.{i}.")
-@XmlRootElement(name = "EventProfile")
+@XmlRootElement(name = "VoiceService.Tone.EventProfile")
 @XmlType(name = "VoiceService.Tone.EventProfile")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EventProfile {

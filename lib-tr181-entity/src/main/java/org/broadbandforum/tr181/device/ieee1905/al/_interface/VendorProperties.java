@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.Interface.{i}.VendorProperties.{i}.")
-@XmlRootElement(name = "VendorProperties")
+@XmlRootElement(name = "Device.IEEE1905.AL.Interface.VendorProperties")
 @XmlType(name = "Device.IEEE1905.AL.Interface.VendorProperties")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VendorProperties {

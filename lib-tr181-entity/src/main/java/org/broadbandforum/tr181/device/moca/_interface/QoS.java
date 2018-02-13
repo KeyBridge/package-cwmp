@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.moca._interface.qos.FlowStats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.MoCA.Interface.{i}.QoS.")
-@XmlRootElement(name = "QoS")
+@XmlRootElement(name = "Device.MoCA.Interface.QoS")
 @XmlType(name = "Device.MoCA.Interface.QoS")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class QoS {

@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.DRM.")
-@XmlRootElement(name = "DRM")
+@XmlRootElement(name = "STBService.Capabilities.DRM")
 @XmlType(name = "STBService.Capabilities.DRM")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DRM {

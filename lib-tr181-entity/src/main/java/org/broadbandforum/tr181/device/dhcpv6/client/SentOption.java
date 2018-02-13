@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.DHCPv6.Client.{i}.SentOption.{i}.")
-@XmlRootElement(name = "SentOption")
+@XmlRootElement(name = "Device.DHCPv6.Client.SentOption")
 @XmlType(name = "Device.DHCPv6.Client.SentOption")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class SentOption {

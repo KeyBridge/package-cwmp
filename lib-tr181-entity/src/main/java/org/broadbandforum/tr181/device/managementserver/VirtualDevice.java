@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.3
 	 */
 @CWMPObject(name = "Device.ManagementServer.VirtualDevice.{i}.")
-@XmlRootElement(name = "VirtualDevice")
+@XmlRootElement(name = "Device.ManagementServer.VirtualDevice")
 @XmlType(name = "Device.ManagementServer.VirtualDevice")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class VirtualDevice {

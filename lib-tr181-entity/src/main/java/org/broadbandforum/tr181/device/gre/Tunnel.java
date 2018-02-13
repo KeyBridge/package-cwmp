@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.device.gre.tunnel.Stats;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.GRE.Tunnel.{i}.")
-@XmlRootElement(name = "Tunnel")
+@XmlRootElement(name = "Device.GRE.Tunnel")
 @XmlType(name = "Device.GRE.Tunnel")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Tunnel {

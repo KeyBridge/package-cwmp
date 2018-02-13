@@ -38,7 +38,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.wandevice.WANEthernetInter
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.")
-@XmlRootElement(name = "WANDevice")
+@XmlRootElement(name = "InternetGatewayDevice.WANDevice")
 @XmlType(name = "InternetGatewayDevice.WANDevice")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class WANDevice {

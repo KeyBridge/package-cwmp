@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.10
 	 */
 @CWMPObject(name = "Device.BulkData.Profile.{i}.HTTP.RequestURIParameter.{i}.")
-@XmlRootElement(name = "RequestURIParameter")
+@XmlRootElement(name = "Device.BulkData.Profile.HTTP.RequestURIParameter")
 @XmlType(name = "Device.BulkData.Profile.HTTP.RequestURIParameter")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RequestURIParameter {

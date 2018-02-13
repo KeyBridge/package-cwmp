@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.UPnP.Description.ServiceInstance.{i}.")
-@XmlRootElement(name = "ServiceInstance")
+@XmlRootElement(name = "Device.UPnP.Description.ServiceInstance")
 @XmlType(name = "Device.UPnP.Description.ServiceInstance")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ServiceInstance {

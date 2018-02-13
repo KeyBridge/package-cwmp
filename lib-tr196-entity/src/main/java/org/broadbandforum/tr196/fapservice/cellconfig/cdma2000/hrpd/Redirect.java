@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.Redirect.")
-@XmlRootElement(name = "Redirect")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD.Redirect")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.HRPD.Redirect")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Redirect {

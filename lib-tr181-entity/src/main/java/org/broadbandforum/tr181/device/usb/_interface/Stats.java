@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.USB.Interface.{i}.Stats.")
-@XmlRootElement(name = "Stats")
+@XmlRootElement(name = "Device.USB.Interface.Stats")
 @XmlType(name = "Device.USB.Interface.Stats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {

@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ManagementServer.StandbyPolicy.")
-@XmlRootElement(name = "StandbyPolicy")
+@XmlRootElement(name = "Device.ManagementServer.StandbyPolicy")
 @XmlType(name = "Device.ManagementServer.StandbyPolicy")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class StandbyPolicy {

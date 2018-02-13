@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.OutgoingMap.{i}.")
-@XmlRootElement(name = "OutgoingMap")
+@XmlRootElement(name = "VoiceService.CallControl.OutgoingMap")
 @XmlType(name = "VoiceService.CallControl.OutgoingMap")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class OutgoingMap {

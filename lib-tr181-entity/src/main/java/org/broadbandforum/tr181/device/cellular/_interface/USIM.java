@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Cellular.Interface.{i}.USIM.")
-@XmlRootElement(name = "USIM")
+@XmlRootElement(name = "Device.Cellular.Interface.USIM")
 @XmlType(name = "Device.Cellular.Interface.USIM")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class USIM {

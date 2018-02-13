@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.device.pcp.Client;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.PCP.")
-@XmlRootElement(name = "PCP")
+@XmlRootElement(name = "Device.PCP")
 @XmlType(name = "Device.PCP")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class PCP {

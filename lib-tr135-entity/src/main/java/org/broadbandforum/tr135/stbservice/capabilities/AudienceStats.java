@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.AudienceStats.")
-@XmlRootElement(name = "AudienceStats")
+@XmlRootElement(name = "STBService.Capabilities.AudienceStats")
 @XmlType(name = "STBService.Capabilities.AudienceStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AudienceStats {

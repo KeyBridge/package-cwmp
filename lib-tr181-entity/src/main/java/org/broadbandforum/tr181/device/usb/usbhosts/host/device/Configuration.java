@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.usb.usbhosts.host.device.configuration.In
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.USB.USBHosts.Host.{i}.Device.{i}.Configuration.{i}.")
-@XmlRootElement(name = "Configuration")
+@XmlRootElement(name = "Device.USB.USBHosts.Host.Device.Configuration")
 @XmlType(name = "Device.USB.USBHosts.Host.Device.Configuration")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Configuration {

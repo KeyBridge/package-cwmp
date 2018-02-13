@@ -37,7 +37,7 @@ Log entries are persisted across reboots of the CPE.
 	 * @since 1.4
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.EventLog.")
-@XmlRootElement(name = "EventLog")
+@XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.EventLog")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.EventLog")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EventLog {

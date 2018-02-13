@@ -40,7 +40,7 @@ import org.broadbandforum.tr181.device.ip.diagnostics.downloaddiagnostics.PerCon
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.DownloadDiagnostics.")
-@XmlRootElement(name = "DownloadDiagnostics")
+@XmlRootElement(name = "Device.IP.Diagnostics.DownloadDiagnostics")
 @XmlType(name = "Device.IP.Diagnostics.DownloadDiagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DownloadDiagnostics {

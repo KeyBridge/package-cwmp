@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq.Carrier.{i}.")
-@XmlRootElement(name = "Carrier")
+@XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq.Carrier")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq.Carrier")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Carrier {

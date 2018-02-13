@@ -42,7 +42,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.hrpd.Redirect;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.")
-@XmlRootElement(name = "HRPD")
+@XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.HRPD")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class HRPD {

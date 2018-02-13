@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.ANPPolicy.{i}.RequestCategory.{i}.Schedule.{i}.AbsTimeSpan.{i}.")
-@XmlRootElement(name = "AbsTimeSpan")
+@XmlRootElement(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.RequestCategory.Schedule.AbsTimeSpan")
 @XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.RequestCategory.Schedule.AbsTimeSpan")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AbsTimeSpan {

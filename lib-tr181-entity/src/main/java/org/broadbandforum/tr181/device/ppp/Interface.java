@@ -39,7 +39,7 @@ import org.broadbandforum.tr181.device.ppp._interface.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.PPP.Interface.{i}.")
-@XmlRootElement(name = "Interface")
+@XmlRootElement(name = "Device.PPP.Interface")
 @XmlType(name = "Device.PPP.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Interface {

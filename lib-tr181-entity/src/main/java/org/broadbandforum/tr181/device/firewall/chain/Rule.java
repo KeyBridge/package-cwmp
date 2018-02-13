@@ -40,7 +40,7 @@ import org.broadbandforum.tr181.datatypes.IPPrefix;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.Firewall.Chain.{i}.Rule.{i}.")
-@XmlRootElement(name = "Rule")
+@XmlRootElement(name = "Device.Firewall.Chain.Rule")
 @XmlType(name = "Device.Firewall.Chain.Rule")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Rule {

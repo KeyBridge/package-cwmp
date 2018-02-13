@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.ServerSelectionDiagnostics.")
-@XmlRootElement(name = "ServerSelectionDiagnostics")
+@XmlRootElement(name = "Device.IP.Diagnostics.ServerSelectionDiagnostics")
 @XmlType(name = "Device.IP.Diagnostics.ServerSelectionDiagnostics")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ServerSelectionDiagnostics {

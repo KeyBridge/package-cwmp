@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.LogicalChannelConnect.")
-@XmlRootElement(name = "LogicalChannelConnect")
+@XmlRootElement(name = "STBService.Components.FrontEnd.DVBT.LogicalChannelConnect")
 @XmlType(name = "STBService.Components.FrontEnd.DVBT.LogicalChannelConnect")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class LogicalChannelConnect {

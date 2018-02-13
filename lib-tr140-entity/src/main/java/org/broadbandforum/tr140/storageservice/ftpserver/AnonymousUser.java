@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.FTPServer.AnonymousUser.")
-@XmlRootElement(name = "AnonymousUser")
+@XmlRootElement(name = "StorageService.FTPServer.AnonymousUser")
 @XmlType(name = "StorageService.FTPServer.AnonymousUser")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class AnonymousUser {

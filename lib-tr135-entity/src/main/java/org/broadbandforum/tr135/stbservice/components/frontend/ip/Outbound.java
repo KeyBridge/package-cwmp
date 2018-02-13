@@ -31,7 +31,7 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.Outbound.{i}.")
-@XmlRootElement(name = "Outbound")
+@XmlRootElement(name = "STBService.Components.FrontEnd.IP.Outbound")
 @XmlType(name = "STBService.Components.FrontEnd.IP.Outbound")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Outbound {

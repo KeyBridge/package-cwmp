@@ -38,7 +38,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DHCPv4.Server.Pool.{i}.StaticAddress.{i}.")
-@XmlRootElement(name = "StaticAddress")
+@XmlRootElement(name = "Device.DHCPv4.Server.Pool.StaticAddress")
 @XmlType(name = "Device.DHCPv4.Server.Pool.StaticAddress")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class StaticAddress {

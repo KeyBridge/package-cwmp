@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.mqtt.Client;
 	 * @since 2.10
 	 */
 @CWMPObject(name = "Device.MQTT.")
-@XmlRootElement(name = "MQTT")
+@XmlRootElement(name = "Device.MQTT")
 @XmlType(name = "Device.MQTT")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class MQTT {

@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Interface.{i}.DMInfo.")
-@XmlRootElement(name = "DMInfo")
+@XmlRootElement(name = "Device.Ghn.Interface.DMInfo")
 @XmlType(name = "Device.Ghn.Interface.DMInfo")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class DMInfo {

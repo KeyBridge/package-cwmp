@@ -35,7 +35,7 @@ import org.broadbandforum.tr181.device.lldp.discovery.device.Port;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.")
-@XmlRootElement(name = "Device")
+@XmlRootElement(name = "Device.LLDP.Discovery.Device")
 @XmlType(name = "Device.LLDP.Discovery.Device")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Device {

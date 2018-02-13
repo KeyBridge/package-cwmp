@@ -36,7 +36,7 @@ The CPE MUST support at least ''MaximumNumberOfTrackedGroups'' table entries.  T
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.IGMP.ClientGroupStats.{i}.")
-@XmlRootElement(name = "ClientGroupStats")
+@XmlRootElement(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroupStats")
 @XmlType(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroupStats")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ClientGroupStats {

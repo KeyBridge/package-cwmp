@@ -36,7 +36,7 @@ For Cdma2000 devices, see also {{bibref|3GPP2-S.S0132}}.
 	 * @since 1.0
 	 */
 @CWMPObject(name = "FAP.Tunnel.CryptoProfile.{i}.")
-@XmlRootElement(name = "CryptoProfile")
+@XmlRootElement(name = "FAP.Tunnel.CryptoProfile")
 @XmlType(name = "FAP.Tunnel.CryptoProfile")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class CryptoProfile {

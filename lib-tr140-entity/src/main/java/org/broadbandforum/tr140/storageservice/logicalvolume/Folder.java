@@ -39,7 +39,7 @@ Creating an instance of this object generates a disabled {{object}} instance.  B
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.LogicalVolume.{i}.Folder.{i}.")
-@XmlRootElement(name = "Folder")
+@XmlRootElement(name = "StorageService.LogicalVolume.Folder")
 @XmlType(name = "StorageService.LogicalVolume.Folder")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Folder {

@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.TraceRoute.RouteHops.{i}.")
-@XmlRootElement(name = "RouteHops")
+@XmlRootElement(name = "Device.IP.Diagnostics.TraceRoute.RouteHops")
 @XmlType(name = "Device.IP.Diagnostics.TraceRoute.RouteHops")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class RouteHops {

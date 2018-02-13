@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.lldp.discovery.device.port.LinkInformatio
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.Port.{i}.")
-@XmlRootElement(name = "Port")
+@XmlRootElement(name = "Device.LLDP.Discovery.Device.Port")
 @XmlType(name = "Device.LLDP.Discovery.Device.Port")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Port {

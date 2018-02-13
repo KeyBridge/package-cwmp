@@ -33,7 +33,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.3
 	 */
 @CWMPObject(name = "Device.ManagementServer.EmbeddedDevice.{i}.")
-@XmlRootElement(name = "EmbeddedDevice")
+@XmlRootElement(name = "Device.ManagementServer.EmbeddedDevice")
 @XmlType(name = "Device.ManagementServer.EmbeddedDevice")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class EmbeddedDevice {
