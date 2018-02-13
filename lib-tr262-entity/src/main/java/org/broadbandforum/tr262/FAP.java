@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr262;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr262.fap.ApplicationPlatform;
 import org.broadbandforum.tr262.fap.GPS;
@@ -28,6 +32,9 @@ import org.broadbandforum.tr262.fap.Tunnel;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "FAP.")
+@XmlRootElement(name = "FAP")
+@XmlType(name = "FAP")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class FAP {
 
 	/**

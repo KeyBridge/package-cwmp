@@ -15,6 +15,11 @@
  */
 package org.broadbandforum.tr106.datatypes;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
 	/**
 	 * A 64-bit statistics parameter, e.g. a byte counter.
 
@@ -24,6 +29,9 @@ The maximum value that can be represented as an ''unsignedLong'' (i.e. 0xfffffff
 
 The term ''packet'' is to be interpreted as the transmission unit appropriate to the protocol layer in question, e.g. an IP packet or an Ethernet frame.
 	 */
+@XmlRootElement(name = "StatsCounter64")
+@XmlType(name = "org.broadbandforum.tr106.datatypes.StatsCounter64")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class StatsCounter64 {
 
 	public Long value;

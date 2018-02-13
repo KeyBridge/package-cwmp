@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.device.fap.ApplicationPlatform;
 import org.broadbandforum.tr181.device.fap.GPS;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr181.device.fap.PerfMgmt;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.")
+@XmlRootElement(name = "FAP")
+@XmlType(name = "Device.FAP")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class FAP {
 
 	/**

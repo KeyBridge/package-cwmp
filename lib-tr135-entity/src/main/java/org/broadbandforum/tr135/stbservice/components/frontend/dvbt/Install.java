@@ -16,7 +16,11 @@
 package org.broadbandforum.tr135.stbservice.components.frontend.dvbt;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -28,6 +32,9 @@ The service list database is in {{object|.Components.FrontEnd.{i}.DVBT.ServiceLi
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.Install.")
+@XmlRootElement(name = "Install")
+@XmlType(name = "STBService.Components.FrontEnd.DVBT.Install")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Install {
 
 	/**

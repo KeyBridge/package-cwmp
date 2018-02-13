@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.device.upnp.Description;
 import org.broadbandforum.tr181.device.upnp.Device;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr181.device.upnp.Discovery;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UPnP.")
+@XmlRootElement(name = "UPnP")
+@XmlType(name = "Device.UPnP")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class UPnP {
 
 	/**

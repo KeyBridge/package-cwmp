@@ -15,6 +15,10 @@
  */
 package org.broadbandforum.tr181.datatypes;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -42,6 +46,9 @@ import org.broadbandforum.annotation.CWMPObject;
 
       While the test is in progress, setting this parameter to {{enum|Canceled}} MUST result in the test being canceled and the value of this parameter being set to {{enum|None}}. If the CPE does not support the {{enum|Canceled}} value, it MUST return a SPV error with "Invalid Parameter value" (9007) to the ACS instead.
 	 */
+@XmlRootElement(name = "DiagnosticsState")
+@XmlType(name = "org.broadbandforum.tr181.datatypes.DiagnosticsState")
+@XmlAccessorType(XmlAccessType.FIELD)
 public enum DiagnosticsState {
 
 None,

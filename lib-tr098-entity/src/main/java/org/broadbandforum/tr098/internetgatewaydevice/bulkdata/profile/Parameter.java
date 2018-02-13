@@ -16,7 +16,11 @@
 package org.broadbandforum.tr098.internetgatewaydevice.bulkdata.profile;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -28,6 +32,9 @@ Each entry in this table represents a parameter (or set of parameters if a parti
 	 * @since 1.11
 	 */
 @CWMPObject(name = "InternetGatewayDevice.BulkData.Profile.{i}.Parameter.{i}.")
+@XmlRootElement(name = "Parameter")
+@XmlType(name = "InternetGatewayDevice.BulkData.Profile.Parameter")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Parameter {
 
 	/**

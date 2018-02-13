@@ -20,8 +20,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -30,6 +34,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UPnP.Discovery.RootDevice.{i}.")
+@XmlRootElement(name = "RootDevice")
+@XmlType(name = "Device.UPnP.Discovery.RootDevice")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class RootDevice {
 
 	/**

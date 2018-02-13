@@ -17,7 +17,11 @@ package org.broadbandforum.tr098.internetgatewaydevice.fap.gps;
 
 import java.time.LocalDateTime;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -29,6 +33,9 @@ When {{param|#.ContinuousGPS}} is {{false}}, the parameters in this object are n
 	 * @since 1.10
 	 */
 @CWMPObject(name = "InternetGatewayDevice.FAP.GPS.ContinuousGPSStatus.")
+@XmlRootElement(name = "ContinuousGPSStatus")
+@XmlType(name = "InternetGatewayDevice.FAP.GPS.ContinuousGPSStatus")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ContinuousGPSStatus {
 
 	/**

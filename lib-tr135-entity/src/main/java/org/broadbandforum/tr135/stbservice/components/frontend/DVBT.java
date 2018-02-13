@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr135.stbservice.components.frontend;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr135.stbservice.components.frontend.dvbt.Install;
 import org.broadbandforum.tr135.stbservice.components.frontend.dvbt.LogicalChannelConnect;
@@ -32,6 +36,9 @@ Parameters are taken from the DGTVi D-Book {{bibref|D-Book}}.
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.")
+@XmlRootElement(name = "DVBT")
+@XmlType(name = "STBService.Components.FrontEnd.DVBT")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DVBT {
 
 	/**

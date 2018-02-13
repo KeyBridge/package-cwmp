@@ -16,7 +16,11 @@
 package org.broadbandforum.tr135.stbservice.capabilities;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -25,6 +29,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.PVR.")
+@XmlRootElement(name = "PVR")
+@XmlType(name = "STBService.Capabilities.PVR")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class PVR {
 
 	/**

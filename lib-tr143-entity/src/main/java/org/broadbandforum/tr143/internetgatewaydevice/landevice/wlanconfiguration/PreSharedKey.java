@@ -16,7 +16,11 @@
 package org.broadbandforum.tr143.internetgatewaydevice.landevice.wlanconfiguration;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr143.datatypes.MACAddress;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr143.datatypes.MACAddress;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}.PreSharedKey.{i}.")
+@XmlRootElement(name = "PreSharedKey")
+@XmlType(name = "InternetGatewayDevice.LANDevice.WLANConfiguration.PreSharedKey")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class PreSharedKey {
 
 	/**

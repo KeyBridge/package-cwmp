@@ -17,8 +17,12 @@ package org.broadbandforum.tr135.stbservice.components.frontend.dvbt.servicelist
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr135.datatypes.Alias;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr135.stbservice.components.frontend.dvbt.servicelistd
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.ServiceListDatabase.LogicalChannel.{i}.")
+@XmlRootElement(name = "LogicalChannel")
+@XmlType(name = "STBService.Components.FrontEnd.DVBT.ServiceListDatabase.LogicalChannel")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class LogicalChannel {
 
 	/**

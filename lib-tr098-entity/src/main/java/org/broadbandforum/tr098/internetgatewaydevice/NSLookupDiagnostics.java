@@ -18,8 +18,12 @@ package org.broadbandforum.tr098.internetgatewaydevice;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.internetgatewaydevice.nslookupdiagnostics.Result;
@@ -36,6 +40,9 @@ Any previous {{object|Result}} instances are removed when a new test is initiate
 	 * @since 1.5
 	 */
 @CWMPObject(name = "InternetGatewayDevice.NSLookupDiagnostics.")
+@XmlRootElement(name = "NSLookupDiagnostics")
+@XmlType(name = "InternetGatewayDevice.NSLookupDiagnostics")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class NSLookupDiagnostics {
 
 	/**

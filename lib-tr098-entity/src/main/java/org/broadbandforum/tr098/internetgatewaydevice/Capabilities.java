@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr098.internetgatewaydevice;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr098.internetgatewaydevice.capabilities.PerformanceDiagnostic;
 
@@ -25,6 +29,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.capabilities.PerformanceDi
 	 * @since 1.3
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Capabilities.")
+@XmlRootElement(name = "Capabilities")
+@XmlType(name = "InternetGatewayDevice.Capabilities")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Capabilities {
 
 	/**

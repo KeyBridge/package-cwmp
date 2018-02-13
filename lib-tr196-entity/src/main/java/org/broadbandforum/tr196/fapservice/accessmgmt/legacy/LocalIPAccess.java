@@ -17,8 +17,12 @@ package org.broadbandforum.tr196.fapservice.accessmgmt.legacy;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr196.fapservice.accessmgmt.legacy.localipaccess.Rule;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr196.fapservice.accessmgmt.legacy.localipaccess.Rule;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.Legacy.LocalIPAccess.")
+@XmlRootElement(name = "LocalIPAccess")
+@XmlType(name = "FAPService.AccessMgmt.Legacy.LocalIPAccess")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class LocalIPAccess {
 
 	/**

@@ -18,8 +18,12 @@ package org.broadbandforum.tr181.device.ieee8021x;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.Alias;
@@ -37,6 +41,9 @@ import org.broadbandforum.tr181.device.ieee8021x.supplicant.Stats;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IEEE8021x.Supplicant.{i}.")
+@XmlRootElement(name = "Supplicant")
+@XmlType(name = "Device.IEEE8021x.Supplicant")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Supplicant {
 
 	/**

@@ -17,6 +17,10 @@ package org.broadbandforum.tr104.datatypes;
 
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 	/**
 	 * The IEEE EUI 64-bit identifier as defined in {{bibref|EUI64}}. The IEEE defined 64-bit extended unique identifier (EUI-64) is a concatenation of:
@@ -25,6 +29,9 @@ import javax.validation.constraints.Size;
 
 * The extension identifier (40 bits for OUI-24 or 28 bits for OUI-36) assigned by the organization with that company_id assignment.
 	 */
+@XmlRootElement(name = "IEEE_EUI64")
+@XmlType(name = "org.broadbandforum.tr104.datatypes.IEEE_EUI64")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IEEE_EUI64 {
 
 	@Size(max = 23)

@@ -16,7 +16,11 @@
 package org.broadbandforum.tr181.device.qos;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.Alias;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.QoS.QueueStats.{i}.")
+@XmlRootElement(name = "QueueStats")
+@XmlType(name = "Device.QoS.QueueStats")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class QueueStats {
 
 	/**

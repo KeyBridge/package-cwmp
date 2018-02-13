@@ -17,7 +17,11 @@ package org.broadbandforum.tr098.internetgatewaydevice.landevice.wlanconfigurati
 
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -32,6 +36,9 @@ This object corresponds directly to the "Registrar List" attribute of the WPS sp
 	 * @since 1.4
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}.WPS.Registrar.{i}.")
+@XmlRootElement(name = "Registrar")
+@XmlType(name = "InternetGatewayDevice.LANDevice.WLANConfiguration.WPS.Registrar")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Registrar {
 
 	/**

@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr098.internetgatewaydevice.landevice.wlanconfiguration;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -29,6 +33,9 @@ Note that this object does not include the total byte and packet statistics, whi
 	 * @since 1.4
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}.Stats.")
+@XmlRootElement(name = "Stats")
+@XmlType(name = "InternetGatewayDevice.LANDevice.WLANConfiguration.Stats")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {
 
 	/**

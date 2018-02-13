@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.connmode.EUTRA;
 import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.connmode.IRAT;
@@ -26,6 +30,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.connmode.
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.ConnMode.")
+@XmlRootElement(name = "ConnMode")
+@XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility.ConnMode")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ConnMode {
 
 	/**

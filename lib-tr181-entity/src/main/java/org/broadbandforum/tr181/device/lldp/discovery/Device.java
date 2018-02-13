@@ -18,9 +18,13 @@ package org.broadbandforum.tr181.device.lldp.discovery;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.device.lldp.discovery.device.DeviceInformation;
 import org.broadbandforum.tr181.device.lldp.discovery.device.Port;
@@ -31,6 +35,9 @@ import org.broadbandforum.tr181.device.lldp.discovery.device.Port;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.")
+@XmlRootElement(name = "Device")
+@XmlType(name = "Device.LLDP.Discovery.Device")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Device {
 
 	/**

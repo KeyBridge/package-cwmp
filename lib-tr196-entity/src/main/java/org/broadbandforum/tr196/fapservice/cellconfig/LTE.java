@@ -17,8 +17,12 @@ package org.broadbandforum.tr196.fapservice.cellconfig;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr196.fapservice.cellconfig.lte.EPC;
@@ -32,6 +36,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.Tunnel;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.")
+@XmlRootElement(name = "LTE")
+@XmlType(name = "FAPService.CellConfig.LTE")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class LTE {
 
 	/**

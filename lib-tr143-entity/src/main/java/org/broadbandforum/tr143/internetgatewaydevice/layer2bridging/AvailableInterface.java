@@ -16,7 +16,11 @@
 package org.broadbandforum.tr143.internetgatewaydevice.layer2bridging;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -26,6 +30,9 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.AvailableInterface.{i}.")
+@XmlRootElement(name = "AvailableInterface")
+@XmlType(name = "InternetGatewayDevice.Layer2Bridging.AvailableInterface")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class AvailableInterface {
 
 	/**

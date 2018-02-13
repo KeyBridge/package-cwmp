@@ -17,8 +17,12 @@ package org.broadbandforum.tr104.voiceservice.pots;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr104.voiceservice.pots.ringer.Event;
 
@@ -28,6 +32,9 @@ import org.broadbandforum.tr104.voiceservice.pots.ringer.Event;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.POTS.Ringer.")
+@XmlRootElement(name = "Ringer")
+@XmlType(name = "VoiceService.POTS.Ringer")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Ringer {
 
 	/**

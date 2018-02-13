@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr196.fapservice.transport;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr196.fapservice.transport.sip.FCS;
@@ -28,6 +32,9 @@ SIP is defined in {{bibref|RFC3261}}.
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.SIP.")
+@XmlRootElement(name = "SIP")
+@XmlType(name = "FAPService.Transport.SIP")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class SIP {
 
 	/**

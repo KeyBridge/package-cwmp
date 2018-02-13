@@ -17,8 +17,12 @@ package org.broadbandforum.tr104.voiceservice.tone;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr104.datatypes.Alias;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr104.voiceservice.tone.eventprofile.Event;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Tone.EventProfile.{i}.")
+@XmlRootElement(name = "EventProfile")
+@XmlType(name = "VoiceService.Tone.EventProfile")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class EventProfile {
 
 	/**

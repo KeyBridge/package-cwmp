@@ -17,7 +17,11 @@ package org.broadbandforum.tr098.internetgatewaydevice.faultmgmt;
 
 import java.time.LocalDateTime;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -32,6 +36,9 @@ If maximum instance number {{param|.FaultMgmt.HistoryEventNumberOfEntries}} is r
 	 * @since 1.10
 	 */
 @CWMPObject(name = "InternetGatewayDevice.FaultMgmt.HistoryEvent.{i}.")
+@XmlRootElement(name = "HistoryEvent")
+@XmlType(name = "InternetGatewayDevice.FaultMgmt.HistoryEvent")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class HistoryEvent {
 
 	/**

@@ -17,10 +17,17 @@ package org.broadbandforum.tr196.datatypes;
 
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 	/**
 	 * The ZigBee 16-bit network address (NWK) as defined in {{bibref|ZigBee2007}}. The address is assigned to a device by the network layer and used by the network layer for routing messages between devices.
 	 */
+@XmlRootElement(name = "ZigBeeNetworkAddress")
+@XmlType(name = "org.broadbandforum.tr196.datatypes.ZigBeeNetworkAddress")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ZigBeeNetworkAddress {
 
 	@Size(max = 4)

@@ -16,7 +16,11 @@
 package org.broadbandforum.tr181.device.fap.applicationplatform;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.device.fap.applicationplatform.control.FemtoAwareness;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr181.device.fap.applicationplatform.control.TerminalL
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.ApplicationPlatform.Control.")
+@XmlRootElement(name = "Control")
+@XmlType(name = "Device.FAP.ApplicationPlatform.Control")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Control {
 
 	/**

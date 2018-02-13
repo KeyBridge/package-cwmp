@@ -17,8 +17,12 @@ package org.broadbandforum.tr196.fapservice;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr196.fapservice.fapcontrol.CDMA2000;
@@ -31,6 +35,9 @@ import org.broadbandforum.tr196.fapservice.fapcontrol.UMTS;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.")
+@XmlRootElement(name = "FAPControl")
+@XmlType(name = "FAPService.FAPControl")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class FAPControl {
 
 	/**

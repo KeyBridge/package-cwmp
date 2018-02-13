@@ -17,8 +17,12 @@ package org.broadbandforum.tr140.storageservice;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -29,6 +33,9 @@ Note that when TR-140 was originally published there was a typo in this object n
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.Capabilities.")
+@XmlRootElement(name = "Capabilities")
+@XmlType(name = "StorageService.Capabilities")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Capabilities {
 
 	/**

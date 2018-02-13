@@ -15,6 +15,10 @@
  */
 package org.broadbandforum.tr098.internetgatewaydevice.softwaremodules.executionunit;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -27,6 +31,9 @@ See {{bibref|TR-157a3|Appendix II.3.2}} for more description and some examples.
 	 * @since 1.8
 	 */
 @CWMPObject(name = "InternetGatewayDevice.SoftwareModules.ExecutionUnit.{i}.Extensions.")
+@XmlRootElement(name = "Extensions")
+@XmlType(name = "InternetGatewayDevice.SoftwareModules.ExecutionUnit.Extensions")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Extensions {
 
 

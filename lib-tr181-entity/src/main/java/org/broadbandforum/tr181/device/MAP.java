@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.device.map.Domain;
@@ -31,6 +35,9 @@ import org.broadbandforum.tr181.device.map.Domain;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.MAP.")
+@XmlRootElement(name = "MAP")
+@XmlType(name = "Device.MAP")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class MAP {
 
 	/**

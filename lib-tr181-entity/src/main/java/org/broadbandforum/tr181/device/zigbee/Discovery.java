@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.zigbee;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.device.zigbee.discovery.AreaNetwork;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr181.device.zigbee.discovery.AreaNetwork;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.Discovery.")
+@XmlRootElement(name = "Discovery")
+@XmlType(name = "Device.ZigBee.Discovery")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Discovery {
 
 	/**

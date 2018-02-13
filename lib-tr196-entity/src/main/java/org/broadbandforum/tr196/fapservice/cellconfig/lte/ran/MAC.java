@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr196.fapservice.cellconfig.lte.ran;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mac.DRX;
 import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mac.RACH;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mac.ULSCH;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.MAC.")
+@XmlRootElement(name = "MAC")
+@XmlType(name = "FAPService.CellConfig.LTE.RAN.MAC")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class MAC {
 
 	/**

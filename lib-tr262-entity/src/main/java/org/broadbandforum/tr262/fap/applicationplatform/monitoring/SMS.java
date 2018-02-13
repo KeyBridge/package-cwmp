@@ -16,7 +16,11 @@
 package org.broadbandforum.tr262.fap.applicationplatform.monitoring;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -25,6 +29,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "FAP.ApplicationPlatform.Monitoring.SMS.")
+@XmlRootElement(name = "SMS")
+@XmlType(name = "FAP.ApplicationPlatform.Monitoring.SMS")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class SMS {
 
 	/**

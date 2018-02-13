@@ -16,7 +16,11 @@
 package org.broadbandforum.tr135.stbservice.components.frontend.ip;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -32,6 +36,9 @@ The force monitor mode allows to maintain an active stream coming from the netwo
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.ForceMonitor.")
+@XmlRootElement(name = "ForceMonitor")
+@XmlType(name = "STBService.Components.FrontEnd.IP.ForceMonitor")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ForceMonitor {
 
 	/**

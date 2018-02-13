@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device.ip._interface;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.Alias;
@@ -26,6 +30,9 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IP.Interface.{i}.IPv4Address.{i}.")
+@XmlRootElement(name = "IPv4Address")
+@XmlType(name = "Device.IP.Interface.IPv4Address")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IPv4Address {
 
 	/**

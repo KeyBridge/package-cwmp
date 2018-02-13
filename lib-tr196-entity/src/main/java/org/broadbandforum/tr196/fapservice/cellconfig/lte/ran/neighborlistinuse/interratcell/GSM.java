@@ -16,7 +16,11 @@
 package org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.neighborlistinuse.interratcell;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -25,6 +29,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell.GSM.{i}.")
+@XmlRootElement(name = "GSM")
+@XmlType(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell.GSM")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class GSM {
 
 	/**

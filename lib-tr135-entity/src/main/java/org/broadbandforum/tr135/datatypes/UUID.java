@@ -17,10 +17,17 @@ package org.broadbandforum.tr135.datatypes;
 
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 	/**
 	 * Universally Unique Identifier.  See {{bibref|RFC4122}}.
 	 */
+@XmlRootElement(name = "UUID")
+@XmlType(name = "org.broadbandforum.tr135.datatypes.UUID")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class UUID {
 
 	@Size(min = 36, max = 36)

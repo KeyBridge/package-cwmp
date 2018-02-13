@@ -17,8 +17,12 @@ package org.broadbandforum.tr135.stbservice.capabilities;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr135.stbservice.capabilities.videodecoder.MPEG2Part2;
 import org.broadbandforum.tr135.stbservice.capabilities.videodecoder.MPEG4Part10;
@@ -31,6 +35,9 @@ import org.broadbandforum.tr135.stbservice.capabilities.videodecoder.SMPTEVC1;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.VideoDecoder.")
+@XmlRootElement(name = "VideoDecoder")
+@XmlType(name = "STBService.Capabilities.VideoDecoder")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class VideoDecoder {
 
 	/**

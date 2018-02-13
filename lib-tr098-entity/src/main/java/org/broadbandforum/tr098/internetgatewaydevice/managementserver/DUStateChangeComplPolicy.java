@@ -17,8 +17,12 @@ package org.broadbandforum.tr098.internetgatewaydevice.managementserver;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -30,6 +34,9 @@ The CPE policy determines the conditions under which the CPE notifies the ACS of
 	 * @since 1.8
 	 */
 @CWMPObject(name = "InternetGatewayDevice.ManagementServer.DUStateChangeComplPolicy.")
+@XmlRootElement(name = "DUStateChangeComplPolicy")
+@XmlType(name = "InternetGatewayDevice.ManagementServer.DUStateChangeComplPolicy")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DUStateChangeComplPolicy {
 
 	/**

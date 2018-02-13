@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr098.internetgatewaydevice.landevice.lanhostconfigmanagement;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -29,6 +33,9 @@ Support for more than one interface instance is OPTIONAL.
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANHostConfigManagement.IPInterface.{i}.")
+@XmlRootElement(name = "IPInterface")
+@XmlType(name = "InternetGatewayDevice.LANDevice.LANHostConfigManagement.IPInterface")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IPInterface {
 
 	/**

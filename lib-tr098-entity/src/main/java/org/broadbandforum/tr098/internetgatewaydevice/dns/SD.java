@@ -17,8 +17,12 @@ package org.broadbandforum.tr098.internetgatewaydevice.dns;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.internetgatewaydevice.dns.sd.Service;
@@ -31,6 +35,9 @@ Upon reboot the the contents of the service table are repopulated. When the DNS.
 	 * @since 1.12
 	 */
 @CWMPObject(name = "InternetGatewayDevice.DNS.SD.")
+@XmlRootElement(name = "SD")
+@XmlType(name = "InternetGatewayDevice.DNS.SD")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class SD {
 
 	/**

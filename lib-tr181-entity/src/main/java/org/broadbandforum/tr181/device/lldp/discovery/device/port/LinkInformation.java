@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device.lldp.discovery.device.port;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.datatypes.MACAddress;
 
@@ -27,6 +31,9 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.Port.{i}.LinkInformation.")
+@XmlRootElement(name = "LinkInformation")
+@XmlType(name = "Device.LLDP.Discovery.Device.Port.LinkInformation")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class LinkInformation {
 
 	/**

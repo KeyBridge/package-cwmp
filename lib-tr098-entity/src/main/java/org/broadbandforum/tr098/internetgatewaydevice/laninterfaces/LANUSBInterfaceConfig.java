@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr098.internetgatewaydevice.laninterfaces;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -28,6 +32,9 @@ The object definition is identical to that for {{object|InternetGatewayDevice.LA
 	 * @since 1.4
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANInterfaces.LANUSBInterfaceConfig.{i}.")
+@XmlRootElement(name = "LANUSBInterfaceConfig")
+@XmlType(name = "InternetGatewayDevice.LANInterfaces.LANUSBInterfaceConfig")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class LANUSBInterfaceConfig {
 
 	/**

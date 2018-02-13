@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.usb.usbhosts.host.device;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.device.usb.usbhosts.host.device.configuration.Interface;
 
@@ -28,6 +32,9 @@ import org.broadbandforum.tr181.device.usb.usbhosts.host.device.configuration.In
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.USB.USBHosts.Host.{i}.Device.{i}.Configuration.{i}.")
+@XmlRootElement(name = "Configuration")
+@XmlType(name = "Device.USB.USBHosts.Host.Device.Configuration")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Configuration {
 
 	/**

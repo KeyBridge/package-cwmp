@@ -16,7 +16,11 @@
 package org.broadbandforum.tr098.internetgatewaydevice.fap.tunnel;
 
 import java.time.LocalDateTime;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.IPAddress;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr098.datatypes.IPAddress;
 	 * @since 1.10
 	 */
 @CWMPObject(name = "InternetGatewayDevice.FAP.Tunnel.IKESA.{i}.")
+@XmlRootElement(name = "IKESA")
+@XmlType(name = "InternetGatewayDevice.FAP.Tunnel.IKESA")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IKESA {
 
 	/**

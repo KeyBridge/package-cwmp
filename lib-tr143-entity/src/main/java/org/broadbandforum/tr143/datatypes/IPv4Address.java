@@ -15,6 +15,10 @@
  */
 package org.broadbandforum.tr143.datatypes;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.tr143.datatypes.IPAddress;
 
 	/**
@@ -22,6 +26,9 @@ import org.broadbandforum.tr143.datatypes.IPAddress;
 
 Can be any IPv4 address that is permitted by the ''IPAddress'' data type.
 	 */
+@XmlRootElement(name = "IPv4Address")
+@XmlType(name = "org.broadbandforum.tr143.datatypes.IPv4Address")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IPv4Address extends IPAddress {
 
 

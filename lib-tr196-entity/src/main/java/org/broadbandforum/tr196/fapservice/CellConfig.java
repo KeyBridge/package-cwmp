@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr196.fapservice;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr196.fapservice.cellconfig.CDMA2000;
 import org.broadbandforum.tr196.fapservice.cellconfig.LTE;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.UMTS;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.")
+@XmlRootElement(name = "CellConfig")
+@XmlType(name = "FAPService.CellConfig")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class CellConfig {
 
 	/**

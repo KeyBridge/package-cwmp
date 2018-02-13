@@ -17,7 +17,11 @@ package org.broadbandforum.tr181.device.ieee1905.al._interface;
 
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -26,6 +30,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.Interface.{i}.VendorProperties.{i}.")
+@XmlRootElement(name = "VendorProperties")
+@XmlType(name = "Device.IEEE1905.AL.Interface.VendorProperties")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class VendorProperties {
 
 	/**

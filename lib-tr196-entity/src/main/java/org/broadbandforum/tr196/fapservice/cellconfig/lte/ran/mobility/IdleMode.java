@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.idlemode.Common;
 import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.idlemode.IRAT;
@@ -28,6 +32,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.idlemode.
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.")
+@XmlRootElement(name = "IdleMode")
+@XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IdleMode {
 
 	/**

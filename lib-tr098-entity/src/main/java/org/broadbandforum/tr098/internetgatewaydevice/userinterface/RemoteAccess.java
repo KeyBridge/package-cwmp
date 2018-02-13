@@ -18,8 +18,12 @@ package org.broadbandforum.tr098.internetgatewaydevice.userinterface;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -33,6 +37,9 @@ Remote access requires user authentication.  To provide remote access authentica
 	 * @since 1.5
 	 */
 @CWMPObject(name = "InternetGatewayDevice.UserInterface.RemoteAccess.")
+@XmlRootElement(name = "RemoteAccess")
+@XmlType(name = "InternetGatewayDevice.UserInterface.RemoteAccess")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class RemoteAccess {
 
 	/**

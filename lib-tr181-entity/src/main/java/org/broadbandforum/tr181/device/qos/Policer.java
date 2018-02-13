@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.qos;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.Alias;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.QoS.Policer.{i}.")
+@XmlRootElement(name = "Policer")
+@XmlType(name = "Device.QoS.Policer")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Policer {
 
 	/**

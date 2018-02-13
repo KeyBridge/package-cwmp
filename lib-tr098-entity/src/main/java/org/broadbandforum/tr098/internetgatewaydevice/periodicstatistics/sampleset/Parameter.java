@@ -18,8 +18,12 @@ package org.broadbandforum.tr098.internetgatewaydevice.periodicstatistics.sample
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -32,6 +36,9 @@ Note that the comma-separated lists in this object (SampleSeconds, SuspectData a
 	 * @since 1.5
 	 */
 @CWMPObject(name = "InternetGatewayDevice.PeriodicStatistics.SampleSet.{i}.Parameter.{i}.")
+@XmlRootElement(name = "Parameter")
+@XmlType(name = "InternetGatewayDevice.PeriodicStatistics.SampleSet.Parameter")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Parameter {
 
 	/**

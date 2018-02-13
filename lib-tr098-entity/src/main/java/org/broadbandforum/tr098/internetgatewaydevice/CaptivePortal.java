@@ -18,8 +18,12 @@ package org.broadbandforum.tr098.internetgatewaydevice;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -35,6 +39,9 @@ When the captive portal is enabled, WAN-destined HTTP (port 80) traffic MUST be 
 	 * @since 1.4
 	 */
 @CWMPObject(name = "InternetGatewayDevice.CaptivePortal.")
+@XmlRootElement(name = "CaptivePortal")
+@XmlType(name = "InternetGatewayDevice.CaptivePortal")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class CaptivePortal {
 
 	/**

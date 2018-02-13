@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr135.stbservice.servicemonitoring.mainstream.eventlog.entry;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -24,6 +28,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.4
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.EventLog.Entry.{i}.Parameter.{i}.")
+@XmlRootElement(name = "Parameter")
+@XmlType(name = "STBService.ServiceMonitoring.MainStream.EventLog.Entry.Parameter")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Parameter {
 
 	/**

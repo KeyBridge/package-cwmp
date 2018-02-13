@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr135;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr135.datatypes.Alias;
@@ -32,6 +36,9 @@ import org.broadbandforum.tr135.stbservice.ServiceMonitoring;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.")
+@XmlRootElement(name = "STBService")
+@XmlType(name = "STBService")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class STBService {
 
 	/**

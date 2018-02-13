@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device.ghn.diagnostics.phythroughput;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.MACAddress;
@@ -26,6 +30,9 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Diagnostics.PHYThroughput.Result.{i}.")
+@XmlRootElement(name = "Result")
+@XmlType(name = "Device.Ghn.Diagnostics.PHYThroughput.Result")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Result {
 
 	/**

@@ -16,7 +16,11 @@
 package org.broadbandforum.tr106;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr106.device.Capabilities;
@@ -38,6 +42,9 @@ import org.broadbandforum.tr106.device.UserInterface;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "Device.")
+@XmlRootElement(name = "Device")
+@XmlType(name = "Device")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Device {
 
 	/**

@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr104.voiceservice.callcontrol.extension;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr104.voiceservice.callcontrol.extension.stats.DSP;
 import org.broadbandforum.tr104.voiceservice.callcontrol.extension.stats.IncomingCalls;
@@ -30,6 +34,9 @@ The CPE MUST reset the extension's Stats parameters (unless otherwise stated in 
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Extension.{i}.Stats.")
+@XmlRootElement(name = "Stats")
+@XmlType(name = "VoiceService.CallControl.Extension.Stats")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {
 
 	/**

@@ -18,8 +18,12 @@ package org.broadbandforum.tr098.internetgatewaydevice.managementserver;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -34,6 +38,9 @@ This table does not include Forced Inform Parameters, and Forced Inform Paramete
 	 * @since 1.14
 	 */
 @CWMPObject(name = "InternetGatewayDevice.ManagementServer.InformParameter.{i}.")
+@XmlRootElement(name = "InformParameter")
+@XmlType(name = "InternetGatewayDevice.ManagementServer.InformParameter")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class InformParameter {
 
 	/**

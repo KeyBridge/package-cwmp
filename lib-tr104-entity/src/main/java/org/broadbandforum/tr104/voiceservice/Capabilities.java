@@ -18,9 +18,13 @@ package org.broadbandforum.tr104.voiceservice;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr104.voiceservice.capabilities.Codec;
 import org.broadbandforum.tr104.voiceservice.capabilities.H323;
@@ -36,6 +40,9 @@ import org.broadbandforum.tr104.voiceservice.capabilities.SIP;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.")
+@XmlRootElement(name = "Capabilities")
+@XmlType(name = "VoiceService.Capabilities")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Capabilities {
 
 	/**

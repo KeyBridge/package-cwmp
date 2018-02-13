@@ -18,8 +18,12 @@ package org.broadbandforum.tr069.internetgatewaydevice;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr069.internetgatewaydevice.layer3forwarding.Forwarding;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr069.internetgatewaydevice.layer3forwarding.Forwardin
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Layer3Forwarding.")
+@XmlRootElement(name = "Layer3Forwarding")
+@XmlType(name = "InternetGatewayDevice.Layer3Forwarding")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Layer3Forwarding {
 
 	/**

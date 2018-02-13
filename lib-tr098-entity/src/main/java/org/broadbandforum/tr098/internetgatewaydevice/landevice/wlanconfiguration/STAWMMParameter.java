@@ -16,7 +16,11 @@
 package org.broadbandforum.tr098.internetgatewaydevice.landevice.wlanconfiguration;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -35,6 +39,9 @@ import org.broadbandforum.tr098.datatypes.Alias;
 	 * @since 1.4
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}.STAWMMParameter.{i}.")
+@XmlRootElement(name = "STAWMMParameter")
+@XmlType(name = "InternetGatewayDevice.LANDevice.WLANConfiguration.STAWMMParameter")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class STAWMMParameter {
 
 	/**

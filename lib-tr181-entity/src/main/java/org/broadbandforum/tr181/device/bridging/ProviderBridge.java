@@ -18,8 +18,12 @@ package org.broadbandforum.tr181.device.bridging;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -35,6 +39,9 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.Bridging.ProviderBridge.{i}.")
+@XmlRootElement(name = "ProviderBridge")
+@XmlType(name = "Device.Bridging.ProviderBridge")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ProviderBridge {
 
 	/**

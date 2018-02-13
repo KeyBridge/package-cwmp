@@ -16,7 +16,11 @@
 package org.broadbandforum.tr181.device.ppp._interface;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.IPv4Address;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr181.datatypes.IPv4Address;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.PPP.Interface.{i}.IPCP.")
+@XmlRootElement(name = "IPCP")
+@XmlType(name = "Device.PPP.Interface.IPCP")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IPCP {
 
 	/**

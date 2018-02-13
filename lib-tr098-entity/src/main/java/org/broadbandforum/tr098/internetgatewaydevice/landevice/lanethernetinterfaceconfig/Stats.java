@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr098.internetgatewaydevice.landevice.lanethernetinterfaceconfig;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -27,6 +31,9 @@ Note that these statistics refer to the link layer, not to the physical layer.
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANEthernetInterfaceConfig.{i}.Stats.")
+@XmlRootElement(name = "Stats")
+@XmlType(name = "InternetGatewayDevice.LANDevice.LANEthernetInterfaceConfig.Stats")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {
 
 	/**

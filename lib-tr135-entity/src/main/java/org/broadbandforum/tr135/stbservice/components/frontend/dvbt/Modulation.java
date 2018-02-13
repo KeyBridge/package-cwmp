@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr135.stbservice.components.frontend.dvbt;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -25,6 +29,9 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.Modulation.")
+@XmlRootElement(name = "Modulation")
+@XmlType(name = "STBService.Components.FrontEnd.DVBT.Modulation")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Modulation {
 
 	/**

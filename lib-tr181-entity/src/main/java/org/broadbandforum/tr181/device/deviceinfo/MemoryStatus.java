@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device.deviceinfo;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -25,6 +29,9 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.MemoryStatus.")
+@XmlRootElement(name = "MemoryStatus")
+@XmlType(name = "Device.DeviceInfo.MemoryStatus")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class MemoryStatus {
 
 	/**

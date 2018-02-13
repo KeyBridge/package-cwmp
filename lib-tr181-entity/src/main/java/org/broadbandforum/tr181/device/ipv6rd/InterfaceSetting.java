@@ -16,7 +16,11 @@
 package org.broadbandforum.tr181.device.ipv6rd;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.Alias;
@@ -37,6 +41,9 @@ import org.broadbandforum.tr181.datatypes.IPv6Prefix;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.IPv6rd.InterfaceSetting.{i}.")
+@XmlRootElement(name = "InterfaceSetting")
+@XmlType(name = "Device.IPv6rd.InterfaceSetting")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class InterfaceSetting {
 
 	/**

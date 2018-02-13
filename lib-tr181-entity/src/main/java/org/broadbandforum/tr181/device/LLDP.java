@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.device.lldp.Discovery;
 
@@ -25,6 +29,9 @@ import org.broadbandforum.tr181.device.lldp.Discovery;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.LLDP.")
+@XmlRootElement(name = "LLDP")
+@XmlType(name = "Device.LLDP")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class LLDP {
 
 	/**

@@ -16,7 +16,11 @@
 package org.broadbandforum.tr181.device.zigbee.zdo;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.Alias;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr181.datatypes.ZigBeeNetworkAddress;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.Binding.{i}.")
+@XmlRootElement(name = "Binding")
+@XmlType(name = "Device.ZigBee.ZDO.Binding")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Binding {
 
 	/**

@@ -16,7 +16,11 @@
 package org.broadbandforum.tr181.device.zigbee.zdo.applicationendpoint;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -26,6 +30,9 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.ApplicationEndpoint.{i}.SimpleDescriptor.")
+@XmlRootElement(name = "SimpleDescriptor")
+@XmlType(name = "Device.ZigBee.ZDO.ApplicationEndpoint.SimpleDescriptor")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class SimpleDescriptor {
 
 	/**

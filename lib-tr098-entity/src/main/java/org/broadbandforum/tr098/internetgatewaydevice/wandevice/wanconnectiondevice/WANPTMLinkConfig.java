@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr098.internetgatewaydevice.wandevice.wanconnectiondevice;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.MACAddress;
@@ -35,6 +39,9 @@ The PTM Link Layer object exists when the ''WANDSLInterfaceConfig'' ''LinkEncaps
 	 * @since 1.4
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPTMLinkConfig.")
+@XmlRootElement(name = "WANPTMLinkConfig")
+@XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPTMLinkConfig")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class WANPTMLinkConfig {
 
 	/**

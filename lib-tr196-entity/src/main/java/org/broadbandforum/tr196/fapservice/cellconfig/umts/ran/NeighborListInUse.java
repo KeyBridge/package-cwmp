@@ -17,8 +17,12 @@ package org.broadbandforum.tr196.fapservice.cellconfig.umts.ran;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.neighborlistinuse.InterFreqCell;
 import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.neighborlistinuse.InterRATCell;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.neighborlistinuse
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborListInUse.")
+@XmlRootElement(name = "NeighborListInUse")
+@XmlType(name = "FAPService.CellConfig.UMTS.RAN.NeighborListInUse")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class NeighborListInUse {
 
 	/**

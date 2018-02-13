@@ -16,7 +16,11 @@
 package org.broadbandforum.tr104.voiceservice.callcontrol;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr104.datatypes.Alias;
@@ -30,6 +34,9 @@ Support for adding and removing lines is conditional on whether the CPE supports
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Line.{i}.")
+@XmlRootElement(name = "Line")
+@XmlType(name = "VoiceService.CallControl.Line")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Line {
 
 	/**

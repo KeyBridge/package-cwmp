@@ -20,9 +20,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.internetgatewaydevice.deviceinfo.Location;
@@ -42,6 +46,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.deviceinfo.VendorLogFile;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.DeviceInfo.")
+@XmlRootElement(name = "DeviceInfo")
+@XmlType(name = "InternetGatewayDevice.DeviceInfo")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DeviceInfo {
 
 	/**

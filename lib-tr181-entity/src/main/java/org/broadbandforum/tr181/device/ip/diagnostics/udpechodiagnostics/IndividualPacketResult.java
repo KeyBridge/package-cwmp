@@ -16,7 +16,11 @@
 package org.broadbandforum.tr181.device.ip.diagnostics.udpechodiagnostics;
 
 import java.time.LocalDateTime;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -25,6 +29,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.UDPEchoDiagnostics.IndividualPacketResult.{i}.")
+@XmlRootElement(name = "IndividualPacketResult")
+@XmlType(name = "Device.IP.Diagnostics.UDPEchoDiagnostics.IndividualPacketResult")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IndividualPacketResult {
 
 	/**

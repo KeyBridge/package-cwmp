@@ -15,6 +15,11 @@
  */
 package org.broadbandforum.tr143.datatypes;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
 	/**
 	 * A 32-bit statistics parameter, e.g. a byte counter.
 
@@ -26,6 +31,9 @@ The actual value of the statistic might be greater than ''maxval''. Such values 
 
 The term ''packet'' is to be interpreted as the transmission unit appropriate to the protocol layer in question, e.g. an IP packet or an Ethernet frame.
 	 */
+@XmlRootElement(name = "StatsCounter32")
+@XmlType(name = "org.broadbandforum.tr143.datatypes.StatsCounter32")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class StatsCounter32 {
 
 	public Long value;

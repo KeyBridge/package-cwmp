@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr098.internetgatewaydevice.deviceinfo;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -26,6 +30,9 @@ import org.broadbandforum.tr098.datatypes.Alias;
 	 * @since 1.8
 	 */
 @CWMPObject(name = "InternetGatewayDevice.DeviceInfo.Processor.{i}.")
+@XmlRootElement(name = "Processor")
+@XmlType(name = "InternetGatewayDevice.DeviceInfo.Processor")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Processor {
 
 	/**

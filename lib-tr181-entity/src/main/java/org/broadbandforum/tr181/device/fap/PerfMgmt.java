@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.fap;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.device.fap.perfmgmt.Config;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr181.device.fap.perfmgmt.Config;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.PerfMgmt.")
+@XmlRootElement(name = "PerfMgmt")
+@XmlType(name = "Device.FAP.PerfMgmt")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class PerfMgmt {
 
 	/**

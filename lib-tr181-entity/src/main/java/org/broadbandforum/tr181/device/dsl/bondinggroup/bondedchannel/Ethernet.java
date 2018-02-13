@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device.dsl.bondinggroup.bondedchannel;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.device.dsl.bondinggroup.bondedchannel.ethernet.Stats;
 
@@ -27,6 +31,9 @@ import org.broadbandforum.tr181.device.dsl.bondinggroup.bondedchannel.ethernet.S
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.DSL.BondingGroup.{i}.BondedChannel.{i}.Ethernet.")
+@XmlRootElement(name = "Ethernet")
+@XmlType(name = "Device.DSL.BondingGroup.BondedChannel.Ethernet")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Ethernet {
 
 	/**

@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr104.voiceservice.pots.fxs;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -25,6 +29,9 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.POTS.FXS.{i}.VoiceProcessing.")
+@XmlRootElement(name = "VoiceProcessing")
+@XmlType(name = "VoiceService.POTS.FXS.VoiceProcessing")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class VoiceProcessing {
 
 	/**

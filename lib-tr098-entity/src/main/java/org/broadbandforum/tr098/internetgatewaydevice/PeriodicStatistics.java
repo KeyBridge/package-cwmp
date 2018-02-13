@@ -17,8 +17,12 @@ package org.broadbandforum.tr098.internetgatewaydevice;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.internetgatewaydevice.periodicstatistics.SampleSet;
@@ -33,6 +37,9 @@ This object provides a single set of global settings that affect the entire devi
 	 * @since 1.5
 	 */
 @CWMPObject(name = "InternetGatewayDevice.PeriodicStatistics.")
+@XmlRootElement(name = "PeriodicStatistics")
+@XmlType(name = "InternetGatewayDevice.PeriodicStatistics")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class PeriodicStatistics {
 
 	/**

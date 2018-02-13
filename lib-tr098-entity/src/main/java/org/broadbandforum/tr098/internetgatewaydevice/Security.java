@@ -17,8 +17,12 @@ package org.broadbandforum.tr098.internetgatewaydevice;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr098.internetgatewaydevice.security.Certificate;
 
@@ -28,6 +32,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.security.Certificate;
 	 * @since 1.10
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Security.")
+@XmlRootElement(name = "Security")
+@XmlType(name = "InternetGatewayDevice.Security")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Security {
 
 	/**

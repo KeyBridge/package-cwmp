@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr196.fapservice.cellconfig.lte.ran;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.rlc.SRB1;
 import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.rlc.SRB2;
@@ -26,6 +30,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.rlc.SRB2;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.RLC.")
+@XmlRootElement(name = "RLC")
+@XmlType(name = "FAPService.CellConfig.LTE.RAN.RLC")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class RLC {
 
 	/**

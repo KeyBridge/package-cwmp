@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.device.faultmgmt.CurrentAlarm;
 import org.broadbandforum.tr181.device.faultmgmt.ExpeditedEvent;
@@ -32,6 +36,9 @@ import org.broadbandforum.tr181.device.faultmgmt.SupportedAlarm;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FaultMgmt.")
+@XmlRootElement(name = "FaultMgmt")
+@XmlType(name = "Device.FaultMgmt")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class FaultMgmt {
 
 	/**

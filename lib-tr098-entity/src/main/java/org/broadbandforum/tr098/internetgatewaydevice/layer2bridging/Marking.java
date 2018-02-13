@@ -16,7 +16,11 @@
 package org.broadbandforum.tr098.internetgatewaydevice.layer2bridging;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -39,6 +43,9 @@ This table also supports several concepts that are not covered by 802.1Q:
 	 * @since 1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.Marking.{i}.")
+@XmlRootElement(name = "Marking")
+@XmlType(name = "InternetGatewayDevice.Layer2Bridging.Marking")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Marking {
 
 	/**

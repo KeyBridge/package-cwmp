@@ -16,7 +16,11 @@
 package org.broadbandforum.tr157.bulkdata.profile.http;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -26,6 +30,9 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.10
 	 */
 @CWMPObject(name = "BulkData.Profile.{i}.HTTP.RequestURIParameter.{i}.")
+@XmlRootElement(name = "RequestURIParameter")
+@XmlType(name = "BulkData.Profile.HTTP.RequestURIParameter")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class RequestURIParameter {
 
 	/**

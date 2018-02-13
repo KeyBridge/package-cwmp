@@ -18,8 +18,12 @@ package org.broadbandforum.tr098.internetgatewaydevice.deviceinfo;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -37,6 +41,9 @@ Considering that every device has some form of a data model, this table MUST NOT
 	 * @since 1.6
 	 */
 @CWMPObject(name = "InternetGatewayDevice.DeviceInfo.SupportedDataModel.{i}.")
+@XmlRootElement(name = "SupportedDataModel")
+@XmlType(name = "InternetGatewayDevice.DeviceInfo.SupportedDataModel")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class SupportedDataModel {
 
 	/**

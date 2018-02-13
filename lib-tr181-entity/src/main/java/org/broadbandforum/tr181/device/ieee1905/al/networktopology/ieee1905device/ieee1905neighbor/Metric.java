@@ -16,7 +16,11 @@
 package org.broadbandforum.tr181.device.ieee1905.al.networktopology.ieee1905device.ieee1905neighbor;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.datatypes.MACAddress;
 import org.broadbandforum.tr181.datatypes.StatsCounter32;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr181.datatypes.StatsCounter32;
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.IEEE1905Neighbor.{i}.Metric.{i}.")
+@XmlRootElement(name = "Metric")
+@XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IEEE1905Neighbor.Metric")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Metric {
 
 	/**

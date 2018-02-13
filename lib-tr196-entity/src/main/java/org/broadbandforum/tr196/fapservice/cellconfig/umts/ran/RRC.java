@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr196.fapservice.cellconfig.umts.ran;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.rrc.Stats;
 
@@ -25,6 +29,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.rrc.Stats;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.RRC.")
+@XmlRootElement(name = "RRC")
+@XmlType(name = "FAPService.CellConfig.UMTS.RAN.RRC")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class RRC {
 
 	/**

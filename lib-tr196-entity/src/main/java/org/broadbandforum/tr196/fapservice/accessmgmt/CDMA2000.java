@@ -18,8 +18,12 @@ package org.broadbandforum.tr196.fapservice.accessmgmt;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr196.fapservice.accessmgmt.cdma2000.LocalIPAccess;
@@ -31,6 +35,9 @@ import org.broadbandforum.tr196.fapservice.accessmgmt.cdma2000.MemberDetail;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.CDMA2000.")
+@XmlRootElement(name = "CDMA2000")
+@XmlType(name = "FAPService.AccessMgmt.CDMA2000")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class CDMA2000 {
 
 	/**

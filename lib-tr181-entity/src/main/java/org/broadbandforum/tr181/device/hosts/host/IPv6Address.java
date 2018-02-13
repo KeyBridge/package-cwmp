@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device.hosts.host;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -24,6 +28,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.Hosts.Host.{i}.IPv6Address.{i}.")
+@XmlRootElement(name = "IPv6Address")
+@XmlType(name = "Device.Hosts.Host.IPv6Address")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IPv6Address {
 
 	/**

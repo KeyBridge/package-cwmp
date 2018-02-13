@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr098.internetgatewaydevice.xmpp.connection;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -24,6 +28,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.13
 	 */
 @CWMPObject(name = "InternetGatewayDevice.XMPP.Connection.{i}.Stats.")
+@XmlRootElement(name = "Stats")
+@XmlType(name = "InternetGatewayDevice.XMPP.Connection.Stats")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {
 
 	/**

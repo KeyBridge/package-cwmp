@@ -17,9 +17,13 @@ package org.broadbandforum.tr135.stbservice.capabilities.videodecoder;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr135.stbservice.capabilities.videodecoder.mpeg4part10.ProfileLevel;
 
@@ -29,6 +33,9 @@ import org.broadbandforum.tr135.stbservice.capabilities.videodecoder.mpeg4part10
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.VideoDecoder.MPEG4Part10.")
+@XmlRootElement(name = "MPEG4Part10")
+@XmlType(name = "STBService.Capabilities.VideoDecoder.MPEG4Part10")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class MPEG4Part10 {
 
 	/**

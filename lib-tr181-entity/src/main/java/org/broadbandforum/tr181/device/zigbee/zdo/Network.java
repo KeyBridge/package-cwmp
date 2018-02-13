@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.zigbee.zdo;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.device.zigbee.zdo.network.Neighbor;
 
@@ -28,6 +32,9 @@ import org.broadbandforum.tr181.device.zigbee.zdo.network.Neighbor;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.Network.")
+@XmlRootElement(name = "Network")
+@XmlType(name = "Device.ZigBee.ZDO.Network")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Network {
 
 	/**

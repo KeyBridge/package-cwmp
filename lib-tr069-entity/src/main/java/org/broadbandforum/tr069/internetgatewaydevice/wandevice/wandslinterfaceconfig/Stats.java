@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr069.internetgatewaydevice.wandevice.wandslinterfaceconfig;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr069.internetgatewaydevice.wandevice.wandslinterfaceconfig.stats.CurrentDay;
 import org.broadbandforum.tr069.internetgatewaydevice.wandevice.wandslinterfaceconfig.stats.LastShowtime;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr069.internetgatewaydevice.wandevice.wandslinterfacec
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLInterfaceConfig.Stats.")
+@XmlRootElement(name = "Stats")
+@XmlType(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig.Stats")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {
 
 	/**

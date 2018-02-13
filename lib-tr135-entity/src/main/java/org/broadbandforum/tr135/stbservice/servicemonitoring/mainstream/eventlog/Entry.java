@@ -19,8 +19,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr135.stbservice.servicemonitoring.mainstream.eventlog.entry.Parameter;
 
@@ -30,6 +34,9 @@ import org.broadbandforum.tr135.stbservice.servicemonitoring.mainstream.eventlog
 	 * @since 1.4
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.EventLog.Entry.{i}.")
+@XmlRootElement(name = "Entry")
+@XmlType(name = "STBService.ServiceMonitoring.MainStream.EventLog.Entry")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Entry {
 
 	/**

@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.m2msppolicy.RequestCategory;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.m2msppolicy.Requ
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.M2MSPPolicy.")
+@XmlRootElement(name = "M2MSPPolicy")
+@XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet.M2MSPPolicy")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class M2MSPPolicy {
 
 	/**

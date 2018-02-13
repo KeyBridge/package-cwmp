@@ -17,8 +17,12 @@ package org.broadbandforum.tr098.internetgatewaydevice.wandevice.wanconnectionde
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.internetgatewaydevice.wandevice.wanconnectiondevice.wanipconnection.dhcpclient.ReqDHCPOption;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.wandevice.wanconnectiondev
 	 * @since 1.4
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.DHCPClient.")
+@XmlRootElement(name = "DHCPClient")
+@XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANIPConnection.DHCPClient")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DHCPClient {
 
 	/**

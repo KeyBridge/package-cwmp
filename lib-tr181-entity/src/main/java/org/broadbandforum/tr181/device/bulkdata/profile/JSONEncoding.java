@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device.bulkdata.profile;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -25,6 +29,9 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.10
 	 */
 @CWMPObject(name = "Device.BulkData.Profile.{i}.JSONEncoding.")
+@XmlRootElement(name = "JSONEncoding")
+@XmlType(name = "Device.BulkData.Profile.JSONEncoding")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class JSONEncoding {
 
 	/**

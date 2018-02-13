@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.device.softwaremodules.DeploymentUnit;
 import org.broadbandforum.tr181.device.softwaremodules.ExecEnv;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr181.device.softwaremodules.ExecutionUnit;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "Device.SoftwareModules.")
+@XmlRootElement(name = "SoftwareModules")
+@XmlType(name = "Device.SoftwareModules")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class SoftwareModules {
 
 	/**

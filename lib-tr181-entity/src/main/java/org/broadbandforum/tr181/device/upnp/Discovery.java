@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.upnp;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.device.upnp.discovery.Device;
 import org.broadbandforum.tr181.device.upnp.discovery.RootDevice;
@@ -32,6 +36,9 @@ import org.broadbandforum.tr181.device.upnp.discovery.Service;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.UPnP.Discovery.")
+@XmlRootElement(name = "Discovery")
+@XmlType(name = "Device.UPnP.Discovery")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Discovery {
 
 	/**

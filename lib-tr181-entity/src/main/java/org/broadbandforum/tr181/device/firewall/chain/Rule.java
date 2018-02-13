@@ -17,7 +17,11 @@ package org.broadbandforum.tr181.device.firewall.chain;
 
 import java.time.LocalDateTime;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.Alias;
@@ -36,6 +40,9 @@ import org.broadbandforum.tr181.datatypes.IPPrefix;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.Firewall.Chain.{i}.Rule.{i}.")
+@XmlRootElement(name = "Rule")
+@XmlType(name = "Device.Firewall.Chain.Rule")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Rule {
 
 	/**

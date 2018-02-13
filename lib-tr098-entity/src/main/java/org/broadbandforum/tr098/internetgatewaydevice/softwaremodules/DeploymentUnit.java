@@ -18,8 +18,12 @@ package org.broadbandforum.tr098.internetgatewaydevice.softwaremodules;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -32,6 +36,9 @@ A new instance of this table gets created during the installation of a Software 
 	 * @since 1.8
 	 */
 @CWMPObject(name = "InternetGatewayDevice.SoftwareModules.DeploymentUnit.{i}.")
+@XmlRootElement(name = "DeploymentUnit")
+@XmlType(name = "InternetGatewayDevice.SoftwareModules.DeploymentUnit")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DeploymentUnit {
 
 	/**

@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr135.stbservice.capabilities.videodecoder.smptevc1;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr135.datatypes.Alias;
@@ -28,6 +32,9 @@ import org.broadbandforum.tr135.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.VideoDecoder.SMPTEVC1.ProfileLevel.{i}.")
+@XmlRootElement(name = "ProfileLevel")
+@XmlType(name = "STBService.Capabilities.VideoDecoder.SMPTEVC1.ProfileLevel")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ProfileLevel {
 
 	/**

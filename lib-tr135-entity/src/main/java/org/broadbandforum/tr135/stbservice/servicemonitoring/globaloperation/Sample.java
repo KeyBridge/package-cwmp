@@ -17,8 +17,12 @@ package org.broadbandforum.tr135.stbservice.servicemonitoring.globaloperation;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -27,6 +31,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.GlobalOperation.Sample.")
+@XmlRootElement(name = "Sample")
+@XmlType(name = "STBService.ServiceMonitoring.GlobalOperation.Sample")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Sample {
 
 	/**

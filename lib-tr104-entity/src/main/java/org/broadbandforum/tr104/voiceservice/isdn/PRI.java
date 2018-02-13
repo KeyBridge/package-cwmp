@@ -16,7 +16,11 @@
 package org.broadbandforum.tr104.voiceservice.isdn;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr104.datatypes.Alias;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr104.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.ISDN.PRI.{i}.")
+@XmlRootElement(name = "PRI")
+@XmlType(name = "VoiceService.ISDN.PRI")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class PRI {
 
 	/**

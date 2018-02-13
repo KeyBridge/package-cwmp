@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr098.internetgatewaydevice;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr098.internetgatewaydevice.fap.ApplicationPlatform;
 import org.broadbandforum.tr098.internetgatewaydevice.fap.GPS;
@@ -28,6 +32,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.fap.Tunnel;
 	 * @since 1.10
 	 */
 @CWMPObject(name = "InternetGatewayDevice.FAP.")
+@XmlRootElement(name = "FAP")
+@XmlType(name = "InternetGatewayDevice.FAP")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class FAP {
 
 	/**

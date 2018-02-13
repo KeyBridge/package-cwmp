@@ -16,7 +16,11 @@
 package org.broadbandforum.tr181.device.firewall;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.Alias;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr181.datatypes.Alias;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.Firewall.Level.{i}.")
+@XmlRootElement(name = "Level")
+@XmlType(name = "Device.Firewall.Level")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Level {
 
 	/**

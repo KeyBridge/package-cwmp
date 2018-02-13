@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.wifi.accesspoint.ac;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.datatypes.StatsCounter32;
 import org.broadbandforum.tr181.datatypes.StatsCounter64;
@@ -35,6 +39,9 @@ import org.broadbandforum.tr181.datatypes.StatsCounter64;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.WiFi.AccessPoint.{i}.AC.{i}.Stats.")
+@XmlRootElement(name = "Stats")
+@XmlType(name = "Device.WiFi.AccessPoint.AC.Stats")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {
 
 	/**

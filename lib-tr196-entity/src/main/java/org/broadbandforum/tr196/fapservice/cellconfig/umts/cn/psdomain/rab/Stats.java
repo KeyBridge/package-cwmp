@@ -17,9 +17,13 @@ package org.broadbandforum.tr196.fapservice.cellconfig.umts.cn.psdomain.rab;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr196.fapservice.cellconfig.umts.cn.psdomain.rab.stats.LGW;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.cn.psdomain.rab.stats
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.CN.PSDomain.RAB.Stats.")
+@XmlRootElement(name = "Stats")
+@XmlType(name = "FAPService.CellConfig.UMTS.CN.PSDomain.RAB.Stats")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {
 
 	/**

@@ -17,8 +17,12 @@ package org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.idlemode
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.idlemode.interfreq.Carrier;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.idlemode.
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq.")
+@XmlRootElement(name = "InterFreq")
+@XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class InterFreq {
 
 	/**

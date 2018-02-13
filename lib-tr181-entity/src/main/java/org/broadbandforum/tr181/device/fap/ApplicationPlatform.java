@@ -16,7 +16,11 @@
 package org.broadbandforum.tr181.device.fap;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.device.fap.applicationplatform.Capabilities;
@@ -41,6 +45,9 @@ import org.broadbandforum.tr181.device.fap.applicationplatform.Monitoring;
 	 * @since 2.4
 	 */
 @CWMPObject(name = "Device.FAP.ApplicationPlatform.")
+@XmlRootElement(name = "ApplicationPlatform")
+@XmlType(name = "Device.FAP.ApplicationPlatform")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ApplicationPlatform {
 
 	/**

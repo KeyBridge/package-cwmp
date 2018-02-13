@@ -17,8 +17,12 @@ package org.broadbandforum.tr098.internetgatewaydevice;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr098.internetgatewaydevice.laninterfaces.LANEthernetInterfaceConfig;
 import org.broadbandforum.tr098.internetgatewaydevice.laninterfaces.LANUSBInterfaceConfig;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.laninterfaces.WLANConfigur
 	 * @since 1.4
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANInterfaces.")
+@XmlRootElement(name = "LANInterfaces")
+@XmlType(name = "InternetGatewayDevice.LANInterfaces")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class LANInterfaces {
 
 	/**

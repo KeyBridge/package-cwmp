@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr104.voiceservice.dect.base;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -27,6 +31,9 @@ The CPE MUST reset the DECT base's Stats parameters (unless otherwise stated in 
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.DECT.Base.{i}.Stats.")
+@XmlRootElement(name = "Stats")
+@XmlType(name = "VoiceService.DECT.Base.Stats")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {
 
 	/**

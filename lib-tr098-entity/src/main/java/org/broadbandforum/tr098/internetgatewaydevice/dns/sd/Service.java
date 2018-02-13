@@ -19,9 +19,13 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr098.internetgatewaydevice.dns.sd.service.TextRecord;
 
@@ -53,6 +57,9 @@ For example, an SSH service might have:
 	 * @since 1.12
 	 */
 @CWMPObject(name = "InternetGatewayDevice.DNS.SD.Service.{i}.")
+@XmlRootElement(name = "Service")
+@XmlType(name = "InternetGatewayDevice.DNS.SD.Service")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Service {
 
 	/**

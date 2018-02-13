@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device.ipsec.tunnel;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.datatypes.StatsCounter32;
 
@@ -29,6 +33,9 @@ import org.broadbandforum.tr181.datatypes.StatsCounter32;
 	 * @since 2.5
 	 */
 @CWMPObject(name = "Device.IPsec.Tunnel.{i}.Stats.")
+@XmlRootElement(name = "Stats")
+@XmlType(name = "Device.IPsec.Tunnel.Stats")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {
 
 	/**

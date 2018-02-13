@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device.hpna;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.device.hpna.diagnostics.PHYThroughput;
 import org.broadbandforum.tr181.device.hpna.diagnostics.PerformanceMonitoring;
@@ -26,6 +30,9 @@ import org.broadbandforum.tr181.device.hpna.diagnostics.PerformanceMonitoring;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.HPNA.Diagnostics.")
+@XmlRootElement(name = "Diagnostics")
+@XmlType(name = "Device.HPNA.Diagnostics")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Diagnostics {
 
 	/**

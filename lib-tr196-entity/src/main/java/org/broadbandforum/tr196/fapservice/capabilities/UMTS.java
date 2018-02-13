@@ -18,8 +18,12 @@ package org.broadbandforum.tr196.fapservice.capabilities;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr196.fapservice.capabilities.umts.SelfConfig;
 
@@ -29,6 +33,9 @@ import org.broadbandforum.tr196.fapservice.capabilities.umts.SelfConfig;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Capabilities.UMTS.")
+@XmlRootElement(name = "UMTS")
+@XmlType(name = "FAPService.Capabilities.UMTS")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class UMTS {
 
 	/**

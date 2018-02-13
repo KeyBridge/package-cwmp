@@ -18,8 +18,12 @@ package org.broadbandforum.tr098.internetgatewaydevice.deviceinfo;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.internetgatewaydevice.deviceinfo.processstatus.Process;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.deviceinfo.processstatus.P
 	 * @since 1.5
 	 */
 @CWMPObject(name = "InternetGatewayDevice.DeviceInfo.ProcessStatus.")
+@XmlRootElement(name = "ProcessStatus")
+@XmlType(name = "InternetGatewayDevice.DeviceInfo.ProcessStatus")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ProcessStatus {
 
 	/**

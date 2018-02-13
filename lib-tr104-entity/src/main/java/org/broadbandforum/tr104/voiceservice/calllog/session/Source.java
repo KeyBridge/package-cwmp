@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr104.voiceservice.calllog.session;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr104.voiceservice.calllog.session.source.DSP;
 import org.broadbandforum.tr104.voiceservice.calllog.session.source.RTP;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr104.voiceservice.calllog.session.source.VoiceQuality
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.Source.")
+@XmlRootElement(name = "Source")
+@XmlType(name = "VoiceService.CallLog.Session.Source")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Source {
 
 	/**

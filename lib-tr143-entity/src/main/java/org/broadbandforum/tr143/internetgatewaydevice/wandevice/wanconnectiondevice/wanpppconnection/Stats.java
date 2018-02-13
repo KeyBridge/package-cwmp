@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr143.internetgatewaydevice.wandevice.wanconnectiondevice.wanpppconnection;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -27,6 +31,9 @@ This object is intended only for ''WANConnectionDevice''s that can support an Et
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.Stats.")
+@XmlRootElement(name = "Stats")
+@XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPPPConnection.Stats")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Stats {
 
 	/**

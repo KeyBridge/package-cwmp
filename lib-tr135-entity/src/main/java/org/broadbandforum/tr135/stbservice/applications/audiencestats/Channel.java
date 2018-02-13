@@ -16,7 +16,11 @@
 package org.broadbandforum.tr135.stbservice.applications.audiencestats;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr135.datatypes.Alias;
@@ -29,6 +33,9 @@ Each entry corresponds to a given TV channel and is indexed by channel name (the
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Applications.AudienceStats.Channel.{i}.")
+@XmlRootElement(name = "Channel")
+@XmlType(name = "STBService.Applications.AudienceStats.Channel")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Channel {
 
 	/**

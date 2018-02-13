@@ -16,6 +16,10 @@
 package org.broadbandforum.tr143.datatypes;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 	/**
 	 * IP address, i.e. IPv4 address (or IPv4 subnet mask) or IPv6 address.
@@ -38,6 +42,9 @@ IPv6 addresses MUST NOT include zone identifiers. Zone identifiers are discussed
 
 Unspecified or inapplicable addresses (or IPv4 subnet masks) MUST be represented as empty strings unless otherwise specified by the parameter definition.
 	 */
+@XmlRootElement(name = "IPAddress")
+@XmlType(name = "org.broadbandforum.tr143.datatypes.IPAddress")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IPAddress {
 
 	@Size(max = 45)

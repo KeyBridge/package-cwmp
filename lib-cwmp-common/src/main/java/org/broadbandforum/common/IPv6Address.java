@@ -15,6 +15,10 @@
  */
 package org.broadbandforum.common;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.common.IPAddress;
 
 	/**
@@ -22,6 +26,9 @@ import org.broadbandforum.common.IPAddress;
 
 Can be any IPv6 address that is permitted by the ''IPAddress'' data type.
 	 */
+@XmlRootElement(name = "IPv6Address")
+@XmlType(name = "org.broadbandforum.common.IPv6Address")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IPv6Address extends IPAddress {
 
 

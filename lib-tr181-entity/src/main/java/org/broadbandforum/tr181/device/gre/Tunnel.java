@@ -18,9 +18,13 @@ package org.broadbandforum.tr181.device.gre;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.Alias;
@@ -33,6 +37,9 @@ import org.broadbandforum.tr181.device.gre.tunnel.Stats;
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.GRE.Tunnel.{i}.")
+@XmlRootElement(name = "Tunnel")
+@XmlType(name = "Device.GRE.Tunnel")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Tunnel {
 
 	/**

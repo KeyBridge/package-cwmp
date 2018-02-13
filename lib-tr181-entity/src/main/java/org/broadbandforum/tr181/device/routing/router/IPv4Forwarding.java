@@ -16,7 +16,11 @@
 package org.broadbandforum.tr181.device.routing.router;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.Alias;
@@ -40,6 +44,9 @@ import org.broadbandforum.tr181.datatypes.IPv4Address;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Routing.Router.{i}.IPv4Forwarding.{i}.")
+@XmlRootElement(name = "IPv4Forwarding")
+@XmlType(name = "Device.Routing.Router.IPv4Forwarding")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IPv4Forwarding {
 
 	/**

@@ -18,8 +18,12 @@ package org.broadbandforum.tr196.fapservice.cellconfig.cdma2000;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.beacon.BeaconList;
@@ -31,6 +35,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.beacon.HRPDBeacon
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.Beacon.")
+@XmlRootElement(name = "Beacon")
+@XmlType(name = "FAPService.CellConfig.CDMA2000.Beacon")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Beacon {
 
 	/**

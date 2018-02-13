@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.anppolicy;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.Alias;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.anppolicy.reques
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.ANPPolicy.{i}.RequestCategory.{i}.")
+@XmlRootElement(name = "RequestCategory")
+@XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.RequestCategory")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class RequestCategory {
 
 	/**

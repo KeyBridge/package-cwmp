@@ -18,8 +18,12 @@ package org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.idlemode
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr196.datatypes.Alias;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr196.datatypes.Alias;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq.Carrier.{i}.")
+@XmlRootElement(name = "Carrier")
+@XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq.Carrier")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Carrier {
 
 	/**

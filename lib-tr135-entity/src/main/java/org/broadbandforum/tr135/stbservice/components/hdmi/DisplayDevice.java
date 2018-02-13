@@ -18,8 +18,12 @@ package org.broadbandforum.tr135.stbservice.components.hdmi;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -28,6 +32,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Components.HDMI.{i}.DisplayDevice.")
+@XmlRootElement(name = "DisplayDevice")
+@XmlType(name = "STBService.Components.HDMI.DisplayDevice")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DisplayDevice {
 
 	/**

@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device.atm;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.device.atm.diagnostics.F5Loopback;
 
@@ -25,6 +29,9 @@ import org.broadbandforum.tr181.device.atm.diagnostics.F5Loopback;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.ATM.Diagnostics.")
+@XmlRootElement(name = "Diagnostics")
+@XmlType(name = "Device.ATM.Diagnostics")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Diagnostics {
 
 	/**

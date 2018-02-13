@@ -16,7 +16,11 @@
 package org.broadbandforum.tr098.internetgatewaydevice.xmpp.connection;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -29,6 +33,9 @@ This table is only relevant when {{param|##.Connection.{i}.ServerConnectAlgorith
 	 * @since 1.13
 	 */
 @CWMPObject(name = "InternetGatewayDevice.XMPP.Connection.{i}.Server.{i}.")
+@XmlRootElement(name = "Server")
+@XmlType(name = "InternetGatewayDevice.XMPP.Connection.Server")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Server {
 
 	/**

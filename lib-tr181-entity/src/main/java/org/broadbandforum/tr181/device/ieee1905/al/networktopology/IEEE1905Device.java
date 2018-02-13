@@ -18,9 +18,13 @@ package org.broadbandforum.tr181.device.ieee1905.al.networktopology;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.datatypes.MACAddress;
 import org.broadbandforum.tr181.device.ieee1905.al.networktopology.ieee1905device.BridgingTuple;
@@ -38,6 +42,9 @@ import org.broadbandforum.tr181.device.ieee1905.al.networktopology.ieee1905devic
 	 * @since 2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.")
+@XmlRootElement(name = "IEEE1905Device")
+@XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IEEE1905Device {
 
 	/**

@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device.ieee8021x.supplicant;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -25,6 +29,9 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.IEEE8021x.Supplicant.{i}.EAPTLS.")
+@XmlRootElement(name = "EAPTLS")
+@XmlType(name = "Device.IEEE8021x.Supplicant.EAPTLS")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class EAPTLS {
 
 	/**

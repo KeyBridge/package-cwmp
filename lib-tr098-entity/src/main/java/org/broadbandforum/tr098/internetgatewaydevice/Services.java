@@ -15,6 +15,10 @@
  */
 package org.broadbandforum.tr098.internetgatewaydevice;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -23,6 +27,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Services.")
+@XmlRootElement(name = "Services")
+@XmlType(name = "InternetGatewayDevice.Services")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Services {
 
 

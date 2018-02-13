@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.dns;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.device.dns.sd.Service;
@@ -31,6 +35,9 @@ import org.broadbandforum.tr181.device.dns.sd.Service;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.DNS.SD.")
+@XmlRootElement(name = "SD")
+@XmlType(name = "Device.DNS.SD")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class SD {
 
 	/**

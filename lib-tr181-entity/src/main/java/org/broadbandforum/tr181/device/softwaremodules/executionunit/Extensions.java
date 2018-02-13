@@ -15,6 +15,10 @@
  */
 package org.broadbandforum.tr181.device.softwaremodules.executionunit;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -27,6 +31,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "Device.SoftwareModules.ExecutionUnit.{i}.Extensions.")
+@XmlRootElement(name = "Extensions")
+@XmlType(name = "Device.SoftwareModules.ExecutionUnit.Extensions")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Extensions {
 
 

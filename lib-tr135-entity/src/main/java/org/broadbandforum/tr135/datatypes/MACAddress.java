@@ -17,10 +17,17 @@ package org.broadbandforum.tr135.datatypes;
 
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 	/**
 	 * All MAC addresses are represented as strings of 12 hexadecimal digits (digits 0-9, letters A-F or a-f) displayed as six pairs of digits separated by colons.  Unspecified or inapplicable MAC addresses MUST be represented as empty strings unless otherwise specified by the parameter definition.
 	 */
+@XmlRootElement(name = "MACAddress")
+@XmlType(name = "org.broadbandforum.tr135.datatypes.MACAddress")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class MACAddress {
 
 	@Size(max = 17)

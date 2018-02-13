@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr196.fapservice.cellconfig.lte.energysavings;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -29,6 +33,9 @@ This object is valid on the specified day(s) and time of every week.
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EnergySavings.NotAllowedTimePeriod.{i}.")
+@XmlRootElement(name = "NotAllowedTimePeriod")
+@XmlType(name = "FAPService.CellConfig.LTE.EnergySavings.NotAllowedTimePeriod")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class NotAllowedTimePeriod {
 
 	/**

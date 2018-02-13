@@ -15,6 +15,10 @@
  */
 package org.broadbandforum.tr069.datatypes;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.tr069.datatypes.IPPrefix;
 
 	/**
@@ -22,6 +26,9 @@ import org.broadbandforum.tr069.datatypes.IPPrefix;
 
 Can be any IPv6 prefix that is permitted by the ''IPPrefix'' data type.
 	 */
+@XmlRootElement(name = "IPv6Prefix")
+@XmlType(name = "org.broadbandforum.tr069.datatypes.IPv6Prefix")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IPv6Prefix extends IPPrefix {
 
 

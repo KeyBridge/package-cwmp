@@ -16,7 +16,11 @@
 package org.broadbandforum.tr181.device.zigbee.zdo;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -25,6 +29,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.UserDescriptor.")
+@XmlRootElement(name = "UserDescriptor")
+@XmlType(name = "Device.ZigBee.ZDO.UserDescriptor")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class UserDescriptor {
 
 	/**

@@ -17,8 +17,12 @@ package org.broadbandforum.tr098.internetgatewaydevice.upnp;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr098.internetgatewaydevice.upnp.description.DeviceDescription;
 import org.broadbandforum.tr098.internetgatewaydevice.upnp.description.DeviceInstance;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.upnp.description.ServiceIn
 	 * @since 1.12
 	 */
 @CWMPObject(name = "InternetGatewayDevice.UPnP.Description.")
+@XmlRootElement(name = "Description")
+@XmlType(name = "InternetGatewayDevice.UPnP.Description")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Description {
 
 	/**

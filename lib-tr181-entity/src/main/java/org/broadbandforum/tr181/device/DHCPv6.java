@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.device.dhcpv6.Client;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr181.device.dhcpv6.Server;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.DHCPv6.")
+@XmlRootElement(name = "DHCPv6")
+@XmlType(name = "Device.DHCPv6")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DHCPv6 {
 
 	/**

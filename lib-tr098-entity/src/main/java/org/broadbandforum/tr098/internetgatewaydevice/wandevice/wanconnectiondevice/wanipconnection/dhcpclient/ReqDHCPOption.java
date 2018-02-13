@@ -16,7 +16,11 @@
 package org.broadbandforum.tr098.internetgatewaydevice.wandevice.wanconnectiondevice.wanipconnection.dhcpclient;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr098.datatypes.Alias;
 	 * @since 1.4
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANIPConnection.{i}.DHCPClient.ReqDHCPOption.{i}.")
+@XmlRootElement(name = "ReqDHCPOption")
+@XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANIPConnection.DHCPClient.ReqDHCPOption")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ReqDHCPOption {
 
 	/**

@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr135.stbservice.components.frontend.ip.igmp;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr135.datatypes.Alias;
@@ -29,6 +33,9 @@ The CPE MUST support at least ''MaximumNumberOfConcurrentGroups'' table entries.
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.IGMP.ClientGroup.{i}.")
+@XmlRootElement(name = "ClientGroup")
+@XmlType(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroup")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ClientGroup {
 
 	/**

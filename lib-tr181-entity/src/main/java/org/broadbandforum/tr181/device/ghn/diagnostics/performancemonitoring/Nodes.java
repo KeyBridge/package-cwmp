@@ -18,8 +18,12 @@ package org.broadbandforum.tr181.device.ghn.diagnostics.performancemonitoring;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.device.ghn.diagnostics.performancemonitoring.nodes.Node;
@@ -36,6 +40,9 @@ import org.broadbandforum.tr181.device.ghn.diagnostics.performancemonitoring.nod
 	 * @since 2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Nodes.")
+@XmlRootElement(name = "Nodes")
+@XmlType(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Nodes")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Nodes {
 
 	/**

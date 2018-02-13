@@ -18,8 +18,12 @@ package org.broadbandforum.tr098.internetgatewaydevice.usbhosts.host;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr098.internetgatewaydevice.usbhosts.host.device.Configuration;
 
@@ -29,6 +33,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.usbhosts.host.device.Confi
 	 * @since 1.5
 	 */
 @CWMPObject(name = "InternetGatewayDevice.USBHosts.Host.{i}.Device.{i}.")
+@XmlRootElement(name = "Device")
+@XmlType(name = "InternetGatewayDevice.USBHosts.Host.Device")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Device {
 
 	/**

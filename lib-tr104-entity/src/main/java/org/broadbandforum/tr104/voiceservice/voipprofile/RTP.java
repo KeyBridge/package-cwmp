@@ -16,7 +16,11 @@
 package org.broadbandforum.tr104.voiceservice.voipprofile;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr104.voiceservice.voipprofile.rtp.RTCP;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr104.voiceservice.voipprofile.rtp.SRTP;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.RTP.")
+@XmlRootElement(name = "RTP")
+@XmlType(name = "VoiceService.VoIPProfile.RTP")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class RTP {
 
 	/**

@@ -16,7 +16,11 @@
 package org.broadbandforum.tr181.device.dhcpv4.server.pool.client;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -25,6 +29,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.DHCPv4.Server.Pool.{i}.Client.{i}.Option.{i}.")
+@XmlRootElement(name = "Option")
+@XmlType(name = "Device.DHCPv4.Server.Pool.Client.Option")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Option {
 
 	/**

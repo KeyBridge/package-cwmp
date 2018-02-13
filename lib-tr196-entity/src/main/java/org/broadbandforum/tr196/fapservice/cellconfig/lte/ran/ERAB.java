@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr196.fapservice.cellconfig.lte.ran;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.erab.Stats;
 
@@ -25,6 +29,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.erab.Stats;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.ERAB.")
+@XmlRootElement(name = "ERAB")
+@XmlType(name = "FAPService.CellConfig.LTE.RAN.ERAB")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ERAB {
 
 	/**

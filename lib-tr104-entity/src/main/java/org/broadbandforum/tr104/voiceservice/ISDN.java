@@ -17,8 +17,12 @@ package org.broadbandforum.tr104.voiceservice;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr104.voiceservice.isdn.BRI;
 import org.broadbandforum.tr104.voiceservice.isdn.PRI;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr104.voiceservice.isdn.PRI;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.ISDN.")
+@XmlRootElement(name = "ISDN")
+@XmlType(name = "VoiceService.ISDN")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ISDN {
 
 	/**

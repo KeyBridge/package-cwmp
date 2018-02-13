@@ -18,8 +18,12 @@ package org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.phy;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.phy.mbsfn.SFConfigList;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.phy.mbsfn.SFConfig
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.MBSFN.")
+@XmlRootElement(name = "MBSFN")
+@XmlType(name = "FAPService.CellConfig.LTE.RAN.PHY.MBSFN")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class MBSFN {
 
 	/**

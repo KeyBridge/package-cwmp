@@ -16,7 +16,11 @@
 package org.broadbandforum.tr196.fapservice.rem.umts.gsm;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -25,6 +29,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.UMTS.GSM.Cell.{i}.")
+@XmlRootElement(name = "Cell")
+@XmlType(name = "FAPService.REM.UMTS.GSM.Cell")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Cell {
 
 	/**

@@ -16,7 +16,11 @@
 package org.broadbandforum.tr069.internetgatewaydevice.landevice.hosts;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr069.datatypes.IPAddress;
 import org.broadbandforum.tr069.datatypes.MACAddress;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr069.datatypes.MACAddress;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.Hosts.Host.{i}.")
+@XmlRootElement(name = "Host")
+@XmlType(name = "InternetGatewayDevice.LANDevice.Hosts.Host")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Host {
 
 	/**

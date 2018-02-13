@@ -18,9 +18,13 @@ package org.broadbandforum.tr196.fapservice.rem.cdma2000;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr196.fapservice.rem.cdma2000.macrotiming.Channel;
@@ -31,6 +35,9 @@ import org.broadbandforum.tr196.fapservice.rem.cdma2000.macrotiming.Channel;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.CDMA2000.MacroTiming.")
+@XmlRootElement(name = "MacroTiming")
+@XmlType(name = "FAPService.REM.CDMA2000.MacroTiming")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class MacroTiming {
 
 	/**

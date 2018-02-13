@@ -16,7 +16,11 @@
 package org.broadbandforum.tr135.stbservice;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr135.stbservice.capabilities.AudienceStats;
 import org.broadbandforum.tr135.stbservice.capabilities.AudioDecoder;
@@ -37,6 +41,9 @@ import org.broadbandforum.tr135.stbservice.capabilities.VideoOutput;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.")
+@XmlRootElement(name = "Capabilities")
+@XmlType(name = "STBService.Capabilities")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Capabilities {
 
 	/**

@@ -16,7 +16,11 @@
 package org.broadbandforum.tr104.voiceservice.callcontrol;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr104.datatypes.Alias;
@@ -29,6 +33,9 @@ The map approach separates the call routing aspects from the configuration of th
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.IncomingMap.{i}.")
+@XmlRootElement(name = "IncomingMap")
+@XmlType(name = "VoiceService.CallControl.IncomingMap")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IncomingMap {
 
 	/**

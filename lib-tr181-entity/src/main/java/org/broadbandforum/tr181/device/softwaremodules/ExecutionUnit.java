@@ -18,8 +18,12 @@ package org.broadbandforum.tr181.device.softwaremodules;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.Alias;
@@ -41,6 +45,9 @@ import org.broadbandforum.tr181.device.softwaremodules.executionunit.Extensions;
 	 * @since 2.1
 	 */
 @CWMPObject(name = "Device.SoftwareModules.ExecutionUnit.{i}.")
+@XmlRootElement(name = "ExecutionUnit")
+@XmlType(name = "Device.SoftwareModules.ExecutionUnit")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ExecutionUnit {
 
 	/**

@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.routing;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.device.routing.rip.InterfaceSetting;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr181.device.routing.rip.InterfaceSetting;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.Routing.RIP.")
+@XmlRootElement(name = "RIP")
+@XmlType(name = "Device.Routing.RIP")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class RIP {
 
 	/**

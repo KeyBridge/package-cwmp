@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr104.voiceservice.capabilities;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr104.voiceservice.capabilities.sip.Client;
 import org.broadbandforum.tr104.voiceservice.capabilities.sip.Registrar;
@@ -26,6 +30,9 @@ import org.broadbandforum.tr104.voiceservice.capabilities.sip.Registrar;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.SIP.")
+@XmlRootElement(name = "SIP")
+@XmlType(name = "VoiceService.Capabilities.SIP")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class SIP {
 
 	/**

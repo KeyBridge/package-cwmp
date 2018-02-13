@@ -17,8 +17,12 @@ package org.broadbandforum.tr196.fapservice.cellconfig.lte;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr196.fapservice.cellconfig.lte.energysavings.ActivationCandidateCellsLoad;
@@ -31,6 +35,9 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.energysavings.NotAllow
 	 * @since 2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EnergySavings.")
+@XmlRootElement(name = "EnergySavings")
+@XmlType(name = "FAPService.CellConfig.LTE.EnergySavings")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class EnergySavings {
 
 	/**

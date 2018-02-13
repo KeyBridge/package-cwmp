@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.managementserver.downloadavailability;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.device.managementserver.downloadavailability.announcement.Group;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr181.device.managementserver.downloadavailability.ann
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.ManagementServer.DownloadAvailability.Announcement.")
+@XmlRootElement(name = "Announcement")
+@XmlType(name = "Device.ManagementServer.DownloadAvailability.Announcement")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Announcement {
 
 	/**

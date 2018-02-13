@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr196.fapservice.rem.cdma2000.onex;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr196.fapservice.rem.cdma2000.onex.cell.ControlChannel;
 import org.broadbandforum.tr196.fapservice.rem.cdma2000.onex.cell.RF;
@@ -26,6 +30,9 @@ import org.broadbandforum.tr196.fapservice.rem.cdma2000.onex.cell.RF;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.CDMA2000.OneX.Cell.{i}.")
+@XmlRootElement(name = "Cell")
+@XmlType(name = "FAPService.REM.CDMA2000.OneX.Cell")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Cell {
 
 	/**

@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr196.fapservice.transport;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr196.fapservice.transport.realtime.Perf;
@@ -26,6 +30,9 @@ import org.broadbandforum.tr196.fapservice.transport.realtime.Perf;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.RealTime.")
+@XmlRootElement(name = "RealTime")
+@XmlType(name = "FAPService.Transport.RealTime")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class RealTime {
 
 	/**

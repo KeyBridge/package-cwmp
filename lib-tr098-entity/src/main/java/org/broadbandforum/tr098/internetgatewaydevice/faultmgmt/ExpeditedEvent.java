@@ -17,7 +17,11 @@ package org.broadbandforum.tr098.internetgatewaydevice.faultmgmt;
 
 import java.time.LocalDateTime;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -34,6 +38,9 @@ When a new alarm replaces an existing alarm, then all parameter values for that 
 	 * @since 1.10
 	 */
 @CWMPObject(name = "InternetGatewayDevice.FaultMgmt.ExpeditedEvent.{i}.")
+@XmlRootElement(name = "ExpeditedEvent")
+@XmlType(name = "InternetGatewayDevice.FaultMgmt.ExpeditedEvent")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class ExpeditedEvent {
 
 	/**

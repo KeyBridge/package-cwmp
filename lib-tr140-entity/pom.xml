@@ -18,7 +18,7 @@
     The TR-140 document compiled into Java class files.
 
 Spec: urn:broadband-forum-org:tr-140-1-2-0
-Build: 2018-02-01T17:26:31.032
+Build: 2018-02-13T09:46:07.447
 StorageService:1.2 Service Object
 
   </description>
@@ -45,6 +45,11 @@ StorageService:1.2 Service Object
       <artifactId>validation-api</artifactId>
       <version>1.1.0.Final</version>
       <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>javax.xml.bind</groupId>
+      <artifactId>jaxb-api</artifactId>
+      <version>2.3.0</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

@@ -17,8 +17,12 @@ package org.broadbandforum.tr135.stbservice;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr135.stbservice.avstreams.AVStream;
 
@@ -28,6 +32,9 @@ import org.broadbandforum.tr135.stbservice.avstreams.AVStream;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.AVStreams.")
+@XmlRootElement(name = "AVStreams")
+@XmlType(name = "STBService.AVStreams")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class AVStreams {
 
 	/**

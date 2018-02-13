@@ -16,7 +16,11 @@
 package org.broadbandforum.tr143.internetgatewaydevice;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -26,6 +30,9 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.DeviceConfig.")
+@XmlRootElement(name = "DeviceConfig")
+@XmlType(name = "InternetGatewayDevice.DeviceConfig")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DeviceConfig {
 
 	/**

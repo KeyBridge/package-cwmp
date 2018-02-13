@@ -19,8 +19,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -29,6 +33,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.3
 	 */
 @CWMPObject(name = "Device.ManagementServer.EmbeddedDevice.{i}.")
+@XmlRootElement(name = "EmbeddedDevice")
+@XmlType(name = "Device.ManagementServer.EmbeddedDevice")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class EmbeddedDevice {
 
 	/**

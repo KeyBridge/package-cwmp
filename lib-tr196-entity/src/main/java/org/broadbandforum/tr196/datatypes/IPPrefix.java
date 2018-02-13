@@ -16,6 +16,10 @@
 package org.broadbandforum.tr196.datatypes;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 	/**
 	 * IPv4 or IPv6 routing prefix in Classless Inter-Domain Routing (CIDR) notation {{bibref|RFC4632}}. This is specified as an IP address followed by an appended "/n" suffix, where ''n'' (the prefix size) is an integer in the range 0-32 (for IPv4) or 0-128 (for IPv6) that indicates the number of (leftmost) '1' bits of the routing prefix. 
@@ -28,6 +32,9 @@ If the IP address part is unspecified or inapplicable, it MUST be {{empty}} unle
 
 If the entire IP prefix is unspecified or inapplicable, it MUST be {{empty}} unless otherwise specified by the parameter definition.
 	 */
+@XmlRootElement(name = "IPPrefix")
+@XmlType(name = "org.broadbandforum.tr196.datatypes.IPPrefix")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IPPrefix {
 
 	@Size(max = 49)

@@ -19,8 +19,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr098.datatypes.UUID;
 
@@ -30,6 +34,9 @@ import org.broadbandforum.tr098.datatypes.UUID;
 	 * @since 1.12
 	 */
 @CWMPObject(name = "InternetGatewayDevice.UPnP.Description.DeviceInstance.{i}.")
+@XmlRootElement(name = "DeviceInstance")
+@XmlType(name = "InternetGatewayDevice.UPnP.Description.DeviceInstance")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class DeviceInstance {
 
 	/**

@@ -17,8 +17,12 @@ package org.broadbandforum.tr098.internetgatewaydevice.wandevice;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -36,6 +40,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.wandevice.wanconnectiondev
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.")
+@XmlRootElement(name = "WANConnectionDevice")
+@XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class WANConnectionDevice {
 
 	/**

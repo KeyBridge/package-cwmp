@@ -16,7 +16,11 @@
 package org.broadbandforum.tr140.storageservice.logicalvolume.folder;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr140.datatypes.Alias;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr140.datatypes.Alias;
 	 * @since 1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.LogicalVolume.{i}.Folder.{i}.UserAccess.{i}.")
+@XmlRootElement(name = "UserAccess")
+@XmlType(name = "StorageService.LogicalVolume.Folder.UserAccess")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class UserAccess {
 
 	/**

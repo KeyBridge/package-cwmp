@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.zigbee.zdo;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.datatypes.Alias;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr181.datatypes.ZigBeeNetworkAddress;
 	 * @since 2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.Group.{i}.")
+@XmlRootElement(name = "Group")
+@XmlType(name = "Device.ZigBee.ZDO.Group")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Group {
 
 	/**

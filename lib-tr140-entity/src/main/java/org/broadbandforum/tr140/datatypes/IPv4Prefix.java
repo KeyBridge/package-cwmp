@@ -15,6 +15,10 @@
  */
 package org.broadbandforum.tr140.datatypes;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.tr140.datatypes.IPPrefix;
 
 	/**
@@ -22,6 +26,9 @@ import org.broadbandforum.tr140.datatypes.IPPrefix;
 
 Can be any IPv4 prefix that is permitted by the ''IPPrefix'' data type.
 	 */
+@XmlRootElement(name = "IPv4Prefix")
+@XmlType(name = "org.broadbandforum.tr140.datatypes.IPv4Prefix")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IPv4Prefix extends IPPrefix {
 
 

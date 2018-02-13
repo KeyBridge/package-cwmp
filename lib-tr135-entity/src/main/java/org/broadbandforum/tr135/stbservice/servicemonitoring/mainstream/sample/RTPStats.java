@@ -17,8 +17,12 @@ package org.broadbandforum.tr135.stbservice.servicemonitoring.mainstream.sample;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -29,6 +33,9 @@ If no EC is applied the ''BeforeEC'' statistics provide the same values as the c
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Sample.RTPStats.")
+@XmlRootElement(name = "RTPStats")
+@XmlType(name = "STBService.ServiceMonitoring.MainStream.Sample.RTPStats")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class RTPStats {
 
 	/**

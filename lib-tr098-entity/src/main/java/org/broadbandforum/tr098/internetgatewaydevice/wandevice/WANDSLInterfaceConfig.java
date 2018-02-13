@@ -18,8 +18,12 @@ package org.broadbandforum.tr098.internetgatewaydevice.wandevice;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.internetgatewaydevice.wandevice.wandslinterfaceconfig.Stats;
@@ -31,6 +35,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.wandevice.wandslinterfacec
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLInterfaceConfig.")
+@XmlRootElement(name = "WANDSLInterfaceConfig")
+@XmlType(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class WANDSLInterfaceConfig {
 
 	/**

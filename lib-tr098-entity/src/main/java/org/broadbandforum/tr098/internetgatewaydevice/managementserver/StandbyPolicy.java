@@ -16,7 +16,11 @@
 package org.broadbandforum.tr098.internetgatewaydevice.managementserver;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -28,6 +32,9 @@ NOTE: "CR", as used in the names and descriptions of the parameters defined in t
 	 * @since 1.13
 	 */
 @CWMPObject(name = "InternetGatewayDevice.ManagementServer.StandbyPolicy.")
+@XmlRootElement(name = "StandbyPolicy")
+@XmlType(name = "InternetGatewayDevice.ManagementServer.StandbyPolicy")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class StandbyPolicy {
 
 	/**

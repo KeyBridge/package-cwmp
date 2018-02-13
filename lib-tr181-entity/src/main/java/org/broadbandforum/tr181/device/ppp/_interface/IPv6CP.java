@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device.ppp._interface;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr181.datatypes.IPv6Address;
 
@@ -25,6 +29,9 @@ import org.broadbandforum.tr181.datatypes.IPv6Address;
 	 * @since 2.2
 	 */
 @CWMPObject(name = "Device.PPP.Interface.{i}.IPv6CP.")
+@XmlRootElement(name = "IPv6CP")
+@XmlType(name = "Device.PPP.Interface.IPv6CP")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class IPv6CP {
 
 	/**

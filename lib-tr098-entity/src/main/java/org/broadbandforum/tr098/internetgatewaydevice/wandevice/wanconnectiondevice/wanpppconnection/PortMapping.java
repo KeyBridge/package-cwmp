@@ -16,7 +16,11 @@
 package org.broadbandforum.tr098.internetgatewaydevice.wandevice.wanconnectiondevice.wanpppconnection;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.Alias;
@@ -33,6 +37,9 @@ At most one entry in an instance of this table can exist with all of the same va
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.PortMapping.{i}.")
+@XmlRootElement(name = "PortMapping")
+@XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPPPConnection.PortMapping")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class PortMapping {
 
 	/**

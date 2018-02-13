@@ -18,8 +18,12 @@ package org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.onex.ran;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 
@@ -29,6 +33,9 @@ import org.broadbandforum.annotation.CWMPParameter;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.NetworkListenModeConfig.")
+@XmlRootElement(name = "NetworkListenModeConfig")
+@XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.NetworkListenModeConfig")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class NetworkListenModeConfig {
 
 	/**

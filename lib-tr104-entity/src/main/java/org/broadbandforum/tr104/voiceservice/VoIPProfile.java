@@ -18,8 +18,12 @@ package org.broadbandforum.tr104.voiceservice;
 import java.util.ArrayList;
 import java.util.Collection;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlList;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr104.datatypes.Alias;
@@ -36,6 +40,9 @@ VoIP Profiles could be used by {{object|.SIP.Network.}}, {{object|.SIP.Proxy.}},
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.")
+@XmlRootElement(name = "VoIPProfile")
+@XmlType(name = "VoiceService.VoIPProfile")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class VoIPProfile {
 
 	/**

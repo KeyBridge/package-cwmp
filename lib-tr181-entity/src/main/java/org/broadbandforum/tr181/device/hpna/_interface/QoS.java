@@ -17,8 +17,12 @@ package org.broadbandforum.tr181.device.hpna._interface;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr181.device.hpna._interface.qos.FlowSpec;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr181.device.hpna._interface.qos.FlowSpec;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "Device.HPNA.Interface.{i}.QoS.")
+@XmlRootElement(name = "QoS")
+@XmlType(name = "Device.HPNA.Interface.QoS")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class QoS {
 
 	/**

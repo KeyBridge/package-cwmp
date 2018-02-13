@@ -17,8 +17,12 @@ package org.broadbandforum.tr098.internetgatewaydevice;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr098.internetgatewaydevice.softwaremodules.DeploymentUnit;
 import org.broadbandforum.tr098.internetgatewaydevice.softwaremodules.ExecEnv;
@@ -30,6 +34,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.softwaremodules.ExecutionU
 	 * @since 1.8
 	 */
 @CWMPObject(name = "InternetGatewayDevice.SoftwareModules.")
+@XmlRootElement(name = "SoftwareModules")
+@XmlType(name = "InternetGatewayDevice.SoftwareModules")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class SoftwareModules {
 
 	/**

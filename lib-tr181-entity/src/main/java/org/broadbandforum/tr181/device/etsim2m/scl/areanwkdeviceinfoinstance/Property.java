@@ -15,7 +15,11 @@
  */
 package org.broadbandforum.tr181.device.etsim2m.scl.areanwkdeviceinfoinstance;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 
 	/**
@@ -26,6 +30,9 @@ import org.broadbandforum.annotation.CWMPObject;
 	 * @since 2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.AreaNwkDeviceInfoInstance.{i}.Property.{i}.")
+@XmlRootElement(name = "Property")
+@XmlType(name = "Device.ETSIM2M.SCL.AreaNwkDeviceInfoInstance.Property")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Property {
 
 	/**

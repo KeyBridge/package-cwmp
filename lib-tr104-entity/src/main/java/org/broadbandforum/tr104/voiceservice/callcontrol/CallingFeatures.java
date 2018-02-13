@@ -17,8 +17,12 @@ package org.broadbandforum.tr104.voiceservice.callcontrol;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr104.voiceservice.callcontrol.callingfeatures.Set;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr104.voiceservice.callcontrol.callingfeatures.Set;
 	 * @since 2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.")
+@XmlRootElement(name = "CallingFeatures")
+@XmlType(name = "VoiceService.CallControl.CallingFeatures")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class CallingFeatures {
 
 	/**

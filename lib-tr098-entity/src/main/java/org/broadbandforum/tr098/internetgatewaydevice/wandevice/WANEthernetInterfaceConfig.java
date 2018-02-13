@@ -16,7 +16,11 @@
 package org.broadbandforum.tr098.internetgatewaydevice.wandevice;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.datatypes.MACAddress;
@@ -28,6 +32,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.wandevice.wanethernetinter
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANEthernetInterfaceConfig.")
+@XmlRootElement(name = "WANEthernetInterfaceConfig")
+@XmlType(name = "InternetGatewayDevice.WANDevice.WANEthernetInterfaceConfig")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class WANEthernetInterfaceConfig {
 
 	/**

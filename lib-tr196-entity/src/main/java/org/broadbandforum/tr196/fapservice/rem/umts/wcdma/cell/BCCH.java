@@ -16,7 +16,11 @@
 package org.broadbandforum.tr196.fapservice.rem.umts.wcdma.cell;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.tr196.fapservice.rem.umts.wcdma.cell.bcch.CSGPSCSplitInfo;
 import org.broadbandforum.tr196.fapservice.rem.umts.wcdma.cell.bcch.ReferencePosition;
@@ -27,6 +31,9 @@ import org.broadbandforum.tr196.fapservice.rem.umts.wcdma.cell.bcch.ReferencePos
 	 * @since 2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.UMTS.WCDMA.Cell.{i}.BCCH.")
+@XmlRootElement(name = "BCCH")
+@XmlType(name = "FAPService.REM.UMTS.WCDMA.Cell.BCCH")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class BCCH {
 
 	/**

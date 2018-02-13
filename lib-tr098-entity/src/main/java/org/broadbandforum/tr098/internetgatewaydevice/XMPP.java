@@ -17,8 +17,12 @@ package org.broadbandforum.tr098.internetgatewaydevice;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr098.internetgatewaydevice.xmpp.Connection;
@@ -29,6 +33,9 @@ import org.broadbandforum.tr098.internetgatewaydevice.xmpp.Connection;
 	 * @since 1.13
 	 */
 @CWMPObject(name = "InternetGatewayDevice.XMPP.")
+@XmlRootElement(name = "XMPP")
+@XmlType(name = "InternetGatewayDevice.XMPP")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class XMPP {
 
 	/**

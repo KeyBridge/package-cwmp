@@ -16,7 +16,11 @@
 package org.broadbandforum.tr143.internetgatewaydevice.queuemanagement;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr143.datatypes.IPAddress;
@@ -28,6 +32,9 @@ import org.broadbandforum.tr143.datatypes.MACAddress;
 	 * @since 1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.QueueManagement.Classification.{i}.")
+@XmlRootElement(name = "Classification")
+@XmlType(name = "InternetGatewayDevice.QueueManagement.Classification")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Classification {
 
 	/**

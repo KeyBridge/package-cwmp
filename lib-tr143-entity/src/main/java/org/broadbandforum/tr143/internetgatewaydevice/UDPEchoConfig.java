@@ -17,7 +17,11 @@ package org.broadbandforum.tr143.internetgatewaydevice;
 
 import java.time.LocalDateTime;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr143.datatypes.IPAddress;
@@ -28,6 +32,9 @@ import org.broadbandforum.tr143.datatypes.IPAddress;
 	 * @since 1.3
 	 */
 @CWMPObject(name = "InternetGatewayDevice.UDPEchoConfig.")
+@XmlRootElement(name = "UDPEchoConfig")
+@XmlType(name = "InternetGatewayDevice.UDPEchoConfig")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class UDPEchoConfig {
 
 	/**

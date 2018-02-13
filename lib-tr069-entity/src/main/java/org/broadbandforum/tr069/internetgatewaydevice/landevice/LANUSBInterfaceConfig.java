@@ -16,7 +16,11 @@
 package org.broadbandforum.tr069.internetgatewaydevice.landevice;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr069.datatypes.MACAddress;
@@ -28,6 +32,9 @@ import org.broadbandforum.tr069.internetgatewaydevice.landevice.lanusbinterfacec
 	 * @since 1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANUSBInterfaceConfig.{i}.")
+@XmlRootElement(name = "LANUSBInterfaceConfig")
+@XmlType(name = "InternetGatewayDevice.LANDevice.LANUSBInterfaceConfig")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class LANUSBInterfaceConfig {
 
 	/**

@@ -16,7 +16,11 @@
 package org.broadbandforum.tr135.stbservice.servicemonitoring;
 
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
 import org.broadbandforum.tr135.datatypes.Alias;
@@ -37,6 +41,9 @@ Note that some parameters, e.g. {{param|.Components.FrontEnd.{i}.IP.ServiceConne
 	 * @since 1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.")
+@XmlRootElement(name = "MainStream")
+@XmlType(name = "STBService.ServiceMonitoring.MainStream")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class MainStream {
 
 	/**
