@@ -1,15 +1,18 @@
 package org.broadbandforum.annotation;
 
+import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
 import static java.lang.annotation.ElementType.FIELD;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
  * Defines several @CWMPParameter annotations on the same element
  *
  * @author Andrius Druzinis-Vitkus
- * @since 0.0.1 created 27/01/2018
+ * @since 0.0.2 created 27/01/2018
  */
+@Retention(RUNTIME)
 @Target({FIELD})
 public @interface CWMPParameter {
 

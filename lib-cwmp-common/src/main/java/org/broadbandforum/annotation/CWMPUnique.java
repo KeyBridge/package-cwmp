@@ -14,9 +14,9 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  */
 @Retention(RUNTIME)
 @Target({TYPE})
-public @interface CWMPUniqueKey {
+public @interface CWMPUnique {
 
   boolean functional() default true;
 
-  String[] value () default {};
+  String[] names () default {};
 }
