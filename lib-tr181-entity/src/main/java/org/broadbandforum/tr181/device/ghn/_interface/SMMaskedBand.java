@@ -22,15 +22,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Specifies the list of masked bands to be applied to the G.hn interface.  This information is conveyed by the Domain Master in the SM descriptor as specified in {{bibref|G.9961|Table 8-77}}.
 
         Instances of this object are expected to exist only on G.hn interfaces that are currently the Domain Master, i.e. for which parameter {{param|#.IsDM}} is {{true}}.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.Ghn.Interface.{i}.SMMaskedBand.{i}.")
+@CWMPObject(name = "Device.Ghn.Interface.{i}.SMMaskedBand.{i}.", uniqueConstraints = {@CWMPUnique(names = {"BandNumber"})})
 @XmlRootElement(name = "Device.Ghn.Interface.SMMaskedBand")
 @XmlType(name = "Device.Ghn.Interface.SMMaskedBand")
 @XmlAccessorType(XmlAccessType.FIELD)

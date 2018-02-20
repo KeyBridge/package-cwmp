@@ -25,7 +25,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.dhcpv6.server.pool.client.IPv6Prefix;
 import org.broadbandforum.tr181.device.dhcpv6.server.pool.client.Option;
 
@@ -34,9 +35,10 @@ import org.broadbandforum.tr181.device.dhcpv6.server.pool.client.Option;
 
         This table lists details of DHCPv6 clients that matched the filter criteria of this {{object|#}} entry.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.Client.{i}.")
+@CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.Client.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"SourceAddress"})})
 @XmlRootElement(name = "Device.DHCPv6.Server.Pool.Client")
 @XmlType(name = "Device.DHCPv6.Server.Pool.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -58,7 +60,7 @@ public class Client {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "SourceAddress")
-	public org.broadbandforum.tr181.datatypes.IPv6Address sourceAddress;
+	public org.broadbandforum.common.IPv6Address sourceAddress;
 	/**
 	 * Whether or not the DHCPv6 client is currently present on the LAN.  The method of presence detection is a local matter to  the CPE.
 
@@ -135,7 +137,7 @@ public class Client {
 	 * @since 2.2
 	 * @return the value
 	 */
-	public org.broadbandforum.tr181.datatypes.IPv6Address getSourceAddress() {
+	public org.broadbandforum.common.IPv6Address getSourceAddress() {
 		return sourceAddress;
 	}
 
@@ -145,7 +147,7 @@ public class Client {
 	 * @since 2.2
 	 * @param sourceAddress the input value
 	 */
-	public void  setSourceAddress(org.broadbandforum.tr181.datatypes.IPv6Address sourceAddress) {
+	public void  setSourceAddress(org.broadbandforum.common.IPv6Address sourceAddress) {
 		this.sourceAddress = sourceAddress;
 	}
 
@@ -156,7 +158,7 @@ public class Client {
 	 * @param sourceAddress the input value
 	 * @return this instance
 	 */
-	public Client withSourceAddress(org.broadbandforum.tr181.datatypes.IPv6Address sourceAddress) {
+	public Client withSourceAddress(org.broadbandforum.common.IPv6Address sourceAddress) {
 		this.sourceAddress = sourceAddress;
 		return this;
 	}

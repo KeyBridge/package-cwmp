@@ -26,14 +26,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object contains parameters relating to the carrier information for inter-freq re-selection scenario (see {{bibref|3GPP-TS.32.592|Section 6.1.5.1.3}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq.Carrier.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq.Carrier.{i}.", uniqueConstraints = {@CWMPUnique(names = {"EUTRACarrierARFCN"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq.Carrier")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.InterFreq.Carrier")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -46,7 +48,7 @@ public class Carrier {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -149,7 +151,7 @@ Corresponds to parameter p-Max specified in SIB5 in {{bibref|3GPP-TS.36.331|Sect
 	@XmlElement(name = "PMax")
 	@CWMPParameter(access = "readWrite", units = "dBm")
 	@Size(min = -30, max = 33)
-	public Integer pmax = 0;
+	public Integer pmax;
 	/**
 	 * Scaling factor for TreselectionEUTRA for inter-frequency re-selection to this frequency carrier in Medium-mobility state. The value of {{param}} divided by 100 yields the actual SF value.
 

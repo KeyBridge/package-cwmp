@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters related to cell selection and reselection.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.CellSelection.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.CellSelection")

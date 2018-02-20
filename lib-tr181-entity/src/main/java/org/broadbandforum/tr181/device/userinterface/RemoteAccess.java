@@ -34,7 +34,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
         Remote access requires user authentication.  To provide remote access authentication the CPE MUST support a "User" table with at least one instance that has "RemoteAccessCapable" set to {{true}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.UserInterface.RemoteAccess.")
 @XmlRootElement(name = "Device.UserInterface.RemoteAccess")

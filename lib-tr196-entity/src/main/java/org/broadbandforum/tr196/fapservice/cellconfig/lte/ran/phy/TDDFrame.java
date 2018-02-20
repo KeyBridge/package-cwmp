@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object is applicable to TDD mode only. This object contains parameters relating to the TDD frame structure configuration (see {{bibref|3GPP-TS.32.592|Section 6.1.1.10}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.TDDFrame.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY.TDDFrame")

@@ -35,7 +35,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.phy.ULPowerControl
 	/**
 	 * This object contains parameters relating to the physical layer level configuration.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY")

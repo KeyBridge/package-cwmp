@@ -30,7 +30,7 @@ import org.broadbandforum.tr135.stbservice.applications.cdspush.ContentItem;
 	/**
 	 * Details of STB CDS Push logical internal parameters.
 	 *
-	 * @since 1.1
+	 * @since TR135 v1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Applications.CDSPush.")
 @XmlRootElement(name = "STBService.Applications.CDSPush")

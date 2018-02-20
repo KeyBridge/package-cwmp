@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.ethernet.VLANTermination;
 	/**
 	 * Ethernet object. This object models several Ethernet interface objects, each representing a different stack layer, including: {{object|Interface}}, {{object|Link}}, and {{object|VLANTermination}}. {{object|Interface}} is media-specific and models a port, the PHY layer, and the MAC layer. {{object|Link}} is media-independent and models the Logical Link Control (LLC) layer. An "outer" {{object|VLANTermination}}, when present, is expected to be stacked on top of {{object|Link}} objects to receive and send frames with a configured VLANID.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.Ethernet.")
 @XmlRootElement(name = "Device.Ethernet")

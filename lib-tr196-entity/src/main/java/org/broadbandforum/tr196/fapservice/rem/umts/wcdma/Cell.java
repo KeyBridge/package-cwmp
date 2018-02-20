@@ -27,7 +27,7 @@ import org.broadbandforum.tr196.fapservice.rem.umts.wcdma.cell.RF;
 	/**
 	 * Table indicating the components of the discovered cells.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.UMTS.WCDMA.Cell.{i}.")
 @XmlRootElement(name = "FAPService.REM.UMTS.WCDMA.Cell")

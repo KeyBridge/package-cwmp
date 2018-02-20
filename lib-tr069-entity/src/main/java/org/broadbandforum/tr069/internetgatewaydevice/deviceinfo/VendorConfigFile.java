@@ -23,13 +23,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Every instance of this object is a Vendor Configuration File, and contains parameters associated with the Vendor Configuration File.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"})})
 @XmlRootElement(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile")
 @XmlType(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile")
 @XmlAccessorType(XmlAccessType.FIELD)

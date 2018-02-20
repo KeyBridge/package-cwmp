@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.gre.Tunnel;
 	/**
 	 * This object contains parameters associated with the Generic Routing Encapsulation (GRE) Tunnel ({{bibref|RFC2784}}) with Key and Sequence Number extensions ({{bibref|RFC2890}}). This object also provides a means to treat packets that are encapsulated within a GRE Tunnel by using a set of {{object|Filter}} objects to determine the treatment of the packet.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.GRE.")
 @XmlRootElement(name = "Device.GRE")

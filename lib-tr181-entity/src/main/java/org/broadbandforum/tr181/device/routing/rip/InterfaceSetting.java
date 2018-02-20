@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * IP Interface RIP configuration table.
@@ -34,9 +35,10 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         Note: This object only applies to RIP2; i.e. version 2 of the RIP protocol is used to accept or send over the specified {{param|Interface}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.Routing.RIP.InterfaceSetting.{i}.")
+@CWMPObject(name = "Device.Routing.RIP.InterfaceSetting.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Interface"})})
 @XmlRootElement(name = "Device.Routing.RIP.InterfaceSetting")
 @XmlType(name = "Device.Routing.RIP.InterfaceSetting")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -49,7 +51,7 @@ public class InterfaceSetting {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this entry.  {{enum}}
 
@@ -60,7 +62,7 @@ public class InterfaceSetting {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *

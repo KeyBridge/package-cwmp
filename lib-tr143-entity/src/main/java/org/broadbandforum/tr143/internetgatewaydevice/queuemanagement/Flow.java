@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Flow table.
 	 *
-	 * @since 1.1
+	 * @since TR143 v1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.QueueManagement.Flow.{i}.")
 @XmlRootElement(name = "InternetGatewayDevice.QueueManagement.Flow")
@@ -51,7 +51,7 @@ This parameter is OBSOLETED because it serves no purpose (no other parameter ref
 	 */
 	@XmlElement(name = "FlowEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean flowEnable = false;
+	public Boolean flowEnable;
 	/**
 	 * The status of this Flow table entry.  {{enum}}
 
@@ -60,7 +60,7 @@ The {{enum|Error}} value MAY be used by the CPE to indicate a locally defined er
 	 * @since 1.1
 	 */
 	@XmlElement(name = "FlowStatus")
-	public String flowStatus = "Disabled";
+	public String flowStatus;
 	/**
 	 * URN identifying the type of flow to be associated with the specified queue and policer.  A set of defined URNs is given in {{bibref|TR-098a1|Annex A}}.
 	 *
@@ -96,7 +96,7 @@ The {{enum|Error}} value MAY be used by the CPE to indicate a locally defined er
 	@XmlElement(name = "AppIdentifier")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer appIdentifier = -1;
+	public Integer appIdentifier;
 	/**
 	 * Identifier of the forwarding policy associated with this flow.
 	 *
@@ -115,7 +115,7 @@ A value of -1 indicates a null policer.
 	@XmlElement(name = "FlowPolicer")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer flowPolicer = -1;
+	public Integer flowPolicer;
 	/**
 	 * Instance number of the Queue table entry for traffic that falls in this flow.
 
@@ -126,7 +126,7 @@ A value of -1 indicates a null queue.
 	@XmlElement(name = "FlowQueue")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer flowQueue = -1;
+	public Integer flowQueue;
 	/**
 	 * DSCP to mark traffic with that falls into this flow.
 
@@ -139,7 +139,7 @@ A value of -2 indicates automatic marking of DSCP based upon the EthernetPriorit
 	@XmlElement(name = "FlowDSCPMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -2)
-	public Integer flowDSCPMark = -1;
+	public Integer flowDSCPMark;
 	/**
 	 * Ethernet priority code (as defined in 802.1D) to mark traffic with that falls into this flow.
 
@@ -152,7 +152,7 @@ A value of -2 indicates automatic marking of EthernetPriority based upon the DSC
 	@XmlElement(name = "FlowEthernetPriorityMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -2)
-	public Integer flowEthernetPriorityMark = -1;
+	public Integer flowEthernetPriorityMark;
 
 	public Flow() {
 	}

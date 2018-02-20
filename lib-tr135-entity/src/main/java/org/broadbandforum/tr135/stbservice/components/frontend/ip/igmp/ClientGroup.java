@@ -22,17 +22,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
-import org.broadbandforum.tr135.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * IGMP Group table. This is the database that is maintained by the IGMP client to reflect the current group membership.
 
 The CPE MUST support at least ''MaximumNumberOfConcurrentGroups'' table entries.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.IGMP.ClientGroup.{i}.")
+@CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.IGMP.ClientGroup.{i}.", uniqueConstraints = {@CWMPUnique(names = {"GroupAddress"}, functional = false),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroup")
 @XmlType(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroup")
 @XmlAccessorType(XmlAccessType.FIELD)

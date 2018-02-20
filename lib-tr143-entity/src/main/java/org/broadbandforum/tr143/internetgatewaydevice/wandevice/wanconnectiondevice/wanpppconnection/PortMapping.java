@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Port mapping table.
@@ -33,9 +34,9 @@ This table MUST NOT contain dynamic NAT binding entries associated with the norm
 
 At most one entry in an instance of this table can exist with all of the same values for {{param|RemoteHost}}, {{param|ExternalPort}}, and {{param|PortMappingProtocol}}.  If the ACS attempts to set the parameters of an existing entry such that this requirement would be violated, the CPE MUST reject the request.  In this case, the SetParameterValues response MUST include a SetParameterValuesFault element for each parameter in the corresponding request whose modification would have resulted in such a violation.  On creation of a new table entry, the CPE MUST choose default values for {{param|ExternalPort}} and {{param|PortMappingProtocol}} such that the new entry does not conflict with any existing entry.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.PortMapping.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.PortMapping.{i}.", uniqueConstraints = {@CWMPUnique(names = {"RemoteHost", "ExternalPort", "PortMappingProtocol"})})
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPPPConnection.PortMapping")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPPPConnection.PortMapping")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -48,7 +49,7 @@ public class PortMapping {
 	 */
 	@XmlElement(name = "PortMappingEnabled")
 	@CWMPParameter(access = "readWrite")
-	public Boolean portMappingEnabled = false;
+	public Boolean portMappingEnabled;
 	/**
 	 * Determines the time to live, in seconds, of a port-mapping lease, where "time to live" means the number of seconds before the port mapping expires. 
 

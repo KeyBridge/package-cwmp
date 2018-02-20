@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.voiceservice.clocksynchronization.ClockSource;
 	/**
 	 * Clock source configuration for Time-Division multiplexing subsystem.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.ClockSynchronization.")
 @XmlRootElement(name = "VoiceService.ClockSynchronization")

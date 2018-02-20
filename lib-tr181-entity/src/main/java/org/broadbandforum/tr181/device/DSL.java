@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.dsl.Line;
 	/**
 	 * This object models DSL lines, DSL channels, DSL bonding, and DSL diagnostics. The specific interface objects defined here are {{object|Line}}, {{object|Channel}}, and {{object|BondingGroup}}. Each {{object|Line}} models a layer 1 DSL Line interface, and each {{object|Channel}} models a layer 1 DSL Channel interface where multiple channels can run over a DSL line. In the case where bonding is configured, it is expected that {{object|BondingGroup}} is stacked above the {{object|Channel}} instances within its group.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DSL.")
 @XmlRootElement(name = "Device.DSL")

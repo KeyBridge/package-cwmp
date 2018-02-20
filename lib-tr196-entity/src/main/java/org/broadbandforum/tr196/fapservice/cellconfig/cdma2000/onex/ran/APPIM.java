@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.onex.ran.appim.AP
 	/**
 	 * This object can be configured only if {{param|.Capabilities.CDMA2000.OneX.FemtoOverheadMessagesCapable}} is set to {{true}}.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.APPIM.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.APPIM")

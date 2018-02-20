@@ -26,7 +26,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.hrpd.ran.RF;
 	/**
 	 * The object contains attributes related to HRPD RAN.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.RAN.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD.RAN")

@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object models the POTS link layer properties specific to a single physical connection used for Internet access on a CPE.  This object is required for a CPE with a POTS WAN interface, and is exclusive of any other ''WAN*LinkConfig'' object within a given ''WANConnectionDevice'' instance.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPOTSLinkConfig.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPOTSLinkConfig")

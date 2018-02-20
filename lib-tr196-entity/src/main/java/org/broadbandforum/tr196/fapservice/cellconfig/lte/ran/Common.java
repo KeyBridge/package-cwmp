@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the common configuration in LTE RAN.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Common.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Common")

@@ -33,7 +33,7 @@ import org.broadbandforum.tr069.internetgatewaydevice.landevice.WLANConfiguratio
 	/**
 	 * Each instance contains all LAN-related objects for a given bridged subnet.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.")
 @XmlRootElement(name = "InternetGatewayDevice.LANDevice")

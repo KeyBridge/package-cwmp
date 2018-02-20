@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the S1AP configuration.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.S1AP.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.S1AP")

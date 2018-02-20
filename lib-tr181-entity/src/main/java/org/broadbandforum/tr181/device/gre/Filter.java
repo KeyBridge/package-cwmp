@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * GRE Filter table. Entries in this table are applied against the packets that are to be encapsulated within the GRE Tunnel based on the following conditions:
@@ -37,9 +38,9 @@ import org.broadbandforum.annotation.CWMPParameter;
 
         For enabled table entries, if {{param|Interface}} is not a valid reference and {{param|AllInterfaces}} is {{false}}, then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.GRE.Filter.{i}.")
+@CWMPObject(name = "Device.GRE.Filter.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.GRE.Filter")
 @XmlType(name = "Device.GRE.Filter")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -52,7 +53,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this filter.  {{enum}}
 
@@ -63,7 +64,7 @@ public class Filter {
 	 * @since 2.8
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * Position of the {{object}} entry in the order of precedence.  A value of ''1'' indicates the first entry considered (highest precedence).  For each packet, the highest ordered entry that matches the filter criteria is applied.  All lower order entries are ignored.
 
@@ -102,7 +103,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "AllInterfaces")
 	@CWMPParameter(access = "readWrite")
-	public Boolean allInterfaces = false;
+	public Boolean allInterfaces;
 	/**
 	 * Filter criterion.
 
@@ -113,7 +114,7 @@ public class Filter {
 	@XmlElement(name = "VLANIDCheck")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer vlaNIDCheck = -1;
+	public Integer vlaNIDCheck;
 	/**
 	 * If {{false}}, the filter includes only those packets that match the {{param|VLANIDCheck}} entry, if specified.
 
@@ -123,7 +124,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "VLANIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean vlaNIDExclude = false;
+	public Boolean vlaNIDExclude;
 	/**
 	 * DSCP with which to mark the outer IP header for traffic that is associated with the interface criterion.
 

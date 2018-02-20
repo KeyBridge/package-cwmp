@@ -25,7 +25,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object defines what UPnP capabilities this device has.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.UPnP.Device.Capabilities.")
 @XmlRootElement(name = "Device.UPnP.Device.Capabilities")

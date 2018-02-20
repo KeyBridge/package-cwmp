@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * PVR storage table. There MUST be an instance for each storage object that can be accessed by the PVR. Entries MAY be dynamically created and deleted as storage devices become available and unavailable.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.Components.PVR.Storage.{i}.")
+@CWMPObject(name = "STBService.{i}.Components.PVR.Storage.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}, functional = false),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Components.PVR.Storage")
 @XmlType(name = "STBService.Components.PVR.Storage")
 @XmlAccessorType(XmlAccessType.FIELD)

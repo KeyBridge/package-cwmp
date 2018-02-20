@@ -26,7 +26,7 @@ import org.broadbandforum.tr181.device.atm.diagnostics.F5Loopback;
 	/**
 	 * The ATM Diagnostics object.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.ATM.Diagnostics.")
 @XmlRootElement(name = "Device.ATM.Diagnostics")

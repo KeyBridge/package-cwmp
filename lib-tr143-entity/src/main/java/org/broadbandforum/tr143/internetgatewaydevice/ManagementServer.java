@@ -32,7 +32,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.managementserver.Manageabl
 	/**
 	 * This object contains parameters relating to the CPE's association with an ACS.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.ManagementServer.")
 @XmlRootElement(name = "InternetGatewayDevice.ManagementServer")

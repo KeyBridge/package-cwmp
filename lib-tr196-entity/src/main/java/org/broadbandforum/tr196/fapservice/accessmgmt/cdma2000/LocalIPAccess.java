@@ -26,7 +26,7 @@ import org.broadbandforum.tr196.fapservice.accessmgmt.cdma2000.localipaccess.HRP
 	/**
 	 * Local IP access support as defined in 3GPP2
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.CDMA2000.LocalIPAccess.")
 @XmlRootElement(name = "FAPService.AccessMgmt.CDMA2000.LocalIPAccess")

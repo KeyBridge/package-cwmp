@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.cn.csdomain.RAB;
 	/**
 	 * This object contains parameters relating to configuring the CS domain of the UMTS CN.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.CN.CSDomain.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.CN.CSDomain")

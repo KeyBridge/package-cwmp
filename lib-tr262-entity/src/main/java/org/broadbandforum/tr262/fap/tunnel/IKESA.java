@@ -23,14 +23,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr262.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * IKE IPsec Security Association Table. This Table is a member of the IPsec Security Association Database (SAD). {{bibref|RFC4301}}.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
-@CWMPObject(name = "FAP.Tunnel.IKESA.{i}.")
+@CWMPObject(name = "FAP.Tunnel.IKESA.{i}.", uniqueConstraints = {@CWMPUnique(names = {"IPAddress", "SubnetMask"})})
 @XmlRootElement(name = "FAP.Tunnel.IKESA")
 @XmlType(name = "FAP.Tunnel.IKESA")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * Table indicating the RF aspect of the discovered cells.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.UMTS.WCDMA.Cell.{i}.RF.")
 @XmlRootElement(name = "FAPService.REM.UMTS.WCDMA.Cell.RF")

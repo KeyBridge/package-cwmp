@@ -21,15 +21,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.StatsCounter32;
-import org.broadbandforum.tr181.datatypes.StatsCounter64;
+import org.broadbandforum.common.StatsCounter32;
+import org.broadbandforum.common.StatsCounter64;
 
 	/**
 	 * Statistics for this IKEv2 Security Association (SA).
 
         The CPE MUST reset the IKEv2 SA's Stats parameters (unless otherwise stated in individual object or parameter descriptions) whenever the associated {{param|#.Tunnel}} instance's Stats parameters are reset.
 	 *
-	 * @since 2.5
+	 * @since TR181 v2.5
 	 */
 @CWMPObject(name = "Device.IPsec.IKEv2SA.{i}.Stats.")
 @XmlRootElement(name = "Device.IPsec.IKEv2SA.Stats")

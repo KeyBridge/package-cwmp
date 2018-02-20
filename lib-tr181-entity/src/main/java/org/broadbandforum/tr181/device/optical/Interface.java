@@ -26,16 +26,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.Dbm1000;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.Dbm1000;
 import org.broadbandforum.tr181.device.optical._interface.Stats;
 
 	/**
 	 * Optical interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}).  This table models physical optical interfaces.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
-@CWMPObject(name = "Device.Optical.Interface.{i}.")
+@CWMPObject(name = "Device.Optical.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.Optical.Interface")
 @XmlType(name = "Device.Optical.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -26,14 +26,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object models a MGCP network (a network as described in {{bibref|TR-104i2|Section 4.2}}).
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.MGCP.Network.{i}.")
+@CWMPObject(name = "VoiceService.{i}.MGCP.Network.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.MGCP.Network")
 @XmlType(name = "VoiceService.MGCP.Network")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -46,7 +47,7 @@ public class Network {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * If {{true}}, when {{param|Enable}} is set to {{false}} in-progress sessions remain intact, but no new sessions are allowed. When all sessions are terminated, the {{object}} is disabled.
 	 *
@@ -61,7 +62,7 @@ public class Network {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -143,7 +144,7 @@ If either {{param}} or {{param|EthernetPriorityMark}} are greater than zero, the
 	@XmlElement(name = "VLANIDMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer vlaNIDMark = -1;
+	public Integer vlaNIDMark;
 	/**
 	 * Ethernet priority code (as defined in {{bibref|802.1D-2004}}) to be used for outgoing MGCP signaling packets for this network.  A value of -1 indicates the default value is to be used.
 
@@ -154,7 +155,7 @@ If either {{param|VLANIDMark}} or {{param}} are greater than zero, then the outg
 	@XmlElement(name = "EthernetPriorityMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer ethernetPriorityMark = -1;
+	public Integer ethernetPriorityMark;
 	/**
 	 * Indicates whether or not piggyback events are allowed to the MGCP call agent.
 	 *
@@ -178,7 +179,7 @@ If either {{param|VLANIDMark}} or {{param}} are greater than zero, then the outg
 	 */
 	@XmlElement(name = "STUNEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean stuNEnable = false;
+	public Boolean stuNEnable;
 	/**
 	 * Domain name or IP address of the STUN server.
 	 *

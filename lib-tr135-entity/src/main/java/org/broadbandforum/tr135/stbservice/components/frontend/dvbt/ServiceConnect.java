@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Connect to a DVB-T service.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.ServiceConnect.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.DVBT.ServiceConnect")

@@ -29,7 +29,7 @@ import org.broadbandforum.tr104.voiceservice.pots.ringer.Event;
 	/**
 	 * This object contains the ring sequences configured for analogue lines.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.POTS.Ringer.")
 @XmlRootElement(name = "VoiceService.POTS.Ringer")

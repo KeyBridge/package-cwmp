@@ -35,7 +35,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.wandevice.wanconnectiondev
 	/**
 	 * Each instance contains objects associated with a given WAN link.  In this case of DSL, each instance corresponds to a single ATM VC.  On creation of a ''WANConnectionDevice'' instance, there are initially no connection objects contained within.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice")

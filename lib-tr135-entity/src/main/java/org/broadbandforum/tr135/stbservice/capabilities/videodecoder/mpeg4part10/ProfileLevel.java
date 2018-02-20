@@ -25,16 +25,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table to describe the set of profiles and levels combinations supported by the STB when MPEG4 Part 10 is used as video standard.
 
 {{marktemplate|diffs-0:4}}{{+++k+++e---num---+++ys+++}}--- --- The table MUST include a distinct entry for each supported combination of these parameters.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.Capabilities.VideoDecoder.MPEG4Part10.ProfileLevel.{i}.")
+@CWMPObject(name = "STBService.{i}.Capabilities.VideoDecoder.MPEG4Part10.ProfileLevel.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Profile", "Level"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Capabilities.VideoDecoder.MPEG4Part10.ProfileLevel")
 @XmlType(name = "STBService.Capabilities.VideoDecoder.MPEG4Part10.ProfileLevel")
 @XmlAccessorType(XmlAccessType.FIELD)

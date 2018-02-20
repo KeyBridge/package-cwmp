@@ -25,15 +25,16 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.ieee1905.al.networktopology.ieee1905device.ieee1905neighbor.Metric;
 
 	/**
 	 * This object represents an instance of an {{object}} for the {{object|##.IEEE1905Device}}. These values are from the Topology response message as defined in {{bibref|IEEE1905.1a|Table 6-15: 1905 neighbor device TLV}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
-@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.IEEE1905Neighbor.{i}.")
+@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.IEEE1905Neighbor.{i}.", uniqueConstraints = {@CWMPUnique(names = {"LocalInterface", "NeighborDeviceId"})})
 @XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IEEE1905Neighbor")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IEEE1905Neighbor")
 @XmlAccessorType(XmlAccessType.FIELD)

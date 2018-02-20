@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Every instance of this object is a Vendor Configuration File, and contains parameters associated with the Vendor Configuration File.
@@ -31,9 +32,9 @@ This table of Vendor Configuration Files is for information only and does not al
 
 Whenever the CPE successfully downloads a configuration file as a result of the Download RPC with the FileType argument of ''3 Vendor Configuration File'', the CPE MUST update this table.  If the name of the file (determined as described in the definition of the {{param|Name}} parameter) differs from that of any existing instance, then the CPE MUST create a new instance to represent this file.  If instead, the name of the file is identical to that of an existing instance, then the CPE MUST update the content of the existing instance with the new version, date, and (optionally) description of the file.{{nokeys}}
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"})})
 @XmlRootElement(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile")
 @XmlType(name = "InternetGatewayDevice.DeviceInfo.VendorConfigFile")
 @XmlAccessorType(XmlAccessType.FIELD)

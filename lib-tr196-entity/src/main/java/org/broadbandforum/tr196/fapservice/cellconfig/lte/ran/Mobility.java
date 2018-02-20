@@ -27,7 +27,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.IdleMode;
 	/**
 	 * This object contains parameters relating to the UE's mobility configuration. It covers both idle mode and connected mode.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility")

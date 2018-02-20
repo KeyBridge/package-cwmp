@@ -23,13 +23,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Table containing all LAN and WAN interfaces that are available to be referenced by the ''Bridge'' table.  Only interfaces that can carry layer-2 bridged traffic are included.
 	 *
-	 * @since 1.1
+	 * @since TR143 v1.1
 	 */
-@CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.AvailableInterface.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.AvailableInterface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"AvailableInterfaceKey"})})
 @XmlRootElement(name = "InternetGatewayDevice.Layer2Bridging.AvailableInterface")
 @XmlType(name = "InternetGatewayDevice.Layer2Bridging.AvailableInterface")
 @XmlAccessorType(XmlAccessType.FIELD)

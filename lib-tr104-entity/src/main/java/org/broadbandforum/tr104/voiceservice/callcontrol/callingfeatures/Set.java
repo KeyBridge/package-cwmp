@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr104.voiceservice.callcontrol.callingfeatures.set.CFT;
 import org.broadbandforum.tr104.voiceservice.callcontrol.callingfeatures.set.FollowMe;
 import org.broadbandforum.tr104.voiceservice.callcontrol.callingfeatures.set.SCF;
@@ -36,9 +37,9 @@ import org.broadbandforum.tr104.voiceservice.callcontrol.callingfeatures.set.Voi
 	/**
 	 * This object models a set of calling features that can be applied in {{object|.CallControl.Line.}} or {{object|.CallControl.Extension.}} objects.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.Set.{i}.")
+@CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.Set.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.CallControl.CallingFeatures.Set")
 @XmlType(name = "VoiceService.CallControl.CallingFeatures.Set")
 @XmlAccessorType(XmlAccessType.FIELD)

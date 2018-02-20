@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.routing.routeinformation.InterfaceSetting
 	/**
 	 * Received Router Advertisement (RA) route information {{bibref|RFC4191}}.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
 @CWMPObject(name = "Device.Routing.RouteInformation.")
 @XmlRootElement(name = "Device.Routing.RouteInformation")

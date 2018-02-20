@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the ULRS (Uplink Reference Signal) of PUSCH (Physical Uplink Shared Channel) configuration (see {{bibref|3GPP-TS.32.592|Section 6.1.1.6.1}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.PUSCH.ULRS.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY.PUSCH.ULRS")

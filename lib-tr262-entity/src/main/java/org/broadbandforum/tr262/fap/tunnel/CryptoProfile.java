@@ -26,16 +26,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr262.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object contains parameters relating to IKEv2 and IPsec crypto profiles, which are essentially a subset of the typical IPsec SPD. {{bibref|RFC4301}}.
 
 For Cdma2000 devices, see also {{bibref|3GPP2-S.S0132}}.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
-@CWMPObject(name = "FAP.Tunnel.CryptoProfile.{i}.")
+@CWMPObject(name = "FAP.Tunnel.CryptoProfile.{i}.", uniqueConstraints = {@CWMPUnique(names = {"AuthMethod", "IKEEncrypt", "IKEPRF", "IKEIntegrity", "IKEDH", "ESPEncrypt", "ESPIntegrity"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAP.Tunnel.CryptoProfile")
 @XmlType(name = "FAP.Tunnel.CryptoProfile")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -48,7 +50,7 @@ public class CryptoProfile {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -227,7 +229,7 @@ For CDMA2000 devices, see also {{bibref|3GPP2-S.S0132}}.
 	 */
 	@XmlElement(name = "SecDFBit")
 	@CWMPParameter(access = "readWrite")
-	public String secDFBit = "Off";
+	public String secDFBit;
 
 	public CryptoProfile() {
 	}

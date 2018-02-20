@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Parameters related to RTCP receiver report generation as defined in {{bibref|RFC3550}}.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.RTCP.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.IP.RTCP")

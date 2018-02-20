@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.etsim2m.scl.AreaNwkDeviceInfoInstance;
 import org.broadbandforum.tr181.device.etsim2m.scl.AreaNwkInstance;
 import org.broadbandforum.tr181.device.etsim2m.scl.Discovery;
@@ -50,9 +51,9 @@ import org.broadbandforum.tr181.device.etsim2m.scl.SAFPolicySet;
 
         {{keys}}
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
-@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.")
+@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.ETSIM2M.SCL")
 @XmlType(name = "Device.ETSIM2M.SCL")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -65,7 +66,7 @@ public class SCL {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

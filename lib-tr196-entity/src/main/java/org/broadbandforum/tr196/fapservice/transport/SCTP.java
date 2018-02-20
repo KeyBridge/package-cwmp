@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.fapservice.transport.sctp.Assoc;
 
 SCTP is defined in {{bibref|RFC4960}} and {{bibref|RFC3873}}.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.SCTP.")
 @XmlRootElement(name = "FAPService.Transport.SCTP")

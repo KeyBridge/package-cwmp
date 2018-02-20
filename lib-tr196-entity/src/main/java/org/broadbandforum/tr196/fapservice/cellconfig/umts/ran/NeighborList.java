@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.neighborlist.Intr
 	/**
 	 * This object contains parameters relating to the neighbor list.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborList.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.NeighborList")

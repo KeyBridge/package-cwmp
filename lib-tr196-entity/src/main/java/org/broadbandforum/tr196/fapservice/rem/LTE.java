@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.fapservice.rem.lte.Cell;
 	/**
 	 * This object contains parameters relating to radio environment measurement capabilities for the LTE system.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.LTE.")
 @XmlRootElement(name = "FAPService.REM.LTE")
@@ -49,7 +49,7 @@ public class LTE {
 	 */
 	@XmlElement(name = "InServiceHandling")
 	@CWMPParameter(access = "readWrite")
-	public String inserviceHandling = "Immediate";
+	public String inserviceHandling;
 	/**
 	 * Enables or disables Radio Environment Measurement during the FAP start up.
 	 *
@@ -57,7 +57,7 @@ public class LTE {
 	 */
 	@XmlElement(name = "ScanOnBoot")
 	@CWMPParameter(access = "readWrite")
-	public Boolean scanOnBoot = true;
+	public Boolean scanOnBoot;
 	/**
 	 * Enable Periodic Radio Environment Measurement on LTE EUTRAN bands.
 	 *
@@ -65,7 +65,7 @@ public class LTE {
 	 */
 	@XmlElement(name = "ScanPeriodically")
 	@CWMPParameter(access = "readWrite")
-	public Boolean scanPeriodically = false;
+	public Boolean scanPeriodically;
 	/**
 	 * When {{param|ScanPeriodically}} is {{true}}, this value indicates the interval in seconds which REM is performed while the FAP service is enabled.
 	 *

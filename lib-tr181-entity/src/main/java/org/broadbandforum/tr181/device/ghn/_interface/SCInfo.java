@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object specifies management parameters pertaining to the Security Controller functionality (Security Controller function; see {{bibref|G.9961|Clause 9.2}}). The object exists only on G.hn interfaces that are currently the Security Controller, i.e. for which parameter {{param|#.IsSC}} is {{true}}.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Interface.{i}.SCInfo.")
 @XmlRootElement(name = "Device.Ghn.Interface.SCInfo")

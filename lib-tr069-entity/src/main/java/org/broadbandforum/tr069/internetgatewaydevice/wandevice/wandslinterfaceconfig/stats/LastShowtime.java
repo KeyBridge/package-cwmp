@@ -25,7 +25,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object contains DSL statistics accumulated since the second most recent DSL Showtime.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLInterfaceConfig.Stats.LastShowtime.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig.Stats.LastShowtime")

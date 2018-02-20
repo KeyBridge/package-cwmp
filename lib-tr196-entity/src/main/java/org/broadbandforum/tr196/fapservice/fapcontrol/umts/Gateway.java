@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the Gateways that FAP is connected to.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.UMTS.Gateway.")
 @XmlRootElement(name = "FAPService.FAPControl.UMTS.Gateway")

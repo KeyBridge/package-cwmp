@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Statistics for incoming calls.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Extension.{i}.Stats.IncomingCalls.")
 @XmlRootElement(name = "VoiceService.CallControl.Extension.Stats.IncomingCalls")

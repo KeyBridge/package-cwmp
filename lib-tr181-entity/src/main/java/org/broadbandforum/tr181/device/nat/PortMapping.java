@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Port mapping table.
@@ -36,9 +37,10 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         For enabled table entries, if {{param|InternalClient}} is {{empty}}, or if {{param|Interface}} is not a valid reference and {{param|AllInterfaces}} is {{false}}, then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.NAT.PortMapping.{i}.")
+@CWMPObject(name = "Device.NAT.PortMapping.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"RemoteHost", "ExternalPort", "Protocol"})})
 @XmlRootElement(name = "Device.NAT.PortMapping")
 @XmlType(name = "Device.NAT.PortMapping")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -51,7 +53,7 @@ public class PortMapping {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this entry.  {{enum}}
 
@@ -62,7 +64,7 @@ public class PortMapping {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 
@@ -89,7 +91,7 @@ public class PortMapping {
 	 */
 	@XmlElement(name = "AllInterfaces")
 	@CWMPParameter(access = "readWrite")
-	public Boolean allInterfaces = false;
+	public Boolean allInterfaces;
 	/**
 	 * Determines the time to live, in seconds, of a port mapping lease, where "time to live" means the number of  seconds before the port mapping expires. 
 

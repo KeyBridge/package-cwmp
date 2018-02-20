@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object contains parameters relating to the user characteristics.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.Users.User.{i}.")
+@CWMPObject(name = "Device.Users.User.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Username"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.Users.User")
 @XmlType(name = "Device.Users.User")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -53,7 +55,7 @@ public class User {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Allows this user to remotely access the UserInterface via the mechanism defined in {{object|.UserInterface.RemoteAccess.}}
 	 *
@@ -61,7 +63,7 @@ public class User {
 	 */
 	@XmlElement(name = "RemoteAccessCapable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean remoteAccessCapable = false;
+	public Boolean remoteAccessCapable;
 	/**
 	 * Name of the current user. MUST NOT be {{empty}} for an enabled entry.
 	 *

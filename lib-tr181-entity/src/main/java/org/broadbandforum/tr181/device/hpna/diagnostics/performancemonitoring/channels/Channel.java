@@ -22,14 +22,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * Per-channel HPNA performance monitoring results.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Channels.Channel.{i}.")
+@CWMPObject(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Channels.Channel.{i}.", uniqueConstraints = {@CWMPUnique(names = {"HostSrcMACAddress", "HostDestMACAddress"})})
 @XmlRootElement(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Channels.Channel")
 @XmlType(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Channels.Channel")
 @XmlAccessorType(XmlAccessType.FIELD)

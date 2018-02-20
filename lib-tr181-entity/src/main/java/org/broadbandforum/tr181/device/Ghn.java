@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.ghn.Interface;
 	/**
 	 * G.hn object that contains an {{object|Interface}} table for G.hn supported CPE. The ITU-T G.hn specifications {{bibref|G.9960}} and {{bibref|G.9961}} define Physical and MAC Layers for communication between two or more G.hn nodes in the home network over multiple wired media such as power line, phone line and coaxial cable.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
 @CWMPObject(name = "Device.Ghn.")
 @XmlRootElement(name = "Device.Ghn")

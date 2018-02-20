@@ -27,17 +27,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr069.datatypes.IPAddress;
-import org.broadbandforum.tr069.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPAddress;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr069.internetgatewaydevice.wandevice.wanconnectiondevice.wanpppconnection.PortMapping;
 import org.broadbandforum.tr069.internetgatewaydevice.wandevice.wanconnectiondevice.wanpppconnection.Stats;
 
 	/**
 	 * This object enables configuration of PPP connections on the WAN interface of a CPE.  This object is required for all ''WANConnectionDevice''s that employ PPP addressing, and must not be active for ''WANConnectionDevice''s that do not employ PPP addressing.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.", uniqueConstraints = {@CWMPUnique(names = {"ExternalIPAddress"})})
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPPPConnection")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPPPConnection")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This table contains information about the relationships between the multiple layers of interface objects ({{bibref|TR-181i2|Section 4.3}}). In particular, it contains information on which interfaces run ''on top of'' which other interfaces.
@@ -32,9 +33,10 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         Each table row represents a "link" between two interface objects, a higher-layer interface object (referenced by {{param|HigherLayer}}) and a lower-layer interface object (referenced by {{param|LowerLayer}}). Consequently, if a referenced interface object is deleted, the CPE MUST delete the corresponding {{object}} row(s) that had referenced it.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.InterfaceStack.{i}.")
+@CWMPObject(name = "Device.InterfaceStack.{i}.", uniqueConstraints = {@CWMPUnique(names = {"HigherLayer", "LowerLayer"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.InterfaceStack")
 @XmlType(name = "Device.InterfaceStack")
 @XmlAccessorType(XmlAccessType.FIELD)

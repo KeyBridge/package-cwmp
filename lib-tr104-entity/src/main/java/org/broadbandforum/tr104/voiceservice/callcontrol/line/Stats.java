@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.voiceservice.callcontrol.line.stats.RTP;
 
 The CPE MUST reset the line's Stats parameters (unless otherwise stated in individual object or parameter descriptions) either when the line becomes operationally down due to a previous administrative down (i.e. the line's {{param|#.Status}} parameter transitions to a down state after the line is disabled) or when the line becomes administratively up (i.e. the line's {{param|#.Enable}} parameter transitions from {{false}} to {{true}}).
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Line.{i}.Stats.")
 @XmlRootElement(name = "VoiceService.CallControl.Line.Stats")

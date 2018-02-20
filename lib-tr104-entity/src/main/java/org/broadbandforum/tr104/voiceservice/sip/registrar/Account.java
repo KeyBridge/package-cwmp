@@ -27,15 +27,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr104.voiceservice.sip.registrar.account.Contact;
 
 	/**
 	 * SIP account table.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.SIP.Registrar.{i}.Account.{i}.")
+@CWMPObject(name = "VoiceService.{i}.SIP.Registrar.{i}.Account.{i}.", uniqueConstraints = {@CWMPUnique(names = {"URI"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.SIP.Registrar.Account")
 @XmlType(name = "VoiceService.SIP.Registrar.Account")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -50,7 +52,7 @@ In the {{enum|Quiescent}} state, in-progress sessions remain intact, but no new 
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public String enable = "Disable";
+	public String enable;
 	/**
 	 * If {{true}}, when {{param|Enable}} is set to {{false}} in-progress sessions remain intact, but no new sessions are allowed. When all sessions are terminated, the {{object}} is disabled.
 	 *
@@ -65,7 +67,7 @@ In the {{enum|Quiescent}} state, in-progress sessions remain intact, but no new 
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -80,7 +82,7 @@ In the {{enum|Quiescent}} state, in-progress sessions remain intact, but no new 
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * Indicates the call status for this account.
 	 *

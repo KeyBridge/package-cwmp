@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object contains parameters relating to configuring QoS in LTE EPC.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EPC.QoS.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EPC.QoS.{i}.", uniqueConstraints = {@CWMPUnique(names = {"QCI"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.LTE.EPC.QoS")
 @XmlType(name = "FAPService.CellConfig.LTE.EPC.QoS")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class QoS {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -68,7 +70,7 @@ public class QoS {
 	 */
 	@XmlElement(name = "Type")
 	@CWMPParameter(access = "readWrite")
-	public String type = "Non-GBR";
+	public String type;
 	/**
 	 * Priority of the QoS class as defined in {{bibref|3GPP-TS.23.203|Section 6.1.7.2}}.
 	 *

@@ -27,7 +27,7 @@ import org.broadbandforum.tr181.device.upnp.device.Capabilities;
 	/**
 	 * This object defines the UPnP devices and UPnP services that are implemented by the CPE.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.UPnP.Device.")
 @XmlRootElement(name = "Device.UPnP.Device")

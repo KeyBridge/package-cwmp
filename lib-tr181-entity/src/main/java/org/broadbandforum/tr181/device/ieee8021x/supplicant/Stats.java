@@ -21,12 +21,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * 802.1x Authentication Supplicant EAP statistics information for this resource.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.IEEE8021x.Supplicant.{i}.Stats.")
 @XmlRootElement(name = "Device.IEEE8021x.Supplicant.Stats")

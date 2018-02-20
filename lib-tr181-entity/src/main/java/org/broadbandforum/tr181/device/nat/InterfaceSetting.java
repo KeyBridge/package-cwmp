@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * NAT settings for an associated IP Interface on which NAT is enabled.
@@ -32,9 +33,10 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         Note: The {{object}} table includes a unique key parameter that is a strong reference. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.NAT.InterfaceSetting.{i}.")
+@CWMPObject(name = "Device.NAT.InterfaceSetting.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Interface"})})
 @XmlRootElement(name = "Device.NAT.InterfaceSetting")
 @XmlType(name = "Device.NAT.InterfaceSetting")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -47,7 +49,7 @@ public class InterfaceSetting {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this entry.  {{enum}}
 
@@ -58,7 +60,7 @@ public class InterfaceSetting {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *

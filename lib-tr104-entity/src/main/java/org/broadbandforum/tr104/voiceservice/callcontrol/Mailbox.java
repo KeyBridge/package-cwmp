@@ -23,14 +23,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Voice mail configuration related to a particular extension.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.CallControl.Mailbox.{i}.")
+@CWMPObject(name = "VoiceService.{i}.CallControl.Mailbox.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.CallControl.Mailbox")
 @XmlType(name = "VoiceService.CallControl.Mailbox")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +44,7 @@ public class Mailbox {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -119,7 +120,7 @@ public class Mailbox {
 	 */
 	@XmlElement(name = "SMTPAuthenticationType")
 	@CWMPParameter(access = "readWrite")
-	public String smtPAuthenticationType = "None";
+	public String smtPAuthenticationType;
 	/**
 	 * Sender's email address.
 	 *

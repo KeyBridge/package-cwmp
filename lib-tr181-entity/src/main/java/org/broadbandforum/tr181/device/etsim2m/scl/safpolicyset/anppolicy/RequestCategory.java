@@ -25,15 +25,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.anppolicy.requestcategory.Schedule;
 
 	/**
 	 * This table contains the Request Category (RCAT) policy items for defining when it is appropriate to use the access network for processing requests.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
-@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.ANPPolicy.{i}.RequestCategory.{i}.")
+@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.ANPPolicy.{i}.RequestCategory.{i}.", uniqueConstraints = {@CWMPUnique(names = {"RCAT"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.RequestCategory")
 @XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.RequestCategory")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -46,7 +48,7 @@ public class RequestCategory {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

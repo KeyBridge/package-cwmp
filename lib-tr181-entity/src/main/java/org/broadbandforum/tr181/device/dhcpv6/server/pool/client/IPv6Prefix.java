@@ -22,13 +22,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * IPv6 prefixes delegated to this client via IA_PD.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6Prefix.{i}.")
+@CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6Prefix.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Prefix"})})
 @XmlRootElement(name = "Device.DHCPv6.Server.Pool.Client.IPv6Prefix")
 @XmlType(name = "Device.DHCPv6.Server.Pool.Client.IPv6Prefix")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -40,7 +41,7 @@ public class IPv6Prefix {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Prefix")
-	public org.broadbandforum.tr181.datatypes.IPv6Prefix prefix;
+	public org.broadbandforum.common.IPv6Prefix prefix;
 	/**
 	 * The time at which this prefix will cease to be preferred (i.e. will become deprecated), or {{null}} if not known. For an infinite lifetime, the parameter value MUST be 9999-12-31T23:59:59Z.
 	 *
@@ -66,7 +67,7 @@ public class IPv6Prefix {
 	 * @since 2.2
 	 * @return the value
 	 */
-	public org.broadbandforum.tr181.datatypes.IPv6Prefix getPrefix() {
+	public org.broadbandforum.common.IPv6Prefix getPrefix() {
 		return prefix;
 	}
 
@@ -76,7 +77,7 @@ public class IPv6Prefix {
 	 * @since 2.2
 	 * @param prefix the input value
 	 */
-	public void  setPrefix(org.broadbandforum.tr181.datatypes.IPv6Prefix prefix) {
+	public void  setPrefix(org.broadbandforum.common.IPv6Prefix prefix) {
 		this.prefix = prefix;
 	}
 
@@ -87,7 +88,7 @@ public class IPv6Prefix {
 	 * @param prefix the input value
 	 * @return this instance
 	 */
-	public IPv6Prefix withPrefix(org.broadbandforum.tr181.datatypes.IPv6Prefix prefix) {
+	public IPv6Prefix withPrefix(org.broadbandforum.common.IPv6Prefix prefix) {
 		this.prefix = prefix;
 		return this;
 	}

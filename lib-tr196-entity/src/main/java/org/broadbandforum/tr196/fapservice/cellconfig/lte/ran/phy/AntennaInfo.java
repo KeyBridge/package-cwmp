@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object contains parameters relating to the antenna configuration (see {{bibref|3GPP-TS.32.592|Section 6.1.1.1}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.AntennaInfo.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY.AntennaInfo")

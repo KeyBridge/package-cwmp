@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * VoIP Statistics for current session instance.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.Destination.VoiceQuality.")
 @XmlRootElement(name = "VoiceService.CallLog.Session.Destination.VoiceQuality")

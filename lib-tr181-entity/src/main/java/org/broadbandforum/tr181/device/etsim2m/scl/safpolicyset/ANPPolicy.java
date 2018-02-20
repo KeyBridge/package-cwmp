@@ -25,7 +25,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.anppolicy.BlockPeriod;
 import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.anppolicy.RequestCategory;
 
@@ -34,9 +35,10 @@ import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.anppolicy.Reques
 
         {{keys}}
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
-@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.ANPPolicy.{i}.")
+@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.ANPPolicy.{i}.", uniqueConstraints = {@CWMPUnique(names = {"ANName"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy")
 @XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -49,7 +51,7 @@ public class ANPPolicy {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

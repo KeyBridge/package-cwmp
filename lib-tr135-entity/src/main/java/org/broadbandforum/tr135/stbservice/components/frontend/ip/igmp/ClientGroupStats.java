@@ -22,8 +22,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
-import org.broadbandforum.tr135.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 import org.broadbandforum.tr135.stbservice.components.frontend.ip.igmp.clientgroupstats.CurrentDay;
 import org.broadbandforum.tr135.stbservice.components.frontend.ip.igmp.clientgroupstats.QuarterHour;
 import org.broadbandforum.tr135.stbservice.components.frontend.ip.igmp.clientgroupstats.Total;
@@ -33,9 +34,10 @@ import org.broadbandforum.tr135.stbservice.components.frontend.ip.igmp.clientgro
 
 The CPE MUST support at least ''MaximumNumberOfTrackedGroups'' table entries.  The CPE MAY reclaim entries based on the oldest membership reports.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.IGMP.ClientGroupStats.{i}.")
+@CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.IGMP.ClientGroupStats.{i}.", uniqueConstraints = {@CWMPUnique(names = {"GroupAddress"}, functional = false),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroupStats")
 @XmlType(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroupStats")
 @XmlAccessorType(XmlAccessType.FIELD)

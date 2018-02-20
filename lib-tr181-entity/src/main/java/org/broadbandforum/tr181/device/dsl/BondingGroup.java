@@ -27,7 +27,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.dsl.bondinggroup.BondedChannel;
 import org.broadbandforum.tr181.device.dsl.bondinggroup.Ethernet;
 import org.broadbandforum.tr181.device.dsl.bondinggroup.Stats;
@@ -39,9 +40,11 @@ import org.broadbandforum.tr181.device.dsl.bondinggroup.Stats;
 
         The DSL bonding data model is closely aligned with {{bibref|TR-159}}. Corresponds to {{bibref|TR-159}} ''oBondingGroup''.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.DSL.BondingGroup.{i}.")
+@CWMPObject(name = "Device.DSL.BondingGroup.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false),
+	@CWMPUnique(names = {"GroupID"})})
 @XmlRootElement(name = "Device.DSL.BondingGroup")
 @XmlType(name = "Device.DSL.BondingGroup")
 @XmlAccessorType(XmlAccessType.FIELD)

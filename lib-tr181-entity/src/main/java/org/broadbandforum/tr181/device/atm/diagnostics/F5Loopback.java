@@ -23,12 +23,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.DiagnosticsState;
+import org.broadbandforum.common.DiagnosticsState;
 
 	/**
 	 * This object provides access to an ATM-layer F5 OAM loopback test.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.ATM.Diagnostics.F5Loopback.")
 @XmlRootElement(name = "Device.ATM.Diagnostics.F5Loopback")

@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.hpna.diagnostics.performancemonitoring.ch
 
         Note: channels are unidirectional.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Channels.")
 @XmlRootElement(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Channels")

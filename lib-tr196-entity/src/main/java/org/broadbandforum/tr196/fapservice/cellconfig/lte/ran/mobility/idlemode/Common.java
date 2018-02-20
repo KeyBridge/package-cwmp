@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the idle mode mobility configuration that is common to all cell re-selection scenarios (intra/inter-freq, inter-RAT to UTRA (UMTS), GERAN (GSM) and CDMA2000) (see {{bibref|3GPP-TS.32.592|Section 6.1.5.1.1}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.Common.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.Common")

@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * Status of currently associated smart card.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.SmartCardReaders.SmartCardReader.{i}.SmartCard.")
 @XmlRootElement(name = "Device.SmartCardReaders.SmartCardReader.SmartCard")

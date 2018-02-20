@@ -23,15 +23,16 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.ieee1905.al._interface.link.Metric;
 
 	/**
 	 * This object defines the 1905 neighbors and link properties.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
-@CWMPObject(name = "Device.IEEE1905.AL.Interface.{i}.Link.{i}.")
+@CWMPObject(name = "Device.IEEE1905.AL.Interface.{i}.Link.{i}.", uniqueConstraints = {@CWMPUnique(names = {"InterfaceId", "IEEE1905Id"})})
 @XmlRootElement(name = "Device.IEEE1905.AL.Interface.Link")
 @XmlType(name = "Device.IEEE1905.AL.Interface.Link")
 @XmlAccessorType(XmlAccessType.FIELD)

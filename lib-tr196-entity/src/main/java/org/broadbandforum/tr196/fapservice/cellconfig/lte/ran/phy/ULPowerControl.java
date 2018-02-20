@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the uplink power control configuration (see {{bibref|3GPP-TS.32.592|Section 6.1.1.7}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.ULPowerControl.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY.ULPowerControl")

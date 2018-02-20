@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table containing the inter-RAT cell list for GSM provided by the ACS. The table contents MAY be added/deleted/modified during operation, in which case these changes shall be reflected in the broadcast information as soon as possible.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborList.InterRATCell.GSM.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborList.InterRATCell.GSM.{i}.", uniqueConstraints = {@CWMPUnique(names = {"BCCHARFCN"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.NeighborList.InterRATCell.GSM")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.NeighborList.InterRATCell.GSM")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class GSM {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -59,7 +61,7 @@ public class GSM {
 	 */
 	@XmlElement(name = "MustInclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean mustInclude = false;
+	public Boolean mustInclude;
 	/**
 	 * PLMN ID consists of Mobile Country Code (MCC) and Mobile Network Code (MNC) {{bibref|3GPP-TS.23.003}}, {{bibref|3GPP-TS.24.008}}.
 

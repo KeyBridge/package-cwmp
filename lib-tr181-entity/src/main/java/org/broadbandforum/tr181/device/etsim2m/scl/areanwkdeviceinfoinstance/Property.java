@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPObject;
 
         For example, if the {{param|##.AreaNwkInstance.{i}.AreaNwkType}} value is ZigBee, this {{object|##.AreaNwkDeviceInfoInstance}} contains ZigBee-specific parameters that are not formally modeled for this {{object|##.AreaNwkDeviceInfoInstance}} instance.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.AreaNwkDeviceInfoInstance.{i}.Property.{i}.")
 @XmlRootElement(name = "Device.ETSIM2M.SCL.AreaNwkDeviceInfoInstance.Property")

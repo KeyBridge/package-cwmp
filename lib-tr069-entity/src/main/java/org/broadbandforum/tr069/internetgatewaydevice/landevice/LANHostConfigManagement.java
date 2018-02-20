@@ -26,14 +26,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr069.datatypes.IPAddress;
-import org.broadbandforum.tr069.datatypes.MACAddress;
+import org.broadbandforum.common.IPAddress;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr069.internetgatewaydevice.landevice.lanhostconfigmanagement.IPInterface;
 
 	/**
 	 * This object enables reporting of LAN-related device information and setting and configuring LAN IP addressing.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANHostConfigManagement.")
 @XmlRootElement(name = "InternetGatewayDevice.LANDevice.LANHostConfigManagement")

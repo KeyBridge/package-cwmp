@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.OneX;
 	/**
 	 * This object contains parameters relating to configuring the CDMA2000 FAP.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000")

@@ -22,12 +22,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.IEEE_EUI64;
+import org.broadbandforum.common.IEEE_EUI64;
 
 	/**
 	 * The {{object}} object provides the configuration capabilities needed to perform the Security Management functionality defined in {{bibref|ZigBee2007|section 4 Security Management}}.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.Security.")
 @XmlRootElement(name = "Device.ZigBee.ZDO.Security")

@@ -23,15 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.wifi.accesspoint.associateddevice.Stats;
 
 	/**
 	 * A table of the devices currently associated with the access point.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.WiFi.AccessPoint.{i}.AssociatedDevice.{i}.")
+@CWMPObject(name = "Device.WiFi.AccessPoint.{i}.AssociatedDevice.{i}.", uniqueConstraints = {@CWMPUnique(names = {"MACAddress"})})
 @XmlRootElement(name = "Device.WiFi.AccessPoint.AssociatedDevice")
 @XmlType(name = "Device.WiFi.AccessPoint.AssociatedDevice")
 @XmlAccessorType(XmlAccessType.FIELD)

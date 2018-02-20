@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.dns.SD;
 	/**
 	 * Properties for Domain Name Service (DNS).
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DNS.")
 @XmlRootElement(name = "Device.DNS")

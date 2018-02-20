@@ -26,14 +26,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object models individual HRPD beacon intervals where the beacon start is expressed as a number of HRPD control channel slots from the start of the beacon frame.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.Beacon.HRPDBeaconList.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.Beacon.HRPDBeaconList.{i}.", uniqueConstraints = {@CWMPUnique(names = {"BeaconIndex"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.Beacon.HRPDBeaconList")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.Beacon.HRPDBeaconList")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -46,7 +48,7 @@ public class HRPDBeaconList {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -61,7 +63,7 @@ public class HRPDBeaconList {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "BeaconIndex")
-	public Integer beaconIndex = 0;
+	public Integer beaconIndex;
 	/**
 	 * Offset of the current beacon interval from the start of the beacon frame, in Control Channel cycles. The HRPDBeaconList interval SHOULD not overlap in time with any beacon interval for the same channel defined in the BeaconList object.
 	 *
@@ -79,7 +81,7 @@ public class HRPDBeaconList {
 	@XmlElement(name = "Offset")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -127, max = 128)
-	public Integer offset = 0;
+	public Integer offset;
 	/**
 	 * Duration of the beacon transmission within a Control Channel cycle, in slots. Beacon is transmitted starting offset from the CC boundary for duration. Transmission restarts offset from the next CC boundary, given that beacon interval spans more than 1 CC cycles.
 	 *
@@ -134,7 +136,7 @@ public class HRPDBeaconList {
 	@XmlElement(name = "TxPower")
 	@CWMPParameter(access = "readWrite", units = "dBm")
 	@Size(min = -40, max = 20)
-	public Integer txpower = -40;
+	public Integer txpower;
 
 	public HRPDBeaconList() {
 	}

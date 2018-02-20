@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * HDMI connected display device configuration. This object provides parameters from the HDMI connected device if any.
 	 *
-	 * @since 1.1
+	 * @since TR135 v1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Components.HDMI.{i}.DisplayDevice.")
 @XmlRootElement(name = "STBService.Components.HDMI.DisplayDevice")

@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Properties for the Port Control Protocol (PCP) Proxy, as specified in {{bibref|PCPProxy}}.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.PCP.Client.{i}.PCPProxy.")
 @XmlRootElement(name = "Device.PCP.Client.PCPProxy")

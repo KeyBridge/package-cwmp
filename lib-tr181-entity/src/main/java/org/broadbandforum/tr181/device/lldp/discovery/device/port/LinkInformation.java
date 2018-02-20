@@ -21,14 +21,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * The port's link information, which is included in the value of the ''LLDPDU's'' Organizationally Specific TLV (TLV Type = 127).
 
         Note: It is assumed that this object might be used for HTIP (Home-network Topology Identifying Protocol) {{bibref|JJ-300.00}} and {{bibref|G.9973}}. In this case, the {{bibref|OUI}} in the third octet is E0271A (''TTC-OUI'') and the organizationally defined subtype in the sixth octet is 2 (''Link Information'').
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.Port.{i}.LinkInformation.")
 @XmlRootElement(name = "Device.LLDP.Discovery.Device.Port.LinkInformation")

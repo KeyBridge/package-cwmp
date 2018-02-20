@@ -26,7 +26,7 @@ import org.broadbandforum.tr181.device.dsl.diagnostics.ADSLLineTest;
 	/**
 	 * The DSL Diagnostics object.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DSL.Diagnostics.")
 @XmlRootElement(name = "Device.DSL.Diagnostics")

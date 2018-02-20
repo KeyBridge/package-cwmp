@@ -23,17 +23,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * This object represents the bridge table of the UPA interface. Each instance is a bridge table entry.
 
         It shows the MAC addresses of the remote UPA devices with their associated port number, and the MAC addresses of the end-devices (PCs, STBs, routers, etc) connected to Ethernet port of the powerline adapters with their associated logical port. In this way the system identifies to which UPA device an external device is connected to.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.UPA.Interface.{i}.BridgeFor.{i}.")
+@CWMPObject(name = "Device.UPA.Interface.{i}.BridgeFor.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"MACAddress"})})
 @XmlRootElement(name = "Device.UPA.Interface.BridgeFor")
 @XmlType(name = "Device.UPA.Interface.BridgeFor")
 @XmlAccessorType(XmlAccessType.FIELD)

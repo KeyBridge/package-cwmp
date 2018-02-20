@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.moca.Interface;
 	/**
 	 * MoCA object that contains the {{object|Interface}} table {{bibref|MoCAv1.0}} {{bibref|MoCAv1.1}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.MoCA.")
 @XmlRootElement(name = "Device.MoCA")

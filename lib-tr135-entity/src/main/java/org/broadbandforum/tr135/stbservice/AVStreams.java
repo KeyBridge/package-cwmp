@@ -29,7 +29,7 @@ import org.broadbandforum.tr135.stbservice.avstreams.AVStream;
 	/**
 	 * AV Streams object.  If more than one AV stream can be active at a time, it may contain several {{object|AVStream}} instances.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.AVStreams.")
 @XmlRootElement(name = "STBService.AVStreams")

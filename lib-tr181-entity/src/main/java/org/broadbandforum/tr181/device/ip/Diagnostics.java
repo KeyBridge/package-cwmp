@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.ip.diagnostics.UploadDiagnostics;
 	/**
 	 * The IP Diagnostics object.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.")
 @XmlRootElement(name = "Device.IP.Diagnostics")

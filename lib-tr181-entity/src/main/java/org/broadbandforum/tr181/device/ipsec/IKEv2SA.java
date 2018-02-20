@@ -27,8 +27,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 import org.broadbandforum.tr181.device.ipsec.ikev2sa.ChildSA;
 import org.broadbandforum.tr181.device.ipsec.ikev2sa.ReceivedCPAttr;
 import org.broadbandforum.tr181.device.ipsec.ikev2sa.Stats;
@@ -36,9 +37,9 @@ import org.broadbandforum.tr181.device.ipsec.ikev2sa.Stats;
 	/**
 	 * Represents an IKEv2 Security Association (SA), corresponding to an IKEv2 session.  Instances are automatically created and deleted as IKEv2 SAs are created and deleted.
 	 *
-	 * @since 2.5
+	 * @since TR181 v2.5
 	 */
-@CWMPObject(name = "Device.IPsec.IKEv2SA.{i}.")
+@CWMPObject(name = "Device.IPsec.IKEv2SA.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Tunnel"})})
 @XmlRootElement(name = "Device.IPsec.IKEv2SA")
 @XmlType(name = "Device.IPsec.IKEv2SA")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -22,9 +22,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPv4Address;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPv4Address;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * DHCP static address table.
@@ -35,9 +36,10 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 
         Note that it is possible that an IP address in this table is present in one or more of the other conditional serving pools, in which case it is possible that such an address will be assigned to a different client.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.DHCPv4.Server.Pool.{i}.StaticAddress.{i}.")
+@CWMPObject(name = "Device.DHCPv4.Server.Pool.{i}.StaticAddress.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Chaddr"})})
 @XmlRootElement(name = "Device.DHCPv4.Server.Pool.StaticAddress")
 @XmlType(name = "Device.DHCPv4.Server.Pool.StaticAddress")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -52,7 +54,7 @@ public class StaticAddress {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Throughput statistics for this end point.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.WiFi.EndPoint.{i}.Stats.")
 @XmlRootElement(name = "Device.WiFi.EndPoint.Stats")

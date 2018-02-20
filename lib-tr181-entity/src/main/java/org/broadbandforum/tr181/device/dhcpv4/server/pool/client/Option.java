@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * DHCPv4 options supplied by this client, e.g. ''VendorClassID'' (Option 60), ''ClientID'' (option 61) or ''UserClassID'' (Option 77).
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
 @CWMPObject(name = "Device.DHCPv4.Server.Pool.{i}.Client.{i}.Option.{i}.")
 @XmlRootElement(name = "Device.DHCPv4.Server.Pool.Client.Option")

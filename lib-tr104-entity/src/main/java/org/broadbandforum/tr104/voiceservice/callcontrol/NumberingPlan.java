@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr104.voiceservice.callcontrol.numberingplan.PrefixInfo;
 
 	/**
@@ -34,9 +35,9 @@ import org.broadbandforum.tr104.voiceservice.callcontrol.numberingplan.PrefixInf
 
 {{object}} is applicable only if the device supports a dialing mechanism for which a number plan is needed (for example, some devices with an explicit Dial button do not need to be aware of the dialing plan) and if the device does not already support a numbering plan mechanism for this call control (e.g., in-band via MGCP).
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.CallControl.NumberingPlan.{i}.")
+@CWMPObject(name = "VoiceService.{i}.CallControl.NumberingPlan.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.CallControl.NumberingPlan")
 @XmlType(name = "VoiceService.CallControl.NumberingPlan")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -100,7 +101,7 @@ This timer is only applicable to "open numbering", where the exact number of dig
 	@XmlElement(name = "TerminationDigit")
 	@CWMPParameter(access = "readWrite")
 	@Size(max = 1)
-	public String terminationDigit = "#";
+	public String terminationDigit;
 	/**
 	 * The tone that tells the user when the number dialed is determined to be invalid.
 

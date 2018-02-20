@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
 This table can contain hardware queues.  The CPE MAY refuse to allow hardware queues to be deleted.
 	 *
-	 * @since 1.1
+	 * @since TR143 v1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.QueueManagement.Queue.{i}.")
 @XmlRootElement(name = "InternetGatewayDevice.QueueManagement.Queue")
@@ -53,7 +53,7 @@ This parameter is OBSOLETED because it serves no purpose (no other parameter ref
 	 */
 	@XmlElement(name = "QueueEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean queueEnable = false;
+	public Boolean queueEnable;
 	/**
 	 * The status of this queue.  {{enum}}
 
@@ -62,7 +62,7 @@ The {{enum|Error}} value MAY be used by the CPE to indicate a locally defined er
 	 * @since 1.1
 	 */
 	@XmlElement(name = "QueueStatus")
-	public String queueStatus = "Disabled";
+	public String queueStatus;
 	/**
 	 * Egress interfaces for which the specified queue MUST exist.  This parameter MUST be in one of the following forms:
 
@@ -145,7 +145,7 @@ In this version of the data model, there is no way to set the RED weight (''w_q'
 	 */
 	@XmlElement(name = "DropAlgorithm")
 	@CWMPParameter(access = "readWrite")
-	public String dropAlgorithm = "DT";
+	public String dropAlgorithm;
 	/**
 	 * Scheduling Algorithm used by scheduler.
 	 *
@@ -153,7 +153,7 @@ In this version of the data model, there is no way to set the RED weight (''w_q'
 	 */
 	@XmlElement(name = "SchedulerAlgorithm")
 	@CWMPParameter(access = "readWrite")
-	public String schedulerAlgorithm = "SP";
+	public String schedulerAlgorithm;
 	/**
 	 * Rate to shape this queue's traffic to.  For leaky bucket (constant rate shaping), this is the constant rate.  For token bucket (variable rate shaping), this is the average rate.
 
@@ -168,7 +168,7 @@ A value of -1 indicates no shaping.
 	@XmlElement(name = "ShapingRate")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer shapingRate = -1;
+	public Integer shapingRate;
 	/**
 	 * Burst size in bytes.  For both leaky bucket (constant rate shaping) and token bucket (variable rate shaping) this is the bucket size and is therefore the maximum burst size.
 	 *

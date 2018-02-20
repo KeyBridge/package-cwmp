@@ -24,14 +24,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object represents information that the device has obtained via sampling an internal temperature sensor.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.DeviceInfo.TemperatureStatus.TemperatureSensor.{i}.")
+@CWMPObject(name = "Device.DeviceInfo.TemperatureStatus.TemperatureSensor.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.DeviceInfo.TemperatureStatus.TemperatureSensor")
 @XmlType(name = "Device.DeviceInfo.TemperatureStatus.TemperatureSensor")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.phy.pusch.ULRS;
 	/**
 	 * This object contains parameters relating to the PUSCH (Physical Uplink Shared Channel) configuration (see {{bibref|3GPP-TS.32.592|Section 6.1.1.6}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.PUSCH.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY.PUSCH")

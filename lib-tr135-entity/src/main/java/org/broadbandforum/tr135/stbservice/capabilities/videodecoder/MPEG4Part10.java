@@ -30,7 +30,7 @@ import org.broadbandforum.tr135.stbservice.capabilities.videodecoder.mpeg4part10
 	/**
 	 * Object describing the set of supported profiles and levels for this STB. It also describes the set of audio standards supported when MPEG4 Part 10 is used as the video standard.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.VideoDecoder.MPEG4Part10.")
 @XmlRootElement(name = "STBService.Capabilities.VideoDecoder.MPEG4Part10")

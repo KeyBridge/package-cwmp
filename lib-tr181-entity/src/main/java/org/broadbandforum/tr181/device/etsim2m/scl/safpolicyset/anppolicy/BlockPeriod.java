@@ -22,16 +22,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This table contains a list of block periods for a {{object|##.ANPPolicy}}.
 
         A block period defines how long the device will wait before re-trying to establish connectivity via the access network after the previous attempt has failed.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
-@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.ANPPolicy.{i}.BlockPeriod.{i}.")
+@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.ANPPolicy.{i}.BlockPeriod.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"FailedAttempts"})})
 @XmlRootElement(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.BlockPeriod")
 @XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.BlockPeriod")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -44,7 +46,7 @@ public class BlockPeriod {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -70,7 +72,7 @@ public class BlockPeriod {
 	 */
 	@XmlElement(name = "BlockDuration")
 	@CWMPParameter(access = "readWrite", units = "seconds")
-	public Integer blockDuration = 0;
+	public Integer blockDuration;
 
 	public BlockPeriod() {
 	}

@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 
         If the same option is received multiple times, whether from one or more servers, it is up to the CPE to decide which entries to include (i.e. whether the same option will be present multiple times). In order to allow for the same option to be present multiple times within the table, this table has no unique key defined.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
 @CWMPObject(name = "Device.DHCPv6.Client.{i}.ReceivedOption.{i}.")
 @XmlRootElement(name = "Device.DHCPv6.Client.ReceivedOption")

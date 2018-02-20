@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Each entry in this table contains information related to an individual prefix in the NumberingPlan.
@@ -34,9 +35,9 @@ If supported, {{param|.CallControl.NumberingPlan.{i}.PrefixInfoMaxEntries}} and 
 
 The defaults given for this object apply only to explicit creation of an instance of this object and not to automatic creation of instances of this object due to creation of a parent object.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.CallControl.NumberingPlan.{i}.PrefixInfo.{i}.")
+@CWMPObject(name = "VoiceService.{i}.CallControl.NumberingPlan.{i}.PrefixInfo.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.CallControl.NumberingPlan.PrefixInfo")
 @XmlType(name = "VoiceService.CallControl.NumberingPlan.PrefixInfo")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -57,7 +58,7 @@ public class PrefixInfo {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * This is a string representation of a range of prefixes. Each prefix consists of a ''From'' part consisting of 1 to n digits (string representation) followed by an OPTIONAL ''To'' part consisting of exactly one digit prefixed by a "-" symbol.
 

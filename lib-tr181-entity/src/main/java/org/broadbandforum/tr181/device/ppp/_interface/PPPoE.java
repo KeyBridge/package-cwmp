@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * PPPoE object that functionally groups PPPoE related parameters.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.PPP.Interface.{i}.PPPoE.")
 @XmlRootElement(name = "Device.PPP.Interface.PPPoE")

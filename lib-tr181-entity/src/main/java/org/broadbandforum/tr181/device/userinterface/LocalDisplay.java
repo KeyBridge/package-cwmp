@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object describes how to remotely manage the initial positioning of a user interface on a device's local display.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.UserInterface.LocalDisplay.")
 @XmlRootElement(name = "Device.UserInterface.LocalDisplay")

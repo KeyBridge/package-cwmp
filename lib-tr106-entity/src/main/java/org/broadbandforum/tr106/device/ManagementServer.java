@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the CPE's association with an ACS.
 	 *
-	 * @since 1.0
+	 * @since TR106 v1.0
 	 */
 @CWMPObject(name = "Device.ManagementServer.")
 @XmlRootElement(name = "Device.ManagementServer")

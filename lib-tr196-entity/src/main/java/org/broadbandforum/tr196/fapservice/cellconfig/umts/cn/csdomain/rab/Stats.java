@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object provides the RAB statistics in the CS Domain as defined in {{bibref|3GPP-TS.32.452}}.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.CN.CSDomain.RAB.Stats.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.CN.CSDomain.RAB.Stats")

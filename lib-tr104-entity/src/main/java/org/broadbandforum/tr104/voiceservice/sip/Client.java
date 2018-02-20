@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr104.voiceservice.sip.client.Contact;
 import org.broadbandforum.tr104.voiceservice.sip.client.EventSubscribe;
 
@@ -41,9 +42,9 @@ For CPE use cases where {{object|.CallControl}} is used to map network-facing to
 
 : - In the case where the client does not register with the network ({{param|RegisterMode}} is {{enum|STATIC|RegisterMode}}), multiple lines can be associated with each SIP client.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.SIP.Client.{i}.")
+@CWMPObject(name = "VoiceService.{i}.SIP.Client.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.SIP.Client")
 @XmlType(name = "VoiceService.SIP.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -56,7 +57,7 @@ public class Client {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * If {{true}}, when {{param|Enable}} is set to {{false}} in-progress sessions remain intact, but no new sessions are allowed. When all sessions are terminated, the {{object}} is disabled.
 	 *
@@ -71,7 +72,7 @@ public class Client {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -86,7 +87,7 @@ public class Client {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * The registration procedures to apply. For {{param}} values other than {{enum|STATIC}}, the SIP {{object|#}} conveys its RegisterURI-to-ContactURI binding to the network using the SIP registration procedure. For the {{param}} value of {{enum|STATIC}}, the SIP client RegisterURI-to-ContactURI binding is conveyed to the network via some out-of-band mechanism not defined by this data model.
 
@@ -160,7 +161,7 @@ This parameter can only be modified if {{param|Origin}} is {{enum|Static|Origin}
 	 */
 	@XmlElement(name = "E164Format")
 	@CWMPParameter(access = "readWrite")
-	public Boolean e164Format = true;
+	public Boolean e164Format;
 	/**
 	 * Enable or disable the use of T.38.
 	 *

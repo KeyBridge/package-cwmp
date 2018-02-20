@@ -23,12 +23,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * This object contains the parameters related to RADIUS accounting functionality for the access point.
 	 *
-	 * @since 2.5
+	 * @since TR181 v2.5
 	 */
 @CWMPObject(name = "Device.WiFi.AccessPoint.{i}.Accounting.")
 @XmlRootElement(name = "Device.WiFi.AccessPoint.Accounting")

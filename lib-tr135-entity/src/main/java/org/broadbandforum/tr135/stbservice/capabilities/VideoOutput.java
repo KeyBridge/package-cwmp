@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * Video output capabilities. The video output stage may include selecting output formats, selecting output connectors, and copy protection.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.VideoOutput.")
 @XmlRootElement(name = "STBService.Capabilities.VideoOutput")

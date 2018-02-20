@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.usb.USBHosts;
 	/**
 	 * Universal Serial Bus ({{bibref|USB1.0}}, {{bibref|USB2.0}}, {{bibref|USB3.0}}). This object contains the {{object|Interface}}, {{object|Port}}, and {{object|USBHosts}} objects.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.USB.")
 @XmlRootElement(name = "Device.USB")

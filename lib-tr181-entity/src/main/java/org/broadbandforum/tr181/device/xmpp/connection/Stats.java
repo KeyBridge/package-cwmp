@@ -25,7 +25,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * XMPP Connection statistics information for this resource.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
 @CWMPObject(name = "Device.XMPP.Connection.{i}.Stats.")
 @XmlRootElement(name = "Device.XMPP.Connection.Stats")

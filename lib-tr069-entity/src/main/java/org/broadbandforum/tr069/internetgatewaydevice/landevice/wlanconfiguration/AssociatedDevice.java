@@ -22,14 +22,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr069.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * A table of the devices currently associated with the access point.  The size of this table is given by {{param|InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}.TotalAssociations}}.  This object must be implemented for CPE that contain an 802.11 interface on the LAN side.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}.AssociatedDevice.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}.AssociatedDevice.{i}.", uniqueConstraints = {@CWMPUnique(names = {"AssociatedDeviceMACAddress"})})
 @XmlRootElement(name = "InternetGatewayDevice.LANDevice.WLANConfiguration.AssociatedDevice")
 @XmlType(name = "InternetGatewayDevice.LANDevice.WLANConfiguration.AssociatedDevice")
 @XmlAccessorType(XmlAccessType.FIELD)

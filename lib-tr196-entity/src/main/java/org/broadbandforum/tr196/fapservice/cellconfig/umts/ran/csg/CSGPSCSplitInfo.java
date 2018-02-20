@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the Primary Scrambling Code (PSC) split information for the CSG. Defined in SIB3/11bis {{bibref|3GPP-TS.25.331|Section 10.3.2.8 and 10.3.2.9}}.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.CSG.CSGPSCSplitInfo.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.CSG.CSGPSCSplitInfo")

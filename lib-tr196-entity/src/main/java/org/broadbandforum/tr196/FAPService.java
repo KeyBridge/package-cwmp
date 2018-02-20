@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr196.fapservice.AccessMgmt;
 import org.broadbandforum.tr196.fapservice.Capabilities;
 import org.broadbandforum.tr196.fapservice.CellConfig;
@@ -34,9 +35,9 @@ import org.broadbandforum.tr196.fapservice.Transport;
 	/**
 	 * The Femto Access Point (FAP) Service Object.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.")
+@CWMPObject(name = "FAPService.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"})})
 @XmlRootElement(name = "FAPService")
 @XmlType(name = "FAPService")
 @XmlAccessorType(XmlAccessType.FIELD)

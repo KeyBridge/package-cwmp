@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object contains parameters related to the capabilities of the Femtozone Application Platform and the Femtozone APIs.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
 @CWMPObject(name = "Device.FAP.ApplicationPlatform.Capabilities.")
 @XmlRootElement(name = "Device.FAP.ApplicationPlatform.Capabilities")

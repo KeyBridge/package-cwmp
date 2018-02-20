@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.capabilities.cdma2000.OneX;
 	/**
 	 * This object contains parameters relating to the capability attributes for CDMA2000 FAP.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Capabilities.CDMA2000.")
 @XmlRootElement(name = "FAPService.Capabilities.CDMA2000")

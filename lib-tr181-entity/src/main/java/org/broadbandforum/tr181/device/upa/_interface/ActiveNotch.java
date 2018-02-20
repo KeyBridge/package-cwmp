@@ -22,7 +22,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object contains the list of active notches of the UPA interface. 
@@ -31,9 +32,9 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         Note: All {{object}} entries can be enabled/disabled as a group using the {{param|#.ActiveNotchEnable}} parameter.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.UPA.Interface.{i}.ActiveNotch.{i}.")
+@CWMPObject(name = "Device.UPA.Interface.{i}.ActiveNotch.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.UPA.Interface.ActiveNotch")
 @XmlType(name = "Device.UPA.Interface.ActiveNotch")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -46,7 +47,7 @@ public class ActiveNotch {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

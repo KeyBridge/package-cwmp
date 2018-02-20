@@ -25,7 +25,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr140.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr140.storageservice.Capabilities;
 import org.broadbandforum.tr140.storageservice.FTPServer;
 import org.broadbandforum.tr140.storageservice.HTTPSServer;
@@ -42,9 +43,9 @@ import org.broadbandforum.tr140.storageservice.UserGroup;
 	/**
 	 * The Service Object for a Storage Service device.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
-@CWMPObject(name = "StorageService.{i}.")
+@CWMPObject(name = "StorageService.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "StorageService")
 @XmlType(name = "StorageService")
 @XmlAccessorType(XmlAccessType.FIELD)

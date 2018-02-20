@@ -26,7 +26,7 @@ import org.broadbandforum.tr181.device.lldp.Discovery;
 	/**
 	 * This object contains Link Layer Discovery Protocol (LLDP) {{bibref|802.1AB-2009}} related objects and parameters.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.LLDP.")
 @XmlRootElement(name = "Device.LLDP")

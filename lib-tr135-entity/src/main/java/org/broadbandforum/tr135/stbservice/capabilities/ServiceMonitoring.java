@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object describes the capabilities of the {{object|.ServiceMonitoring}} object.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.ServiceMonitoring.")
 @XmlRootElement(name = "STBService.Capabilities.ServiceMonitoring")

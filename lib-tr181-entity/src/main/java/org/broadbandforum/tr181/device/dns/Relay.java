@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.dns.relay.Forwarding;
 	/**
 	 * DNS Relay object. The DNS proxy (or relay) function allows the forwarding of local network DNS queries to local or external DNS server(s) {{bibref|RFC5625}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DNS.Relay.")
 @XmlRootElement(name = "Device.DNS.Relay")

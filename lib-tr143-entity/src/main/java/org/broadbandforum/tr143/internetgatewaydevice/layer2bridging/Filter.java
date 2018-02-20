@@ -26,13 +26,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Filter table containing filter entries each of which is associated with one Bridge as specified by a ''Bridge'' table entry.
 	 *
-	 * @since 1.1
+	 * @since TR143 v1.1
 	 */
-@CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.Filter.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.Filter.{i}.", uniqueConstraints = {@CWMPUnique(names = {"FilterKey"})})
 @XmlRootElement(name = "InternetGatewayDevice.Layer2Bridging.Filter")
 @XmlType(name = "InternetGatewayDevice.Layer2Bridging.Filter")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -52,7 +53,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "FilterEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean filterEnable = false;
+	public Boolean filterEnable;
 	/**
 	 * The status of this Filter table entry.  {{enum}}
 
@@ -61,7 +62,7 @@ The {{enum|Error}} value MAY be used by the CPE to indicate a locally defined er
 	 * @since 1.1
 	 */
 	@XmlElement(name = "FilterStatus")
-	public String filterStatus = "Disabled";
+	public String filterStatus;
 	/**
 	 * The ''BridgeKey'' value of the ''Bridge'' table entry associated with this Filter.  A value of -1 indicates the Filter table entry is not associated with a Bridge (and has no effect).
 	 *
@@ -70,7 +71,7 @@ The {{enum|Error}} value MAY be used by the CPE to indicate a locally defined er
 	@XmlElement(name = "FilterBridgeReference")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer filterBridgeReference = -1;
+	public Integer filterBridgeReference;
 	/**
 	 * Whether or not the Filter definition is exclusive of all others.  And if the entry is exclusive, order of precedence.
 
@@ -121,7 +122,7 @@ A value of -1 indicates that the default VLAN ID for the Bridge SHOULD be used i
 	@XmlElement(name = "VLANIDFilter")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 4095)
-	public Integer vlaNIDFilter = -1;
+	public Integer vlaNIDFilter;
 	/**
 	 * If {{true}}, on ingress to the interfaces associated with this Filter, the Bridge admits only packets tagged with a VLAN ID that matches the {{param|VLANIDFilter}} parameter (or instead, the VLAN ID for the Bridge if {{param|VLANIDFilter}} is unspecified).
 
@@ -133,7 +134,7 @@ If the {{param|VLANIDFilter}} parameter (or instead, the VLAN ID for the Bridge 
 	 */
 	@XmlElement(name = "AdmitOnlyVLANTagged")
 	@CWMPParameter(access = "readWrite")
-	public Boolean admitOnlyVLANTagged = false;
+	public Boolean admitOnlyVLANTagged;
 	/**
 	 * Comma-separated list of unsigned integers, each representing an Ethertype value.
 	 *
@@ -151,7 +152,7 @@ If {{true}}, on ingress to the interfaces associated with this Filter, the Bridg
 	 */
 	@XmlElement(name = "EthertypeFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean ethertypeFilterExclude = true;
+	public Boolean ethertypeFilterExclude;
 	/**
 	 * Each list entry MAY optionally specify a bit-mask, where matching of a packet's MAC address is only to be done for bit positions set to one in the mask.  If no mask is specified, all bits of the MAC Address are to be used for matching.
 
@@ -173,7 +174,7 @@ If {{true}}, on ingress to the interfaces associated with this Filter, the Bridg
 	 */
 	@XmlElement(name = "SourceMACAddressFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceMACAddressFilterExclude = true;
+	public Boolean sourceMACAddressFilterExclude;
 	/**
 	 * Each list entry MAY optionally specify a bit-mask, where matching of a packet's MAC address is only to be done for bit positions set to one in the mask.  If no mask is specified, all bits of the MAC Address are to be used for matching.
 
@@ -195,7 +196,7 @@ If {{true}}, on ingress to the interfaces associated with this Filter, the Bridg
 	 */
 	@XmlElement(name = "DestMACAddressFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destMACAddressFilterExclude = true;
+	public Boolean destMACAddressFilterExclude;
 	/**
 	 * A string used to identify one or more devices via DHCP for which MAC address filtering would subsequently apply.  A device is considered matching if it its DHCP Vendor Class Identifier (Option 60 as defined in RFC 2132) in the most recent DHCP lease acquisition or renewal was equal to the specified value.
 	 *
@@ -214,7 +215,7 @@ If {{true}}, on ingress to the interfaces associated with this Filter, the Bridg
 	 */
 	@XmlElement(name = "SourceMACFromVendorClassIDFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceMACFromVendorClassIDFilterExclude = true;
+	public Boolean sourceMACFromVendorClassIDFilterExclude;
 	/**
 	 * A string used to identify one or more devices via DHCP for which MAC address filtering would subsequently apply.  A device is considered matching if it its DHCP Vendor Class Identifier (Option 60 as defined in RFC 2132) in the most recent DHCP lease acquisition or renewal was equal to the specified value.
 	 *
@@ -233,7 +234,7 @@ If {{true}}, on ingress to the interfaces associated with this Filter, the Bridg
 	 */
 	@XmlElement(name = "DestMACFromVendorClassIDFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destMACFromVendorClassIDFilterExclude = true;
+	public Boolean destMACFromVendorClassIDFilterExclude;
 	/**
 	 * A string used to identify one or more devices via DHCP for which MAC address filtering would subsequently apply.  A device is considered matching if it its DHCP Client Identifier (Option 61 as defined in RFC 2132) in the most recent DHCP lease acquisition or renewal was equal to the specified value.
 	 *
@@ -252,7 +253,7 @@ If {{true}}, on ingress to the interfaces associated with this Filter, the Bridg
 	 */
 	@XmlElement(name = "SourceMACFromClientIDFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceMACFromClientIDFilterExclude = true;
+	public Boolean sourceMACFromClientIDFilterExclude;
 	/**
 	 * A string used to identify one or more devices via DHCP for which MAC address filtering would subsequently apply.  A device is considered matching if it its DHCP Client Identifier (Option 61 as defined in RFC 2132) in the most recent DHCP lease acquisition or renewal was equal to the specified value.
 	 *
@@ -271,7 +272,7 @@ If {{true}}, on ingress to the interfaces associated with this Filter, the Bridg
 	 */
 	@XmlElement(name = "DestMACFromClientIDFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destMACFromClientIDFilterExclude = true;
+	public Boolean destMACFromClientIDFilterExclude;
 	/**
 	 * A string used to identify one or more devices via DHCP for which MAC address filtering would subsequently apply.  A device is considered matching if it its DHCP User Class Identifier (Option 77 as defined in RFC 3004) in the most recent DHCP lease acquisition or renewal was equal to the specified value.
 	 *
@@ -290,7 +291,7 @@ If {{true}}, on ingress to the interfaces associated with this Filter, the Bridg
 	 */
 	@XmlElement(name = "SourceMACFromUserClassIDFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceMACFromUserClassIDFilterExclude = true;
+	public Boolean sourceMACFromUserClassIDFilterExclude;
 	/**
 	 * A string used to identify one or more devices via DHCP for which MAC address filtering would subsequently apply.  A device is considered matching if it its DHCP User Class Identifier (Option 77 as defined in RFC 3004) in the most recent DHCP lease acquisition or renewal was equal to the specified value.
 	 *
@@ -309,7 +310,7 @@ If {{true}}, on ingress to the interfaces associated with this Filter, the Bridg
 	 */
 	@XmlElement(name = "DestMACFromUserClassIDFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destMACFromUserClassIDFilterExclude = true;
+	public Boolean destMACFromUserClassIDFilterExclude;
 
 	public Filter() {
 	}

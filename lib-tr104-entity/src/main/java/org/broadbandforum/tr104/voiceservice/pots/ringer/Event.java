@@ -22,14 +22,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table of events for which a ring pattern is defined.  The table is pre-populated with the complete list of events for which the CPE supports definition of ring patterns.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.POTS.Ringer.Event.{i}.")
+@CWMPObject(name = "VoiceService.{i}.POTS.Ringer.Event.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Function"})})
 @XmlRootElement(name = "VoiceService.POTS.Ringer.Event")
 @XmlType(name = "VoiceService.POTS.Ringer.Event")
 @XmlAccessorType(XmlAccessType.FIELD)

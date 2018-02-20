@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * DLNA capabilities.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DLNA.Capabilities.")
 @XmlRootElement(name = "Device.DLNA.Capabilities")

@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.zigbee.ZDO;
 	/**
 	 * Top level object for ZigBee capabilities based on the {{bibref|ZigBee2007}} specification.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.")
 @XmlRootElement(name = "Device.ZigBee")

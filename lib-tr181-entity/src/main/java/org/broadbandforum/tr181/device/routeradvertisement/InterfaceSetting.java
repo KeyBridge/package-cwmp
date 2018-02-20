@@ -27,7 +27,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.routeradvertisement.interfacesetting.Option;
 
 	/**
@@ -37,9 +38,10 @@ import org.broadbandforum.tr181.device.routeradvertisement.interfacesetting.Opti
 
         Note: The {{object}} table includes a unique key parameter that is a strong reference. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.RouterAdvertisement.InterfaceSetting.{i}.")
+@CWMPObject(name = "Device.RouterAdvertisement.InterfaceSetting.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Interface"})})
 @XmlRootElement(name = "Device.RouterAdvertisement.InterfaceSetting")
 @XmlType(name = "Device.RouterAdvertisement.InterfaceSetting")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -54,7 +56,7 @@ public class InterfaceSetting {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this entry.  {{enum}}
 
@@ -65,7 +67,7 @@ public class InterfaceSetting {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -155,7 +157,7 @@ public class InterfaceSetting {
 	 */
 	@XmlElement(name = "AdvManagedFlag")
 	@CWMPParameter(access = "readWrite")
-	public Boolean advManagedFlag = false;
+	public Boolean advManagedFlag;
 	/**
 	 * The value placed in the "Other configuration" (O) flag field of Router Advertisement messages on this interface (see {{bibref|RFC4861|Section 4.2}}, and {{bibref|RFC4862}}).
 	 *
@@ -163,7 +165,7 @@ public class InterfaceSetting {
 	 */
 	@XmlElement(name = "AdvOtherConfigFlag")
 	@CWMPParameter(access = "readWrite")
-	public Boolean advOtherConfigFlag = false;
+	public Boolean advOtherConfigFlag;
 	/**
 	 * The value placed in the "Home agent" (H) flag field of Router Advertisement messages on this interface (see {{bibref|RFC3775|Section 7.1}}).
 	 *
@@ -171,7 +173,7 @@ public class InterfaceSetting {
 	 */
 	@XmlElement(name = "AdvMobileAgentFlag")
 	@CWMPParameter(access = "readWrite")
-	public Boolean advMobileAgentFlag = false;
+	public Boolean advMobileAgentFlag;
 	/**
 	 * The value placed in the "Default Router Preference" (Prf) field of Router Advertisement messages on this interface, as defined in {{bibref|RFC4191|Section 2.2}}. {{enum}}
 
@@ -181,7 +183,7 @@ public class InterfaceSetting {
 	 */
 	@XmlElement(name = "AdvPreferredRouterFlag")
 	@CWMPParameter(access = "readWrite")
-	public String advPreferredRouterFlag = "Medium";
+	public String advPreferredRouterFlag;
 	/**
 	 * The value placed in the "Proxy" (P) flag field of Router Advertisement messages on this interface (see {{bibref|RFC4389|Section 4.1.3.3}}).
 	 *
@@ -189,7 +191,7 @@ public class InterfaceSetting {
 	 */
 	@XmlElement(name = "AdvNDProxyFlag")
 	@CWMPParameter(access = "readWrite")
-	public Boolean advNDProxyFlag = false;
+	public Boolean advNDProxyFlag;
 	/**
 	 * The value placed in MTU options of Router Advertisement messages on this interface. A value of zero indicates that no MTU options are included (see {{bibref|RFC4861|Section 4.6.4}}).
 	 *

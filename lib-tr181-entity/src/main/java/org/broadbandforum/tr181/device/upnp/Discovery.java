@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.upnp.discovery.Service;
 
         The CPE MAY, but need not, retain some or all of the information in this object across reboots.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.UPnP.Discovery.")
 @XmlRootElement(name = "Device.UPnP.Discovery")

@@ -30,7 +30,7 @@ import org.broadbandforum.tr104.voiceservice.dect.Portable;
 	/**
 	 * This object models DECT bases and portables.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.DECT.")
 @XmlRootElement(name = "VoiceService.DECT")

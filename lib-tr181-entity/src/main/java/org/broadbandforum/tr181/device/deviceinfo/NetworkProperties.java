@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object defines the parameters that describe how the device handles network traffic.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.NetworkProperties.")
 @XmlRootElement(name = "Device.DeviceInfo.NetworkProperties")

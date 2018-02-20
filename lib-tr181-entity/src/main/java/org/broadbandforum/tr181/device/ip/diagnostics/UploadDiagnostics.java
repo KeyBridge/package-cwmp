@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.common.IPAddress;
 import org.broadbandforum.tr181.device.ip.diagnostics.uploaddiagnostics.IncrementalResult;
 import org.broadbandforum.tr181.device.ip.diagnostics.uploaddiagnostics.PerConnectionResult;
 
@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.device.ip.diagnostics.uploaddiagnostics.PerConne
 
         Files sent by the UploadDiagnostics do not require file storage on the CPE device, and MAY be an arbitrary stream of bytes.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.UploadDiagnostics.")
 @XmlRootElement(name = "Device.IP.Diagnostics.UploadDiagnostics")

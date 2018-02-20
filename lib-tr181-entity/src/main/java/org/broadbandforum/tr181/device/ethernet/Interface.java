@@ -26,16 +26,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.ethernet._interface.Stats;
 
 	/**
 	 * Ethernet interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). This table models physical Ethernet ports, but in terms of the interface stack it also models the PHY and MAC level Ethernet interface.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.Ethernet.Interface.{i}.")
+@CWMPObject(name = "Device.Ethernet.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.Ethernet.Interface")
 @XmlType(name = "Device.Ethernet.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)

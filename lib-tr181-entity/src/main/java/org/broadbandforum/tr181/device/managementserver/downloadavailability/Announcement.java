@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.managementserver.downloadavailability.ann
 	/**
 	 * This object contains multicast announcement parameters used to download files.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.ManagementServer.DownloadAvailability.Announcement.")
 @XmlRootElement(name = "Device.ManagementServer.DownloadAvailability.Announcement")

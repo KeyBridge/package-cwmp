@@ -27,6 +27,7 @@ import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 import org.broadbandforum.tr181.device.dns.sd.service.TextRecord;
 
 	/**
@@ -54,9 +55,9 @@ import org.broadbandforum.tr181.device.dns.sd.service.TextRecord;
 
         *{{param|Target}} = "ssh.example.com."
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
-@CWMPObject(name = "Device.DNS.SD.Service.{i}.")
+@CWMPObject(name = "Device.DNS.SD.Service.{i}.", uniqueConstraints = {@CWMPUnique(names = {"InstanceName", "ApplicationProtocol", "TransportProtocol", "Domain"})})
 @XmlRootElement(name = "Device.DNS.SD.Service")
 @XmlType(name = "Device.DNS.SD.Service")
 @XmlAccessorType(XmlAccessType.FIELD)

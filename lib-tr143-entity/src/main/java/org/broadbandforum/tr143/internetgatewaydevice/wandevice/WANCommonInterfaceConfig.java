@@ -31,7 +31,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.wandevice.wancommoninterfa
 	/**
 	 * This object models WAN interface properties common across all connection instances.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANCommonInterfaceConfig.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANCommonInterfaceConfig")

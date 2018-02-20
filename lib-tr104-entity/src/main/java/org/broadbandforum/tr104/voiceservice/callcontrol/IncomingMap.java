@@ -23,16 +23,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * The {{object}} is a table that is used to control which extensions ring when an incoming call is received.
 
 The map approach separates the call routing aspects from the configuration of the lines and extensions. It support PBX concepts such as DDI (one extension per line) and groups (parallel dialing if extensions have same priority and hunting when extensions have different priority).
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.CallControl.IncomingMap.{i}.")
+@CWMPObject(name = "VoiceService.{i}.CallControl.IncomingMap.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Line", "Extension"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.CallControl.IncomingMap")
 @XmlType(name = "VoiceService.CallControl.IncomingMap")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -45,7 +47,7 @@ public class IncomingMap {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

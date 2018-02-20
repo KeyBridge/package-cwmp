@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Parameters related to RTP AVPF configuration as defined in {{bibref|RFC4585}} and {{bibref|RFC4588}}.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.RTPAVPF.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.IP.RTPAVPF")

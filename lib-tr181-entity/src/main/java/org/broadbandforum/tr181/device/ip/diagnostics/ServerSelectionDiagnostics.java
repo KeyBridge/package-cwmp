@@ -26,12 +26,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * This object provides access to a diagnostics test that performs either an ICMP Ping or UDP Echo ping against multiple hosts determining which one has the smallest average response time. There MUST be a ping response to the transmitted ping, or timeout, before the next ping is sent out.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.ServerSelectionDiagnostics.")
 @XmlRootElement(name = "Device.IP.Diagnostics.ServerSelectionDiagnostics")
@@ -83,7 +83,7 @@ public class ServerSelectionDiagnostics {
 	 */
 	@XmlElement(name = "ProtocolVersion")
 	@CWMPParameter(access = "readWrite")
-	public String protocolVersion = "Any";
+	public String protocolVersion;
 	/**
 	 * The protocol over which the test is to be performed.
 	 *

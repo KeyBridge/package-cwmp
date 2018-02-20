@@ -36,7 +36,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
         When the captive portal is enabled, upstream HTTP (port 80) traffic MUST be permitted only to destinations listed in the {{param|AllowedList}}; traffic to all other destinations MUST be redirected to the {{param|URL}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.CaptivePortal.")
 @XmlRootElement(name = "Device.CaptivePortal")

@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Details on call control stats
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.CallControlStats.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD.CallControlStats")

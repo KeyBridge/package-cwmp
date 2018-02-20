@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.zigbee.zdo.network.Neighbor;
 	/**
 	 * The {{object}} object provides the configuration capabilities needed to by a ZigBee Device to operate within a ZigBee Area Network as defined in {{bibref|ZigBee2007|section 2.5.2.4 Network Manager}}.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.Network.")
 @XmlRootElement(name = "Device.ZigBee.ZDO.Network")

@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.bulkdata.profile.http.RequestURIParameter
 	/**
 	 * This object defines the properties to be used when transporting bulk data using the HTTP/HTTPS protocol. This object is used when the {{param|#.Protocol}} parameter has a value of {{enum|HTTP|##.Protocols}}. For authentication purposes the CPE MUST support HTTP Basic and Digest Access Authentication as defined in {{bibref|RFC2616}}.
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
 @CWMPObject(name = "Device.BulkData.Profile.{i}.HTTP.")
 @XmlRootElement(name = "Device.BulkData.Profile.HTTP")
@@ -82,7 +82,7 @@ public class HTTP {
 	 */
 	@XmlElement(name = "Compression")
 	@CWMPParameter(access = "readWrite")
-	public String compression = "None";
+	public String compression;
 	/**
 	 * Indicates the HTTP method(s) supported by this CPE for the purposes of transferring bulk data.
 	 *
@@ -98,7 +98,7 @@ public class HTTP {
 	 */
 	@XmlElement(name = "Method")
 	@CWMPParameter(access = "readWrite")
-	public String method = "POST";
+	public String method;
 	/**
 	 * When {{true}}, the CPE encodes the HTTP Date Header {{bibref|RFC2616|Section 14.18}} in the HTTP client request.
 	 *
@@ -106,7 +106,7 @@ public class HTTP {
 	 */
 	@XmlElement(name = "UseDateHeader")
 	@CWMPParameter(access = "readWrite")
-	public Boolean useDateHeader = true;
+	public Boolean useDateHeader;
 	/**
 	 * When {{true}}, the CPE retries unsuccessful attempts to transfer data.
 	 *
@@ -114,7 +114,7 @@ public class HTTP {
 	 */
 	@XmlElement(name = "RetryEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean retryEnable = false;
+	public Boolean retryEnable;
 	/**
 	 * Configures the data transfer retry wait interval, in seconds, as specified in {{bibref|TR-157a10|Annex A.2.2.1}}.
 

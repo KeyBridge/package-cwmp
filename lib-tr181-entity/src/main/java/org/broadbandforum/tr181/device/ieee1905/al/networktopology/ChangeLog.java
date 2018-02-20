@@ -22,12 +22,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * This object represents log entries for changes in the 1905 Network Topology. The Change Log is a First In First Out queue where the oldest entries (defined by values of the {{param|TimeStamp}} parameter) are deleted once the log is full.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.ChangeLog.{i}.")
 @XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.ChangeLog")

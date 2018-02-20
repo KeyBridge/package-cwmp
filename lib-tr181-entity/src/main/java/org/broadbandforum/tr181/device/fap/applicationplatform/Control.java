@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.fap.applicationplatform.control.TerminalL
 	/**
 	 * This object contains parameters related to the operation of the Femtozone APIs.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
 @CWMPObject(name = "Device.FAP.ApplicationPlatform.Control.")
 @XmlRootElement(name = "Device.FAP.ApplicationPlatform.Control")

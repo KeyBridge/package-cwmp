@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * The vendor-specific device information, which is included in the value of the ''LLDPDU's'' Organizationally Specific TLV (TLV Type = 127). 
@@ -31,9 +32,9 @@ import org.broadbandforum.annotation.CWMPObject;
 
         Note: It is assumed that this object might be used for HTIP (Home-network Topology Identifying Protocol) {{bibref|JJ-300.00}} and {{bibref|G.9973}}. In this case, this table contains the Organizationally Specific TLV (TLV Type = 127) of ''LLDPDU'', in which the {{bibref|OUI}} in the third octet is E0271A (''TTC-OUI''), the organizationally defined subtype in the sixth octet is 1 (''Device Information''), and the device information ID in the seventh octet is 255 (''Vendor-specific extension field'').
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.DeviceInformation.VendorSpecific.{i}.")
+@CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.DeviceInformation.VendorSpecific.{i}.", uniqueConstraints = {@CWMPUnique(names = {"OrganizationCode", "InformationType"})})
 @XmlRootElement(name = "Device.LLDP.Discovery.Device.DeviceInformation.VendorSpecific")
 @XmlType(name = "Device.LLDP.Discovery.Device.DeviceInformation.VendorSpecific")
 @XmlAccessorType(XmlAccessType.FIELD)

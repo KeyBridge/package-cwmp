@@ -26,7 +26,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.erab.Stats;
 	/**
 	 * This object provides monitoring of E-RABs in the HeNB.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.ERAB.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.ERAB")

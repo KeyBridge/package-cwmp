@@ -23,8 +23,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPv4Address;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPv4Address;
 
 	/**
 	 * Layer 3 IPv4 forwarding table.
@@ -41,9 +42,10 @@ import org.broadbandforum.tr181.datatypes.IPv4Address;
 
         Note: The {{object}} table includes a unique key parameter that is a strong reference. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST disable the offending {{object}} row.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.Routing.Router.{i}.IPv4Forwarding.{i}.")
+@CWMPObject(name = "Device.Routing.Router.{i}.IPv4Forwarding.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"DestIPAddress", "DestSubnetMask", "ForwardingPolicy", "GatewayIPAddress", "Interface", "ForwardingMetric"})})
 @XmlRootElement(name = "Device.Routing.Router.IPv4Forwarding")
 @XmlType(name = "Device.Routing.Router.IPv4Forwarding")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -56,7 +58,7 @@ public class IPv4Forwarding {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Indicates the status of the forwarding entry.  {{enum}}
 
@@ -67,7 +69,7 @@ public class IPv4Forwarding {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -82,7 +84,7 @@ public class IPv4Forwarding {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "StaticRoute")
-	public Boolean staticRoute = true;
+	public Boolean staticRoute;
 	/**
 	 * Destination IPv4 address.  {{empty}} indicates no destination address is specified.
 
@@ -117,7 +119,7 @@ public class IPv4Forwarding {
 	@XmlElement(name = "ForwardingPolicy")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer forwardingPolicy = -1;
+	public Integer forwardingPolicy;
 	/**
 	 * IPv4 address of the gateway.
 
@@ -151,7 +153,7 @@ public class IPv4Forwarding {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * Forwarding metric.  A value of -1 indicates this metric is not used.
 	 *
@@ -160,7 +162,7 @@ public class IPv4Forwarding {
 	@XmlElement(name = "ForwardingMetric")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer forwardingMetric = -1;
+	public Integer forwardingMetric;
 
 	public IPv4Forwarding() {
 	}

@@ -26,9 +26,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPAddress;
-import org.broadbandforum.tr181.datatypes.IPPrefix;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
+import org.broadbandforum.common.IPPrefix;
 
 	/**
 	 * Filter table containing classification filter entries, each of which expresses a set of classification criterion to classify ingress frames as member of a {{object|#.Bridge}} instance or a {{object|#.Bridge.{i}.VLAN}} instance.
@@ -39,9 +40,9 @@ import org.broadbandforum.tr181.datatypes.IPPrefix;
 
         Several of this object's parameters specify DHCP option values. Some cases are version neutral (the parameter can apply to both DHCPv4 and DHCPv6), but in other cases the representation of the option is different for DHCPv4 and DHCPv6, so it is necessary to define separate DHCPv4-specific and DHCPv6-specific parameters. Therefore, an instance of this object that uses DHCP option values as filter criteria will be associated with either DHCPv4 or DHCPv6, as indicated by the {{param|DHCPType}} parameter.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.Bridging.Filter.{i}.")
+@CWMPObject(name = "Device.Bridging.Filter.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.Bridging.Filter")
 @XmlType(name = "Device.Bridging.Filter")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -54,7 +55,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -77,7 +78,7 @@ public class Filter {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{reference|a {{object|.Bridging.Bridge}} object in case of a 802.1D bridge or a {{object|.Bridging.Bridge.{i}.VLAN}} object in case of a 802.1Q bridge}}  Note: either way, this identifies the bridge (because each bridge has a VLAN table).
 
@@ -122,7 +123,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "DHCPType")
 	@CWMPParameter(access = "readWrite")
-	public String dhcPType = "DHCPv4";
+	public String dhcPType;
 	/**
 	 * Classification criterion. 
 
@@ -159,7 +160,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "EthertypeFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean ethertypeFilterExclude = true;
+	public Boolean ethertypeFilterExclude;
 	/**
 	 * Classification criterion.
 
@@ -189,7 +190,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "SourceMACAddressFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceMACAddressFilterExclude = true;
+	public Boolean sourceMACAddressFilterExclude;
 	/**
 	 * Classification criterion.
 
@@ -213,7 +214,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "DestMACAddressFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destMACAddressFilterExclude = true;
+	public Boolean destMACAddressFilterExclude;
 	/**
 	 * Classification criterion.
 
@@ -256,7 +257,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "SourceMACFromVendorClassIDFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceMACFromVendorClassIDFilterExclude = true;
+	public Boolean sourceMACFromVendorClassIDFilterExclude;
 	/**
 	 * {{param|SourceMACFromVendorClassIDFilter}} pattern match criterion.  {{enum}}
 
@@ -268,7 +269,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "SourceMACFromVendorClassIDMode")
 	@CWMPParameter(access = "readWrite")
-	public String sourceMACFromVendorClassIDMode = "Exact";
+	public String sourceMACFromVendorClassIDMode;
 	/**
 	 * Classification criterion.
 
@@ -305,7 +306,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "DestMACFromVendorClassIDFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destMACFromVendorClassIDFilterExclude = true;
+	public Boolean destMACFromVendorClassIDFilterExclude;
 	/**
 	 * {{param|DestMACFromVendorClassIDFilter}} pattern match criterion.  {{enum}}
 
@@ -315,7 +316,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "DestMACFromVendorClassIDMode")
 	@CWMPParameter(access = "readWrite")
-	public String destMACFromVendorClassIDMode = "Exact";
+	public String destMACFromVendorClassIDMode;
 	/**
 	 * Classification criterion.
 
@@ -345,7 +346,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "SourceMACFromClientIDFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceMACFromClientIDFilterExclude = true;
+	public Boolean sourceMACFromClientIDFilterExclude;
 	/**
 	 * Classification criterion.
 
@@ -371,7 +372,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "DestMACFromClientIDFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destMACFromClientIDFilterExclude = true;
+	public Boolean destMACFromClientIDFilterExclude;
 	/**
 	 * Classification criterion.
 
@@ -399,7 +400,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "SourceMACFromUserClassIDFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceMACFromUserClassIDFilterExclude = true;
+	public Boolean sourceMACFromUserClassIDFilterExclude;
 	/**
 	 * Classification criterion.
 
@@ -423,7 +424,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "DestMACFromUserClassIDFilterExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destMACFromUserClassIDFilterExclude = true;
+	public Boolean destMACFromUserClassIDFilterExclude;
 	/**
 	 * Classification criterion.
 
@@ -451,7 +452,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "DestIPExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destIPExclude = false;
+	public Boolean destIPExclude;
 	/**
 	 * Classification criterion.
 
@@ -479,7 +480,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "SourceIPExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceIPExclude = false;
+	public Boolean sourceIPExclude;
 	/**
 	 * Classification criterion.
 
@@ -490,7 +491,7 @@ public class Filter {
 	@XmlElement(name = "Protocol")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 255)
-	public Integer protocol = -1;
+	public Integer protocol;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|Protocol}} entry, if specified.
 
@@ -500,7 +501,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "ProtocolExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean protocolExclude = false;
+	public Boolean protocolExclude;
 	/**
 	 * Classification criterion.
 
@@ -511,7 +512,7 @@ public class Filter {
 	@XmlElement(name = "DestPort")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer destPort = -1;
+	public Integer destPort;
 	/**
 	 * Classification criterion.
 
@@ -524,7 +525,7 @@ public class Filter {
 	@XmlElement(name = "DestPortRangeMax")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer destPortRangeMax = -1;
+	public Integer destPortRangeMax;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|DestPort}} entry (or port range), if  specified.
 
@@ -534,7 +535,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "DestPortExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destPortExclude = false;
+	public Boolean destPortExclude;
 	/**
 	 * Classification criterion.
 
@@ -545,7 +546,7 @@ public class Filter {
 	@XmlElement(name = "SourcePort")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer sourcePort = -1;
+	public Integer sourcePort;
 	/**
 	 * Classification criterion.
 
@@ -558,7 +559,7 @@ public class Filter {
 	@XmlElement(name = "SourcePortRangeMax")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer sourcePortRangeMax = -1;
+	public Integer sourcePortRangeMax;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|SourcePort}} entry (or port range), if  specified.
 
@@ -568,7 +569,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "SourcePortExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourcePortExclude = false;
+	public Boolean sourcePortExclude;
 
 	public Filter() {
 	}

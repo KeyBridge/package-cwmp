@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * CDMA2000 1x service redirection parameters.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.Redirect.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.Redirect")

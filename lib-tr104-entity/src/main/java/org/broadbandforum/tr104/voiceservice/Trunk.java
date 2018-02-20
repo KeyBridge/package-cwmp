@@ -26,16 +26,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Trunk table.
 
 The {{object}} holds all parameters a CPE needs to set up a trunk connection with an NGN, as defined in {{bibref|ETSI_TS_181_019}}.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.Trunk.{i}.")
+@CWMPObject(name = "VoiceService.{i}.Trunk.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.Trunk")
 @XmlType(name = "VoiceService.Trunk")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -48,7 +49,7 @@ public class Trunk {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * If {{true}}, when {{param|Enable}} is set to {{false}} in-progress sessions remain intact, but no new sessions are allowed. When all sessions are terminated, the {{object}} is disabled.
 	 *
@@ -63,7 +64,7 @@ public class Trunk {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -78,7 +79,7 @@ public class Trunk {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * Name of the trunk.
 	 *
@@ -133,7 +134,7 @@ This parameter can only be modified if {{param|Origin}} is {{enum|Static|Origin}
 	@XmlElement(name = "MaxOutboundChannelCount")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer maxOutboundChannelCount = -1;
+	public Integer maxOutboundChannelCount;
 	/**
 	 * Maximal number of simultaneous communication channels in inbound direction supported across this trunk. The maximum number cannot exceed {{param|MaxChannels}} - {{param|MaxOutboundChannelCount}}. A value n>0 means, that there are no more than n channels allowed, which are used by inbound calls. A value of -1 means that there are no restrictions in this direction.
 	 *
@@ -142,7 +143,7 @@ This parameter can only be modified if {{param|Origin}} is {{enum|Static|Origin}
 	@XmlElement(name = "MaxInboundChannelCount")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer maxInboundChannelCount = -1;
+	public Integer maxInboundChannelCount;
 	/**
 	 * The {{param}} option controls which end of an inbound call leg will have priority over the negotiation of codecs.
 	 *

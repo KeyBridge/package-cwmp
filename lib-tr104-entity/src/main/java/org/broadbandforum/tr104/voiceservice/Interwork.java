@@ -28,8 +28,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
-import org.broadbandforum.tr104.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 import org.broadbandforum.tr104.voiceservice.interwork.Map;
 import org.broadbandforum.tr104.voiceservice.interwork.UserInterface;
 
@@ -38,9 +39,9 @@ import org.broadbandforum.tr104.voiceservice.interwork.UserInterface;
 
 It is mutually exclusive with the {{object|.CallControl}} object which is used in case of PBX or Endpoint capabilities.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.Interwork.{i}.")
+@CWMPObject(name = "VoiceService.{i}.Interwork.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.Interwork")
 @XmlType(name = "VoiceService.Interwork")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -53,7 +54,7 @@ public class Interwork {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * If {{true}}, when {{param|Enable}} is set to {{false}} in-progress sessions remain intact, but no new sessions are allowed. When all sessions are terminated, the {{object}} is disabled.
 	 *
@@ -68,7 +69,7 @@ public class Interwork {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -83,7 +84,7 @@ public class Interwork {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "OperationalStatus")
-	public String operationalStatus = "OutOfService";
+	public String operationalStatus;
 	/**
 	 * Human-readable string identifying the reason or explanation for the current {{param|OperationalStatus}}.
 	 *

@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr143.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * Layer-3 forwarding table.
@@ -40,9 +41,9 @@ For each incoming packet, the layer-3 forwarding decision is conceptually made a
 
 * The first of the remaining table entries is applied to the packet.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding.{i}.", uniqueConstraints = {@CWMPUnique(names = {"DestIPAddress", "DestSubnetMask", "SourceIPAddress", "SourceSubnetMask"})})
 @XmlRootElement(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding")
 @XmlType(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -55,7 +56,7 @@ public class Forwarding {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Indicates the status of the forwarding entry.  {{enum}}
 
@@ -64,7 +65,7 @@ The {{enum|Error}} value MAY be used by the CPE to indicate a locally defined er
 	 * @since 1.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * Indicates the type of route.  {{enum}}
 
@@ -74,7 +75,7 @@ This parameter is DEPRECATED because its value could conflict with {{param|DestI
 	 */
 	@XmlElement(name = "Type")
 	@CWMPParameter(access = "readWrite")
-	public String type = "Host";
+	public String type;
 	/**
 	 * Destination address.  {{empty}} or a value of "0.0.0.0" indicates no destination address is specified.
 
@@ -127,7 +128,7 @@ If specified, this forwarding entry is to apply only to traffic associated with 
 	@XmlElement(name = "ForwardingPolicy")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer forwardingPolicy = -1;
+	public Integer forwardingPolicy;
 	/**
 	 * IP address of the gateway.
 
@@ -163,7 +164,7 @@ For a route that was configured by setting {{param|GatewayIPAddress}} but not {{
 	@XmlElement(name = "ForwardingMetric")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer forwardingMetric = -1;
+	public Integer forwardingMetric;
 	/**
 	 * The maximum allowed size of an Ethernet frame for this route.
 	 *

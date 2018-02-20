@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 
         The CPE MUST reset the Stats parameters either when the interface becomes operationally down due to a previous administrative down (i.e. the interface's {{param|###.Status}} parameter transitions to a down state after the interface is disabled) or when the interface becomes administratively up (i.e. the interface's {{param|###.Enable}} parameter transitions from {{false}} to {{true}}). Administrative and operational interface status is discussed in {{bibref|TR-181i2|section 4.2.2}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DSL.BondingGroup.{i}.BondedChannel.{i}.Ethernet.Stats.")
 @XmlRootElement(name = "Device.DSL.BondingGroup.BondedChannel.Ethernet.Stats")

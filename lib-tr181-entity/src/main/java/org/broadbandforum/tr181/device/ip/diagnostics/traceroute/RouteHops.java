@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Contains the array of hop results returned. If a route could not be determined, this array will be empty
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.TraceRoute.RouteHops.{i}.")
 @XmlRootElement(name = "Device.IP.Diagnostics.TraceRoute.RouteHops")

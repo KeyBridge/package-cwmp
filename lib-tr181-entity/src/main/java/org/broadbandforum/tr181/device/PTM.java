@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.ptm.Link;
 	/**
 	 * Packet Transfer Mode ({{bibref|G.993.1|Annex H}}). This object contains the {{object|Link}} interface.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.PTM.")
 @XmlRootElement(name = "Device.PTM")

@@ -21,15 +21,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.StatsCounter32;
-import org.broadbandforum.tr181.datatypes.StatsCounter64;
+import org.broadbandforum.common.StatsCounter32;
+import org.broadbandforum.common.StatsCounter64;
 
 	/**
 	 * These count bytes or packets sent to, or received from, this Associated Device, which is a WiFi station associated to this access point. Packet counters here count 802.11 WiFi frames.
 
         The CPE MUST reset these {{object}} parameters (unless otherwise stated in individual object or parameter descriptions) either when the {{param|##.Status}} of the parent {{object|##}} object transitions from {{enum|Disabled|##.Status}} to {{enum|Enabled|##.Status}}, or when it transitions from {{enum|Enabled|##.Status}} to {{enum|Disabled|##.Status}}.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.WiFi.AccessPoint.{i}.AssociatedDevice.{i}.Stats.")
 @XmlRootElement(name = "Device.WiFi.AccessPoint.AssociatedDevice.Stats")

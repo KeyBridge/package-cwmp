@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table of SIP events automatically populated by the CPE with each of the SIP event subscriptions in {{object|.SIP.Network.{i}.EventSubscribe.{i}.}}.  This table allows specification of the authentication credentials needed for each event subscription.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.SIP.Client.{i}.EventSubscribe.{i}.")
+@CWMPObject(name = "VoiceService.{i}.SIP.Client.{i}.EventSubscribe.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Event"})})
 @XmlRootElement(name = "VoiceService.SIP.Client.EventSubscribe")
 @XmlType(name = "VoiceService.SIP.Client.EventSubscribe")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class EventSubscribe {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

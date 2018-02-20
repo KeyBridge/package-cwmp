@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.usb.usbhosts.Host;
 
         See {{bibref|TR-157|Appendix I}} for Theory of Operation.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.USB.USBHosts.")
 @XmlRootElement(name = "Device.USB.USBHosts")

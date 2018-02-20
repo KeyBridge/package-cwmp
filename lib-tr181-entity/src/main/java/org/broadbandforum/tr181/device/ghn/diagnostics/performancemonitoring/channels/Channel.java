@@ -21,14 +21,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * Per-channel G.hn performance monitoring results during the current sample interval. Each table entry contains the results collected from the channel between a G.hn interface (as indicated by {{param|##.DiagnoseMACAddress}}) and a G.hn interface indicated by {{param|DestinationMACAddress}})
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Channels.Channel.{i}.")
+@CWMPObject(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Channels.Channel.{i}.", uniqueConstraints = {@CWMPUnique(names = {"DestinationMACAddress"})})
 @XmlRootElement(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Channels.Channel")
 @XmlType(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Channels.Channel")
 @XmlAccessorType(XmlAccessType.FIELD)

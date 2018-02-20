@@ -25,15 +25,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr135.stbservice.components.frontend.dvbt.servicelistdatabase.logicalchannel.Service;
 
 	/**
 	 * DVB-T logical channel information.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.ServiceListDatabase.LogicalChannel.{i}.")
+@CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.ServiceListDatabase.LogicalChannel.{i}.", uniqueConstraints = {@CWMPUnique(names = {"LogicalChannelNumber"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Components.FrontEnd.DVBT.ServiceListDatabase.LogicalChannel")
 @XmlType(name = "STBService.Components.FrontEnd.DVBT.ServiceListDatabase.LogicalChannel")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -26,14 +26,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr140.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object provides information about each user configured on this device, which provides a means for controlling access to the device.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
-@CWMPObject(name = "StorageService.{i}.UserAccount.{i}.")
+@CWMPObject(name = "StorageService.{i}.UserAccount.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Username"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "StorageService.UserAccount")
 @XmlType(name = "StorageService.UserAccount")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -46,7 +48,7 @@ public class UserAccount {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -90,7 +92,7 @@ public class UserAccount {
 	 */
 	@XmlElement(name = "AllowFTPAccess")
 	@CWMPParameter(access = "readWrite")
-	public Boolean allowFTPAccess = false;
+	public Boolean allowFTPAccess;
 	/**
 	 * Enables or disables access via HTTP (including HTTPS access) for this user.
 	 *
@@ -98,7 +100,7 @@ public class UserAccount {
 	 */
 	@XmlElement(name = "AllowHTTPAccess")
 	@CWMPParameter(access = "readWrite")
-	public Boolean allowHTTPAccess = false;
+	public Boolean allowHTTPAccess;
 
 	public UserAccount() {
 	}

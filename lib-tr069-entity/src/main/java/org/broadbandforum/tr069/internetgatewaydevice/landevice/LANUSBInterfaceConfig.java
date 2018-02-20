@@ -23,15 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr069.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr069.internetgatewaydevice.landevice.lanusbinterfaceconfig.Stats;
 
 	/**
 	 * This object models a USB LAN connection on a CPE device.  This object must be implemented for CPE that contain a USB interface on the LAN side.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANUSBInterfaceConfig.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANUSBInterfaceConfig.{i}.", uniqueConstraints = {@CWMPUnique(names = {"MACAddress"})})
 @XmlRootElement(name = "InternetGatewayDevice.LANDevice.LANUSBInterfaceConfig")
 @XmlType(name = "InternetGatewayDevice.LANDevice.LANUSBInterfaceConfig")
 @XmlAccessorType(XmlAccessType.FIELD)

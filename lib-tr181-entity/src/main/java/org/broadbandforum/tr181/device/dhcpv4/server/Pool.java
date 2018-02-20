@@ -26,9 +26,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPv4Address;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPv4Address;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.dhcpv4.server.pool.Client;
 import org.broadbandforum.tr181.device.dhcpv4.server.pool.Option;
 import org.broadbandforum.tr181.device.dhcpv4.server.pool.StaticAddress;
@@ -42,9 +43,9 @@ import org.broadbandforum.tr181.device.dhcpv4.server.pool.StaticAddress;
 
         For enabled table entries, if {{param|Interface}} is not a valid reference, or {{param|MinAddress}}, {{param|MaxAddress}}, or {{param|SubnetMask}} is not a valid value, then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.DHCPv4.Server.Pool.{i}.")
+@CWMPObject(name = "Device.DHCPv4.Server.Pool.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.DHCPv4.Server.Pool")
 @XmlType(name = "Device.DHCPv4.Server.Pool")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -57,7 +58,7 @@ public class Pool {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this entry.  {{enum}}
 
@@ -68,7 +69,7 @@ public class Pool {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -123,7 +124,7 @@ public class Pool {
 	 */
 	@XmlElement(name = "VendorClassIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean vendorClassIDExclude = false;
+	public Boolean vendorClassIDExclude;
 	/**
 	 * {{param|VendorClassID}} pattern match criterion.  {{enum}}
 
@@ -133,7 +134,7 @@ public class Pool {
 	 */
 	@XmlElement(name = "VendorClassIDMode")
 	@CWMPParameter(access = "readWrite")
-	public String vendorClassIDMode = "Exact";
+	public String vendorClassIDMode;
 	/**
 	 * Pool association criterion. 
 
@@ -155,7 +156,7 @@ public class Pool {
 	 */
 	@XmlElement(name = "ClientIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean clientIDExclude = false;
+	public Boolean clientIDExclude;
 	/**
 	 * Pool association criterion. 
 
@@ -177,7 +178,7 @@ public class Pool {
 	 */
 	@XmlElement(name = "UserClassIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean userClassIDExclude = false;
+	public Boolean userClassIDExclude;
 	/**
 	 * Pool association criterion.
 
@@ -207,7 +208,7 @@ public class Pool {
 	 */
 	@XmlElement(name = "ChaddrExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean chaddrExclude = false;
+	public Boolean chaddrExclude;
 	/**
 	 * Specifies first IPv4 address in the pool to be assigned by the DHCP server on the LAN interface.
 
@@ -283,7 +284,7 @@ public class Pool {
 	@XmlElement(name = "LeaseTime")
 	@CWMPParameter(access = "readWrite", units = "seconds")
 	@Size(min = -1)
-	public Integer leaseTime = 86400;
+	public Integer leaseTime;
 	/**
 	 * DHCP static address table.
 

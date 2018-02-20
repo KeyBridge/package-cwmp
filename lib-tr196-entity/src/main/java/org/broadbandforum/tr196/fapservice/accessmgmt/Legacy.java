@@ -26,7 +26,7 @@ import org.broadbandforum.tr196.fapservice.accessmgmt.legacy.LocalIPAccess;
 	/**
 	 * This object contains configurable and observable attributes related to Access and Admission Control of the FAP, which are not not covered by 3GPP and 3GPP2 specifications.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.Legacy.")
 @XmlRootElement(name = "FAPService.AccessMgmt.Legacy")

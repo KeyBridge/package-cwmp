@@ -22,7 +22,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr135.stbservice.AVPlayers;
 import org.broadbandforum.tr135.stbservice.AVStreams;
 import org.broadbandforum.tr135.stbservice.Applications;
@@ -33,9 +34,9 @@ import org.broadbandforum.tr135.stbservice.ServiceMonitoring;
 	/**
 	 * The top-level object for an STB CPE.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.")
+@CWMPObject(name = "STBService.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService")
 @XmlType(name = "STBService")
 @XmlAccessorType(XmlAccessType.FIELD)

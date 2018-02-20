@@ -28,7 +28,7 @@ import org.broadbandforum.tr196.fapservice.fapcontrol.lte.Gateway;
 	/**
 	 * This object contains parameters relating to the LTE system specific information.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.LTE.")
 @XmlRootElement(name = "FAPService.FAPControl.LTE")

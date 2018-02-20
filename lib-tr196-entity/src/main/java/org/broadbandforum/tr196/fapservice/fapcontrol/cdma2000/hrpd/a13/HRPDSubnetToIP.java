@@ -23,15 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
-import org.broadbandforum.tr196.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * This object contains attributes related to A13 Session Transfer
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.HRPD.A13.HRPDSubnetToIP.{i}.")
+@CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.HRPD.A13.HRPDSubnetToIP.{i}.", uniqueConstraints = {@CWMPUnique(names = {"A13IPAddress"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.FAPControl.CDMA2000.HRPD.A13.HRPDSubnetToIP")
 @XmlType(name = "FAPService.FAPControl.CDMA2000.HRPD.A13.HRPDSubnetToIP")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -44,7 +46,7 @@ public class HRPDSubnetToIP {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

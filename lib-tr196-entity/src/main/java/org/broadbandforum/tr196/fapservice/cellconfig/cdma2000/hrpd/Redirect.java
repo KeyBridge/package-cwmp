@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * CDMA2000 HRPD service redirection parameters.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.Redirect.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD.Redirect")

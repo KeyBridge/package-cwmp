@@ -22,13 +22,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.StatsCounter32;
-import org.broadbandforum.tr181.datatypes.StatsCounter64;
+import org.broadbandforum.common.StatsCounter32;
+import org.broadbandforum.common.StatsCounter64;
 
 	/**
 	 * The MQTT broker statistics values. These will reset with each MQTT broker start, either after reboot or if the MQTT broker gets (re-)enabled.
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
 @CWMPObject(name = "Device.MQTT.Broker.{i}.Stats.")
 @XmlRootElement(name = "Device.MQTT.Broker.Stats")

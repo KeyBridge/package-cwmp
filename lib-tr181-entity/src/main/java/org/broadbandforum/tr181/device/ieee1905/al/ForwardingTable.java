@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.ieee1905.al.forwardingtable.ForwardingRul
 	/**
 	 * This object represents the rules to forward PDUs between interfaces within the 1905 Abstraction Layer.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.ForwardingTable.")
 @XmlRootElement(name = "Device.IEEE1905.AL.ForwardingTable")

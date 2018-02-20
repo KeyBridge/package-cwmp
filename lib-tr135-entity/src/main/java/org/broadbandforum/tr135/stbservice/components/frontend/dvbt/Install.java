@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
 The service list database is in {{object|.Components.FrontEnd.{i}.DVBT.ServiceListDatabase}}.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.Install.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.DVBT.Install")

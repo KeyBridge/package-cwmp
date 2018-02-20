@@ -23,15 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr135.stbservice.components.hdmi.DisplayDevice;
 
 	/**
 	 * HDMI instance table. This object allows configuration of the STB’s HDMI output.
 	 *
-	 * @since 1.1
+	 * @since TR135 v1.1
 	 */
-@CWMPObject(name = "STBService.{i}.Components.HDMI.{i}.")
+@CWMPObject(name = "STBService.{i}.Components.HDMI.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Components.HDMI")
 @XmlType(name = "STBService.Components.HDMI")
 @XmlAccessorType(XmlAccessType.FIELD)

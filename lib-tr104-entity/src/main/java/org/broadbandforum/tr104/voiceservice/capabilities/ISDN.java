@@ -25,7 +25,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * The overall ISDN capabilities of external ports of the CPE.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.ISDN.")
 @XmlRootElement(name = "VoiceService.Capabilities.ISDN")

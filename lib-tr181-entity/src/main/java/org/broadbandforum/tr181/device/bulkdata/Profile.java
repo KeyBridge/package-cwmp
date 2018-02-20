@@ -27,7 +27,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.bulkdata.profile.CSVEncoding;
 import org.broadbandforum.tr181.device.bulkdata.profile.HTTP;
 import org.broadbandforum.tr181.device.bulkdata.profile.JSONEncoding;
@@ -38,9 +39,9 @@ import org.broadbandforum.tr181.device.bulkdata.profile.Parameter;
 
         Each profile represents a bulk data report, including its own timing configuration, communications configuration, and set of parameters.  This allows the ACS to configure multiple reports to be generated at different times for different sets of data.
 	 *
-	 * @since 2.5
+	 * @since TR181 v2.5
 	 */
-@CWMPObject(name = "Device.BulkData.Profile.{i}.")
+@CWMPObject(name = "Device.BulkData.Profile.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.BulkData.Profile")
 @XmlType(name = "Device.BulkData.Profile")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -55,7 +56,7 @@ public class Profile {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -89,7 +90,7 @@ public class Profile {
 	@XmlElement(name = "NumberOfRetainedFailedReports")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer numberOfRetainedFailedReports = 0;
+	public Integer numberOfRetainedFailedReports;
 	/**
 	 * The Bulk Data Protocol being used for this collection profile.
 	 *

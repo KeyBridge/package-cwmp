@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains information associated with a connected Internet Gateway Device.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.GatewayInfo.")
 @XmlRootElement(name = "Device.GatewayInfo")

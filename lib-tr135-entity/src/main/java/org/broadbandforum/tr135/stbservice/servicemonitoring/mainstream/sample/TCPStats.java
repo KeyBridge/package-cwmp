@@ -25,7 +25,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * TCP sample statistics for this ''ServiceMonitoring'' main stream instance.
 	 *
-	 * @since 1.1
+	 * @since TR135 v1.1
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Sample.TCPStats.")
 @XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Sample.TCPStats")

@@ -26,13 +26,14 @@ import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Each entry in this table represents a distinct Proxied Device that utilizes the Embedded Object Mechanism {{bibref|TR-069a4|Annex J.1.2}} for proxying devices.
 	 *
-	 * @since 2.3
+	 * @since TR181 v2.3
 	 */
-@CWMPObject(name = "Device.ManagementServer.EmbeddedDevice.{i}.")
+@CWMPObject(name = "Device.ManagementServer.EmbeddedDevice.{i}.", uniqueConstraints = {@CWMPUnique(names = {"ControllerID", "ProxiedDeviceID"})})
 @XmlRootElement(name = "Device.ManagementServer.EmbeddedDevice")
 @XmlType(name = "Device.ManagementServer.EmbeddedDevice")
 @XmlAccessorType(XmlAccessType.FIELD)

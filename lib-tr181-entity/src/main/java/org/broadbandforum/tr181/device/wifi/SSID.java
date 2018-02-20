@@ -26,8 +26,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.wifi.ssid.Stats;
 
 	/**
@@ -35,9 +36,12 @@ import org.broadbandforum.tr181.device.wifi.ssid.Stats;
 
         WiFi SSID is also a multiplexing layer, i.e. more than one {{object}} can be stacked above a single {{object|#.Radio}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.WiFi.SSID.{i}.")
+@CWMPObject(name = "Device.WiFi.SSID.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false),
+	@CWMPUnique(names = {"SSID"}),
+	@CWMPUnique(names = {"BSSID"})})
 @XmlRootElement(name = "Device.WiFi.SSID")
 @XmlType(name = "Device.WiFi.SSID")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -52,7 +56,7 @@ public class SSID {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The current operational state of the SSID entry (see {{bibref|TR-181i2|Section 4.2.2}}). {{enum}}
 
@@ -65,7 +69,7 @@ public class SSID {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Down";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *

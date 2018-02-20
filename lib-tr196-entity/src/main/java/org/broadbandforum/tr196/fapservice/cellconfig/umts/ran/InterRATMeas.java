@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.interratmeas.Inst
 	/**
 	 * This object contains parameters relating to the inter-RAT HO related control parameters. This is specifically for GERAN system.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.InterRATMeas.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.InterRATMeas")

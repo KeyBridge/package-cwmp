@@ -23,15 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr143.datatypes.IPAddress;
-import org.broadbandforum.tr143.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPAddress;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * Host table.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.Hosts.Host.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.Hosts.Host.{i}.", uniqueConstraints = {@CWMPUnique(names = {"MACAddress"})})
 @XmlRootElement(name = "InternetGatewayDevice.LANDevice.Hosts.Host")
 @XmlType(name = "InternetGatewayDevice.LANDevice.Hosts.Host")
 @XmlAccessorType(XmlAccessType.FIELD)

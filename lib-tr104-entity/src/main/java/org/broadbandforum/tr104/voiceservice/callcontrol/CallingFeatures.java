@@ -30,7 +30,7 @@ import org.broadbandforum.tr104.voiceservice.callcontrol.callingfeatures.Set;
 	/**
 	 * This object models the calling features that can be apply on {{object|.CallControl.Line}} or {{object|.CallControl.Extension}}.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.")
 @XmlRootElement(name = "VoiceService.CallControl.CallingFeatures")

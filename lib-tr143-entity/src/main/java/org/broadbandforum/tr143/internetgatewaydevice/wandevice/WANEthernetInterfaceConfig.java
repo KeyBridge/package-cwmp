@@ -22,13 +22,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr143.datatypes.MACAddress;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr143.internetgatewaydevice.wandevice.wanethernetinterfaceconfig.Stats;
 
 	/**
 	 * This object models physical layer properties specific to a single Ethernet physical connection used for Internet access on a CPE.  This object is required for a CPE with an Ethernet WAN interface, and is exclusive of any other ''WAN*InterfaceConfig'' object within a given ''WANDevice'' instance.  Note that this object is not related to the Ethernet protocol layer sometimes used in associated with a DSL connection.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANEthernetInterfaceConfig.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANEthernetInterfaceConfig")

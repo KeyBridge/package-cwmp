@@ -27,7 +27,7 @@ import org.broadbandforum.tr181.device.ghn.diagnostics.PerformanceMonitoring;
 	/**
 	 * The G.hn Diagnostics object.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Diagnostics.")
 @XmlRootElement(name = "Device.Ghn.Diagnostics")

@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * RTP statistic parameters.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Line.{i}.Stats.RTP.")
 @XmlRootElement(name = "VoiceService.CallControl.Line.Stats.RTP")

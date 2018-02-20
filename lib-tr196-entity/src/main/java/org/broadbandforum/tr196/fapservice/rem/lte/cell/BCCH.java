@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.rem.lte.cell.bcch.PLMNList;
 	/**
 	 * Table containing the system information broadcast in the BCCH logical channel.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.LTE.Cell.{i}.BCCH.")
 @XmlRootElement(name = "FAPService.REM.LTE.Cell.BCCH")

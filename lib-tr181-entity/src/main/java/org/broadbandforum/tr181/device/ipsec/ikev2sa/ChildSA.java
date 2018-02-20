@@ -23,15 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.ipsec.ikev2sa.childsa.Stats;
 
 	/**
 	 * Represents a child Security Association (SA) pair, i.e. an inbound child SA and an outbound child SA.
 	 *
-	 * @since 2.5
+	 * @since TR181 v2.5
 	 */
-@CWMPObject(name = "Device.IPsec.IKEv2SA.{i}.ChildSA.{i}.")
+@CWMPObject(name = "Device.IPsec.IKEv2SA.{i}.ChildSA.{i}.", uniqueConstraints = {@CWMPUnique(names = {"InboundSPI"}),
+	@CWMPUnique(names = {"OutboundSPI"})})
 @XmlRootElement(name = "Device.IPsec.IKEv2SA.ChildSA")
 @XmlType(name = "Device.IPsec.IKEv2SA.ChildSA")
 @XmlAccessorType(XmlAccessType.FIELD)

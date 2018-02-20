@@ -27,15 +27,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.periodicstatistics.sampleset.Parameter;
 
 	/**
 	 * Periodic statistics sample set table.  Each sample set has its own sample interval etc.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.PeriodicStatistics.SampleSet.{i}.")
+@CWMPObject(name = "Device.PeriodicStatistics.SampleSet.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.PeriodicStatistics.SampleSet")
 @XmlType(name = "Device.PeriodicStatistics.SampleSet")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -58,7 +60,7 @@ public class SampleSet {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Indicates availability of Sample statistics. {{enum}}
 
@@ -69,7 +71,7 @@ public class SampleSet {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * The name of this sample set, which uniquely distinguishes each sample set.
 	 *
@@ -164,7 +166,7 @@ public class SampleSet {
 	 */
 	@XmlElement(name = "ForceSample")
 	@CWMPParameter(access = "readWrite")
-	public Boolean forceSample = false;
+	public Boolean forceSample;
 	/**
 	 * The absolute time at which the sample interval for the first stored sample (for each statistic) started.
 	 *

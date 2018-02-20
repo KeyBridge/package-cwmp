@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object is used in obtaining the PCF stats
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.PCFConfig.PCFPerformanceStats.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD.PCFConfig.PCFPerformanceStats")

@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object contains parameters relating to the ULSCH (Uplink Shared Channel) configuration (see {{bibref|3GPP-TS.32.592|Section 6.1.2.3}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.MAC.ULSCH.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.MAC.ULSCH")

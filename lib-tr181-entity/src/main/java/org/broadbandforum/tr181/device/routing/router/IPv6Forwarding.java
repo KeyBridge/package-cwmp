@@ -24,9 +24,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPv6Address;
-import org.broadbandforum.tr181.datatypes.IPv6Prefix;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPv6Address;
+import org.broadbandforum.common.IPv6Prefix;
 
 	/**
 	 * Layer 3 IPv6 forwarding table.
@@ -43,9 +44,10 @@ import org.broadbandforum.tr181.datatypes.IPv6Prefix;
 
         This object is based on ''inetCidrRouteTable'' from {{bibref|RFC4292}}.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.Routing.Router.{i}.IPv6Forwarding.{i}.")
+@CWMPObject(name = "Device.Routing.Router.{i}.IPv6Forwarding.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"DestIPPrefix", "ForwardingPolicy", "NextHop", "Interface", "ForwardingMetric"})})
 @XmlRootElement(name = "Device.Routing.Router.IPv6Forwarding")
 @XmlType(name = "Device.Routing.Router.IPv6Forwarding")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -58,7 +60,7 @@ public class IPv6Forwarding {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Indicates the status of the forwarding entry.  {{enum}}
 
@@ -69,7 +71,7 @@ public class IPv6Forwarding {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -100,7 +102,7 @@ public class IPv6Forwarding {
 	@XmlElement(name = "ForwardingPolicy")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer forwardingPolicy = -1;
+	public Integer forwardingPolicy;
 	/**
 	 * IPv6 address of the next hop.
 
@@ -134,7 +136,7 @@ public class IPv6Forwarding {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * Forwarding metric.  A value of -1 indicates this metric is not used.
 	 *
@@ -143,7 +145,7 @@ public class IPv6Forwarding {
 	@XmlElement(name = "ForwardingMetric")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer forwardingMetric = -1;
+	public Integer forwardingMetric;
 	/**
 	 * The time at which the route will expire, or {{null}} if not known. For an infinite lifetime, the parameter value MUST be 9999-12-31T23:59:59Z.
 

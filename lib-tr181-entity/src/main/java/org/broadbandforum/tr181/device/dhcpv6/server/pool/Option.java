@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object specifies the DHCPv6 options that MUST, if enabled, be offered to clients whose DHCPv6 requests are associated with this pool. If {{param|PassthroughClient}} is specified, and the referenced client has a value for a given option then the {{param|PassthroughClient}} option value will be sent instead of {{param|Value}}. Otherwise, {{param|Value}} will be sent.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.Option.{i}.")
+@CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.Option.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Tag"})})
 @XmlRootElement(name = "Device.DHCPv6.Server.Pool.Option")
 @XmlType(name = "Device.DHCPv6.Server.Pool.Option")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class Option {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

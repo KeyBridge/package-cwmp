@@ -27,8 +27,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.ghn._interface.AssociatedDevice;
 import org.broadbandforum.tr181.device.ghn._interface.DMInfo;
 import org.broadbandforum.tr181.device.ghn._interface.SCInfo;
@@ -38,9 +39,10 @@ import org.broadbandforum.tr181.device.ghn._interface.Stats;
 	/**
 	 * G.hn interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). Each table entry models the PHY {{bibref|G.9960}} and MAC {{bibref|G.9961}} layers of a G.hn interface.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
-@CWMPObject(name = "Device.Ghn.Interface.{i}.")
+@CWMPObject(name = "Device.Ghn.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.Ghn.Interface")
 @XmlType(name = "Device.Ghn.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)

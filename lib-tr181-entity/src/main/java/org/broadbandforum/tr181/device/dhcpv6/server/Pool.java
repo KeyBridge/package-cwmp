@@ -27,8 +27,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPv6Address;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPv6Address;
 import org.broadbandforum.tr181.device.dhcpv6.server.pool.Client;
 import org.broadbandforum.tr181.device.dhcpv6.server.pool.Option;
 
@@ -41,9 +42,10 @@ import org.broadbandforum.tr181.device.dhcpv6.server.pool.Option;
 
         For enabled table entries, if {{param|Interface}} is not a valid reference to an IPv6-capable interface (that is attached to the IPv6 stack) then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.")
+@CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Order"})})
 @XmlRootElement(name = "Device.DHCPv6.Server.Pool")
 @XmlType(name = "Device.DHCPv6.Server.Pool")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -56,7 +58,7 @@ public class Pool {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this entry.  {{enum}}
 
@@ -67,7 +69,7 @@ public class Pool {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -121,7 +123,7 @@ public class Pool {
 	 */
 	@XmlElement(name = "DUIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean duiDExclude = false;
+	public Boolean duiDExclude;
 	/**
 	 * Pool association criterion. 
 
@@ -143,7 +145,7 @@ public class Pool {
 	 */
 	@XmlElement(name = "VendorClassIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean vendorClassIDExclude = false;
+	public Boolean vendorClassIDExclude;
 	/**
 	 * Pool association criterion. 
 
@@ -165,7 +167,7 @@ public class Pool {
 	 */
 	@XmlElement(name = "UserClassIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean userClassIDExclude = false;
+	public Boolean userClassIDExclude;
 	/**
 	 * Pool association criterion.
 
@@ -195,7 +197,7 @@ public class Pool {
 	 */
 	@XmlElement(name = "SourceAddressExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceAddressExclude = false;
+	public Boolean sourceAddressExclude;
 	/**
 	 * Enables or disables IANA offers.
 	 *

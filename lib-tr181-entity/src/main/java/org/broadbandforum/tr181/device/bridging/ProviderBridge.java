@@ -26,6 +26,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Provider Bridge table.
@@ -36,9 +37,9 @@ import org.broadbandforum.annotation.CWMPParameter;
 
         When {{param|Type}} is configured with value of {{enum|S-VLAN|Type}} only VLAN tags from the S-VLAN component are utilized.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
-@CWMPObject(name = "Device.Bridging.ProviderBridge.{i}.")
+@CWMPObject(name = "Device.Bridging.ProviderBridge.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.Bridging.ProviderBridge")
 @XmlType(name = "Device.Bridging.ProviderBridge")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -51,7 +52,7 @@ public class ProviderBridge {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this {{object}}. {{enum}}
 
@@ -62,7 +63,7 @@ public class ProviderBridge {
 	 * @since 2.7
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * A non-volatile handle used to reference this instance. This parameter provides a mechanism for an ACS to label this instance for future reference. An initial unique value MUST be assigned when the CPE creates an instance of this object.
 	 *

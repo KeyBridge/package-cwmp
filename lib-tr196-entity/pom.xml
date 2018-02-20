@@ -18,7 +18,7 @@
     The TR-196 document compiled into Java class files.
 
 Spec: urn:broadband-forum-org:tr-196-2-1-0
-Build: 2018-02-13T16:09:58.175
+Build: 2018-02-19T19:19:55.618
 {{docname|TR-196 FAPService:2.1 Femto Access Point Service Data Model}}
 {{appdate|August 2015}}
 Added parameters for 3GPP SA5 Rel 11 and 12 (TS 32.452, TS 32.453)

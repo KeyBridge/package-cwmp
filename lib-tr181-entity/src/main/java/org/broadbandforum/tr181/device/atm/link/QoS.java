@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * The ATM Link QoS object.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.ATM.Link.{i}.QoS.")
 @XmlRootElement(name = "Device.ATM.Link.QoS")

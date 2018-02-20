@@ -26,14 +26,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * The Execution Environments that are available on the device, along with their properties and configurable settings.
 	 *
-	 * @since 2.1
+	 * @since TR181 v2.1
 	 */
-@CWMPObject(name = "Device.SoftwareModules.ExecEnv.{i}.")
+@CWMPObject(name = "Device.SoftwareModules.ExecEnv.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.SoftwareModules.ExecEnv")
 @XmlType(name = "Device.SoftwareModules.ExecEnv")
 @XmlAccessorType(XmlAccessType.FIELD)

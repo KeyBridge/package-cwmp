@@ -25,15 +25,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr104.voiceservice.tone.eventprofile.Event;
 
 	/**
 	 * Configuration profile for tone events.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.Tone.EventProfile.{i}.")
+@CWMPObject(name = "VoiceService.{i}.Tone.EventProfile.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.Tone.EventProfile")
 @XmlType(name = "VoiceService.Tone.EventProfile")
 @XmlAccessorType(XmlAccessType.FIELD)

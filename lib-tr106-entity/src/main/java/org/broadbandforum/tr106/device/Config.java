@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains general configuration parameters.
 	 *
-	 * @since 1.0
+	 * @since TR106 v1.0
 	 */
 @CWMPObject(name = "Device.Config.")
 @XmlRootElement(name = "Device.Config")

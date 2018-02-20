@@ -26,12 +26,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.DiagnosticsState;
+import org.broadbandforum.common.DiagnosticsState;
 
 	/**
 	 * This object is to provide diagnostic information for a CPE with an ADSL2 or ADSL2+ modem WAN interface, but MAY also be used for ADSL.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DSL.Diagnostics.ADSLLineTest.")
 @XmlRootElement(name = "Device.DSL.Diagnostics.ADSLLineTest")

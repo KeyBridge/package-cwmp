@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * HRPD ColorCode to UATI Mapping Table number of entries.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.HRPD.A13.ColorCodeToUATI104.{i}.")
+@CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.HRPD.A13.ColorCodeToUATI104.{i}.", uniqueConstraints = {@CWMPUnique(names = {"ColorCode", "UATI104"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.FAPControl.CDMA2000.HRPD.A13.ColorCodeToUATI104")
 @XmlType(name = "FAPService.FAPControl.CDMA2000.HRPD.A13.ColorCodeToUATI104")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class ColorCodeToUATI104 {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

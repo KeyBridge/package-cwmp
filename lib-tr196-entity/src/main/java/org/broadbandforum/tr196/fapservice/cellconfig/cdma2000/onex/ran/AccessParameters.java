@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * The object used for configuring access parameter messages for 1x. See {{bibref|3GPP2-C.S0005}}.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.AccessParameters.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.AccessParameters")

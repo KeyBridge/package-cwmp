@@ -27,16 +27,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.xmpp.connection.Server;
 import org.broadbandforum.tr181.device.xmpp.connection.Stats;
 
 	/**
 	 * The {{object}} represents a XMPP connection between the device and a server. The {{param|Username}}, {{param|Domain}} and {{param|Resource}} comprise the full identity (JabberID) of this {{object}} for this device.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
-@CWMPObject(name = "Device.XMPP.Connection.{i}.")
+@CWMPObject(name = "Device.XMPP.Connection.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Username", "Domain", "Resource"})})
 @XmlRootElement(name = "Device.XMPP.Connection")
 @XmlType(name = "Device.XMPP.Connection")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -51,7 +53,7 @@ public class Connection {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -130,7 +132,7 @@ public class Connection {
 	 */
 	@XmlElement(name = "ServerConnectAlgorithm")
 	@CWMPParameter(access = "readWrite")
-	public String serverConnectAlgorithm = "DNS-SRV";
+	public String serverConnectAlgorithm;
 	/**
 	 * The number of seconds that keep alive events as specified in {{bibref|RFC6120|Section 4.6.1}} are sent by this {{object}}. 
 
@@ -208,7 +210,7 @@ public class Connection {
 	 */
 	@XmlElement(name = "UseTLS")
 	@CWMPParameter(access = "readWrite")
-	public Boolean useTLS = false;
+	public Boolean useTLS;
 	/**
 	 * This parameter represents the TLS state of this XMPP Connection.
 

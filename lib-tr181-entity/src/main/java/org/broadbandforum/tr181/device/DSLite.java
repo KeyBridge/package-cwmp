@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.dslite.InterfaceSetting;
 
         See the Dual-Stack Lite Theory of Operation {{bibref|TR-181i2a2|Appendix VII}} for a description of the working of this DS-Lite data model.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
 @CWMPObject(name = "Device.DSLite.")
 @XmlRootElement(name = "Device.DSLite")

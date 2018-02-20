@@ -31,7 +31,7 @@ import org.broadbandforum.tr069.internetgatewaydevice.layer3forwarding.Forwardin
 	/**
 	 * This object allows the handling of the routing and forwarding configuration of the device.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Layer3Forwarding.")
 @XmlRootElement(name = "InternetGatewayDevice.Layer3Forwarding")

@@ -26,15 +26,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.ethernet.vlantermination.Stats;
 
 	/**
 	 * VLAN Termination table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). A VLAN Termination entry is typically stacked on top of a {{object|#.Link}} object to receive and send frames with the configured {{param|VLANID}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.Ethernet.VLANTermination.{i}.")
+@CWMPObject(name = "Device.Ethernet.VLANTermination.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.Ethernet.VLANTermination")
 @XmlType(name = "Device.Ethernet.VLANTermination")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -49,7 +51,7 @@ public class VLANTermination {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The current operational state of the VLANTermination entry (see {{bibref|TR-181i2|Section 4.2.2}}). {{enum}}
 
@@ -62,7 +64,7 @@ public class VLANTermination {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Down";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *

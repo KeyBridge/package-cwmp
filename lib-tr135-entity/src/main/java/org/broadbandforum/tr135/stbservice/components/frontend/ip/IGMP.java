@@ -32,7 +32,7 @@ import org.broadbandforum.tr135.stbservice.components.frontend.ip.igmp.ClientGro
 	/**
 	 * Parameters that are specific to IGMP clients when changing channels.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.IGMP.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.IP.IGMP")

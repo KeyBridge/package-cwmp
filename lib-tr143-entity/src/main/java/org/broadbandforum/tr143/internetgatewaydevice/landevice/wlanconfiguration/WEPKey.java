@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This is a table of WEP keys.  The size of this table is fixed with exactly 4 entries (with instance numbers 1 through 4).  This object MUST be implemented for CPE that contain an 802.11 interface on the LAN side.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.WLANConfiguration.{i}.WEPKey.{i}.")
 @XmlRootElement(name = "InternetGatewayDevice.LANDevice.WLANConfiguration.WEPKey")

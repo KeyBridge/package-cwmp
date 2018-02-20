@@ -26,16 +26,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.usb._interface.Stats;
 
 	/**
 	 * USB interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). This table models master and slave USB physical interfaces that support carrying Ethernet frames, e.g. via the USB Communication Device Class.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.USB.Interface.{i}.")
+@CWMPObject(name = "Device.USB.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.USB.Interface")
 @XmlType(name = "Device.USB.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)

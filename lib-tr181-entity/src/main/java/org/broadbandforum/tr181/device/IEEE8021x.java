@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.ieee8021x.Supplicant;
 	/**
 	 * IEEE 802.1x object {{bibref|802.1x-2004}}, where {{object|Supplicant}} models authentication supplicants.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.IEEE8021x.")
 @XmlRootElement(name = "Device.IEEE8021x")

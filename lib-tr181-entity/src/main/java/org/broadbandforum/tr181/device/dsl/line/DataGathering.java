@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 
         Note: see ITU-T Recommendation {{bibref|G.993.2}}.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.DSL.Line.{i}.DataGathering.")
 @XmlRootElement(name = "Device.DSL.Line.DataGathering")

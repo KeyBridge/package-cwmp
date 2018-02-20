@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.neighborlistinuse.
 	/**
 	 * This object contains parameters relating to the neighbor list used by the FAP based on its self-configuration capability and {{object|.CellConfig.LTE.RAN.NeighborList.}} configuration of adding and excluding cells.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborListInUse.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse")

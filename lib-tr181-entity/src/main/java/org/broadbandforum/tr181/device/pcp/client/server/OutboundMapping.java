@@ -23,8 +23,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * Outbound Mapping table.
@@ -35,9 +36,10 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 
         For non-{{enum|Static|Origin}} mappings (here ''Static'' refers to the mechanism that created the mapping, not to the {{param|Lifetime}}), the ACS MAY modify the {{param||Enable}} parameter but MUST NOT modify any other parameters in the mapping or its sub-objects.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.PCP.Client.{i}.Server.{i}.OutboundMapping.{i}.")
+@CWMPObject(name = "Device.PCP.Client.{i}.Server.{i}.OutboundMapping.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"InternalPort", "ProtocolNumber", "ThirdPartyAddress", "RemoteHostIPAddress", "RemotePort"})})
 @XmlRootElement(name = "Device.PCP.Client.Server.OutboundMapping")
 @XmlType(name = "Device.PCP.Client.Server.OutboundMapping")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -50,7 +52,7 @@ public class OutboundMapping {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this entry. {{enum}}
 
@@ -61,7 +63,7 @@ public class OutboundMapping {
 	 * @since 2.8
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * Provides the PCP Error code when {{param|Status}} is {{enum|Error_PCPErrorCodeReceived|Status}}. Error code values are defined in {{bibref|RFC6887|Section 7.4}}.
 	 *

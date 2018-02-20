@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.cn.psdomain.rab.stats
 	/**
 	 * This object provides the RAB statistics in the PS Domain as defined in {{bibref|3GPP-TS.32.452}}.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.CN.PSDomain.RAB.Stats.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.CN.PSDomain.RAB.Stats")

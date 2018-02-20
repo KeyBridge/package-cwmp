@@ -25,7 +25,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.bridging.bridge.Port;
 import org.broadbandforum.tr181.device.bridging.bridge.VLAN;
 import org.broadbandforum.tr181.device.bridging.bridge.VLANPort;
@@ -33,9 +34,9 @@ import org.broadbandforum.tr181.device.bridging.bridge.VLANPort;
 	/**
 	 * Bridge table.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.Bridging.Bridge.{i}.")
+@CWMPObject(name = "Device.Bridging.Bridge.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.Bridging.Bridge")
 @XmlType(name = "Device.Bridging.Bridge")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -48,7 +49,7 @@ public class Bridge {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this {{object}}.  {{enum}}
 
@@ -57,7 +58,7 @@ public class Bridge {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *

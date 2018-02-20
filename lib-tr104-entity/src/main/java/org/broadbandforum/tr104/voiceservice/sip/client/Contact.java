@@ -24,15 +24,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
-import org.broadbandforum.tr104.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * Active registrations for this SIP account.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.SIP.Client.{i}.Contact.{i}.")
+@CWMPObject(name = "VoiceService.{i}.SIP.Client.{i}.Contact.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.SIP.Client.Contact")
 @XmlType(name = "VoiceService.SIP.Client.Contact")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -45,14 +46,14 @@ public class Contact {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Indicates the status of this {{object}}.
 	 *
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -67,7 +68,7 @@ public class Contact {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * This is the IP address where the {{object|#}} is listening for SIP requests from the service provider network. This IP address value is populated in the host portion of the {{param|ContactURI}} parameter.  
 

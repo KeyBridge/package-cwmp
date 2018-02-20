@@ -23,15 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
-import org.broadbandforum.tr196.datatypes.IPv4Address;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPv4Address;
 
 	/**
 	 * HRPD LIPA Egress Filter Table entries.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.AccessMgmt.CDMA2000.LocalIPAccess.HRPD.EgressFilter.{i}.")
+@CWMPObject(name = "FAPService.{i}.AccessMgmt.CDMA2000.LocalIPAccess.HRPD.EgressFilter.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Subnet", "SubnetMask"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.AccessMgmt.CDMA2000.LocalIPAccess.HRPD.EgressFilter")
 @XmlType(name = "FAPService.AccessMgmt.CDMA2000.LocalIPAccess.HRPD.EgressFilter")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -44,7 +46,7 @@ public class EgressFilter {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

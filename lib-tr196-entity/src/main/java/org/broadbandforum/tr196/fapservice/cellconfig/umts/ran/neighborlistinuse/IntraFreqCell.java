@@ -22,13 +22,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Table containing the intra-frequency cell list.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborListInUse.IntraFreqCell.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborListInUse.IntraFreqCell.{i}.", uniqueConstraints = {@CWMPUnique(names = {"PCPICHScramblingCode"})})
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.NeighborListInUse.IntraFreqCell")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.NeighborListInUse.IntraFreqCell")
 @XmlAccessorType(XmlAccessType.FIELD)

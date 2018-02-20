@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.dsl.bondinggroup.bondedchannel.Ethernet;
 
 	/**
@@ -31,9 +32,10 @@ import org.broadbandforum.tr181.device.dsl.bondinggroup.bondedchannel.Ethernet;
 
         When a {{object|##.Channel}} is no longer bonded, then the CPE MUST delete the corresponding {{object}} instance. However, when a bonded {{object|##.Channel}} becomes disabled, the channel remains bonded and so the corresponding {{object}} instance MUST NOT be deleted.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.DSL.BondingGroup.{i}.BondedChannel.{i}.")
+@CWMPObject(name = "Device.DSL.BondingGroup.{i}.BondedChannel.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Channel"})})
 @XmlRootElement(name = "Device.DSL.BondingGroup.BondedChannel")
 @XmlType(name = "Device.DSL.BondingGroup.BondedChannel")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -26,7 +26,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.epc.ho.Stats;
 	/**
 	 * This object provides monitoring of the Handover (HO) properties in the HeNB.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EPC.HO.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.EPC.HO")

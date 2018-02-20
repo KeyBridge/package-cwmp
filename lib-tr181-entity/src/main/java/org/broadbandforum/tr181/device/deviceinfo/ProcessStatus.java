@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.deviceinfo.processstatus.Process;
 	/**
 	 * Status of the processes on the device.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.ProcessStatus.")
 @XmlRootElement(name = "Device.DeviceInfo.ProcessStatus")

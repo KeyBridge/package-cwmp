@@ -25,14 +25,15 @@ import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * Neighboring SSID table. This table models the other WiFi SSIDs that this device is able to receive.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
-@CWMPObject(name = "Device.WiFi.NeighboringWiFiDiagnostic.Result.{i}.")
+@CWMPObject(name = "Device.WiFi.NeighboringWiFiDiagnostic.Result.{i}.", uniqueConstraints = {@CWMPUnique(names = {"BSSID"})})
 @XmlRootElement(name = "Device.WiFi.NeighboringWiFiDiagnostic.Result")
 @XmlType(name = "Device.WiFi.NeighboringWiFiDiagnostic.Result")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object is for configuration of DHCP options.  Each instance of this object represents a DHCP option to be included by the DHCP client in client requests.  The DHCP client MAY include any other options not specified in this table.
 	 *
-	 * @since 1.0
+	 * @since TR106 v1.0
 	 */
 @CWMPObject(name = "Device.LAN.DHCPOption.{i}.")
 @XmlRootElement(name = "Device.LAN.DHCPOption")

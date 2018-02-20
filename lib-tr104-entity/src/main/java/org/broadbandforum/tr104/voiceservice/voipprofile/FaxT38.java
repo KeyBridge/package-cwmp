@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * T.38 Fax information for devices that support T.38 relay.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.FaxT38.")
 @XmlRootElement(name = "VoiceService.VoIPProfile.FaxT38")

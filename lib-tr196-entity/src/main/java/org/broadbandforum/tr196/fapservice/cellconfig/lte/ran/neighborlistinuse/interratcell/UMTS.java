@@ -22,13 +22,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Table containing the inter-RAT cell list for UTRA (UMTS) cell.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell.UMTS.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell.UMTS.{i}.", uniqueConstraints = {@CWMPUnique(names = {"PLMNID", "CID"})})
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell.UMTS")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse.InterRATCell.UMTS")
 @XmlAccessorType(XmlAccessType.FIELD)

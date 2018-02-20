@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * High-level metric Sample statistics for this ''ServiceMonitoring'' main stream instance.  One or more different high-level metrics can be supported; this is specified by  {{param|.ServiceMonitoring.MainStream.{i}.Sample.HighLevelMetricStatsNumberOfEntries}}.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Sample.HighLevelMetricStats.{i}.")
+@CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Sample.HighLevelMetricStats.{i}.", uniqueConstraints = {@CWMPUnique(names = {"MetricName"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Sample.HighLevelMetricStats")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.Sample.HighLevelMetricStats")
 @XmlAccessorType(XmlAccessType.FIELD)

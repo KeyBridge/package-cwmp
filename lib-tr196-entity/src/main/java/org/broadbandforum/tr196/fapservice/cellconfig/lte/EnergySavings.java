@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.energysavings.NotAllow
 	/**
 	 * This object provides for the managment of energy savings capabilities in the HeNB.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EnergySavings.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.EnergySavings")

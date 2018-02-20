@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.device.hpna.diagnostics.performancemonitoring.no
 
         Note: Packets in statistics counters are Ethernet packets.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Nodes.")
 @XmlRootElement(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Nodes")

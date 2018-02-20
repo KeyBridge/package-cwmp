@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters related to cell access restriction.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.CellRestriction.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.CellRestriction")

@@ -49,7 +49,7 @@ When Sample statistics collection is enabled, statistics collection MUST proceed
 
 Refer to {{bibref|TR-135|I.3}} for non-normative explanation of the operation of the ''ServiceMonitoring'' object.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.")
 @XmlRootElement(name = "STBService.ServiceMonitoring")

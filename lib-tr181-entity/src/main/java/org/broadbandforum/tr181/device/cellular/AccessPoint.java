@@ -23,15 +23,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * Cellular Access Point table. Each entry is identified by an {{param|APN}} (Access Point Name) that identifies a gateway between the mobile network and another computer network.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.Cellular.AccessPoint.{i}.")
+@CWMPObject(name = "Device.Cellular.AccessPoint.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"APN"}),
+	@CWMPUnique(names = {"Interface"})})
 @XmlRootElement(name = "Device.Cellular.AccessPoint")
 @XmlType(name = "Device.Cellular.AccessPoint")
 @XmlAccessorType(XmlAccessType.FIELD)

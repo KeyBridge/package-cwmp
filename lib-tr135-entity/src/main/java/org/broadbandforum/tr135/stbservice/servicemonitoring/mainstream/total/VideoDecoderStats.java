@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Total video decoder application layer statistics for this ''ServiceMonitoring'' main stream instance.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Total.VideoDecoderStats.")
 @XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Total.VideoDecoderStats")

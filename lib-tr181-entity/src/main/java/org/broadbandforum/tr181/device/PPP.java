@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.ppp.Interface;
 	/**
 	 * Point-to-Point Protocol {{bibref|RFC1661}}. This object contains the {{object|Interface}} table.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.PPP.")
 @XmlRootElement(name = "Device.PPP")

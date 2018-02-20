@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.faultmgmt.SupportedAlarm;
 	/**
 	 * This object contains parameters relating to Fault/Alarm Management.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
 @CWMPObject(name = "Device.FaultMgmt.")
 @XmlRootElement(name = "Device.FaultMgmt")

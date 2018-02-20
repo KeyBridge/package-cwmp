@@ -26,14 +26,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Video output instance table.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.Components.VideoOutput.{i}.")
+@CWMPObject(name = "STBService.{i}.Components.VideoOutput.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}, functional = false),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Components.VideoOutput")
 @XmlType(name = "STBService.Components.VideoOutput")
 @XmlAccessorType(XmlAccessType.FIELD)

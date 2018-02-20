@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.fapservice.fapcontrol.UMTS;
 	/**
 	 * This object contains parameters relating to state management and provisioning aspects of the FAP.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.")
 @XmlRootElement(name = "FAPService.FAPControl")

@@ -23,17 +23,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * DNS Server forwarding policy to be used by the DNS Relay.  Entries are either automatically created as result of DHCP (v4 or v6), IPCP, or RA received DNS server information, or are statically configured by the ACS.
 
         Note: Management of re-directing queries to the device embedded DNS server is not defined in this version of the specification.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.DNS.Relay.Forwarding.{i}.")
+@CWMPObject(name = "Device.DNS.Relay.Forwarding.{i}.", uniqueConstraints = {@CWMPUnique(names = {"DNSServer"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.DNS.Relay.Forwarding")
 @XmlType(name = "Device.DNS.Relay.Forwarding")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -46,7 +48,7 @@ public class Forwarding {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this entry. {{enum}}
 
@@ -55,7 +57,7 @@ public class Forwarding {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -95,7 +97,7 @@ public class Forwarding {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Type")
-	public String type = "Static";
+	public String type;
 
 	public Forwarding() {
 	}

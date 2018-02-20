@@ -23,16 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Queue table. Each entry is associated with a set of traffic classes, which are specified via the {{param|TrafficClasses}} parameter, and is configured with weight, precedence, drop algorithm, scheduler algorithm etc as appropriate for the traffic classes. An entry can be associated either with all egress interfaces (in which case an actual queue will be instantiated on each egress interface on which traffic of that traffic class can be generated) or else with a single specified egress interface.
 
         For enabled table entries, if {{param|Interface}} is not a valid reference and {{param|AllInterfaces}} is {{false}}, then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.QoS.Queue.{i}.")
+@CWMPObject(name = "Device.QoS.Queue.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.QoS.Queue")
 @XmlType(name = "Device.QoS.Queue")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -45,7 +46,7 @@ public class Queue {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this queue.  {{enum}}
 
@@ -56,7 +57,7 @@ public class Queue {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -95,14 +96,14 @@ public class Queue {
 	 */
 	@XmlElement(name = "AllInterfaces")
 	@CWMPParameter(access = "readWrite")
-	public Boolean allInterfaces = false;
+	public Boolean allInterfaces;
 	/**
 	 * Indicates whether ''all'' the queues corresponding to this table entry are hardware assisted. If any of the queues corresponding to this table entry are not hardware assisted, the parameter value MUST be {{false}}.
 	 *
 	 * @since 2.0
 	 */
 	@XmlElement(name = "HardwareAssisted")
-	public Boolean hardwareAssisted = false;
+	public Boolean hardwareAssisted;
 	/**
 	 * Number of bytes in the buffer.
 
@@ -164,7 +165,7 @@ public class Queue {
 	 */
 	@XmlElement(name = "DropAlgorithm")
 	@CWMPParameter(access = "readWrite")
-	public String dropAlgorithm = "DT";
+	public String dropAlgorithm;
 	/**
 	 * Scheduling Algorithm used by scheduler.
 	 *
@@ -172,7 +173,7 @@ public class Queue {
 	 */
 	@XmlElement(name = "SchedulerAlgorithm")
 	@CWMPParameter(access = "readWrite")
-	public String schedulerAlgorithm = "SP";
+	public String schedulerAlgorithm;
 	/**
 	 * Rate to shape this queue's traffic to.  For leaky bucket (constant rate shaping), this is the constant rate.  For token bucket (variable rate shaping), this is the average rate.
 
@@ -189,7 +190,7 @@ public class Queue {
 	@XmlElement(name = "ShapingRate")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer shapingRate = -1;
+	public Integer shapingRate;
 	/**
 	 * Burst size in bytes.  For both leaky bucket (constant rate shaping) and token bucket (variable rate shaping)  this is the bucket size and is therefore the maximum burst size.
 	 *

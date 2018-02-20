@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Bridge VLAN egress port and untagged port membership table.
@@ -32,9 +33,10 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         Note: The {{object}} table includes unique key parameters that are strong references. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST disable the offending {{object}} row.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.Bridging.Bridge.{i}.VLANPort.{i}.")
+@CWMPObject(name = "Device.Bridging.Bridge.{i}.VLANPort.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"VLAN", "Port"})})
 @XmlRootElement(name = "Device.Bridging.Bridge.VLANPort")
 @XmlType(name = "Device.Bridging.Bridge.VLANPort")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -47,7 +49,7 @@ public class VLANPort {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

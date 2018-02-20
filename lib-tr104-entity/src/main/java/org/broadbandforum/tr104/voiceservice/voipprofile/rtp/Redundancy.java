@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * VoIP profile parameters for RTP payload redundancy as defined by {{bibref|RFC2198}}.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.RTP.Redundancy.")
 @XmlRootElement(name = "VoiceService.VoIPProfile.RTP.Redundancy")
@@ -42,7 +42,7 @@ public class Redundancy {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The Payload Type of RTP packet as defined in {{bibref|RFC2198}}.  Values SHOULD be within the range of dynamic Payload Types (96-127).
 	 *
@@ -74,7 +74,7 @@ If {{param|ModemRedundancy}} is present, then {{param}} applies only to fax tran
 	@XmlElement(name = "FaxAndModemRedundancy")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 5)
-	public Integer faxAndModemRedundancy = -1;
+	public Integer faxAndModemRedundancy;
 	/**
 	 * Specifies the redundancy number for modem pass-through data transmissions.
 
@@ -87,7 +87,7 @@ A value of -1 indicates {{bibref|RFC2198}} is not to be used for modem pass-thro
 	@XmlElement(name = "ModemRedundancy")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 5)
-	public Integer modemRedundancy = -1;
+	public Integer modemRedundancy;
 	/**
 	 * Specifies the redundancy number for DTMF transmissions.
 
@@ -100,7 +100,7 @@ A value of -1 indicates {{bibref|RFC2198}} is not to be used for DTMF.
 	@XmlElement(name = "DTMFRedundancy")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 5)
-	public Integer dtmFRedundancy = -1;
+	public Integer dtmFRedundancy;
 	/**
 	 * Specifies the redundancy number for general voice transmissions.
 
@@ -113,7 +113,7 @@ A value of -1 indicates {{bibref|RFC2198}} is not to be used for voice.
 	@XmlElement(name = "VoiceRedundancy")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 5)
-	public Integer voiceRedundancy = -1;
+	public Integer voiceRedundancy;
 	/**
 	 * The maximum number of sessions using {{bibref|RFC2198}} payload redundancy simultaneously in this profile.
 

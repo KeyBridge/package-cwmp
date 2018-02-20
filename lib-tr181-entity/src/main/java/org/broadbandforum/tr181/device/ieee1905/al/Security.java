@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object represents the Security configuration for the 1905 device as defined in {{bibref|IEEE1905.1a|Section 9.2 Security Setup Methods}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.Security.")
 @XmlRootElement(name = "Device.IEEE1905.AL.Security")

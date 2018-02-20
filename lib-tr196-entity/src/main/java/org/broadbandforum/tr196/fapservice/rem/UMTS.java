@@ -27,7 +27,7 @@ import org.broadbandforum.tr196.fapservice.rem.umts.WCDMA;
 	/**
 	 * This object contains Radio Environment Measurement parameters for UMTS FAP.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.UMTS.")
 @XmlRootElement(name = "FAPService.REM.UMTS")

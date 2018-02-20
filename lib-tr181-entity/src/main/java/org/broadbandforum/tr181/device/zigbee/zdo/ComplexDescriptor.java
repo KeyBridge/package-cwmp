@@ -25,7 +25,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * The {{object}} object is an optional descriptor that describes extended capabilities of the ZigBee device as defined in {{bibref|ZigBee2007|section 2.3.2.6 Complex Descriptor}}.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.ComplexDescriptor.")
 @XmlRootElement(name = "Device.ZigBee.ZDO.ComplexDescriptor")

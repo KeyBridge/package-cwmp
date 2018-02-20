@@ -39,7 +39,7 @@ import org.broadbandforum.tr181.device.ipsec.Tunnel;
 
         See the IPsec Theory of Operation {{bibref|TR-181i2a5|Appendix IX}} for a description of the working of this IPsec data model.
 	 *
-	 * @since 2.5
+	 * @since TR181 v2.5
 	 */
 @CWMPObject(name = "Device.IPsec.")
 @XmlRootElement(name = "Device.IPsec")

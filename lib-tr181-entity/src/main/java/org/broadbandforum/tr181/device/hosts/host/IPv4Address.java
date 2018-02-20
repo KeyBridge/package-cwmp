@@ -21,13 +21,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * The host's known IPv4 addresses.  This includes any addresses assigned via DHCP, which can also be accessed via the {{param|#.DHCPClient}} reference.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.Hosts.Host.{i}.IPv4Address.{i}.")
+@CWMPObject(name = "Device.Hosts.Host.{i}.IPv4Address.{i}.", uniqueConstraints = {@CWMPUnique(names = {"IPAddress"})})
 @XmlRootElement(name = "Device.Hosts.Host.IPv4Address")
 @XmlType(name = "Device.Hosts.Host.IPv4Address")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -39,7 +40,7 @@ public class IPv4Address {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "IPAddress")
-	public org.broadbandforum.tr181.datatypes.IPv4Address ipaddress;
+	public org.broadbandforum.common.IPv4Address ipaddress;
 
 	public IPv4Address() {
 	}
@@ -51,7 +52,7 @@ public class IPv4Address {
 	 * @since 2.2
 	 * @return the value
 	 */
-	public org.broadbandforum.tr181.datatypes.IPv4Address getIpaddress() {
+	public org.broadbandforum.common.IPv4Address getIpaddress() {
 		return ipaddress;
 	}
 
@@ -61,7 +62,7 @@ public class IPv4Address {
 	 * @since 2.2
 	 * @param ipaddress the input value
 	 */
-	public void  setIpaddress(org.broadbandforum.tr181.datatypes.IPv4Address ipaddress) {
+	public void  setIpaddress(org.broadbandforum.common.IPv4Address ipaddress) {
 		this.ipaddress = ipaddress;
 	}
 
@@ -72,7 +73,7 @@ public class IPv4Address {
 	 * @param ipaddress the input value
 	 * @return this instance
 	 */
-	public IPv4Address withIpaddress(org.broadbandforum.tr181.datatypes.IPv4Address ipaddress) {
+	public IPv4Address withIpaddress(org.broadbandforum.common.IPv4Address ipaddress) {
 		this.ipaddress = ipaddress;
 		return this;
 	}

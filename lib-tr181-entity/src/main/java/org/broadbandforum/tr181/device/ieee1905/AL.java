@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.ieee1905.al.ForwardingTable;
 import org.broadbandforum.tr181.device.ieee1905.al.Interface;
 import org.broadbandforum.tr181.device.ieee1905.al.NetworkTopology;
@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.device.ieee1905.al.Security;
 	/**
 	 * This object represents the management functions for the 1905 Abstraction Layer as defined in {{bibref|IEEE1905.1a|Section 4.4 Abstraction Layer}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.")
 @XmlRootElement(name = "Device.IEEE1905.AL")

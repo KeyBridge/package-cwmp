@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Results for time segmented tests (tests where {{param|#.TimeBasedTestDuration}} > 0 and {{param|#.TimeBasedTestMeasurementInterval}} > 0).  This data is totaled across all connections in the test.  A new object is created every {{param|#.TimeBasedTestMeasurementInterval}} after that interval has completed.  Instance numbers MUST start at 1 and sequentially increment as new instances are created.  All instances are removed when {{param|#.DiagnosticsState}} is set to {{enum|Requested|#.DiagnosticsState}} or {{enum|None|#.DiagnosticsState}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.DownloadDiagnostics.IncrementalResult.{i}.")
 @XmlRootElement(name = "Device.IP.Diagnostics.DownloadDiagnostics.IncrementalResult")

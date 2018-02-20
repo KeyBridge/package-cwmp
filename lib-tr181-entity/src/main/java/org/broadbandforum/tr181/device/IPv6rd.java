@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.ipv6rd.InterfaceSetting;
 
         See the 6rd Theory of Operation {{bibref|TR-181i2a2|Appendix VI}} for a description of the working of this 6rd data model.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
 @CWMPObject(name = "Device.IPv6rd.")
 @XmlRootElement(name = "Device.IPv6rd")

@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Parameters related to voice processing capabilities.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Terminal.{i}.Audio.{i}.VoiceProcessing.")
 @XmlRootElement(name = "VoiceService.Terminal.Audio.VoiceProcessing")

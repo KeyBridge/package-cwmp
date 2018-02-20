@@ -23,15 +23,16 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.IPv6Address;
-import org.broadbandforum.tr181.datatypes.IPv6Prefix;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPv6Address;
+import org.broadbandforum.common.IPv6Prefix;
 
 	/**
 	 * IP Interface RA route information table. Contains received RA route information {{bibref|RFC4191}}. As such, the data in this table cannot be modified.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.Routing.RouteInformation.InterfaceSetting.{i}.")
+@CWMPObject(name = "Device.Routing.RouteInformation.InterfaceSetting.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Interface"})})
 @XmlRootElement(name = "Device.Routing.RouteInformation.InterfaceSetting")
 @XmlType(name = "Device.Routing.RouteInformation.InterfaceSetting")
 @XmlAccessorType(XmlAccessType.FIELD)

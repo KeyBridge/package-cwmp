@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object contains parameters relating to the system and RF aspect of the FAP device that supports the LTE system.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Capabilities.LTE.")
 @XmlRootElement(name = "FAPService.Capabilities.LTE")

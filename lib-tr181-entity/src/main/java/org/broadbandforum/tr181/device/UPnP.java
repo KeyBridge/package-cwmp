@@ -28,7 +28,7 @@ import org.broadbandforum.tr181.device.upnp.Discovery;
 	/**
 	 * This object contains all UPnP related objects and parameters including Device and Discovery related objects and parameters.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.UPnP.")
 @XmlRootElement(name = "Device.UPnP")

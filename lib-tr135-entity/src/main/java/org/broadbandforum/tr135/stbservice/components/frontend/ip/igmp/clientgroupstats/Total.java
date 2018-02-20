@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Total statistics for this multicast group.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.IGMP.ClientGroupStats.{i}.Total.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.IP.IGMP.ClientGroupStats.Total")

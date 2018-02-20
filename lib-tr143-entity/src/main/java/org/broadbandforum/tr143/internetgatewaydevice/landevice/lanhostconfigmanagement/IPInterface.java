@@ -22,14 +22,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr143.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * IP interface table.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANHostConfigManagement.IPInterface.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANHostConfigManagement.IPInterface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"IPInterfaceIPAddress", "IPInterfaceSubnetMask"})})
 @XmlRootElement(name = "InternetGatewayDevice.LANDevice.LANHostConfigManagement.IPInterface")
 @XmlType(name = "InternetGatewayDevice.LANDevice.LANHostConfigManagement.IPInterface")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -42,7 +43,7 @@ public class IPInterface {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * IP address of the LAN-side interface of the CPE.
 	 *
@@ -66,7 +67,7 @@ public class IPInterface {
 	 */
 	@XmlElement(name = "IPInterfaceAddressingType")
 	@CWMPParameter(access = "readWrite")
-	public String ipinterfaceAddressingType = "DHCP";
+	public String ipinterfaceAddressingType;
 
 	public IPInterface() {
 	}

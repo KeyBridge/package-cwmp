@@ -23,15 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr104.voiceservice.terminal.audio.VoiceProcessing;
 
 	/**
 	 * This object models the audio outputs of a telephony terminal.(ex. Handset, handsfree, ...)
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.Terminal.{i}.Audio.{i}.")
+@CWMPObject(name = "VoiceService.{i}.Terminal.{i}.Audio.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.Terminal.Audio")
 @XmlType(name = "VoiceService.Terminal.Audio")
 @XmlAccessorType(XmlAccessType.FIELD)

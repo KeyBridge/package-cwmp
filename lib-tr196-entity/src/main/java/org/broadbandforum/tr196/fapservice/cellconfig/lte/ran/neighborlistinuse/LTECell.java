@@ -22,13 +22,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Table containing the LTE EUTRA (i.e. intra-RAT) cell list.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborListInUse.LTECell.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborListInUse.LTECell.{i}.", uniqueConstraints = {@CWMPUnique(names = {"PLMNID", "CID"})})
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse.LTECell")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.NeighborListInUse.LTECell")
 @XmlAccessorType(XmlAccessType.FIELD)

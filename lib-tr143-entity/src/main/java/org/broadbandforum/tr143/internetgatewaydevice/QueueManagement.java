@@ -36,7 +36,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.queuemanagement.Queue;
 	/**
 	 * Queue management configuration object.
 	 *
-	 * @since 1.1
+	 * @since TR143 v1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.QueueManagement.")
 @XmlRootElement(name = "InternetGatewayDevice.QueueManagement")

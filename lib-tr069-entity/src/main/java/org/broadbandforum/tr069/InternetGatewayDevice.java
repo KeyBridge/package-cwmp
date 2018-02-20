@@ -38,7 +38,7 @@ import org.broadbandforum.tr069.internetgatewaydevice.WANDevice;
 	/**
 	 * The top-level object for an Internet Gateway Device.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.")
 @XmlRootElement(name = "InternetGatewayDevice")

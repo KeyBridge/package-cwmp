@@ -23,15 +23,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.StatsCounter32;
-import org.broadbandforum.tr181.datatypes.StatsCounter64;
+import org.broadbandforum.common.StatsCounter32;
+import org.broadbandforum.common.StatsCounter64;
 
 	/**
 	 * Contains the MQTT client statistics and usage information.
 
         The CPE MUST reset the Stats parameters after the MQTT client gets (re-)enabled or if the MQTT client connects with a new MQTT broker (e.g. {{param|#.BrokerAddress}} has changed). The CPE MAY retain the values across a reboot if it reconnects with the same MQTT broker.
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
 @CWMPObject(name = "Device.MQTT.Client.{i}.Stats.")
 @XmlRootElement(name = "Device.MQTT.Client.Stats")

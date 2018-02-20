@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating an NTP or SNTP time client in the CPE.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Time.")
 @XmlRootElement(name = "InternetGatewayDevice.Time")

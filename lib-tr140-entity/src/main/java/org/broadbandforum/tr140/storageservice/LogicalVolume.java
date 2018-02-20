@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr140.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr140.storageservice.logicalvolume.Folder;
 
 	/**
@@ -34,9 +35,10 @@ import org.broadbandforum.tr140.storageservice.logicalvolume.Folder;
 
 Creating an instance of this object generates a disabled {{object}} instance.  Before this new {{object}} instance can be enabled (via a SetParameterValues command), it MUST have the following parameters configured: {{param|Name}}, {{param|PhysicalReference}}, and {{param|Capacity}}.  Once an instance is enabled the following parameters become immutable for the life of the instance: {{param|Name}}, {{param|PhysicalReference}}, and {{param|Capacity}}.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
-@CWMPObject(name = "StorageService.{i}.LogicalVolume.{i}.")
+@CWMPObject(name = "StorageService.{i}.LogicalVolume.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "StorageService.LogicalVolume")
 @XmlType(name = "StorageService.LogicalVolume")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -69,7 +71,7 @@ The default {{enum|Offline}} status will exist until this {{object}} is enabled.
 	 * @since 1.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Offline";
+	public String status;
 	/**
 	 * Enables or disables this {{object}} instance.
 	 *
@@ -77,7 +79,7 @@ The default {{enum|Offline}} status will exist until this {{object}} is enabled.
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Represents the physical medium or RAID where this {{object}} resides.  The {{object|.PhysicalMedium.{i}.}} or {{object|.StorageArray.{i}.}} referenced by this parameter MUST exist within the same StorageService instance.
 
@@ -128,7 +130,7 @@ Once this instance becomes enabled, this parameter will be immutable for the lif
 	 * @since 1.0
 	 */
 	@XmlElement(name = "ThresholdReached")
-	public Boolean thresholdReached = false;
+	public Boolean thresholdReached;
 	/**
 	 * Is the Volume Encrypted?  The type of encryption will be handled by the device internally and is not a matter for remote management.
 	 *

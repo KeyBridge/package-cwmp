@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object contains security related parameters that apply to a WiFi end point {{bibref|802.11-2007}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.WiFi.EndPoint.{i}.Security.")
 @XmlRootElement(name = "Device.WiFi.EndPoint.Security")

@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object is provides access to an ATM-layer F5 OAM loopback test.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANATMF5LoopbackDiagnostics.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANATMF5LoopbackDiagnostics")
@@ -60,7 +60,7 @@ While the test is in progress, setting this parameter to {{enum|Requested}} (and
 	 */
 	@XmlElement(name = "DiagnosticsState")
 	@CWMPParameter(access = "readWrite", activeNotify = "canDeny")
-	public String diagnosticsState = "None";
+	public String diagnosticsState;
 	/**
 	 * Number of repetitions of the ping test to perform before reporting the results.
 	 *

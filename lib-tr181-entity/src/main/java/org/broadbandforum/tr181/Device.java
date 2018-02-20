@@ -91,7 +91,7 @@ import org.broadbandforum.tr181.device.ZigBee;
 	/**
 	 * The top-level object for a Device.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.")
 @XmlRootElement(name = "Device")

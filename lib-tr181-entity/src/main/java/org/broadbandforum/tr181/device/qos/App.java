@@ -23,14 +23,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Application table.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.QoS.App.{i}.")
+@CWMPObject(name = "Device.QoS.App.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.QoS.App")
 @XmlType(name = "Device.QoS.App")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +44,7 @@ public class App {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this App table entry.  {{enum}}
 
@@ -52,7 +53,7 @@ public class App {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -118,7 +119,7 @@ public class App {
 	@XmlElement(name = "DefaultDSCPMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -2)
-	public Integer defaultDSCPMark = -1;
+	public Integer defaultDSCPMark;
 	/**
 	 * Ethernet priority code (as defined in {{bibref|802.1Q-2011}}) to mark traffic associated with this App table entry, but not  associated with any specified flow.
 
@@ -131,7 +132,7 @@ public class App {
 	@XmlElement(name = "DefaultEthernetPriorityMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -2)
-	public Integer defaultEthernetPriorityMark = -1;
+	public Integer defaultEthernetPriorityMark;
 	/**
 	 * Ethernet priority code (as defined in {{bibref|802.1Q-2011}}) to mark the inner VLAN Tags as defined in 802.1Q with this {{object}} table entry where the packet is not associated with any specified flow. This parameter is only applicable when the PDU has 2 VLAN Tags.
 

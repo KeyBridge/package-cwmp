@@ -26,16 +26,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
-import org.broadbandforum.tr104.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 import org.broadbandforum.tr104.voiceservice.sip.registrar.Account;
 
 	/**
 	 * Global SIP parameters used by the CPE when acting as registrar server for externally connected SIP user agents. This object also contains the global SIP parameters used by the CPE when it acts as static identity-to-location binding database for externally connected SIP user agents that don't register (i.e. static-mode SIP-PBX).
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.SIP.Registrar.{i}.")
+@CWMPObject(name = "VoiceService.{i}.SIP.Registrar.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"RegistrarPort", "RegistrarIPAddress"})})
 @XmlRootElement(name = "VoiceService.SIP.Registrar")
 @XmlType(name = "VoiceService.SIP.Registrar")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -48,7 +50,7 @@ public class Registrar {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * If {{true}}, when {{param|Enable}} is set to {{false}} in-progress sessions remain intact, but no new sessions are allowed. When all sessions are terminated, the {{object}} is disabled.
 	 *
@@ -63,7 +65,7 @@ public class Registrar {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -78,7 +80,7 @@ public class Registrar {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * The IP address the registrar listens on for incoming SIP requests from an externally connected SIP user agent.
 

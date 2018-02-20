@@ -25,8 +25,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.dhcpv4.server.pool.client.IPv4Address;
 import org.broadbandforum.tr181.device.dhcpv4.server.pool.client.Option;
 
@@ -35,9 +36,10 @@ import org.broadbandforum.tr181.device.dhcpv4.server.pool.client.Option;
 
         This table lists details of DHCPv4 clients that matched the filter criteria of this {{object|#}} entry.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.DHCPv4.Server.Pool.{i}.Client.{i}.")
+@CWMPObject(name = "Device.DHCPv4.Server.Pool.{i}.Client.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Chaddr"})})
 @XmlRootElement(name = "Device.DHCPv4.Server.Pool.Client")
 @XmlType(name = "Device.DHCPv4.Server.Pool.Client")
 @XmlAccessorType(XmlAccessType.FIELD)

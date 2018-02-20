@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * The capabilities of the Performance Diagnostics (''DownloadDiagnostics'' and ''UploadDiagnostics'') for the device.
 	 *
-	 * @since 1.3
+	 * @since TR143 v1.3
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Capabilities.PerformanceDiagnostic.")
 @XmlRootElement(name = "InternetGatewayDevice.Capabilities.PerformanceDiagnostic")

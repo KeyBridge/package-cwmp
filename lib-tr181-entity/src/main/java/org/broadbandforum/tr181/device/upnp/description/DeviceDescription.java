@@ -26,6 +26,7 @@ import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * This table contains information read from the Device Description Document of discovered root devices.
@@ -34,9 +35,9 @@ import org.broadbandforum.annotation.CWMPObject;
 
         In case the SSDP advertisement expires and the CPE deletes the related instances from the tables in UPnP.Discovery., the reference to such instances MUST be set to the empty string.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
-@CWMPObject(name = "Device.UPnP.Description.DeviceDescription.{i}.")
+@CWMPObject(name = "Device.UPnP.Description.DeviceDescription.{i}.", uniqueConstraints = {@CWMPUnique(names = {"URLBase"})})
 @XmlRootElement(name = "Device.UPnP.Description.DeviceDescription")
 @XmlType(name = "Device.UPnP.Description.DeviceDescription")
 @XmlAccessorType(XmlAccessType.FIELD)

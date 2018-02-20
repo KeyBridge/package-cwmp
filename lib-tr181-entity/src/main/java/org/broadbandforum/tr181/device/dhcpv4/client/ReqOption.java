@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Each instance of this object represents a DHCP option that MUST, if enabled, be requested in DHCP client requests.  All requested DHCP options MUST be listed.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.DHCPv4.Client.{i}.ReqOption.{i}.")
+@CWMPObject(name = "Device.DHCPv4.Client.{i}.ReqOption.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Tag"})})
 @XmlRootElement(name = "Device.DHCPv4.Client.ReqOption")
 @XmlType(name = "Device.DHCPv4.Client.ReqOption")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class ReqOption {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Position of the option in the DHCP client request.  A value of ''1'' indicates the first entry.
 

@@ -31,7 +31,7 @@ import org.broadbandforum.tr106.device.lan.traceroutediagnostics.RouteHops;
 	/**
 	 * This object is defines access to an IP-layer trace-route test for the default IP interface.
 	 *
-	 * @since 1.0
+	 * @since TR106 v1.0
 	 */
 @CWMPObject(name = "Device.LAN.TraceRouteDiagnostics.")
 @XmlRootElement(name = "Device.LAN.TraceRouteDiagnostics")

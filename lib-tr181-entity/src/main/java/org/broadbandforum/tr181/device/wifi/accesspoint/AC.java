@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.wifi.accesspoint.ac.Stats;
 
 	/**
@@ -40,9 +41,9 @@ import org.broadbandforum.tr181.device.wifi.accesspoint.ac.Stats;
 
         * VO (Voice)
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.WiFi.AccessPoint.{i}.AC.{i}.")
+@CWMPObject(name = "Device.WiFi.AccessPoint.{i}.AC.{i}.", uniqueConstraints = {@CWMPUnique(names = {"AccessCategory"})})
 @XmlRootElement(name = "Device.WiFi.AccessPoint.AC")
 @XmlType(name = "Device.WiFi.AccessPoint.AC")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Contains all currently active alarms (whose {{param|.FaultMgmt.SupportedAlarm.{i}.PerceivedSeverity}} is not {{enum|Cleared|.FaultMgmt.SupportedAlarm.{i}.PerceivedSeverity}}).
@@ -33,9 +34,10 @@ import org.broadbandforum.annotation.CWMPObject;
 
         When a new alarm replaces an existing alarm, then all parameter values for that instance are considered as changed for the purposes of value change notifications to the ACS (even if their new values are identical to those of the prior alarm).
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
-@CWMPObject(name = "Device.FaultMgmt.CurrentAlarm.{i}.")
+@CWMPObject(name = "Device.FaultMgmt.CurrentAlarm.{i}.", uniqueConstraints = {@CWMPUnique(names = {"AlarmIdentifier"}),
+	@CWMPUnique(names = {"EventType", "ProbableCause", "SpecificProblem"})})
 @XmlRootElement(name = "Device.FaultMgmt.CurrentAlarm")
 @XmlType(name = "Device.FaultMgmt.CurrentAlarm")
 @XmlAccessorType(XmlAccessType.FIELD)

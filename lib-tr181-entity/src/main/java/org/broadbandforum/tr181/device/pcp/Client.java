@@ -25,7 +25,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.pcp.client.PCPProxy;
 import org.broadbandforum.tr181.device.pcp.client.Server;
 import org.broadbandforum.tr181.device.pcp.client.UPnPIWF;
@@ -33,9 +34,10 @@ import org.broadbandforum.tr181.device.pcp.client.UPnPIWF;
 	/**
 	 * Client properties for Port Control Protocol (PCP). The PCP Client interacts with a PCP Server as defined in {{bibref|RFC6887}} for internal device applications or LAN device applications via Interworking functions.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.PCP.Client.{i}.")
+@CWMPObject(name = "Device.PCP.Client.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"WANInterface"})})
 @XmlRootElement(name = "Device.PCP.Client")
 @XmlType(name = "Device.PCP.Client")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -27,7 +27,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.ip._interface.IPv4Address;
 import org.broadbandforum.tr181.device.ip._interface.IPv6Address;
 import org.broadbandforum.tr181.device.ip._interface.IPv6Prefix;
@@ -46,9 +47,10 @@ import org.broadbandforum.tr181.device.ip._interface.Stats;
 
         Note that {{enum|Tunnel|Type}} and {{enum|Tunneled|Type}} IP interfaces are part of a legacy mechanism that is only used for {{object|##.IPv6rd}}, {{object|##.DSLite}} and {{object|##.IPsec}} tunnels and MUST NOT be used in any other context.  For all other tunneling mechanisms {{enum|Normal|Type}} IP interfaces are stacked above technology-specific Tunnel Interfaces, e.g. above {{object|##.GRE.Tunnel.{i}.Interface}} or {{object|##.MAP.Domain.{i}.Interface}} objects.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.IP.Interface.{i}.")
+@CWMPObject(name = "Device.IP.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.IP.Interface")
 @XmlType(name = "Device.IP.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -63,7 +65,7 @@ public class Interface {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * If set to {{true}}, attaches this interface to the IPv4 stack.  If set to {{false}}, detaches this interface from the IPv4 stack.
 
@@ -99,7 +101,7 @@ public class Interface {
 	 */
 	@XmlElement(name = "ULAEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean ulaEnable = false;
+	public Boolean ulaEnable;
 	/**
 	 * The current operational state of the interface (see {{bibref|TR-181i2|Section 4.2.2}}). {{enum}}
 
@@ -112,7 +114,7 @@ public class Interface {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Down";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -169,7 +171,7 @@ public class Interface {
 	 */
 	@XmlElement(name = "Reset")
 	@CWMPParameter(access = "readWrite")
-	public Boolean reset = false;
+	public Boolean reset;
 	/**
 	 * The maximum transmission unit (MTU); the largest allowed size of an IP packet (including IP headers, but excluding lower layer headers such as Ethernet, PPP, or PPPoE headers) that is allowed to be transmitted by or through this device.
 	 *
@@ -187,7 +189,7 @@ public class Interface {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Type")
-	public String type = "Normal";
+	public String type;
 	/**
 	 * When set to {{true}}, the IP interface becomes a loopback interface and the CPE MUST set {{param|Type}} to {{enum|Loopback|Type}}. In this case, the CPE MUST also set {{param|LowerLayers}} to {{empty}} and fail subsequent attempts at setting {{param|LowerLayers}} until the interface is no longer a loopback.
 
@@ -197,7 +199,7 @@ public class Interface {
 	 */
 	@XmlElement(name = "Loopback")
 	@CWMPParameter(access = "readWrite")
-	public Boolean loopback = false;
+	public Boolean loopback;
 	/**
 	 * If {{true}}, enables auto-IP on the interface {{bibref|RFC3927}}. This mechanism is only used with IPv4.
 
@@ -207,7 +209,7 @@ public class Interface {
 	 */
 	@XmlElement(name = "AutoIPEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean autoIPEnable = false;
+	public Boolean autoIPEnable;
 	/**
 	 * IPv4 address table. Entries are auto-created and auto-deleted as IP addresses are added and deleted via DHCP, auto-IP, or IPCP. Static entries are created and configured by the ACS.
 	 */

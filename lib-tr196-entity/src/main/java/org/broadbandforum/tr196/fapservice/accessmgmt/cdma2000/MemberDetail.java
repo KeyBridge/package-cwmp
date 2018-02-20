@@ -24,14 +24,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * At most one enabled entry in this table can exist with a given value for IMSI and HRPDIdentifierValue. The IMSI field may be empty.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.AccessMgmt.CDMA2000.MemberDetail.{i}.")
+@CWMPObject(name = "FAPService.{i}.AccessMgmt.CDMA2000.MemberDetail.{i}.", uniqueConstraints = {@CWMPUnique(names = {"IMSI"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.AccessMgmt.CDMA2000.MemberDetail")
 @XmlType(name = "FAPService.AccessMgmt.CDMA2000.MemberDetail")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -44,7 +46,7 @@ public class MemberDetail {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -70,7 +72,7 @@ public class MemberDetail {
 	@XmlElement(name = "HRPDIdentifierType")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 3)
-	public Integer hrpDIdentifierType = 0;
+	public Integer hrpDIdentifierType;
 	/**
 	 * The value of this attribute depends on {{param|HRPDIdentifierType}}. ESN and MEID shall be defined as Hex.
 	 *

@@ -21,12 +21,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * This object represents the detected Network Registrars detection function for the IEEE 1905 network. They are determined by received AP-autoconfiguration response messages with Registrar role, with supported band as defined in {{bibref|IEEE1905.1a|Table 6-25: SupportedFreqBand TLV}}
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkingRegistrar.")
 @XmlRootElement(name = "Device.IEEE1905.AL.NetworkingRegistrar")

@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.ieee1905.al.networktopology.ieee1905device.BridgingTuple;
 import org.broadbandforum.tr181.device.ieee1905.al.networktopology.ieee1905device.IEEE1905Neighbor;
 import org.broadbandforum.tr181.device.ieee1905.al.networktopology.ieee1905device.IPv4Address;
@@ -39,9 +40,9 @@ import org.broadbandforum.tr181.device.ieee1905.al.networktopology.ieee1905devic
 	/**
 	 * This object represents an instance of discovered 1905 Devices in the network (received Topology discovery message as defined in {{bibref|IEEE1905.1a|Clause 6.3.1}}).
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
-@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.")
+@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.", uniqueConstraints = {@CWMPUnique(names = {"IEEE1905Id"})})
 @XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device")
 @XmlAccessorType(XmlAccessType.FIELD)

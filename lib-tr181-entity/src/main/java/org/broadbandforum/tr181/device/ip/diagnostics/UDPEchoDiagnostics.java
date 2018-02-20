@@ -26,13 +26,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.common.IPAddress;
 import org.broadbandforum.tr181.device.ip.diagnostics.udpechodiagnostics.IndividualPacketResult;
 
 	/**
 	 * This object defines the diagnostics configuration for a UDP Echo test {{bibref|TR-143a1|Appendix A.1}} defined in {{bibref|RFC862}} or a UDP Echo Plus test defined in {{bibref|TR-143a1|Appendix A.1}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.UDPEchoDiagnostics.")
 @XmlRootElement(name = "Device.IP.Diagnostics.UDPEchoDiagnostics")

@@ -27,8 +27,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 import org.broadbandforum.tr181.device.pcp.client.server.InboundMapping;
 import org.broadbandforum.tr181.device.pcp.client.server.OutboundMapping;
 
@@ -37,9 +38,10 @@ import org.broadbandforum.tr181.device.pcp.client.server.OutboundMapping;
 
         Each OPTION_V4_PCP_SERVER or OPTION_V6_PCP_SERVER option corresponds to a {{object}} instance.  If an option returns multiple addresses then that {{object}} instance has multiple addresses.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.PCP.Client.{i}.Server.{i}.")
+@CWMPObject(name = "Device.PCP.Client.{i}.Server.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"ServerNameOrAddress"})})
 @XmlRootElement(name = "Device.PCP.Client.Server")
 @XmlType(name = "Device.PCP.Client.Server")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -52,7 +54,7 @@ public class Server {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = true;
+	public Boolean enable;
 	/**
 	 * The status of the PCP Server. {{enum}}
 
@@ -61,7 +63,7 @@ public class Server {
 	 * @since 2.8
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -78,7 +80,7 @@ public class Server {
 	 * @since 2.8
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * The FQDN or IP address of the PCP Server, assigned as described under {{param|Origin}}.
 	 *

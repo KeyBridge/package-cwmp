@@ -31,7 +31,7 @@ import org.broadbandforum.tr262.fap.applicationplatform.control.TerminalLocation
 	/**
 	 * This object contains parameters related to the operation of the Femtozone APIs.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
 @CWMPObject(name = "FAP.ApplicationPlatform.Control.")
 @XmlRootElement(name = "FAP.ApplicationPlatform.Control")

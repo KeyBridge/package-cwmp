@@ -42,7 +42,7 @@ import org.broadbandforum.tr181.device.fap.applicationplatform.Monitoring;
 
         {{bibref|TR-262|appendix I}} provides the "Theory of Operation" for the usage of this object.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
 @CWMPObject(name = "Device.FAP.ApplicationPlatform.")
 @XmlRootElement(name = "Device.FAP.ApplicationPlatform")

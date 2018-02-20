@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 
         When multiple instances of the {{object}} table have the same value for the {{param|Key}} parameter, the implementation is CPE specific.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
 @CWMPObject(name = "Device.DNS.SD.Service.{i}.TextRecord.{i}.")
 @XmlRootElement(name = "Device.DNS.SD.Service.TextRecord")

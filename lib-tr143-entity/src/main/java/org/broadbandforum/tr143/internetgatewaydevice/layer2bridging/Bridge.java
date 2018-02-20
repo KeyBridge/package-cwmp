@@ -23,13 +23,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Bridge table.
 	 *
-	 * @since 1.1
+	 * @since TR143 v1.1
 	 */
-@CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.Bridge.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.Bridge.{i}.", uniqueConstraints = {@CWMPUnique(names = {"BridgeKey"})})
 @XmlRootElement(name = "InternetGatewayDevice.Layer2Bridging.Bridge")
 @XmlType(name = "InternetGatewayDevice.Layer2Bridging.Bridge")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -49,7 +50,7 @@ public class Bridge {
 	 */
 	@XmlElement(name = "BridgeEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean bridgeEnable = false;
+	public Boolean bridgeEnable;
 	/**
 	 * The status of this Bridge table entry.  {{enum}}
 
@@ -58,7 +59,7 @@ The {{enum|Error}} value MAY be used by the CPE to indicate a locally defined er
 	 * @since 1.1
 	 */
 	@XmlElement(name = "BridgeStatus")
-	public String bridgeStatus = "Disabled";
+	public String bridgeStatus;
 	/**
 	 * Human-readable name for this Bridge table entry.
 	 *

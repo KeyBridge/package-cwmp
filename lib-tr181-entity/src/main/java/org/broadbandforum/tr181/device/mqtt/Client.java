@@ -26,16 +26,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.mqtt.client.Stats;
 import org.broadbandforum.tr181.device.mqtt.client.Subscription;
 
 	/**
 	 * MQTT client table. Contains a list of configured MQTT clients.
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
-@CWMPObject(name = "Device.MQTT.Client.{i}.")
+@CWMPObject(name = "Device.MQTT.Client.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.MQTT.Client")
 @XmlType(name = "Device.MQTT.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -123,7 +125,7 @@ public class Client {
 	 */
 	@XmlElement(name = "TransportProtocol")
 	@CWMPParameter(access = "readWrite")
-	public String transportProtocol = "TCP/IP";
+	public String transportProtocol;
 	/**
 	 * Specifies the MQTT protocol version used in the communication with the MQTT broker.
 	 *
@@ -141,7 +143,7 @@ public class Client {
 	 */
 	@XmlElement(name = "CleanSession")
 	@CWMPParameter(access = "readWrite")
-	public Boolean cleanSession = true;
+	public Boolean cleanSession;
 	/**
 	 * Message retry time in seconds defines the wait time before a MQTT message that expects a response (QoS value of message is > 0, or PUBLISH, PUBREL, SUBSCRIBE, UNSUBSCRIBE message) is resent, because the response is not received (see {{bibref|MQTT31|4.2}} and {{bibref|MQTT311|4.4}}).
 	 *

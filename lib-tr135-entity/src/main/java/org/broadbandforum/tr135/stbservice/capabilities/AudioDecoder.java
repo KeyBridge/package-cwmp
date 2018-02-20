@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * Audio decoder capabilities.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.AudioDecoder.")
 @XmlRootElement(name = "STBService.Capabilities.AudioDecoder")

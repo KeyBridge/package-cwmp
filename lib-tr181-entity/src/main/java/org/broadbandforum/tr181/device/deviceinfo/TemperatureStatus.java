@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.deviceinfo.temperaturestatus.TemperatureS
 	/**
 	 * Status of the temperature of the device.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.TemperatureStatus.")
 @XmlRootElement(name = "Device.DeviceInfo.TemperatureStatus")

@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Contains the details related to HRPD RF
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.RAN.RF.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD.RAN.RF")

@@ -27,16 +27,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.cellular._interface.Stats;
 import org.broadbandforum.tr181.device.cellular._interface.USIM;
 
 	/**
 	 * Cellular interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}).  Each instance of this object models a cellular modem with a single radio and a single {{object|USIM}}.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.Cellular.Interface.{i}.")
+@CWMPObject(name = "Device.Cellular.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.Cellular.Interface")
 @XmlType(name = "Device.Cellular.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -151,7 +153,7 @@ public class Interface {
 	 */
 	@XmlElement(name = "PreferredAccessTechnology")
 	@CWMPParameter(access = "readWrite")
-	public String preferredAccessTechnology = "Auto";
+	public String preferredAccessTechnology;
 	/**
 	 * Access technology that is currently in use.
 	 *

@@ -27,8 +27,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr106.datatypes.IPAddress;
-import org.broadbandforum.tr106.datatypes.MACAddress;
+import org.broadbandforum.common.IPAddress;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr106.device.lan.DHCPOption;
 import org.broadbandforum.tr106.device.lan.IPPingDiagnostics;
 import org.broadbandforum.tr106.device.lan.Stats;
@@ -41,7 +41,7 @@ This object relates only to IP-layer LAN capabilities.  Lower-layer aspects of L
 
 For a device that contains multiple IP interfaces, the scope of this object is limited to the default IP interface.  Data that might be associated with other interfaces is not considered part of the common data model defined in this specification.
 	 *
-	 * @since 1.0
+	 * @since TR106 v1.0
 	 */
 @CWMPObject(name = "Device.LAN.")
 @XmlRootElement(name = "Device.LAN")

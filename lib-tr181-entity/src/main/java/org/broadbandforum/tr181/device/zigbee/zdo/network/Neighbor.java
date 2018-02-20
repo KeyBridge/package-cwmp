@@ -23,13 +23,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * The {{object}} object provides the configuration capabilities needed to by a ZigBee Device to operate within a ZigBee Area Network as defined in {{bibref|ZigBee2007|section 2.5.2.4 Network Manager}}.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
-@CWMPObject(name = "Device.ZigBee.ZDO.{i}.Network.Neighbor.{i}.")
+@CWMPObject(name = "Device.ZigBee.ZDO.{i}.Network.Neighbor.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Neighbor"})})
 @XmlRootElement(name = "Device.ZigBee.ZDO.Network.Neighbor")
 @XmlType(name = "Device.ZigBee.ZDO.Network.Neighbor")
 @XmlAccessorType(XmlAccessType.FIELD)

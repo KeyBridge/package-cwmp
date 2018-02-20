@@ -32,7 +32,7 @@ import org.broadbandforum.tr135.stbservice.applications.ServiceProvider;
 	/**
 	 * Applications.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Applications.")
 @XmlRootElement(name = "STBService.Applications")

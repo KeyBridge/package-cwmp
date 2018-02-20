@@ -29,7 +29,7 @@ import org.broadbandforum.tr069.internetgatewaydevice.landevice.hosts.Host;
 	/**
 	 * This object provides information about each of the hosts on the LAN, including those whose IP address was allocated by the CPE using DHCP as well as hosts with statically allocated IP addresses.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.Hosts.")
 @XmlRootElement(name = "InternetGatewayDevice.LANDevice.Hosts")

@@ -22,13 +22,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * IPv4 addresses assigned to this client.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.DHCPv4.Server.Pool.{i}.Client.{i}.IPv4Address.{i}.")
+@CWMPObject(name = "Device.DHCPv4.Server.Pool.{i}.Client.{i}.IPv4Address.{i}.", uniqueConstraints = {@CWMPUnique(names = {"IPAddress"})})
 @XmlRootElement(name = "Device.DHCPv4.Server.Pool.Client.IPv4Address")
 @XmlType(name = "Device.DHCPv4.Server.Pool.Client.IPv4Address")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -40,7 +41,7 @@ public class IPv4Address {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "IPAddress")
-	public org.broadbandforum.tr181.datatypes.IPv4Address ipaddress;
+	public org.broadbandforum.common.IPv4Address ipaddress;
 	/**
 	 * The time at which the DHCP lease will expire or {{null}} if not known. For an infinite lease, the parameter value MUST be 9999-12-31T23:59:59Z.
 	 *
@@ -59,7 +60,7 @@ public class IPv4Address {
 	 * @since 2.2
 	 * @return the value
 	 */
-	public org.broadbandforum.tr181.datatypes.IPv4Address getIpaddress() {
+	public org.broadbandforum.common.IPv4Address getIpaddress() {
 		return ipaddress;
 	}
 
@@ -69,7 +70,7 @@ public class IPv4Address {
 	 * @since 2.2
 	 * @param ipaddress the input value
 	 */
-	public void  setIpaddress(org.broadbandforum.tr181.datatypes.IPv4Address ipaddress) {
+	public void  setIpaddress(org.broadbandforum.common.IPv4Address ipaddress) {
 		this.ipaddress = ipaddress;
 	}
 
@@ -80,7 +81,7 @@ public class IPv4Address {
 	 * @param ipaddress the input value
 	 * @return this instance
 	 */
-	public IPv4Address withIpaddress(org.broadbandforum.tr181.datatypes.IPv4Address ipaddress) {
+	public IPv4Address withIpaddress(org.broadbandforum.common.IPv4Address ipaddress) {
 		this.ipaddress = ipaddress;
 		return this;
 	}

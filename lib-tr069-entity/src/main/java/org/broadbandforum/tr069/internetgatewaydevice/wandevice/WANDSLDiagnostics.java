@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object is required for a CPE with an ADSL2 or ADSL2+ modem WAN interface, and optional otherwise.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLDiagnostics.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANDSLDiagnostics")

@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object describes the characteristics of the Conditional Access, if any.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.Components.CA.{i}.")
+@CWMPObject(name = "STBService.{i}.Components.CA.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Components.CA")
 @XmlType(name = "STBService.Components.CA")
 @XmlAccessorType(XmlAccessType.FIELD)

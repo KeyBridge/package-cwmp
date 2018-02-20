@@ -26,12 +26,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * The 1905 fowarding rule for the ALME-SET-FWD-RULE.request and ALME-GET-FWD-RULES.response with classification criteria as defined in {{bibref|IEEE1905.1a|Table 5-9: ClassificationSet elements}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.ForwardingTable.ForwardingRule.{i}.")
 @XmlRootElement(name = "Device.IEEE1905.AL.ForwardingTable.ForwardingRule")
@@ -65,7 +65,7 @@ public class ForwardingRule {
 	 */
 	@XmlElement(name = "MACDestinationAddressFlag")
 	@CWMPParameter(access = "readWrite")
-	public Boolean macDestinationAddressFlag = false;
+	public Boolean macDestinationAddressFlag;
 	/**
 	 * Classification criterion.
 
@@ -83,7 +83,7 @@ public class ForwardingRule {
 	 */
 	@XmlElement(name = "MACSourceAddressFlag")
 	@CWMPParameter(access = "readWrite")
-	public Boolean macSourceAddressFlag = false;
+	public Boolean macSourceAddressFlag;
 	/**
 	 * Classification criterion.
 
@@ -101,7 +101,7 @@ public class ForwardingRule {
 	 */
 	@XmlElement(name = "EtherTypeFlag")
 	@CWMPParameter(access = "readWrite")
-	public Boolean etherTypeFlag = false;
+	public Boolean etherTypeFlag;
 	/**
 	 * Classification criterion.
 
@@ -120,7 +120,7 @@ public class ForwardingRule {
 	 */
 	@XmlElement(name = "VidFlag")
 	@CWMPParameter(access = "readWrite")
-	public Boolean vidFlag = false;
+	public Boolean vidFlag;
 	/**
 	 * Classification criterion.
 
@@ -139,7 +139,7 @@ public class ForwardingRule {
 	 */
 	@XmlElement(name = "PCPFlag")
 	@CWMPParameter(access = "readWrite")
-	public Boolean pcpFlag = false;
+	public Boolean pcpFlag;
 
 	public ForwardingRule() {
 	}

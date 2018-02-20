@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.voiceservice.mgcp.Network;
 	/**
 	 * This object is dedicated to MGCP as defined in {{bibref|RFC3435}}. It models MGCP clients and networks.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.MGCP.")
 @XmlRootElement(name = "VoiceService.MGCP")

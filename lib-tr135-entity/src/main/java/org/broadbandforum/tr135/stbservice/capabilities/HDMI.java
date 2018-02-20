@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object describes the characteristics of the HDMI interface, if any.
 	 *
-	 * @since 1.1
+	 * @since TR135 v1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.HDMI.")
 @XmlRootElement(name = "STBService.Capabilities.HDMI")

@@ -25,7 +25,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object contains parameters relating to the self-configuration capability attributes for the CDMA2000 HRPD radio technology portions of a CDMA2000 FAP.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Capabilities.CDMA2000.HRPD.SelfConfig.")
 @XmlRootElement(name = "FAPService.Capabilities.CDMA2000.HRPD.SelfConfig")

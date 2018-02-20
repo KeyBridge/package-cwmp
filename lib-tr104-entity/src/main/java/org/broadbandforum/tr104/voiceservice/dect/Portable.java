@@ -27,14 +27,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * DECT portable table.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.DECT.Portable.{i}.")
+@CWMPObject(name = "VoiceService.{i}.DECT.Portable.{i}.", uniqueConstraints = {@CWMPUnique(names = {"IPEI"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.DECT.Portable")
 @XmlType(name = "VoiceService.DECT.Portable")
 @XmlAccessorType(XmlAccessType.FIELD)

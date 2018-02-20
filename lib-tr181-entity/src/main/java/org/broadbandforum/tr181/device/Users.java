@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.users.User;
 	/**
 	 * Users object that contains the {{object|User}} table.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.Users.")
 @XmlRootElement(name = "Device.Users")

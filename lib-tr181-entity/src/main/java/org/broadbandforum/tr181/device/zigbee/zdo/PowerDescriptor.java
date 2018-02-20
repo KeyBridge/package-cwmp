@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * The {{object}} object describes the power capabilities of the ZigBee device as defined in {{bibref|ZigBee2007|section 2.3.2.4 Node Power Descriptor}}.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.PowerDescriptor.")
 @XmlRootElement(name = "Device.ZigBee.ZDO.PowerDescriptor")

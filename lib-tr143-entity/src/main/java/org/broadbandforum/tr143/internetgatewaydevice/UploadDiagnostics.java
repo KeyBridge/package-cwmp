@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
 Files sent by the UploadDiagnostics do not require file storage on the CPE device, and MAY be an arbitrary stream of bytes.
 	 *
-	 * @since 1.3
+	 * @since TR143 v1.3
 	 */
 @CWMPObject(name = "InternetGatewayDevice.UploadDiagnostics.")
 @XmlRootElement(name = "InternetGatewayDevice.UploadDiagnostics")

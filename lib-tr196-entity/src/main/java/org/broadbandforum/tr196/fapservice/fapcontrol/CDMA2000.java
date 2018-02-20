@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.fapcontrol.cdma2000.Time;
 	/**
 	 * This object contains parameters relating to the configuration for the control portions of a CDMA2000 FAP.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.")
 @XmlRootElement(name = "FAPService.FAPControl.CDMA2000")

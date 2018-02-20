@@ -22,18 +22,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.MACAddress;
-import org.broadbandforum.tr181.datatypes.StatsCounter32;
-import org.broadbandforum.tr181.datatypes.StatsCounter64;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
+import org.broadbandforum.common.StatsCounter32;
+import org.broadbandforum.common.StatsCounter64;
 
 	/**
 	 * Per-node G.hn performance monitoring results during the current sample interval. Each table entry contains the results collected between the G.hn nodes with MAC addresses {{param|##.DiagnoseMACAddress}}) and {{param|DestinationMACAddress}}).
 
         Note: Packet counters indicate the number of packets received between {{param|#.CurrentStart}} and {{param|#.CurrentEnd}}.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Nodes.Node.{i}.")
+@CWMPObject(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Nodes.Node.{i}.", uniqueConstraints = {@CWMPUnique(names = {"DestinationMACAddress"})})
 @XmlRootElement(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Nodes.Node")
 @XmlType(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.Nodes.Node")
 @XmlAccessorType(XmlAccessType.FIELD)

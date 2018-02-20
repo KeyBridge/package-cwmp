@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Ethernet statistics based on the {{bibref|RFC2819}} ''RMON-MIB'' ''etherStatsTable'', with some extensions inspired by {{bibref|G.988|Section 9.3.32}}.
@@ -46,9 +47,10 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         Note: The {{object}} table includes unique key parameters that are strong references. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
-@CWMPObject(name = "Device.Ethernet.RMONStats.{i}.")
+@CWMPObject(name = "Device.Ethernet.RMONStats.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Interface", "VLANID", "Queue"})})
 @XmlRootElement(name = "Device.Ethernet.RMONStats")
 @XmlType(name = "Device.Ethernet.RMONStats")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -61,7 +63,7 @@ public class RMONStats {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this instance.  {{enum}}
 
@@ -72,7 +74,7 @@ public class RMONStats {
 	 * @since 2.4
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -133,7 +135,7 @@ public class RMONStats {
 	 */
 	@XmlElement(name = "AllQueues")
 	@CWMPParameter(access = "readWrite")
-	public Boolean allQueues = false;
+	public Boolean allQueues;
 	/**
 	 * The total number of events in which packets were dropped due to lack of resources.  Note that this number is not necessarily the number of packets dropped; it is just the number of times this condition has been detected.
 

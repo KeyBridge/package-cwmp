@@ -24,7 +24,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object contains general services information.
 	 *
-	 * @since 1.0
+	 * @since TR106 v1.0
 	 */
 @CWMPObject(name = "Device.Services.")
 @XmlRootElement(name = "Device.Services")

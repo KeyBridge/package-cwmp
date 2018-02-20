@@ -39,7 +39,7 @@ import org.broadbandforum.tr106.device.UserInterface;
 	/**
 	 * The top-level object for a Device.
 	 *
-	 * @since 1.0
+	 * @since TR106 v1.0
 	 */
 @CWMPObject(name = "Device.")
 @XmlRootElement(name = "Device")

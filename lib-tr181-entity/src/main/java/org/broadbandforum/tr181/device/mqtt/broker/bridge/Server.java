@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Each {{object}} instance represents a MQTT bridge server to be used for a {{object|##.Bridge}}. A remote MQTT broker, which is connected by a MQTT bridge can be reachable via several host addresses each represented by its own {{object}} table entry. For an active MQTT bridge at least one enabled entry has to exist.
@@ -32,9 +33,10 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         Any attempt to delete an instance, which is currently in use ({{param|##.Bridge.{i}.ServerConnection}} refers to the instance to be deleted), has to be rejected.
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
-@CWMPObject(name = "Device.MQTT.Broker.{i}.Bridge.{i}.Server.{i}.")
+@CWMPObject(name = "Device.MQTT.Broker.{i}.Bridge.{i}.Server.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Address", "Port"})})
 @XmlRootElement(name = "Device.MQTT.Broker.Bridge.Server")
 @XmlType(name = "Device.MQTT.Broker.Bridge.Server")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -47,7 +49,7 @@ public class Server {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

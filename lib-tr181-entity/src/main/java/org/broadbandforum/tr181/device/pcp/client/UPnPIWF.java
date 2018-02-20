@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Properties for the interworking function between UPnP IGD (Internet Gateway Device) and PCP, as specified in {{bibref|RFC6970}}.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.PCP.Client.{i}.UPnPIWF.")
 @XmlRootElement(name = "Device.PCP.Client.UPnPIWF")

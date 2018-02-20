@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
         Each entry in this table represents a parameter (or set of parameters if a partial path is provided) to be collected and reported.
 	 *
-	 * @since 1.10
+	 * @since TR157 v1.10
 	 */
 @CWMPObject(name = "BulkData.Profile.{i}.Parameter.{i}.")
 @XmlRootElement(name = "BulkData.Profile.Parameter")

@@ -30,7 +30,7 @@ import org.broadbandforum.tr135.stbservice.components.frontend.dvbt.servicelistd
 	/**
 	 * DVB-T service list database.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.ServiceListDatabase.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.DVBT.ServiceListDatabase")

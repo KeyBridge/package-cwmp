@@ -33,7 +33,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.deviceinfo.VendorConfigFil
 	/**
 	 * This object contains general device information.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.DeviceInfo.")
 @XmlRootElement(name = "InternetGatewayDevice.DeviceInfo")
@@ -154,7 +154,7 @@ This parameter is DEPRECATED because its value is fixed and it therefore serves 
 	@XmlElement(name = "SpecVersion")
 	@CWMPParameter(forcedInform = true)
 	@Size(max = 16)
-	public String specVersion = "1.0";
+	public String specVersion;
 	/**
 	 * Identifier of the primary service provider and other provisioning information, which MAY be used by the ACS to determine service provider-specific customization and provisioning parameters.
 

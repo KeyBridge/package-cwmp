@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.zigbee.zdo.nodemanager.RoutingTable;
 	/**
 	 * The {{object}} object describes the configuration capabilities related for remote management of the ZigBee Area Network as defined in {{bibref|ZigBee2007|section 2.5.2.6 Node Manager}}.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.NodeManager.")
 @XmlRootElement(name = "Device.ZigBee.ZDO.NodeManager")

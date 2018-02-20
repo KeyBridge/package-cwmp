@@ -22,14 +22,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * This table provides information about other HPNA devices that are directly accessible via this HPNA interface.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.HPNA.Interface.{i}.AssociatedDevice.{i}.")
+@CWMPObject(name = "Device.HPNA.Interface.{i}.AssociatedDevice.{i}.", uniqueConstraints = {@CWMPUnique(names = {"MACAddress"})})
 @XmlRootElement(name = "Device.HPNA.Interface.AssociatedDevice")
 @XmlType(name = "Device.HPNA.Interface.AssociatedDevice")
 @XmlAccessorType(XmlAccessType.FIELD)

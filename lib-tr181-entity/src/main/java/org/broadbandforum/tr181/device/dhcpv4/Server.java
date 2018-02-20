@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.dhcpv4.server.Pool;
 	/**
 	 * DHCP server configuration.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DHCPv4.Server.")
 @XmlRootElement(name = "Device.DHCPv4.Server")

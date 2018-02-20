@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains multicast query parameters used to download files.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.ManagementServer.DownloadAvailability.Query.")
 @XmlRootElement(name = "Device.ManagementServer.DownloadAvailability.Query")

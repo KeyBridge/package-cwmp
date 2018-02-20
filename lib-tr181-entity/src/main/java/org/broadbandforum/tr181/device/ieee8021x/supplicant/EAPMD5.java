@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * 802.1x Authentication Supplicant provisioning information used for MD5 shared secret exchange. This object will not exist if EAP-MD5 is not a supported authentication type.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.IEEE8021x.Supplicant.{i}.EAPMD5.")
 @XmlRootElement(name = "Device.IEEE8021x.Supplicant.EAPMD5")

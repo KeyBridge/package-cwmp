@@ -21,16 +21,17 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * PHY throughput diagnostics results. 
 
         Each result object corresponds to unidirectional traffic between two PHY diagnostics-enabled nodes (so there are two such objects for  each such pair).
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.HPNA.Diagnostics.PHYThroughput.Result.{i}.")
+@CWMPObject(name = "Device.HPNA.Diagnostics.PHYThroughput.Result.{i}.", uniqueConstraints = {@CWMPUnique(names = {"SrcMACAddress", "DestMACAddress"})})
 @XmlRootElement(name = "Device.HPNA.Diagnostics.PHYThroughput.Result")
 @XmlType(name = "Device.HPNA.Diagnostics.PHYThroughput.Result")
 @XmlAccessorType(XmlAccessType.FIELD)

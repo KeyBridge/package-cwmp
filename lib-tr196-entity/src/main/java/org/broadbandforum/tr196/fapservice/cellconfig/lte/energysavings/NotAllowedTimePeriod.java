@@ -30,7 +30,7 @@ This object can be used to prevent a cell entering energy saving state.
 
 This object is valid on the specified day(s) and time of every week.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EnergySavings.NotAllowedTimePeriod.{i}.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.EnergySavings.NotAllowedTimePeriod")

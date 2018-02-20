@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * Capabilities of the DVB-T receiver.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.FrontEnd.DVBT.")
 @XmlRootElement(name = "STBService.Capabilities.FrontEnd.DVBT")

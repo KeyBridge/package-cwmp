@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
 Files received in the DownloadDiagnostics do not require file storage on the CPE device.
 	 *
-	 * @since 1.2
+	 * @since TR106 v1.2
 	 */
 @CWMPObject(name = "Device.DownloadDiagnostics.")
 @XmlRootElement(name = "Device.DownloadDiagnostics")

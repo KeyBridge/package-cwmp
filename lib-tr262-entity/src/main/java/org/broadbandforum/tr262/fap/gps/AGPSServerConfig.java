@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters for the configuration of the Assisted Global Positioning System (A-GPS) server. See also {{bibref|3GPP-TS.25.171|Section 3.2}}
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
 @CWMPObject(name = "FAP.GPS.AGPSServerConfig.")
 @XmlRootElement(name = "FAP.GPS.AGPSServerConfig")

@@ -34,7 +34,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.epc.QoS;
 	/**
 	 * This object contains parameters relating to configuring LTE EPC.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EPC.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.EPC")

@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object defines an instance of a time span used for determining an RCAT schedule.
@@ -34,9 +35,9 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         All instances of the {{object}} within this {{object|##.Schedule}} MUST utilize the same time zone.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
-@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.ANPPolicy.{i}.RequestCategory.{i}.Schedule.{i}.AbsTimeSpan.{i}.")
+@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.ANPPolicy.{i}.RequestCategory.{i}.Schedule.{i}.AbsTimeSpan.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.RequestCategory.Schedule.AbsTimeSpan")
 @XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet.ANPPolicy.RequestCategory.Schedule.AbsTimeSpan")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -49,7 +50,7 @@ public class AbsTimeSpan {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

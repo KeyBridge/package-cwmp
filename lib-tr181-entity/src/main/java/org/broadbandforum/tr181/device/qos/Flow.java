@@ -23,14 +23,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Flow table.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.QoS.Flow.{i}.")
+@CWMPObject(name = "Device.QoS.Flow.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.QoS.Flow")
 @XmlType(name = "Device.QoS.Flow")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +44,7 @@ public class Flow {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this Flow table entry.  {{enum}}
 
@@ -52,7 +53,7 @@ public class Flow {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -136,7 +137,7 @@ public class Flow {
 	@XmlElement(name = "DSCPMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -2)
-	public Integer dscPMark = -1;
+	public Integer dscPMark;
 	/**
 	 * Ethernet priority code (as defined in {{bibref|802.1Q-2011}}) to mark traffic with that falls into this flow.
 
@@ -149,7 +150,7 @@ public class Flow {
 	@XmlElement(name = "EthernetPriorityMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -2)
-	public Integer ethernetPriorityMark = -1;
+	public Integer ethernetPriorityMark;
 	/**
 	 * Ethernet priority code (as defined in {{bibref|802.1Q-2011}}) to mark the inner VLAN Tags with for traffic that falls into this flow.
 
@@ -162,7 +163,7 @@ public class Flow {
 	@XmlElement(name = "InnerEthernetPriorityMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -2)
-	public Integer innerEthernetPriorityMark = -1;
+	public Integer innerEthernetPriorityMark;
 
 	public Flow() {
 	}

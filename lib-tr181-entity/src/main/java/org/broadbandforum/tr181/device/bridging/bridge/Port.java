@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.bridging.bridge.port.PriorityCodePoint;
 import org.broadbandforum.tr181.device.bridging.bridge.port.Stats;
 
@@ -35,9 +36,10 @@ import org.broadbandforum.tr181.device.bridging.bridge.port.Stats;
 
         There are two types of bridge ports: management (upward facing) and non-management (downward facing). This is determined by configuring the Boolean {{param|ManagementPort}} parameter. The CPE will automatically configure each management bridge port to appear in the interface stack above all non-management bridge ports that share the same {{object|##.Bridge}} instance.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.Bridging.Bridge.{i}.Port.{i}.")
+@CWMPObject(name = "Device.Bridging.Bridge.{i}.Port.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.Bridging.Bridge.Port")
 @XmlType(name = "Device.Bridging.Bridge.Port")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -52,7 +54,7 @@ public class Port {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The current operational state of the bridge port (see {{bibref|TR-181i2|Section 4.2.2}}). {{enum}}
 
@@ -65,7 +67,7 @@ public class Port {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Down";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -109,7 +111,7 @@ public class Port {
 	 */
 	@XmlElement(name = "ManagementPort")
 	@CWMPParameter(access = "readWrite")
-	public Boolean managementPort = false;
+	public Boolean managementPort;
 	/**
 	 * The type of bridge port as defined in 802.1Q {{bibref|802.1Q-2011|Section 17 IEEE8021BridgePortType}}.
 
@@ -146,7 +148,7 @@ public class Port {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "PortState")
-	public String portState = "Disabled";
+	public String portState;
 	/**
 	 * PVID (or Port VID) is the VLAN ID with which an untagged or priority tagged frame that arrives on this port will be associated (i.e. default Port VLAN ID as defined in 802.1Q {{bibref|802.1Q-2011}}).
 
@@ -157,7 +159,7 @@ public class Port {
 	@XmlElement(name = "PVID")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 1, max = 4094)
-	public Integer pviD = 1;
+	public Integer pviD;
 	/**
 	 * The Tag Protocol Identifier (TPID) assigned to this {{object}}. The TPID is an EtherType value used to identify the frame as a tagged frame.
 
@@ -185,7 +187,7 @@ public class Port {
 	 */
 	@XmlElement(name = "AcceptableFrameTypes")
 	@CWMPParameter(access = "readWrite")
-	public String acceptableFrameTypes = "AdmitAll";
+	public String acceptableFrameTypes;
 	/**
 	 * Enables or disables Ingress Filtering as defined in 802.1Q {{bibref|802.1Q-2011}}. If enabled ({{true}}), causes frames arriving on this port to be discarded if the port is not in the VLAN ID's member set (which is configured via the {{object|#.VLANPort}} table).
 
@@ -195,7 +197,7 @@ public class Port {
 	 */
 	@XmlElement(name = "IngressFiltering")
 	@CWMPParameter(access = "readWrite")
-	public Boolean ingressFiltering = false;
+	public Boolean ingressFiltering;
 	/**
 	 * This parameter controls the Service Access Priority selection function as described in {{bibref|802.1Q-2011|section 6.13}}.
 
@@ -205,7 +207,7 @@ public class Port {
 	 */
 	@XmlElement(name = "ServiceAccessPrioritySelection")
 	@CWMPParameter(access = "readWrite")
-	public Boolean serviceAccessPrioritySelection = false;
+	public Boolean serviceAccessPrioritySelection;
 	/**
 	 * {{list}} List items represent service access priority translation values for each ingress priority on this {{object}} as described in {{bibref|802.1Q-2011|section 6.13}}.
 
@@ -232,7 +234,7 @@ public class Port {
 	 */
 	@XmlElement(name = "PriorityTagging")
 	@CWMPParameter(access = "readWrite")
-	public Boolean priorityTagging = false;
+	public Boolean priorityTagging;
 	/**
 	 * {{object}} provides the management control for the processing of the Priority Code Point (PCP) field for the 802.1Q header as defined in {{bibref|802.1Q-2011|section 6.9.3 Priority Code Point Encoding}}.
 

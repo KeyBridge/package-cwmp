@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Alarm events added or updated in {{object|.FaultMgmt.CurrentAlarm.{i}.}} are simultaneously entered into the this table if their corresponding entry in {{object|.FaultMgmt.SupportedAlarm.{i}.}} has {{param|.FaultMgmt.SupportedAlarm.{i}.ReportingMechanism}} set to {{enum|0 Expedited|.FaultMgmt.SupportedAlarm.{i}.ReportingMechanism}}. This table also contains alarm clearing events. 
@@ -35,9 +36,9 @@ import org.broadbandforum.annotation.CWMPObject;
 
         When a new alarm replaces an existing alarm, then all parameter values for that instance are considered as changed for the purposes of value change notifications to the ACS (even if their new values are identical to those of the prior alarm).
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
-@CWMPObject(name = "Device.FaultMgmt.ExpeditedEvent.{i}.")
+@CWMPObject(name = "Device.FaultMgmt.ExpeditedEvent.{i}.", uniqueConstraints = {@CWMPUnique(names = {"AlarmIdentifier"})})
 @XmlRootElement(name = "Device.FaultMgmt.ExpeditedEvent")
 @XmlType(name = "Device.FaultMgmt.ExpeditedEvent")
 @XmlAccessorType(XmlAccessType.FIELD)

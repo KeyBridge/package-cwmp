@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.dns.sd.Service;
 
         Upon reboot the the contents of the service table are repopulated. When the DNS.SD service is disabled, the contents of the service table is implementation specific.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
 @CWMPObject(name = "Device.DNS.SD.")
 @XmlRootElement(name = "Device.DNS.SD")

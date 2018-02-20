@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * Represents the associated CPE Proxier for a Proxied Device that utilizes the Virtual CWMP Device Mechanism {{bibref|TR-069a4|Annex J.1.1}}.
 	 *
-	 * @since 2.3
+	 * @since TR181 v2.3
 	 */
 @CWMPObject(name = "Device.DeviceInfo.ProxierInfo.")
 @XmlRootElement(name = "Device.DeviceInfo.ProxierInfo")

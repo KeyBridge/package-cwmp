@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.routing.Router;
 	/**
 	 * Routing object that contains the {{object|Router}} table and {{object|RIP}} protocol object.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.Routing.")
 @XmlRootElement(name = "Device.Routing")

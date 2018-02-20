@@ -33,7 +33,7 @@ import org.broadbandforum.tr069.internetgatewaydevice.deviceinfo.VendorConfigFil
 	/**
 	 * This object contains general device information.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.DeviceInfo.")
 @XmlRootElement(name = "InternetGatewayDevice.DeviceInfo")

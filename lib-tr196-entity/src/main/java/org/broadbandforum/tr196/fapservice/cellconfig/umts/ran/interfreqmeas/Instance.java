@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table containing parameters relating to a particular instance of inter-freq events.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.InterFreqMeas.Instance.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.InterFreqMeas.Instance.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"IntraFrequencyEventIdentity"})})
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.InterFreqMeas.Instance")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.InterFreqMeas.Instance")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class Instance {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

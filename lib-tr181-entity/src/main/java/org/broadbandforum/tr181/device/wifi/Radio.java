@@ -27,7 +27,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.wifi.radio.Stats;
 
 	/**
@@ -37,9 +38,10 @@ import org.broadbandforum.tr181.device.wifi.radio.Stats;
 
         Note: A dual-band single-radio device (e.g. an 802.11a/b/g radio) can be configured to operate at 2.4 or 5 GHz frequency bands, but only a single frequency band is used to transmit/receive at a given time. Therefore, a single {{object}} instance is used even for a dual-band radio.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.WiFi.Radio.{i}.")
+@CWMPObject(name = "Device.WiFi.Radio.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.WiFi.Radio")
 @XmlType(name = "Device.WiFi.Radio")
 @XmlAccessorType(XmlAccessType.FIELD)

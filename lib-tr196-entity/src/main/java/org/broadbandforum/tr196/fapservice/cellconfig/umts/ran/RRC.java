@@ -26,7 +26,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.rrc.Stats;
 	/**
 	 * This object provides monitoring of the RRC in the HNB.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.RRC.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.RRC")

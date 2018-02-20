@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Voice to mail specific attributes. Applies only if {{param|#.VoiceMailEnable}} is set to {{true}}.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.Set.{i}.Voice2Mail.")
 @XmlRootElement(name = "VoiceService.CallControl.CallingFeatures.Set.Voice2Mail")

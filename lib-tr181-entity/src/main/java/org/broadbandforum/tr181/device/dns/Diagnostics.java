@@ -26,7 +26,7 @@ import org.broadbandforum.tr181.device.dns.diagnostics.NSLookupDiagnostics;
 	/**
 	 * The DNS Diagnostics object containing the {{object|NSLookupDiagnostics}} test.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DNS.Diagnostics.")
 @XmlRootElement(name = "Device.DNS.Diagnostics")

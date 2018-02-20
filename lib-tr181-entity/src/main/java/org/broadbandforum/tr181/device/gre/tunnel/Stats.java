@@ -21,15 +21,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.StatsCounter32;
-import org.broadbandforum.tr181.datatypes.StatsCounter64;
+import org.broadbandforum.common.StatsCounter32;
+import org.broadbandforum.common.StatsCounter64;
 
 	/**
 	 * Statistics for this GRE tunnel, i.e. all traffic that has passed through the tunnel.
 
         The device MUST reset the tunnel's Stats parameters (unless otherwise stated in individual object or parameter descriptions) either when the tunnel becomes operationally down due to a previous administrative down (i.e., Status parameter transitions to a disabled state after the tunnel has been disabled) or when the tunnel becomes administratively up (i.e. the Enable parameter transitioned from {{false}} to {{true}}).
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.GRE.Tunnel.{i}.Stats.")
 @XmlRootElement(name = "Device.GRE.Tunnel.Stats")

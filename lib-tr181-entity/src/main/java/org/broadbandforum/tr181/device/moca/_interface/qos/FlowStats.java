@@ -22,14 +22,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * The flow statistics table provides information on the MoCA parameterized QoS flows this interface has allocated onto the MoCA network.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.")
+@CWMPObject(name = "Device.MoCA.Interface.{i}.QoS.FlowStats.{i}.", uniqueConstraints = {@CWMPUnique(names = {"FlowID"})})
 @XmlRootElement(name = "Device.MoCA.Interface.QoS.FlowStats")
 @XmlType(name = "Device.MoCA.Interface.QoS.FlowStats")
 @XmlAccessorType(XmlAccessType.FIELD)

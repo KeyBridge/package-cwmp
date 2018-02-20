@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This table contains the IP interface's IPv6 unicast addresses.  There MUST be an entry for each such address, including anycast addresses.
@@ -46,9 +47,10 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         This object is based on ''ipAddressTable'' from {{bibref|RFC4293}}.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.IP.Interface.{i}.IPv6Address.{i}.")
+@CWMPObject(name = "Device.IP.Interface.{i}.IPv6Address.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"IPAddress"})})
 @XmlRootElement(name = "Device.IP.Interface.IPv6Address")
 @XmlType(name = "Device.IP.Interface.IPv6Address")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -61,7 +63,7 @@ public class IPv6Address {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this {{object}} table entry.  {{enum}}
 
@@ -72,7 +74,7 @@ public class IPv6Address {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * The status of {{param|IPAddress}}, indicating whether it can be used for communication.  See also {{param|PreferredLifetime}} and {{param|ValidLifetime}}.  {{enum}}
 
@@ -81,7 +83,7 @@ public class IPv6Address {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "IPAddressStatus")
-	public String ipaddressStatus = "Invalid";
+	public String ipaddressStatus;
 	/**
 	 * {{datatype|expand}}
 
@@ -103,7 +105,7 @@ public class IPv6Address {
 	 */
 	@XmlElement(name = "IPAddress")
 	@CWMPParameter(access = "readWrite")
-	public org.broadbandforum.tr181.datatypes.IPv6Address ipaddress;
+	public org.broadbandforum.common.IPv6Address ipaddress;
 	/**
 	 * Mechanism via which the IP address was assigned.  {{enum}}
 
@@ -112,7 +114,7 @@ public class IPv6Address {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * IPv6 address prefix.
 
@@ -158,7 +160,7 @@ public class IPv6Address {
 	 */
 	@XmlElement(name = "Anycast")
 	@CWMPParameter(access = "readWrite")
-	public Boolean anycast = false;
+	public Boolean anycast;
 
 	public IPv6Address() {
 	}
@@ -326,7 +328,7 @@ public class IPv6Address {
 	 * @since 2.2
 	 * @return the value
 	 */
-	public org.broadbandforum.tr181.datatypes.IPv6Address getIpaddress() {
+	public org.broadbandforum.common.IPv6Address getIpaddress() {
 		return ipaddress;
 	}
 
@@ -340,7 +342,7 @@ public class IPv6Address {
 	 * @since 2.2
 	 * @param ipaddress the input value
 	 */
-	public void  setIpaddress(org.broadbandforum.tr181.datatypes.IPv6Address ipaddress) {
+	public void  setIpaddress(org.broadbandforum.common.IPv6Address ipaddress) {
 		this.ipaddress = ipaddress;
 	}
 
@@ -355,7 +357,7 @@ public class IPv6Address {
 	 * @param ipaddress the input value
 	 * @return this instance
 	 */
-	public IPv6Address withIpaddress(org.broadbandforum.tr181.datatypes.IPv6Address ipaddress) {
+	public IPv6Address withIpaddress(org.broadbandforum.common.IPv6Address ipaddress) {
 		this.ipaddress = ipaddress;
 		return this;
 	}

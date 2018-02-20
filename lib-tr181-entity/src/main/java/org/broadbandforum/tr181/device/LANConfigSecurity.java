@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains generic device configuration information.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.LANConfigSecurity.")
 @XmlRootElement(name = "Device.LANConfigSecurity")

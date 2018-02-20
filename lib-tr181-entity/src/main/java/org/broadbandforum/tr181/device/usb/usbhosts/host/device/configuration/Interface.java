@@ -22,13 +22,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Table of device interface descriptors.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.USB.USBHosts.Host.{i}.Device.{i}.Configuration.{i}.Interface.{i}.")
+@CWMPObject(name = "Device.USB.USBHosts.Host.{i}.Device.{i}.Configuration.{i}.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"InterfaceNumber"})})
 @XmlRootElement(name = "Device.USB.USBHosts.Host.Device.Configuration.Interface")
 @XmlType(name = "Device.USB.USBHosts.Host.Device.Configuration.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)

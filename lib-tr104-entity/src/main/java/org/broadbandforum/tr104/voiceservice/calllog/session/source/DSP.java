@@ -27,7 +27,7 @@ import org.broadbandforum.tr104.voiceservice.calllog.session.source.dsp.Transmit
 	/**
 	 * The DSP part of the line session information.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.Source.DSP.")
 @XmlRootElement(name = "VoiceService.CallLog.Session.Source.DSP")

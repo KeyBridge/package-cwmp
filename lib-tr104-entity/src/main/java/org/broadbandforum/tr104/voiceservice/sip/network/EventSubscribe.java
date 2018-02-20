@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table to specify the SIP events to which the CPE MUST subscribe.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.SIP.Network.{i}.EventSubscribe.{i}.")
+@CWMPObject(name = "VoiceService.{i}.SIP.Network.{i}.EventSubscribe.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Event"})})
 @XmlRootElement(name = "VoiceService.SIP.Network.EventSubscribe")
 @XmlType(name = "VoiceService.SIP.Network.EventSubscribe")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class EventSubscribe {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -86,7 +88,7 @@ public class EventSubscribe {
 	 */
 	@XmlElement(name = "NotifierTransport")
 	@CWMPParameter(access = "readWrite")
-	public String notifierTransport = "UDP";
+	public String notifierTransport;
 	/**
 	 * Subscription refresh timer, in seconds.
 	 *

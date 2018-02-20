@@ -26,8 +26,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.ptm.link.Stats;
 
 	/**
@@ -35,9 +36,10 @@ import org.broadbandforum.tr181.device.ptm.link.Stats;
 
         When a ''PTM Link'' interface is used, a lower-layer {{object|.DSL.Channel}} interface MUST be configured with PTM encapsulation (see {{param|.DSL.Channel.{i}.LinkEncapsulationUsed}}).
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.PTM.Link.{i}.")
+@CWMPObject(name = "Device.PTM.Link.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.PTM.Link")
 @XmlType(name = "Device.PTM.Link")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -52,7 +54,7 @@ public class Link {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The current operational state of the link (see {{bibref|TR-181i2|Section 4.2.2}}). {{enum}}
 
@@ -65,7 +67,7 @@ public class Link {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Down";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *

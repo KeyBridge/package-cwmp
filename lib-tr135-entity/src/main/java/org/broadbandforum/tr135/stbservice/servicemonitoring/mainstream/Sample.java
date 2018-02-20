@@ -46,7 +46,7 @@ Some comma-separated lists contain terms that are comma-separated lists themselv
 
 If no data was collected for a statistic during a sample interval then the value for that sample interval MUST be zero unless otherwise specified in the description of the individual statistics parameter.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Sample.")
 @XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Sample")

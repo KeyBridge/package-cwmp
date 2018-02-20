@@ -31,7 +31,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
         The CPE policy determines the conditions under which the CPE notifies the ACS of the completion of Deployment Unit state changes that were not specifically requested via CWMP.
 	 *
-	 * @since 2.1
+	 * @since TR181 v2.1
 	 */
 @CWMPObject(name = "Device.ManagementServer.DUStateChangeComplPolicy.")
 @XmlRootElement(name = "Device.ManagementServer.DUStateChangeComplPolicy")

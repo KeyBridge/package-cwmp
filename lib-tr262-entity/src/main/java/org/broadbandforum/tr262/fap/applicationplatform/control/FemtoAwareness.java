@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters related to the Femto Awareness API.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
 @CWMPObject(name = "FAP.ApplicationPlatform.Control.FemtoAwareness.")
 @XmlRootElement(name = "FAP.ApplicationPlatform.Control.FemtoAwareness")

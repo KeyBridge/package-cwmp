@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * DVB-T modulation details.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.Modulation.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.DVBT.Modulation")

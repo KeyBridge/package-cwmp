@@ -21,15 +21,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.StatsCounter32;
-import org.broadbandforum.tr181.datatypes.StatsCounter64;
+import org.broadbandforum.common.StatsCounter32;
+import org.broadbandforum.common.StatsCounter64;
 
 	/**
 	 * Global IPsec statistics.  These statistics include all IPsec traffic, i.e. all IKEv2 negotiation, IKEv2 SAs and child SAs.
 
         The CPE MUST reset global IPsec Stats parameters (unless otherwise stated in individual object or parameter descriptions) either when IPsec is disabled ({{param|.IPsec.Enable}} is set to {{false}}) or when IPsec is enabled ({{param|.IPsec.Enable}} is set to {{true}}).
 	 *
-	 * @since 2.5
+	 * @since TR181 v2.5
 	 */
 @CWMPObject(name = "Device.IPsec.Stats.")
 @XmlRootElement(name = "Device.IPsec.Stats")

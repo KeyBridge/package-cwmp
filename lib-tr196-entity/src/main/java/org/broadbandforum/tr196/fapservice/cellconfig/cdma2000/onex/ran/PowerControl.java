@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Configuration Managed Object for OTA  power control attribute.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.PowerControl.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.PowerControl")

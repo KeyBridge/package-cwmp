@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object contains information common to all neighbors of a sector. This object has only one instance.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.NeighborList.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.NeighborList.{i}.", uniqueConstraints = {@CWMPUnique(names = {"OneXNeighborIndex", "NeighborPN"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.NeighborList")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.NeighborList")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class NeighborList {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -60,7 +62,7 @@ public class NeighborList {
 	@XmlElement(name = "PilotInc")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 1, max = 15)
-	public Integer pilotInc = 1;
+	public Integer pilotInc;
 	/**
 	 * Macro neighbour index. See {{bibref|3GPP2-C.S0005}}.
 	 *
@@ -69,7 +71,7 @@ public class NeighborList {
 	@XmlElement(name = "OneXNeighborIndex")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 19)
-	public Integer oneXNeighborIndex = 0;
+	public Integer oneXNeighborIndex;
 	/**
 	 * Neighbor configuration in terms of number of frequencies having paging channels as defined in Section 3.7.2.3.2 of the {{bibref|3GPP2-C.S0005}} standard
 	 *
@@ -77,7 +79,7 @@ public class NeighborList {
 	 */
 	@XmlElement(name = "NeighborConfig")
 	@CWMPParameter(access = "readWrite")
-	public String neighborConfig = "SameConfig";
+	public String neighborConfig;
 	/**
 	 * PN offset of the neighbor. See {{bibref|3GPP2-C.S0005}}.
 	 *
@@ -86,7 +88,7 @@ public class NeighborList {
 	@XmlElement(name = "NeighborPN")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 511)
-	public Integer neighborPN = 0;
+	public Integer neighborPN;
 	/**
 	 * priority level for serching this neighbor. See {{bibref|3GPP2-C.S0005}}.
 	 *
@@ -94,7 +96,7 @@ public class NeighborList {
 	 */
 	@XmlElement(name = "SearchPriority")
 	@CWMPParameter(access = "readWrite")
-	public String searchPriority = "Medium";
+	public String searchPriority;
 	/**
 	 * Neighbor band class. See {{bibref|3GPP2-C.S0005}}.
 	 *
@@ -111,7 +113,7 @@ public class NeighborList {
 	@XmlElement(name = "NeighborFrequency")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 2016)
-	public Integer neighborFrequency = 0;
+	public Integer neighborFrequency;
 	/**
 	 * Flag to indicate if the channel id included. See {{bibref|3GPP2-C.S0005}}.
 	 *
@@ -120,7 +122,7 @@ public class NeighborList {
 	@XmlElement(name = "FrequencyIncluded")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 1)
-	public Integer frequencyIncluded = 1;
+	public Integer frequencyIncluded;
 	/**
 	 * whether this neighbor can be used for in-traffic neighborlist message
 	 *
@@ -129,7 +131,7 @@ public class NeighborList {
 	@XmlElement(name = "InTraffic")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 1)
-	public Integer intraffic = 1;
+	public Integer intraffic;
 	/**
 	 * whether this neighbor can be used for overhead neighborlist message
 	 *
@@ -138,7 +140,7 @@ public class NeighborList {
 	@XmlElement(name = "OverheadMsg")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 1)
-	public Integer overheadMsg = 1;
+	public Integer overheadMsg;
 	/**
 	 * unique identifire of the neighboring cell (optional)
 	 *
@@ -146,7 +148,7 @@ public class NeighborList {
 	 */
 	@XmlElement(name = "BaseIdentifier")
 	@CWMPParameter(access = "readWrite")
-	public Integer baseIdentifier = 0;
+	public Integer baseIdentifier;
 	/**
 	 * Air interface technology of the neighbor.
 	 *
@@ -154,7 +156,7 @@ public class NeighborList {
 	 */
 	@XmlElement(name = "AirInterface")
 	@CWMPParameter(access = "readWrite")
-	public String airInterface = "OneX";
+	public String airInterface;
 	/**
 	 * Flag to indicate if the handOutCapability is possible.
 	 *
@@ -163,7 +165,7 @@ public class NeighborList {
 	@XmlElement(name = "HandOutCapable")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 1)
-	public Integer handOutCapable = 0;
+	public Integer handOutCapable;
 	/**
 	 * Longitude for this neighbor. Parameter is a string representing a floating point real number (+/- XXX.YY). Where  + for East, - for West, XXX.Y ranges between 0.0 and 180.0 .
 	 *
@@ -207,7 +209,7 @@ public class NeighborList {
 	 */
 	@XmlElement(name = "ForceInOverhead")
 	@CWMPParameter(access = "readWrite")
-	public Boolean forceInOverhead = false;
+	public Boolean forceInOverhead;
 	/**
 	 * If {{param}} is set to {{true}}, the FAP is currently including this Neighbor List entry in the Neighbor List overhead messages (see {{bibref|3GPP2-C.S0005}}.  Otherwise, {{param}} is set to {{false}}.
 	 *

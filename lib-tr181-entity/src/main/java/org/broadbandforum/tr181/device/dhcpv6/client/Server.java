@@ -22,14 +22,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.IPv6Address;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPv6Address;
 
 	/**
 	 * This is a transitory table that lists the discovered DHCPv6 servers (it does ''not'' model a local DHCP server). Table entries are automatically created to correspond with these servers. However, it is a local matter to the CPE when to delete old table entries.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.DHCPv6.Client.{i}.Server.{i}.")
+@CWMPObject(name = "Device.DHCPv6.Client.{i}.Server.{i}.", uniqueConstraints = {@CWMPUnique(names = {"SourceAddress"})})
 @XmlRootElement(name = "Device.DHCPv6.Client.Server")
 @XmlType(name = "Device.DHCPv6.Client.Server")
 @XmlAccessorType(XmlAccessType.FIELD)

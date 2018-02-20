@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * Specific capabilities concerning quality indicators.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.QualityIndicator.")
 @XmlRootElement(name = "VoiceService.Capabilities.QualityIndicator")

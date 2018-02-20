@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.interfreqmeas.Ins
 	/**
 	 * This object contains parameters relating to the inter-freq HO related control parameters.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.InterFreqMeas.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.InterFreqMeas")

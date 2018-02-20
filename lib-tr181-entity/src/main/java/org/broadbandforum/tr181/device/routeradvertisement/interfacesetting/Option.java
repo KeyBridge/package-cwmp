@@ -23,16 +23,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object specifies the options in a Router Advertisement (RA) message {{bibref|RFC4861|Section 4.6}}. {{object}} entries are created for use in sending Router Advertisements (enabled options MUST be included in RA messages sent). This includes support for sending DNS information in the RA message as described in {{bibref|RFC6106}}.
 
         This table is intended only for options that are not modeled elsewhere. For example, it is not appropriate for the MTU option (which is modeled via {{param|#.AdvLinkMTU}}).
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.RouterAdvertisement.InterfaceSetting.{i}.Option.{i}.")
+@CWMPObject(name = "Device.RouterAdvertisement.InterfaceSetting.{i}.Option.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Tag"})})
 @XmlRootElement(name = "Device.RouterAdvertisement.InterfaceSetting.Option")
 @XmlType(name = "Device.RouterAdvertisement.InterfaceSetting.Option")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -45,7 +47,7 @@ public class Option {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

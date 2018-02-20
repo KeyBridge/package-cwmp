@@ -23,16 +23,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * The {{object}} represents an XMPP server to be used for a {{object|##.Connection}}.
 
         This table is only relevant when {{param|##.Connection.{i}.ServerConnectAlgorithm}} is set to {{enum|ServerTable|##.Connection.{i}.ServerConnectAlgorithm}}.  If {{param|##.Connection.{i}.ServerConnectAlgorithm}} is set to {{enum|DNS-SRV|##.Connection.{i}.ServerConnectAlgorithm}} then any instances of this table are ignored by this {{object|##.Connection}}.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
-@CWMPObject(name = "Device.XMPP.Connection.{i}.Server.{i}.")
+@CWMPObject(name = "Device.XMPP.Connection.{i}.Server.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"ServerAddress", "Port"})})
 @XmlRootElement(name = "Device.XMPP.Connection.Server")
 @XmlType(name = "Device.XMPP.Connection.Server")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -47,7 +49,7 @@ public class Server {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * The {{object}} object contains the attributes of the Simple Descriptor of an application endpoint, as defined in {{bibref|ZigBee2007|section 2.3.2.5 Simple Descriptor}}.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.ZDO.{i}.ApplicationEndpoint.{i}.SimpleDescriptor.")
 @XmlRootElement(name = "Device.ZigBee.ZDO.ApplicationEndpoint.SimpleDescriptor")

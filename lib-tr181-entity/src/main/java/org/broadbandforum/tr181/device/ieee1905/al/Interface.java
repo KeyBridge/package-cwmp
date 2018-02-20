@@ -28,16 +28,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.ieee1905.al._interface.Link;
 import org.broadbandforum.tr181.device.ieee1905.al._interface.VendorProperties;
 
 	/**
 	 * The 1905 interface table (described in {{bibref|IEEE1905.1a|sub-clause 5 Abstraction Layer Management}}).
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
-@CWMPObject(name = "Device.IEEE1905.AL.Interface.{i}.")
+@CWMPObject(name = "Device.IEEE1905.AL.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"InterfaceId"})})
 @XmlRootElement(name = "Device.IEEE1905.AL.Interface")
 @XmlType(name = "Device.IEEE1905.AL.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)

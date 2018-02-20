@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Result parameter indicating the components of the discovered route.  If a route could not be determined, there will be no instances of this object.
 	 *
-	 * @since 1.0
+	 * @since TR106 v1.0
 	 */
 @CWMPObject(name = "Device.LAN.TraceRouteDiagnostics.RouteHops.{i}.")
 @XmlRootElement(name = "Device.LAN.TraceRouteDiagnostics.RouteHops")

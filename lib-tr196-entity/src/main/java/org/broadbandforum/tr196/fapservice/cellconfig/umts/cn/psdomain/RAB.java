@@ -26,7 +26,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.cn.psdomain.rab.Stats
 	/**
 	 * This object provides monitoring of the Packet Switch RAB in the HNB.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.CN.PSDomain.RAB.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.CN.PSDomain.RAB")

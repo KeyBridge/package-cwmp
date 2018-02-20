@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.security.Certificate;
 	/**
 	 * This object contains general information related to managing security features on the device.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
 @CWMPObject(name = "Device.Security.")
 @XmlRootElement(name = "Device.Security")

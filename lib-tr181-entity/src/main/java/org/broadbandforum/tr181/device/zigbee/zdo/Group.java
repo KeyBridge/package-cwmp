@@ -25,15 +25,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.ZigBeeNetworkAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.ZigBeeNetworkAddress;
 
 	/**
 	 * The {{object}} object describes the configuration capabilities related to maintaining a ZigBee Device's Group Table as defined in {{bibref|ZigBee2007|section 2.5.2.7 Group Manager}}.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
-@CWMPObject(name = "Device.ZigBee.ZDO.{i}.Group.{i}.")
+@CWMPObject(name = "Device.ZigBee.ZDO.{i}.Group.{i}.", uniqueConstraints = {@CWMPUnique(names = {"GroupId"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.ZigBee.ZDO.Group")
 @XmlType(name = "Device.ZigBee.ZDO.Group")
 @XmlAccessorType(XmlAccessType.FIELD)

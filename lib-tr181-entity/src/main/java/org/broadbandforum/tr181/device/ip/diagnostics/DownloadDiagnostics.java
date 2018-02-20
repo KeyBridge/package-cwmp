@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.common.IPAddress;
 import org.broadbandforum.tr181.device.ip.diagnostics.downloaddiagnostics.IncrementalResult;
 import org.broadbandforum.tr181.device.ip.diagnostics.downloaddiagnostics.PerConnectionResult;
 
@@ -37,7 +37,7 @@ import org.broadbandforum.tr181.device.ip.diagnostics.downloaddiagnostics.PerCon
 
         Files received in the DownloadDiagnostics do not require file storage on the CPE device.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.DownloadDiagnostics.")
 @XmlRootElement(name = "Device.IP.Diagnostics.DownloadDiagnostics")

@@ -32,7 +32,7 @@ import org.broadbandforum.tr104.voiceservice.terminal.buttonmap.Button;
 
 Support of this object is appropriate only for a device that has programmable buttons in its user interface.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Terminal.{i}.ButtonMap.")
 @XmlRootElement(name = "VoiceService.Terminal.ButtonMap")

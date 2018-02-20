@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object represents vendor specific information received in a message with a Vendor specific TLV (as defined in in {{bibref|IEEE1905.1a|Table 6-7: Vendor specific TLV}}).
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.VendorProperties.{i}.")
 @XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.VendorProperties")

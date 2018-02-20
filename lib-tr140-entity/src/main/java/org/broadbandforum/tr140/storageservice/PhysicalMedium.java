@@ -23,14 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr140.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object provides information about each physical medium connected to this device.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
-@CWMPObject(name = "StorageService.{i}.PhysicalMedium.{i}.")
+@CWMPObject(name = "StorageService.{i}.PhysicalMedium.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}),
+	@CWMPUnique(names = {"Vendor", "Model", "SerialNumber"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "StorageService.PhysicalMedium")
 @XmlType(name = "StorageService.PhysicalMedium")
 @XmlAccessorType(XmlAccessType.FIELD)

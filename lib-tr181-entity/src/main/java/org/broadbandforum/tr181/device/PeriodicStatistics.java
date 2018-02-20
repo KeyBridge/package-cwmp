@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.device.periodicstatistics.SampleSet;
 
         This object provides a single set of global settings that affect the entire device unless overridden locally.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.PeriodicStatistics.")
 @XmlRootElement(name = "Device.PeriodicStatistics")

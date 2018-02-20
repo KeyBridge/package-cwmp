@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
 When {{param|#.ContinuousGPS}} is {{false}}, the parameters in this object are not being updated and their values are not accurate.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
 @CWMPObject(name = "FAP.GPS.ContinuousGPSStatus.")
 @XmlRootElement(name = "FAP.GPS.ContinuousGPSStatus")

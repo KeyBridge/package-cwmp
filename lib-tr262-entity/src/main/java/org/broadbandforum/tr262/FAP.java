@@ -29,7 +29,7 @@ import org.broadbandforum.tr262.fap.Tunnel;
 	/**
 	 * This object is the container for all Femto related component objects, to prevent pollution of the so-called global namespace of the BBF with FAP specific objects.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
 @CWMPObject(name = "FAP.")
 @XmlRootElement(name = "FAP")

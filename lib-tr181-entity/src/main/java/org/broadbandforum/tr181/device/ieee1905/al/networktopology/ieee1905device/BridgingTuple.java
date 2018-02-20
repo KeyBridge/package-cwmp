@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object represents an instance of an {{object}} for the {{object|##.IEEE1905Device}}. These values come from the 1905 Device’s Topology response message as defined in {{bibref|IEEE1905.1a|Table 6-11: Device bridging capability TLV}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.BridgingTuple.{i}.")
 @XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.BridgingTuple")

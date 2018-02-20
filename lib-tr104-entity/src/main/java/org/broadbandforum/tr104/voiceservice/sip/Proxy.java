@@ -23,15 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
-import org.broadbandforum.tr104.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * Global SIP parameters used by the CPE when acting as proxy for SIP user agents.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.SIP.Proxy.{i}.")
+@CWMPObject(name = "VoiceService.{i}.SIP.Proxy.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"ProxyIPAddress", "ProxyPort"})})
 @XmlRootElement(name = "VoiceService.SIP.Proxy")
 @XmlType(name = "VoiceService.SIP.Proxy")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -44,14 +46,14 @@ public class Proxy {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Indicates the status of this proxy.
 	 *
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -66,7 +68,7 @@ public class Proxy {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * The IP address the proxy listens on.
 

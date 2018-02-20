@@ -25,13 +25,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.DiagnosticsState;
+import org.broadbandforum.common.DiagnosticsState;
 import org.broadbandforum.tr181.device.wifi.neighboringwifidiagnostic.Result;
 
 	/**
 	 * This object defines access to other WiFi SSIDs that this device is able to receive.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
 @CWMPObject(name = "Device.WiFi.NeighboringWiFiDiagnostic.")
 @XmlRootElement(name = "Device.WiFi.NeighboringWiFiDiagnostic")

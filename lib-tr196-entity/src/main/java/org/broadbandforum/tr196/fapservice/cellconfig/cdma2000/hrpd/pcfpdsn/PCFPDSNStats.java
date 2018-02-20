@@ -23,12 +23,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.IPAddress;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * This object is used in obtaining the PCF PDSN stats for each PDSN
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.PCFPDSN.{i}.PCFPDSNStats.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD.PCFPDSN.PCFPDSNStats")

@@ -25,7 +25,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * Global operations total statistics.
 	 *
-	 * @since 1.1
+	 * @since TR135 v1.1
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.GlobalOperation.Total.")
 @XmlRootElement(name = "STBService.ServiceMonitoring.GlobalOperation.Total")

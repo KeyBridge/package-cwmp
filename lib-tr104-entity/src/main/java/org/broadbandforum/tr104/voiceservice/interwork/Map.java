@@ -24,14 +24,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * For interworking use cases such as SIP-ISDN PBX plug and ESBC : mapping instance between a Network interface and a User extension.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.Interwork.{i}.Map.{i}.")
+@CWMPObject(name = "VoiceService.{i}.Interwork.{i}.Map.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.Interwork.Map")
 @XmlType(name = "VoiceService.Interwork.Map")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -44,14 +45,14 @@ public class Map {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Indicates the status of this connection mapping. {{enum}}
 	 *
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "InActive";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -81,7 +82,7 @@ public class Map {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * {{reference}}. This parameter can only be modified if {{param|Origin}} is {{enum|Static|Origin}}.
 	 *
@@ -120,7 +121,7 @@ This parameter is applicable only if the User interface supports per digit diali
 	 */
 	@XmlElement(name = "DigitMapEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean digitMapEnable = true;
+	public Boolean digitMapEnable;
 	/**
 	 * Indicates the priority for this combination of Network-to-User mapping, where 1 is the highest priority.  Where the priority differs between entries in this table, the CPE SHOULD use the highest priority (lowest numbered) entry.  Where the priorities are equal among multiple entries, the CPE MAY apply a local criterion for choosing among them.
 	 *

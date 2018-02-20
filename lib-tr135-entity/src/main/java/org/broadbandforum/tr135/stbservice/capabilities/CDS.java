@@ -25,7 +25,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object describes the characteristics of the Content Download System, if any.
 	 *
-	 * @since 1.1
+	 * @since TR135 v1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.CDS.")
 @XmlRootElement(name = "STBService.Capabilities.CDS")

@@ -23,15 +23,16 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 import org.broadbandforum.tr104.voiceservice.calllog.session.Destination;
 import org.broadbandforum.tr104.voiceservice.calllog.session.Source;
 
 	/**
 	 * Session information within one call.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.")
+@CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.", uniqueConstraints = {@CWMPUnique(names = {"SessionID"})})
 @XmlRootElement(name = "VoiceService.CallLog.Session")
 @XmlType(name = "VoiceService.CallLog.Session")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -40,7 +40,7 @@ import org.broadbandforum.tr181.device.managementserver.VirtualDevice;
 	/**
 	 * This object contains parameters relating to the CPE's association with an ACS.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.ManagementServer.")
 @XmlRootElement(name = "Device.ManagementServer")
@@ -61,7 +61,7 @@ public class ManagementServer {
 	 */
 	@XmlElement(name = "EnableCWMP")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enableCWMP = true;
+	public Boolean enableCWMP;
 	/**
 	 * URL, as defined in {{bibref|RFC3986}}, for the CPE to connect to the ACS using the CPE WAN Management Protocol. 
 
@@ -400,7 +400,7 @@ public class ManagementServer {
 	 */
 	@XmlElement(name = "InstanceMode")
 	@CWMPParameter(access = "readWrite")
-	public String instanceMode = "InstanceNumber";
+	public String instanceMode;
 	/**
 	 * Enable or disable the Auto-Create Instance Mechanism. When {{param|AliasBasedAddressing}} is {{true}}, {{param}} indicates whether or not the CPE will automatically create instances while processing a SetParameterValues RPC (as defined in {{bibref|TR-069a4|A.3.2.1}}).
 
@@ -414,7 +414,7 @@ public class ManagementServer {
 	 */
 	@XmlElement(name = "AutoCreateInstances")
 	@CWMPParameter(access = "readWrite")
-	public Boolean autoCreateInstances = false;
+	public Boolean autoCreateInstances;
 	/**
 	 * The minimum time, in seconds, between Active Notifications resulting from changes to the {{param|ManageableDeviceNumberOfEntries}} (if Active Notification is enabled).
 	 *
@@ -502,7 +502,7 @@ Enumerated value must be one of [GZIP, Compress, Deflate]
 	 */
 	@XmlElement(name = "HTTPCompression")
 	@CWMPParameter(access = "readWrite")
-	public String httPCompression = "Disabled";
+	public String httPCompression;
 	/**
 	 * Indicates the Lightweight Notification Protocol(s) supported by this CPE.  
 

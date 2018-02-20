@@ -22,14 +22,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * This object represents an instance of an L2 Neighbor for the {{object|##.IEEE1905Device}}. These fields come from a Topology response message as defined in {{bibref|IEEE1905.1a|Table 6-41: L2 neighbor device TLV}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
-@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.L2Neighbor.{i}.")
+@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.L2Neighbor.{i}.", uniqueConstraints = {@CWMPUnique(names = {"LocalInterface", "NeighborInterfaceId"})})
 @XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.L2Neighbor")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.L2Neighbor")
 @XmlAccessorType(XmlAccessType.FIELD)

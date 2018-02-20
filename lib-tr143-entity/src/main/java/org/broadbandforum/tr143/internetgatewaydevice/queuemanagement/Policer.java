@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Policer table.
 	 *
-	 * @since 1.1
+	 * @since TR143 v1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.QueueManagement.Policer.{i}.")
 @XmlRootElement(name = "InternetGatewayDevice.QueueManagement.Policer")
@@ -53,7 +53,7 @@ This parameter is OBSOLETED because it serves no purpose (no other parameter ref
 	 */
 	@XmlElement(name = "PolicerEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean policerEnable = false;
+	public Boolean policerEnable;
 	/**
 	 * The status of this policer.  {{enum}}
 
@@ -62,7 +62,7 @@ The {{enum|Error}} value MAY be used by the CPE to indicate a locally defined er
 	 * @since 1.1
 	 */
 	@XmlElement(name = "PolicerStatus")
-	public String policerStatus = "Disabled";
+	public String policerStatus;
 	/**
 	 * Committed rate allowed for this policer in bits-per-second.
 	 *
@@ -122,7 +122,7 @@ Applied for {{enum|TwoRateThreeColor|MeterType}} meters.
 	 */
 	@XmlElement(name = "MeterType")
 	@CWMPParameter(access = "readWrite")
-	public String meterType = "SimpleTokenBucket";
+	public String meterType;
 	/**
 	 * Supported meter types.
 	 *
@@ -149,7 +149,7 @@ A {{pattern|Count}} action increases the meter instance count statistics.
 	 */
 	@XmlElement(name = "ConformingAction")
 	@CWMPParameter(access = "readWrite")
-	public String conformingAction = "Null";
+	public String conformingAction;
 	/**
 	 * Instructions for how to handle traffic that is partially conforming (colored yellow).  {{pattern}}
 
@@ -167,7 +167,7 @@ A {{pattern|Count}} action increases the meter instance count statistics.
 	 */
 	@XmlElement(name = "PartialConformingAction")
 	@CWMPParameter(access = "readWrite")
-	public String partialConformingAction = "Drop";
+	public String partialConformingAction;
 	/**
 	 * Instructions for how to handle traffic that is non-conforming.  {{pattern}}
 
@@ -185,7 +185,7 @@ A {{pattern|Count}} action increases the meter instance count statistics.
 	 */
 	@XmlElement(name = "NonConformingAction")
 	@CWMPParameter(access = "readWrite")
-	public String nonConformingAction = "Drop";
+	public String nonConformingAction;
 	/**
 	 * Number of Packets counted as result of a count meter action.
 	 *

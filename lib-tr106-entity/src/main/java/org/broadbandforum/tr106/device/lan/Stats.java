@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains statistics for the default IP interface.
 	 *
-	 * @since 1.0
+	 * @since TR106 v1.0
 	 */
 @CWMPObject(name = "Device.LAN.Stats.")
 @XmlRootElement(name = "Device.LAN.Stats")

@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This table provides the ACS with the ability to control the Parameters that are delivered by the Inform RPC.
@@ -35,9 +36,10 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         This table does not include Forced Inform Parameters, and Forced Inform Parameters are not allowed to be inserted into this table.  Any attempt by an ACS to configure this table to contain a Forced Inform Parameter MUST result in the failure of the SetParameterValues RPC with error code 9007.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.ManagementServer.InformParameter.{i}.")
+@CWMPObject(name = "Device.ManagementServer.InformParameter.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"ParameterName"})})
 @XmlRootElement(name = "Device.ManagementServer.InformParameter")
 @XmlType(name = "Device.ManagementServer.InformParameter")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -50,7 +52,7 @@ public class InformParameter {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

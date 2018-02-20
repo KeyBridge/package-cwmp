@@ -31,7 +31,7 @@ It is characterized by the co-ordinates of an ellipsoid point with altitude, dis
 
 This information is used to refer to a point on the Earth's surface, or close to the Earth's surface, with the same longitude and latitude.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.UMTS.WCDMA.Cell.{i}.BCCH.ReferencePosition.")
 @XmlRootElement(name = "FAPService.REM.UMTS.WCDMA.Cell.BCCH.ReferencePosition")

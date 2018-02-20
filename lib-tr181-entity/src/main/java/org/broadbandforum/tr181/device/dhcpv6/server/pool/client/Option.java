@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * DHCPv6 options supplied by this client, e.g. ''DUID'' (Option 1), ''UserClassID'' (Option 15) or ''VendorClassID'' (option 16).
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
 @CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.Client.{i}.Option.{i}.")
 @XmlRootElement(name = "Device.DHCPv6.Server.Pool.Client.Option")

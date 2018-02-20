@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object defines a Selective Call Rejection (SCREJ) that permit the user to selectively reject calls depending on the calling number.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.Set.{i}.SCREJ.{i}.")
+@CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.Set.{i}.SCREJ.{i}.", uniqueConstraints = {@CWMPUnique(names = {"CallingNumber"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.CallControl.CallingFeatures.Set.SCREJ")
 @XmlType(name = "VoiceService.CallControl.CallingFeatures.Set.SCREJ")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class SCREJ {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

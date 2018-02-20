@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters related to Wi-Fi Protected Setup {{bibref|WPSv1.0}} for this access point.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.WiFi.AccessPoint.{i}.WPS.")
 @XmlRootElement(name = "Device.WiFi.AccessPoint.WPS")
@@ -44,7 +44,7 @@ public class WPS {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = true;
+	public Boolean enable;
 	/**
 	 * {{list}} Indicates WPS configuration methods supported by the device.  
 

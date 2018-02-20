@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters related to the MMS API.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
 @CWMPObject(name = "Device.FAP.ApplicationPlatform.Control.MMS.")
 @XmlRootElement(name = "Device.FAP.ApplicationPlatform.Control.MMS")

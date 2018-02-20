@@ -38,7 +38,7 @@ import org.broadbandforum.tr135.stbservice.capabilities.VideoOutput;
 	/**
 	 * The overall capabilities of the STB CPE.  This is a constant read-only object, meaning that only a firmware update will cause these values to be altered.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.")
 @XmlRootElement(name = "STBService.Capabilities")

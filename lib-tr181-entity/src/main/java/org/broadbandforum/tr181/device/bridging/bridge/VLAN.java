@@ -23,16 +23,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Bridge VLAN table.  If this table is supported, if MUST contain an entry for each VLAN known to the Bridge.
 
         This table only applies to an 802.1Q {{bibref|802.1Q-2011}} Bridge.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.Bridging.Bridge.{i}.VLAN.{i}.")
+@CWMPObject(name = "Device.Bridging.Bridge.{i}.VLAN.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"VLANID"})})
 @XmlRootElement(name = "Device.Bridging.Bridge.VLAN")
 @XmlType(name = "Device.Bridging.Bridge.VLAN")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -45,7 +47,7 @@ public class VLAN {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

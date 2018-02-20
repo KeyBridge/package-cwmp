@@ -26,15 +26,16 @@ import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 import org.broadbandforum.tr181.device.lldp.discovery.device.DeviceInformation;
 import org.broadbandforum.tr181.device.lldp.discovery.device.Port;
 
 	/**
 	 * This table contains information about discovered LLDP devices.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.")
+@CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.", uniqueConstraints = {@CWMPUnique(names = {"ChassisIDSubtype", "ChassisID"})})
 @XmlRootElement(name = "Device.LLDP.Discovery.Device")
 @XmlType(name = "Device.LLDP.Discovery.Device")
 @XmlAccessorType(XmlAccessType.FIELD)

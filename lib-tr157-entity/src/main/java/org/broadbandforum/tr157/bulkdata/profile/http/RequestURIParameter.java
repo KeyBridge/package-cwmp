@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object represents an instance of a parameter to be used in the report header used as part of the HTTP Request-URI transmitted by the CPE to the collection server using the Request-URI in addition to the parameters required by {{bibref|TR-157a10|Annex A.2.1}}.
 	 *
-	 * @since 1.10
+	 * @since TR157 v1.10
 	 */
 @CWMPObject(name = "BulkData.Profile.{i}.HTTP.RequestURIParameter.{i}.")
 @XmlRootElement(name = "BulkData.Profile.HTTP.RequestURIParameter")

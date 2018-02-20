@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object defines the properties to be used when the {{object|##.Profile}} object's {{param|#.EncodingType}} parameter value is {{enum|JSON|##.EncodingTypes}}.
 	 *
-	 * @since 1.10
+	 * @since TR157 v1.10
 	 */
 @CWMPObject(name = "BulkData.Profile.{i}.JSONEncoding.")
 @XmlRootElement(name = "BulkData.Profile.JSONEncoding")
@@ -43,7 +43,7 @@ public class JSONEncoding {
 	 */
 	@XmlElement(name = "ReportFormat")
 	@CWMPParameter(access = "readWrite")
-	public String reportFormat = "ObjectHierarchy";
+	public String reportFormat;
 	/**
 	 * The format of timestamp to use for the JSON Object named "CollectionTime" as described in {{bibref|TR-157a10}}.
 	 *
@@ -51,7 +51,7 @@ public class JSONEncoding {
 	 */
 	@XmlElement(name = "ReportTimestamp")
 	@CWMPParameter(access = "readWrite")
-	public String reportTimestamp = "Unix-Epoch";
+	public String reportTimestamp;
 
 	public JSONEncoding() {
 	}

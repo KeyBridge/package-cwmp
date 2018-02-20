@@ -30,7 +30,7 @@ import org.broadbandforum.tr104.voiceservice.voipprofile.rtp.SRTP;
 	/**
 	 * VoIP profile parameters related to the voice stream sent via RTP.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.RTP.")
 @XmlRootElement(name = "VoiceService.VoIPProfile.RTP")
@@ -84,7 +84,7 @@ If either {{param}} or {{param|EthernetPriorityMark}} is greater than zero, then
 	@XmlElement(name = "VLANIDMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer vlaNIDMark = -1;
+	public Integer vlaNIDMark;
 	/**
 	 * Ethernet priority code (as defined in {{bibref|802.1D-2004}}) to be used for outgoing RTP packets for this profile.  A value of -1 indicates the default value is to be used.
 
@@ -95,7 +95,7 @@ If either {{param|VLANIDMark}} or {{param}} is greater than zero, then the outgo
 	@XmlElement(name = "EthernetPriorityMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer ethernetPriorityMark = -1;
+	public Integer ethernetPriorityMark;
 	/**
 	 * Payload type to be used for RTP telephone events.
 

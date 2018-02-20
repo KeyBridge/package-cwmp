@@ -21,14 +21,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * This object represents represents all IPv6 addresses reported for a MAC address (AL or interface) in a Higher Layer response message for the IEEE1905Device as defined in {{bibref|IEEE1905.1a|Table 6-34: IPv6 type TLV}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
-@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.IPv6Address.{i}.")
+@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.IPv6Address.{i}.", uniqueConstraints = {@CWMPUnique(names = {"MACAddress", "IPv6Address"})})
 @XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IPv6Address")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IPv6Address")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -47,7 +48,7 @@ public class IPv6Address {
 	 * @since 2.9
 	 */
 	@XmlElement(name = "IPv6Address")
-	public org.broadbandforum.tr181.datatypes.IPv6Address ipv6Address;
+	public org.broadbandforum.common.IPv6Address ipv6Address;
 	/**
 	 * The IPv6 Address Type of this {{param|IPv6Address}}. {{enum}}
 	 *
@@ -61,7 +62,7 @@ public class IPv6Address {
 	 * @since 2.9
 	 */
 	@XmlElement(name = "IPv6AddressOrigin")
-	public org.broadbandforum.tr181.datatypes.IPv6Address ipv6AddressOrigin;
+	public org.broadbandforum.common.IPv6Address ipv6AddressOrigin;
 
 	public IPv6Address() {
 	}
@@ -105,7 +106,7 @@ public class IPv6Address {
 	 * @since 2.9
 	 * @return the value
 	 */
-	public org.broadbandforum.tr181.datatypes.IPv6Address getIpv6Address() {
+	public org.broadbandforum.common.IPv6Address getIpv6Address() {
 		return ipv6Address;
 	}
 
@@ -115,7 +116,7 @@ public class IPv6Address {
 	 * @since 2.9
 	 * @param ipv6Address the input value
 	 */
-	public void  setIpv6Address(org.broadbandforum.tr181.datatypes.IPv6Address ipv6Address) {
+	public void  setIpv6Address(org.broadbandforum.common.IPv6Address ipv6Address) {
 		this.ipv6Address = ipv6Address;
 	}
 
@@ -126,7 +127,7 @@ public class IPv6Address {
 	 * @param ipv6Address the input value
 	 * @return this instance
 	 */
-	public IPv6Address withIpv6Address(org.broadbandforum.tr181.datatypes.IPv6Address ipv6Address) {
+	public IPv6Address withIpv6Address(org.broadbandforum.common.IPv6Address ipv6Address) {
 		this.ipv6Address = ipv6Address;
 		return this;
 	}
@@ -169,7 +170,7 @@ public class IPv6Address {
 	 * @since 2.9
 	 * @return the value
 	 */
-	public org.broadbandforum.tr181.datatypes.IPv6Address getIpv6AddressOrigin() {
+	public org.broadbandforum.common.IPv6Address getIpv6AddressOrigin() {
 		return ipv6AddressOrigin;
 	}
 
@@ -179,7 +180,7 @@ public class IPv6Address {
 	 * @since 2.9
 	 * @param ipv6AddressOrigin the input value
 	 */
-	public void  setIpv6AddressOrigin(org.broadbandforum.tr181.datatypes.IPv6Address ipv6AddressOrigin) {
+	public void  setIpv6AddressOrigin(org.broadbandforum.common.IPv6Address ipv6AddressOrigin) {
 		this.ipv6AddressOrigin = ipv6AddressOrigin;
 	}
 
@@ -190,7 +191,7 @@ public class IPv6Address {
 	 * @param ipv6AddressOrigin the input value
 	 * @return this instance
 	 */
-	public IPv6Address withIpv6AddressOrigin(org.broadbandforum.tr181.datatypes.IPv6Address ipv6AddressOrigin) {
+	public IPv6Address withIpv6AddressOrigin(org.broadbandforum.common.IPv6Address ipv6AddressOrigin) {
 		this.ipv6AddressOrigin = ipv6AddressOrigin;
 		return this;
 	}

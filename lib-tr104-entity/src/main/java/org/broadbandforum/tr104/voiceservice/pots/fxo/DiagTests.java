@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * FXO port tests.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.POTS.FXO.{i}.DiagTests.")
 @XmlRootElement(name = "VoiceService.POTS.FXO.DiagTests")

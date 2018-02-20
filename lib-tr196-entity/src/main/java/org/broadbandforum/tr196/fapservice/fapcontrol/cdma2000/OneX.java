@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.fapcontrol.cdma2000.onex.SelfConfig;
 	/**
 	 * This object contains all global attributes of the 1xFemto application.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.OneX.")
 @XmlRootElement(name = "FAPService.FAPControl.CDMA2000.OneX")

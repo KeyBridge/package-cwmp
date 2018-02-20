@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This table contains the interface's IPv6 prefixes.  There MUST be an entry for each such prefix, not only for prefixes learned from router advertisements.
@@ -46,9 +47,10 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         This object is based on ''ipAddressPrefixTable'' from {{bibref|RFC4293}}.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.IP.Interface.{i}.IPv6Prefix.{i}.")
+@CWMPObject(name = "Device.IP.Interface.{i}.IPv6Prefix.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Prefix"})})
 @XmlRootElement(name = "Device.IP.Interface.IPv6Prefix")
 @XmlType(name = "Device.IP.Interface.IPv6Prefix")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -61,7 +63,7 @@ public class IPv6Prefix {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this {{object}} table entry.  {{enum}}
 
@@ -70,7 +72,7 @@ public class IPv6Prefix {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * The status of {{param|Prefix}}, indicating whether it can be used for communication.  See also {{param|PreferredLifetime}} and {{param|ValidLifetime}}.  {{enum}}
 
@@ -79,7 +81,7 @@ public class IPv6Prefix {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "PrefixStatus")
-	public String prefixStatus = "Invalid";
+	public String prefixStatus;
 	/**
 	 * {{datatype|expand}}
 
@@ -101,7 +103,7 @@ public class IPv6Prefix {
 	 */
 	@XmlElement(name = "Prefix")
 	@CWMPParameter(access = "readWrite")
-	public org.broadbandforum.tr181.datatypes.IPv6Prefix prefix;
+	public org.broadbandforum.common.IPv6Prefix prefix;
 	/**
 	 * Mechanism via which the prefix was assigned or most recently updated. {{enum}}
 
@@ -120,7 +122,7 @@ public class IPv6Prefix {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * Static prefix sub-type.  For a {{enum|Static|Origin}} prefix, this can be set to {{enum|PrefixDelegation}} or {{enum|Child}}, thereby creating an unconfigured prefix of the specified type that will be populated in preference to creating a new instance.  This allows the ACS to pre-create "prefix slots" with known path names that can be referenced from elsewhere in the data model before they have been populated.  {{enum}}
 
@@ -140,7 +142,7 @@ public class IPv6Prefix {
 	 */
 	@XmlElement(name = "StaticType")
 	@CWMPParameter(access = "readWrite")
-	public String staticType = "Static";
+	public String staticType;
 	/**
 	 * Indicates the parent prefix from which this prefix was derived. The parent prefix is relevant only for {{enum|Child|Origin}} prefixes and for {{enum|Static|Origin}} {{enum|Child|StaticType}} prefixes (both of which will always be on downstream interfaces), i.e. for {{param|Origin}}={{enum|Child|Origin}} and for ({{param|Origin}},{{param|StaticType}}) = ({{enum|Static|Origin}},{{enum|Child|StaticType}}) prefixes.
 
@@ -162,7 +164,7 @@ public class IPv6Prefix {
 	 */
 	@XmlElement(name = "ChildPrefixBits")
 	@CWMPParameter(access = "readWrite")
-	public org.broadbandforum.tr181.datatypes.IPv6Prefix childPrefixBits;
+	public org.broadbandforum.common.IPv6Prefix childPrefixBits;
 	/**
 	 * On-link flag {{bibref|RFC4861|Section 4.6.2}} as received (in the RA) for RouterAdvertisement.  Indicates whether this prefix can be used for on-link determination.
 
@@ -174,7 +176,7 @@ public class IPv6Prefix {
 	 */
 	@XmlElement(name = "OnLink")
 	@CWMPParameter(access = "readWrite")
-	public Boolean onlink = false;
+	public Boolean onlink;
 	/**
 	 * Autonomous address configuration flag {{bibref|RFC4861|Section 4.6.2}} as received (in the RA) for RouterAdvertisement.  Indicates whether this prefix can be used for generating global addresses as specified by SLAAC {{bibref|RFC4862}}.
 
@@ -186,7 +188,7 @@ public class IPv6Prefix {
 	 */
 	@XmlElement(name = "Autonomous")
 	@CWMPParameter(access = "readWrite")
-	public Boolean autonomous = false;
+	public Boolean autonomous;
 	/**
 	 * This parameter is based on ''ipAddressPrefixAdvPreferredLifetime'' from {{bibref|RFC4293}}. The time at which this prefix will cease to be preferred (i.e. will become deprecated), or {{null}} if not known. For an infinite lifetime, the parameter value MUST be 9999-12-31T23:59:59Z.
 
@@ -368,7 +370,7 @@ public class IPv6Prefix {
 	 * @since 2.2
 	 * @return the value
 	 */
-	public org.broadbandforum.tr181.datatypes.IPv6Prefix getPrefix() {
+	public org.broadbandforum.common.IPv6Prefix getPrefix() {
 		return prefix;
 	}
 
@@ -382,7 +384,7 @@ public class IPv6Prefix {
 	 * @since 2.2
 	 * @param prefix the input value
 	 */
-	public void  setPrefix(org.broadbandforum.tr181.datatypes.IPv6Prefix prefix) {
+	public void  setPrefix(org.broadbandforum.common.IPv6Prefix prefix) {
 		this.prefix = prefix;
 	}
 
@@ -397,7 +399,7 @@ public class IPv6Prefix {
 	 * @param prefix the input value
 	 * @return this instance
 	 */
-	public IPv6Prefix withPrefix(org.broadbandforum.tr181.datatypes.IPv6Prefix prefix) {
+	public IPv6Prefix withPrefix(org.broadbandforum.common.IPv6Prefix prefix) {
 		this.prefix = prefix;
 		return this;
 	}
@@ -586,7 +588,7 @@ public class IPv6Prefix {
 	 * @since 2.2
 	 * @return the value
 	 */
-	public org.broadbandforum.tr181.datatypes.IPv6Prefix getChildPrefixBits() {
+	public org.broadbandforum.common.IPv6Prefix getChildPrefixBits() {
 		return childPrefixBits;
 	}
 
@@ -600,7 +602,7 @@ public class IPv6Prefix {
 	 * @since 2.2
 	 * @param childPrefixBits the input value
 	 */
-	public void  setChildPrefixBits(org.broadbandforum.tr181.datatypes.IPv6Prefix childPrefixBits) {
+	public void  setChildPrefixBits(org.broadbandforum.common.IPv6Prefix childPrefixBits) {
 		this.childPrefixBits = childPrefixBits;
 	}
 
@@ -615,7 +617,7 @@ public class IPv6Prefix {
 	 * @param childPrefixBits the input value
 	 * @return this instance
 	 */
-	public IPv6Prefix withChildPrefixBits(org.broadbandforum.tr181.datatypes.IPv6Prefix childPrefixBits) {
+	public IPv6Prefix withChildPrefixBits(org.broadbandforum.common.IPv6Prefix childPrefixBits) {
 		this.childPrefixBits = childPrefixBits;
 		return this;
 	}

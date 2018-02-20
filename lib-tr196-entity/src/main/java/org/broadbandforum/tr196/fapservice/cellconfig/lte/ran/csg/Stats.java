@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object provides the LTE RAN CSG statistics as defined in {{bibref|3GPP-TS.32.453}}.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.CSG.Stats.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.CSG.Stats")

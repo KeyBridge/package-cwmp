@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table containing the intra-frequency cell list provided by the ACS. The table contents MAY be added/deleted/modified during operation, in which case these changes shall be reflected in the broadcast information as soon as possible.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborList.IntraFreqCell.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborList.IntraFreqCell.{i}.", uniqueConstraints = {@CWMPUnique(names = {"PCPICHScramblingCode"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.NeighborList.IntraFreqCell")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.NeighborList.IntraFreqCell")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class IntraFreqCell {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -59,7 +61,7 @@ public class IntraFreqCell {
 	 */
 	@XmlElement(name = "MustInclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean mustInclude = false;
+	public Boolean mustInclude;
 	/**
 	 * PLMN ID consists of Mobile Country Code (MCC) and Mobile Network Code (MNC) {{bibref|3GPP-TS.23.003}}, {{bibref|3GPP-TS.24.008}}.
 
@@ -155,7 +157,7 @@ Actual values of the power are -10.0 dBm to 50.0 dBm in steps of 0.1 dB. The val
 	@XmlElement(name = "PCPICHTxPower")
 	@CWMPParameter(access = "readWrite", units = "dBm")
 	@Size(min = -100, max = 500)
-	public Integer pcpICHTxPower = 0;
+	public Integer pcpICHTxPower;
 	/**
 	 * Provides identity of collocated inter-frequency Cell. Needed for pathloss estimation, in case the femto environment masks intra-frequency neighbor.
 
@@ -181,7 +183,7 @@ C.f {{bibref|3GPP-TS.32.642|Section 6.3.11}} {{bibref|3GPP-TS.25.104|Section 6.2
 	@XmlElement(name = "MaxTxPower")
 	@CWMPParameter(access = "readWrite", units = "0.1 dBm")
 	@Size(min = -300, max = 600)
-	public Integer maxTxPower = 0;
+	public Integer maxTxPower;
 	/**
 	 * Maximum DL DPCH Tx Power per UE configured in the cell (for CS UEs).
 
@@ -202,7 +204,7 @@ divided by 10 yields the actual value of the power.
 	@XmlElement(name = "MaxDPCHtxPower")
 	@CWMPParameter(access = "readWrite", units = "0.1 dBm")
 	@Size(min = -400, max = 500)
-	public Integer maxDPCHtxPower = 0;
+	public Integer maxDPCHtxPower;
 
 	public IntraFreqCell() {
 	}

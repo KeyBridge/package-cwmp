@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.fapservice.capabilities.UMTS;
 	/**
 	 * This object contains parameters relating to the hardware capabilities of the FAP device.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Capabilities.")
 @XmlRootElement(name = "FAPService.Capabilities")

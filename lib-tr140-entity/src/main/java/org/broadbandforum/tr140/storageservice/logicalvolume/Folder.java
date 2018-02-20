@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr140.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr140.storageservice.logicalvolume.folder.GroupAccess;
 import org.broadbandforum.tr140.storageservice.logicalvolume.folder.Quota;
 import org.broadbandforum.tr140.storageservice.logicalvolume.folder.UserAccess;
@@ -36,9 +37,10 @@ import org.broadbandforum.tr140.storageservice.logicalvolume.folder.UserAccess;
 
 Creating an instance of this object generates a disabled {{object}} instance.  Before this new {{object}} instance can be enabled (via a SetParameterValues command), it MUST have the {{param|Name}} configured.  Folder instances are unique per {{object|.LogicalVolume.{i}.}} and the unique key for this object is {{param|Name}} which also means that once an instance is enabled {{param|Name}} becomes immutable for the life of the instance.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
-@CWMPObject(name = "StorageService.{i}.LogicalVolume.{i}.Folder.{i}.")
+@CWMPObject(name = "StorageService.{i}.LogicalVolume.{i}.Folder.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "StorageService.LogicalVolume.Folder")
 @XmlType(name = "StorageService.LogicalVolume.Folder")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -76,7 +78,7 @@ Once this instance becomes enabled, this parameter will be immutable for the lif
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * What are the User authentication requirements of this folder?  The following bitmap is used.
 

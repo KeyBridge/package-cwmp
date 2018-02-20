@@ -30,7 +30,7 @@ import org.broadbandforum.tr262.fap.perfmgmt.Config;
 	/**
 	 * This object contains parameters relating to Performance Management in a Femto-related environment.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
 @CWMPObject(name = "FAP.PerfMgmt.")
 @XmlRootElement(name = "FAP.PerfMgmt")

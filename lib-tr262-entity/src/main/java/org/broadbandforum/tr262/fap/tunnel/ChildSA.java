@@ -24,13 +24,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Child IPsec Security Association Table.  This Table is a member of the IPsec Security Association Database (SAD). {{bibref|RFC4301}}.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
-@CWMPObject(name = "FAP.Tunnel.ChildSA.{i}.")
+@CWMPObject(name = "FAP.Tunnel.ChildSA.{i}.", uniqueConstraints = {@CWMPUnique(names = {"SPI"})})
 @XmlRootElement(name = "FAP.Tunnel.ChildSA")
 @XmlType(name = "FAP.Tunnel.ChildSA")
 @XmlAccessorType(XmlAccessType.FIELD)

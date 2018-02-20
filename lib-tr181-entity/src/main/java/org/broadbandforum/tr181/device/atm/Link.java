@@ -27,7 +27,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.atm.link.QoS;
 import org.broadbandforum.tr181.device.atm.link.Stats;
 
@@ -36,9 +37,10 @@ import org.broadbandforum.tr181.device.atm.link.Stats;
 
         When an ''ATM Link'' interface is used, a lower-layer {{object|.DSL.Channel}} interface MUST be configured with ATM encapsulation (see {{param|.DSL.Channel.{i}.LinkEncapsulationUsed}}).
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.ATM.Link.{i}.")
+@CWMPObject(name = "Device.ATM.Link.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.ATM.Link")
 @XmlType(name = "Device.ATM.Link")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -53,7 +55,7 @@ public class Link {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The current operational state of the link (see {{bibref|TR-181i2|Section 4.2.2}}). {{enum}}
 
@@ -66,7 +68,7 @@ public class Link {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Down";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *

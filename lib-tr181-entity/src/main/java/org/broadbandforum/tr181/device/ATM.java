@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.atm.Link;
 	/**
 	 * Asynchronous Transfer Mode (ATM) object that contains the {{object|Link}} interface and {{object|Diagnostics.F5Loopback}} diagnostics.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.ATM.")
 @XmlRootElement(name = "Device.ATM")

@@ -27,17 +27,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr143.datatypes.IPAddress;
-import org.broadbandforum.tr143.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPAddress;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr143.internetgatewaydevice.wandevice.wanconnectiondevice.wanpppconnection.PortMapping;
 import org.broadbandforum.tr143.internetgatewaydevice.wandevice.wanconnectiondevice.wanpppconnection.Stats;
 
 	/**
 	 * This object enables configuration of PPP connections on the WAN interface of a CPE.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.", uniqueConstraints = {@CWMPUnique(names = {"ExternalIPAddress"})})
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPPPConnection")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPPPConnection")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -50,7 +51,7 @@ public class WANPPPConnection {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Current status of the connection.
 	 *
@@ -97,7 +98,7 @@ public class WANPPPConnection {
 	 * @since 1.0
 	 */
 	@XmlElement(name = "LastConnectionError")
-	public String lastConnectionError = "ERROR_NONE";
+	public String lastConnectionError;
 	/**
 	 * The time in seconds since the establishment of the connection after which connection termination is automatically initiated by the CPE.  This occurs irrespective of whether the connection is being used or not.  A value of 0 (zero) indicates that the connection is not to be shut down automatically.
 	 *
@@ -215,7 +216,7 @@ public class WANPPPConnection {
 	 */
 	@XmlElement(name = "DNSEnabled")
 	@CWMPParameter(access = "readWrite")
-	public Boolean dnsEnabled = true;
+	public Boolean dnsEnabled;
 	/**
 	 * Whether or not a manually set, non-empty DNS address can be overridden by a DNS entry received from the WAN.
 	 *
@@ -223,7 +224,7 @@ public class WANPPPConnection {
 	 */
 	@XmlElement(name = "DNSOverrideAllowed")
 	@CWMPParameter(access = "readWrite")
-	public Boolean dnsOverrideAllowed = false;
+	public Boolean dnsOverrideAllowed;
 	/**
 	 * DNS server IP addresses for this connection.  Support for more than three DNS Servers is OPTIONAL.
 	 *
@@ -294,7 +295,7 @@ Note that the reason for a PPP connection becoming disconnected to begin with mi
 	 */
 	@XmlElement(name = "ConnectionTrigger")
 	@CWMPParameter(access = "readWrite")
-	public String connectionTrigger = "OnDemand";
+	public String connectionTrigger;
 	/**
 	 * Defines the Rx protocol to be used.
 	 *
@@ -302,7 +303,7 @@ Note that the reason for a PPP connection becoming disconnected to begin with mi
 	 */
 	@XmlElement(name = "RouteProtocolRx")
 	@CWMPParameter(access = "readWrite")
-	public String routeProtocolRx = "Off";
+	public String routeProtocolRx;
 	/**
 	 * PPP LCP Echo period in seconds.
 	 *
@@ -331,7 +332,7 @@ A value of -1 indicates no shaping.
 	@XmlElement(name = "ShapingRate")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer shapingRate = -1;
+	public Integer shapingRate;
 	/**
 	 * Burst size in bytes.  For both leaky bucket (constant rate shaping) and token bucket (variable rate shaping) this is the bucket size and is therefore the maximum burst size.
 	 *

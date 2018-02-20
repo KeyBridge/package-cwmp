@@ -25,7 +25,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr104.voiceservice.CallControl;
 import org.broadbandforum.tr104.voiceservice.CallLog;
 import org.broadbandforum.tr104.voiceservice.Capabilities;
@@ -47,9 +48,9 @@ import org.broadbandforum.tr104.voiceservice.VoIPProfile;
 	/**
 	 * The top-level object for CPE with voice capabilities.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.")
+@CWMPObject(name = "VoiceService.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService")
 @XmlType(name = "VoiceService")
 @XmlAccessorType(XmlAccessType.FIELD)

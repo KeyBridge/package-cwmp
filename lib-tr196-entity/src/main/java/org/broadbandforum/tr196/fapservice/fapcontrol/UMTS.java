@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.fapcontrol.umts.SelfConfig;
 	/**
 	 * This object contains parameters relating to the UMTS system specific information.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.UMTS.")
 @XmlRootElement(name = "FAPService.FAPControl.UMTS")

@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.voiceservice.callcontrol.extension.stats.RTP;
 
 The CPE MUST reset the extension's Stats parameters (unless otherwise stated in individual object or parameter descriptions) either when the extension becomes operationally down due to a previous administrative down (i.e. the extension's {{param|#.Status}} parameter transitions to a down state after the extension is disabled) or when the extension becomes administratively up (i.e. the extension's {{param|#.Enable}} parameter transitions from {{false}} to {{true}}).
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Extension.{i}.Stats.")
 @XmlRootElement(name = "VoiceService.CallControl.Extension.Stats")

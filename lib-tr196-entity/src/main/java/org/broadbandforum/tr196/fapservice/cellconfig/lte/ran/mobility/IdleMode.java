@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.idlemode.
 	/**
 	 * This object contains parameters relating to the UE's mobility while it is in idle mode (cell (re-)selection). Parameters under this object determines the content in the SIB (System Information Block) that is broadcast by LTE .
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode")

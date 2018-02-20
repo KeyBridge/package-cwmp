@@ -27,17 +27,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.homeplug._interface.AssociatedDevice;
 import org.broadbandforum.tr181.device.homeplug._interface.Stats;
 
 	/**
 	 * HomePlug interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). Each table entry models the PHY and MAC levels of a HomePlug interface {{bibref|HPAV1.1}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.HomePlug.Interface.{i}.")
+@CWMPObject(name = "Device.HomePlug.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.HomePlug.Interface")
 @XmlType(name = "Device.HomePlug.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -166,7 +168,7 @@ public class Interface {
 	 */
 	@XmlElement(name = "ForceCCo")
 	@CWMPParameter(access = "readWrite")
-	public Boolean forceCCo = false;
+	public Boolean forceCCo;
 	/**
 	 * The network password of the device. This is a human readable ASCII string that is hashed per the HomePlug specification to generate the Network Membership Key (NMK). Note that care needs to be taken when setting this parameter as it might prohibit communication with other adapters or equipment connected via the powerline network.
 	 *

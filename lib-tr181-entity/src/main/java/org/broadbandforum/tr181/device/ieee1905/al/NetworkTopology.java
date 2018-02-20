@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.ieee1905.al.networktopology.IEEE1905Devic
 	/**
 	 * This object represents the 1905 Network Topology capabilities of this device.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.")
 @XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology")

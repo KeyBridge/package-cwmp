@@ -30,7 +30,7 @@ import org.broadbandforum.tr135.stbservice.applications.audiencestats.Channel;
 	/**
 	 * Audience viewing statistics.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Applications.AudienceStats.")
 @XmlRootElement(name = "STBService.Applications.AudienceStats")

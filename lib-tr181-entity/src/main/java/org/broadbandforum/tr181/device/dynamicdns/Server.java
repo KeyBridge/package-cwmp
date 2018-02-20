@@ -26,14 +26,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table of Dynamic DNS servers available for this CPE.
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
-@CWMPObject(name = "Device.DynamicDNS.Server.{i}.")
+@CWMPObject(name = "Device.DynamicDNS.Server.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.DynamicDNS.Server")
 @XmlType(name = "Device.DynamicDNS.Server")
 @XmlAccessorType(XmlAccessType.FIELD)

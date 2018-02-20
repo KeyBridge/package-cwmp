@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object contains parameters relating to list of PLMN identity specific to LTE EPC definition, called PLMN-IdentityList, as specified in SystemInformationBlockType1 message in {{bibref|3GPP-TS.36.331|Section 6.2.2}}. Each instance in this object is a PLMN-IdentityInfo which consists of plmn-Identity and cellReservedForOperatorUse IEs.  At minimum 1 item MUST be present in this list, and maximum of 6 items.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EPC.PLMNList.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EPC.PLMNList.{i}.", uniqueConstraints = {@CWMPUnique(names = {"PLMNID"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.LTE.EPC.PLMNList")
 @XmlType(name = "FAPService.CellConfig.LTE.EPC.PLMNList")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class PLMNList {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -59,7 +61,7 @@ public class PLMNList {
 	 */
 	@XmlElement(name = "IsPrimary")
 	@CWMPParameter(access = "readWrite")
-	public Boolean isprimary = false;
+	public Boolean isprimary;
 	/**
 	 * PLMN ID consists of Mobile Country Code (MCC) and Mobile Network Code (MNC) {{bibref|3GPP-TS.23.003}}, {{bibref|3GPP-TS.24.008}}.
 
@@ -78,7 +80,7 @@ Mobile Country Code consists of three digits and uniquely identifies the country
 	 */
 	@XmlElement(name = "CellReservedForOperatorUse")
 	@CWMPParameter(access = "readWrite")
-	public Boolean cellReservedForOperatorUse = false;
+	public Boolean cellReservedForOperatorUse;
 
 	public PLMNList() {
 	}

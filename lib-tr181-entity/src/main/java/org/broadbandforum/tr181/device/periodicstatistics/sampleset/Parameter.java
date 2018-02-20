@@ -26,16 +26,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Periodic statistics parameter table for this sample set.  This table contains entries for parameters whose values are to be sampled.
 
         Note that the comma-separated lists in this object (SampleSeconds, SuspectData and Values) only ever change (a) when first enabled, (b) when ForceSample is set to true (a "sneak preview" of the current sample), or (c) at the end of the sample interval.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.PeriodicStatistics.SampleSet.{i}.Parameter.{i}.")
+@CWMPObject(name = "Device.PeriodicStatistics.SampleSet.{i}.Parameter.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Reference"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.PeriodicStatistics.SampleSet.Parameter")
 @XmlType(name = "Device.PeriodicStatistics.SampleSet.Parameter")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -56,7 +58,7 @@ public class Parameter {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{reference}} This is the parameter being monitored by the Periodic Statistics mechanism.
 	 *
@@ -75,7 +77,7 @@ public class Parameter {
 	 */
 	@XmlElement(name = "SampleMode")
 	@CWMPParameter(access = "readWrite")
-	public String sampleMode = "Current";
+	public String sampleMode;
 	/**
 	 * Controls how this parameter's statistic is calculated from the sampled value(s). {{enum}}
 
@@ -87,7 +89,7 @@ public class Parameter {
 	 */
 	@XmlElement(name = "CalculationMode")
 	@CWMPParameter(access = "readWrite")
-	public String calculationMode = "Latest";
+	public String calculationMode;
 	/**
 	 * The low threshold value that controls the calculation of {{param|Failures}}.  
 
@@ -99,7 +101,7 @@ public class Parameter {
 	 */
 	@XmlElement(name = "LowThreshold")
 	@CWMPParameter(access = "readWrite")
-	public Integer lowThreshold = 0;
+	public Integer lowThreshold;
 	/**
 	 * The high threshold value that controls the calculation of {{param|Failures}}.  
 
@@ -111,7 +113,7 @@ public class Parameter {
 	 */
 	@XmlElement(name = "HighThreshold")
 	@CWMPParameter(access = "readWrite")
-	public Integer highThreshold = 0;
+	public Integer highThreshold;
 	/**
 	 * {{list}} Each entry indicates the number of seconds during which data was collected for this parameter during the sample interval.
 

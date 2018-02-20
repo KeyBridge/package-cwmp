@@ -23,15 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
-import org.broadbandforum.tr196.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * The Batch configuration Object used to configure PDSN table using a start and end IP address. The order of the address is used as part of PDSN selection algorithm, e.g., the first element is considered PDSN number 0. (Refer to {{bibref|3GPP2-A.S0013}}). To get individual PDSN entries use the {{object|.CellConfig.CDMA2000.OneX.PCFPDSN.{i}.}}.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.BatchPCFPDSN.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.BatchPCFPDSN.{i}.", uniqueConstraints = {@CWMPUnique(names = {"BatchTableNumber"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.BatchPCFPDSN")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.BatchPCFPDSN")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -44,7 +46,7 @@ public class BatchPCFPDSN {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -61,7 +63,7 @@ public class BatchPCFPDSN {
 	@XmlElement(name = "BatchTableNumber")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 127)
-	public Integer batchTableNumber = 0;
+	public Integer batchTableNumber;
 	/**
 	 * Start IP address of the range of PDSNs.
 	 *
@@ -102,7 +104,7 @@ public class BatchPCFPDSN {
 	 */
 	@XmlElement(name = "BatchTableIOSVersion")
 	@CWMPParameter(access = "readWrite")
-	public String batchTableIOSVersion = "TIA-878-a";
+	public String batchTableIOSVersion;
 	/**
 	 * Administrative status of this PDSN.  0- UP 1-DOWN.
 	 *
@@ -111,7 +113,7 @@ public class BatchPCFPDSN {
 	@XmlElement(name = "BatchTablePDSNAdminStatus")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 1)
-	public Integer batchTablePDSNAdminStatus = 0;
+	public Integer batchTablePDSNAdminStatus;
 	/**
 	 * Indicates the PDSN type for this batch.
 	 *
@@ -119,7 +121,7 @@ public class BatchPCFPDSN {
 	 */
 	@XmlElement(name = "PDSNType")
 	@CWMPParameter(access = "readWrite")
-	public String pdsNType = "HRPDRevA";
+	public String pdsNType;
 
 	public BatchPCFPDSN() {
 	}

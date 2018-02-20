@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.capabilities.umts.SelfConfig;
 	/**
 	 * This object contains parameters relating to the system and RF aspect of the FAP device that supports the UMTS system.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Capabilities.UMTS.")
 @XmlRootElement(name = "FAPService.Capabilities.UMTS")

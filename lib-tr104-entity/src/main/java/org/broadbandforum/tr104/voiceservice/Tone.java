@@ -33,7 +33,7 @@ import org.broadbandforum.tr104.voiceservice.tone.Pattern;
 	/**
 	 * This object defines the contents of the tones and announcements generated locally by the VoIP device.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Tone.")
 @XmlRootElement(name = "VoiceService.Tone")

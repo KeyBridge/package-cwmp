@@ -23,8 +23,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * Filter table that represents the IPsec Security Policy Database (SPD) {{bibref|RFC4301|Section 4.4.1}} selection criteria.  Each (ordered) entry defines a set of selection criteria and references a {{object|#.Profile}} table entry that specifies how matching packets will be processed.
@@ -33,9 +34,9 @@ import org.broadbandforum.tr181.datatypes.IPAddress;
 
         For enabled table entries, if {{param|Interface}} is not a valid reference and {{param|AllInterfaces}} is {{false}}, then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 *
-	 * @since 2.5
+	 * @since TR181 v2.5
 	 */
-@CWMPObject(name = "Device.IPsec.Filter.{i}.")
+@CWMPObject(name = "Device.IPsec.Filter.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.IPsec.Filter")
 @XmlType(name = "Device.IPsec.Filter")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -48,7 +49,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this IPsec Filter table entry.  {{enum}}
 
@@ -59,7 +60,7 @@ public class Filter {
 	 * @since 2.5
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * Position of the {{object}} entry in the order of precedence.  A value of ''1'' indicates the first entry considered (highest precedence).  For each packet, the highest ordered entry that matches the filter criteria is applied.  All lower order entries are ignored.
 
@@ -101,7 +102,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "AllInterfaces")
 	@CWMPParameter(access = "readWrite")
-	public Boolean allInterfaces = false;
+	public Boolean allInterfaces;
 	/**
 	 * SPD selection criterion.
 
@@ -131,7 +132,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "DestIPExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destIPExclude = false;
+	public Boolean destIPExclude;
 	/**
 	 * SPD selection criterion.
 
@@ -161,7 +162,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "SourceIPExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceIPExclude = false;
+	public Boolean sourceIPExclude;
 	/**
 	 * SPD selection criterion.
 
@@ -174,7 +175,7 @@ public class Filter {
 	@XmlElement(name = "Protocol")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 255)
-	public Integer protocol = -1;
+	public Integer protocol;
 	/**
 	 * If {{false}}, the rule matches only those packets that match {{param|Protocol}}, if specified.
 
@@ -184,7 +185,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "ProtocolExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean protocolExclude = false;
+	public Boolean protocolExclude;
 	/**
 	 * SPD selection criterion.
 
@@ -197,7 +198,7 @@ public class Filter {
 	@XmlElement(name = "DestPort")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer destPort = -1;
+	public Integer destPort;
 	/**
 	 * SPD selection criterion.
 
@@ -210,7 +211,7 @@ public class Filter {
 	@XmlElement(name = "DestPortRangeMax")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer destPortRangeMax = -1;
+	public Integer destPortRangeMax;
 	/**
 	 * If {{false}}, the rule matches only those packets that match {{param|DestPort}} (or port range), if specified.
 
@@ -220,7 +221,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "DestPortExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destPortExclude = false;
+	public Boolean destPortExclude;
 	/**
 	 * SPD selection criterion.
 
@@ -233,7 +234,7 @@ public class Filter {
 	@XmlElement(name = "SourcePort")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer sourcePort = -1;
+	public Integer sourcePort;
 	/**
 	 * SPD selection criterion.
 
@@ -246,7 +247,7 @@ public class Filter {
 	@XmlElement(name = "SourcePortRangeMax")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer sourcePortRangeMax = -1;
+	public Integer sourcePortRangeMax;
 	/**
 	 * If {{false}}, the rule matches only those packets that match {{param|SourcePort}} (or port range), if specified.
 
@@ -256,7 +257,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "SourcePortExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourcePortExclude = false;
+	public Boolean sourcePortExclude;
 	/**
 	 * Indicates how packets that match this rule will be processed {{bibref|RFC4301|Section 4.4.1}}.
 	 *
@@ -264,7 +265,7 @@ public class Filter {
 	 */
 	@XmlElement(name = "ProcessingChoice")
 	@CWMPParameter(access = "readWrite")
-	public String processingChoice = "Bypass";
+	public String processingChoice;
 	/**
 	 * The profile that defines the IPsec treatment for matching packets.  {{reference}}
 

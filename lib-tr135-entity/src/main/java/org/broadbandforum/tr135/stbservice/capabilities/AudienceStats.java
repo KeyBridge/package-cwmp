@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object describes the capabilities of the {{object|.Applications.AudienceStats}} object.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.AudienceStats.")
 @XmlRootElement(name = "STBService.Capabilities.AudienceStats")

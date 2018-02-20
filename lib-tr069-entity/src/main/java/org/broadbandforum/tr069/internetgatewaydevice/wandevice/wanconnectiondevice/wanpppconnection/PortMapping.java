@@ -23,13 +23,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Port mapping table.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.PortMapping.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPPPConnection.{i}.PortMapping.{i}.", uniqueConstraints = {@CWMPUnique(names = {"RemoteHost", "ExternalPort", "PortMappingProtocol"})})
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPPPConnection.PortMapping")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPPPConnection.PortMapping")
 @XmlAccessorType(XmlAccessType.FIELD)

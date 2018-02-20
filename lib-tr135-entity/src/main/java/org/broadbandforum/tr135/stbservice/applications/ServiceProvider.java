@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Service Provider instance table.
 	 *
-	 * @since 1.1
+	 * @since TR135 v1.1
 	 */
-@CWMPObject(name = "STBService.{i}.Applications.ServiceProvider.{i}.")
+@CWMPObject(name = "STBService.{i}.Applications.ServiceProvider.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Applications.ServiceProvider")
 @XmlType(name = "STBService.Applications.ServiceProvider")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters related to miscellaneous RRC timers and constants.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.RRCTimers.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.RRCTimers")
@@ -107,7 +107,7 @@ Defined in SIB1 {{bibref|3GPP-TS.25.331|Section 13.1 and Section 10.3.3.44}}.
 	@XmlElement(name = "T305")
 	@CWMPParameter(access = "readWrite", units = "minutes")
 	@Size(min = 720, max = 720)
-	public Integer t305 = 30;
+	public Integer t305;
 	/**
 	 * Timer measured in seconds. Defined in SIB1 {{bibref|3GPP-TS.25.331|Section 13.1 and Section 10.3.3.44}}.
 	 *
@@ -199,7 +199,7 @@ Defined in SIB1 {{bibref|3GPP-TS.25.331|Section 13.1 and Section 10.3.3.44}}.
 	@XmlElement(name = "T316")
 	@CWMPParameter(access = "readWrite", units = "seconds")
 	@Size(min = 50, max = 50)
-	public Integer t316 = 30;
+	public Integer t316;
 	/**
 	 * Timer measured in seconds. Defined in SIB1 {{bibref|3GPP-TS.25.331|Section 13.1 and Section 10.3.3.43}}.
 	 *

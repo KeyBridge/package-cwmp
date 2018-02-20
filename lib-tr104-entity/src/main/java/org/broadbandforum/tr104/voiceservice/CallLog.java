@@ -28,7 +28,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr104.voiceservice.calllog.Session;
 import org.broadbandforum.tr104.voiceservice.calllog.SignalingPerformance;
 
@@ -37,9 +38,9 @@ import org.broadbandforum.tr104.voiceservice.calllog.SignalingPerformance;
 
 An entry is created each time a call is terminated. If the number of {{object|.CallLog}} exceeds {{param|.Capabilities.MaxCallLogCount}}, the CPE SHOULD remove the oldest {{object|.CallLog}} object on basis of {{param|Start}} parameter.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.CallLog.{i}.")
+@CWMPObject(name = "VoiceService.{i}.CallLog.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.CallLog")
 @XmlType(name = "VoiceService.CallLog")
 @XmlAccessorType(XmlAccessType.FIELD)

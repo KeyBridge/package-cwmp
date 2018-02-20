@@ -26,12 +26,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * This object contains security related parameters that apply to a CPE acting as an Access Point {{bibref|802.11-2007}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.WiFi.AccessPoint.{i}.Security.")
 @XmlRootElement(name = "Device.WiFi.AccessPoint.Security")

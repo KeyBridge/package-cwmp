@@ -27,13 +27,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * This table provides information about all types of public key-based credentials, such as X.509 certificates, see {{bibref|RFC5280}}.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
-@CWMPObject(name = "Device.Security.Certificate.{i}.")
+@CWMPObject(name = "Device.Security.Certificate.{i}.", uniqueConstraints = {@CWMPUnique(names = {"SerialNumber", "Issuer"})})
 @XmlRootElement(name = "Device.Security.Certificate")
 @XmlType(name = "Device.Security.Certificate")
 @XmlAccessorType(XmlAccessType.FIELD)

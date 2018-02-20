@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.ppp._interface.IPCP;
 import org.broadbandforum.tr181.device.ppp._interface.IPv6CP;
 import org.broadbandforum.tr181.device.ppp._interface.PPPoA;
@@ -36,9 +37,10 @@ import org.broadbandforum.tr181.device.ppp._interface.Stats;
 	/**
 	 * PPP interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}).
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.PPP.Interface.{i}.")
+@CWMPObject(name = "Device.PPP.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.PPP.Interface")
 @XmlType(name = "Device.PPP.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -53,7 +55,7 @@ public class Interface {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The current operational state of the interface (see {{bibref|TR-181i2|Section 4.2.2}}). {{enum}}
 
@@ -66,7 +68,7 @@ public class Interface {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Down";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -112,7 +114,7 @@ public class Interface {
 	 */
 	@XmlElement(name = "Reset")
 	@CWMPParameter(access = "readWrite")
-	public Boolean reset = false;
+	public Boolean reset;
 	/**
 	 * Current status of the connection.
 	 *

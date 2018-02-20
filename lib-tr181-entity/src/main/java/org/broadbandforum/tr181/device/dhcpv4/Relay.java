@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.dhcpv4.relay.Forwarding;
 	/**
 	 * DHCP Relay Agent (conditional relaying).
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DHCPv4.Relay.")
 @XmlRootElement(name = "Device.DHCPv4.Relay")

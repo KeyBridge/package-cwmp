@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object models the ATM layer properties specific to a single physical connection of a DSL modem used for Internet access on a CPE.  This object is intended for a CPE with a DSL modem WAN interface, and is exclusive of any other ''WAN*LinkConfig'' object within a given ''WANConnectionDevice'' instance.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANDSLLinkConfig.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANDSLLinkConfig")
@@ -45,7 +45,7 @@ public class WANDSLLinkConfig {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Status of the link.
 	 *
@@ -62,7 +62,7 @@ The value ''PPPoE'' has always been DEPRECATED and ''EoA'' should be used instea
 	 */
 	@XmlElement(name = "LinkType")
 	@CWMPParameter(access = "readWrite")
-	public String linkType = "Unconfigured";
+	public String linkType;
 	/**
 	 * Indicates if the CPE is currently using some auto configuration mechanisms for this connection.  If this variable is {{true}}, all writable variables in this connection instance become read-only. Any attempt to change one of these variables SHOULD fail and an error SHOULD be returned.
 	 *

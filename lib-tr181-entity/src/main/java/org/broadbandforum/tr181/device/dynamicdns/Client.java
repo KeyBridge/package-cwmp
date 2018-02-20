@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.dynamicdns.client.Hostname;
 
 	/**
@@ -36,9 +37,10 @@ import org.broadbandforum.tr181.device.dynamicdns.client.Hostname;
 
         For enabled table entries, if {{param|Server}} is not a valid reference then the table entry is inoperable and the CPE MUST set the {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
-@CWMPObject(name = "Device.DynamicDNS.Client.{i}.")
+@CWMPObject(name = "Device.DynamicDNS.Client.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Server", "Username"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.DynamicDNS.Client")
 @XmlType(name = "Device.DynamicDNS.Client")
 @XmlAccessorType(XmlAccessType.FIELD)

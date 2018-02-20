@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.accessmgmt.legacy.localipaccess.Rule;
 	/**
 	 * Old Local IP access object, included on special request.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.Legacy.LocalIPAccess.")
 @XmlRootElement(name = "FAPService.AccessMgmt.Legacy.LocalIPAccess")
@@ -45,7 +45,7 @@ public class LocalIPAccess {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The maximum number of entries available in the {{object|.AccessMgmt.Legacy.LocalIPAccess.Rule.{i}.}} table.
 	 *

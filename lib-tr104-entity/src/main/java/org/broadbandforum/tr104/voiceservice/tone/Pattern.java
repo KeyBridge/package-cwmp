@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Each entry in the table defines a single phase in an overall tone pattern.  Each phase identifies the entry that corresponds to the next phase.
@@ -32,9 +33,9 @@ Each entry in the table refers to the entry that corresponds to the next phase o
 
 The defaults given for this object apply only to explicit creation of an instance of this object and not to automatic creation of instances of this object due to creation of a parent object.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.Tone.Pattern.{i}.")
+@CWMPObject(name = "VoiceService.{i}.Tone.Pattern.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.Tone.Pattern")
 @XmlType(name = "VoiceService.Tone.Pattern")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -47,7 +48,7 @@ public class Pattern {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -63,7 +64,7 @@ public class Pattern {
 	 */
 	@XmlElement(name = "ToneOn")
 	@CWMPParameter(access = "readWrite")
-	public Boolean toneOn = false;
+	public Boolean toneOn;
 	/**
 	 * First tone frequency in hertz.
 
@@ -82,7 +83,7 @@ A value of zero indicates this tone component is not used.
 	 */
 	@XmlElement(name = "Power1")
 	@CWMPParameter(access = "readWrite", units = "dBm0")
-	public Integer power1 = 0;
+	public Integer power1;
 	/**
 	 * Second tone frequency in hertz.
 
@@ -101,7 +102,7 @@ A value of zero indicates this tone component is not used.
 	 */
 	@XmlElement(name = "Power2")
 	@CWMPParameter(access = "readWrite", units = "dBm0")
-	public Integer power2 = 0;
+	public Integer power2;
 	/**
 	 * Third tone frequency in hertz.
 
@@ -120,7 +121,7 @@ A value of zero indicates this tone component is not used.
 	 */
 	@XmlElement(name = "Power3")
 	@CWMPParameter(access = "readWrite", units = "dBm0")
-	public Integer power3 = 0;
+	public Integer power3;
 	/**
 	 * Fourth tone frequency in herts.
 
@@ -139,7 +140,7 @@ A value of zero indicates this tone component is not used.
 	 */
 	@XmlElement(name = "Power4")
 	@CWMPParameter(access = "readWrite", units = "dBm0")
-	public Integer power4 = 0;
+	public Integer power4;
 	/**
 	 * Modulation frequency in hertz.
 
@@ -158,7 +159,7 @@ A value of zero indicates this tone component is not used.
 	 */
 	@XmlElement(name = "ModulationPower")
 	@CWMPParameter(access = "readWrite", units = "dBm0")
-	public Integer modulationPower = 0;
+	public Integer modulationPower;
 	/**
 	 * The duration of this phase of the tone pattern, in milliseconds.
 

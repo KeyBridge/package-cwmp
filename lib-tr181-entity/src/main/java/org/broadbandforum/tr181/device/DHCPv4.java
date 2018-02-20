@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.dhcpv4.Server;
 	/**
 	 * The Dynamic Host Configuration Protocol (DHCP) IPv4 object {{bibref|RFC2131}}. This entire object applies to IPv4 only. It contains the {{object|Client}}, {{object|Server}}, and {{object|Relay}} objects.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DHCPv4.")
 @XmlRootElement(name = "Device.DHCPv4")

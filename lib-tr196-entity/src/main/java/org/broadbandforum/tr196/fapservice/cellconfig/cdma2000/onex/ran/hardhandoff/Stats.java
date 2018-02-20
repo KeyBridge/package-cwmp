@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains statistics for all Handouts of the 1x FAP.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.HardHandoff.Stats.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.HardHandoff.Stats")

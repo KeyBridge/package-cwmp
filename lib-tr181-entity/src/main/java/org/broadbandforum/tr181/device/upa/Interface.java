@@ -27,8 +27,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.upa._interface.ActiveNotch;
 import org.broadbandforum.tr181.device.upa._interface.AssociatedDevice;
 import org.broadbandforum.tr181.device.upa._interface.BridgeFor;
@@ -37,9 +38,10 @@ import org.broadbandforum.tr181.device.upa._interface.Stats;
 	/**
 	 * UPA interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). Each table entry models the PHY and MAC levels of a UPA interface {{bibref|UPA-PLC}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.UPA.Interface.{i}.")
+@CWMPObject(name = "Device.UPA.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.UPA.Interface")
 @XmlType(name = "Device.UPA.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)

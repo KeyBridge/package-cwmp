@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Results for individual connections.  This table is only populated when {{param|#.EnablePerConnectionResults}} is {{true}}.  A new object is created for each connection specified in {{param|#.NumberOfConnections}}.  Instance numbers MUST start at 1 and sequentially increment as new instances are created.  All instances are removed when {{param|#.DiagnosticsState}} is set to {{enum|Requested|#.DiagnosticsState}} or {{enum|None|#.DiagnosticsState}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.DownloadDiagnostics.PerConnectionResult.{i}.")
 @XmlRootElement(name = "Device.IP.Diagnostics.DownloadDiagnostics.PerConnectionResult")

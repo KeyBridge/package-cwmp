@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * Table containing information broadcast on control channel.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.CDMA2000.OneX.Cell.{i}.ControlChannel.")
 @XmlRootElement(name = "FAPService.REM.CDMA2000.OneX.Cell.ControlChannel")

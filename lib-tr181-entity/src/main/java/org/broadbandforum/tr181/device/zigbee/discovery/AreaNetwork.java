@@ -27,16 +27,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object specifies the ZigBee devices that are discovered by the {{param|Coordinator}}.
 
         As the ZigBee specification does not provide a discovery protocol between the CWMP proxy and the ZigBee coordinator, the {{object}} object is provisioned and not discovered.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
-@CWMPObject(name = "Device.ZigBee.Discovery.AreaNetwork.{i}.")
+@CWMPObject(name = "Device.ZigBee.Discovery.AreaNetwork.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Coordinator"})})
 @XmlRootElement(name = "Device.ZigBee.Discovery.AreaNetwork")
 @XmlType(name = "Device.ZigBee.Discovery.AreaNetwork")
 @XmlAccessorType(XmlAccessType.FIELD)

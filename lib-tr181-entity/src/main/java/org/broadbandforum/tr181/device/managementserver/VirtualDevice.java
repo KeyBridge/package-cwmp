@@ -26,13 +26,14 @@ import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Each entry in this table represents a distinct Proxied Device that utilizes the Virtual CWMP Device Mechanism {{bibref|TR-069a4|Annex I.1.1}} for proxying devices.
 	 *
-	 * @since 2.3
+	 * @since TR181 v2.3
 	 */
-@CWMPObject(name = "Device.ManagementServer.VirtualDevice.{i}.")
+@CWMPObject(name = "Device.ManagementServer.VirtualDevice.{i}.", uniqueConstraints = {@CWMPUnique(names = {"ManufacturerOUI", "ProductClass", "SerialNumber"})})
 @XmlRootElement(name = "Device.ManagementServer.VirtualDevice")
 @XmlType(name = "Device.ManagementServer.VirtualDevice")
 @XmlAccessorType(XmlAccessType.FIELD)

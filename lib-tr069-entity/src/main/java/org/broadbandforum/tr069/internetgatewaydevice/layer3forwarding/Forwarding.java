@@ -23,14 +23,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr069.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * Layer-3 forwarding table.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding.{i}.", uniqueConstraints = {@CWMPUnique(names = {"DestIPAddress", "DestSubnetMask", "SourceIPAddress", "SourceSubnetMask"})})
 @XmlRootElement(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding")
 @XmlType(name = "InternetGatewayDevice.Layer3Forwarding.Forwarding")
 @XmlAccessorType(XmlAccessType.FIELD)

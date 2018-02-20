@@ -23,18 +23,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPv4Address;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPv4Address;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * DHCP Relay Agent Forwarding table.
 
         For enabled table entries, if {{param|Interface}} is not a valid reference then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.DHCPv4.Relay.Forwarding.{i}.")
+@CWMPObject(name = "Device.DHCPv4.Relay.Forwarding.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.DHCPv4.Relay.Forwarding")
 @XmlType(name = "Device.DHCPv4.Relay.Forwarding")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -47,7 +48,7 @@ public class Forwarding {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this entry.  {{enum}}
 
@@ -58,7 +59,7 @@ public class Forwarding {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -113,7 +114,7 @@ public class Forwarding {
 	 */
 	@XmlElement(name = "VendorClassIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean vendorClassIDExclude = false;
+	public Boolean vendorClassIDExclude;
 	/**
 	 * {{param|VendorClassID}} pattern match criterion.  {{enum}}
 
@@ -123,7 +124,7 @@ public class Forwarding {
 	 */
 	@XmlElement(name = "VendorClassIDMode")
 	@CWMPParameter(access = "readWrite")
-	public String vendorClassIDMode = "Exact";
+	public String vendorClassIDMode;
 	/**
 	 * Pool association criterion. 
 
@@ -145,7 +146,7 @@ public class Forwarding {
 	 */
 	@XmlElement(name = "ClientIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean clientIDExclude = false;
+	public Boolean clientIDExclude;
 	/**
 	 * Pool association criterion. 
 
@@ -167,7 +168,7 @@ public class Forwarding {
 	 */
 	@XmlElement(name = "UserClassIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean userClassIDExclude = false;
+	public Boolean userClassIDExclude;
 	/**
 	 * Pool association criterion.
 
@@ -197,7 +198,7 @@ public class Forwarding {
 	 */
 	@XmlElement(name = "ChaddrExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean chaddrExclude = false;
+	public Boolean chaddrExclude;
 	/**
 	 * If {{true}}, incoming DHCP requests will be forwarded to the CPE DHCP Server. If {{false}}, incoming DHCP requests will be forwarded to the {{param|DHCPServerIPAddress}} configured for this forwarding entry.
 	 *
@@ -205,7 +206,7 @@ public class Forwarding {
 	 */
 	@XmlElement(name = "LocallyServed")
 	@CWMPParameter(access = "readWrite")
-	public Boolean locallyServed = false;
+	public Boolean locallyServed;
 	/**
 	 * IPv4 address of the DHCP server, where the request has to be sent to when there is a conditional match with this forwarding entry and {{param|LocallyServed}} is {{false}}. If {{param|LocallyServed}} is {{false}} and this parameter is not  configured, then the DHCP request is dropped.
 	 *

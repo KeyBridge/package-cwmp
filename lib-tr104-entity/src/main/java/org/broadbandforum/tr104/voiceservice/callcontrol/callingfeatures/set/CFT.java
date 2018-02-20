@@ -23,16 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object defines a Call Forwarding Timed (CFT) that permit the user to forward calls to particular destinations depending on the time of day.
 
 Note: a bad configuration (e.g. timeslots overlapping) could cause unexpected behavior.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.Set.{i}.CFT.{i}.")
+@CWMPObject(name = "VoiceService.{i}.CallControl.CallingFeatures.Set.{i}.CFT.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.CallControl.CallingFeatures.Set.CFT")
 @XmlType(name = "VoiceService.CallControl.CallingFeatures.Set.CFT")
 @XmlAccessorType(XmlAccessType.FIELD)

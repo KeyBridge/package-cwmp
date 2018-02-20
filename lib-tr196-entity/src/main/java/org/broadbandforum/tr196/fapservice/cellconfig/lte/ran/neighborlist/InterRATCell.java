@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.neighborlist.inter
 	/**
 	 * The inter-RAT cell lists separated by technology. {{bibref|3GPP-TS.36.331|Section 6.3.1 (SIB6, 7, 8)}}.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborList.InterRATCell.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborList.InterRATCell")

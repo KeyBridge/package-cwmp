@@ -26,16 +26,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.mqtt.broker.bridge.Server;
 import org.broadbandforum.tr181.device.mqtt.broker.bridge.Subscription;
 
 	/**
 	 * Configures MQTT bridges, which are used to communicate with other MQTT brokers.
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
-@CWMPObject(name = "Device.MQTT.Broker.{i}.Bridge.{i}.")
+@CWMPObject(name = "Device.MQTT.Broker.{i}.Bridge.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.MQTT.Broker.Bridge")
 @XmlType(name = "Device.MQTT.Broker.Bridge")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -125,7 +127,7 @@ public class Bridge {
 	 */
 	@XmlElement(name = "TransportProtocol")
 	@CWMPParameter(access = "readWrite")
-	public String transportProtocol = "TCP/IP";
+	public String transportProtocol;
 	/**
 	 * Specifies the MQTT protocol version used in the MQTT bridge connection.
 	 *
@@ -143,7 +145,7 @@ public class Bridge {
 	 */
 	@XmlElement(name = "CleanSession")
 	@CWMPParameter(access = "readWrite")
-	public Boolean cleanSession = true;
+	public Boolean cleanSession;
 	/**
 	 * Message retry time in seconds defines the wait time before a MQTT message that expects a response (QoS value of message is > 0, or PUBLISH, PUBREL, SUBSCRIBE, UNSUBSCRIBE message) is resent, because the response is not received (see {{bibref|MQTT31|4.2}} and {{bibref|MQTT311|4.4}}).
 	 *

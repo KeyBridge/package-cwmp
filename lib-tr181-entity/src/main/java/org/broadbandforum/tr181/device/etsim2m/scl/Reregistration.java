@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.etsim2m.scl.reregistration.ActionStatus;
 	/**
 	 * This object represents the properties and status necessary for a SCL to reregister with one or more NSCLs.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.Reregistration.")
 @XmlRootElement(name = "Device.ETSIM2M.SCL.Reregistration")
@@ -77,7 +77,7 @@ public class Reregistration {
 	 */
 	@XmlElement(name = "RegExpirationDuration")
 	@CWMPParameter(access = "readWrite", units = "seconds")
-	public Integer regExpirationDuration = -1;
+	public Integer regExpirationDuration;
 	/**
 	 * {{command}} When set to {{true}}, triggers an immediate re-registration action where the SCL re-registers with the SCLs in the {{param|RegTargetNSCLList}} .
 	 *

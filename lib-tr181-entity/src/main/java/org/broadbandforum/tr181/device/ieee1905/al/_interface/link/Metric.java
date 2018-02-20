@@ -23,12 +23,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.StatsCounter32;
+import org.broadbandforum.common.StatsCounter32;
 
 	/**
 	 * This object represents the metrics for this {{object|##.Link}} as defined in {{bibref|IEEE1905.1a|Tables 6-18: 1905 transmitter link metrics and Table 6-20: 1905 receiver link metrics}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.Interface.{i}.Link.{i}.Metric.")
 @XmlRootElement(name = "Device.IEEE1905.AL.Interface.Link.Metric")

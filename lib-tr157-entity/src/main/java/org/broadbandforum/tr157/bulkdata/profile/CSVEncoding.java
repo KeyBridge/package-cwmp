@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object defines the properties to be used when the {{object|##.Profile}} object's {{param|#.EncodingType}} parameter value is {{enum|CSV|##.EncodingTypes}}.
 	 *
-	 * @since 1.10
+	 * @since TR157 v1.10
 	 */
 @CWMPObject(name = "BulkData.Profile.{i}.CSVEncoding.")
 @XmlRootElement(name = "BulkData.Profile.CSVEncoding")
@@ -41,7 +41,7 @@ public class CSVEncoding {
 	 */
 	@XmlElement(name = "FieldSeparator")
 	@CWMPParameter(access = "readWrite")
-	public String fieldSeparator = ",";
+	public String fieldSeparator;
 	/**
 	 * Row separator to use when encoding CSV data.
 	 *
@@ -67,7 +67,7 @@ public class CSVEncoding {
 	 */
 	@XmlElement(name = "ReportFormat")
 	@CWMPParameter(access = "readWrite")
-	public String reportFormat = "ParameterPerColumn";
+	public String reportFormat;
 	/**
 	 * The format of the timestamp to use for data inserted into the row.
 	 *
@@ -75,7 +75,7 @@ public class CSVEncoding {
 	 */
 	@XmlElement(name = "RowTimestamp")
 	@CWMPParameter(access = "readWrite")
-	public String rowTimestamp = "Unix-Epoch";
+	public String rowTimestamp;
 
 	public CSVEncoding() {
 	}

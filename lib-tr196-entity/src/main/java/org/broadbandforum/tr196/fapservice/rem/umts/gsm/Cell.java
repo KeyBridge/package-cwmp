@@ -22,13 +22,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Table indicating the components of the discovered cells.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.REM.UMTS.GSM.Cell.{i}.")
+@CWMPObject(name = "FAPService.{i}.REM.UMTS.GSM.Cell.{i}.", uniqueConstraints = {@CWMPUnique(names = {"ARFCN", "BSIC"})})
 @XmlRootElement(name = "FAPService.REM.UMTS.GSM.Cell")
 @XmlType(name = "FAPService.REM.UMTS.GSM.Cell")
 @XmlAccessorType(XmlAccessType.FIELD)

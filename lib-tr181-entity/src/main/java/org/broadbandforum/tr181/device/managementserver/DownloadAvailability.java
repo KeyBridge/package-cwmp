@@ -27,7 +27,7 @@ import org.broadbandforum.tr181.device.managementserver.downloadavailability.Que
 	/**
 	 * This object contains multicast announcement and query parameters used for the purpose of downloading files.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.ManagementServer.DownloadAvailability.")
 @XmlRootElement(name = "Device.ManagementServer.DownloadAvailability")

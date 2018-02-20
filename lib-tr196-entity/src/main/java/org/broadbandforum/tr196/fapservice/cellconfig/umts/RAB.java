@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to Radio Access layers {{bibref|3GPP-TS.32.405}}
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAB.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAB")

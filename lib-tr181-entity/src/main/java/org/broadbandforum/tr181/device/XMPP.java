@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.xmpp.Connection;
 	/**
 	 * The {{object}} represents the XMPP capabilities of the device as described in {{bibref|TR-069a5|Appendix III}}.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
 @CWMPObject(name = "Device.XMPP.")
 @XmlRootElement(name = "Device.XMPP")

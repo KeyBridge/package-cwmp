@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the SRB2 (Signaling Radio Bearer 2) configuration (see {{bibref|3GPP-TS.32.592|Section 6.1.3.1}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.RLC.SRB2.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.RLC.SRB2")

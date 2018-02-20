@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object defines access to an IP-layer ping test for the default IP interface.
 	 *
-	 * @since 1.0
+	 * @since TR106 v1.0
 	 */
 @CWMPObject(name = "Device.LAN.IPPingDiagnostics.")
 @XmlRootElement(name = "Device.LAN.IPPingDiagnostics")

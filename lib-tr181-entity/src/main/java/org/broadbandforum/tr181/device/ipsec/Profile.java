@@ -27,15 +27,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.ipsec.profile.SentCPAttr;
 
 	/**
 	 * Profile table that represents the IPsec Security Policy Database (SPD) {{bibref|RFC4301|Section 4.4.1}} processing info.  Each entry defines the IPsec treatment for packets that match the {{object|#.Filter}} entries that reference the entry.
 	 *
-	 * @since 2.5
+	 * @since TR181 v2.5
 	 */
-@CWMPObject(name = "Device.IPsec.Profile.{i}.")
+@CWMPObject(name = "Device.IPsec.Profile.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.IPsec.Profile")
 @XmlType(name = "Device.IPsec.Profile")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -92,7 +93,7 @@ public class Profile {
 	 */
 	@XmlElement(name = "Protocol")
 	@CWMPParameter(access = "readWrite")
-	public String protocol = "ESP";
+	public String protocol;
 	/**
 	 * IKEv2 CPE authentication method {{bibref|RFC5996|Section 2.15}}. {{reference|an enabled row in the {{object|.Security.Certificate}} table or in another table that contains appropriate CPE credentials}}
 

@@ -26,7 +26,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.DiagnosticsState;
+import org.broadbandforum.common.DiagnosticsState;
 import org.broadbandforum.tr181.device.hpna.diagnostics.phythroughput.Result;
 
 	/**
@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.device.hpna.diagnostics.phythroughput.Result;
 
         When diagnostics are requested, all HPNA nodes for which the {{param|##.Interface.{i}.AssociatedDevice.{i}.PHYDiagnosticsEnable}} parameter is set enter PHY diagnostics  mode.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.HPNA.Diagnostics.PHYThroughput.")
 @XmlRootElement(name = "Device.HPNA.Diagnostics.PHYThroughput")

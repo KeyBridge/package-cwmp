@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Multicast groups to which the CPE SHOULD listen for announcements.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.ManagementServer.DownloadAvailability.Announcement.Group.{i}.")
+@CWMPObject(name = "Device.ManagementServer.DownloadAvailability.Announcement.Group.{i}.", uniqueConstraints = {@CWMPUnique(names = {"URL"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.ManagementServer.DownloadAvailability.Announcement.Group")
 @XmlType(name = "Device.ManagementServer.DownloadAvailability.Announcement.Group")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -51,14 +53,14 @@ public class Group {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this group table entry.
 	 *
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * URL {{bibref|RFC3986}} encoding the group address, source and port on which to listen, and other protocol information, e.g. expected announcement format.
 

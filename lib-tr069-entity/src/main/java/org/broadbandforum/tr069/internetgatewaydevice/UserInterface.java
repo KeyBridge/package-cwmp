@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the user interface of the CPE.  Support for this object is Optional.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.UserInterface.")
 @XmlRootElement(name = "InternetGatewayDevice.UserInterface")

@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.accessmgmt.UMTS;
 	/**
 	 * This object contains parameters relating to Access Management for the different radio technologies.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.")
 @XmlRootElement(name = "FAPService.AccessMgmt")

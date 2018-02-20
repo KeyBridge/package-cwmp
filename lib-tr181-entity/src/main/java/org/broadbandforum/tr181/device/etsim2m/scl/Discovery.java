@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
         Section 9.3.2.27 of the M2M Functional Architecture {{bibref|ETSIM2MFA}} describes the process of discovery of resources within a SCL.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.Discovery.")
 @XmlRootElement(name = "Device.ETSIM2M.SCL.Discovery")

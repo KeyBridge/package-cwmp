@@ -23,14 +23,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * H.323 client table (a client as described in {{bibref|TR-104i2|Section 4.2}}). Each H.323 client maintains a registration for the H.323 identities of the associated line with the {{object|#.Network}}.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.H323.Client.{i}.")
+@CWMPObject(name = "VoiceService.{i}.H323.Client.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.H323.Client")
 @XmlType(name = "VoiceService.H323.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +44,7 @@ public class Client {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * If {{true}}, when {{param|Enable}} is set to {{false}} in-progress sessions remain intact, but no new sessions are allowed. When all sessions are terminated, the {{object}} is disabled.
 	 *
@@ -58,7 +59,7 @@ public class Client {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -74,7 +75,7 @@ public class Client {
 	 */
 	@XmlElement(name = "H235Authentication")
 	@CWMPParameter(access = "readWrite")
-	public Boolean h235Authentication = false;
+	public Boolean h235Authentication;
 	/**
 	 * Password to be used when H.235 is enabled.
 	 *

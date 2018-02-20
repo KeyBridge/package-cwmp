@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object contains parameters related to the Monitoring of the MMS API.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
 @CWMPObject(name = "FAP.ApplicationPlatform.Monitoring.MMS.")
 @XmlRootElement(name = "FAP.ApplicationPlatform.Monitoring.MMS")

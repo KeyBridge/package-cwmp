@@ -22,16 +22,17 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * Per-node HPNA performance monitoring results during the current sample interval. Each table entry contains the results collected between an HPNA node (as indicated by {{param|MACAddress}}) and the local HPNA interface (as indicated by {{param|##.Interface}}).
 
         Note: Packet counters indicate the number of packets received between {{param|#.CurrentStart}} and {{param|#.CurrentEnd}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Nodes.Node.{i}.")
+@CWMPObject(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Nodes.Node.{i}.", uniqueConstraints = {@CWMPUnique(names = {"MACAddress"})})
 @XmlRootElement(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Nodes.Node")
 @XmlType(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.Nodes.Node")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the idle mode mobility configuration for intra-freq re-selection scenario (see {{bibref|3GPP-TS.32.592|Section 6.1.5.1.2}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.IntraFreq.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.IntraFreq")

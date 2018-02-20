@@ -27,7 +27,7 @@ import org.broadbandforum.tr181.device.hpna.diagnostics.PerformanceMonitoring;
 	/**
 	 * The HPNA Diagnostics object.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.HPNA.Diagnostics.")
 @XmlRootElement(name = "Device.HPNA.Diagnostics")

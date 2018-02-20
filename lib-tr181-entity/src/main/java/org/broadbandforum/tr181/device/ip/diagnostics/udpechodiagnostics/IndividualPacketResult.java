@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object provides the results from individual UDPEchoPlus test packets collected during a test if {{param|#.EnableIndividualPacketResults}} is set to true.  When {{param|#.DiagnosticsState}} is set to {{enum|Completed|#.DiagnosticsState}} it should contain {{param|#.NumberOfRepetitions}} objects.  Instance numbers MUST start at 1 and sequentially increment as new instances are created.  The instance number should match the TestIterationNumber field of the request and response packet.  All instances are removed when {{param|#.DiagnosticsState}} is set to {{enum|Requested|#.DiagnosticsState}} or {{enum|None|#.DiagnosticsState}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IP.Diagnostics.UDPEchoDiagnostics.IndividualPacketResult.{i}.")
 @XmlRootElement(name = "Device.IP.Diagnostics.UDPEchoDiagnostics.IndividualPacketResult")

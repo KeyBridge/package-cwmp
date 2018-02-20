@@ -22,13 +22,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * This table contains the information from Device Description Document retrieved for a discovered UPnP service.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
-@CWMPObject(name = "Device.UPnP.Description.ServiceInstance.{i}.")
+@CWMPObject(name = "Device.UPnP.Description.ServiceInstance.{i}.", uniqueConstraints = {@CWMPUnique(names = {"ParentDevice", "ServiceId"})})
 @XmlRootElement(name = "Device.UPnP.Description.ServiceInstance")
 @XmlType(name = "Device.UPnP.Description.ServiceInstance")
 @XmlAccessorType(XmlAccessType.FIELD)

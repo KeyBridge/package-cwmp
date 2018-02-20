@@ -28,7 +28,7 @@ import org.broadbandforum.tr104.voiceservice.calllog.session.source.VoiceQuality
 	/**
 	 * The source of the session information within one call.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.Source.")
 @XmlRootElement(name = "VoiceService.CallLog.Session.Source")

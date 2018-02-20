@@ -27,8 +27,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
-import org.broadbandforum.tr104.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 import org.broadbandforum.tr104.voiceservice.sip.network.EventSubscribe;
 import org.broadbandforum.tr104.voiceservice.sip.network.FQDNServer;
 import org.broadbandforum.tr104.voiceservice.sip.network.ResponseMap;
@@ -36,9 +37,9 @@ import org.broadbandforum.tr104.voiceservice.sip.network.ResponseMap;
 	/**
 	 * This object models a SIP network (a network as described in {{bibref|TR-104i2|Section 4.2}}). SIP networks are used by SIP {{object|#.Client}} objects so that common parameters do not have to be provisioned multiple times.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.SIP.Network.{i}.")
+@CWMPObject(name = "VoiceService.{i}.SIP.Network.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.SIP.Network")
 @XmlType(name = "VoiceService.SIP.Network")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -51,7 +52,7 @@ public class Network {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * If {{true}}, when {{param|Enable}} is set to {{false}} in-progress sessions remain intact, but no new sessions are allowed. When all sessions are terminated, the {{object}} is disabled.
 	 *
@@ -66,7 +67,7 @@ public class Network {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -104,7 +105,7 @@ Regardless of which host the traffic gets sent to ({{param}} or {{param|Outbound
 	 */
 	@XmlElement(name = "ProxyServerTransport")
 	@CWMPParameter(access = "readWrite")
-	public String proxyServerTransport = "UDP";
+	public String proxyServerTransport;
 	/**
 	 * Host name or IP address of the SIP registrar server.
 
@@ -136,7 +137,7 @@ If {{param|RegistrarServer}} is empty the CPE MUST obtain all of the registrar s
 	 */
 	@XmlElement(name = "RegistrarServerTransport")
 	@CWMPParameter(access = "readWrite")
-	public String registrarServerTransport = "UDP";
+	public String registrarServerTransport;
 	/**
 	 * If non-empty this {{param}} is used by the devices in a DNS SRV request to provide FQDNs {{object|FQDNServer.{i}.}} for SIP Server connections.
 
@@ -196,7 +197,7 @@ If {{param|RegistrarServer}} is empty the CPE MUST obtain all of the registrar s
 	 */
 	@XmlElement(name = "UserAgentTransport")
 	@CWMPParameter(access = "readWrite")
-	public String userAgentTransport = "UDP";
+	public String userAgentTransport;
 	/**
 	 * The Fully Qualified Domain Name (FQDN) or IP Address of the outbound proxy. If the value is not {{empty}}, the SIP endpoint MUST send all SIP traffic (requests and responses) to the host indicated by this parameter and the port indicated by {{param|OutboundProxyPort}}. This MUST be done regardless of the routes discovered using normal SIP operations, including use of Route headers initialized from Service-Route and Record-Route headers previously received. {{param}} is NOT used to generate the URI placed into the Route header of any requests.
 
@@ -242,7 +243,7 @@ When {{param|OutboundProxy}} is assigned, the name is looked up (resolved) and t
 	 */
 	@XmlElement(name = "STUNEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean stuNEnable = false;
+	public Boolean stuNEnable;
 	/**
 	 * Domain name or IP address of the STUN server.
 	 *
@@ -463,7 +464,7 @@ When {{param|OutboundProxy}} is assigned, the name is looked up (resolved) and t
 	 */
 	@XmlElement(name = "InboundAuth")
 	@CWMPParameter(access = "readWrite")
-	public String inboundAuth = "None";
+	public String inboundAuth;
 	/**
 	 * If inbound authentication is used, the username credentials.
 	 *
@@ -491,7 +492,7 @@ When {{false}}, there is no specific requirement for choosing the codecs listed 
 	 */
 	@XmlElement(name = "UseCodecPriorityInSDPResponse")
 	@CWMPParameter(access = "readWrite")
-	public Boolean useCodecPriorityInSDPResponse = false;
+	public Boolean useCodecPriorityInSDPResponse;
 	/**
 	 * Diffserv code point to be used for outgoing SIP signaling packets.
 	 *
@@ -511,7 +512,7 @@ If either {{param}} or {{param|EthernetPriorityMark}} are greater than zero, the
 	@XmlElement(name = "VLANIDMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer vlaNIDMark = -1;
+	public Integer vlaNIDMark;
 	/**
 	 * Ethernet priority code (as defined in {{bibref|802.1Q-2005}}) to be used for outgoing SIP signaling packets for this network.  A value of -1 indicates the default value is to be used.
 
@@ -522,7 +523,7 @@ If either {{param|VLANIDMark}} or {{param}} are greater than zero, then the outg
 	@XmlElement(name = "EthernetPriorityMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer ethernetPriorityMark = -1;
+	public Integer ethernetPriorityMark;
 	/**
 	 * URI of the network conference bridge for the multiway conference call service.
 	 *

@@ -30,7 +30,7 @@ import org.broadbandforum.tr104.voiceservice.isdn.PRI;
 	/**
 	 * This object models ISDN physical interfaces (BRI and PRI) supporting {{bibref|Q.931}} based signalling.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.ISDN.")
 @XmlRootElement(name = "VoiceService.ISDN")

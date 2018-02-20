@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * RF REM results for each detected cell.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.CDMA2000.OneX.Cell.{i}.RF.")
 @XmlRootElement(name = "FAPService.REM.CDMA2000.OneX.Cell.RF")

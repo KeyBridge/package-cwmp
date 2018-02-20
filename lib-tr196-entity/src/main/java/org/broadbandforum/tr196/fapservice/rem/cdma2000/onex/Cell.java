@@ -27,7 +27,7 @@ import org.broadbandforum.tr196.fapservice.rem.cdma2000.onex.cell.RF;
 	/**
 	 * Table indicating the components of the discovered cells.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.CDMA2000.OneX.Cell.{i}.")
 @XmlRootElement(name = "FAPService.REM.CDMA2000.OneX.Cell")

@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.lldp.discovery.Device;
 
         The CPE MAY, but need not, retain some or all of the information in this object across reboot.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.LLDP.Discovery.")
 @XmlRootElement(name = "Device.LLDP.Discovery")

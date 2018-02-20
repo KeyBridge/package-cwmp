@@ -26,7 +26,7 @@ import org.broadbandforum.tr106.device.capabilities.PerformanceDiagnostic;
 	/**
 	 * The capabilities of the device.  This is a constant read-only object, meaning that only a firmware upgrade will cause these values to be altered.
 	 *
-	 * @since 1.2
+	 * @since TR106 v1.2
 	 */
 @CWMPObject(name = "Device.Capabilities.")
 @XmlRootElement(name = "Device.Capabilities")

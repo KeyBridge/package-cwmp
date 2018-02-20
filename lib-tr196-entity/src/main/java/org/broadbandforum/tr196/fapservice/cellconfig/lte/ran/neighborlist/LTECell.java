@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table containing the E-UTRA (i.e. intra-RAT) cell list provided by the ACS. The table contents MAY be added/deleted/modified during operation, in which case these changes shall be reflected in the broadcast information as soon as possible.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborList.LTECell.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborList.LTECell.{i}.", uniqueConstraints = {@CWMPUnique(names = {"PLMNID", "CID"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborList.LTECell")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.NeighborList.LTECell")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class LTECell {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -59,7 +61,7 @@ public class LTECell {
 	 */
 	@XmlElement(name = "MustInclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean mustInclude = false;
+	public Boolean mustInclude;
 	/**
 	 * PLMN ID consists of Mobile Country Code (MCC) and Mobile Network Code (MNC) {{bibref|3GPP-TS.23.003}}, {{bibref|3GPP-TS.24.008}}.
 
@@ -110,7 +112,7 @@ For a 2-digit MNC the total string length of {{param}} is 5.
 	@XmlElement(name = "QOffset")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 8, max = 24)
-	public Integer qoffset = 0;
+	public Integer qoffset;
 	/**
 	 * Cell individual offset applicable to a specific neighbouring cell. It is used for evaluating triggering conditions for measurement reporting in connected mode. Specified by cellIndividualOffset in MeasObjectEUTRA IE in {{bibref|3GPP-TS.36.331|Section 6.3.5}}.  For the value less than or equal to -8, and bigger than or equal to 8, only even numbers are valid. If the value is other than these, the CPE MUST reject the value.
 	 *
@@ -119,7 +121,7 @@ For a 2-digit MNC the total string length of {{param}} is 5.
 	@XmlElement(name = "CIO")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 8, max = 24)
-	public Integer cio = 0;
+	public Integer cio;
 	/**
 	 * The downlink reference-signal transmit power, specified in dBm. Defined as the linear average over the power contributions (in W) of all resource elements that carry cell-specific reference signals within the operating system bandwidth. Corresponds to parameter referenceSignalPower in SIB4 as a part of PDSCH-Config IE in {{bibref|3GPP-TS.36.331|Section 6.3.2}}.
 	 *
@@ -128,7 +130,7 @@ For a 2-digit MNC the total string length of {{param}} is 5.
 	@XmlElement(name = "RSTxPower")
 	@CWMPParameter(access = "readWrite", units = "dBm")
 	@Size(min = -60, max = 50)
-	public Integer rstxPower = 0;
+	public Integer rstxPower;
 	/**
 	 * Indicates whether this neighbor cell is allowed for UEs as handover target or not. If {{true}}, handover is prohibited towards this cell. If {{false}}, handover is allowed toward this cell. The {{param}} parameter allows this cell to be prohibited as a handover target, while still allowing this cell to be included in the BCCH SIB4 or 5.
 	 *
@@ -136,7 +138,7 @@ For a 2-digit MNC the total string length of {{param}} is 5.
 	 */
 	@XmlElement(name = "Blacklisted")
 	@CWMPParameter(access = "readWrite")
-	public Boolean blacklisted = false;
+	public Boolean blacklisted;
 
 	public LTECell() {
 	}

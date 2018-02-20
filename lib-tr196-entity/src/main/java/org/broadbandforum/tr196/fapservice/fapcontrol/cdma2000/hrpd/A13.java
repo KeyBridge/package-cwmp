@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.fapcontrol.cdma2000.hrpd.a13.HRPDSubn
 	/**
 	 * This object contains attributes related to A13 Session Transfer
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.HRPD.A13.")
 @XmlRootElement(name = "FAPService.FAPControl.CDMA2000.HRPD.A13")

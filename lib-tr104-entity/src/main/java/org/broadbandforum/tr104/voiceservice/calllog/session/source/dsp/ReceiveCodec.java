@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * The receive codec used in this session.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.Source.DSP.ReceiveCodec.")
 @XmlRootElement(name = "VoiceService.CallLog.Session.Source.DSP.ReceiveCodec")

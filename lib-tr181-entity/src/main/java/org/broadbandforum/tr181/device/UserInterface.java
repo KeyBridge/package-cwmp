@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.userinterface.RemoteAccess;
 	/**
 	 * This object contains parameters relating to the user interface of the CPE.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.UserInterface.")
 @XmlRootElement(name = "Device.UserInterface")

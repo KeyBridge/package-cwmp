@@ -29,7 +29,7 @@ import org.broadbandforum.tr196.fapservice.transport.sip.FCS;
 
 SIP is defined in {{bibref|RFC3261}}.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.SIP.")
 @XmlRootElement(name = "FAPService.Transport.SIP")

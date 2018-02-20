@@ -23,8 +23,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
-import org.broadbandforum.tr135.datatypes.UUID;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.UUID;
 import org.broadbandforum.tr135.stbservice.servicemonitoring.mainstream.EventLog;
 import org.broadbandforum.tr135.stbservice.servicemonitoring.mainstream.Sample;
 import org.broadbandforum.tr135.stbservice.servicemonitoring.mainstream.Total;
@@ -38,9 +39,10 @@ It is up to the STB to determine which AV stream should be regarded as the Main 
 
 Note that some parameters, e.g. {{param|.Components.FrontEnd.{i}.IP.ServiceConnect.URI}}, include requirements that restrict the STB's freedom to determine which AV stream should be regarded as the Main AV stream for a given service.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.")
+@CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.", uniqueConstraints = {@CWMPUnique(names = {"ServiceType"}, functional = false),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.ServiceMonitoring.MainStream")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream")
 @XmlAccessorType(XmlAccessType.FIELD)

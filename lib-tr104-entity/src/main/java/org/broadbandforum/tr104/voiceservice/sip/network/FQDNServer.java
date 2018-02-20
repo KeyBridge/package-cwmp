@@ -23,15 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
-import org.broadbandforum.tr104.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * Table of Fully Qualified Domain Names for this {{object|#}} instance in order to connect to the SIP server as described in {{bibref|RFC2782}}.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.SIP.Network.{i}.FQDNServer.{i}.")
+@CWMPObject(name = "VoiceService.{i}.SIP.Network.{i}.FQDNServer.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Domain"})})
 @XmlRootElement(name = "VoiceService.SIP.Network.FQDNServer")
 @XmlType(name = "VoiceService.SIP.Network.FQDNServer")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -44,7 +46,7 @@ public class FQDNServer {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -59,7 +61,7 @@ public class FQDNServer {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * The domain name of the target host.  This parameter can only be modified if {{param|Origin}} is {{enum|Static|Origin}}.
 	 *

@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * SIP client capabilities.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.SIP.Client.")
 @XmlRootElement(name = "VoiceService.Capabilities.SIP.Client")

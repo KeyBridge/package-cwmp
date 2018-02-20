@@ -28,7 +28,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mac.ULSCH;
 	/**
 	 * This object contains parameters relating to the MAC (Medium Access Control) configuration.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.MAC.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.MAC")

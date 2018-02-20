@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Status of the device's volatile physical memory.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.MemoryStatus.")
 @XmlRootElement(name = "Device.DeviceInfo.MemoryStatus")

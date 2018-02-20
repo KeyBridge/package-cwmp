@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters related to time syncronization with CDMA2000 System Time (see {{bibref|3GPP2-C.S0005}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.CDMA2000.Time.")
 @XmlRootElement(name = "FAPService.FAPControl.CDMA2000.Time")

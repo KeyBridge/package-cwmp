@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains statistics for an Ethernet WAN interface on a CPE device.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANEthernetInterfaceConfig.Stats.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANEthernetInterfaceConfig.Stats")

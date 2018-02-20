@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.RAN;
 	/**
 	 * This object contains parameters relating to configuring UMTS system specific information.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS")

@@ -24,7 +24,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Every instance of this object is a Vendor Configuration File, and contains parameters associated with the Vendor  Configuration File.
@@ -33,9 +34,10 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         Whenever the CPE successfully downloads a configuration file as a result of the Download RPC with the FileType argument of ''3 Vendor Configuration File'', the CPE MUST update this table.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.DeviceInfo.VendorConfigFile.{i}.")
+@CWMPObject(name = "Device.DeviceInfo.VendorConfigFile.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"})})
 @XmlRootElement(name = "Device.DeviceInfo.VendorConfigFile")
 @XmlType(name = "Device.DeviceInfo.VendorConfigFile")
 @XmlAccessorType(XmlAccessType.FIELD)

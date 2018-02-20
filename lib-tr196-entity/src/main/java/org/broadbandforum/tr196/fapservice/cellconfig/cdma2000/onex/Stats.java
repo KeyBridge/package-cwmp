@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains 1x FAP statistics aggregated over all connections of all users over all sectors.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.Stats.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.Stats")

@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object models the POTS link layer properties specific to a single physical connection used for Internet access on a CPE.  This object is intended for a CPE with a POTS WAN interface, and is exclusive of any other ''WAN*LinkConfig'' object within a given ''WANConnectionDevice'' instance.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANConnectionDevice.{i}.WANPOTSLinkConfig.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANConnectionDevice.WANPOTSLinkConfig")
@@ -45,7 +45,7 @@ public class WANPOTSLinkConfig {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Status of the link.
 	 *
@@ -78,7 +78,7 @@ public class WANPOTSLinkConfig {
 	 */
 	@XmlElement(name = "LinkType")
 	@CWMPParameter(access = "readWrite")
-	public String linkType = "PPP_Dialup";
+	public String linkType;
 	/**
 	 * The number of times the CPE SHOULD attempt an Internet connection setup before returning error.
 	 *

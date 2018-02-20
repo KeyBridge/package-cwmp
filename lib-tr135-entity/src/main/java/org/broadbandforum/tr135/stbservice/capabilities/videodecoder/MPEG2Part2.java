@@ -30,7 +30,7 @@ import org.broadbandforum.tr135.stbservice.capabilities.videodecoder.mpeg2part2.
 	/**
 	 * Object describing the set of supported MPEG2 profiles and levels for this STB. It also describes the set of audio standards supported when MPEG2 Part 2 is used as the video standard.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.VideoDecoder.MPEG2Part2.")
 @XmlRootElement(name = "STBService.Capabilities.VideoDecoder.MPEG2Part2")

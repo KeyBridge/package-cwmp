@@ -28,7 +28,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.onex.ran.hardhand
 	/**
 	 * This object provides configurable parameters for 1x Handout
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.HardHandoff.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.HardHandoff")

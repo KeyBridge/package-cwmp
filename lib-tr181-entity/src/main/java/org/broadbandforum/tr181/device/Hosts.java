@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.hosts.Host;
 	/**
 	 * This object provides information about each of the hosts on the LAN, including those whose IP address was allocated by the CPE using DHCP as well as hosts with statically allocated IP addresses. It can also include non-IP  hosts.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.Hosts.")
 @XmlRootElement(name = "Device.Hosts")

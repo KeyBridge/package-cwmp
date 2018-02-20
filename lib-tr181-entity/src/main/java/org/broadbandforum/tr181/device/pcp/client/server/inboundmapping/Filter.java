@@ -23,17 +23,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * Filter table.
 
         This table contains all Filters restricting this Inbound Mapping, as defined in {{bibref|RFC6887|}}.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.PCP.Client.{i}.Server.{i}.InboundMapping.{i}.Filter.{i}.")
+@CWMPObject(name = "Device.PCP.Client.{i}.Server.{i}.InboundMapping.{i}.Filter.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.PCP.Client.Server.InboundMapping.Filter")
 @XmlType(name = "Device.PCP.Client.Server.InboundMapping.Filter")
 @XmlAccessorType(XmlAccessType.FIELD)

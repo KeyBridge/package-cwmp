@@ -33,7 +33,7 @@ import org.broadbandforum.tr196.fapservice.rem.umts.gsm.Cell;
 	/**
 	 * This object contains parameters relating to GSM REM capabilities.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.UMTS.GSM.")
 @XmlRootElement(name = "FAPService.REM.UMTS.GSM")
@@ -48,7 +48,7 @@ public class GSM {
 	 */
 	@XmlElement(name = "InServiceHandling")
 	@CWMPParameter(access = "readWrite")
-	public String inserviceHandling = "Immediate";
+	public String inserviceHandling;
 	/**
 	 * Enables or disables Radio Environment Measurement during the FAP start up.
 	 *
@@ -56,7 +56,7 @@ public class GSM {
 	 */
 	@XmlElement(name = "ScanOnBoot")
 	@CWMPParameter(access = "readWrite")
-	public Boolean scanOnBoot = true;
+	public Boolean scanOnBoot;
 	/**
 	 * Enable Periodic Radio Environment Measurement on all enabled RAT.
 	 *
@@ -64,7 +64,7 @@ public class GSM {
 	 */
 	@XmlElement(name = "ScanPeriodically")
 	@CWMPParameter(access = "readWrite")
-	public Boolean scanPeriodically = false;
+	public Boolean scanPeriodically;
 	/**
 	 * When {{param|ScanPeriodically}} is {{true}}, this value indicates the interval in seconds which REM is performed while the FAP service is enabled.
 	 *

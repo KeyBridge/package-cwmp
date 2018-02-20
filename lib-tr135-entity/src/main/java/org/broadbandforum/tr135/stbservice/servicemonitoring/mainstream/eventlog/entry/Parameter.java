@@ -25,7 +25,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object represents an instance of a parameter that is associated with the Entry object Instance.
 	 *
-	 * @since 1.4
+	 * @since TR135 v1.4
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.EventLog.Entry.{i}.Parameter.{i}.")
 @XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.EventLog.Entry.Parameter")

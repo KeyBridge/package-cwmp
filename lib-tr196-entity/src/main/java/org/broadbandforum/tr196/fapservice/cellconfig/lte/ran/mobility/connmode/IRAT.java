@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the connected mode mobility (handover) configuration that is common to all inter-RAT handover scenarios (UTRA (UMTS), GERAN (GSM) and CDMA2000) (see {{bibref|3GPP-TS.32.592|Section 6.1.5.2.2}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.ConnMode.IRAT.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.ConnMode.IRAT")

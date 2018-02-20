@@ -25,13 +25,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * This object provides statistics for the Direct User Plane Path between HeNB and Local Gateway as defined in {{bibref|3GPP-TS.32.453}}.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.ERAB.Stats.LGW.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.ERAB.Stats.LGW.{i}.", uniqueConstraints = {@CWMPUnique(names = {"CorrelationID"})})
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.ERAB.Stats.LGW")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.ERAB.Stats.LGW")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -33,7 +33,7 @@ import org.broadbandforum.tr262.fap.tunnel.VirtualInterface;
 	/**
 	 * This object contains parameters relating to Tunneling.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
 @CWMPObject(name = "FAP.Tunnel.")
 @XmlRootElement(name = "FAP.Tunnel")

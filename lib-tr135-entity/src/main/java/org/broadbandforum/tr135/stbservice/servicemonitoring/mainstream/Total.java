@@ -33,7 +33,7 @@ import org.broadbandforum.tr135.stbservice.servicemonitoring.mainstream.total.Vi
 	/**
 	 * Total statistics since this ''ServiceMonitoring'' main stream instance was last enabled or Total statistics were last reset.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Total.")
 @XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Total")

@@ -27,16 +27,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object maintains a list of properties to be used for forwarding requests with a specified {{param|RCAT}}.
 
         Processing behavior for the use of M2M Service Provider policies is defined in section 10.3.1.2.2.1 of the M2M mIa, dIa and mId Interfaces {{bibref|ETSIM2MInterfaces}} document.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
-@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.M2MSPPolicy.RequestCategory.{i}.")
+@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.M2MSPPolicy.RequestCategory.{i}.", uniqueConstraints = {@CWMPUnique(names = {"RCAT"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.ETSIM2M.SCL.SAFPolicySet.M2MSPPolicy.RequestCategory")
 @XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet.M2MSPPolicy.RequestCategory")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -49,7 +51,7 @@ public class RequestCategory {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -76,7 +78,7 @@ public class RequestCategory {
 	@XmlElement(name = "TolerableDelay")
 	@CWMPParameter(access = "readWrite", units = "seconds")
 	@Size(min = -1)
-	public Integer tolerableDelay = 0;
+	public Integer tolerableDelay;
 	/**
 	 * The threshold of maximum number of pending requests permitted to be held for a specified RCAT. 
 

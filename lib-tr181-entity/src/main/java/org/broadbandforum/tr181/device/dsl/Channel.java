@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.dsl.channel.Stats;
 
 	/**
@@ -34,9 +35,10 @@ import org.broadbandforum.tr181.device.dsl.channel.Stats;
 
         This table models DSL channel(s) on top of physical DSL lines.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.DSL.Channel.{i}.")
+@CWMPObject(name = "Device.DSL.Channel.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.DSL.Channel")
 @XmlType(name = "Device.DSL.Channel")
 @XmlAccessorType(XmlAccessType.FIELD)

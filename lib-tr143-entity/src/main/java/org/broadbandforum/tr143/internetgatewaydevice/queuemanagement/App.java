@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Application table.
 	 *
-	 * @since 1.1
+	 * @since TR143 v1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.QueueManagement.App.{i}.")
 @XmlRootElement(name = "InternetGatewayDevice.QueueManagement.App")
@@ -51,7 +51,7 @@ This parameter is OBSOLETED because it serves no purpose (no other parameter ref
 	 */
 	@XmlElement(name = "AppEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean appEnable = false;
+	public Boolean appEnable;
 	/**
 	 * The status of this App table entry.  {{enum}}
 
@@ -60,7 +60,7 @@ The {{enum|Error}} value MAY be used by the CPE to indicate a locally defined er
 	 * @since 1.1
 	 */
 	@XmlElement(name = "AppStatus")
-	public String appStatus = "Disabled";
+	public String appStatus;
 	/**
 	 * URN identifying the protocol associated with the given application.  A set of defined URNs is given in {{bibref|TR-098a1|Annex A}}.
 	 *
@@ -97,7 +97,7 @@ A value of -1 indicates a null policer.
 	@XmlElement(name = "AppDefaultPolicer")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer appDefaultPolicer = -1;
+	public Integer appDefaultPolicer;
 	/**
 	 * Instance number of the Queue table entry for traffic associated with this App table entry, but not associated with any specified flow.
 
@@ -108,7 +108,7 @@ A value of -1 indicates a null queue.
 	@XmlElement(name = "AppDefaultQueue")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer appDefaultQueue = -1;
+	public Integer appDefaultQueue;
 	/**
 	 * DSCP to mark traffic associated with this App table entry, but not associated with any specified flow.
 
@@ -121,7 +121,7 @@ A value of -2 indicates automatic marking of DSCP based upon the EthernetPriorit
 	@XmlElement(name = "AppDefaultDSCPMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -2)
-	public Integer appDefaultDSCPMark = -1;
+	public Integer appDefaultDSCPMark;
 	/**
 	 * Ethernet priority code (as defined in 802.1D) to mark traffic associated with this App table entry, but not associated with any specified flow.
 
@@ -134,7 +134,7 @@ A value of -2 indicates automatic marking of EthernetPriority based upon the DSC
 	@XmlElement(name = "AppDefaultEthernetPriorityMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -2)
-	public Integer appDefaultEthernetPriorityMark = -1;
+	public Integer appDefaultEthernetPriorityMark;
 
 	public App() {
 	}

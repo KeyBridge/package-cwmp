@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.ieee8021x.supplicant.EAPMD5;
 import org.broadbandforum.tr181.device.ieee8021x.supplicant.EAPTLS;
 import org.broadbandforum.tr181.device.ieee8021x.supplicant.Stats;
@@ -38,9 +39,10 @@ import org.broadbandforum.tr181.device.ieee8021x.supplicant.Stats;
 
         Note: The {{object}} table includes a unique key parameter that is a strong reference. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.IEEE8021x.Supplicant.{i}.")
+@CWMPObject(name = "Device.IEEE8021x.Supplicant.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Interface"})})
 @XmlRootElement(name = "Device.IEEE8021x.Supplicant")
 @XmlType(name = "Device.IEEE8021x.Supplicant")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -53,7 +55,7 @@ public class Supplicant {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The current operational status of this 802.1x supplicant.  {{enum}}
 
@@ -64,7 +66,7 @@ public class Supplicant {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *

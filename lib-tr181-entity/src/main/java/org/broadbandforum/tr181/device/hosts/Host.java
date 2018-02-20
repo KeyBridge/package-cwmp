@@ -28,16 +28,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPAddress;
 import org.broadbandforum.tr181.device.hosts.host.IPv4Address;
 import org.broadbandforum.tr181.device.hosts.host.IPv6Address;
 
 	/**
 	 * Host table.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.Hosts.Host.{i}.")
+@CWMPObject(name = "Device.Hosts.Host.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"PhysAddress"})})
 @XmlRootElement(name = "Device.Hosts.Host")
 @XmlType(name = "Device.Hosts.Host")
 @XmlAccessorType(XmlAccessType.FIELD)

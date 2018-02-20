@@ -23,16 +23,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * List of MQTT subscriptions handled by the MQTT client.
 
         The MQTT client MUST subscribe with the MQTT broker for all subscription instances, whose parameter {{param|Enable}} is set to {{true}}, when it establishes a new connection to the MQTT broker. Disabled subscription instances with {{param|Enable}} set to {{false}} will be ignored during connection establishment.
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
-@CWMPObject(name = "Device.MQTT.Client.{i}.Subscription.{i}.")
+@CWMPObject(name = "Device.MQTT.Client.{i}.Subscription.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Topic"}, functional = false)})
 @XmlRootElement(name = "Device.MQTT.Client.Subscription")
 @XmlType(name = "Device.MQTT.Client.Subscription")
 @XmlAccessorType(XmlAccessType.FIELD)

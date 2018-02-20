@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.cellular.Interface;
 	/**
 	 * This object models cellular interfaces and access points.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.Cellular.")
 @XmlRootElement(name = "Device.Cellular")

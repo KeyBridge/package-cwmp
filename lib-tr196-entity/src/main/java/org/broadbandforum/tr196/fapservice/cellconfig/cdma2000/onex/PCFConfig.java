@@ -28,7 +28,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.onex.pcfconfig.PC
 	/**
 	 * CDMA2000 1x PCF configuration information.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.PCFConfig.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.PCFConfig")

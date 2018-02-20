@@ -30,7 +30,7 @@ import org.broadbandforum.tr262.fap.applicationplatform.monitoring.TerminalLocat
 	/**
 	 * This object contains parameters related to the monitoring of the Femtozone Application Platform and the Femtozone APIs.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
 @CWMPObject(name = "FAP.ApplicationPlatform.Monitoring.")
 @XmlRootElement(name = "FAP.ApplicationPlatform.Monitoring")

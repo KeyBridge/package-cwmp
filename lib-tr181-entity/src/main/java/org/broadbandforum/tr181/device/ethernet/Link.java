@@ -26,16 +26,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.ethernet.link.Stats;
 
 	/**
 	 * Ethernet link layer table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). Table entries model the Logical Link Control (LLC) layer. It is expected that an ''Ethernet Link'' interface can be stacked above any lower-layer interface object capable of carrying Ethernet frames.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.Ethernet.Link.{i}.")
+@CWMPObject(name = "Device.Ethernet.Link.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false),
+	@CWMPUnique(names = {"MACAddress"})})
 @XmlRootElement(name = "Device.Ethernet.Link")
 @XmlType(name = "Device.Ethernet.Link")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -50,7 +53,7 @@ public class Link {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The current operational state of the link (see {{bibref|TR-181i2|Section 4.2.2}}). {{enum}}
 
@@ -63,7 +66,7 @@ public class Link {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Down";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -118,7 +121,7 @@ public class Link {
 	 */
 	@XmlElement(name = "PriorityTagging")
 	@CWMPParameter(access = "readWrite")
-	public Boolean priorityTagging = false;
+	public Boolean priorityTagging;
 	/**
 	 * Throughput statistics for this interface.
 

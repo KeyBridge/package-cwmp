@@ -23,14 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * List of eligible external clock sources. The number of entries in this table depends on the maximum number of external clock sources supported by the CPE.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.ClockSynchronization.ClockSource.{i}.")
+@CWMPObject(name = "VoiceService.{i}.ClockSynchronization.ClockSource.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Order"}),
+	@CWMPUnique(names = {"Interface"})})
 @XmlRootElement(name = "VoiceService.ClockSynchronization.ClockSource")
 @XmlType(name = "VoiceService.ClockSynchronization.ClockSource")
 @XmlAccessorType(XmlAccessType.FIELD)

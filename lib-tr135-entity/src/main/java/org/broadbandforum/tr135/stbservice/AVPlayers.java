@@ -35,7 +35,7 @@ AV players are created statically. Each AV player corresponds to a combination o
 
 There is no guarantee that the STB has the resources to enable all of its AV players at the same time.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.AVPlayers.")
 @XmlRootElement(name = "STBService.AVPlayers")

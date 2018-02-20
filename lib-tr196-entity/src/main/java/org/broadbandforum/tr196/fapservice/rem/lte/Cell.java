@@ -27,7 +27,7 @@ import org.broadbandforum.tr196.fapservice.rem.lte.cell.RF;
 	/**
 	 * Table indicating the components of the discovered cells.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.LTE.Cell.{i}.")
 @XmlRootElement(name = "FAPService.REM.LTE.Cell")

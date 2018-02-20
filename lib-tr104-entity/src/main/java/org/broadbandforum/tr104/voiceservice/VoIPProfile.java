@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr104.voiceservice.voipprofile.FaxT38;
 import org.broadbandforum.tr104.voiceservice.voipprofile.RTP;
 
@@ -37,9 +38,9 @@ A VoIP Profile contains media transport configuration parameters that are common
 
 VoIP Profiles could be used by {{object|.SIP.Network.}}, {{object|.SIP.Proxy.}}, {{object|.SIP.Network.}}, {{object|.H323.Network.}} and {{object|.MGCP.Network.}}.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.")
+@CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.VoIPProfile")
 @XmlType(name = "VoiceService.VoIPProfile")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -52,7 +53,7 @@ public class VoIPProfile {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * If {{true}}, when {{param|Enable}} is set to {{false}} in-progress sessions remain intact, but no new sessions are allowed. When all sessions are terminated, the {{object}} is disabled.
 	 *

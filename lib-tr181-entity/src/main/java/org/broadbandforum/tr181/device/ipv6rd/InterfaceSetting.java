@@ -23,9 +23,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPv4Address;
-import org.broadbandforum.tr181.datatypes.IPv6Prefix;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPv4Address;
+import org.broadbandforum.common.IPv6Prefix;
 
 	/**
 	 * 6rd {{bibref|RFC5969}} settings.
@@ -38,9 +39,9 @@ import org.broadbandforum.tr181.datatypes.IPv6Prefix;
 
         This object definition is derived from {{bibref|RFC5969}} with some minor nomenclature changes.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.IPv6rd.InterfaceSetting.{i}.")
+@CWMPObject(name = "Device.IPv6rd.InterfaceSetting.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.IPv6rd.InterfaceSetting")
 @XmlType(name = "Device.IPv6rd.InterfaceSetting")
 @XmlAccessorType(XmlAccessType.FIELD)

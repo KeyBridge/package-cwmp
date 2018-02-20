@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * The object used for configuring extended system parameter messages for 1x
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.ExtendedSystemParameters.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.ExtendedSystemParameters")

@@ -26,8 +26,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.UUID;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.UUID;
 
 	/**
 	 * This table contains details of the device's Current Supported Data Model.
@@ -38,9 +39,11 @@ import org.broadbandforum.tr181.datatypes.UUID;
 
         Considering that every device has some form of a data model, this table MUST NOT be empty.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.DeviceInfo.SupportedDataModel.{i}.")
+@CWMPObject(name = "Device.DeviceInfo.SupportedDataModel.{i}.", uniqueConstraints = {@CWMPUnique(names = {"URL"}),
+	@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"UUID"})})
 @XmlRootElement(name = "Device.DeviceInfo.SupportedDataModel")
 @XmlType(name = "Device.DeviceInfo.SupportedDataModel")
 @XmlAccessorType(XmlAccessType.FIELD)

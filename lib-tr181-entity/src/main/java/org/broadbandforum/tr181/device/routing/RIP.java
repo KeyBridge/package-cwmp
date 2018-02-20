@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.routing.rip.InterfaceSetting;
 	/**
 	 * Routing Information Protocol (RIP) object.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.Routing.RIP.")
 @XmlRootElement(name = "Device.Routing.RIP")

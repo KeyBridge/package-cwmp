@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * DSP statistic parameters.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.Extension.{i}.Stats.DSP.")
 @XmlRootElement(name = "VoiceService.CallControl.Extension.Stats.DSP")

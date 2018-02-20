@@ -26,7 +26,7 @@ import org.broadbandforum.tr181.device.dlna.Capabilities;
 	/**
 	 * This object contains all DLNA related objects and parameters.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DLNA.")
 @XmlRootElement(name = "Device.DLNA")

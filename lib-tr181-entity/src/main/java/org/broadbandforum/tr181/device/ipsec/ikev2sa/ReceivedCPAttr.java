@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 
         If the same Attribute is received multiple times, it is up to the CPE to decide which entries to include (i.e. whether the same Attribute will be present multiple times). In order to allow for the same Attribute to be present multiple times within the table, this table has no unique key defined.
 	 *
-	 * @since 2.5
+	 * @since TR181 v2.5
 	 */
 @CWMPObject(name = "Device.IPsec.IKEv2SA.{i}.ReceivedCPAttr.{i}.")
 @XmlRootElement(name = "Device.IPsec.IKEv2SA.ReceivedCPAttr")

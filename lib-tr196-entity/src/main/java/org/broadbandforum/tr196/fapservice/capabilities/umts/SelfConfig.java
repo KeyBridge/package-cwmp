@@ -25,7 +25,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object contains parameters relating to the self-configuration capabilities of the FAP. Self-configuration is enabled in {{object|.FAPControl.UMTS.SelfConfig.}}
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Capabilities.UMTS.SelfConfig.")
 @XmlRootElement(name = "FAPService.Capabilities.UMTS.SelfConfig")

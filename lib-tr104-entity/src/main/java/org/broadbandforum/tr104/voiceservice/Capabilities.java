@@ -37,7 +37,7 @@ import org.broadbandforum.tr104.voiceservice.capabilities.SIP;
 	/**
 	 * The overall capabilities of the VoIP CPE.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.")
 @XmlRootElement(name = "VoiceService.Capabilities")

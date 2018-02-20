@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Parameters related to an outbound IP stream.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.Outbound.{i}.")
+@CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.Outbound.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}, functional = false),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Components.FrontEnd.IP.Outbound")
 @XmlType(name = "STBService.Components.FrontEnd.IP.Outbound")
 @XmlAccessorType(XmlAccessType.FIELD)

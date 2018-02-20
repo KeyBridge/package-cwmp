@@ -23,15 +23,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr104.voiceservice.dect.base.Stats;
 
 	/**
 	 * DECT base table (a voice physical interface as described in {{bibref|TR-104i2|Section 4.1}}).
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.DECT.Base.{i}.")
+@CWMPObject(name = "VoiceService.{i}.DECT.Base.{i}.", uniqueConstraints = {@CWMPUnique(names = {"RFPI"}),
+	@CWMPUnique(names = {"Name"}, functional = false),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.DECT.Base")
 @XmlType(name = "VoiceService.DECT.Base")
 @XmlAccessorType(XmlAccessType.FIELD)

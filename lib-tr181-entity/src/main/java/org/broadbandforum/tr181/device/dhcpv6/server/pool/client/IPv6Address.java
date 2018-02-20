@@ -22,13 +22,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * IPv6 addresses assigned to this client via IA_NA.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6Address.{i}.")
+@CWMPObject(name = "Device.DHCPv6.Server.Pool.{i}.Client.{i}.IPv6Address.{i}.", uniqueConstraints = {@CWMPUnique(names = {"IPAddress"})})
 @XmlRootElement(name = "Device.DHCPv6.Server.Pool.Client.IPv6Address")
 @XmlType(name = "Device.DHCPv6.Server.Pool.Client.IPv6Address")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -40,7 +41,7 @@ public class IPv6Address {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "IPAddress")
-	public org.broadbandforum.tr181.datatypes.IPv6Address ipaddress;
+	public org.broadbandforum.common.IPv6Address ipaddress;
 	/**
 	 * The time at which this address will cease to be preferred (i.e. will become deprecated), or {{null}} if not known. For an infinite lifetime, the parameter value MUST be 9999-12-31T23:59:59Z.
 	 *
@@ -66,7 +67,7 @@ public class IPv6Address {
 	 * @since 2.2
 	 * @return the value
 	 */
-	public org.broadbandforum.tr181.datatypes.IPv6Address getIpaddress() {
+	public org.broadbandforum.common.IPv6Address getIpaddress() {
 		return ipaddress;
 	}
 
@@ -76,7 +77,7 @@ public class IPv6Address {
 	 * @since 2.2
 	 * @param ipaddress the input value
 	 */
-	public void  setIpaddress(org.broadbandforum.tr181.datatypes.IPv6Address ipaddress) {
+	public void  setIpaddress(org.broadbandforum.common.IPv6Address ipaddress) {
 		this.ipaddress = ipaddress;
 	}
 
@@ -87,7 +88,7 @@ public class IPv6Address {
 	 * @param ipaddress the input value
 	 * @return this instance
 	 */
-	public IPv6Address withIpaddress(org.broadbandforum.tr181.datatypes.IPv6Address ipaddress) {
+	public IPv6Address withIpaddress(org.broadbandforum.common.IPv6Address ipaddress) {
 		this.ipaddress = ipaddress;
 		return this;
 	}

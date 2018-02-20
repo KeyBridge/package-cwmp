@@ -22,14 +22,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * IPv4 address table. Entries are auto-created and auto-deleted as IP addresses are added and deleted via DHCP, auto-IP, or IPCP. Static entries are created and configured by the ACS.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.IP.Interface.{i}.IPv4Address.{i}.")
+@CWMPObject(name = "Device.IP.Interface.{i}.IPv4Address.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"IPAddress", "SubnetMask"})})
 @XmlRootElement(name = "Device.IP.Interface.IPv4Address")
 @XmlType(name = "Device.IP.Interface.IPv4Address")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -42,7 +44,7 @@ public class IPv4Address {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this {{object}} table entry.  {{enum}}
 
@@ -53,7 +55,7 @@ public class IPv4Address {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 
@@ -73,7 +75,7 @@ public class IPv4Address {
 	 */
 	@XmlElement(name = "IPAddress")
 	@CWMPParameter(access = "readWrite")
-	public org.broadbandforum.tr181.datatypes.IPv4Address ipaddress;
+	public org.broadbandforum.common.IPv4Address ipaddress;
 	/**
 	 * Subnet mask.
 
@@ -83,14 +85,14 @@ public class IPv4Address {
 	 */
 	@XmlElement(name = "SubnetMask")
 	@CWMPParameter(access = "readWrite")
-	public org.broadbandforum.tr181.datatypes.IPv4Address subnetMask;
+	public org.broadbandforum.common.IPv4Address subnetMask;
 	/**
 	 * Addressing method used to assign the IP address. {{enum}}
 	 *
 	 * @since 2.0
 	 */
 	@XmlElement(name = "AddressingType")
-	public String addressingType = "Static";
+	public String addressingType;
 
 	public IPv4Address() {
 	}
@@ -218,7 +220,7 @@ public class IPv4Address {
 	 * @since 2.0
 	 * @return the value
 	 */
-	public org.broadbandforum.tr181.datatypes.IPv4Address getIpaddress() {
+	public org.broadbandforum.common.IPv4Address getIpaddress() {
 		return ipaddress;
 	}
 
@@ -230,7 +232,7 @@ public class IPv4Address {
 	 * @since 2.0
 	 * @param ipaddress the input value
 	 */
-	public void  setIpaddress(org.broadbandforum.tr181.datatypes.IPv4Address ipaddress) {
+	public void  setIpaddress(org.broadbandforum.common.IPv4Address ipaddress) {
 		this.ipaddress = ipaddress;
 	}
 
@@ -243,7 +245,7 @@ public class IPv4Address {
 	 * @param ipaddress the input value
 	 * @return this instance
 	 */
-	public IPv4Address withIpaddress(org.broadbandforum.tr181.datatypes.IPv4Address ipaddress) {
+	public IPv4Address withIpaddress(org.broadbandforum.common.IPv4Address ipaddress) {
 		this.ipaddress = ipaddress;
 		return this;
 	}
@@ -256,7 +258,7 @@ public class IPv4Address {
 	 * @since 2.0
 	 * @return the value
 	 */
-	public org.broadbandforum.tr181.datatypes.IPv4Address getSubnetMask() {
+	public org.broadbandforum.common.IPv4Address getSubnetMask() {
 		return subnetMask;
 	}
 
@@ -268,7 +270,7 @@ public class IPv4Address {
 	 * @since 2.0
 	 * @param subnetMask the input value
 	 */
-	public void  setSubnetMask(org.broadbandforum.tr181.datatypes.IPv4Address subnetMask) {
+	public void  setSubnetMask(org.broadbandforum.common.IPv4Address subnetMask) {
 		this.subnetMask = subnetMask;
 	}
 
@@ -281,7 +283,7 @@ public class IPv4Address {
 	 * @param subnetMask the input value
 	 * @return this instance
 	 */
-	public IPv4Address withSubnetMask(org.broadbandforum.tr181.datatypes.IPv4Address subnetMask) {
+	public IPv4Address withSubnetMask(org.broadbandforum.common.IPv4Address subnetMask) {
 		this.subnetMask = subnetMask;
 		return this;
 	}

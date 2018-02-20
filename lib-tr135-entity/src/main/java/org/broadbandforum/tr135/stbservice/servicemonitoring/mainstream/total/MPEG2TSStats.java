@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Total MPEG2-TS statistics for this ''ServiceMonitoring'' main stream instance.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Total.MPEG2TSStats.")
 @XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Total.MPEG2TSStats")

@@ -23,12 +23,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.IPv4Address;
+import org.broadbandforum.common.IPv4Address;
 
 	/**
 	 * IP Control Protocol (IPCP) client object for this PPP interface {{bibref|RFC1332}}. {{object}} only applies to IPv4.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.PPP.Interface.{i}.IPCP.")
 @XmlRootElement(name = "Device.PPP.Interface.IPCP")
@@ -66,7 +66,7 @@ public class IPCP {
 	 */
 	@XmlElement(name = "PassthroughEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean passthroughEnable = false;
+	public Boolean passthroughEnable;
 	/**
 	 * {{reference}}When {{param}} is set to {{empty}}, {{param|PassthroughEnable}} MUST be set to {{false}} (i.e. passthrough can not be enabled without a pool reference specified).
 	 *

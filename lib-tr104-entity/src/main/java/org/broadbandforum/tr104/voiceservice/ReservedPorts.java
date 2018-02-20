@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * The list of IP ports on the CPE WAN and LAN interfaces that will not be allocated by the ACS and therefore are available to be allocated by the CPE. The CPE can dynamically allocate ports from this range for things like signaling listening ports or local RTP ports.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.ReservedPorts.")
 @XmlRootElement(name = "VoiceService.ReservedPorts")

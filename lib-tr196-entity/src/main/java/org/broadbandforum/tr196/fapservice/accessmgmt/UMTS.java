@@ -37,7 +37,7 @@ Closed Subscriber Group (CSG) service behavior is specified in {{bibref|3GPP-TS.
 
 Note: Cell barring and 3GPP access class parameters are contained in {{object|.CellConfig.UMTS.RAN.CellRestriction.}} (UMTS FAP).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.UMTS.")
 @XmlRootElement(name = "FAPService.AccessMgmt.UMTS")
@@ -54,7 +54,7 @@ When the value is not {{enum|Open Access}} non-CSG-capable UE are handled accord
 	 */
 	@XmlElement(name = "AccessMode")
 	@CWMPParameter(access = "readWrite", activeNotify = "canDeny")
-	public String accessMode = "Open Access";
+	public String accessMode;
 	/**
 	 * Indicates how the access decision is made for non-CSG-capable UE. Parameter is ignored when {{param|AccessMode}} is {{enum|Open Access|AccessMode}}.
 	 *
@@ -62,7 +62,7 @@ When the value is not {{enum|Open Access}} non-CSG-capable UE are handled accord
 	 */
 	@XmlElement(name = "NonCSGUEAccessDecision")
 	@CWMPParameter(access = "readWrite", activeNotify = "canDeny")
-	public String nonCSGUEAccessDecision = "Local";
+	public String nonCSGUEAccessDecision;
 	/**
 	 * Indicates how the access decision is made for CSG-capable UE. Parameter is ignored when {{param|AccessMode}} is {{enum|Open Access|AccessMode}}.
 
@@ -78,7 +78,7 @@ CSG enforcement is performed by MSC/SGSN (with support from HSS), or by FGW.
 	 */
 	@XmlElement(name = "CSGMembershipDeterminedLocally")
 	@CWMPParameter(access = "readWrite", activeNotify = "canDeny")
-	public Boolean csgMembershipDeterminedLocally = false;
+	public Boolean csgMembershipDeterminedLocally;
 	/**
 	 * Maximum number of concurrent UEs allowed at a cell. Valid for any {{param|AccessMode}}. A value of -1 allows an unlimited number of concurrent UEs up to the limit of FAP capacity. The setting does not affect emergency calls.
 	 *
@@ -87,7 +87,7 @@ CSG enforcement is performed by MSC/SGSN (with support from HSS), or by FGW.
 	@XmlElement(name = "MaxUEsServed")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer maxUEsServed = -1;
+	public Integer maxUEsServed;
 	/**
 	 * Maximum number of concurrent CSG member UEs allowed at a hybrid or closed cell. A value of -1 allows an unlimited number of CSG members up to the limit of FAP capacity. The setting cannot be larger than the value of {{param|MaxUEsServed}}. The setting does not affect emergency calls. {{bibref|3GPP-TS.22.011}}, {{bibref|3GPP-TS.22.220}}.
 	 *
@@ -96,7 +96,7 @@ CSG enforcement is performed by MSC/SGSN (with support from HSS), or by FGW.
 	@XmlElement(name = "MaxCSGMembers")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer maxCSGMembers = -1;
+	public Integer maxCSGMembers;
 	/**
 	 * Maximum number of concurerent non-CSG member UEs allowed at a hybrid cell. Valid only if {{param|AccessMode}} is {{enum|Hybrid Access|AccessMode}}. The setting cannot be larger than the value of {{param|MaxUEsServed}}. The setting does not affect emergency calls.
 	 *
@@ -105,7 +105,7 @@ CSG enforcement is performed by MSC/SGSN (with support from HSS), or by FGW.
 	@XmlElement(name = "MaxNonCSGMembers")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer maxNonCSGMembers = -1;
+	public Integer maxNonCSGMembers;
 	/**
 	 * Maximum percentage of physical resource that can be assigned to non-CSG members aggregately at one time. In UMTS FAP, this applies to RB resource.
 	 *

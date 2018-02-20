@@ -33,7 +33,7 @@ import org.broadbandforum.tr104.voiceservice.pots.Ringer;
 	/**
 	 * This object models analogue lines. Both FXO and FXS are handled.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.POTS.")
 @XmlRootElement(name = "VoiceService.POTS")

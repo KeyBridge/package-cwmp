@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table containing the inter-frequency cell list provided by the ACS. The table contents MAY be added/deleted/modified during operation, in which case these changes shall be reflected in the broadcast information as soon as possible.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborList.InterFreqCell.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborList.InterFreqCell.{i}.", uniqueConstraints = {@CWMPUnique(names = {"PCPICHScramblingCode", "UARFCNDL"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.NeighborList.InterFreqCell")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.NeighborList.InterFreqCell")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class InterFreqCell {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -59,7 +61,7 @@ public class InterFreqCell {
 	 */
 	@XmlElement(name = "MustInclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean mustInclude = false;
+	public Boolean mustInclude;
 	/**
 	 * PLMN ID consists of Mobile Country Code (MCC) and Mobile Network Code (MNC) {{bibref|3GPP-TS.23.003}}, {{bibref|3GPP-TS.24.008}}.
 
@@ -173,7 +175,7 @@ Actual values of the power are -10.0 dBm to 50.0 dBm in steps of 0.1 dB. The val
 	@XmlElement(name = "PCPICHTxPower")
 	@CWMPParameter(access = "readWrite", units = "dBm")
 	@Size(min = -100, max = 500)
-	public Integer pcpICHTxPower = 0;
+	public Integer pcpICHTxPower;
 
 	public InterFreqCell() {
 	}

@@ -21,13 +21,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * This table contains signaling performance statistics for each protocol involved in the call.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.CallLog.{i}.SignalingPerformance.{i}.")
+@CWMPObject(name = "VoiceService.{i}.CallLog.{i}.SignalingPerformance.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Protocol"})})
 @XmlRootElement(name = "VoiceService.CallLog.SignalingPerformance")
 @XmlType(name = "VoiceService.CallLog.SignalingPerformance")
 @XmlAccessorType(XmlAccessType.FIELD)

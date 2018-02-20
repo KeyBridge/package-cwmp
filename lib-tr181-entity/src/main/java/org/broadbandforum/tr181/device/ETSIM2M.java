@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.etsim2m.SCL;
 	/**
 	 * The {{object}} object represents the management object for the Remote Entity Functions (REM) functions defined in the M2M Functional Architecture {{bibref|ETSIM2MFA}}.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.")
 @XmlRootElement(name = "Device.ETSIM2M")

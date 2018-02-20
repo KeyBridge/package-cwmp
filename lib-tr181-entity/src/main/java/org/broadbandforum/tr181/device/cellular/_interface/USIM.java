@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * USIM (Universal Subscriber Identity Module or SIM card) parameters for the interface.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.Cellular.Interface.{i}.USIM.")
 @XmlRootElement(name = "Device.Cellular.Interface.USIM")

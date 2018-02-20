@@ -30,7 +30,7 @@ import org.broadbandforum.tr135.stbservice.capabilities.videodecoder.smptevc1.Pr
 	/**
 	 * Object describing the set of supported SMPTE-VC-1 profiles and levels for this STB. It also describes the set of audio standards supported when SMPTE-VC-1 is used as the video standard.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.VideoDecoder.SMPTEVC1.")
 @XmlRootElement(name = "STBService.Capabilities.VideoDecoder.SMPTEVC1")

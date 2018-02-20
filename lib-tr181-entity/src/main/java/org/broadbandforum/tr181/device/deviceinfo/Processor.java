@@ -22,14 +22,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Each table entry represents a hardware or virtual processor that resides on this device.
 	 *
-	 * @since 2.1
+	 * @since TR181 v2.1
 	 */
-@CWMPObject(name = "Device.DeviceInfo.Processor.{i}.")
+@CWMPObject(name = "Device.DeviceInfo.Processor.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.DeviceInfo.Processor")
 @XmlType(name = "Device.DeviceInfo.Processor")
 @XmlAccessorType(XmlAccessType.FIELD)

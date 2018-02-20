@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.mqtt.Client;
 	/**
 	 * MQTT Base object describing all MQTT related parameters and objects {{bibref|MQTT31}},
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
 @CWMPObject(name = "Device.MQTT.")
 @XmlRootElement(name = "Device.MQTT")

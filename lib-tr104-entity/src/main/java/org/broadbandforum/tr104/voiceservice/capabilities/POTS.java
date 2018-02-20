@@ -25,7 +25,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * The overall POTS capabilities of external ports of the CPE.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.POTS.")
 @XmlRootElement(name = "VoiceService.Capabilities.POTS")

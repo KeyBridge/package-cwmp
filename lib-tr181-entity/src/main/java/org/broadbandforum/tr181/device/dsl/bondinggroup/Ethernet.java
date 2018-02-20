@@ -28,7 +28,7 @@ import org.broadbandforum.tr181.device.dsl.bondinggroup.ethernet.Stats;
 
         This object MUST be present if, and only if, {{param|#.BondScheme}} is {{enum|Ethernet|#.BondScheme}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DSL.BondingGroup.{i}.Ethernet.")
 @XmlRootElement(name = "Device.DSL.BondingGroup.Ethernet")

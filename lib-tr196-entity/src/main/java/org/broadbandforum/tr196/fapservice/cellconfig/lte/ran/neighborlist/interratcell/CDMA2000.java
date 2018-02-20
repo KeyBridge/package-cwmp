@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table containing the inter-RAT cell list for CDMA2000 provided by the ACS. The table contents MAY be added/deleted/modified during operation, in which case these changes shall be reflected in the broadcast information as soon as possible.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborList.InterRATCell.CDMA2000.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborList.InterRATCell.CDMA2000.{i}.", uniqueConstraints = {@CWMPUnique(names = {"CID"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborList.InterRATCell.CDMA2000")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.NeighborList.InterRATCell.CDMA2000")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class CDMA2000 {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -59,7 +61,7 @@ public class CDMA2000 {
 	 */
 	@XmlElement(name = "MustInclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean mustInclude = false;
+	public Boolean mustInclude;
 	/**
 	 * Defines the CDMA2000 band in which the CDMA2000 frequency carrier can be found, specified in bandclass number. BandClass is defined in {{bibref|3GPP2-C.S0057-B}} Table 1.5-1.
 
@@ -96,7 +98,7 @@ Corresponds to parameter bandClass specified in SIB8 in {{bibref|3GPP-TS.36.331|
 	 */
 	@XmlElement(name = "Type")
 	@CWMPParameter(access = "readWrite")
-	public String type = "1xRTT";
+	public String type;
 	/**
 	 * Defines the global cell identity of the cell. For a 1xRTT cell, the cell identity is a binary string 47 bits long. For a HRPD cell, the cell identity is a binary string 128 bits long. The value of {{param}} parameter is interpreted as 128-bit long unsigned integer. If {{param|Type}} is {{enum|1xRTT|Type}}, the first 47 bits (6 octet) is used and the rest of this {{param}} parameter MUST be ignored by the CPE. If {{param|Type}} is {{enum|HRPD|Type}}, the entire 16 octet is used as {{param}}. Corresponds to IE CellGlobalIdCDMA2000 specified in {{bibref|3GPP-TS.36.331|Section 6.3.4}}.
 	 *
@@ -105,7 +107,7 @@ Corresponds to parameter bandClass specified in SIB8 in {{bibref|3GPP-TS.36.331|
 	@XmlElement(name = "CID")
 	@CWMPParameter(access = "readWrite")
 	@Size(max = 16)
-	public String cid = "0";
+	public String cid;
 
 	public CDMA2000() {
 	}

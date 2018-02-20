@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPObject;
 
 Note that when TR-140 was originally published there was a typo in this object name, which has been corrected.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.Capabilities.")
 @XmlRootElement(name = "StorageService.Capabilities")

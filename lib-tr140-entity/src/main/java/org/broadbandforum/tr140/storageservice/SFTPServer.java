@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object allows the configuration of the SSH FTP server.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.SFTPServer.")
 @XmlRootElement(name = "StorageService.SFTPServer")

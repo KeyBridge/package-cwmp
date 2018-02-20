@@ -35,7 +35,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.wandevice.WANEthernetInter
 	/**
 	 * Each instance contains all objects associated with a particular physical WAN interface.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice")

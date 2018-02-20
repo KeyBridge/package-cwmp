@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr104.voiceservice.pots.fxo.DiagTests;
 
 	/**
@@ -31,9 +32,10 @@ import org.broadbandforum.tr104.voiceservice.pots.fxo.DiagTests;
 
 Each entry in the table models an analogue physical interface as defined by {{bibref|ETSI_ES_203_021}}
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.POTS.FXO.{i}.")
+@CWMPObject(name = "VoiceService.{i}.POTS.FXO.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}, functional = false),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.POTS.FXO")
 @XmlType(name = "VoiceService.POTS.FXO")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -90,7 +92,7 @@ If {{true}}, the FXO port goes directly to the off-hook state and works as a FXS
 	 */
 	@XmlElement(name = "SecondStepDialing")
 	@CWMPParameter(access = "readWrite")
-	public Boolean secondStepDialing = false;
+	public Boolean secondStepDialing;
 	/**
 	 * Specifies the time in seconds between off-hook and the transmission of the first digit for FXO interface.
 	 *
@@ -134,7 +136,7 @@ If {{true}}, the FXO port goes directly to the off-hook state and works as a FXS
 	 */
 	@XmlElement(name = "SignalingMode")
 	@CWMPParameter(access = "readWrite")
-	public String signalingMode = "LoopStart";
+	public String signalingMode;
 	/**
 	 * The time interval in milliseconds between dialing DTMF digits to PSTN. See also {{bibref|ETSI_ES_203_021}}
 	 *

@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains the DSL line test parameters that are available during the L0 (i.e., Showtime)  state.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DSL.Line.{i}.TestParams.")
 @XmlRootElement(name = "Device.DSL.Line.TestParams")

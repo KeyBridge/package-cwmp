@@ -28,7 +28,7 @@ import org.broadbandforum.tr140.storageservice.ftpserver.AnonymousUser;
 	/**
 	 * This object allows the configuration of the FTP server.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.FTPServer.")
 @XmlRootElement(name = "StorageService.FTPServer")

@@ -26,15 +26,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.usb.usbhosts.host.Device;
 
 	/**
 	 * Table of CPE USB Host controllers.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.USB.USBHosts.Host.{i}.")
+@CWMPObject(name = "Device.USB.USBHosts.Host.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.USB.USBHosts.Host")
 @XmlType(name = "Device.USB.USBHosts.Host")
 @XmlAccessorType(XmlAccessType.FIELD)

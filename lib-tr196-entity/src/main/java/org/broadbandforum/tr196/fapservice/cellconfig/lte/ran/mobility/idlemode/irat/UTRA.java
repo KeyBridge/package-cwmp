@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.mobility.idlemode.
 	/**
 	 * This object contains parameters relating to the idle mode mobility configuration for inter-RAT (Radio Access Technology) re-selection, specifically for re-selection to UTRA (UMTS) scenario (see {{bibref|3GPP-TS.32.592|Section 6.1.5.1.4}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.Mobility.IdleMode.IRAT.UTRA.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.Mobility.IdleMode.IRAT.UTRA")

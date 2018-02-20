@@ -27,13 +27,14 @@ import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * UPnP embedded device table. This table contains an entry for each UPnP embedded device that has been discovered via SSDP.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.UPnP.Discovery.Device.{i}.")
+@CWMPObject(name = "Device.UPnP.Discovery.Device.{i}.", uniqueConstraints = {@CWMPUnique(names = {"UUID"})})
 @XmlRootElement(name = "Device.UPnP.Discovery.Device")
 @XmlType(name = "Device.UPnP.Discovery.Device")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object provides general LAN network information about this device.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.NetInfo.")
 @XmlRootElement(name = "StorageService.NetInfo")

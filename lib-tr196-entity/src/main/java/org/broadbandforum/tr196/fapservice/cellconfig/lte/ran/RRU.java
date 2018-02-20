@@ -26,7 +26,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.rru.Stats;
 	/**
 	 * This object provides monitoring of the Radio Resource Usage in the HeNB.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.RRU.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.RRU")

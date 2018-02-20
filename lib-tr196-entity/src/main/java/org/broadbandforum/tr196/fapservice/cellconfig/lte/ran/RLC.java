@@ -27,7 +27,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.rlc.SRB2;
 	/**
 	 * This object contains parameters relating to the RLC (Radio Link Control) configuration.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.RLC.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.RLC")

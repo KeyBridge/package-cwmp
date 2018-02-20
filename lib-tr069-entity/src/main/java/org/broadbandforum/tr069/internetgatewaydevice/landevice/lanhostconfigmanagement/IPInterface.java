@@ -22,14 +22,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr069.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * IP interface table.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANHostConfigManagement.IPInterface.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANHostConfigManagement.IPInterface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"IPInterfaceIPAddress", "IPInterfaceSubnetMask"})})
 @XmlRootElement(name = "InternetGatewayDevice.LANDevice.LANHostConfigManagement.IPInterface")
 @XmlType(name = "InternetGatewayDevice.LANDevice.LANHostConfigManagement.IPInterface")
 @XmlAccessorType(XmlAccessType.FIELD)

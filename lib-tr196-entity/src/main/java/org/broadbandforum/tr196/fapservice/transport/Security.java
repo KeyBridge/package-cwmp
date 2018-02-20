@@ -30,7 +30,7 @@ import org.broadbandforum.tr196.fapservice.transport.security.Secret;
 	/**
 	 * This object contains parameters relating to Security.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.Security.")
 @XmlRootElement(name = "FAPService.Transport.Security")

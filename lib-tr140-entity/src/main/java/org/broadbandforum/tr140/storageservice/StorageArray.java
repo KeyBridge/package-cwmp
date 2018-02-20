@@ -26,16 +26,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr140.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object provides information about each storage array (RAID) configured on this device.
 
 Creating an instance of this object generates a disabled {{object}} instance.  Before this new {{object}} instance can be enabled (via a SetParameterValues command), it MUST have the following parameters configured: {{param|Name}}, {{param|RaidType}}, and {{param|PhysicalMediumReference}}. Once an instance is enabled the following parameters become immutable for the life of the instance: {{param|Name}}, {{param|RaidType}}, and {{param|PhysicalMediumReference}}.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
-@CWMPObject(name = "StorageService.{i}.StorageArray.{i}.")
+@CWMPObject(name = "StorageService.{i}.StorageArray.{i}.", uniqueConstraints = {@CWMPUnique(names = {"PhysicalMediumReference"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "StorageService.StorageArray")
 @XmlType(name = "StorageService.StorageArray")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -66,7 +68,7 @@ Once this instance becomes enabled, this parameter will be immutable for the lif
 	 * @since 1.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Offline";
+	public String status;
 	/**
 	 * Enables or disables this StorageArray instance.
 	 *
@@ -74,7 +76,7 @@ Once this instance becomes enabled, this parameter will be immutable for the lif
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Note that after creation of the Storage Array, any subsequent writes to this parameter MUST be ignored as array type migration is not supported.  To identify which RAID Types are supported, see {{param|.Capabilities.SupportedRaidTypes}}.
 
@@ -84,7 +86,7 @@ Once this instance becomes enabled, this parameter will be immutable for the lif
 	 */
 	@XmlElement(name = "RaidType")
 	@CWMPParameter(access = "readWrite")
-	public String raidType = "Linear";
+	public String raidType;
 	/**
 	 * The total Usable Capacity of the Storage Array in MB. This is computed by the system based on {{param|PhysicalMediumReference}} and {{param|RaidType}}.  Disk size is a consideration, as many RAID Types use the smallest drive in the group for calculations.
 	 *

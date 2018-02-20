@@ -34,7 +34,7 @@ When the number of log entries in the EventLog exceeds the value of the {{param|
 
 Log entries are persisted across reboots of the CPE.
 	 *
-	 * @since 1.4
+	 * @since TR135 v1.4
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.EventLog.")
 @XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.EventLog")

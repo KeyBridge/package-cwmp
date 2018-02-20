@@ -24,14 +24,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.ZigBeeNetworkAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.ZigBeeNetworkAddress;
 
 	/**
 	 * The {{object}} object describes the route table as defined in {{bibref|ZigBee2007|table 3.51 Routing Table Entry}}.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
-@CWMPObject(name = "Device.ZigBee.ZDO.{i}.NodeManager.RoutingTable.{i}.")
+@CWMPObject(name = "Device.ZigBee.ZDO.{i}.NodeManager.RoutingTable.{i}.", uniqueConstraints = {@CWMPUnique(names = {"DestinationAddress"})})
 @XmlRootElement(name = "Device.ZigBee.ZDO.NodeManager.RoutingTable")
 @XmlType(name = "Device.ZigBee.ZDO.NodeManager.RoutingTable")
 @XmlAccessorType(XmlAccessType.FIELD)

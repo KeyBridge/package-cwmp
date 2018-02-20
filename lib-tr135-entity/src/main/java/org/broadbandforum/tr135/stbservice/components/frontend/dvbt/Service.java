@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * DVB-T Current service details.
 	 *
-	 * @since 1.1
+	 * @since TR135 v1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.Service.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.DVBT.Service")

@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.firewall.chain.Rule;
 
 	/**
@@ -34,9 +35,10 @@ import org.broadbandforum.tr181.device.firewall.chain.Rule;
 
         A given Firewall Chain's rules are all created by the same entity, as indicated by the {{param|Creator}} parameter.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.Firewall.Chain.{i}.")
+@CWMPObject(name = "Device.Firewall.Chain.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.Firewall.Chain")
 @XmlType(name = "Device.Firewall.Chain")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -49,7 +51,7 @@ public class Chain {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -75,7 +77,7 @@ public class Chain {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Creator")
-	public String creator = "ACS";
+	public String creator;
 	/**
 	 * Firewall Rule table. Each entry defines a Firewall packet selection rule. The {{param|Target}} parameter defines the action to perform for traffic matching this rule: the packet can be dropped, accepted, rejected or passed to another {{object|#}}.
 

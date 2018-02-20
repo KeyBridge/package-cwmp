@@ -23,16 +23,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table to record what the STB has been receiving. Time durations are recorded only for an AVPlayer's main AVStream (i.e. for TV channels being displayed in the main screen).
 
 Each entry corresponds to a given TV channel and is indexed by channel name (the instance number is chosen by the STB and is not related to the channel number).
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.Applications.AudienceStats.Channel.{i}.")
+@CWMPObject(name = "STBService.{i}.Applications.AudienceStats.Channel.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Applications.AudienceStats.Channel")
 @XmlType(name = "STBService.Applications.AudienceStats.Channel")
 @XmlAccessorType(XmlAccessType.FIELD)

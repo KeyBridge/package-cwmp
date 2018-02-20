@@ -39,7 +39,7 @@ import org.broadbandforum.tr135.stbservice.components.VideoOutput;
 	/**
 	 * Details of STB logical or physical internal components. Unlike the {{object|.Capabilities}} object, which is read-only and which doesn't describe individual instances, this object contains some writeable parameters.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.")
 @XmlRootElement(name = "STBService.Components")

@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object describes the characteristics of the Digital Rights Management, if any.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.DRM.")
 @XmlRootElement(name = "STBService.Capabilities.DRM")

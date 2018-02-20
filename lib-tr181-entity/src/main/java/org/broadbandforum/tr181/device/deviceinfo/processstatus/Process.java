@@ -23,13 +23,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * List of all processes running on the device.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.DeviceInfo.ProcessStatus.Process.{i}.")
+@CWMPObject(name = "Device.DeviceInfo.ProcessStatus.Process.{i}.", uniqueConstraints = {@CWMPUnique(names = {"PID"})})
 @XmlRootElement(name = "Device.DeviceInfo.ProcessStatus.Process")
 @XmlType(name = "Device.DeviceInfo.ProcessStatus.Process")
 @XmlAccessorType(XmlAccessType.FIELD)

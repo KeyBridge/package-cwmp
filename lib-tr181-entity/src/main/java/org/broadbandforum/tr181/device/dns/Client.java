@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.dns.client.Server;
 	/**
 	 * Client properties for Domain Name Service (DNS). The DNS client resolves FQDN on behalf of device internal (client) applications.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DNS.Client.")
 @XmlRootElement(name = "Device.DNS.Client")

@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Parameters used to force connection to a dedicated IP stream for test purposes.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.ServiceConnect.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.IP.ServiceConnect")

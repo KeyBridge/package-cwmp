@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
         The object is applicable to deployments of  {{object|####.Bridging.ProviderBridge}} where the {{object|###.Bridge}} instance is referenced by {{param|####.Bridging.ProviderBridge.{i}.SVLANComponent}} or {{param|####.Bridging.ProviderBridge.{i}.CVLANComponents}} parameters.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
 @CWMPObject(name = "Device.Bridging.Bridge.{i}.Port.{i}.PriorityCodePoint.")
 @XmlRootElement(name = "Device.Bridging.Bridge.Port.PriorityCodePoint")
@@ -56,7 +56,7 @@ public class PriorityCodePoint {
 	 */
 	@XmlElement(name = "UseDEI")
 	@CWMPParameter(access = "readWrite")
-	public Boolean useDEI = false;
+	public Boolean useDEI;
 	/**
 	 * This parameter controls the processing of the encoding or decoding of the drop_eligible component in the PCP field and is described in {{bibref|802.1Q-2011|section 8.6.7}}.
 	 *
@@ -64,7 +64,7 @@ public class PriorityCodePoint {
 	 */
 	@XmlElement(name = "RequireDropEncoding")
 	@CWMPParameter(access = "readWrite")
-	public Boolean requireDropEncoding = false;
+	public Boolean requireDropEncoding;
 	/**
 	 * This parameter provides the management control for the processing of the encoding of the Priority Code Point (PCP) field for the 802.1Q header as defined in {{bibref|802.1Q-2011|section 6.9.3 Priority Code Point Encoding}} and {{bibref|802.1Q-2011|Table 6-3}}.
 

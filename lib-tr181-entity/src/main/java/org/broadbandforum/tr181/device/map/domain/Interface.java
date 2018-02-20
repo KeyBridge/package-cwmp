@@ -26,13 +26,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.map.domain._interface.Stats;
 
 	/**
 	 * MAP interface (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}).  This models the LAN side MAP domain interface.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.MAP.Domain.{i}.Interface.")
 @XmlRootElement(name = "Device.MAP.Domain.Interface")
@@ -49,7 +49,7 @@ public class Interface {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The current operational state of the interface (see {{bibref|TR-181i2|Section 4.2.2}}). {{enum}}
 

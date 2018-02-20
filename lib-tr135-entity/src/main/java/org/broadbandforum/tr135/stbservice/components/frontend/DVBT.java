@@ -33,7 +33,7 @@ import org.broadbandforum.tr135.stbservice.components.frontend.dvbt.ServiceListD
 
 Parameters are taken from the DGTVi D-Book {{bibref|D-Book}}.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.DVBT.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.DVBT")

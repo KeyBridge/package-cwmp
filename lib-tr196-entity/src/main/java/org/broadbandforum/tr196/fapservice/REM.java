@@ -28,7 +28,7 @@ import org.broadbandforum.tr196.fapservice.rem.UMTS;
 	/**
 	 * This object contains parameters relating to REM (Radio Environment Measurement).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.")
 @XmlRootElement(name = "FAPService.REM")

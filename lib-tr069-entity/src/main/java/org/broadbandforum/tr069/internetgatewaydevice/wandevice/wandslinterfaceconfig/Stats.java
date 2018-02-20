@@ -30,7 +30,7 @@ import org.broadbandforum.tr069.internetgatewaydevice.wandevice.wandslinterfacec
 	/**
 	 * This object contains statistics for a WAN DSL physical interface.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLInterfaceConfig.Stats.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANDSLInterfaceConfig.Stats")

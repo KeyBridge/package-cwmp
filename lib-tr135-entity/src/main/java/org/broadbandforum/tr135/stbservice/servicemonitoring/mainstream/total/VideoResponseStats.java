@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * Total video response statistics for this ''ServiceMonitoring'' main stream instance.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Total.VideoResponseStats.")
 @XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Total.VideoResponseStats")

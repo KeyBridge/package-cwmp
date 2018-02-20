@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.m2msppolicy.Requ
 	/**
 	 * This object maintains the SAF handling policies' properties that are controlled by the M2M service provider for a request.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.M2MSPPolicy.")
 @XmlRootElement(name = "Device.ETSIM2M.SCL.SAFPolicySet.M2MSPPolicy")

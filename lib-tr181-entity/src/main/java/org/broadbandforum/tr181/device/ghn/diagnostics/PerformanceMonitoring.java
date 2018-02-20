@@ -23,8 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.DiagnosticsState;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.common.DiagnosticsState;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.ghn.diagnostics.performancemonitoring.Channels;
 import org.broadbandforum.tr181.device.ghn.diagnostics.performancemonitoring.Nodes;
 
@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.ghn.diagnostics.performancemonitoring.Nod
 
         When diagnostics are requested, all G.hn nodes for which the {{param|##.Interface.{i}.PerformanceMonitoringDiagnosticsEnable}} parameter is set enter PHY diagnostics mode.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.Ghn.Diagnostics.PerformanceMonitoring.")
 @XmlRootElement(name = "Device.Ghn.Diagnostics.PerformanceMonitoring")

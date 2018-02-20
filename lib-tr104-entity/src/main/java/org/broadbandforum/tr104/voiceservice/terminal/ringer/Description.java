@@ -23,16 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Each entry in this table defines the contents of an individual ring specification.
 
 The defaults given for this object apply only to explicit creation of an instance of this object and not to automatic creation of instances of this object due to creation of a parent object.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.Terminal.{i}.Ringer.Description.{i}.")
+@CWMPObject(name = "VoiceService.{i}.Terminal.{i}.Ringer.Description.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.Terminal.Ringer.Description")
 @XmlType(name = "VoiceService.Terminal.Ringer.Description")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -45,7 +46,7 @@ public class Description {
 	 */
 	@XmlElement(name = "RingEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean ringEnable = false;
+	public Boolean ringEnable;
 	/**
 	 * {{datatype|expand}}
 	 *

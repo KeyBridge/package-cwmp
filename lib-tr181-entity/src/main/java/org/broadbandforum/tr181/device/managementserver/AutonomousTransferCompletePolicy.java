@@ -32,7 +32,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
         The CPE policy determines the conditions under which the CPE notifies the ACS of the completion of file transfers that were not specifically requested by the ACS.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.ManagementServer.AutonomousTransferCompletePolicy.")
 @XmlRootElement(name = "Device.ManagementServer.AutonomousTransferCompletePolicy")

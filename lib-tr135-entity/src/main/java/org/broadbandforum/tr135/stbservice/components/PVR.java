@@ -29,7 +29,7 @@ import org.broadbandforum.tr135.stbservice.components.pvr.Storage;
 	/**
 	 * PVR details.  This is a read-only object that exists only to reference PVR storage objects.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.PVR.")
 @XmlRootElement(name = "STBService.Components.PVR")

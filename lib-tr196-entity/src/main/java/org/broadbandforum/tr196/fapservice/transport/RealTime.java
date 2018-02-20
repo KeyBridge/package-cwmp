@@ -27,7 +27,7 @@ import org.broadbandforum.tr196.fapservice.transport.realtime.Perf;
 	/**
 	 * This object contains parameters relating to Real Time Transport using RTP.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.Transport.RealTime.")
 @XmlRootElement(name = "FAPService.Transport.RealTime")

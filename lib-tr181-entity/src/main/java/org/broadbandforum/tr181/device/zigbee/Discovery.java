@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.zigbee.discovery.AreaNetwork;
 	/**
 	 * This object is used for managing the discovery of ZigBee devices within a ZigBee Area Network. ZigBee Devices are discovered via the {{object|#.ZDO}} instance associated with the ZigBee Coordinator of an Area Network.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
 @CWMPObject(name = "Device.ZigBee.Discovery.")
 @XmlRootElement(name = "Device.ZigBee.Discovery")

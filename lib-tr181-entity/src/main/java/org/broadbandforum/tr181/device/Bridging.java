@@ -38,7 +38,7 @@ import org.broadbandforum.tr181.device.bridging.ProviderBridge;
 
         802.1Q {{bibref|802.1Q-2011}} bridges incorporate 802.1Q {{bibref|802.1Q-2005}} customer and 802.1ad {{bibref|802.1ad-2005}} provider bridges.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.Bridging.")
 @XmlRootElement(name = "Device.Bridging")

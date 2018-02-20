@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the PUCCH (Physical Uplink Control Channel) configuration. (see {{bibref|3GPP-TS.32.592|Section 6.1.1.5}})
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.PUCCH.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY.PUCCH")

@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.softwaremodules.executionunit.Extensions;
 
 	/**
@@ -42,9 +43,10 @@ import org.broadbandforum.tr181.device.softwaremodules.executionunit.Extensions;
 
         Each {{object}} MAY also contain a set of vendor specific parameters displaying status and maintaining configuration that reside under the {{object|Extensions}} object.
 	 *
-	 * @since 2.1
+	 * @since TR181 v2.1
 	 */
-@CWMPObject(name = "Device.SoftwareModules.ExecutionUnit.{i}.")
+@CWMPObject(name = "Device.SoftwareModules.ExecutionUnit.{i}.", uniqueConstraints = {@CWMPUnique(names = {"EUID"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.SoftwareModules.ExecutionUnit")
 @XmlType(name = "Device.SoftwareModules.ExecutionUnit")
 @XmlAccessorType(XmlAccessType.FIELD)

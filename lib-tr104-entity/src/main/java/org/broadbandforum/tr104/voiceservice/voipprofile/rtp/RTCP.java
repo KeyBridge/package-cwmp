@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * VoIP profile parameters related to RTCP.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.RTP.RTCP.")
 @XmlRootElement(name = "VoiceService.VoIPProfile.RTP.RTCP")

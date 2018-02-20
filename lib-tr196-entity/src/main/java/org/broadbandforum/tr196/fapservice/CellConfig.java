@@ -28,7 +28,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.UMTS;
 	/**
 	 * This object contains parameters relating to configuring the FAP.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.")
 @XmlRootElement(name = "FAPService.CellConfig")

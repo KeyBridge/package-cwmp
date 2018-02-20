@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Stats for HRPD RNC signaling procedures.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.RNCSigAppsStats.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD.RNCSigAppsStats")

@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object allows the configuration of per-folder storage quota management.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.LogicalVolume.{i}.Folder.{i}.Quota.")
 @XmlRootElement(name = "StorageService.LogicalVolume.Folder.Quota")
@@ -41,7 +41,7 @@ public class Quota {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Maximum size in MB of the quota for this folder.
 	 *
@@ -72,7 +72,7 @@ public class Quota {
 	 * @since 1.0
 	 */
 	@XmlElement(name = "ThresholdReached")
-	public Boolean thresholdReached = false;
+	public Boolean thresholdReached;
 
 	public Quota() {
 	}

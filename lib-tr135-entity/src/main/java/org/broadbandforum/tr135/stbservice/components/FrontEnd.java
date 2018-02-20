@@ -23,16 +23,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr135.stbservice.components.frontend.DVBT;
 import org.broadbandforum.tr135.stbservice.components.frontend.IP;
 
 	/**
 	 * FrontEnd instance table. Each front-end instance, including vendor-specific front-end types, will normally have a sub-object that corresponds to the front-end type (e.g. DVB-T or IP).
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.")
+@CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}, functional = false),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Components.FrontEnd")
 @XmlType(name = "STBService.Components.FrontEnd")
 @XmlAccessorType(XmlAccessType.FIELD)

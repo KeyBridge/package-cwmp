@@ -23,16 +23,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPv4Prefix;
-import org.broadbandforum.tr181.datatypes.IPv6Prefix;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPv4Prefix;
+import org.broadbandforum.common.IPv6Prefix;
 
 	/**
 	 * The MAP domain's Mapping Rules {{bibref|RFC7597}}. The rule with the longest match between its {{param|IPv6Prefix}} and the end-user {{param|#.IPv6Prefix}} is the Basic Mapping Rule (BMR). Any of the rules (including the BMR) can be a Forwarding Mapping Rule.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.MAP.Domain.{i}.Rule.{i}.")
+@CWMPObject(name = "Device.MAP.Domain.{i}.Rule.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"IPv6Prefix"}),
+	@CWMPUnique(names = {"IPv4Prefix"})})
 @XmlRootElement(name = "Device.MAP.Domain.Rule")
 @XmlType(name = "Device.MAP.Domain.Rule")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -45,7 +48,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this {{object}} instance.  {{enum}}
 
@@ -54,7 +57,7 @@ public class Rule {
 	 * @since 2.8
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -71,7 +74,7 @@ public class Rule {
 	 * @since 2.8
 	 */
 	@XmlElement(name = "Origin")
-	public String origin = "Static";
+	public String origin;
 	/**
 	 * The ''Rule IPv6 prefix''.
 
@@ -114,7 +117,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "IsFMR")
 	@CWMPParameter(access = "readWrite")
-	public Boolean isfMR = false;
+	public Boolean isfMR;
 
 	public Rule() {
 	}

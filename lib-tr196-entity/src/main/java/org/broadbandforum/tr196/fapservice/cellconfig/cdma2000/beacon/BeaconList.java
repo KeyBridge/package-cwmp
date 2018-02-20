@@ -26,14 +26,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object models an individual beacon intervals. It may be used to model both 1x and HRPD beacons with offset from start of beacon frame measured in 80ms slots.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.Beacon.BeaconList.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.Beacon.BeaconList.{i}.", uniqueConstraints = {@CWMPUnique(names = {"BeaconIndex"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.Beacon.BeaconList")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.Beacon.BeaconList")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -46,7 +48,7 @@ public class BeaconList {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -61,7 +63,7 @@ public class BeaconList {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "BeaconIndex")
-	public Integer beaconIndex = 0;
+	public Integer beaconIndex;
 	/**
 	 * Offset from the start of the beacon frame in 80ms slots.
 	 *
@@ -87,7 +89,7 @@ public class BeaconList {
 	 */
 	@XmlElement(name = "TransmissionFormat")
 	@CWMPParameter(access = "readWrite")
-	public String transmissionFormat = "1";
+	public String transmissionFormat;
 	/**
 	 * Band class for this beacon interval.
 	 *
@@ -96,7 +98,7 @@ public class BeaconList {
 	@XmlElement(name = "BeaconBandClass")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 31)
-	public Integer beaconBandClass = 0;
+	public Integer beaconBandClass;
 	/**
 	 * Channel number for this beacon interval.
 	 *
@@ -124,7 +126,7 @@ public class BeaconList {
 	@XmlElement(name = "TxPower")
 	@CWMPParameter(access = "readWrite", units = "dBm")
 	@Size(min = -40, max = 20)
-	public Integer txpower = -40;
+	public Integer txpower;
 	/**
 	 * SID for this beacon interval.
 	 *

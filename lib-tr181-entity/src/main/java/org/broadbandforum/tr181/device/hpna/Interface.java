@@ -27,8 +27,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.hpna._interface.AssociatedDevice;
 import org.broadbandforum.tr181.device.hpna._interface.QoS;
 import org.broadbandforum.tr181.device.hpna._interface.Stats;
@@ -36,9 +37,10 @@ import org.broadbandforum.tr181.device.hpna._interface.Stats;
 	/**
 	 * HPNA interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). Each table entry models the PHY and MAC levels of an HPNA interface {{bibref|G.9954}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.HPNA.Interface.{i}.")
+@CWMPObject(name = "Device.HPNA.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.HPNA.Interface")
 @XmlType(name = "Device.HPNA.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -42,7 +42,7 @@ Femto Awareness, SMS, MMS, and Terminal Location APIs are defined in the Release
 
 {{bibref|TR-262|appendix I}} provides the "Theory of Operation" for the usage of this object.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
 @CWMPObject(name = "FAP.ApplicationPlatform.")
 @XmlRootElement(name = "FAP.ApplicationPlatform")

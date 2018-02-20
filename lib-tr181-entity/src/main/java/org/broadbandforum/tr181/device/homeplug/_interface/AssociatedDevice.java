@@ -21,14 +21,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * This table contains information about other HomePlug devices connected to this HomePlug interface.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.HomePlug.Interface.{i}.AssociatedDevice.{i}.")
+@CWMPObject(name = "Device.HomePlug.Interface.{i}.AssociatedDevice.{i}.", uniqueConstraints = {@CWMPUnique(names = {"MACAddress"})})
 @XmlRootElement(name = "Device.HomePlug.Interface.AssociatedDevice")
 @XmlType(name = "Device.HomePlug.Interface.AssociatedDevice")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -30,7 +30,7 @@ import org.broadbandforum.tr262.fap.gps.ContinuousGPSStatus;
 	/**
 	 * This object contains the parameters relating to the GPS scan.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
 @CWMPObject(name = "FAP.GPS.")
 @XmlRootElement(name = "FAP.GPS")
@@ -45,7 +45,7 @@ public class GPS {
 	 */
 	@XmlElement(name = "ScanOnBoot")
 	@CWMPParameter(access = "readWrite")
-	public Boolean scanOnBoot = true;
+	public Boolean scanOnBoot;
 	/**
 	 * Enables or disables periodic GPS scans.
 	 *
@@ -53,7 +53,7 @@ public class GPS {
 	 */
 	@XmlElement(name = "ScanPeriodically")
 	@CWMPParameter(access = "readWrite")
-	public Boolean scanPeriodically = false;
+	public Boolean scanPeriodically;
 	/**
 	 * When {{param|ScanPeriodically}} is {{true}}, this value indicates the interval in seconds which GPS scan is performed.
 	 *

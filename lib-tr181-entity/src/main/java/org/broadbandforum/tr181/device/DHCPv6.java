@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.dhcpv6.Server;
 	/**
 	 * The Dynamic Host Configuration Protocol (DHCP) IPv6 object {{bibref|RFC3315}}. This entire object applies to IPv6 only. It contains the {{object|Client}} and {{object|Server}} objects.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
 @CWMPObject(name = "Device.DHCPv6.")
 @XmlRootElement(name = "Device.DHCPv6")

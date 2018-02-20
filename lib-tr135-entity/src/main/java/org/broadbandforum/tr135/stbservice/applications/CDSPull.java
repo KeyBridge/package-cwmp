@@ -30,7 +30,7 @@ import org.broadbandforum.tr135.stbservice.applications.cdspull.ContentItem;
 	/**
 	 * Details of STB CDS Pull logical internal component. This object is present only if the user allowed (via his local STB UI) the remote management of the CDS Pull service.
 	 *
-	 * @since 1.1
+	 * @since TR135 v1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Applications.CDSPull.")
 @XmlRootElement(name = "STBService.Applications.CDSPull")

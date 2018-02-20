@@ -23,14 +23,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.DiagnosticsState;
+import org.broadbandforum.common.DiagnosticsState;
 
 	/**
 	 * This object provides access to either a Signal-to-Noise-Ratio (SNR) Port Measurement test or a Channel Frequency Response (CFR) Port Measurement test. The {{param|Type}} parameter is used to select which type of test to perform.
 
         CFR and SNR measurements are done between a two UPA devices (a local interface and a remote device belonging to the same network).
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.UPA.Diagnostics.InterfaceMeasurement.")
 @XmlRootElement(name = "Device.UPA.Diagnostics.InterfaceMeasurement")

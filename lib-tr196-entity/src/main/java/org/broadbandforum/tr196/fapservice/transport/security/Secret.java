@@ -23,13 +23,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Shared Secret Table. This table gathers information about all types of shared secret-based credentials (UICC).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.Transport.Security.Secret.{i}.")
+@CWMPObject(name = "FAPService.{i}.Transport.Security.Secret.{i}.", uniqueConstraints = {@CWMPUnique(names = {"UICCCardID"})})
 @XmlRootElement(name = "FAPService.Transport.Security.Secret")
 @XmlType(name = "FAPService.Transport.Security.Secret")
 @XmlAccessorType(XmlAccessType.FIELD)

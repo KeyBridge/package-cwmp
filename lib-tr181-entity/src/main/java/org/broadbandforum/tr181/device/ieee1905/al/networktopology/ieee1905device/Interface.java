@@ -23,14 +23,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * This object represents an instance of an interface for the {{object|##.IEEE1905Device}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
-@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.Interface.{i}.")
+@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"InterfaceId"})})
 @XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.Interface")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)

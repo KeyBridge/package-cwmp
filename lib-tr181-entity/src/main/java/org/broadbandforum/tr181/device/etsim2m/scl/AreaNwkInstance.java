@@ -25,6 +25,7 @@ import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 import org.broadbandforum.tr181.device.etsim2m.scl.areanwkinstance.Property;
 
 	/**
@@ -36,9 +37,9 @@ import org.broadbandforum.tr181.device.etsim2m.scl.areanwkinstance.Property;
 
         Section 5.3.5 of the M2M Functional Architecture {{bibref|ETSIM2MFA}} describes the REM functionality expected of a SCL for an M2M Device.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
-@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.AreaNwkInstance.{i}.")
+@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.AreaNwkInstance.{i}.", uniqueConstraints = {@CWMPUnique(names = {"ID"})})
 @XmlRootElement(name = "Device.ETSIM2M.SCL.AreaNwkInstance")
 @XmlType(name = "Device.ETSIM2M.SCL.AreaNwkInstance")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.upa.Interface;
 	/**
 	 * Universal Powerline Association {{bibref|UPA-PLC}}. This object contains the {{object|Interface}} and {{object|Diagnostics}} objects.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.UPA.")
 @XmlRootElement(name = "Device.UPA")

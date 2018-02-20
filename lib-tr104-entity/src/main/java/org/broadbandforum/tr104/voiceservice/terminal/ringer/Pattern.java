@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Each entry in the table defines a single phase in an overall ring pattern.  Each phase identifies the entry that corresponds to the next phase.
@@ -32,9 +33,9 @@ Each entry in the table refers to the entry that corresponds to the next phase o
 
 The defaults given for this object apply only to explicit creation of an instance of this object and not to automatic creation of instances of this object due to creation of a parent object.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.Terminal.{i}.Ringer.Pattern.{i}.")
+@CWMPObject(name = "VoiceService.{i}.Terminal.{i}.Ringer.Pattern.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.Terminal.Ringer.Pattern")
 @XmlType(name = "VoiceService.Terminal.Ringer.Pattern")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -47,7 +48,7 @@ public class Pattern {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -63,7 +64,7 @@ public class Pattern {
 	 */
 	@XmlElement(name = "RingerOn")
 	@CWMPParameter(access = "readWrite")
-	public Boolean ringerOn = false;
+	public Boolean ringerOn;
 	/**
 	 * The duration of this phase of the ring pattern, in milliseconds. 
 

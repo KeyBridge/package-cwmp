@@ -22,15 +22,16 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
-import org.broadbandforum.tr181.datatypes.StatsCounter32;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
+import org.broadbandforum.common.StatsCounter32;
 
 	/**
 	 * This object represents the metrics included in a Link metric response from the IEEE1905Device where {{param|#.LocalInterface}} is the MAC address of an interface in the receiving 1905 AL as defined in {{bibref|IEEE1905.1a|Table 6-17: 1905 transmitter link metric TLV}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
-@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.IEEE1905Neighbor.{i}.Metric.{i}.")
+@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.IEEE1905Neighbor.{i}.Metric.{i}.", uniqueConstraints = {@CWMPUnique(names = {"NeighborMACAddress"})})
 @XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IEEE1905Neighbor.Metric")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IEEE1905Neighbor.Metric")
 @XmlAccessorType(XmlAccessType.FIELD)

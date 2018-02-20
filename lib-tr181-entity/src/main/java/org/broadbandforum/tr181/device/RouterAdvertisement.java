@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.routeradvertisement.InterfaceSetting;
 
         Information received via router advertisement messages is automatically propagated to the relevant {{object|.IP.Interface}} sub-objects, e.g. to the {{object|.IP.Interface.{i}.IPv6Address}} and {{object|.IP.Interface.{i}.IPv6Prefix}} tables.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
 @CWMPObject(name = "Device.RouterAdvertisement.")
 @XmlRootElement(name = "Device.RouterAdvertisement")

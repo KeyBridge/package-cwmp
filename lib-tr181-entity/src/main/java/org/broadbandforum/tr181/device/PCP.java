@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.pcp.Client;
 
         See the PCP Theory of Operation {{bibref|TR-181i2a8|Appendix XIV}} for a description of the working of this PCP data model.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.PCP.")
 @XmlRootElement(name = "Device.PCP")

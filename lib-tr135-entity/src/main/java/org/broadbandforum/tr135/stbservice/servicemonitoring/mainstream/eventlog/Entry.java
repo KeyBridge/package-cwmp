@@ -26,14 +26,15 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 import org.broadbandforum.tr135.stbservice.servicemonitoring.mainstream.eventlog.entry.Parameter;
 
 	/**
 	 * This object represents an entry (e.g., start session, channel change) in the event log.
 	 *
-	 * @since 1.4
+	 * @since TR135 v1.4
 	 */
-@CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.EventLog.Entry.{i}.")
+@CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.EventLog.Entry.{i}.", uniqueConstraints = {@CWMPUnique(names = {"SequenceNumber"})})
 @XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.EventLog.Entry")
 @XmlType(name = "STBService.ServiceMonitoring.MainStream.EventLog.Entry")
 @XmlAccessorType(XmlAccessType.FIELD)

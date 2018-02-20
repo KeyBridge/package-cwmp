@@ -25,16 +25,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.routing.router.IPv4Forwarding;
 import org.broadbandforum.tr181.device.routing.router.IPv6Forwarding;
 
 	/**
 	 * This object allows the handling of the routing and forwarding configuration of the device.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.Routing.Router.{i}.")
+@CWMPObject(name = "Device.Routing.Router.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.Routing.Router")
 @XmlType(name = "Device.Routing.Router")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -47,7 +48,7 @@ public class Router {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this ''Router'' entry.  {{enum}}
 
@@ -56,7 +57,7 @@ public class Router {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *

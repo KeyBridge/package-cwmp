@@ -25,14 +25,15 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 import org.broadbandforum.tr181.device.usb.usbhosts.host.device.Configuration;
 
 	/**
 	 * Table of connected USB devices.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.USB.USBHosts.Host.{i}.Device.{i}.")
+@CWMPObject(name = "Device.USB.USBHosts.Host.{i}.Device.{i}.", uniqueConstraints = {@CWMPUnique(names = {"DeviceNumber"})})
 @XmlRootElement(name = "Device.USB.USBHosts.Host.Device")
 @XmlType(name = "Device.USB.USBHosts.Host.Device")
 @XmlAccessorType(XmlAccessType.FIELD)

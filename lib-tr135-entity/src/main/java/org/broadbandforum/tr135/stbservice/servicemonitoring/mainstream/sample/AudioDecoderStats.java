@@ -25,7 +25,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * Audio decoder Sample statistics for this ''ServiceMonitoring'' main stream instance.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Sample.AudioDecoderStats.")
 @XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Sample.AudioDecoderStats")

@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.nat.PortMapping;
 
         The entire {{object}} object only applies to IPv4.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.NAT.")
 @XmlRootElement(name = "Device.NAT")

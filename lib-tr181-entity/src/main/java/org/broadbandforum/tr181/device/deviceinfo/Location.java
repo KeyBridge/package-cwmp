@@ -24,13 +24,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * This object contains Location information.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
-@CWMPObject(name = "Device.DeviceInfo.Location.{i}.")
+@CWMPObject(name = "Device.DeviceInfo.Location.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Source", "ExternalSource"})})
 @XmlRootElement(name = "Device.DeviceInfo.Location")
 @XmlType(name = "Device.DeviceInfo.Location")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -42,7 +43,7 @@ public class Location {
 	 * @since 2.4
 	 */
 	@XmlElement(name = "Source")
-	public String source = "External";
+	public String source;
 	/**
 	 * The time when the location was acquired.
 	 *
@@ -69,7 +70,7 @@ public class Location {
 	 * @since 2.4
 	 */
 	@XmlElement(name = "ExternalProtocol")
-	public String externalProtocol = "CWMP";
+	public String externalProtocol;
 	/**
 	 * The currently valid location information.
 

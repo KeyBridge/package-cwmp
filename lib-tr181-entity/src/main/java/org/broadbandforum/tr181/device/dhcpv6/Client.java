@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.dhcpv6.client.ReceivedOption;
 import org.broadbandforum.tr181.device.dhcpv6.client.SentOption;
 import org.broadbandforum.tr181.device.dhcpv6.client.Server;
@@ -38,9 +39,10 @@ import org.broadbandforum.tr181.device.dhcpv6.client.Server;
 
         Note: The {{object}} table includes a unique key parameter that is a strong reference.  If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}.  However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.DHCPv6.Client.{i}.")
+@CWMPObject(name = "Device.DHCPv6.Client.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Interface"})})
 @XmlRootElement(name = "Device.DHCPv6.Client")
 @XmlType(name = "Device.DHCPv6.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -53,7 +55,7 @@ public class Client {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -81,7 +83,7 @@ public class Client {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * The client's DHCP Unique Identifier (DUID) {{bibref|RFC3315|Section 9}}. {{param}} is set by the CPE.
 	 *
@@ -96,7 +98,7 @@ public class Client {
 	 */
 	@XmlElement(name = "RequestAddresses")
 	@CWMPParameter(access = "readWrite")
-	public Boolean requestAddresses = true;
+	public Boolean requestAddresses;
 	/**
 	 * Enables or disables inclusion of the ''Identity Association (IA) for Prefix Delegation'' option OPTION_IA_PD(25) {{bibref|RFC3633|Section 10}} in Solicit messages.
 
@@ -106,7 +108,7 @@ public class Client {
 	 */
 	@XmlElement(name = "RequestPrefixes")
 	@CWMPParameter(access = "readWrite")
-	public Boolean requestPrefixes = false;
+	public Boolean requestPrefixes;
 	/**
 	 * Enables or disables inclusion of the ''Rapid Commit'' option OPTION_RAPID_COMMIT(14) {{bibref|RFC3315|Section 22.14}} in Solicit messages.
 	 *
@@ -114,7 +116,7 @@ public class Client {
 	 */
 	@XmlElement(name = "RapidCommit")
 	@CWMPParameter(access = "readWrite")
-	public Boolean rapidCommit = false;
+	public Boolean rapidCommit;
 	/**
 	 * When set to {{true}}, the {{object}} will renew its DHCPv6-supplied information (i.e. the CPE will do a renew or information request as needed, updating both stateful and stateless parameter values discovered by this Client instance).
 	 *
@@ -122,7 +124,7 @@ public class Client {
 	 */
 	@XmlElement(name = "Renew")
 	@CWMPParameter(access = "readWrite")
-	public Boolean renew = false;
+	public Boolean renew;
 	/**
 	 * T1 value, in seconds, that the client SHOULD use when sending IA options, e.g. OPTION_IA_NA {{bibref|RFC3315|Section 22.4}} and OPTION_IA_PD {{bibref|RFC3633|Section 10}}.
 

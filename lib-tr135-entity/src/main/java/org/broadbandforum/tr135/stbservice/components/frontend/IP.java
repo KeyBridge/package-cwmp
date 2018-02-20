@@ -37,7 +37,7 @@ import org.broadbandforum.tr135.stbservice.components.frontend.ip.ServiceConnect
 	/**
 	 * IP front-end details. This object will normally be present if and only if the front-end is an IP front-end.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.IP")

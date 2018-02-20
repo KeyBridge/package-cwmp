@@ -33,7 +33,7 @@ import org.broadbandforum.tr104.voiceservice.sip.Registrar;
 	/**
 	 * This object is dedicated to SIP as defined in {{bibref|RFC3261}}. It models SIP networks, clients, proxies and registrars.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.SIP.")
 @XmlRootElement(name = "VoiceService.SIP")

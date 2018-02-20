@@ -26,7 +26,7 @@ import org.broadbandforum.tr181.device.ieee1905.AL;
 	/**
 	 * This object represents the management functions for the 1905 capabilities as defined in {{bibref|IEEE1905.1a}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.")
 @XmlRootElement(name = "Device.IEEE1905")

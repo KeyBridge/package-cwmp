@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object contains parameters relating to the sub-frame that are reserved for MBSFN (Multimedia Broadcast multicast service Single Frequency Network) in downlink direction.  For FDD mode, only one entry can exist in this table. For TDD mode, at most one entry can exist with a given value of stratumID (see {{bibref|3GPP-TS.32.592|Section 6.1.1.8}}).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.MBSFN.SFConfigList.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.PHY.MBSFN.SFConfigList.{i}.", uniqueConstraints = {@CWMPUnique(names = {"RadioFrameAllocationPeriod", "RadioframeAllocationOffset", "RadioFrameAllocationSize"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.PHY.MBSFN.SFConfigList")
 @XmlType(name = "FAPService.CellConfig.LTE.RAN.PHY.MBSFN.SFConfigList")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class SFConfigList {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

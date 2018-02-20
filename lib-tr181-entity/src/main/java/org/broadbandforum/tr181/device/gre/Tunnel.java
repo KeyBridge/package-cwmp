@@ -27,16 +27,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.gre.tunnel.Interface;
 import org.broadbandforum.tr181.device.gre.tunnel.Stats;
 
 	/**
 	 * GRE Tunnel table, models the GRE Tunnel instance and represents the entry point and exit point of the tunnel in relation to the WAN interface. A {{object}} object has one or more {{object|Interface}} objects that further define the sessions or flows within the tunnel.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.GRE.Tunnel.{i}.")
+@CWMPObject(name = "Device.GRE.Tunnel.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.GRE.Tunnel")
 @XmlType(name = "Device.GRE.Tunnel")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -82,7 +83,7 @@ public class Tunnel {
 	 */
 	@XmlElement(name = "KeepAlivePolicy")
 	@CWMPParameter(access = "readWrite")
-	public String keepAlivePolicy = "None";
+	public String keepAlivePolicy;
 	/**
 	 * The tunnel keepalive timeout in seconds.
 	 *

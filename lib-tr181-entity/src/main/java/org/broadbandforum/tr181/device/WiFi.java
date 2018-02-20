@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.device.wifi.SSID;
 	/**
 	 * The WiFi object is based on the WiFi Alliance 802.11 specifications ({{bibref|802.11-2007}}). It defines interface objects ({{object|Radio}} and {{object|SSID}}), and application objects ({{object|AccessPoint}} and {{object|EndPoint}}).
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.WiFi.")
 @XmlRootElement(name = "Device.WiFi")

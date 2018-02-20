@@ -26,15 +26,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.gre.tunnel._interface.Stats;
 
 	/**
 	 * GRE Interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). The {{object}} object models the GRE Header as defined in {{bibref|RFC2784}} and extensions to the GRE Header as defined in {{bibref|RFC2890}}. The {{object}} object provides a way to discriminate how sessions or flows are encapsulated within the GRE Tunnel. In addition the {{object}} object represents the entry point and exit point of the tunnel in relation to the LAN interface. Unless the Key Identifier of {{bibref|RFC2890}} is supported there is only one instance of this {{object}} object per tunnel.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.GRE.Tunnel.{i}.Interface.{i}.")
+@CWMPObject(name = "Device.GRE.Tunnel.{i}.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.GRE.Tunnel.Interface")
 @XmlType(name = "Device.GRE.Tunnel.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -112,7 +114,7 @@ public class Interface {
 	 */
 	@XmlElement(name = "UseChecksum")
 	@CWMPParameter(access = "readWrite")
-	public Boolean useChecksum = false;
+	public Boolean useChecksum;
 	/**
 	 * The method used to generate the Key Identifier extension as defined in.{{bibref|RFC2890}}.
 	 *
@@ -120,7 +122,7 @@ public class Interface {
 	 */
 	@XmlElement(name = "KeyIdentifierGenerationPolicy")
 	@CWMPParameter(access = "readWrite")
-	public String keyIdentifierGenerationPolicy = "Disabled";
+	public String keyIdentifierGenerationPolicy;
 	/**
 	 * When the value of {{param|KeyIdentifierGenerationPolicy}} is {{enum|Provisioned|KeyIdentifierGenerationPolicy}} this {{param}} parameter is used to identify an individual traffic flow within a GRE tunnel, as defined in {{bibref|RFC2890}}.
 	 *
@@ -136,7 +138,7 @@ public class Interface {
 	 */
 	@XmlElement(name = "UseSequenceNumber")
 	@CWMPParameter(access = "readWrite")
-	public Boolean useSequenceNumber = false;
+	public Boolean useSequenceNumber;
 	/**
 	 * Statistics for this GRE tunnel interface, i.e. all traffic that has passed through the interface.
 

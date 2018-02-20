@@ -22,14 +22,15 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * This table lists the ports on which TCP connections are listening or established.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.IP.ActivePort.{i}.")
+@CWMPObject(name = "Device.IP.ActivePort.{i}.", uniqueConstraints = {@CWMPUnique(names = {"LocalIPAddress", "LocalPort", "RemoteIPAddress", "RemotePort"})})
 @XmlRootElement(name = "Device.IP.ActivePort")
 @XmlType(name = "Device.IP.ActivePort")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.rem.cdma2000.onex.Channel;
 	/**
 	 * This object contains parameters relating to radio environment measurement capabilities for the 1x system.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.CDMA2000.OneX.")
 @XmlRootElement(name = "FAPService.REM.CDMA2000.OneX")

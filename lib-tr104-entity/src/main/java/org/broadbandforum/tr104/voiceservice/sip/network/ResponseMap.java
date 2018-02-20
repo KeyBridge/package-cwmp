@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Each entry in this table specifies the tone and message to be provided to the user for a particular SIP response received (normally 4xx and 5xx).
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.SIP.Network.{i}.ResponseMap.{i}.")
+@CWMPObject(name = "VoiceService.{i}.SIP.Network.{i}.ResponseMap.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"SIPResponseNumber"})})
 @XmlRootElement(name = "VoiceService.SIP.Network.ResponseMap")
 @XmlType(name = "VoiceService.SIP.Network.ResponseMap")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -60,7 +62,7 @@ public class ResponseMap {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The message to be provided on the screen or display of the VoIP device when the SIP response is received.
 

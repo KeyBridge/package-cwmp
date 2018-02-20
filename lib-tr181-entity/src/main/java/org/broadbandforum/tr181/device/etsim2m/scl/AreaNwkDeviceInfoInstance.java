@@ -49,7 +49,7 @@ import org.broadbandforum.tr181.device.etsim2m.scl.areanwkdeviceinfoinstance.Pro
 
         Instances of this table are created and deleted by the CPE. The ACS MAY modify the writeable parameters of this object instance but  it is possible that the value set by the ACS is not retained between reboots of the M2M Device.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.AreaNwkDeviceInfoInstance.{i}.")
 @XmlRootElement(name = "Device.ETSIM2M.SCL.AreaNwkDeviceInfoInstance")

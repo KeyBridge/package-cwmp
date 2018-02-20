@@ -23,15 +23,16 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.lldp.discovery.device.port.LinkInformation;
 
 	/**
 	 * This table contains information about ports on discovered LLDP devices.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.Port.{i}.")
+@CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.Port.{i}.", uniqueConstraints = {@CWMPUnique(names = {"PortIDSubtype", "PortID"})})
 @XmlRootElement(name = "Device.LLDP.Discovery.Device.Port")
 @XmlType(name = "Device.LLDP.Discovery.Device.Port")
 @XmlAccessorType(XmlAccessType.FIELD)

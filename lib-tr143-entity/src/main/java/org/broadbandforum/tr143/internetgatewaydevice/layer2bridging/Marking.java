@@ -23,13 +23,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Marking table identifying non-default layer-2 marking behavior for packets on egress from the specified interfaces.
 	 *
-	 * @since 1.1
+	 * @since TR143 v1.1
 	 */
-@CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.Marking.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.Marking.{i}.", uniqueConstraints = {@CWMPUnique(names = {"MarkingKey"})})
 @XmlRootElement(name = "InternetGatewayDevice.Layer2Bridging.Marking")
 @XmlType(name = "InternetGatewayDevice.Layer2Bridging.Marking")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -49,7 +50,7 @@ public class Marking {
 	 */
 	@XmlElement(name = "MarkingEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean markingEnable = false;
+	public Boolean markingEnable;
 	/**
 	 * The status of this Marking table entry.  {{enum}}
 
@@ -58,7 +59,7 @@ The {{enum|Error}} value MAY be used by the CPE to indicate a locally defined er
 	 * @since 1.1
 	 */
 	@XmlElement(name = "MarkingStatus")
-	public String markingStatus = "Disabled";
+	public String markingStatus;
 	/**
 	 * The ''BridgeKey'' value of the Bridge table entry associated with this Marking table entry.  A value of -1 indicates the Marking table entry is not associated with a Bridge (and has no effect).
 
@@ -69,7 +70,7 @@ The effect of a Marking table entry applies only to packets that have been admit
 	@XmlElement(name = "MarkingBridgeReference")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer markingBridgeReference = -1;
+	public Integer markingBridgeReference;
 	/**
 	 * The interface or interfaces associated with this Marking table entry for which the specified marking behavior is to apply on egress from the associated bridge.  The following values are defined.
 
@@ -101,7 +102,7 @@ If {{false}}, on egress to the interfaces associated with this Marking table ent
 	 */
 	@XmlElement(name = "VLANIDUntag")
 	@CWMPParameter(access = "readWrite")
-	public Boolean vlaNIDUntag = false;
+	public Boolean vlaNIDUntag;
 	/**
 	 * The 802.1Q VLAN ID to be used on egress to the interfaces associated with this Marking table entry (if {{param|VLANIDUntag}} is {{false}}).
 
@@ -112,7 +113,7 @@ A value of -1 indicates that the default VLAN ID for the Bridge SHOULD be used i
 	@XmlElement(name = "VLANIDMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 4095)
-	public Integer vlaNIDMark = -1;
+	public Integer vlaNIDMark;
 	/**
 	 * Ethernet priority code (as defined in 802.1D) to mark traffic with that falls into this Bridge on egress to the interfaces associated with this Marking table entry. A value of -1 indicates no change from the incoming packet or the mark assigned by the classifier.
 	 *
@@ -121,7 +122,7 @@ A value of -1 indicates that the default VLAN ID for the Bridge SHOULD be used i
 	@XmlElement(name = "EthernetPriorityMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 7)
-	public Integer ethernetPriorityMark = -1;
+	public Integer ethernetPriorityMark;
 	/**
 	 * If {{false}}, on egress to the interfaces associated with this Marking table entry, the {{param|EthernetPriorityMark}}, if specified, is applied only to packets of priority 0.
 
@@ -133,7 +134,7 @@ If {{param|VLANIDUntag}} is {{true}}, then no priority marking is done since the
 	 */
 	@XmlElement(name = "EthernetPriorityOverride")
 	@CWMPParameter(access = "readWrite")
-	public Boolean ethernetPriorityOverride = false;
+	public Boolean ethernetPriorityOverride;
 
 	public Marking() {
 	}

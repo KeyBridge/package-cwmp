@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.upnp.description.ServiceInstance;
 	/**
 	 * This object contains information from the  Description Document discovered from the UPnP Devices and Services.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
 @CWMPObject(name = "Device.UPnP.Description.")
 @XmlRootElement(name = "Device.UPnP.Description")

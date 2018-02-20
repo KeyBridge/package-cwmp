@@ -26,7 +26,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.cn.hho.Stats;
 	/**
 	 * This object provides monitoring of the Hard Handover (HHO) properties in the HNB.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.CN.HHO.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.CN.HHO")

@@ -23,14 +23,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.IPAddress;
-import org.broadbandforum.tr104.datatypes.StatsCounter32;
-import org.broadbandforum.tr104.datatypes.StatsCounter64;
+import org.broadbandforum.common.IPAddress;
+import org.broadbandforum.common.StatsCounter32;
+import org.broadbandforum.common.StatsCounter64;
 
 	/**
 	 * The RTP part of the destination session information.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallLog.{i}.Session.{i}.Destination.RTP.")
 @XmlRootElement(name = "VoiceService.CallLog.Session.Destination.RTP")

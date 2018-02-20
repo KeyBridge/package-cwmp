@@ -31,7 +31,7 @@ import org.broadbandforum.tr104.voiceservice.h323.Network;
 	/**
 	 * This object is dedicated to H.323 as defined in {{bibref|H.323}}. It models H.323 clients and networks.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.H323.")
 @XmlRootElement(name = "VoiceService.H323")

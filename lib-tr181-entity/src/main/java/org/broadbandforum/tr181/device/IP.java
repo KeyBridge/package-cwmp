@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.IPv6Prefix;
+import org.broadbandforum.common.IPv6Prefix;
 import org.broadbandforum.tr181.device.ip.ActivePort;
 import org.broadbandforum.tr181.device.ip.Diagnostics;
 import org.broadbandforum.tr181.device.ip.Interface;
@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.ip.Interface;
 	/**
 	 * IP object that contains the {{object|Interface}}, {{object|ActivePort}}, and {{object|Diagnostics}} objects.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.IP.")
 @XmlRootElement(name = "Device.IP")

@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.ANPPolicy;
 import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.M2MSPPolicy;
 
@@ -41,9 +42,9 @@ import org.broadbandforum.tr181.device.etsim2m.scl.safpolicyset.M2MSPPolicy;
 
         There is exactly one {{object}} instance with a {{param|PolicyScope}} value of "default".
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
-@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.")
+@CWMPObject(name = "Device.ETSIM2M.SCL.{i}.SAFPolicySet.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.ETSIM2M.SCL.SAFPolicySet")
 @XmlType(name = "Device.ETSIM2M.SCL.SAFPolicySet")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -56,7 +57,7 @@ public class SAFPolicySet {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

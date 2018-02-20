@@ -25,9 +25,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IEEE_EUI64;
-import org.broadbandforum.tr181.datatypes.ZigBeeNetworkAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IEEE_EUI64;
+import org.broadbandforum.common.ZigBeeNetworkAddress;
 import org.broadbandforum.tr181.device.zigbee.zdo.ApplicationEndpoint;
 import org.broadbandforum.tr181.device.zigbee.zdo.Binding;
 import org.broadbandforum.tr181.device.zigbee.zdo.ComplexDescriptor;
@@ -46,9 +47,9 @@ import org.broadbandforum.tr181.device.zigbee.zdo.UserDescriptor;
 
         It is possible that instances of this object have the same key value when the value of {{param|IEEEAddress}} parameter is "FF:FF:FF:FF:FF:FF:FF:FF" and the ZigBee Coordinators on two or more separate area networks assign the same value for the {{param|NetworkAddress}}. This is because the ZigBee specification describes only intra-area network topologies {{bibref|ZigBee2007|Section 1.1.4 Network Topology}}. As such if two or more {{object}} instances have the same key value the implemenation is undefined
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
-@CWMPObject(name = "Device.ZigBee.ZDO.{i}.")
+@CWMPObject(name = "Device.ZigBee.ZDO.{i}.", uniqueConstraints = {@CWMPUnique(names = {"IEEEAddress", "NetworkAddress"})})
 @XmlRootElement(name = "Device.ZigBee.ZDO")
 @XmlType(name = "Device.ZigBee.ZDO")
 @XmlAccessorType(XmlAccessType.FIELD)

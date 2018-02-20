@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.neighborlist.LTECe
 	/**
 	 * This object contains parameters relating to the neighbor list.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.NeighborList.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.NeighborList")

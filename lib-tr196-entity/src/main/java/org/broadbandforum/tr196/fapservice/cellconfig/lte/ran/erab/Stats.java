@@ -31,7 +31,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.ran.erab.stats.LGW;
 	/**
 	 * This object provides the E-RAB statistics as defined in {{bibref|3GPP-TS.32.453}}.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.ERAB.Stats.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.ERAB.Stats")

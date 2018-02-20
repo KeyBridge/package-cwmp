@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr104.voiceservice.pots.fxs.DiagTests;
 import org.broadbandforum.tr104.voiceservice.pots.fxs.VoiceProcessing;
 
@@ -32,9 +33,10 @@ import org.broadbandforum.tr104.voiceservice.pots.fxs.VoiceProcessing;
 
 Each entry in the table models an analogue physical interface as defined by {{bibref|ETSI_ES_201_970}}
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.POTS.FXS.{i}.")
+@CWMPObject(name = "VoiceService.{i}.POTS.FXS.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}, functional = false),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.POTS.FXS")
 @XmlType(name = "VoiceService.POTS.FXS")
 @XmlAccessorType(XmlAccessType.FIELD)

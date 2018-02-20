@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Local IP access for UMTS FAP.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.UMTS.LocalIPAccess.")
 @XmlRootElement(name = "FAPService.AccessMgmt.UMTS.LocalIPAccess")
@@ -41,7 +41,7 @@ public class LocalIPAccess {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 
 	public LocalIPAccess() {
 	}

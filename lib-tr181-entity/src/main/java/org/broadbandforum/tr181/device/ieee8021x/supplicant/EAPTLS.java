@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * 802.1x Authentication Supplicant provisioning information used for TLS certificate authentication. This object will not exist if the EAP-TLS is not a supported authentication type.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.IEEE8021x.Supplicant.{i}.EAPTLS.")
 @XmlRootElement(name = "Device.IEEE8021x.Supplicant.EAPTLS")

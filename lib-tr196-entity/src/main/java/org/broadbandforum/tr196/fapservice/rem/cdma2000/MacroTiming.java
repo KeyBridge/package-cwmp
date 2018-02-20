@@ -32,7 +32,7 @@ import org.broadbandforum.tr196.fapservice.rem.cdma2000.macrotiming.Channel;
 	/**
 	 * Parameters for controlling CDMA2000 system timing derived from macro system sniffing.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.REM.CDMA2000.MacroTiming.")
 @XmlRootElement(name = "FAPService.REM.CDMA2000.MacroTiming")

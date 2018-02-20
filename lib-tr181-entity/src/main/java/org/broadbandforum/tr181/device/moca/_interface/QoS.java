@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.moca._interface.qos.FlowStats;
 	/**
 	 * The QoS object provides information on MoCA parameterized QoS for this interface {{bibref|MoCAv1.1}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.MoCA.Interface.{i}.QoS.")
 @XmlRootElement(name = "Device.MoCA.Interface.QoS")

@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
 The CPE MUST reset the DECT base's Stats parameters (unless otherwise stated in individual object or parameter descriptions) either when the base becomes operationally down due to a previous administrative down (i.e. the base's {{param|#.Status}} parameter transitions to a down state after the base is disabled) or when the base becomes administratively up (i.e. the base's {{param|#.Enable}} parameter transitions from {{false}} to {{true}}).
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.DECT.Base.{i}.Stats.")
 @XmlRootElement(name = "VoiceService.DECT.Base.Stats")

@@ -26,14 +26,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table of codec profiles. This table MUST be populated with the set of supported codecs matching {{object|.Capabilities.Codec.}}. Additional entries can be added to use different configurations of codec or to use the same codec configuration in different CodecList parameters.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.CodecProfile.{i}.")
+@CWMPObject(name = "VoiceService.{i}.CodecProfile.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.CodecProfile")
 @XmlType(name = "VoiceService.CodecProfile")
 @XmlAccessorType(XmlAccessType.FIELD)

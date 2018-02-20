@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the Gateways that the LTE FAP is connected to.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.FAPControl.LTE.Gateway.")
 @XmlRootElement(name = "FAPService.FAPControl.LTE.Gateway")

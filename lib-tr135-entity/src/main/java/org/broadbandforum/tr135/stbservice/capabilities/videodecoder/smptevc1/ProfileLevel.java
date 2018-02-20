@@ -22,16 +22,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table to describe the set of profiles and levels combinations supported by the STB when SMPTE-VC-1 is used as video standard.
 
 {{keys}}  The table MUST include a distinct entry for each supported combination of these parameters.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
-@CWMPObject(name = "STBService.{i}.Capabilities.VideoDecoder.SMPTEVC1.ProfileLevel.{i}.")
+@CWMPObject(name = "STBService.{i}.Capabilities.VideoDecoder.SMPTEVC1.ProfileLevel.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Profile", "Level"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Capabilities.VideoDecoder.SMPTEVC1.ProfileLevel")
 @XmlType(name = "STBService.Capabilities.VideoDecoder.SMPTEVC1.ProfileLevel")
 @XmlAccessorType(XmlAccessType.FIELD)

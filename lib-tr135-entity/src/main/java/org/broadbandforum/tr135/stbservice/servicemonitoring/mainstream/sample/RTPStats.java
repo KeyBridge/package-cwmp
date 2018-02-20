@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPObject;
 
 If no EC is applied the ''BeforeEC'' statistics provide the same values as the corresponding statistics, e.g. when there is no EC, {{param|PacketsReceivedBeforeEC}} = {{param|PacketsReceived}}.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.ServiceMonitoring.MainStream.{i}.Sample.RTPStats.")
 @XmlRootElement(name = "STBService.ServiceMonitoring.MainStream.Sample.RTPStats")

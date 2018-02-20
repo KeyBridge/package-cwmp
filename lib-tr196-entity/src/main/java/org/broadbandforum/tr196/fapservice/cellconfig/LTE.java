@@ -33,7 +33,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.lte.Tunnel;
 	/**
 	 * This object contains parameters relating to configuring the LTE FAP.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE")

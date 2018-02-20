@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object is relevant if the cell acts as a candidate cell. This object indicates the traffic load threshold and the time duration which is used by distributed energy saving algorithms to allow a cell to leave the energy saving state. Threshold and time duration are applied to the candidate cell when it provides coverage backup for the cell in energy saving state.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.EnergySavings.DeactivationCandidateCellsLoad.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.EnergySavings.DeactivationCandidateCellsLoad")

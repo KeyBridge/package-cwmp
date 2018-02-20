@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Parameters related to AL-FEC configuration as defined in {{bibref|SMPTE20022-1}}.
 	 *
-	 * @since 1.1
+	 * @since TR135 v1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.FEC.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.IP.FEC")

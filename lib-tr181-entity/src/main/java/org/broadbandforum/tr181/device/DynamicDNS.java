@@ -33,7 +33,7 @@ import org.broadbandforum.tr181.device.dynamicdns.Server;
 	/**
 	 * Properties for Dynamic DNS.
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
 @CWMPObject(name = "Device.DynamicDNS.")
 @XmlRootElement(name = "Device.DynamicDNS")

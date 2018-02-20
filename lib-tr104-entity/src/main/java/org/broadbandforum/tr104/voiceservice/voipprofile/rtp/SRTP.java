@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * VoIP profile parameters for secure voice transmission via SRTP.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.VoIPProfile.{i}.RTP.SRTP.")
 @XmlRootElement(name = "VoiceService.VoIPProfile.RTP.SRTP")

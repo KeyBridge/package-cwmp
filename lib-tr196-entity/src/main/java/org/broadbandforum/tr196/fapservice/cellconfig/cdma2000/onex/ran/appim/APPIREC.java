@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object can be configured only if {{param|.Capabilities.CDMA2000.OneX.FemtoOverheadMessagesCapable}} is set to {{true}}.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.APPIM.APPIREC.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.APPIM.APPIREC.{i}.", uniqueConstraints = {@CWMPUnique(names = {"APSID", "APNID", "APBAND", "APFREQ", "APPNRECTYPE", "APPNRECLEN", "APPNREC"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.APPIM.APPIREC")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.OneX.RAN.APPIM.APPIREC")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class APPIREC {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

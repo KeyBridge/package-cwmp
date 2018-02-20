@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.neighbordiscovery.InterfaceSetting;
 	/**
 	 * The Neighbor Discovery Protocol (NDP) object {{bibref|RFC4861}}.  This object applies only to IPv6.  It contains an {{object|InterfaceSetting}} table that defines the NDP configuration for individual IP interfaces.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
 @CWMPObject(name = "Device.NeighborDiscovery.")
 @XmlRootElement(name = "Device.NeighborDiscovery")

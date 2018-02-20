@@ -27,7 +27,7 @@ import org.broadbandforum.tr135.stbservice.capabilities.frontend.IP;
 	/**
 	 * Front-end capabilities.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Capabilities.FrontEnd.")
 @XmlRootElement(name = "STBService.Capabilities.FrontEnd")

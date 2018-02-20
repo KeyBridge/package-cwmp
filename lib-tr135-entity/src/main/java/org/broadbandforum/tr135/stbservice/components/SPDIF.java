@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr135.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * S/PDIF output instance table configuration. This object, if present, is connected to the audio ouput instance currently delivering S/PDIF audio format as described in {{bibref|SPDIF}}.
 	 *
-	 * @since 1.1
+	 * @since TR135 v1.1
 	 */
-@CWMPObject(name = "STBService.{i}.Components.SPDIF.{i}.")
+@CWMPObject(name = "STBService.{i}.Components.SPDIF.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "STBService.Components.SPDIF")
 @XmlType(name = "STBService.Components.SPDIF")
 @XmlAccessorType(XmlAccessType.FIELD)

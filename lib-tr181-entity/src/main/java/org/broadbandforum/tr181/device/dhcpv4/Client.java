@@ -26,8 +26,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPv4Address;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPv4Address;
 import org.broadbandforum.tr181.device.dhcpv4.client.ReqOption;
 import org.broadbandforum.tr181.device.dhcpv4.client.SentOption;
 
@@ -38,9 +39,10 @@ import org.broadbandforum.tr181.device.dhcpv4.client.SentOption;
 
         Note: The {{object}} table includes a unique key parameter that is a strong reference. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.DHCPv4.Client.{i}.")
+@CWMPObject(name = "Device.DHCPv4.Client.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Interface"})})
 @XmlRootElement(name = "Device.DHCPv4.Client")
 @XmlType(name = "Device.DHCPv4.Client")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -53,7 +55,7 @@ public class Client {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -81,7 +83,7 @@ public class Client {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * The DHCP Client status as defined in {{bibref|RFC2131}}. {{enum}}
 
@@ -98,7 +100,7 @@ public class Client {
 	 */
 	@XmlElement(name = "Renew")
 	@CWMPParameter(access = "readWrite")
-	public Boolean renew = false;
+	public Boolean renew;
 	/**
 	 * IPv4 Address option received from the DHCP Server. {{empty}} when {{param|Status}} is not equal to {{enum|Bound|DHCPStatus}}.
 	 *
@@ -141,7 +143,7 @@ public class Client {
 	@XmlElement(name = "LeaseTimeRemaining")
 	@CWMPParameter(activeNotify = "canDeny", units = "seconds")
 	@Size(min = -1)
-	public Integer leaseTimeRemaining = 0;
+	public Integer leaseTimeRemaining;
 	/**
 	 * The IPv4 address of the current DHCP server.
 	 *
@@ -158,7 +160,7 @@ public class Client {
 	 */
 	@XmlElement(name = "PassthroughEnable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean passthroughEnable = false;
+	public Boolean passthroughEnable;
 	/**
 	 * {{reference}}When {{param}} is set to {{empty}}, {{param|PassthroughEnable}} MUST be set to {{false}} (i.e. passthrough can not be enabled without a pool reference specified).
 	 *

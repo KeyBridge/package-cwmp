@@ -29,7 +29,7 @@ import org.broadbandforum.tr069.internetgatewaydevice.wandevice.wandslconnection
 	/**
 	 * This object is required for a CPE with a DSL modem WAN interface
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLConnectionManagement.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANDSLConnectionManagement")

@@ -28,7 +28,7 @@ import org.broadbandforum.tr181.device.fap.PerfMgmt;
 	/**
 	 * This object is the container for all Femto related component objects, to prevent pollution of the so-called global namespace of the BBF with FAP specific objects.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
 @CWMPObject(name = "Device.FAP.")
 @XmlRootElement(name = "Device.FAP")

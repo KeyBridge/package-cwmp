@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.homeplug.Interface;
 	/**
 	 * HomePlug object that contains the {{object|Interface}} table. The HomePlug industry standard {{bibref|HPAV1.1}} defines peer to peer communication over powerline medium.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.HomePlug.")
 @XmlRootElement(name = "Device.HomePlug")

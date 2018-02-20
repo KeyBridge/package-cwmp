@@ -22,13 +22,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Table containing the inter-RAT cell list for GSM.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborListInUse.InterRATCell.GSM.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.NeighborListInUse.InterRATCell.GSM.{i}.", uniqueConstraints = {@CWMPUnique(names = {"BCCHARFCN"})})
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.NeighborListInUse.InterRATCell.GSM")
 @XmlType(name = "FAPService.CellConfig.UMTS.RAN.NeighborListInUse.InterRATCell.GSM")
 @XmlAccessorType(XmlAccessType.FIELD)

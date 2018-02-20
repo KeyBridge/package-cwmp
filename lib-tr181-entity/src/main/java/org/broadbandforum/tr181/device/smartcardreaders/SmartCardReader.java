@@ -24,15 +24,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr181.device.smartcardreaders.smartcardreader.SmartCard;
 
 	/**
 	 * This object describes the characteristics of the smart card reader.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.SmartCardReaders.SmartCardReader.{i}.")
+@CWMPObject(name = "Device.SmartCardReaders.SmartCardReader.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.SmartCardReaders.SmartCardReader")
 @XmlType(name = "Device.SmartCardReaders.SmartCardReader")
 @XmlAccessorType(XmlAccessType.FIELD)

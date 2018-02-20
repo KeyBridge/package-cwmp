@@ -24,9 +24,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPAddress;
-import org.broadbandforum.tr181.datatypes.IPPrefix;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
+import org.broadbandforum.common.IPPrefix;
 
 	/**
 	 * Firewall Rule table. Each entry defines a Firewall packet selection rule. The {{param|Target}} parameter defines the action to perform for traffic matching this rule: the packet can be dropped, accepted, rejected or passed to another {{object|#}}.
@@ -37,9 +38,9 @@ import org.broadbandforum.tr181.datatypes.IPPrefix;
 
         For enabled table entries, if {{param|SourceInterface}} is not a valid reference and {{param|SourceAllInterfaces}} is {{false}}, or if {{param|DestInterface}} is not a valid reference and {{param|DestAllInterfaces}} is {{false}}, then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.Firewall.Chain.{i}.Rule.{i}.")
+@CWMPObject(name = "Device.Firewall.Chain.{i}.Rule.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.Firewall.Chain.Rule")
 @XmlType(name = "Device.Firewall.Chain.Rule")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -52,7 +53,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this {{object}} entry.  {{enum}}
 
@@ -63,7 +64,7 @@ public class Rule {
 	 * @since 2.2
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * Position of the {{object}} entry in the order of precedence. A value of ''1'' indicates the first entry considered (highest precedence). For each packet, the highest ordered entry that matches the rule criteria is applied. All lower order entries are ignored.
 
@@ -103,7 +104,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "Target")
 	@CWMPParameter(access = "readWrite")
-	public String target = "Drop";
+	public String target;
 	/**
 	 * Specifies the chain to process when {{param|Target}} equals {{enum|TargetChain|Target}}.  If there are no matching rules in the referenced chain, processing continues with the next rule in this chain (if any).  In other words, {{enum|TargetChain|Target}} behaves like a subroutine call.
 
@@ -125,7 +126,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "Log")
 	@CWMPParameter(access = "readWrite")
-	public Boolean log = false;
+	public Boolean log;
 	/**
 	 * Date and time when this {{object}} entry was created.
 	 *
@@ -171,7 +172,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "SourceInterfaceExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceInterfaceExclude = false;
+	public Boolean sourceInterfaceExclude;
 	/**
 	 * {{object}} criterion. This specifies that all ingress interfaces are associated with the entry. If {{true}}, the values of {{param|SourceInterface}} and {{param|SourceInterfaceExclude}} are ignored since all ingress interfaces are indicated.
 
@@ -181,7 +182,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "SourceAllInterfaces")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceAllInterfaces = false;
+	public Boolean sourceAllInterfaces;
 	/**
 	 * {{object}} criterion. {{reference}}  
 
@@ -206,7 +207,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "DestInterfaceExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destInterfaceExclude = false;
+	public Boolean destInterfaceExclude;
 	/**
 	 * {{object}} criterion. This specifies that all egress interfaces are associated with the entry. If {{true}}, the values of {{param|DestInterface}} and {{param|DestInterfaceExclude}} are ignored since all ingress interfaces are indicated.
 
@@ -216,7 +217,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "DestAllInterfaces")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destAllInterfaces = false;
+	public Boolean destAllInterfaces;
 	/**
 	 * {{object}} criterion.
 
@@ -229,7 +230,7 @@ public class Rule {
 	@XmlElement(name = "IPVersion")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 15)
-	public Integer ipversion = -1;
+	public Integer ipversion;
 	/**
 	 * {{object}} criterion.
 
@@ -263,7 +264,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "DestIPExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destIPExclude = false;
+	public Boolean destIPExclude;
 	/**
 	 * {{object}} criterion.
 
@@ -295,7 +296,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "SourceIPExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceIPExclude = false;
+	public Boolean sourceIPExclude;
 	/**
 	 * {{object}} criterion.
 
@@ -308,7 +309,7 @@ public class Rule {
 	@XmlElement(name = "Protocol")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 255)
-	public Integer protocol = -1;
+	public Integer protocol;
 	/**
 	 * If {{false}}, the rule matches only those packets that match the {{param|Protocol}} entry, if specified.
 
@@ -320,7 +321,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "ProtocolExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean protocolExclude = false;
+	public Boolean protocolExclude;
 	/**
 	 * {{object}} criterion.
 
@@ -335,7 +336,7 @@ public class Rule {
 	@XmlElement(name = "DestPort")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer destPort = -1;
+	public Integer destPort;
 	/**
 	 * {{object}} criterion.
 
@@ -352,7 +353,7 @@ public class Rule {
 	@XmlElement(name = "DestPortRangeMax")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer destPortRangeMax = -1;
+	public Integer destPortRangeMax;
 	/**
 	 * If {{false}}, the rule matches only those packets that match the {{param|DestPort}} entry (or port range), if specified.
 
@@ -364,7 +365,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "DestPortExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destPortExclude = false;
+	public Boolean destPortExclude;
 	/**
 	 * {{object}} criterion.
 
@@ -377,7 +378,7 @@ public class Rule {
 	@XmlElement(name = "SourcePort")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer sourcePort = -1;
+	public Integer sourcePort;
 	/**
 	 * {{object}} criterion.
 
@@ -392,7 +393,7 @@ public class Rule {
 	@XmlElement(name = "SourcePortRangeMax")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer sourcePortRangeMax = -1;
+	public Integer sourcePortRangeMax;
 	/**
 	 * If {{false}}, the rule matches only those packets that match the {{param|SourcePort}} entry (or port range), if specified.
 
@@ -404,7 +405,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "SourcePortExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourcePortExclude = false;
+	public Boolean sourcePortExclude;
 	/**
 	 * {{object}} criterion.
 
@@ -421,7 +422,7 @@ public class Rule {
 	@XmlElement(name = "DSCP")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 63)
-	public Integer dscP = -1;
+	public Integer dscP;
 	/**
 	 * If {{false}}, the rule matches only those packets that match the {{param|DSCP}} entry, if specified.
 
@@ -433,7 +434,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "DSCPExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean dscPExclude = false;
+	public Boolean dscPExclude;
 
 	public Rule() {
 	}

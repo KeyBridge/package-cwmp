@@ -23,14 +23,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Table of events for which a tone is defined. The table is pre-populated with the list of events for which the CPE supports definition of tones.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.Tone.EventProfile.{i}.Event.{i}.")
+@CWMPObject(name = "VoiceService.{i}.Tone.EventProfile.{i}.Event.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.Tone.EventProfile.Event")
 @XmlType(name = "VoiceService.Tone.EventProfile.Event")
 @XmlAccessorType(XmlAccessType.FIELD)

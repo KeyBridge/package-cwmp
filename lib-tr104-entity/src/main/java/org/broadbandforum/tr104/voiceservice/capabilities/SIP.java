@@ -27,7 +27,7 @@ import org.broadbandforum.tr104.voiceservice.capabilities.sip.Registrar;
 	/**
 	 * SIP-specific capabilities (as defined in {{bibref|RFC3261}}).
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.SIP.")
 @XmlRootElement(name = "VoiceService.Capabilities.SIP")

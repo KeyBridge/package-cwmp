@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object contains parameters relating to the RF, see {{bibref|3GPP-TS.32.592|Section 6.1.7.1}}.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.LTE.RAN.RF.")
 @XmlRootElement(name = "FAPService.CellConfig.LTE.RAN.RF")

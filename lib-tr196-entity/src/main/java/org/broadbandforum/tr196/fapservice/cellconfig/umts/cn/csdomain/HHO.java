@@ -26,7 +26,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.cn.csdomain.hho.Stats
 	/**
 	 * This object provides monitoring of the circuit switch Hard Handover (HHO) in the HNB.
 	 *
-	 * @since 2.1
+	 * @since TR196 v2.1
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.CN.CSDomain.HHO.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.CN.CSDomain.HHO")

@@ -23,16 +23,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * The top-level options and option values (including any encapsulated options) that the client will send to the server.
 
         This table is intended only for options that are not part of the basic operation of the protocol, and whose values are simple, do not often change and are not modeled elsewhere.  For example, it is appropriate for OPTION_USER_CLASS (whose value is a list of user classes) but is not appropriate for OPTION_RECONF_MSG (which is part of the protocol), OPTION_IA_NA (which is modeled via {{param|#.RequestAddresses}}) or OPTION_RAPID_COMMIT (which is modeled via {{param|#.RapidCommit}}).
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.DHCPv6.Client.{i}.SentOption.{i}.")
+@CWMPObject(name = "Device.DHCPv6.Client.{i}.SentOption.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Tag"})})
 @XmlRootElement(name = "Device.DHCPv6.Client.SentOption")
 @XmlType(name = "Device.DHCPv6.Client.SentOption")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -45,7 +47,7 @@ public class SentOption {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *

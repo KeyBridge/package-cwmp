@@ -23,15 +23,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
-import org.broadbandforum.tr196.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * Policy for selecting traffic for local IP access. Originated traffic will be NAT'ed. The rule is bi-directional, i.e. return traffic is allowed. Rules do NOT affect traffic to/from the FAP itself (such as TR-069 or control). The rules are applied to the mobile station data traffic (PS-domain) via deep packet inspection or similar method.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.AccessMgmt.Legacy.LocalIPAccess.Rule.{i}.")
+@CWMPObject(name = "FAPService.{i}.AccessMgmt.Legacy.LocalIPAccess.Rule.{i}.", uniqueConstraints = {@CWMPUnique(names = {"DestIPAddress", "DestSubnetMask", "Protocol"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.AccessMgmt.Legacy.LocalIPAccess.Rule")
 @XmlType(name = "FAPService.AccessMgmt.Legacy.LocalIPAccess.Rule")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -44,7 +46,7 @@ public class Rule {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -79,7 +81,7 @@ An entry for which {{param|DestIPAddress}} and {{param}} are both {{empty}} is a
 	@XmlElement(name = "Protocol")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer protocol = -1;
+	public Integer protocol;
 	/**
 	 * Action to be taken for traffic matching this rule.
 	 *
@@ -87,7 +89,7 @@ An entry for which {{param|DestIPAddress}} and {{param}} are both {{empty}} is a
 	 */
 	@XmlElement(name = "Action")
 	@CWMPParameter(access = "readWrite")
-	public String action = "Tunnel";
+	public String action;
 	/**
 	 * Specifies the egress interface when {{param|Action}} is set to {{enum|NAPT|Action}}. {{reference}} layer-3 connection object.
 

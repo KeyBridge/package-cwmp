@@ -23,6 +23,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Alarm events added or updated in {{object|.FaultMgmt.CurrentAlarm.{i}.}} are simultaneously entered into the this table. This table also contains alarm clearing events.
@@ -33,9 +34,9 @@ import org.broadbandforum.annotation.CWMPObject;
 
         If maximum instance number {{param|.FaultMgmt.HistoryEventNumberOfEntries}} is reached, the next event overrides the object with instance number 1.  Subsequent entries override objects at sequentially increasing instance numbers.  This logic provides for automatic "rolling" of records.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
-@CWMPObject(name = "Device.FaultMgmt.HistoryEvent.{i}.")
+@CWMPObject(name = "Device.FaultMgmt.HistoryEvent.{i}.", uniqueConstraints = {@CWMPUnique(names = {"EventTime", "AlarmIdentifier"})})
 @XmlRootElement(name = "Device.FaultMgmt.HistoryEvent")
 @XmlType(name = "Device.FaultMgmt.HistoryEvent")
 @XmlAccessorType(XmlAccessType.FIELD)

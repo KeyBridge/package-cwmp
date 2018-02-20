@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Firewall Level table. When an {{enum|Advanced|#.Config}} configuration is selected, {{param|#.AdvancedLevel}} selects the currently active entry in this table. Each {{object}} table entry references the {{object|#.Chain}} that contains the rules for this level.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.Firewall.Level.{i}.")
+@CWMPObject(name = "Device.Firewall.Level.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.Firewall.Level")
 @XmlType(name = "Device.Firewall.Level")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -93,7 +95,7 @@ public class Level {
 	 */
 	@XmlElement(name = "PortMappingEnabled")
 	@CWMPParameter(access = "readWrite")
-	public Boolean portMappingEnabled = true;
+	public Boolean portMappingEnabled;
 	/**
 	 * Default action for packets not matching any of the level rules. {{enum}}
 	 *
@@ -101,7 +103,7 @@ public class Level {
 	 */
 	@XmlElement(name = "DefaultPolicy")
 	@CWMPParameter(access = "readWrite")
-	public String defaultPolicy = "Drop";
+	public String defaultPolicy;
 	/**
 	 * Enable or disable logging, in a {{object|##.DeviceInfo.VendorLogFile}}, of packets not matching any of the level rules.
 	 *
@@ -109,7 +111,7 @@ public class Level {
 	 */
 	@XmlElement(name = "DefaultLogPolicy")
 	@CWMPParameter(access = "readWrite")
-	public Boolean defaultLogPolicy = false;
+	public Boolean defaultLogPolicy;
 
 	public Level() {
 	}

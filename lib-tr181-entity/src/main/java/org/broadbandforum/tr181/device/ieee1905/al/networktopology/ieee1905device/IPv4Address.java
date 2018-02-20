@@ -21,15 +21,16 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.IPAddress;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPAddress;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * This object represents represents all IPv4 addresses reported for a MAC address (AL or interface) in a Higher Layer response message for the IEEE1905Device as defined in {{bibref|IEEE1905.1a|Table 6-32: IPv4 type TLV}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
-@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.IPv4Address.{i}.")
+@CWMPObject(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.{i}.IPv4Address.{i}.", uniqueConstraints = {@CWMPUnique(names = {"MACAddress", "IPv4Address"})})
 @XmlRootElement(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IPv4Address")
 @XmlType(name = "Device.IEEE1905.AL.NetworkTopology.IEEE1905Device.IPv4Address")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -48,7 +49,7 @@ public class IPv4Address {
 	 * @since 2.9
 	 */
 	@XmlElement(name = "IPv4Address")
-	public org.broadbandforum.tr181.datatypes.IPv4Address ipv4Address;
+	public org.broadbandforum.common.IPv4Address ipv4Address;
 	/**
 	 * The IPv4 Address Type of this {{param|IPv4Address}}. {{enum}}
 	 *
@@ -106,7 +107,7 @@ public class IPv4Address {
 	 * @since 2.9
 	 * @return the value
 	 */
-	public org.broadbandforum.tr181.datatypes.IPv4Address getIpv4Address() {
+	public org.broadbandforum.common.IPv4Address getIpv4Address() {
 		return ipv4Address;
 	}
 
@@ -116,7 +117,7 @@ public class IPv4Address {
 	 * @since 2.9
 	 * @param ipv4Address the input value
 	 */
-	public void  setIpv4Address(org.broadbandforum.tr181.datatypes.IPv4Address ipv4Address) {
+	public void  setIpv4Address(org.broadbandforum.common.IPv4Address ipv4Address) {
 		this.ipv4Address = ipv4Address;
 	}
 
@@ -127,7 +128,7 @@ public class IPv4Address {
 	 * @param ipv4Address the input value
 	 * @return this instance
 	 */
-	public IPv4Address withIpv4Address(org.broadbandforum.tr181.datatypes.IPv4Address ipv4Address) {
+	public IPv4Address withIpv4Address(org.broadbandforum.common.IPv4Address ipv4Address) {
 		this.ipv4Address = ipv4Address;
 		return this;
 	}

@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object represents the status of the Reregistration action.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.Reregistration.ActionStatus.")
 @XmlRootElement(name = "Device.ETSIM2M.SCL.Reregistration.ActionStatus")

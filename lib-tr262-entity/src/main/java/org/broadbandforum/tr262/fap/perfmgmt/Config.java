@@ -24,14 +24,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr262.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object contains parameters relating to File Management configuration for uploading of Performance Files to a designated File Server. Each table entry can be referenced by zero or more radio-specific objects contained in the FAPService instances. The periodic upload will upload data for all of the radio-specific objects that reference it.
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
-@CWMPObject(name = "FAP.PerfMgmt.Config.{i}.")
+@CWMPObject(name = "FAP.PerfMgmt.Config.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"URL", "PeriodicUploadInterval", "PeriodicUploadTime"})})
 @XmlRootElement(name = "FAP.PerfMgmt.Config")
 @XmlType(name = "FAP.PerfMgmt.Config")
 @XmlAccessorType(XmlAccessType.FIELD)

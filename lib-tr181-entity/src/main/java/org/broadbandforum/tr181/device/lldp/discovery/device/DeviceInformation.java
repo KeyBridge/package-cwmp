@@ -34,7 +34,7 @@ import org.broadbandforum.tr181.device.lldp.discovery.device.deviceinformation.V
 
         Note: It is assumed that this object might be used for HTIP (Home-network Topology Identifying Protocol) {{bibref|JJ-300.00}} and {{bibref|G.9973}}. In this case, this table contains the Organizationally Specific TLV (TLV Type = 127) of ''LLDPDU'', in which the {{bibref|OUI}} in the third octet is E0271A (''TTC-OUI'') and the organizationally defined subtype in the sixth octet is 1 (''Device Information'').
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.LLDP.Discovery.Device.{i}.DeviceInformation.")
 @XmlRootElement(name = "Device.LLDP.Discovery.Device.DeviceInformation")

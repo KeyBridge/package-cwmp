@@ -22,13 +22,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Table containing the PLMN list in the system information broadcast in the BCCH logical channel. Correspnds to plmn-IdentityList as specified in SIB1 in {{bibref|3GPP-TS.36.331|Section 6.2.2}}. Each instance in this object is a PLMN-IdentityInfo which consists of plmn-Identity and cellReservedForOperatorUse IEs.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.REM.LTE.Cell.{i}.BCCH.PLMNList.{i}.")
+@CWMPObject(name = "FAPService.{i}.REM.LTE.Cell.{i}.BCCH.PLMNList.{i}.", uniqueConstraints = {@CWMPUnique(names = {"PLMNID"})})
 @XmlRootElement(name = "FAPService.REM.LTE.Cell.BCCH.PLMNList")
 @XmlType(name = "FAPService.REM.LTE.Cell.BCCH.PLMNList")
 @XmlAccessorType(XmlAccessType.FIELD)

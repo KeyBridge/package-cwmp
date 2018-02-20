@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.hpna.Interface;
 	/**
 	 * HPNA object that contains the {{object|Interface}} and {{object|Diagnostics}} objects. The HPNA (also known as HomePNA) industry standard {{bibref|G.9954}} defines peer to peer communication for home networking over existing coax cables and telephone wiring within the home.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.HPNA.")
 @XmlRootElement(name = "Device.HPNA")

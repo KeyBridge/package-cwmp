@@ -32,7 +32,7 @@ Closed Subscriber Group (CSG) service behavior is specified in {{bibref|3GPP-TS.
 
 Note: Cell barring and 3GPP access class parameters are contained in SIB1 in {{bibref|3GPP-TS.36.331}}.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.AccessMgmt.LTE.")
 @XmlRootElement(name = "FAPService.AccessMgmt.LTE")
@@ -49,7 +49,7 @@ Note: This parameter controls the setting of the CSGindicator bit, specified in 
 	 */
 	@XmlElement(name = "AccessMode")
 	@CWMPParameter(access = "readWrite", activeNotify = "canDeny")
-	public String accessMode = "Open Access";
+	public String accessMode;
 	/**
 	 * Maximum number of concurrent UEs allowed at a cell. Valid for any {{param|AccessMode}}. A value of -1 allows an unlimited number of concurrent UEs up to the limit of FAP capacity. The setting does not affect emergency calls.
 	 *
@@ -58,7 +58,7 @@ Note: This parameter controls the setting of the CSGindicator bit, specified in 
 	@XmlElement(name = "MaxUEsServed")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer maxUEsServed = -1;
+	public Integer maxUEsServed;
 	/**
 	 * Maximum number of concurrent CSG member UEs allowed at a hybrid or closed cell. A value of -1 allows an unlimited number of CSG members up to the limit of FAP capacity. The setting cannot be larger than the value of {{param|MaxUEsServed}}. The setting does not affect emergency calls. {{bibref|3GPP-TS.22.011}}, {{bibref|3GPP-TS.22.220}}.
 	 *
@@ -67,7 +67,7 @@ Note: This parameter controls the setting of the CSGindicator bit, specified in 
 	@XmlElement(name = "MaxCSGMembers")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer maxCSGMembers = -1;
+	public Integer maxCSGMembers;
 	/**
 	 * Maximum number of concurerent non-CSG member UEs allowed at a hybrid cell. Valid only if {{param|AccessMode}} is {{enum|Hybrid Access|AccessMode}}. The setting cannot be larger than the value of {{param|MaxUEsServed}}. The setting does not affect emergency calls.
 	 *
@@ -76,7 +76,7 @@ Note: This parameter controls the setting of the CSGindicator bit, specified in 
 	@XmlElement(name = "MaxNonCSGMembers")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer maxNonCSGMembers = -1;
+	public Integer maxNonCSGMembers;
 	/**
 	 * Maximum percentage of physical resource that can be assigned to non-CSG members aggregately at one time. This applies to PDSCH physical resource blocks.
 	 *

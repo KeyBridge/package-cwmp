@@ -24,14 +24,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * SCTP Association Table
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.Transport.SCTP.Assoc.{i}.")
+@CWMPObject(name = "FAPService.{i}.Transport.SCTP.Assoc.{i}.", uniqueConstraints = {@CWMPUnique(names = {"PrimaryPeerAddress", "LocalPort"})})
 @XmlRootElement(name = "FAPService.Transport.SCTP.Assoc")
 @XmlType(name = "FAPService.Transport.SCTP.Assoc")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -25,14 +25,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Policer table.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.QoS.Policer.{i}.")
+@CWMPObject(name = "Device.QoS.Policer.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.QoS.Policer")
 @XmlType(name = "Device.QoS.Policer")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -45,7 +46,7 @@ public class Policer {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this policer.  {{enum}}
 
@@ -54,7 +55,7 @@ public class Policer {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -122,7 +123,7 @@ public class Policer {
 	 */
 	@XmlElement(name = "MeterType")
 	@CWMPParameter(access = "readWrite")
-	public String meterType = "SimpleTokenBucket";
+	public String meterType;
 	/**
 	 * {{list}} Indicates supported meter types.
 	 *
@@ -154,7 +155,7 @@ public class Policer {
 	 */
 	@XmlElement(name = "ConformingAction")
 	@CWMPParameter(access = "readWrite")
-	public String conformingAction = "Null";
+	public String conformingAction;
 	/**
 	 * Instructions for how to handle traffic that is partially conforming (colored yellow).  {{pattern}}
 
@@ -177,7 +178,7 @@ public class Policer {
 	 */
 	@XmlElement(name = "PartialConformingAction")
 	@CWMPParameter(access = "readWrite")
-	public String partialConformingAction = "Drop";
+	public String partialConformingAction;
 	/**
 	 * Instructions for how to handle traffic that is non-conforming.  {{pattern}}
 
@@ -200,7 +201,7 @@ public class Policer {
 	 */
 	@XmlElement(name = "NonConformingAction")
 	@CWMPParameter(access = "readWrite")
-	public String nonConformingAction = "Drop";
+	public String nonConformingAction;
 	/**
 	 * Total number of Packets counted by this policer, regardless of meter action.
 	 *

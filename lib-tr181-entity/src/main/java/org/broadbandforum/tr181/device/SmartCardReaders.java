@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.smartcardreaders.SmartCardReader;
 	/**
 	 * SmartCardReaders object that contains the {{object|SmartCardReader}} table.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.SmartCardReaders.")
 @XmlRootElement(name = "Device.SmartCardReaders")

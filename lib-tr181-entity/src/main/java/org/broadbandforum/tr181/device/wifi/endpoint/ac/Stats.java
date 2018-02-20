@@ -24,8 +24,8 @@ import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.StatsCounter32;
-import org.broadbandforum.tr181.datatypes.StatsCounter64;
+import org.broadbandforum.common.StatsCounter32;
+import org.broadbandforum.common.StatsCounter64;
 
 	/**
 	 * This object contains statistics for different 802.11e access categories (priorities).
@@ -36,7 +36,7 @@ import org.broadbandforum.tr181.datatypes.StatsCounter64;
 
         The CPE MUST reset the EndPoint's Stats parameters (unless otherwise stated in individual object or parameter descriptions) either when the EndPoint becomes operationally down due to a previous administrative down (i.e. the EndPoint's Status parameter transitions to a Diasbled state) or when the EndPoint becomes administratively up (i.e. the EndPoint's Enable parameter transitions from false to true). Administrative and operational status is discussed in [Section 4.2.2/TR-181i2].
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.WiFi.EndPoint.{i}.AC.{i}.Stats.")
 @XmlRootElement(name = "Device.WiFi.EndPoint.AC.Stats")

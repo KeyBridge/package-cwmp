@@ -43,7 +43,7 @@ import org.broadbandforum.tr181.device.deviceinfo.VendorLogFile;
 	/**
 	 * This object contains general device information.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DeviceInfo.")
 @XmlRootElement(name = "Device.DeviceInfo")

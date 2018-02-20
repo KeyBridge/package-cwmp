@@ -23,15 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Supported Alarm Entries which can be raised by the device. 
 
         The instance numbers for this table SHOULD be maintained across firmware upgrades of the device.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
-@CWMPObject(name = "Device.FaultMgmt.SupportedAlarm.{i}.")
+@CWMPObject(name = "Device.FaultMgmt.SupportedAlarm.{i}.", uniqueConstraints = {@CWMPUnique(names = {"EventType", "ProbableCause", "SpecificProblem", "PerceivedSeverity"})})
 @XmlRootElement(name = "Device.FaultMgmt.SupportedAlarm")
 @XmlType(name = "Device.FaultMgmt.SupportedAlarm")
 @XmlAccessorType(XmlAccessType.FIELD)

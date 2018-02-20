@@ -29,7 +29,7 @@ import org.broadbandforum.tr181.device.optical.Interface;
 	/**
 	 * This object models optical interface technologies.  It defines an {{object|Interface}} object that models a layer 1 optical interface that is capable of transporting Ethernet packets.  The data model definition is based on parts of {{bibref|G.988}}.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
 @CWMPObject(name = "Device.Optical.")
 @XmlRootElement(name = "Device.Optical")

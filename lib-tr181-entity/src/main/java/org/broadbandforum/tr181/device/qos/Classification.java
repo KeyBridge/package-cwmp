@@ -23,10 +23,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPAddress;
-import org.broadbandforum.tr181.datatypes.IPPrefix;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
+import org.broadbandforum.common.IPPrefix;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * Classification table.
@@ -35,9 +36,9 @@ import org.broadbandforum.tr181.datatypes.MACAddress;
 
         Several of this object's parameters specify DHCP option values. Some cases are version neutral (the parameter can apply to both DHCPv4 and DHCPv6), but in other cases the representation of the option is different for DHCPv4 and DHCPv6, so it is necessary to define separate DHCPv4-specific and DHCPv6-specific parameters. Therefore, an instance of this object that uses DHCP option values as classification criteria will be associated with either DHCPv4 or DHCPv6, as indicated by the {{param|DHCPType}} parameter.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.QoS.Classification.{i}.")
+@CWMPObject(name = "Device.QoS.Classification.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.QoS.Classification")
 @XmlType(name = "Device.QoS.Classification")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -50,7 +51,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this classifier.  {{enum}}
 
@@ -61,7 +62,7 @@ public class Classification {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * Position of the {{object}} entry in the order of precedence.  A value of ''1'' indicates the first entry considered (highest precedence).  For each packet, the highest ordered entry that matches the classification criteria is applied.  All lower order entries are ignored.
 
@@ -92,7 +93,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "DHCPType")
 	@CWMPParameter(access = "readWrite")
-	public String dhcPType = "DHCPv4";
+	public String dhcPType;
 	/**
 	 * Classification criterion. {{reference}}  
 
@@ -113,7 +114,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "AllInterfaces")
 	@CWMPParameter(access = "readWrite")
-	public Boolean allInterfaces = false;
+	public Boolean allInterfaces;
 	/**
 	 * Classification criterion.
 
@@ -141,7 +142,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "DestIPExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destIPExclude = false;
+	public Boolean destIPExclude;
 	/**
 	 * Classification criterion.
 
@@ -169,7 +170,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "SourceIPExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceIPExclude = false;
+	public Boolean sourceIPExclude;
 	/**
 	 * Classification criterion.
 
@@ -180,7 +181,7 @@ public class Classification {
 	@XmlElement(name = "Protocol")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 255)
-	public Integer protocol = -1;
+	public Integer protocol;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|Protocol}} entry, if specified.
 
@@ -190,7 +191,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "ProtocolExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean protocolExclude = false;
+	public Boolean protocolExclude;
 	/**
 	 * Classification criterion.
 
@@ -201,7 +202,7 @@ public class Classification {
 	@XmlElement(name = "DestPort")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer destPort = -1;
+	public Integer destPort;
 	/**
 	 * Classification criterion.
 
@@ -214,7 +215,7 @@ public class Classification {
 	@XmlElement(name = "DestPortRangeMax")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer destPortRangeMax = -1;
+	public Integer destPortRangeMax;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|DestPort}} entry (or port range), if  specified.
 
@@ -224,7 +225,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "DestPortExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destPortExclude = false;
+	public Boolean destPortExclude;
 	/**
 	 * Classification criterion.
 
@@ -235,7 +236,7 @@ public class Classification {
 	@XmlElement(name = "SourcePort")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer sourcePort = -1;
+	public Integer sourcePort;
 	/**
 	 * Classification criterion.
 
@@ -248,7 +249,7 @@ public class Classification {
 	@XmlElement(name = "SourcePortRangeMax")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 65535)
-	public Integer sourcePortRangeMax = -1;
+	public Integer sourcePortRangeMax;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|SourcePort}} entry (or port range),  if specified.
 
@@ -258,7 +259,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "SourcePortExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourcePortExclude = false;
+	public Boolean sourcePortExclude;
 	/**
 	 * Classification criterion.
 
@@ -286,7 +287,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "SourceMACExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceMACExclude = false;
+	public Boolean sourceMACExclude;
 	/**
 	 * Classification criterion.
 
@@ -316,7 +317,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "DestMACExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destMACExclude = false;
+	public Boolean destMACExclude;
 	/**
 	 * Classification criterion.
 
@@ -327,7 +328,7 @@ public class Classification {
 	@XmlElement(name = "Ethertype")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer ethertype = -1;
+	public Integer ethertype;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|Ethertype}} entry, if specified.
 
@@ -337,7 +338,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "EthertypeExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean ethertypeExclude = false;
+	public Boolean ethertypeExclude;
 	/**
 	 * Classification criterion.
 
@@ -348,7 +349,7 @@ public class Classification {
 	@XmlElement(name = "SSAP")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer ssaP = -1;
+	public Integer ssaP;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|SSAP}} entry, if specified.
 
@@ -358,7 +359,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "SSAPExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean ssaPExclude = false;
+	public Boolean ssaPExclude;
 	/**
 	 * Classification criterion.
 
@@ -369,7 +370,7 @@ public class Classification {
 	@XmlElement(name = "DSAP")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer dsaP = -1;
+	public Integer dsaP;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|DSAP}} entry, if specified.
 
@@ -379,7 +380,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "DSAPExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean dsaPExclude = false;
+	public Boolean dsaPExclude;
 	/**
 	 * Classification criterion.
 
@@ -390,7 +391,7 @@ public class Classification {
 	@XmlElement(name = "LLCControl")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer llcControl = -1;
+	public Integer llcControl;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|LLCControl}} entry, if specified.
 
@@ -400,7 +401,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "LLCControlExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean llcControlExclude = false;
+	public Boolean llcControlExclude;
 	/**
 	 * Classification criterion.
 
@@ -411,7 +412,7 @@ public class Classification {
 	@XmlElement(name = "SNAPOUI")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer snaPOUI = -1;
+	public Integer snaPOUI;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|SNAPOUI}} entry, if specified.
 
@@ -421,7 +422,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "SNAPOUIExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean snaPOUIExclude = false;
+	public Boolean snaPOUIExclude;
 	/**
 	 * Classification criterion. 
 
@@ -462,7 +463,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "SourceVendorClassIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceVendorClassIDExclude = false;
+	public Boolean sourceVendorClassIDExclude;
 	/**
 	 * SourceVendorClassID pattern match criterion.  {{enum}}
 
@@ -472,7 +473,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "SourceVendorClassIDMode")
 	@CWMPParameter(access = "readWrite")
-	public String sourceVendorClassIDMode = "Exact";
+	public String sourceVendorClassIDMode;
 	/**
 	 * Classification criterion. 
 
@@ -513,7 +514,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "DestVendorClassIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destVendorClassIDExclude = false;
+	public Boolean destVendorClassIDExclude;
 	/**
 	 * {{param|DestVendorClassID}} pattern match criterion.  {{enum}}
 
@@ -523,7 +524,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "DestVendorClassIDMode")
 	@CWMPParameter(access = "readWrite")
-	public String destVendorClassIDMode = "Exact";
+	public String destVendorClassIDMode;
 	/**
 	 * Classification criterion. 
 
@@ -551,7 +552,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "SourceClientIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceClientIDExclude = false;
+	public Boolean sourceClientIDExclude;
 	/**
 	 * Classification criterion. 
 
@@ -579,7 +580,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "DestClientIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destClientIDExclude = false;
+	public Boolean destClientIDExclude;
 	/**
 	 * Classification criterion. 
 
@@ -605,7 +606,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "SourceUserClassIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceUserClassIDExclude = false;
+	public Boolean sourceUserClassIDExclude;
 	/**
 	 * Classification criterion. 
 
@@ -631,7 +632,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "DestUserClassIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destUserClassIDExclude = false;
+	public Boolean destUserClassIDExclude;
 	/**
 	 * Classification criterion. 
 
@@ -657,7 +658,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "SourceVendorSpecificInfoExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean sourceVendorSpecificInfoExclude = false;
+	public Boolean sourceVendorSpecificInfoExclude;
 	/**
 	 * {{param|SourceVendorSpecificInfo}} Enterprise Number as defined in {{bibref|RFC3925}}.
 
@@ -676,7 +677,7 @@ public class Classification {
 	@XmlElement(name = "SourceVendorSpecificInfoSubOption")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 255)
-	public Integer sourceVendorSpecificInfoSubOption = 0;
+	public Integer sourceVendorSpecificInfoSubOption;
 	/**
 	 * Classification criterion. 
 
@@ -702,7 +703,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "DestVendorSpecificInfoExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean destVendorSpecificInfoExclude = false;
+	public Boolean destVendorSpecificInfoExclude;
 	/**
 	 * {{param|DestVendorSpecificInfo}} Enterprise Number as defined in {{bibref|RFC3925}}.
 
@@ -721,7 +722,7 @@ public class Classification {
 	@XmlElement(name = "DestVendorSpecificInfoSubOption")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 255)
-	public Integer destVendorSpecificInfoSubOption = 0;
+	public Integer destVendorSpecificInfoSubOption;
 	/**
 	 * Classification criterion.
 
@@ -733,7 +734,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "TCPACK")
 	@CWMPParameter(access = "readWrite")
-	public Boolean tcpACK = false;
+	public Boolean tcpACK;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|TCPACK}} entry, if specified.
 
@@ -743,7 +744,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "TCPACKExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean tcpACKExclude = false;
+	public Boolean tcpACKExclude;
 	/**
 	 * Classification criterion.
 
@@ -775,7 +776,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "IPLengthExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean iplengthExclude = false;
+	public Boolean iplengthExclude;
 	/**
 	 * Classification criterion.
 
@@ -790,7 +791,7 @@ public class Classification {
 	@XmlElement(name = "DSCPCheck")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1, max = 63)
-	public Integer dscPCheck = -1;
+	public Integer dscPCheck;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|DSCPCheck}} entry, if specified.
 
@@ -800,7 +801,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "DSCPExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean dscPExclude = false;
+	public Boolean dscPExclude;
 	/**
 	 * Classification result.
 
@@ -815,7 +816,7 @@ public class Classification {
 	@XmlElement(name = "DSCPMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -2)
-	public Integer dscPMark = -1;
+	public Integer dscPMark;
 	/**
 	 * Classification criterion.
 
@@ -826,7 +827,7 @@ public class Classification {
 	@XmlElement(name = "EthernetPriorityCheck")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer ethernetPriorityCheck = -1;
+	public Integer ethernetPriorityCheck;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|EthernetPriorityCheck}} entry, if  specified.
 
@@ -836,7 +837,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "EthernetPriorityExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean ethernetPriorityExclude = false;
+	public Boolean ethernetPriorityExclude;
 	/**
 	 * Classification result.
 
@@ -851,7 +852,7 @@ public class Classification {
 	@XmlElement(name = "EthernetPriorityMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -2)
-	public Integer ethernetPriorityMark = -1;
+	public Integer ethernetPriorityMark;
 	/**
 	 * Classification criterion.
 
@@ -862,7 +863,7 @@ public class Classification {
 	@XmlElement(name = "InnerEthernetPriorityCheck")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer innerEthernetPriorityCheck = -1;
+	public Integer innerEthernetPriorityCheck;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|InnerEthernetPriorityCheck}} entry, if  specified.
 
@@ -872,7 +873,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "InnerEthernetPriorityExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean innerEthernetPriorityExclude = false;
+	public Boolean innerEthernetPriorityExclude;
 	/**
 	 * Classification result.
 
@@ -887,7 +888,7 @@ public class Classification {
 	@XmlElement(name = "InnerEthernetPriorityMark")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -2)
-	public Integer innerEthernetPriorityMark = -1;
+	public Integer innerEthernetPriorityMark;
 	/**
 	 * Classification criterion.
 
@@ -898,7 +899,7 @@ public class Classification {
 	@XmlElement(name = "EthernetDEICheck")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer ethernetDEICheck = -1;
+	public Integer ethernetDEICheck;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|EthernetDEICheck}} entry, if  specified.
 
@@ -908,7 +909,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "EthernetDEIExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean ethernetDEIExclude = false;
+	public Boolean ethernetDEIExclude;
 	/**
 	 * Classification criterion.
 
@@ -919,7 +920,7 @@ public class Classification {
 	@XmlElement(name = "VLANIDCheck")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer vlaNIDCheck = -1;
+	public Integer vlaNIDCheck;
 	/**
 	 * If {{false}}, the class includes only those packets that match the {{param|VLANIDCheck}} entry, if specified.
 
@@ -929,7 +930,7 @@ public class Classification {
 	 */
 	@XmlElement(name = "VLANIDExclude")
 	@CWMPParameter(access = "readWrite")
-	public Boolean vlaNIDExclude = false;
+	public Boolean vlaNIDExclude;
 	/**
 	 * Classification criterion.
 
@@ -942,7 +943,7 @@ public class Classification {
 	@XmlElement(name = "OutOfBandInfo")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer outOfBandInfo = -1;
+	public Integer outOfBandInfo;
 	/**
 	 * Classification result.
 
@@ -967,7 +968,7 @@ public class Classification {
 	@XmlElement(name = "TrafficClass")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer trafficClass = -1;
+	public Integer trafficClass;
 	/**
 	 * Classification result. {{reference}} 
 

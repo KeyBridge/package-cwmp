@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.DiagnosticsState;
+import org.broadbandforum.common.DiagnosticsState;
 import org.broadbandforum.tr181.device.hpna.diagnostics.performancemonitoring.Channels;
 import org.broadbandforum.tr181.device.hpna.diagnostics.performancemonitoring.Nodes;
 
@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.hpna.diagnostics.performancemonitoring.No
 
         Performance monitoring results are sampled from all nodes in the HPNA network.  All packet related counters are sampled synchronized at all nodes in the HPNA network in order to derive packet loss calculations in the HPNA network.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.HPNA.Diagnostics.PerformanceMonitoring.")
 @XmlRootElement(name = "Device.HPNA.Diagnostics.PerformanceMonitoring")

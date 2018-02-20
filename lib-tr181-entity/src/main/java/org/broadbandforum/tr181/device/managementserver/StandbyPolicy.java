@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 
         NOTE: "CR", as used in the names and descriptions of the parameters defined in this object, refers to the Connection Request concept defined in TR-069.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
 @CWMPObject(name = "Device.ManagementServer.StandbyPolicy.")
 @XmlRootElement(name = "Device.ManagementServer.StandbyPolicy")
@@ -47,7 +47,7 @@ public class StandbyPolicy {
 	@XmlElement(name = "CRUnawarenessMaxDuration")
 	@CWMPParameter(access = "readWrite", units = "seconds")
 	@Size(min = -1)
-	public Integer crunawarenessMaxDuration = -1;
+	public Integer crunawarenessMaxDuration;
 	/**
 	 * When waking up from a non fully Timer-Aware Standby that made it miss more than this parameter's value Periodic Contacts, the CPE MUST issue a WAKEUP Event.
 
@@ -58,7 +58,7 @@ public class StandbyPolicy {
 	@XmlElement(name = "MaxMissedPeriodic")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer maxMissedPeriodic = -1;
+	public Integer maxMissedPeriodic;
 	/**
 	 * When waking up from a non fully Timer-Aware Standby that made it miss at least one Scheduled Contact, the CPE MUST issue a WAKEUP Event if this parameter is {{true}}.
 	 *
@@ -66,7 +66,7 @@ public class StandbyPolicy {
 	 */
 	@XmlElement(name = "NotifyMissedScheduled")
 	@CWMPParameter(access = "readWrite")
-	public Boolean notifyMissedScheduled = false;
+	public Boolean notifyMissedScheduled;
 	/**
 	 * Indicates that the CPE is capable of CR-Aware Standby.
 	 *
@@ -88,7 +88,7 @@ public class StandbyPolicy {
 	 */
 	@XmlElement(name = "CRAwarenessRequested")
 	@CWMPParameter(access = "readWrite")
-	public Boolean crawarenessRequested = false;
+	public Boolean crawarenessRequested;
 	/**
 	 * If {{param|SelfTimerCapable}} and this parameter are both {{true}}, the CPE MUST NOT go into a standby state that prevents it from honoring Periodic Contacts.
 	 *
@@ -96,7 +96,7 @@ public class StandbyPolicy {
 	 */
 	@XmlElement(name = "PeriodicAwarenessRequested")
 	@CWMPParameter(access = "readWrite")
-	public Boolean periodicAwarenessRequested = false;
+	public Boolean periodicAwarenessRequested;
 	/**
 	 * If this parameter is true, the CPE MUST NOT go into a standby state that prevents it from honoring Scheduled Contacts. This means that, whenever the ACS has requested a Scheduled Contact:
 

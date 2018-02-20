@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 
         See {{bibref|TR-157a3|Appendix II.3.2}} for more description and some examples.
 	 *
-	 * @since 2.1
+	 * @since TR181 v2.1
 	 */
 @CWMPObject(name = "Device.SoftwareModules.ExecutionUnit.{i}.Extensions.")
 @XmlRootElement(name = "Device.SoftwareModules.ExecutionUnit.Extensions")

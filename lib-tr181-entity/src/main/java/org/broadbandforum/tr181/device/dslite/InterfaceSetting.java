@@ -23,15 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPv6Address;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPv6Address;
 
 	/**
 	 * DSLite {{bibref|DSLite}} settings.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
-@CWMPObject(name = "Device.DSLite.InterfaceSetting.{i}.")
+@CWMPObject(name = "Device.DSLite.InterfaceSetting.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.DSLite.InterfaceSetting")
 @XmlType(name = "Device.DSLite.InterfaceSetting")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -69,7 +70,7 @@ public class InterfaceSetting {
 	 */
 	@XmlElement(name = "EndpointAssignmentPrecedence")
 	@CWMPParameter(access = "readWrite")
-	public String endpointAssignmentPrecedence = "DHCPv6";
+	public String endpointAssignmentPrecedence;
 	/**
 	 * Indicates the preferred method to be used to assign the address of the DS-Lite Endpoint when both {{param|EndpointName}} and {{param|EndpointAddress}} values are available and the {{enum|Static|EndpointAssignmentPrecedence}} method is used.  See {{param|EndpointName}} and {{param|EndpointAddress}} for further clarification.
 	 *

@@ -24,13 +24,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Each table entry represents a fully qualified domain name updated by this Dynamic DNS Client.
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
-@CWMPObject(name = "Device.DynamicDNS.Client.{i}.Hostname.{i}.")
+@CWMPObject(name = "Device.DynamicDNS.Client.{i}.Hostname.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Name"})})
 @XmlRootElement(name = "Device.DynamicDNS.Client.Hostname")
 @XmlType(name = "Device.DynamicDNS.Client.Hostname")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -39,7 +39,7 @@ import org.broadbandforum.tr181.device.firewall.Level;
 
         See {{bibref|TR-181i2a2|Appendix VIII}} for an example {{enum|Advanced|Config}} configuration.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.Firewall.")
 @XmlRootElement(name = "Device.Firewall")

@@ -22,13 +22,14 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Active connection table.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANCommonInterfaceConfig.Connection.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANCommonInterfaceConfig.Connection.{i}.", uniqueConstraints = {@CWMPUnique(names = {"ActiveConnectionServiceID"})})
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANCommonInterfaceConfig.Connection")
 @XmlType(name = "InternetGatewayDevice.WANDevice.WANCommonInterfaceConfig.Connection")
 @XmlAccessorType(XmlAccessType.FIELD)

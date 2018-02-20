@@ -21,7 +21,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.StatsCounter32;
+import org.broadbandforum.common.StatsCounter32;
 
 	/**
 	 * Statistics for this IPsec tunnel, i.e. all traffic that has passed through the tunnel, including IKEv2 negotiation, IKEv2 SA and ChildSA traffic.
@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.datatypes.StatsCounter32;
 
         Note that this object does not include generic statistics that are available in the associated {{object|.IP.Interface.{i}.Stats}} object.
 	 *
-	 * @since 2.5
+	 * @since TR181 v2.5
 	 */
 @CWMPObject(name = "Device.IPsec.Tunnel.{i}.Stats.")
 @XmlRootElement(name = "Device.IPsec.Tunnel.Stats")

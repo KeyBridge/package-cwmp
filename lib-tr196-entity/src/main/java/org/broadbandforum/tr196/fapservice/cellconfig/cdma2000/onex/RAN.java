@@ -42,7 +42,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.onex.ran.SystemPa
 	/**
 	 * This object contains parameters relating to RAN configuring the CDMA2000 1x FAP.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.OneX.RAN.")
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.OneX.RAN")

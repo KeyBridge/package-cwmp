@@ -33,7 +33,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.layer2bridging.Marking;
 	/**
 	 * Layer-2 bridging table.  Specifies bridges between layer-2 LAN and/or WAN interfaces.  Bridges can be defined to include layer-2 filter criteria to selectively bridge traffic between interfaces.
 	 *
-	 * @since 1.1
+	 * @since TR143 v1.1
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Layer2Bridging.")
 @XmlRootElement(name = "InternetGatewayDevice.Layer2Bridging")

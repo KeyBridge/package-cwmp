@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Flow specification table.
@@ -32,9 +33,9 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         For enabled table entries, if {{param|TrafficClasses}} is {{empty}} then the table entry is inoperable and the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.HPNA.Interface.{i}.QoS.FlowSpec.{i}.")
+@CWMPObject(name = "Device.HPNA.Interface.{i}.QoS.FlowSpec.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.HPNA.Interface.QoS.FlowSpec")
 @XmlType(name = "Device.HPNA.Interface.QoS.FlowSpec")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -47,7 +48,7 @@ public class FlowSpec {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this entry.  {{enum}}
 
@@ -58,7 +59,7 @@ public class FlowSpec {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -82,7 +83,7 @@ public class FlowSpec {
 	 */
 	@XmlElement(name = "FlowType")
 	@CWMPParameter(access = "readWrite")
-	public String flowType = "BE";
+	public String flowType;
 	/**
 	 * Flow queue network priority.
 

@@ -31,7 +31,7 @@ import org.broadbandforum.tr181.device.softwaremodules.ExecutionUnit;
 	/**
 	 * Top level object for dynamically managed software applications.
 	 *
-	 * @since 2.1
+	 * @since TR181 v2.1
 	 */
 @CWMPObject(name = "Device.SoftwareModules.")
 @XmlRootElement(name = "Device.SoftwareModules")

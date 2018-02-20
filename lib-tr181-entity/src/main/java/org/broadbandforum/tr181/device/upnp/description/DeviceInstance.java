@@ -26,14 +26,15 @@ import javax.xml.bind.annotation.XmlList;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.UUID;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.UUID;
 
 	/**
 	 * This table contains the information from Device Description Document retrieved for a discovered UPnP root or embedded device.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
-@CWMPObject(name = "Device.UPnP.Description.DeviceInstance.{i}.")
+@CWMPObject(name = "Device.UPnP.Description.DeviceInstance.{i}.", uniqueConstraints = {@CWMPUnique(names = {"UDN"})})
 @XmlRootElement(name = "Device.UPnP.Description.DeviceInstance")
 @XmlType(name = "Device.UPnP.Description.DeviceInstance")
 @XmlAccessorType(XmlAccessType.FIELD)

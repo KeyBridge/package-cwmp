@@ -33,7 +33,7 @@ When running in normal mode, the STB does not perform any action when it does no
 
 The force monitor mode allows to maintain an active stream coming from the network so as to keep collecting statistics.
 	 *
-	 * @since 1.1
+	 * @since TR135 v1.1
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.ForceMonitor.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.IP.ForceMonitor")

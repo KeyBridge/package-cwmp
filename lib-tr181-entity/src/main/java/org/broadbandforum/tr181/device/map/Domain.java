@@ -26,8 +26,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IPv6Prefix;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPv6Prefix;
 import org.broadbandforum.tr181.device.map.domain.Interface;
 import org.broadbandforum.tr181.device.map.domain.Rule;
 
@@ -44,9 +45,10 @@ import org.broadbandforum.tr181.device.map.domain.Rule;
 
         Note: The {{object}} table includes unique key parameters that are strong references. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
-@CWMPObject(name = "Device.MAP.Domain.{i}.")
+@CWMPObject(name = "Device.MAP.Domain.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"WANInterface", "IPv6Prefix"})})
 @XmlRootElement(name = "Device.MAP.Domain")
 @XmlType(name = "Device.MAP.Domain")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -59,7 +61,7 @@ public class Domain {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The current operational state of the MAP domain.
 
@@ -86,7 +88,7 @@ public class Domain {
 	 */
 	@XmlElement(name = "TransportMode")
 	@CWMPParameter(access = "readWrite")
-	public String transportMode = "Translation";
+	public String transportMode;
 	/**
 	 * The IP interface with which this MAP domain is associated.  This will always be a NAT-ted upstream (WAN) interface.
 
@@ -184,7 +186,7 @@ public class Domain {
 	 */
 	@XmlElement(name = "IncludeSystemPorts")
 	@CWMPParameter(access = "readWrite")
-	public Boolean includeSystemPorts = false;
+	public Boolean includeSystemPorts;
 	/**
 	 * The MAP domain's Mapping Rules {{bibref|RFC7597}}. The rule with the longest match between its {{param|IPv6Prefix}} and the end-user {{param|#.IPv6Prefix}} is the Basic Mapping Rule (BMR). Any of the rules (including the BMR) can be a Forwarding Mapping Rule.
 	 */

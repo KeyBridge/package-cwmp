@@ -33,7 +33,7 @@ Note - This object was originally created to allow ''WANConnection'' devices and
 
 This object is OBSOLETED because it serves no purpose.
 	 *
-	 * @since 1.0
+	 * @since TR143 v1.0
 	 */
 @CWMPObject(name = "InternetGatewayDevice.WANDevice.{i}.WANDSLConnectionManagement.")
 @XmlRootElement(name = "InternetGatewayDevice.WANDevice.WANDSLConnectionManagement")

@@ -23,7 +23,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Shaper table. Used to shape the queue(s) associated with {{param|Interface}}. In case of a single queue for that interface, determines the egress rate of the queue. In case of multiple queues for that interface (possibly with per queue shaping rates), determines the aggregate egress rate on that interface.
@@ -32,9 +33,10 @@ import org.broadbandforum.tr181.datatypes.Alias;
 
         Note: The {{object}} table includes a unique key parameter that is a strong reference. If a strongly referenced object is deleted, the CPE will set the referencing parameter to {{empty}}. However, doing so under these circumstances might cause the updated {{object}} row to then violate the table's unique key constraint; if this occurs, the CPE MUST set {{param|Status}} to {{enum|Error_Misconfigured|Status}} and disable the offending {{object}} row.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.QoS.Shaper.{i}.")
+@CWMPObject(name = "Device.QoS.Shaper.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Interface"})})
 @XmlRootElement(name = "Device.QoS.Shaper")
 @XmlType(name = "Device.QoS.Shaper")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -47,7 +49,7 @@ public class Shaper {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * The status of this shaper.  {{enum}}
 
@@ -58,7 +60,7 @@ public class Shaper {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "Status")
-	public String status = "Disabled";
+	public String status;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -92,7 +94,7 @@ public class Shaper {
 	@XmlElement(name = "ShapingRate")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -1)
-	public Integer shapingRate = -1;
+	public Integer shapingRate;
 	/**
 	 * Burst size in bytes.  For both leaky bucket (constant rate shaping) and token bucket (variable rate shaping)  this is the bucket size and is therefore the maximum burst size.
 	 *

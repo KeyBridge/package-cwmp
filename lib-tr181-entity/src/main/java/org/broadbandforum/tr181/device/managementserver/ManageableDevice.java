@@ -27,13 +27,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
+import org.broadbandforum.annotation.CWMPUnique;
 
 	/**
 	 * Each entry in this table corresponds to a distinct LAN Device that supports Device-Gateway Association according to {{bibref|TR-069a2|Annex F}} as indicated by the presence of the DHCP option specified in that Annex.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.ManagementServer.ManageableDevice.{i}.")
+@CWMPObject(name = "Device.ManagementServer.ManageableDevice.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"ManufacturerOUI", "SerialNumber", "ProductClass"})})
 @XmlRootElement(name = "Device.ManagementServer.ManageableDevice")
 @XmlType(name = "Device.ManagementServer.ManageableDevice")
 @XmlAccessorType(XmlAccessType.FIELD)

@@ -26,7 +26,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr104.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 import org.broadbandforum.tr104.voiceservice.terminal.Audio;
 import org.broadbandforum.tr104.voiceservice.terminal.ButtonMap;
 import org.broadbandforum.tr104.voiceservice.terminal.DiagTests;
@@ -37,9 +38,9 @@ import org.broadbandforum.tr104.voiceservice.terminal.Ringer;
 
 This object has to be used when the CPE is a voice endpoint itself.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
-@CWMPObject(name = "VoiceService.{i}.Terminal.{i}.")
+@CWMPObject(name = "VoiceService.{i}.Terminal.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "VoiceService.Terminal")
 @XmlType(name = "VoiceService.Terminal")
 @XmlAccessorType(XmlAccessType.FIELD)

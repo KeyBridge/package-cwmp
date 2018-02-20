@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * H.323-specific capabilities (as defined in {{bibref|H.323}}).
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.H323.")
 @XmlRootElement(name = "VoiceService.Capabilities.H323")

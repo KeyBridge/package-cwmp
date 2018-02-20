@@ -23,8 +23,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr196.datatypes.Alias;
-import org.broadbandforum.tr196.datatypes.IPAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IPAddress;
 import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.hrpd.pcfpdsn.A11RegUpdateStats;
 import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.hrpd.pcfpdsn.A11SessionUpdateStats;
 import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.hrpd.pcfpdsn.AuxA10Stats;
@@ -33,9 +34,10 @@ import org.broadbandforum.tr196.fapservice.cellconfig.cdma2000.hrpd.pcfpdsn.PCFP
 	/**
 	 * PCFPDSN Object configured for HRPD. {{object|.CellConfig.CDMA2000.HRPD.BatchPCFPDSN.{i}.}} table should be used to configure PDSN details.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
-@CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.PCFPDSN.{i}.")
+@CWMPObject(name = "FAPService.{i}.CellConfig.CDMA2000.HRPD.PCFPDSN.{i}.", uniqueConstraints = {@CWMPUnique(names = {"PDSNNumber", "SecurityParameterIndex", "SecurityKey"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAPService.CellConfig.CDMA2000.HRPD.PCFPDSN")
 @XmlType(name = "FAPService.CellConfig.CDMA2000.HRPD.PCFPDSN")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -48,7 +50,7 @@ public class PCFPDSN {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -65,7 +67,7 @@ public class PCFPDSN {
 	@XmlElement(name = "PDSNNumber")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 127)
-	public Integer pdsNNumber = 0;
+	public Integer pdsNNumber;
 	/**
 	 * Security Parameter Index used
 	 *
@@ -90,7 +92,7 @@ public class PCFPDSN {
 	 */
 	@XmlElement(name = "IOSVersion")
 	@CWMPParameter(access = "readWrite")
-	public String iosVersion = "TIA-878-a";
+	public String iosVersion;
 	/**
 	 * Administrative status of this PDSN.  0- UP 1-DOWN.
 	 *
@@ -99,7 +101,7 @@ public class PCFPDSN {
 	@XmlElement(name = "PDSNadminStatus")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = 0, max = 1)
-	public Integer pdsNadminStatus = 0;
+	public Integer pdsNadminStatus;
 	/**
 	 * Reachability status of this PDSN.  0-unreachable, 1-reachable.
 	 *

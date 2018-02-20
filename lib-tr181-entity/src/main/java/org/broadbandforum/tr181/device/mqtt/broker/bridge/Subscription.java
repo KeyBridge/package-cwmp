@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * List of MQTT subscriptions handled over the bridge.
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
-@CWMPObject(name = "Device.MQTT.Broker.{i}.Bridge.{i}.Subscription.{i}.")
+@CWMPObject(name = "Device.MQTT.Broker.{i}.Bridge.{i}.Subscription.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Topic", "Direction"}, functional = false)})
 @XmlRootElement(name = "Device.MQTT.Broker.Bridge.Subscription")
 @XmlType(name = "Device.MQTT.Broker.Bridge.Subscription")
 @XmlAccessorType(XmlAccessType.FIELD)

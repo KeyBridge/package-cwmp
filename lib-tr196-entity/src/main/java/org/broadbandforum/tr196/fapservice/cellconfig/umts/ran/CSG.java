@@ -28,7 +28,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.csg.CSGPSCSplitIn
 	/**
 	 * This object contains parameters relating to the Closed Subscriber Group (CSG).
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.CSG.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN.CSG")

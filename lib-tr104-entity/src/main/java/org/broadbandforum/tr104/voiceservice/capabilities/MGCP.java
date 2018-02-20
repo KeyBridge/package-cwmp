@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * MGCP-specific capabilities (as defined in {{bibref|RFC3435}}).
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Capabilities.MGCP.")
 @XmlRootElement(name = "VoiceService.Capabilities.MGCP")

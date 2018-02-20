@@ -28,7 +28,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * Indicates the MQTT capabilities of the device.
 	 *
-	 * @since 2.10
+	 * @since TR181 v2.10
 	 */
 @CWMPObject(name = "Device.MQTT.Capabilities.")
 @XmlRootElement(name = "Device.MQTT.Capabilities")

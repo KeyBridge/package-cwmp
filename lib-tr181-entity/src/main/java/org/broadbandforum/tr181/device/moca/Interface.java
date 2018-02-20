@@ -28,8 +28,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr181.device.moca._interface.AssociatedDevice;
 import org.broadbandforum.tr181.device.moca._interface.QoS;
 import org.broadbandforum.tr181.device.moca._interface.Stats;
@@ -37,9 +38,10 @@ import org.broadbandforum.tr181.device.moca._interface.Stats;
 	/**
 	 * MoCA interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). Each table entry models the PHY and MAC levels of a MoCA interface {{bibref|MoCAv1.0}} {{bibref|MoCAv1.1}}.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
-@CWMPObject(name = "Device.MoCA.Interface.{i}.")
+@CWMPObject(name = "Device.MoCA.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false)})
 @XmlRootElement(name = "Device.MoCA.Interface")
 @XmlType(name = "Device.MoCA.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)

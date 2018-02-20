@@ -27,18 +27,21 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
-import org.broadbandforum.tr181.datatypes.IEEE_EUI64;
-import org.broadbandforum.tr181.datatypes.ZigBeeNetworkAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
+import org.broadbandforum.common.IEEE_EUI64;
+import org.broadbandforum.common.ZigBeeNetworkAddress;
 import org.broadbandforum.tr181.device.zigbee._interface.AssociatedDevice;
 import org.broadbandforum.tr181.device.zigbee._interface.Stats;
 
 	/**
 	 * ZigBee interface table (a stackable interface object as described in {{bibref|TR-181i2|Section 4.2}}). This table models the ZigBee interface of a ZigBee end device, ZigBee router or ZigBee coordinator.
 	 *
-	 * @since 2.7
+	 * @since TR181 v2.7
 	 */
-@CWMPObject(name = "Device.ZigBee.Interface.{i}.")
+@CWMPObject(name = "Device.ZigBee.Interface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"Alias"}, functional = false),
+	@CWMPUnique(names = {"Name"}, functional = false),
+	@CWMPUnique(names = {"ZDOReference"})})
 @XmlRootElement(name = "Device.ZigBee.Interface")
 @XmlType(name = "Device.ZigBee.Interface")
 @XmlAccessorType(XmlAccessType.FIELD)

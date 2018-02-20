@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr140.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This object provides information about each user account configured for access permissions on this folder.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
-@CWMPObject(name = "StorageService.{i}.LogicalVolume.{i}.Folder.{i}.UserAccess.{i}.")
+@CWMPObject(name = "StorageService.{i}.LogicalVolume.{i}.Folder.{i}.UserAccess.{i}.", uniqueConstraints = {@CWMPUnique(names = {"UserReference"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "StorageService.LogicalVolume.Folder.UserAccess")
 @XmlType(name = "StorageService.LogicalVolume.Folder.UserAccess")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -51,7 +53,7 @@ public class UserAccess {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * Represents a user that has access to this folder.  The instance of {{object|.UserAccount.{i}.}} referenced by this parameter MUST exist within the same StorageService instance.
 	 *

@@ -22,14 +22,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 
 	/**
 	 * This table contains information about other G.hn devices connected to this G.hn interface.
 	 *
-	 * @since 2.4
+	 * @since TR181 v2.4
 	 */
-@CWMPObject(name = "Device.Ghn.Interface.{i}.AssociatedDevice.{i}.")
+@CWMPObject(name = "Device.Ghn.Interface.{i}.AssociatedDevice.{i}.", uniqueConstraints = {@CWMPUnique(names = {"MACAddress"})})
 @XmlRootElement(name = "Device.Ghn.Interface.AssociatedDevice")
 @XmlType(name = "Device.Ghn.Interface.AssociatedDevice")
 @XmlAccessorType(XmlAccessType.FIELD)

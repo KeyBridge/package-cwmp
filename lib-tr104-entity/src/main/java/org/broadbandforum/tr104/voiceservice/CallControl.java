@@ -39,7 +39,7 @@ import org.broadbandforum.tr104.voiceservice.callcontrol.OutgoingMap;
 
 It is mutually exclusive with the {{object|.Interwork}} table which is used in case of switching capabilities.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.CallControl.")
 @XmlRootElement(name = "VoiceService.CallControl")

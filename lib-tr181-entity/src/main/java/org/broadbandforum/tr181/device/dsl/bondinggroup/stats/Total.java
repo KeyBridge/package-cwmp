@@ -30,7 +30,7 @@ import org.broadbandforum.annotation.CWMPObject;
 
         Note: The {{object}} parameters SHOULD NOT be reset when the interface statistics are reset via an interface disable / enable cycle.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DSL.BondingGroup.{i}.Stats.Total.")
 @XmlRootElement(name = "Device.DSL.BondingGroup.Stats.Total")

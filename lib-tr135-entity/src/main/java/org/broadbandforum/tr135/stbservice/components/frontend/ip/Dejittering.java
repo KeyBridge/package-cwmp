@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Parameters related to the de-jittering buffer configuration for all inbound IP streams.
 	 *
-	 * @since 1.0
+	 * @since TR135 v1.0
 	 */
 @CWMPObject(name = "STBService.{i}.Components.FrontEnd.{i}.IP.Dejittering.")
 @XmlRootElement(name = "STBService.Components.FrontEnd.IP.Dejittering")

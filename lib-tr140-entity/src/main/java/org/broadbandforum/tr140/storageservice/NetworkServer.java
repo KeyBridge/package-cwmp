@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object allows the control of network layer protocols authorization enforcement.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.NetworkServer.")
 @XmlRootElement(name = "StorageService.NetworkServer")

@@ -31,7 +31,6 @@ v1.0.1 - add xmltype annotations
   <modules>
         <module>lib-cwmp-common</module>
     <module>lib-tr069-entity</module>
-    <module>lib-tr098-entity</module>
     <module>lib-tr104-entity</module>
     <module>lib-tr106-entity</module>
     <module>lib-tr135-entity</module>

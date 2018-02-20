@@ -23,12 +23,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.IPAddress;
+import org.broadbandforum.common.IPAddress;
 
 	/**
 	 * Results from the most recent invocation of the test, one instance per repetition.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.DNS.Diagnostics.NSLookupDiagnostics.Result.{i}.")
 @XmlRootElement(name = "Device.DNS.Diagnostics.NSLookupDiagnostics.Result")

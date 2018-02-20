@@ -32,7 +32,7 @@ import org.broadbandforum.tr181.device.map.Domain;
 
         See the MAP Theory of Operation {{bibref|TR-181i2a8|Appendix XV}} for a description of the working of this MAP data model.
 	 *
-	 * @since 2.8
+	 * @since TR181 v2.8
 	 */
 @CWMPObject(name = "Device.MAP.")
 @XmlRootElement(name = "Device.MAP")

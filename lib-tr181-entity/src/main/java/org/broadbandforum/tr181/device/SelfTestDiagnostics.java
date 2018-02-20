@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This diagnostics test is vendor-specific and MAY include testing hardware, software, and/or firmware.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.SelfTestDiagnostics.")
 @XmlRootElement(name = "Device.SelfTestDiagnostics")

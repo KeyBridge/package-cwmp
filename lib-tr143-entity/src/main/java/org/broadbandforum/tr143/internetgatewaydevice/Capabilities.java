@@ -26,7 +26,7 @@ import org.broadbandforum.tr143.internetgatewaydevice.capabilities.PerformanceDi
 	/**
 	 * The capabilities of the device.  This is a constant read-only object, meaning that only a firmware upgrade will cause these values to be altered.
 	 *
-	 * @since 1.3
+	 * @since TR143 v1.3
 	 */
 @CWMPObject(name = "InternetGatewayDevice.Capabilities.")
 @XmlRootElement(name = "InternetGatewayDevice.Capabilities")

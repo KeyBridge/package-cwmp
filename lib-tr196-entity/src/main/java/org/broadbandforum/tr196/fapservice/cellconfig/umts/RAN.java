@@ -41,7 +41,7 @@ import org.broadbandforum.tr196.fapservice.cellconfig.umts.ran.UEInternalMeas;
 	/**
 	 * This object contains parameters relating to the RAN-level configuration.
 	 *
-	 * @since 2.0
+	 * @since TR196 v2.0
 	 */
 @CWMPObject(name = "FAPService.{i}.CellConfig.UMTS.RAN.")
 @XmlRootElement(name = "FAPService.CellConfig.UMTS.RAN")

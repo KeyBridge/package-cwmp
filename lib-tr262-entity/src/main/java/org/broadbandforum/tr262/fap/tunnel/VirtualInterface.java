@@ -23,14 +23,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr262.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * Virtual Interfaces used for associating the tunnel (ephemeral) childSA pairs with QoS Classification and Queue tables as defined in {{bibref|TR-098a2}} (InternetGatewayDevice.QueueManagement.Classification.{i}. and InternetGatewayDevice.QueueManagement.Queue.{i}.) or {{bibref|TR-181i2}} (Device.QoS.Classification.{i}. and Device.QoS.Queue.{i}.).
 	 *
-	 * @since 1.0
+	 * @since TR262 v1.0
 	 */
-@CWMPObject(name = "FAP.Tunnel.VirtualInterface.{i}.")
+@CWMPObject(name = "FAP.Tunnel.VirtualInterface.{i}.", uniqueConstraints = {@CWMPUnique(names = {"CryptoProfile", "DSCPMarkPolicy"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "FAP.Tunnel.VirtualInterface")
 @XmlType(name = "FAP.Tunnel.VirtualInterface")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -43,7 +45,7 @@ public class VirtualInterface {
 	 */
 	@XmlElement(name = "Enable")
 	@CWMPParameter(access = "readWrite")
-	public Boolean enable = false;
+	public Boolean enable;
 	/**
 	 * {{datatype|expand}}
 	 *
@@ -75,7 +77,7 @@ De-tunneled packets are never re-marked.
 	@XmlElement(name = "DSCPMarkPolicy")
 	@CWMPParameter(access = "readWrite")
 	@Size(min = -2)
-	public Integer dscPMarkPolicy = -1;
+	public Integer dscPMarkPolicy;
 
 	public VirtualInterface() {
 	}

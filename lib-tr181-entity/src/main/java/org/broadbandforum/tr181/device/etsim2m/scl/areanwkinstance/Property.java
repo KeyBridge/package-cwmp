@@ -29,7 +29,7 @@ import org.broadbandforum.annotation.CWMPObject;
 
         At a minimum, a property instance MUST exist that defines  an attribute that describes the IP layer address type (e.g., IPv4, IPv6, non-IP) of this M2M Area Network.
 	 *
-	 * @since 2.6
+	 * @since TR181 v2.6
 	 */
 @CWMPObject(name = "Device.ETSIM2M.SCL.{i}.AreaNwkInstance.{i}.Property.{i}.")
 @XmlRootElement(name = "Device.ETSIM2M.SCL.AreaNwkInstance.Property")

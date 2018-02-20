@@ -26,7 +26,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * Terminal level tests.
 	 *
-	 * @since 2.0
+	 * @since TR104 v2.0
 	 */
 @CWMPObject(name = "VoiceService.{i}.Terminal.{i}.DiagTests.")
 @XmlRootElement(name = "VoiceService.Terminal.DiagTests")

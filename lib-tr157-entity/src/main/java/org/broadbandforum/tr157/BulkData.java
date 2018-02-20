@@ -40,7 +40,7 @@ import org.broadbandforum.tr157.bulkdata.Profile;
 
         The Bulk Data Collection Profiles are measured over a reporting interval (which can be aligned with absolute time) and are made available to the collection server.
 	 *
-	 * @since 1.10
+	 * @since TR157 v1.10
 	 */
 @CWMPObject(name = "BulkData.")
 @XmlRootElement(name = "BulkData")

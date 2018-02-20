@@ -26,16 +26,18 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr181.datatypes.Alias;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.Alias;
 
 	/**
 	 * This table serves as the Deployment Unit inventory and contains status information about each Deployment Unit.
 
         A new instance of this table gets created during the installation of a Software Module.
 	 *
-	 * @since 2.1
+	 * @since TR181 v2.1
 	 */
-@CWMPObject(name = "Device.SoftwareModules.DeploymentUnit.{i}.")
+@CWMPObject(name = "Device.SoftwareModules.DeploymentUnit.{i}.", uniqueConstraints = {@CWMPUnique(names = {"UUID", "Version", "ExecutionEnvRef"}),
+	@CWMPUnique(names = {"Alias"}, functional = false)})
 @XmlRootElement(name = "Device.SoftwareModules.DeploymentUnit")
 @XmlType(name = "Device.SoftwareModules.DeploymentUnit")
 @XmlAccessorType(XmlAccessType.FIELD)

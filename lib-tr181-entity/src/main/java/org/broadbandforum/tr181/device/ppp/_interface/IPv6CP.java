@@ -21,12 +21,12 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
-import org.broadbandforum.tr181.datatypes.IPv6Address;
+import org.broadbandforum.common.IPv6Address;
 
 	/**
 	 * IPv6 Control Protocol (IPv6CP) client object for this PPP interface {{bibref|RFC5072}}. {{object}} only applies to IPv6.
 	 *
-	 * @since 2.2
+	 * @since TR181 v2.2
 	 */
 @CWMPObject(name = "Device.PPP.Interface.{i}.IPv6CP.")
 @XmlRootElement(name = "Device.PPP.Interface.IPv6CP")

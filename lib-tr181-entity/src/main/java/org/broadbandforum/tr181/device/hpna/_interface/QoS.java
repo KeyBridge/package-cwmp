@@ -30,7 +30,7 @@ import org.broadbandforum.tr181.device.hpna._interface.qos.FlowSpec;
 	/**
 	 * QoS configuration object.
 	 *
-	 * @since 2.0
+	 * @since TR181 v2.0
 	 */
 @CWMPObject(name = "Device.HPNA.Interface.{i}.QoS.")
 @XmlRootElement(name = "Device.HPNA.Interface.QoS")

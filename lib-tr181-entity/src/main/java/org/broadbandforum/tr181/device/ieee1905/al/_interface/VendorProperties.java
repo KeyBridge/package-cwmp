@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPObject;
 	/**
 	 * This object defines the vendor specific properties (vendorSpecificInfo field) of this {{object|##.Interface}} as defined in {{bibref|IEEE1905.1a|Table 5-2: intfDescriptor elements}}.
 	 *
-	 * @since 2.9
+	 * @since TR181 v2.9
 	 */
 @CWMPObject(name = "Device.IEEE1905.AL.Interface.{i}.VendorProperties.{i}.")
 @XmlRootElement(name = "Device.IEEE1905.AL.Interface.VendorProperties")

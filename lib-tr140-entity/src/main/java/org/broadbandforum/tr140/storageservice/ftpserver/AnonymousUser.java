@@ -27,7 +27,7 @@ import org.broadbandforum.annotation.CWMPParameter;
 	/**
 	 * This object allows the configuration of anonymous FTP access.
 	 *
-	 * @since 1.0
+	 * @since TR140 v1.0
 	 */
 @CWMPObject(name = "StorageService.{i}.FTPServer.AnonymousUser.")
 @XmlRootElement(name = "StorageService.FTPServer.AnonymousUser")

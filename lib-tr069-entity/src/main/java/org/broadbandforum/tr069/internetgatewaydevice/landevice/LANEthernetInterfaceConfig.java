@@ -22,15 +22,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 import org.broadbandforum.annotation.CWMPObject;
 import org.broadbandforum.annotation.CWMPParameter;
-import org.broadbandforum.tr069.datatypes.MACAddress;
+import org.broadbandforum.annotation.CWMPUnique;
+import org.broadbandforum.common.MACAddress;
 import org.broadbandforum.tr069.internetgatewaydevice.landevice.lanethernetinterfaceconfig.Stats;
 
 	/**
 	 * This object models an Ethernet LAN connection on a CPE device.  This object must be implemented for CPE that contain an Ethernet interface on the LAN side.
 	 *
-	 * @since 1.0
+	 * @since TR069 v1.0
 	 */
-@CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANEthernetInterfaceConfig.{i}.")
+@CWMPObject(name = "InternetGatewayDevice.LANDevice.{i}.LANEthernetInterfaceConfig.{i}.", uniqueConstraints = {@CWMPUnique(names = {"MACAddress"})})
 @XmlRootElement(name = "InternetGatewayDevice.LANDevice.LANEthernetInterfaceConfig")
 @XmlType(name = "InternetGatewayDevice.LANDevice.LANEthernetInterfaceConfig")
 @XmlAccessorType(XmlAccessType.FIELD)
