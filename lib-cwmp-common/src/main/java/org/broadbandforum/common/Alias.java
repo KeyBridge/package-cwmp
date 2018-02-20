@@ -20,6 +20,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 	/**
 	 * A non-volatile handle used to reference this instance. Alias provides a mechanism for an ACS to label this instance for future reference.
@@ -40,6 +41,7 @@ If the CPE supports the Alias-based Addressing feature as defined in {{bibref|TR
 public class Alias {
 
 	@Size(max = 64)
+	@XmlValue
 	public String value;
 
 	public Alias() {

@@ -20,6 +20,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 	/**
 	 * IP address, i.e. IPv4 address (or IPv4 subnet mask) or IPv6 address.
@@ -48,6 +49,7 @@ Unspecified or inapplicable addresses (or IPv4 subnet masks) MUST be represented
 public class IPAddress {
 
 	@Size(max = 45)
+	@XmlValue
 	public String value;
 
 	public IPAddress() {

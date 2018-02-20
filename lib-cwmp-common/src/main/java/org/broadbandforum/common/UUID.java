@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 	/**
 	 * Universally Unique Identifier.  See {{bibref|RFC4122}}.
@@ -32,6 +33,7 @@ public class UUID {
 
 	@Size(min = 36, max = 36)
 	@Pattern(regexp = "[A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12}")
+	@XmlValue
 	public String value;
 
 	public UUID() {

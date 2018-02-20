@@ -21,6 +21,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 	/**
 	 * The IEEE EUI 64-bit identifier as defined in {{bibref|EUI64}}. The IEEE defined 64-bit extended unique identifier (EUI-64) is a concatenation of:
@@ -36,6 +37,7 @@ public class IEEE_EUI64 {
 
 	@Size(max = 23)
 	@Pattern(regexp = "([0-9A-Fa-f][0-9A-Fa-f]:){7}([0-9A-Fa-f][0-9A-Fa-f])")
+	@XmlValue
 	public String value;
 
 	public IEEE_EUI64() {

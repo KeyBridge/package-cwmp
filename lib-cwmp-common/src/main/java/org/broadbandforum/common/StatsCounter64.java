@@ -19,6 +19,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlValue;
 
 	/**
 	 * A 64-bit statistics parameter, e.g. a byte counter.
@@ -34,6 +35,7 @@ The term ''packet'' is to be interpreted as the transmission unit appropriate to
 @XmlAccessorType(XmlAccessType.FIELD)
 public class StatsCounter64 {
 
+	@XmlValue
 	public Long value;
 
 	public StatsCounter64() {
