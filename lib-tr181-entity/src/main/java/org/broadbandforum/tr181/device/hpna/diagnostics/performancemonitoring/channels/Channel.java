@@ -105,7 +105,7 @@ public class Channel {
 	 * @since 2.0
 	 */
 	@XmlElement(name = "LARQPacketsReceived")
-	public Long larQPacketsReceived;
+	public Long larqPacketsReceived;
 	/**
 	 * {{reference}} Identifies the ''FlowSpec'' associated with the channel. This parameter is only used for channels that correspond to egress traffic from the local HPNA interface.
 
@@ -415,18 +415,18 @@ public class Channel {
 	 * @since 2.0
 	 * @return the value
 	 */
-	public Long getLarQPacketsReceived() {
-		return larQPacketsReceived;
+	public Long getLarqPacketsReceived() {
+		return larqPacketsReceived;
 	}
 
 	/**
 	 * Set the post-LARQ number of packets received in the channel. Valid only if LARQ is enabled.
 	 *
 	 * @since 2.0
-	 * @param larQPacketsReceived the input value
+	 * @param larqPacketsReceived the input value
 	 */
-	public void  setLarQPacketsReceived(Long larQPacketsReceived) {
-		this.larQPacketsReceived = larQPacketsReceived;
+	public void  setLarqPacketsReceived(Long larqPacketsReceived) {
+		this.larqPacketsReceived = larqPacketsReceived;
 	}
 
 	/**
@@ -437,7 +437,7 @@ public class Channel {
 	 * @return this instance
 	 */
 	public Channel withLarQPacketsReceived(Long larQPacketsReceived) {
-		this.larQPacketsReceived = larQPacketsReceived;
+		this.larqPacketsReceived = larQPacketsReceived;
 		return this;
 	}
 
