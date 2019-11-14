@@ -5,8 +5,8 @@
   <artifactId>cwmp</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
-  <name>package-cwmp</name>
 
+  <name>package-cwmp</name>
   <description>
     The CPE WAN Management Protocol defines a mechanism that encompasses secure
     auto-configuration of a CPE, and also incorporates other CPE management
@@ -15,10 +15,10 @@
     This project includes a set of data description libraries conformant with
     the CPE management framework written in Java.
 
-History:
+    History:
 
-v1.0.0 - first build
-v1.0.1 - add xmltype annotations
+    v1.0.0 - first build
+    v1.0.1 - add xmltype annotations
 
 
   </description>
@@ -29,7 +29,7 @@ v1.0.1 - add xmltype annotations
   </properties>
 
   <modules>
-        <module>lib-cwmp-common</module>
+    <module>lib-cwmp-common</module>
     <module>lib-tr069-entity</module>
     <module>lib-tr104-entity</module>
     <module>lib-tr106-entity</module>
@@ -43,10 +43,11 @@ v1.0.1 - add xmltype annotations
 
   </modules>
 
- <distributionManagement>
+  <distributionManagement>
     <repository>
       <id>${repository.name}</id>
       <url>${repository.url}</url>
     </repository>
   </distributionManagement>
+  
 </project>
