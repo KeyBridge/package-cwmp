@@ -58,7 +58,7 @@ Added parameters for 3GPP SA5 Rel 13 (CR S5-146268)
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
